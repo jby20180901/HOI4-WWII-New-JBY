@@ -1,0 +1,618 @@
+ideas = {
+
+	country = {
+		
+	#全民皆兵
+	FIN_quanmingjiebing = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = extensive_conscription
+	
+			modifier = {
+				conscription = 0.1
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				special_forces_cap = 0.05
+				training_time_factor = -0.15
+			}
+		}
+	
+	#扩大征兵
+	FIN_kuodazhengbing = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = idea_chi_forced_conscription
+	
+			modifier = {
+				conscription = 0.1
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				mobilization_laws_cost_factor = -0.05
+				land_reinforce_rate = 0.05
+				winter_attrition_factor = -0.1
+				
+			}
+		}
+	
+	#芬兰万岁
+	FIN_ideological_fanaticism  = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+	
+			rule = {
+				can_create_factions = yes
+			}
+	
+			modifier = {
+				war_support_factor = 0.05
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		
+		#自己走
+	FIN_zijizou  = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+	
+			rule = {
+				can_create_factions = yes
+			}
+	
+			modifier = {
+				war_support_factor = 0.05
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+	
+
+	
+	#芬兰军校
+		FIN_junxiao = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			} 
+			
+			picture = boris_shaposhnikov
+			
+			modifier = {
+				war_support_factor = 0.1
+				political_advisor_cost_factor = -0.1
+				mobilization_laws_cost_factor = -0.1
+				conscription = 0.05
+				minimum_training_level = -0.1
+				org_loss_when_moving = -0.05
+			   army_speed_factor = 0.05
+			   army_morale_factor = 0.05
+			   pocket_penalty = -0.05
+			   army_attack_factor = 0.05
+			}
+		}
+		
+		#白色死神
+		FIN_baisesesheng = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			} 
+			
+			picture = cbqxf-tqql4
+			
+			modifier = {
+				army_defence_factor = 0.1
+				winter_attrition_factor = -0.15
+				acclimatization_cold_climate_gain_factor = 0.2
+			}
+		}
+		
+		#德国教官
+		FIN_deguojiaoguan = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			} 
+			
+			picture = ferdinand_schorner
+			
+			modifier = {
+               army_org_regain = 0.1
+			   training_time_factor = -0.1
+			}
+		}
+		
+		#苏联教官
+		FIN_sulianjiaoguan = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			} 
+			
+			picture = ferdinand_schorner
+			
+			modifier = {
+               army_org_regain = 0.1
+			training_time_factor = -0.1
+			}
+		}
+		
+		#寸土不让
+		FIN_cuntuburang = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			} 
+			
+			picture = idea_ast_naval_auxiliary_patrol
+			
+			modifier = {
+                army_core_attack_factor = 0.1
+				army_core_defence_factor  = 0.2
+			}
+		}
+		
+		#德式师
+		FIN_deshishi = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			} 
+			
+			picture = air_war_plans_division_focus
+			
+			modifier = {
+                army_core_attack_factor = 0.1
+				army_core_defence_factor  = 0.1
+			}
+		}
+		
+		
+		#苏式师
+		FIN_sushishi = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			} 
+			
+			picture = air_war_plans_division_focus
+			
+			modifier = {
+                army_core_attack_factor = 0.1
+				army_core_defence_factor  = 0.1
+			}
+		}
+		
+		#现代化军队
+		FIN_xiandaihua = {
+			picture = generic_manpower_bonus
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				dig_in_speed_factor = 0.1
+				army_infantry_attack_factor = 0.1
+				army_infantry_defence_factor = 0.1
+			}
+		}
+		
+	#扩大特种部队
+	FIN_special_forces = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				special_forces_cap = 0.02
+			}
+		}
+	
+		sisu = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.25
+				attrition = -0.1
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.2
+			}
+		}
+	}
+
+	political_advisor = {
+
+		
+		FIN_ralf_torngren = {
+
+			picture = generic_political_advisor_europe_1
+
+			allowed = {
+				original_tag = FIN
+			}
+			
+			traits = { ideological_crusader }
+		}
+
+		FIN_ake_henrik_gartz = {
+
+			picture = generic_political_advisor_europe_2
+				
+			allowed = {
+				original_tag = FIN
+			}
+			
+			traits = { captain_of_industry }
+		}
+
+		FIN_antti_hackzell = {
+
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = FIN
+			}
+			
+			traits = { silent_workhorse }
+		}
+	}
+	theorist = {
+
+		FIN_akseli_anttila = {
+			
+			picture = generic_army_europe_2		
+					
+			allowed = {
+				original_tag = FIN
+			}
+
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+
+		FIN_vaino_valve = {
+					
+			picture = generic_navy_europe_2
+
+			allowed = {
+				original_tag = FIN
+			}
+			
+
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			
+			traits = { naval_theorist }
+		}
+	}
+	# MILITARY
+	army_chief = {
+		
+
+		FIN_lauri_malmberg = {
+			
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = FIN
+			}
+			
+
+			
+			traits = { army_chief_drill_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		FIN_hugo_osterman = {
+			
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = FIN
+			}
+			
+
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		FIN_carl_mannerheim = {
+			
+			picture = generic_army_europe_4
+			
+			allowed = {
+				original_tag = FIN
+			}
+			
+
+			
+			traits = { army_chief_defensive_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+				
+
+		FIN_jarl_lundqvist = {
+			
+			picture = generic_air_europe_3
+			
+			allowed = {
+				original_tag = FIN
+			}
+			
+
+			
+			traits = { air_chief_all_weather_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		FIN_olavi_sarko = {
+			
+			picture = generic_air_europe_1
+			
+			allowed = {
+				original_tag = FIN
+			}
+			
+
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	navy_chief = {
+
+		FIN_olavi_arho = {
+			
+			picture = generic_navy_europe_2
+			
+			allowed = {
+				original_tag = FIN
+			}
+			
+
+			
+			traits = { navy_chief_commerce_raiding_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		FIN_eero_rahola = {
+			
+			picture = generic_navy_europe_1
+			
+			allowed = {
+				original_tag = FIN
+			}
+			
+
+			
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	high_command = {
+		FIN_karl_oesch = {
+			
+			
+			allowed = {
+				original_tag = FIN
+			}
+			
+			picture = generic_army_europe_3
+			
+			traits = { army_regrouping_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		FIN_valio_porvari = {
+			
+			
+			allowed = {
+				original_tag = FIN
+			}
+			
+			picture = generic_air_europe_1
+			
+			traits = { air_air_superiority_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		FIN_lauri_tiainen = {
+			
+			
+			allowed = {
+				original_tag = FIN
+			}
+			
+			picture = generic_army_europe_1
+			
+			traits = { army_commando_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		FIN_harald_ohquist = {
+			
+			
+			allowed = {
+				original_tag = FIN
+			}
+			
+			picture = generic_army_europe_5
+			
+			traits = { army_regrouping_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}	
+
+	# TECHNOLOGY
+
+	naval_manufacturer = { 
+		
+		designer = yes
+		
+		crichton = {
+			
+			picture = generic_naval_manufacturer_1
+
+			
+			allowed = {
+				original_tag = FIN
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			# submarine and defence ship production
+			
+			traits = { naval_manufacturer }
+		}
+	}
+	
+	aircraft_manufacturer = { 
+			
+		designer = yes
+		
+		
+		valtion_lentokonetehdas = {
+			
+			picture = generic_air_manufacturer_3
+
+			
+			allowed = {
+				original_tag = FIN
+			}
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			# assembled Junkers, fast bombers
+		
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

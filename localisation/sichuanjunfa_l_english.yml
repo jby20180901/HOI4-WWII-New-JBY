@@ -1,0 +1,271 @@
+﻿l_english:
+ XXC_army_effort:0 "川军重组"
+ XXC_army_effort_desc:0 "川军，为民国期间四川军阀部队。清末，清政府编练四川新军成为川军源头之一。辛亥革命推翻清王朝的统治，四川军阀由此产生。民国时期，四川军阀长期混战，自辛亥革命后自民国二十一年（1932年），四川军阀混战共约470余次。民国二十二年（1933年）秋，二刘之战后刘文辉败走西康，刘湘成为川军首领。"
+ XXC_equipment_effort:0 "新式武器"
+ XXC_equipment_effort_desc:0 "川军各部军事装备极为落后，我们应当改善这一局面，否则军队无法发挥应有的战斗力"
+ XXC_construction_effort:0 "被服厂建设"
+ XXC_construction_effort_desc:0 "四川善后会议议定川军服装发放标准：士兵每年单军服3套、棉衣1套、外套每3兵1件，全省一年服装费254.74万元。由于防区各自为政，军费收入不等，服装配发换补亦不一样，失去防区则无以为补。"
+ XXC_yuebeiyizhidu:0 "四川省统一兵员征募办法"
+ XXC_yuebeiyizhidu_desc:0 "现在募兵无统一的计划和条件，应募者多为穷苦百姓、无业游民，少数流氓、赌徒、违法和逃债者也入营当兵。我们应该改善这一局面。"
+ XXC_production_effort:0 "成都外东兵工厂"
+ XXC_production_effort_desc:0 "兵工厂指能制造武器、弹药、装备，同时可进行修理的工厂。是国防的基础。我们决不允许军事生产能力拖后腿。"
+ XXC_huoliequipment_effort:0 "火力支援"
+ XXC_huoliequipment_effort_desc:0 "炮兵火力支援最多三分钟（最快一分多钟），现代战场上的炮兵通常在三发急促射（大口径火炮急促射3—4发"
+ XXC_deshibuqiang:0 "德制式步枪"
+ XXC_deshibuqiang_desc:0 "我们可以透过雅利洋行继续订购德国出厂的步兵武器。"
+ XXC_yingshibuqiang:0 "英制式步枪"
+ XXC_yingshibuqiang_desc:0 "们可以通过重庆的英商安利英洋行购入英国出厂的步兵武器。"
+ XXC_doctrine_effort:0 "现代化军事理论"
+ XXC_doctrine_effort_desc:0 "第一次世界大战时的军事学说已经落后。我们必须让我们最优秀的人才去订制未来的军事理论。"
+ XXC_sichuangjiangwutang:0 "重新开办四川陆军讲武堂"
+ XXC_sichuangjiangwutang_desc:0 "四川陆军讲武堂，宣统二年(1910年)，四川总督在东较场开办四川陆军讲武堂，总办为吴钟庸，主要招纳由东北来的无学资而又未被实缺的武职人员，并兼收新军中的见习军官。学员6个月毕业，仅招办了1期。"
+ XXC_gonggushandongzhengqn:0 "巩固四川政权"
+ XXC_gonggushandongzhengqn_desc:0 "巩固我们在四川的政权。"
+ XXC_baojiweiguo:0 "保家卫国"
+ XXC_baojiweiguo_desc:0 "保家卫国是每个人应尽的义务，是一种神圣的职责。捍卫国家安全是每个公民的使命。"
+ XXC_motorization_effort:0 "摩托化步兵"
+ XXC_motorization_effort_desc:0 "摩托化步兵通常是机动到对方小口径火炮的射程外，一般为3至5公里外，下车后进入进攻出发阵地，汽车此时隐蔽，在炮兵火力支援的炮火支援阶段（一般为30到50分钟时间），尔后边运动，边由连战斗队形展开成排战斗队形，最后展开成组战斗队形，在距离敌机枪有效射程的距离边缘（一般为400至600米），展开成冲击战斗队形，高速冲击敌防御前沿，实施最后突破。"
+ XXC_armor_effort:0 "装甲部队"
+ XXC_armor_effort_desc:0 "陆军中以坦克和其他装甲车辆为基本装备的战斗兵种，又称坦克兵，是陆军的重要突击力量。装甲兵具有猛烈的火力、广泛的机动力和良好的防护力，可以减轻常规武器和核武器袭击的损害，并能迅速利用常规火力突击和核突击的效果，实施快速机动、猛烈突击，在短时间之内歼击敌人。"
+ XXC_kuodazhengbng:0 "扩大征兵"
+ XXC_kuodazhengbng_desc:0 "征兵是指按照兵役法的规定，征集应征公民到军队服现役。国家有关条例号召，有为青年立志从军，热血男儿精忠报国；没有稳固的国防，便没有人民的安宁。"
+ XXC_aviation_effort:0 "空中力量建设"
+ XXC_aviation_effort_desc:0 "空军技术是所有军事技术中发展最快的。航空学是任何一个现代化国家都需要掌握的。"
+ XXC_bomber_focus:0 "重视轰炸机"
+ XXC_bomber_focus_desc:0 "当后人谈及此时战争的恐怖之处时，一定会提到从天而降的炸弹，我们将尽最大的能力确保这些故事是被敌人惊恐讲出。"
+ XXC_fighter_focus:0 "重视战斗机"
+ XXC_fighter_focus_desc:0 "在第一次世界大战中，空战越来越频繁，在战斗机开发中保持领先的地位将使我们在未来处于优势。"
+ XXC_CAS_effort:0 "近距支援机"
+ XXC_CAS_effort_desc:0 "近距离空中支援（Close Air Support，CAS），就是航空兵为支援地面、海上部队、两栖部队、特种部队进行作战，对接近己方的敌前沿和浅近纵深直接影响，保证己方当前行动而进行的空中火力突击。"
+ XXC_kongjunkeyan:0 "空军科研经费"
+ XXC_kongjunkeyan_desc:0 "我军空战力量仍有不足，应当加强空中力量建设。"
+ XXC_naval_effort:0 "海上力量建设"
+ XXC_naval_effort_desc:0 "我们首要目标是扩建我们的海军。将所有资源投入到新船坞建设和水面舰艇的研究中。"
+ XXC_cruiser_effort:0 "重视巡洋舰"
+ XXC_cruiser_effort_desc:0 "建立一支可靠的蓝水海军的第一部是建立起一支现代化的巡洋舰队。不过我们的第一个项目不应该太过好高骛远。"
+ XXC_special_forces:0 "特种部队"
+ XXC_special_forces_desc:0 "我们需要精锐的部队，优先发展山地部队和伞兵部队。"
+ XXC_NAV_effort:0 "海军轰炸机"
+ XXC_NAV_effort_desc:0 "新时代海战的一部分发生在水下，同时还有一部分则发生在空中。"
+ XXC_destroyer_effort:0 "重视驱逐舰"
+ XXC_destroyer_effort_desc:0 "研究潜艇的设计和战术时，我们也学会了如何应对这些战术。驱逐舰将成为其中关键。"
+ XXC_haijunkeyan:0 "海军科研经费"
+ XXC_haijunkeyan_desc:0 "我军海战力量仍有不足，应当加强海上力量建设。"
+ XXC_haijunkognjunkeyan:0 "军队发展总结"
+ XXC_haijunkognjunkeyan_desc:0 "我们的军队已经经过了一系列的发展，是时候进行一系列的总经了。"
+ XXC_zhanlbomber_focus:0 "战略轰炸机"
+ XXC_zhanlbomber_focus_desc:0 "战略轰炸，即大量轰炸机组成一个个大型的空中编队，从高空突破敌军高射炮火力网的封锁，对敌对国的后方城市、工业基地等战略目标实施远程空中打击。以此来通过大量平民伤亡摧毁敌对国人民继续战争的信心和意志，通过摧毁敌对国的工业设施来削弱敌对国的战争潜力，从而迫使其放弃抵抗并投降，最终赢得整场战争的胜利。"
+ XXC_capitals_effort:0 "战列舰"
+ XXC_capitals_effort_desc:0 "战列舰（Battleship，或又称为战斗舰，战舰）是一种以大口径火炮攻击与厚重装甲防护为主的高吨位海军作战舰艇。是能执行远洋作战任务的大型水面军舰。"
+ XXC_hkmj:0 "航空母舰"
+ XXC_hkmj_desc:0 "航空母舰（简称：航舰/航母，被称为“海上霸主”），是一种以舰载机为作战武器的大型水面舰艇，可以供舰载机起飞和降落  ，通常拥有巨大的飞行甲板和舰岛，现代航母舰岛大多坐落于右舷。"
+ XXC_chongxingzjechu:0 "重新接触国民党中央"
+ XXC_chongxingzjechu_desc:0 "国民党为联合整个国家来击败日本提供了最好的机会。我们必须保证他们不将我们视为一个威胁。"
+ XXC_jiechugcd:0 "接触共产党"
+ XXC_jiechugcd_desc:0 "国民党企图建立一个现代化的国家的尝试失败了。国家正在面对着比以往更严重的分裂；农民生活在对政府的恐惧之中；腐败在政府上下盛行着；而日本的帝国主义者就在我们的国境前。也许共产主义能为我们提供一个更美好的未来愿景。"
+ XXC_opposition:0 "曲线救国"
+ XXC_opposition_desc:0 "汪精卫所提出“曲线救国”论就是著名的投降理论之一。其后果就是抗日战争期间出现“降兵如潮，降将如毛”的局面。所以那种“曲线救国”论已经完全违背了曲线救国的准则，全然不是救国，而是卖国！"
+ XXC_political_effort:0 "政治方针"
+ XXC_political_effort_desc:0 "战争随时可能爆发，我们应该为我们的未来做打算。加强我们的政治地位应当放在首要。"
+ CHI_seek_japanese_support:0 "寻求日本支持"
+ CHI_seek_japanese_support_desc:1 "中央政府和共产党都拥有强大的盟友。如果我们想到最后到保持着统领地位的话，我们就不得不寻找我们的保护者。"
+ XXC_renminzhanzhengdewangyangdaihai:0 "游击战争"
+ XXC_renminzhanzhengdewangyangdaihai_desc:0 "游击战是非正规作战，以袭击要手段，具有高度的流动性、灵活性、主动性、进攻性和速决性，并能广泛动员群众投入战争。游而不击是逃跑主义，击而不游是拼命主义，游击战的精髓是敌驻我扰，敌疲我打，敌进我退，敌退我追。游击战的作战方式遵循合理选择作战地点、快速部署兵力、合理分配兵力、合理选择作战时机、战斗结束迅速撤退五项基本原则。"
+ XXC_zhengmianzuozhan:0 "坚持正面作战"
+ XXC_zhengmianzuozhan_desc:0 "与游击战不同，正面作战主要与敌人主力决战为目标，目的是有效消耗敌军有生力量，迫使其转入防御阶段或暂缓进攻。"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 

@@ -1,0 +1,99 @@
+﻿division_template = {
+	name = "宁夏马家军步兵师"
+	division_names_group = XNM_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+	}
+	priority = 0
+}
+
+division_template = {
+	name = "宁夏马家军警备团"
+	division_names_group = XNM_GAR_01
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 0 y = 3 }
+		militia = { x = 0 y = 4 }
+		militia = { x = 1 y = 0 }
+	}
+	priority = 2
+}
+
+
+units = {
+	
+	division = {
+		name = "国民革命军暂编第35师"
+		location = 5057
+		division_template = "宁夏马家军步兵师"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "国民革命军第61师"
+		location = 5057
+		division_template = "宁夏马家军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "国民革命军暂编骑1师"
+		location = 5025
+		division_template = "宁夏马家军步兵师"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "国民革命军暂编骑2师"
+		location = 5025
+		division_template = "宁夏马家军步兵师"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "国民革命军独立第35旅"
+		location = 1630
+		division_template = "宁夏马家军警备团"
+		start_equipment_factor = 0.5
+	}
+	
+	### 晋冀鲁豫区 ###
+	division = {
+		name = "国民革命军第167师"
+		location = 5025
+		division_template = "宁夏马家军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "国民革命军第139师"
+		location = 5025
+		division_template = "宁夏马家军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "国民革命军第141师"
+		location = 5025
+		division_template = "宁夏马家军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	
+}
+
+### STARTING PRODUCTION ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "XNM"
+		}
+		requested_factories = 1
+		progress = 0.74
+		efficiency = 100
+	}
+}

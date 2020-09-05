@@ -1,0 +1,113 @@
+﻿units = {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "瑞典皇家海军"			
+		naval_base = 6050 # 斯德哥尔摩
+		task_force = {				
+			name = "沿海船队"
+			location = 6050 # 斯德哥尔摩
+			ship = { name = "HMS 先锋" pride_of_the_fleet = yes definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_panzerschiff = { amount = 1 owner = GER version_name = "先锋级" } } }
+			ship = { name = "HMS 干燥" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = SWE version_name = "荣誉级" } } }				
+			ship = { name = "HMS 鹰" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SWE version_name = "鹰级" } } }		
+			ship = { name = "HMS 雅各布·巴格" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SWE version_name = "鹰级" } } }		
+			ship = { name = "HMS 克拉斯弗莱明" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SWE version_name = "克拉斯弗莱明级" } } }				
+		}
+		task_force = { 
+			name = "瑞典皇家海军第一中队"
+			location = 11215 # 卡尔斯克洛纳
+			ship = { name = "HMS 古斯塔夫五世" pride_of_the_fleet = yes definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = SWE version_name = "瑞典级" } } }				
+			ship = { name = "HMS 瑞典" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = SWE version_name = "瑞典级" } } }				
+			ship = { name = "HMS 维多利亚女王" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = SWE version_name = "瑞典级" } } }				
+			ship = { name = "HMS 哥特兰" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SWE version_name = "哥特兰级" } } }				
+			# 1. Jagarflottiljen				
+			ship = { name = "HMS 克拉斯·霍恩" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SWE version_name = "埃伦斯克级" } } }		
+			ship = { name = "HMS 克拉斯乌格拉" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SWE version_name = "埃伦斯克级" } } }		
+			ship = { name = "HMS 埃伦斯克" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SWE version_name = "埃伦斯克级" } } }		
+			ship = { name = "HMS 挪威" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SWE version_name = "埃伦斯克级" } } }		
+		}
+		task_force = { 
+			name = "奥兰海舰队"
+			location = 408 # 哥特兰
+			ship = { name = "HMS 荣誉" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = SWE version_name = "荣誉级" } } }				
+			ship = { name = "HMS 塔珀海特" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = SWE version_name = "荣誉级" } } }				
+		}
+		task_force = { 
+			name = "瑞典皇家海军第二中队"
+			location = 11215 # Karlskrona
+			ship = { name = "HMS 瓦萨" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = SWE version_name = "荣誉级" } } }				
+			ship = { name = "HMS 曼利赫滕" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = SWE version_name = "荣誉级" } } }
+			# 1. Ubatsflottiljen				
+			ship = { name = "HMS 德拉肯" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = SWE version_name = "德拉肯级" } } }
+			ship = { name = "HMS 鹰狮" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = SWE version_name = "德拉肯级" } } }
+			ship = { name = "HMS 乌尔文" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = SWE version_name = "德拉肯级" } } }
+		}
+		task_force = { 
+			name = "哥德堡中队"
+			location = 383 # Göteborg
+			ship = { name = "HMS 奥斯卡二世" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = SWE version_name = "奥斯卡二世级" } } }				
+			ship = { name = "HMS 菲织" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = SWE version_name = "菲织级" } } }				
+			# 2. Ubatsflottiljen				
+			ship = { name = "HMS 大白鲨" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SWE version_name = "大白鲨级" } } }
+			ship = { name = "HMS 萨伦" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SWE version_name = "大白鲨级" } } }
+			ship = { name = "HMS 瓦罗森" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SWE version_name = "大白鲨级" } } }
+			# 3. Ubatsflottiljen				
+			ship = { name = "HMS 海狸" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SWE version_name = "大白鲨级" } } }
+			ship = { name = "HMS 伊莱恩" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SWE version_name = "大白鲨级" } } }
+			ship = { name = "HMS 尤文" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SWE version_name = "大白鲨级" } } }
+			ship = { name = "HMS 瓦伦" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SWE version_name = "瓦伦级" } } }
+		}
+	}
+}
+
+
+### Starting Production ###
+instant_effect = {
+	### Under Construction Notes ###
+	# DD: Göteborg级 (x1) ("HMS Göteborg")
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "SWE"
+			version_name = "哥德堡级"
+		}
+		name = "HMS Göteborg" 
+		requested_factories = 1
+		progress = 0.50
+		amount = 1
+	}
+	# SS: 德拉肯 variant (x3) ("HMS Delfinen" "HMS Nordkaparen" "HMS Springaren")
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_2
+			creator = "SWE"
+			version_name = "德拉肯级"
+		}
+		name = "HMS Delfinen" 
+		requested_factories = 1
+		progress = 0.80
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_2
+			creator = "SWE"
+			version_name = "德拉肯级"
+		}
+		name = "HMS Nordkaparen" 
+		requested_factories = 1
+		progress = 0.60
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_2
+			creator = "SWE"
+			version_name = "德拉肯级"
+		}
+		name = "HMS Springaren" 
+		requested_factories = 1
+		progress = 0.40
+		amount = 1
+	}
+}

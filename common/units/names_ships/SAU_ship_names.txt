@@ -1,0 +1,135 @@
+﻿SAU_DD_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_DESTROYERS
+  for_countries = {
+    SAU
+  }
+  type = ship
+  ship_types = {
+    ship_hull_light
+    destroyer
+  }
+  prefix = "HMS "
+  fallback_name = "沙特阿拉伯%d号驱逐舰"
+  unique = {
+    "利雅得"
+    "麦加"
+    "达曼"
+    "麦地那"
+    "霍福夫"
+    "阿布哈"
+    "塔伊夫"
+  }
+}
+SAU_CL_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CL
+  for_countries = {
+    SAU
+  }
+  type = ship
+  ship_types = {
+    ship_hull_cruiser
+    light_cruiser
+  }
+  prefix = "HMS "
+  fallback_name = "沙特阿拉伯%d号轻巡洋舰"
+  unique = {
+    "吉达"
+    "达曼"
+    "胡富夫"
+    "塔伊夫"
+    "纳季兰"
+  }
+}
+SAU_CA_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CA
+  for_countries = {
+    SAU
+  }
+  type = ship
+  ship_types = {
+    ship_hull_cruiser
+    heavy_cruiser
+  }
+  prefix = "HMS "
+  fallback_name = "沙特阿拉伯%d号重巡洋舰"
+  unique = {
+    "吉达"
+    "达曼"
+    "胡富夫"
+    "塔伊夫"
+    "纳季兰"
+  }
+}
+SAU_BB_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_BB
+  for_countries = {
+    SAU
+  }
+  type = ship
+  ship_types = {
+    ship_hull_heavy
+    battleship
+  }
+  prefix = "HMS "
+  fallback_name = "沙特阿拉伯%d号战列舰"
+  unique = {
+    "麦加"
+    "麦地那"
+  }
+}
+SAU_BC_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_BC
+  for_countries = {
+    SAU
+  }
+  type = ship
+  ship_types = {
+    ship_hull_heavy
+    battle_cruiser
+  }
+  prefix = "HMS "
+  fallback_name = "沙特阿拉伯%d号战列巡洋舰"
+  unique = {
+    "麦加"
+    "麦地那"
+  }
+}
+SAU_CV_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CARRIERS
+  for_countries = {
+    SAU
+  }
+  type = ship
+  ship_types = {
+    ship_hull_carrier
+    carrier
+  }
+  prefix = "HMS "
+  fallback_name = "沙特阿拉伯%d号航空母舰"
+  unique = {
+    "阿拉伯苏伊迪耶"
+    "阿齐兹·伊本·沙特"
+  }
+}
+SAU_SS_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_SUBMARINES
+  for_countries = {
+    SAU
+  }
+  type = ship
+  ship_types = {
+    ship_hull_submarine
+    submarine
+  }
+  prefix = "HMS "
+  fallback_name = "沙特阿拉伯%d号潜艇"
+  unique = {
+    "利雅得"
+    "麦加"
+    "达曼"
+    "麦地那"
+    "霍福夫"
+    "阿布哈"
+    "塔伊夫"
+  }
+}

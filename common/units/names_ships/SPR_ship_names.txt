@@ -1,0 +1,244 @@
+﻿SPR_DD_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_DESTROYERS
+  for_countries = {
+    SPR
+  }
+  type = ship
+  ship_types = {
+    ship_hull_light
+    destroyer
+  }
+  prefix = "ARE "
+  fallback_name = "西班牙海军第%d号驱逐舰"
+  unique = {
+    "阿尔塞多"
+    "贝拉斯科"
+    "拉萨加"
+    "桑切斯·巴尔凯兹特吉"
+    "费兰迪兹海军上将"
+    "何塞·路易斯·迪兹"
+    "勒班陀"
+    "丘鲁卡"
+    "阿尔卡拉·加利亚诺"
+    "巴尔德斯海军上将"
+    "安特克拉海军上将"
+    "米兰达海军上将"
+    "议员"
+    "羞愧"
+    "格拉维纳"
+    "豪尔赫·胡安"
+    "乌略亚"
+    "利涅斯"
+    "阿拉瓦"
+    "韦斯卡"
+    "特鲁埃尔"
+    "休达"
+    "梅利利亚"
+    "勇敢"
+    "勇猛"
+    "流星"
+    "狂怒"
+    "射线"
+    "公羊"
+    "鲁莽"
+    "无惧"
+    "闪电"
+  }
+}
+SPR_CL_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CL
+  for_countries = {
+    SPR
+  }
+  type = ship
+  ship_types = {
+    ship_hull_cruiser
+    light_cruiser
+  }
+  prefix = "ARE "
+  fallback_name = "西班牙海军第%d号轻巡洋舰"
+  unique = {
+    "共和"
+    "门德斯"
+    "塞韦拉海军上将"
+    "自由"
+    "塞万提斯·萨维德拉"
+    "加利西亚"
+    "布拉斯·德·勒苏"
+    "塞维利亚"
+    "韦尔瓦"
+    "比斯开"
+    "格拉纳达"
+    "巴利阿里"
+    "加那利"
+  }
+}
+SPR_CA_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CA
+  for_countries = {
+    SPR
+  }
+  type = ship
+  ship_types = {
+    ship_hull_cruiser
+    heavy_cruiser
+  }
+  prefix = "ARE "
+  fallback_name = "西班牙海军第%d号重巡洋舰"
+  unique = {
+    "加那利"
+    "巴利阿里"
+    "纳瓦拉"
+    "摄政王"
+    "加泰罗尼亚"
+    "艾特雷马杜拉"
+    "比斯开"
+    "布拉斯·德·勒苏"
+    "塞维利亚"
+    "韦尔瓦"
+    "比斯开"
+    "格拉纳达"
+  }
+}
+SPR_BB_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_BB
+  for_countries = {
+    SPR
+  }
+  type = ship
+  ship_types = {
+    ship_hull_heavy
+    battleship
+  }
+  prefix = "ARE "
+  fallback_name = "西班牙海军第%d号战列舰"
+  unique = {
+    "海梅一世"
+    "西班牙"
+    "阿方索 XIII"
+    "勒班陀"
+    "拜伦"
+    "自由"
+  }
+}
+SPR_BC_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_BC
+  for_countries = {
+    SPR
+  }
+  type = ship
+  ship_types = {
+    ship_hull_heavy
+    battle_cruiser
+  }
+  prefix = "ARE "
+  fallback_name = "西班牙海军第%d号战列巡洋舰"
+  unique = {
+    "勒班陀"
+    "拜伦"
+    "自由"
+  }
+}
+SPR_CV_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CARRIERS
+  for_countries = {
+    SPR
+  }
+  type = ship
+  ship_types = {
+    ship_hull_carrier
+    carrier
+  }
+  prefix = "ARE "
+  fallback_name = "西班牙海军第%d号航空母舰"
+  unique = {
+    "迷宫"
+    "阿斯图里亚斯亲王"
+    "共和"
+    "维多利亚"
+  }
+}
+SPR_SS_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_SUBMARINES
+  for_countries = {
+    SPR
+  }
+  type = ship
+  ship_types = {
+    ship_hull_submarine
+    submarine
+  }
+  prefix = "ARE "
+  fallback_name = "S%d"
+  ordered = {
+    1 = {
+      "S0%d"
+    }
+    2 = {
+      "S0%d"
+    }
+    3 = {
+      "S0%d"
+    }
+    4 = {
+      "S0%d"
+    }
+    5 = {
+      "S0%d"
+    }
+    6 = {
+      "S0%d"
+    }
+    7 = {
+      "S0%d"
+    }
+    8 = {
+      "S0%d"
+    }
+    9 = {
+      "S0%d"
+    }
+    10 = {
+      "S%d"
+    }
+    11 = {
+      "S%d"
+    }
+    12 = {
+      "S%d"
+    }
+    13 = {
+      "S%d"
+    }
+    14 = {
+      "S%d"
+    }
+    15 = {
+      "S%d"
+    }
+    16 = {
+      "S%d"
+    }
+    17 = {
+      "S%d"
+    }
+    18 = {
+      "S%d"
+    }
+    19 = {
+      "S%d"
+    }
+    20 = {
+      "S%d"
+    }
+    21 = {
+      "S%d"
+    }
+    22 = {
+      "S%d"
+    }
+    23 = {
+      "S%d"
+    }
+  }
+}

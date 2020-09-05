@@ -1,0 +1,11 @@
+﻿
+air_wings = {
+
+	328 = { 
+		
+		tac_bomber_equipment_1 =  {
+			owner = "DBJ" 
+			amount = 50
+		}
+	}
+}

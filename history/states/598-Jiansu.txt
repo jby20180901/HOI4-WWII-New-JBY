@@ -1,0 +1,69 @@
+
+state={
+	id=598
+	name="STATE_598"
+	
+	state_category = town
+
+	history={
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 3
+            air_base = 6
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		
+		victory_points = {
+			11913 20 
+		}
+		
+		victory_points = {
+			12055 5 
+		}
+		
+		victory_points = {
+			1029 1
+		}
+		
+		victory_points = {
+			1076 1
+		}
+		
+		victory_points = {
+			4123 1
+		}
+		
+		victory_points = {
+			7142 1
+		}
+		
+		victory_points = {
+			4091 1
+		}
+		
+		victory_points = {
+			10076 3
+		}
+		
+		victory_points = {
+			11982 3
+		}
+		
+		victory_points = {
+			1089 3
+		}
+
+		1938.10.25 = {
+			controller = JAP
+		}
+	}
+
+	provinces={
+		996  7120 13142 1001 1089 10076 11982 1029 1076 4001 1121 1161 4091 11913 4005 4031 4082 4123 4148 7025 7142 7181 7200 9953 9956 10095 11973 12055 12067 13144 
+	}
+	manpower=23669300
+	buildings_max_level_factor=1.000
+}

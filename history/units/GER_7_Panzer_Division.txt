@@ -1,0 +1,55 @@
+﻿division_template = {
+	name = "国防军装甲师（vz.38）"
+	
+	division_names_group = GER_Arm_01
+
+	regiments = {
+		
+		medium_armor = { x = 0 y = 0 } 	#捷克38（t）坦克
+		medium_armor = { x = 0 y = 1 }  #捷克38（t）坦克
+		medium_armor = { x = 0 y = 2 }  #三号坦克
+		medium_armor = { x = 0 y = 3 }  #四号坦克
+
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+
+		mot_artillery_brigade = { x = 3 y = 0 }
+		mot_artillery_brigade = { x = 3 y = 1 }
+		mot_anti_tank_brigade =  { x = 3 y = 2 }
+	}
+	support = {
+        mot_recon = { x = 0 y = 0 } 	
+		maintenance_company = { x = 0 y = 1 } 	
+		signal_company = { x = 0 y = 2 } 	
+		field_hospital = { x = 0 y = 3 } 	
+		engineer = { x = 0 y = 4 } 	
+		logistics_company = { x = 0 y = 5 } 	
+	}
+	priority = 2
+}
+
+units = {
+
+	division = {	
+		name = "德国国防军第7装甲师"
+		location = 9497
+		division_template = "国防军装甲师（vz.38）"
+		force_equipment_variants = { 
+			medium_tank_equipment_1 = { owner = "CZE" }
+		}
+		start_equipment_factor = 0.6
+		start_experience_factor = 0.6
+	}
+}
+instant_effect = {
+	add_equipment_to_stockpile = {
+	type = medium_tank_equipment_1
+		amount = 100
+		producer = CZE
+	}
+}

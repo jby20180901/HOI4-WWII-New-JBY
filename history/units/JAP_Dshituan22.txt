@@ -1,0 +1,266 @@
+﻿division_template = {
+	name = "中国派遣军"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		artillery_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+		
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		field_hospital = { x = 0 y = 2 }
+	}
+	priority = 2
+}
+
+##### OOB #####
+
+units = {
+	
+###丁###
+
+	division = {
+		name = "日本中国派遣军第40师团"
+		location = 7071
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3	
+	}
+	
+	division = {
+		name = "日本中国派遣军第41师团"
+		location = 7071
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "日本中国派遣军第42师团"
+		location = 7071
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "日本中国派遣军第43师团"
+		location = 7071
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "日本中国派遣军第44师团"
+		location = 1055
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "日本中国派遣军第45师团"
+		location = 1055
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "日本中国派遣军第50师团"
+		location = 1055
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3	
+	}
+	
+	division = {
+		name = "日本中国派遣军第51师团"
+		location = 1055
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3	
+	}
+	
+	division = {
+		name = "日本中国派遣军第52师团"
+		location = 7191
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "日本中国派遣军第53师团"
+		location = 7191
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "日本中国派遣军第54师团"
+		location = 7191
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "日本中国派遣军第55师团"
+		location = 7191
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "日本中国派遣军第60师团"
+		location = 7014
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "日本中国派遣军第61师团"
+		location = 7014
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "日本中国派遣军第62师团"
+		location = 7014
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "日本中国派遣军第63师团"
+		location = 7014
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "日本中国派遣军第64师团"
+		location = 10000
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "日本中国派遣军第65师团"
+		location = 10000
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "日本中国派遣军第66师团"
+		location = 10000
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "日本中国派遣军第67师团"
+		location = 10000
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "日本中国派遣军第68师团"
+		location = 4205
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "日本中国派遣军第69师团"
+		location = 4205
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	
+	#22+8
+	
+	division = {
+		name = "日本中国派遣军第111师团"
+		location = 4205
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "日本中国派遣军第112师团"
+		location = 4205
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "日本中国派遣军第113师团"
+		location = 11068
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "日本中国派遣军第114师团"
+		location = 11068
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "日本中国派遣军第115师团"
+		location = 11068
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "日本中国派遣军第116师团"
+		location = 11068
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "日本中国派遣军第117师团"
+		location = 7014
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "日本中国派遣军第118师团"
+		location = 7014
+		division_template = "中国派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	
+
+}
+	

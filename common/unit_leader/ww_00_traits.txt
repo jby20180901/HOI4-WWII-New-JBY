@@ -1,0 +1,217 @@
+leader_traits = {
+	 
+   dazongshen_chuangshiren = {  #大纵深
+		type = land
+		trait_type = personality_trait
+		allowed = {
+			FROM = {
+				tag = SOV
+			}
+		}
+		
+		non_shared_modifier = {
+			army_artillery_attack_factor = 0.15
+			planning_speed = 0.2
+			max_dig_in_factor = 0.30
+			army_armor_speed_factor = 0.05 
+			army_armor_attack_factor = 0.1 
+			org_loss_when_moving = -0.10
+		}
+		
+		planning_skill_factor = 1
+		logistics_skill_factor = 1
+	}
+
+	
+	
+	huangpu_junxiao = { #黄埔军校
+		type = land
+		trait_type = personality_trait
+		
+		allowed = {
+			FROM = {
+			
+			OR = {
+				tag = CHI
+				tag = SLJ
+				tag = XBJ
+				tag = DBJ
+				tag = PRC
+				tag = YUN
+				tag = YXC
+				tag = GXC
+				tag = CXC
+				tag = XXC
+				tag = SHX
+				tag = XJM
+				tag = XNM
+				tag = XSM
+				tag = SIK
+				
+				}
+				
+			}
+		}
+		
+		modifier = {
+			planning_speed = 0.05
+
+		}
+		
+		defense_skill_factor = 1
+		logistics_skill_factor = 1
+	}
+	
+	fujiniya_junxiao = { #弗吉尼亚军事学校
+		type = land
+		trait_type = personality_trait
+		
+		modifier = {
+			planning_speed = 0.1
+			army_artillery_attack_factor = 0.1
+
+		}
+		
+		defense_skill_factor = 1
+		logistics_skill_factor = 1
+	}
+	
+	xidian_junxiao = { #西点军校
+		type = land
+		trait_type = personality_trait
+		
+		modifier = {
+			planning_speed = 0.1
+			army_artillery_attack_factor = 0.1
+			org_loss_when_moving = -0.13
+
+		}
+		
+		defense_skill_factor = 1
+		logistics_skill_factor = 1
+	}
+	
+	
+	
+	liangjian_jingshen = { #亮剑精神
+		type = land
+		trait_type = personality_trait
+		
+		modifier = {
+		    recon_factor = 0.15
+			wounded_chance_factor = 0.1
+			out_of_supply_factor = -0.4
+
+		}
+		
+		defense_skill_factor = 1
+		logistics_skill_factor = 1
+	}
+	
+	fulongzhi_junshixiao = { #伏龙芝军校
+		type = land
+		trait_type = personality_trait
+		
+		modifier = {
+			planning_speed = 0.1
+			army_morale_factor = 0.10
+			max_planning = 0.1
+
+		}
+		
+		defense_skill_factor = 1
+		logistics_skill_factor = 1
+	}
+	
+	zhangjia_xianfeng = {  #装甲先锋
+		type = land
+		trait_type = personality_trait
+		
+		allowed = {
+			FROM = {
+				tag = GER
+			}
+		}
+		
+		modifier = {
+			experience_loss_factor = -0.1
+			army_artillery_attack_factor = 0.10
+			army_speed_factor = 0.1
+			army_attack_factor = 0.1
+			army_armor_attack_factor = 0.1
+			pocket_penalty = -0.1
+			recon_factor = 0.1
+
+		}
+		
+		defense_skill_factor = 1
+		logistics_skill_factor = 1
+	}
+	
+	deguo_wuzhangdangweijun = { #武装党卫军
+		type = land
+		trait_type = personality_trait
+		
+		allowed = {
+			FROM = {
+				tag = GER
+			}
+		}
+		
+		modifier = {
+			
+			max_planning = 0.12
+			army_morale_factor = 0.10
+			wounded_chance_factor = 0.3
+
+		}
+		
+		defense_skill_factor = 1
+		logistics_skill_factor = 1
+	}
+	
+	
+	riben_lujundaxue = { #日本陆军大学
+		type = land
+		trait_type = personality_trait
+		
+		allowed = {
+			FROM = {
+				tag = JAP
+			}
+		}
+		
+		modifier = {
+			
+			max_planning = 0.1
+			army_morale_factor = 0.13
+
+
+		}
+		
+		defense_skill_factor = 1
+		logistics_skill_factor = 1
+	}
+	
+	
+	shudaizi_huangwei = { #书呆子
+		type = land
+		trait_type = personality_trait
+		
+		
+		modifier = {
+			planning_speed = -0.05
+
+		}
+		
+		defense_skill_factor = 1
+		logistics_skill_factor = 1
+	}
+
+
+
+
+
+
+
+}

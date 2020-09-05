@@ -1,0 +1,109 @@
+﻿division_template = {
+	name = "粤军步兵师"
+	division_names_group = YXC_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+
+### OOB ###
+units = {
+	
+	division = {
+		name = "国民革命军第159师"
+		location = 1047
+		division_template = "粤军步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "国民革命军第160师"
+		location = 1047
+		division_template = "粤军步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "国民革命军第66师"
+		location = 1047
+		division_template = "粤军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "国民革命军第157师"
+		location = 1047
+		division_template = "粤军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "国民革命军第158师"
+		location = 9938
+		division_template = "粤军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "国民革命军第155师"
+		location = 1070
+		division_template = "粤军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	
+	division = {
+		name = "国民革命军第154师"
+		location = 1070
+		division_template = "粤军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "国民革命军第156师"
+		location = 1070
+		division_template = "粤军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	
+	
+}
+
+air_wings = {
+	# 广州
+	592 = { 
+		fighter_equipment_0 = { owner = "YXC" amount = 30 }	
+		name = "广东空军第1飞行大队"
+		
+		fighter_equipment_0 = { owner = "YXC" amount = 30 }	
+		name = "广东空军第2飞行大队"
+	}
+	 #海南
+	592 = { 
+		fighter_equipment_0 = { owner = "YXC" amount = 30 }	
+		name = "广东空军第3飞行大队"
+		
+		fighter_equipment_0 = { owner = "YXC" amount = 30 }	
+		name = "广东空军第4飞行大队"
+	}
+	
+}
+
+### STARTING PRODUCTION ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "YXC"
+		}
+		requested_factories = 1
+		progress = 0.79
+		efficiency = 100
+	}	
+}

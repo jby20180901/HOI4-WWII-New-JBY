@@ -1,0 +1,82 @@
+POR_historical_plan = {
+	name = "Portugal mp4 historical plan"
+	desc = "Historical behavior for Portugal mp4"
+
+	enable = {
+		original_tag = POR
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+			}
+			has_country_flag = POR_AI_HISTORICAL
+			has_game_rule = {
+				rule = POR_ai_behavior
+				option = ESTADONOVO_HISTORICAL
+			}
+		}
+	}
+
+	ai_national_focuses = {
+		POR_continue_estado_novo #1936/2/5	
+		POR_colony_uplifting #1936/4/15	
+		POR_core_for_island #1936/6/24
+		POR_industrial_a #1936/8/19
+		POR_industrial_b #1936/10/28
+		POR_spain_civilwar #1936/11/11
+		POR_stablity_uplifting #1937/1/20
+		POR_pact_iberico  #1937/3/31	
+		POR_small_mobilization  #1937/6/9
+		POR_controlled_economy #1937/7/14	
+		POR_neutral_law #1937/9/22
+		POR_national_control #1937/12/1	
+		POR_military_research #1938/2/9
+		POR_navy_ready #1938/3/16
+		POR_catholic_church #1938/5/25
+		POR_austerity #1938/8/3
+		POR_national_guard #1938/10/12
+		POR_industrial_c #1938/12/21
+		POR_stablity_industrial #1939/3/1
+		POR_air_ready #1939/4/5
+		POR_colony_division #1939/6/14
+		POR_dockyard #1939/8/23
+		POR_war_support #1939/11/1
+		POR_fighter #1940/1/10	
+		POR_1386_ally #1940/2/14
+		POR_threaty_england #1940/4/24
+		POR_concordat #1940/7/3	
+		POR_neutral_diplo #1940/9/11	
+		POR_commonwealth_trade #1940/11/20
+		POR_lendlease_acts #1941/1/29
+		POR_england_courage #1941/4/9
+		POR_export_weapon #1941/6/18
+		POR_industrial_upgrade	#1941/8/27
+		POR_war_infntry #1941/11/5
+		POR_colony_industrial #1942/1/14
+		POR_national_research_a #1942/3/25	
+ 		POR_navy_foundation #1942/6/17	
+ 		POR_air_doctrine #1942/8/26
+ 		POR_invasion #1942/11/4
+ 		POR_volunteer #1943/1/13
+ 		POR_stability_government #1943/3/24
+ 		POR_carrier
+ 		POR_doctrine
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

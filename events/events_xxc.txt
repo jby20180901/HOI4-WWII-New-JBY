@@ -1,0 +1,101 @@
+﻿#########################
+## EastAsia Mod Events ##
+#########################
+
+add_namespace = eastasia
+
+
+#刘湘将军殉国
+country_event = {
+	id = eastasia.63
+	title = eastasia.63.t
+	desc = eastasia.63.d
+	picture = GFX_CHI_leader_xunguo
+	
+	trigger = {
+		NOT = { has_global_flag = XXC_liuxiangxunguo }
+		date > 1937.11.23
+		tag = CHI
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = { 
+		set_global_flag = XXC_liuxiangxunguo
+	}
+	
+	option = {
+		name = eastasia.63.a
+		XXC = { country_event = eastasia.64 }
+		hidden_effect = {
+			XXC = { remove_unit_leader = 90003 }
+			
+			
+		}
+	}
+}
+
+#出师未捷
+country_event = {
+	id = eastasia.64
+	title = eastasia.64.t
+	desc = eastasia.64.d
+	picture = GFX_CHI_leader_xunguo
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = eastasia.64.a
+		trigger = { is_ai = no }
+		add_timed_idea = {
+			idea = eastasia_idea_CXC_liuxiangyizhu
+			days = 365
+		}
+		add_political_power = 300
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_0
+			amount = 2000
+			producer = CHI
+		}
+		CHI = { transfer_state = 605 }
+		hidden_effect = {
+			XXC = {
+				kill_country_leader = yes
+				remove_unit_leader = 90003
+			}
+		}
+	}
+	option = {
+		name = eastasia.64.b
+		trigger = { is_ai = yes }
+		custom_effect_tooltip = GAME_OVER_TT
+		CHI = { 
+			annex_country = { target = XXC transfer_troops = yes } 
+		}
+		
+				
+			CHI = { 
+			annex_country = { target = CXC transfer_troops = yes } 
+		}	
+				
+		
+		hidden_effect = {
+			CHI = { country_event = china.103 }
+		}
+	}
+	option = {
+		name = eastasia.64.c
+		trigger = { is_ai = no }
+		add_political_power = -150
+		hidden_effect = {
+			CXC = {
+				kill_country_leader = yes
+				remove_unit_leader = 90003
+			}
+		}
+	}
+}
+
+

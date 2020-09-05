@@ -1,0 +1,131 @@
+﻿l_english:
+ TON_army_effort:0 "国内军事建设"
+ TON_army_effort_desc:0"尽管空战与海战技术不断发展，地面战斗仍是未来战争的关键。如果我们做好准备，能避免再次经历堑壕战的地狱。"
+ TON_production_effort:0"国内兵工厂建设"
+ TON_production_effort_desc:0"兵工厂指能制造武器、弹药、装备，同时可进行修理的工厂。是国防的基础。我们决不允许军事生产能力拖后腿。"
+ TON_production_effort_2:0"军工产业扩大化"
+ TON_production_effort_2_desc:0"用民用工厂生产军械是低效的。我们应该专注于军事工业的建设。"
+ TON_construction_effort:0"民用企业建设"
+ TON_construction_effort_desc:0"哪怕战争的阴云逐渐笼罩着整个世界，我们仍然不能忽视民用工业的生产能力。"
+ TON_production_effort_3:0"继续扩大军工产业"
+ TON_production_effort_3_desc:0"继续努力扩建军用工厂可以帮我们满足新装备的需求。"
+ TON_construction_effort_2:0"扩大民用企业"
+ TON_construction_effort_2_desc:0"继续扩建我们的工厂能使我们加快贸易物资的生产并加大工业建设力度。"
+ TON_infrastructure_effort:0"运兵铁路网"
+ TON_infrastructure_effort_desc:0"铁路军事运输是指军队利用铁路列车输送人员和物资的运输。是军事运输的一种方式。铁路运输具有运量大、运距远、速度快、成本低、受天候影响小等特点，是战略、战役后方实施军事运输的主要手段。"
+ TON_infrastructure_effort_2:0"扩大铁路网"
+ TON_infrastructure_effort_2_desc:0"铁路网是铁路进行运输生产的主要物质基础，它是随着国民经济发展、生产力布局、产业结构以及交通运输网的合理分工而逐渐发展起来的。铁路网一般可分为世界路网、区域路网、国家路网、地区路网和枢纽五个层次。"
+ TON_construction_effort_3:0"基础建设扩大"
+ TON_construction_effort_3_desc:0"我们的基础设施网络的扩建显著提升了我们的建设能力。"
+ TON_yuebeiyizhidu:0"预备役制度"
+ TON_yuebeiyizhidu_desc:0"预备役是同现役相区别的一种兵役义务。依照法律规定，在年龄、政治、身体适合服兵役而未服现役的公民，以及服现役期满退出现役后符合服预备役条件的人员，统称预备役人员（包括预备役军官和预备役士兵）。预备役人员根据国家需要，随时准备应征入伍。预备役制度的完善程度和预备役人员的数、质量情况，通常是衡量一个国家军事力量强弱的重要因素之一。"
+ TON_equipment_effort:0"更新武器装备"
+ TON_equipment_effort_desc:0"陆军所使用的装备日新月异，我们将集中精力研发最好的装备让我们的战士使用。"
+ TON_baojiweiguo:0"保家卫国"
+ TON_baojiweiguo_desc:0"保家卫国是每个人应尽的义务，是一种神圣的职责。捍卫国家安全是每个公民的使命。"
+ TON_huoliequipment_effort:0"火力支援"
+ TON_huoliequipment_effort_desc:0"炮兵火力支援最多三分钟（最快一分多钟），现代战场上的炮兵通常在三发急促射（大口径火炮急促射3—4发/分钟，持续1发/分钟）后即迅速撤离阵地。航空兵支援则要看战场上空有没有值班的巡逻飞机（以前的数据为10—15分钟）。"
+ TON_guofangextra_tech_slot:0"国防大学"
+ TON_guofangextra_tech_slot_desc:0"国防大学的科研工作，着眼建设现代化军队、打赢现代化战争，创新和发展军事与政治理论，同时紧密跟踪研究世界军事、政治热点问题和重大事件，为培养高素质新型高级军事人才服务，为中央、国家和军委、总部决策提供咨询，为部队建设和军事斗争准备提供理论支持。"
+ TON_special_forces:0"特种部队"
+ TON_special_forces_desc:0"我们需要精锐的部队，优先发展山地部队。"
+ TON_motorization_effort:0"摩托化步兵"
+ TON_motorization_effort_desc:0"摩托化步兵通常是机动到对方小口径火炮的射程外，一般为3至5公里外，下车后进入进攻出发阵地，汽车此时隐蔽，在炮兵火力支援的炮火支援阶段（一般为30到50分钟时间），尔后边运动，边由连战斗队形展开成排战斗队形，最后展开成组战斗队形，在距离敌机枪有效射程的距离边缘（一般为400至600米），展开成冲击战斗队形，高速冲击敌防御前沿，实施最后突破。"
+ TON_armor_effort:0"装甲部队"
+ TON_armor_effort_desc:0" 陆军中以坦克和其他装甲车辆为基本装备的战斗兵种，又称坦克兵，是陆军的重要突击力量。装甲兵具有猛烈的火力、广泛的机动力和良好的防护力，可以减轻常规武器和核武器袭击的损害，并能迅速利用常规火力突击和核突击的效果，实施快速机动、猛烈突击，在短时间之内歼击敌人。"
+ TON_aviation_effort:0"陆军航空兵建设"
+ TON_aviation_effort_desc:0"陆军航空兵是陆军前沿性主战兵种，具有强大火力、超越突击能力以及精确打击能力，是陆军实施非线式、非接触、全纵深机动作战的骨干力量。"
+ TON_mechanization_effort:0"机械化步兵"
+ TON_mechanization_effort_desc:0"机械化步兵（Mechanized infantry）是指搭乘车辆实施机动和作战的兵种。机械化步兵在行进间稍加整顿，通常采取坦克在前，步战车在后的协同动作方式，实现“边冲边打”的要求，必要时，也可采取步兵下车支援坦克战斗，徒步支援坦克冲击的协同动作方式，完成冲击突破任务。"
+ TON_doctrine_effort:0"重视军事理论"
+ TON_doctrine_effort_desc:0"第一次世界大战时的军事学说已经落后。我们必须让我们最优秀的人才去订制未来的军事理论。"
+ TON_equipment_effort_2:0"革新武器装备"
+ TON_equipment_effort_2_desc:0"我们必须继续努力让我们的步兵和支援部队拥有这个时代最好的装备。"
+ TON_equipment_effort_3:0"武器装备现代化"
+ TON_equipment_effort_3_desc:0"我们应该研制达到世界领先水平的步兵武器，而不是购买和模仿外国武器。"
+ TON_CAS_effort:0"重视近距支援机"
+ TON_CAS_effort_desc:0"现代化战争不仅需要地面的支援，还需要空中支援。"
+ TON_fighter_focus:0"重视战斗机"
+ TON_fighter_focus_desc:0"在第一次世界大战中，空战越来越频繁，在战斗机开发中保持领先的地位将使我们在未来处于优势。"
+ TON_bomber_focus:0"重视轰炸机"
+ TON_bomber_focus_desc:0"飞机作为军用是从侦察开始的，空中侦察的作用是无可置疑的，在侦察飞行中，顺便甩几颗手榴弹或迫击炮弹就成了“轰炸机”的开端。"
+ TON_zhongxingfighter_focus:0"重型战斗机编队"
+ TON_zhongxingfighter_focus_desc:0"在各国空军，重型战斗机是战斗机高端部分，由于拥有较大的载弹量和较远的航程，并且可以携带更多的机载设备，重型战斗机一般被用来作为“精兵”和主力。"
+ TON_zhongxingbomber_focus:0"战略轰炸机编队"
+ TON_zhongxingbomber_focus_desc:0"战略轰炸机一般是指用来执行战略任务的中、远程轰炸机。既可做战略进攻武器使用，在必要时也遂行战术轰炸任务，支援陆、海军作战。"
+ TON_extra_tech_slot_2:0"空军科研"
+ TON_extra_tech_slot_2_desc:0"我国空军的快速进步让我们在科研上有了新的突破。"
+ TON_extra_tech_slot_3:0"工业发展"
+ TON_extra_tech_slot_3_desc:0"我国的快速工业化让我们在科研上有了新的突破。"
+ TON_naval_effort:0 "重视海军"
+ TON_naval_effort_desc:0 "我们首要目标是扩建我们的海军。将所有资源投入到新船坞建设和水面舰艇的研究中。"
+ extra_tech_slot_4:0"海军发展"
+ extra_tech_slot_4_desc:0"我国的海军发展我们在科研上有了新的突破。"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

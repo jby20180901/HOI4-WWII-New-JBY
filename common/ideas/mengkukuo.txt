@@ -1,0 +1,428 @@
+ideas = {
+	country = {
+		MEN_Kwantung_army_special_agent_mechanism = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = saf_ossewabrandwag
+			
+			modifier = {
+				fascism_drift = 0.02
+				army_infantry_attack_factor = 0.1
+			}
+		}
+		MEN_Grand_han_righteous_army = {
+			available = {
+				num_of_controlled_states < 3
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_volunteer_expedition_bonus
+			
+			modifier = {
+				army_morale_factor = -0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+		MEN_Mercenary = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				monthly_population = 0.4
+			}
+		}
+		MEN_The_mengjiang_bank = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_foreign_capital
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		MEN_The_mengjiang_bank_2 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_foreign_capital
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.1
+			}
+		}
+		MEN_Mongol_army = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
+			}
+		}
+		MEN_Cavalry = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = porsche
+			
+			modifier = {
+				motorized_attack_factor = 0.05
+				motorized_defence_factor = 0.05
+			}
+		}
+		MEN_Equipment_requirements = {
+		
+			picture = ast_volunteer_defence_corps
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+		}
+		
+		MEN_All_people_focus = {
+		
+			picture = neutrality_idea
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				non_core_manpower = 0.1
+				conscription_factor = 0.02
+			}
+		}
+		MEN_We_are_united = {
+		
+			picture = soviet_german_friendship
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1
+				conscription_factor = 0.03
+			}
+		}
+		
+		MEN_Mongol_first = {
+		
+			picture = vittoria_mutilata
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				non_core_manpower = 0.1
+				conscription_factor = 0.01
+			}
+		}
+		MEN_All_faction = {
+		
+			picture = SOV_scientist_defect
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.2
+				army_core_attack_factor = 0.2
+				conscription_factor = 0.01
+			}
+		}
+		MEN_Our_faction = {
+		
+			picture = SOV_scientist_defect
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				cavalry_attack_factor = 0.2
+				cavalry_defence_factor = 0.2
+			}
+		}
+		
+		MEN_Pan_mongolism = {
+		
+			picture = triumphant_will
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				justify_war_goal_time = -0.4
+				generate_wargoal_tension = -0.5
+				army_morale_factor = 0.1
+			}
+		}
+		
+	}
+
+	political_advisor = {
+
+		MEN_megata_toshiro = {
+
+			picture = generic_political_advisor_asia_2
+			
+			allowed = {
+				original_tag = MEN
+			}
+			
+			traits = { armaments_organizer }
+		}
+
+		MEN_nalan_kang_an = {
+
+			picture = generic_political_advisor_asia_3
+				
+			allowed = {
+				original_tag = MEN
+			}
+			
+			traits = { fortification_engineer }
+		}
+
+		MEN_songgotu_zhanshan = {
+
+			picture = generic_political_advisor_asia_1
+			
+			allowed = {
+				original_tag = MEN
+			}
+			
+			traits = { captain_of_industry }
+		}
+	}	
+
+	army_chief = {
+
+		MEN_guan_xingde = {
+			
+			picture = generic_army_asia_4
+
+			allowed = {
+				original_tag = MEN
+			}
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+		
+		MEN_nakajima_kesago = {
+
+			picture = generic_air_asia_3
+			
+			allowed = {
+				original_tag = MEN
+			}
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+
+	high_command = {
+
+		MEN_yonimitsu_kasahara = {
+
+			picture = generic_army_asia_3
+			
+			allowed = {
+				original_tag = MEN
+			}
+			
+			traits = { army_regrouping_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		MEN_kyoiji_tomonaga = {
+
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = MEN
+			}
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		MEN_hesehn_tiemei = {
+
+			picture = generic_army_asia_1
+			
+			allowed = {
+				original_tag = MEN
+			}
+			
+			traits = { army_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+
+
+	theorist = {
+		MEN_hung_zhehuang = {
+
+			picture = generic_army_asia_1
+			
+			allowed = {
+				original_tag = MEN
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		MEN_deng_linge = { 
+
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = MEN
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+	}
+
+
+
+}

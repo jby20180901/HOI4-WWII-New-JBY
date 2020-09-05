@@ -1,0 +1,1064 @@
+﻿#########################
+## EastAsia Mod Events ##
+#########################
+
+add_namespace = dbj
+
+#东北军剿共拖延
+country_event = {
+	id = dbj.1
+	title = dbj.1.t
+	desc = dbj.1.d
+	picture = GFX_DBJ_jjs_duzhan
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = {
+		set_global_flag = xianshibian1
+	    }
+	
+	option = {
+		name = dbj.1.a
+		DBJ = { country_event = { id = dbj.2 } }
+	
+	}
+}
+
+
+#劝谏
+country_event = {
+	id = dbj.2
+	title = dbj.2.t
+	desc = dbj.2.d
+	picture = GFX_DBJ_xian_zuihoudequanjian
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = dbj.2.a
+		CHI = { country_event = { id = dbj.3 } }
+	}
+}
+
+#国民政府的选择
+country_event = {
+	id = dbj.3
+	title = dbj.3.t
+	desc = dbj.3.d
+	picture = GFX_DBJ_xian_shibian
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = dbj.3.a
+		ai_will_do = {
+			factor = 100
+		}
+		DBJ = { country_event = { id = dbj.4  } }
+	}
+	
+	option = {
+		name = dbj.3.b
+		ai_will_do = {
+			factor = 0
+		}
+		DBJ = { country_event = { id = dbj.5  } }
+	}
+	
+}
+
+
+#国民政府同意
+country_event = {
+	id = dbj.4
+	title = dbj.4.t
+	desc = dbj.4.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = dbj.4.a
+		CHI = { country_event = { id = dbj.6  } }
+		 if = {
+				limit = { 
+				CHI = {is_in_faction = yes}	
+						}
+               DBJ = { add_to_faction = CHI }
+   		     }
+			 
+			 
+		 if = {
+				limit = { 
+				CHI = {is_in_faction = no}	
+						}	
+              CHI = {
+				set_rule = { can_create_factions = yes }
+				create_faction = chinese_united_front
+			       }  
+				if = {  limit = { country_exists = PRC 	}  CHI = { add_to_faction = PRC }  }
+				if = {  limit = { country_exists = DBJ 	}  CHI = { add_to_faction = DBJ }  }
+				if = {  limit = { country_exists = XXC 	}  CHI = { add_to_faction = XXC }  }
+				if = {  limit = { country_exists = SLJ 	}  CHI = { add_to_faction = SLJ }  } 
+				if = {  limit = { country_exists = YUN 	}  CHI = { add_to_faction = YUN }  }
+				if = {  limit = { country_exists = CXC 	}  CHI = { add_to_faction = CXC }  } 
+				if = {  limit = { country_exists = XSM 	}  CHI = { add_to_faction = XSM }  }
+				if = {  limit = { country_exists = SIK 	}  CHI = { add_to_faction = SIK }  }
+				if = {  limit = { country_exists = GXC 	}  CHI = { add_to_faction = GXC }  }
+				if = {  limit = { country_exists = XNM 	}  CHI = { add_to_faction = XNM }  }
+				if = {  limit = { country_exists = SHX 	}  CHI = { add_to_faction = SHX }  }
+				if = {  limit = { country_exists = YXC 	}  CHI = { add_to_faction = YXC }  }
+				if = {  limit = { country_exists = XJM	}  CHI = { add_to_faction = XJM }  }
+   		     }
+		hidden_effect = {
+			news_event = { hours = 2 id = news.729 }
+	}
+	
+		
+	}
+}
+
+#国民政府拒绝
+country_event = {
+	id = dbj.5
+	title = dbj.5.t
+	desc = dbj.5.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = dbj.5.a
+		CHI = { country_event = { id = dbj.7  } }
+	}
+}
+
+
+#瓦解东北军！
+country_event = {
+	id = dbj.6
+	title = dbj.6.t
+	desc = dbj.6.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = dbj.6.a
+		CHI = { 
+		annex_country = { target = DBJ transfer_troops = yes }
+	
+	}
+}
+option = {
+         name = dbj.6.b
+	set_autonomy = {
+		target = DBJ
+		autonomous_state = autonomy_integrated_puppet
+	}
+	DBJ = {
+	  create_country_leader = {
+	  name = "杨虎城"
+	  desc = "  "
+	  picture = "DBJ_yanghucheng2.dds"
+	  expire = "9999.1.1"
+	  ideology = despotism
+	 traits = {
+						
+				}
+		  }
+      }
+
+    }
+
+ }
+
+
+#杀掉蒋介石
+country_event = {
+	id = dbj.7
+	title = dbj.7.t
+	desc = dbj.7.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = dbj.7.a
+		create_country_leader = {
+				name = "何应钦"
+				desc = "POLITICS_HYQ_DESC"
+				picture = "gfx/leaders/CHIA/portrait_chi_he_yingqin.dds"
+				expire = "9999.1.1"
+				ideology = despotism
+				traits = {
+					
+				}
+			}
+		declare_war_on = {
+			target = DBJ
+			type = puppet_wargoal_focus
+		}
+		
+	}
+}
+
+#东北军：背信弃义：共产党进攻
+country_event = {
+	id = dbj.8
+	title = dbj.8.t
+	desc = dbj.8.desc
+	
+	picture = GFX_report_event_chinese_soldiers
+	
+	fire_only_once = yes
+	
+	trigger = {
+	
+	    TAG = DBJ
+		date < 1937.7.7
+		has_war_with = PRC
+	    has_defensive_war = yes
+		
+	}
+	
+
+	option = {
+		name = dbj.8.a
+		hidden_effect = { load_oob = "DBJ_jiaogong" }
+		custom_effect_tooltip = DBJ_jiaogong_tip
+	     744 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 2006
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 1976
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 7301
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 12713
+					instant_build = yes
+				}
+			}
+		
+		}
+
+}
+
+
+#晋绥军：背信弃义：共产党进攻
+country_event = {
+	id = dbj.9
+	title = dbj.9.t
+	desc = dbj.9.desc
+	
+	picture = GFX_report_event_chinese_soldiers
+	
+	fire_only_once = yes
+	
+	trigger = {
+	
+	    TAG = SHX
+		date < 1937.7.7
+		has_war_with = PRC
+	    has_defensive_war = yes
+		PRC = {
+			NOT = { has_completed_focus = PRC_jimou_erhujingshi }
+		}
+	}
+	
+
+	option = {
+		name = dbj.9.a
+		hidden_effect = { load_oob = "SHX_jiaogong" }
+		custom_effect_tooltip = SHX_jiaogong_tip
+	     615 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1438
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 1519
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 4469
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 12344
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 4634
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1531
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 7571
+					instant_build = yes
+				}
+				
+			}
+		
+		}
+
+}
+
+
+#川军：背信弃义：共产党进攻
+country_event = {
+	id = dbj.10
+	title = dbj.10.t
+	desc = dbj.10.desc
+	
+	picture = GFX_report_event_chinese_soldiers
+	
+	fire_only_once = yes
+	
+	trigger = {
+	
+	    TAG = XXC
+		date < 1937.7.7
+		has_war_with = PRC
+	    has_defensive_war = yes
+		
+	}
+	
+
+	option = {
+		name = dbj.10.a
+		hidden_effect = { load_oob = "XXC_jiaogong" }
+		custom_effect_tooltip = XXC_jiaogong_tip
+	     605 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 4925
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 6999
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1367
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1395
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 2091
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 5048
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11865
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 2030
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1893
+					instant_build = yes
+				}
+				
+			}
+			 753 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 2045
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 5193
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 4403
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 10787
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 10903
+					instant_build = yes
+				}
+				
+				
+				
+			}
+		
+		}
+
+}
+
+#马家军：背信弃义：共产党进攻
+country_event = {
+	id = dbj.12
+	title = dbj.12.t
+	desc = dbj.12.desc
+	
+	picture = GFX_report_event_chinese_soldiers
+	
+	fire_only_once = yes
+	
+	trigger = {
+	
+	    TAG = XNM
+		date < 1937.7.7
+		has_war_with = PRC
+	    has_defensive_war = yes
+		PRC = {
+			NOT = { has_completed_focus = PRC_damahongkui }
+			NOT = { has_completed_focus = PRC_jimou_erhujingshi }
+		}
+	}
+
+	option = {
+		name = dbj.12.a
+		hidden_effect = { load_oob = "XNM_jiaogong" }
+		custom_effect_tooltip = XNM_jiaogong_tip
+	     283 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 3745
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 5025
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1647
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1933
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 7911
+					instant_build = yes
+				}
+				
+				
+			}
+		616 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 8081
+					instant_build = yes
+				}
+		
+		}
+	}
+}
+
+#东北军：剿共！
+country_event = {
+	id = dbj.13
+	title = dbj.13.t
+	desc = dbj.13.d
+	
+	picture = GFX_dongbeijun_jiaogong
+	
+	fire_only_once = yes
+	mean_time_to_happen = { days = 10 }
+	trigger = {
+	
+	    TAG = DBJ
+		date < 1936.2.1
+	    DBJ = { 
+			has_war = no
+			exists = yes
+			NOT = { is_puppet_of = PRC }
+		}
+		
+	}
+ 
+	option = {
+		name = dbj.13.a
+		ai_chance = { factor = 90 }
+		DBJ = {
+			declare_war_on = {
+				target = PRC
+				type = annex_everything
+			}
+		}
+		PRC = { country_event = { id = dbj.16 } }
+		hidden_effect = { load_oob = "DBJ_jiaogong" }
+		custom_effect_tooltip = DBJ_jiaogong_tip
+	     744 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 2006
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 1976
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 7301
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 12713
+					instant_build = yes
+				}
+			}
+	}
+	
+	option = {
+		name = dbj.13.b
+		ai_chance = { factor = 10 }
+		CHI = {
+			add_opinion_modifier = { target = DBJ modifier = Bad_relationship } 
+		}
+		PRC = {
+			add_opinion_modifier = { target = DBJ modifier = Relationship_improvement }
+			diplomatic_relation = { country = DBJ relation = non_aggression_pact }
+		}
+		DBJ = { add_political_power = 100 }
+		CHI = { country_event = { id = dbj.1 } }
+	}
+	
+}
+
+#东北军：与中共密谈
+country_event = {
+	id = dbj.14
+	title = dbj.14.t
+	desc = dbj.14.d
+	
+	picture = GFX_dongbeijun_yuzhonggongmitan
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 1 }
+	
+	trigger = {
+	
+	    TAG = DBJ
+		date > 1936.8.1
+	    DBJ = { 
+			has_war_with = PRC
+		}
+		PRC = {
+			controls_state = 622
+		}
+		
+	}
+	
+
+	option = {
+		name = dbj.14.a
+		ai_chance = { factor = 10000 }
+		PRC = {
+			country_event = { id = dbj.15 }
+		}
+	}
+	
+}
+
+#中共：张学良送来橄榄枝
+country_event = {
+	id = dbj.15
+	title = dbj.15.t
+	desc = dbj.15.d
+	
+	picture = GFX_dongbeijun_yuzhonggongmitan
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = dbj.15.a
+		ai_chance = { factor = 100 }
+		DBJ = {
+			white_peace = PRC
+			add_political_power = 200
+		}
+		PRC = {
+			add_opinion_modifier = { target = DBJ modifier = Relationship_improvement }
+			diplomatic_relation = { country = DBJ relation = non_aggression_pact }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 1500
+				producer = CHI
+			}
+			add_political_power = 200
+		}
+	}
+	
+	option = {
+		name = dbj.15.b
+		ai_chance = { factor = 0 }
+	}
+	
+}
+
+#中共：张学良剿共
+country_event = {
+	id = dbj.16
+	title = dbj.16.t
+	desc = dbj.16.d
+	
+	picture = GFX_dongbeijun_jiaogong2
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+	    TAG = PRC
+		PRC = { exists = yes }
+	}
+	
+	option = {
+		name = dbj.16.a
+		ai_chance = { factor = 100 }
+		622 = {
+			add_building_construction = {
+				type = bunker
+				level = 1
+				province = 10733
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				province = 12156
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				province = 5007
+				instant_build = yes
+			}
+			
+		}	
+	}
+	
+}
+#晋绥军：剿共！
+country_event = {
+	id = dbj.17
+	title = dbj.17.t
+	desc = dbj.17.d
+	
+	picture = GFX_report_event_chinese_soldiers
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	
+	    TAG = SHX
+	    SHX = { 
+			has_war = no
+			exists = yes
+			NOT = { is_puppet_of = PRC  is_puppet_of = CHI }
+		}
+		
+	}
+
+	option = {
+		name = dbj.17.a
+		ai_chance = { factor = 100 }
+		SHX = {
+			declare_war_on = {
+				target = PRC
+				type = annex_everything
+			}
+			load_oob = "SHX_jiaogong"
+		}
+		PRC = { country_event = { id = dbj.18 } }
+		
+		set_variable = {
+			var = zhonggong_jianchishijian
+			value = 0
+		}
+		
+	}
+	
+	option = {
+		name = dbj.17.b
+		ai_chance = { factor = 0 }
+	}
+}
+#中共：计划通！
+country_event = {
+	id = dbj.18
+	title = dbj.18.t
+	desc = dbj.18.d
+	
+	picture = GFX_report_event_chinese_soldiers
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+
+	option = {
+		name = dbj.18.a
+		ai_chance = { factor = 100 }
+		
+		PRC = { 
+			add_timed_idea = {
+				idea = wang_idea_PRC_sishoushanbei
+				days = 50
+			}
+		}
+	}
+	
+}
+
+#晋绥军：向中央军求援
+country_event = {
+	id = dbj.19
+	title = dbj.19.t
+	desc = dbj.19.d
+	
+	picture = GFX_report_event_chinese_soldiers
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		
+	}
+
+	option = {
+		name = dbj.19.a
+		ai_chance = { factor = 100 }
+		CHI = {
+			declare_war_on = {
+				target = SHX
+				type = annex_everything
+			}
+		}
+		country_event = { id = dbj.20 }
+		PRC = { 
+			country_event = { id = dbj.21 }
+			if = {
+				limit = { 
+					PRC = { has_completed_focus = PRC_jimou_anzhongcefanjinsuijun }
+				}
+				load_oob = "SHX_jiaogong_qiyijun"
+			}
+		}
+	}
+	
+	option = {
+		name = dbj.19.b
+		ai_chance = { factor = 0 }
+	}
+}
+#晋绥军：引狼入室
+country_event = {
+	id = dbj.20
+	title = dbj.20.t
+	desc = dbj.20.d
+	
+	picture = GFX_report_event_chinese_soldiers
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		
+	}
+
+	option = {
+		name = dbj.20.a
+		ai_chance = { factor = 100 }
+	}
+}
+#中共：蒋介石入侵山西
+country_event = {
+	id = dbj.21
+	title = dbj.21.t
+	desc = dbj.21.d
+	
+	picture = GFX_report_event_chinese_soldiers
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		
+	}
+
+	option = {
+		name = dbj.21.a
+		ai_chance = { factor = 100 }
+		
+	}
+}
+#晋绥军：与马鸿逵交恶
+country_event = {
+	id = dbj.22
+	title = dbj.22.t
+	desc = dbj.22.d
+	
+	picture = GFX_report_event_chinese_soldiers
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		
+	}
+
+	option = {
+		name = dbj.22.a
+		ai_chance = { factor = 100 }
+		SHX = {
+			declare_war_on = {
+				target = XNM
+				type = annex_everything
+			}
+		}
+		PRC = { country_event = { id = dbj.23 } }
+	}
+}
+#中共：计划通！
+country_event = {
+	id = dbj.23
+	title = dbj.23.t
+	desc = dbj.23.d
+	
+	picture = GFX_report_event_chinese_soldiers
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		
+	}
+
+	option = {
+		name = dbj.23.a
+		ai_chance = { factor = 100 }
+		
+	}
+}
+#中共：和杨虎城交谈成功
+country_event = {
+	id = dbj.24
+	title = 和杨虎城交谈成功
+	desc = 杨虎城将军已经同意和我们联合，一旦陕甘宁发生了突发事件，杨虎城将军的部队将助我们一臂之力。
+	
+	picture = GFX_report_event_chinese_soldiers
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		
+	}
+
+	option = {
+		name = 太好了！
+		ai_chance = { factor = 100 }
+		PRC = { set_country_flag = yanghucheng_bangmang }
+	}
+}
+
+#中共：被张学良发现了！
+country_event = {
+	id = dbj.24
+	title = 被张学良发现了！
+	desc = 张学良发现了我们和杨虎城将军的秘密交流，他已经疯了，不但暗杀了杨虎城，还下令大举剿共，局势，已经没什么方法能够挽回了……
+	
+	picture = GFX_report_event_chinese_soldiers
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		
+	}
+
+	option = {
+		name = 再开一局吧……
+		ai_chance = { factor = 100 }
+		DBJ = {
+			remove_unit_leader = 5201
+			load_oob = "DBJ_jiaogong"
+			declare_war_on = {
+				target = PRC
+				type = annex_everything
+			}
+		}
+	}
+}
+
+#中共：蒋介石命令阎锡山和马鸿逵联合剿共！
+country_event = {
+	id = dbj.25
+	title = 蒋介石命令阎锡山和马鸿逵联合剿共！
+	desc = 马鸿逵和阎锡山对我们的联合打击，张学良作壁上观，他想看我们的结果如何，只要我们顶住这一段艰苦的日子，相信张学良会做出最后的抉择的。
+	
+	picture = GFX_report_event_chinese_soldiers
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		
+	}
+
+	option = {
+		name = 坚持住，我们会赢的！
+		ai_chance = { factor = 100 }
+		
+		set_variable = {
+			var = zhonggong_jianchishijian
+			value = 0
+		}
+		
+		SHX = {
+			declare_war_on = {
+				target = PRC
+				type = annex_everything
+			}
+		}
+		XNM = {
+			declare_war_on = {
+				target = PRC
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = {
+				PRC = { has_country_flag = yanghucheng_bangmang }
+			}
+			PRC = { load_oob = "DBJ_shiqilujun" }
+		}
+	}
+}
+#中共：我们胜利了
+country_event = {
+	id = dbj.26
+	title = 我们胜利了！
+	desc = 成功的抵抗了马鸿逵和阎锡山对我们的联合打击，张学良决定加入我们，现在，陕甘宁已经形成了一个牢固的势力，即便是蒋介石，也要忌惮三分！
+	
+	picture = GFX_report_event_chinese_soldiers
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		
+	}
+
+	option = {
+		name = 为我们的联盟欢呼吧！
+		ai_chance = { factor = 100 }
+		
+		PRC = { transfer_state = 744 }
+	}
+}
+
+
+
+
+
+

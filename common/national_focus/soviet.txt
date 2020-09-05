@@ -1,0 +1,4947 @@
+focus_tree = {
+	id = soviet_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SOV
+		}
+	}
+	
+	default = no
+
+continuous_focus_position = { x = 20 y = 1100 }
+      #完成第二个五年计划
+	focus = {  
+		id = SOV_diyigewunioanjihua
+		icon = GFX_goal_generic_production2
+		x = 6
+		y = 0
+		cost = 8
+		ai_will_do = {
+			factor = 5
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip =  {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = SOV_finish_five_year_plan_2IC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					industrial_complex > 0
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = SOV_finish_five_year_plan_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					industrial_complex > 0
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = SOV_finish_five_year_plan_2IC
+			}
+		}
+	}
+	
+#顿巴斯工业区
+	focus = {
+		id = SOV_dunbasigongyequ 
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = SOV_diyigewunioanjihua }
+		available = {
+			227 = { is_controlled_by = SOV }
+			228 = { is_controlled_by = SOV }
+			218 = { is_controlled_by = SOV }
+			
+		}
+		x = -2
+		y = 1
+		cost = 10
+		relative_position_id = SOV_diyigewunioanjihua
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 15
+				state = 227
+			}
+			add_resource = {
+				type = steel
+				amount = 15
+				state = 228
+			}
+			add_resource = {
+				type = steel
+				amount = 15
+				state = 218
+			}
+		}
+	}	
+	
+	#西伯利亚及乌拉尔新兴工业城市  
+	focus = {
+		id = SOV_xiboliyajiwulaer 
+		icon = GFX_goal_generic_construct_infrastructure
+	 	prerequisite = { focus = SOV_diyigewunioanjihua }
+		available = {
+			
+				398 = { is_controlled_by = SOV }
+				653 = { is_controlled_by = SOV }
+				572 = { is_controlled_by = SOV }
+				409 = { is_controlled_by = SOV }
+				408 = { is_controlled_by = SOV }
+				563 = { is_controlled_by = SOV }
+			
+		}
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = SOV_diyigewunioanjihua
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			398 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			653 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			572 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			409 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			408 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			563 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	#开发巴库油田 
+	focus = {
+		id = SOV_kaifabakuyoutian 
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SOV_diyigewunioanjihua }
+		available = {
+			229 = { is_controlled_by = SOV }
+			232 = { is_controlled_by = SOV }
+			
+		}
+		x = 2
+		y = 1
+		cost = 10
+		relative_position_id = SOV_diyigewunioanjihua
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_resource = {
+				type = oil
+				amount = 20
+				state = 229 
+			}
+			add_resource = {
+				type = oil
+				amount = 30
+				state = 232 
+			}
+			
+			
+		}
+	}
+	
+	#强化地区铁路网 
+	focus = {
+		id = SOV_qianghuadiqutieluwang 
+		icon = GFX_focus_generic_aluminum
+	 	prerequisite = { focus = SOV_dunbasigongyequ  }
+		available = {
+			
+				194 = { is_controlled_by = SOV }
+				215 = { is_controlled_by = SOV }
+				213 = { is_controlled_by = SOV }
+				214 = { is_controlled_by = SOV }
+			
+		}
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = SOV_dunbasigongyequ
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			194 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			213 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			214 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			215 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	  #保卫列宁格勒
+	focus = {
+		id = SOV_lieninggelefangyuzxian
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = SOV_dunbasigongyequ   }
+		x = -2
+		y = 1
+		relative_position_id = SOV_dunbasigongyequ
+		cost = 7
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+			NOT = {
+				any_enemy_country = {
+					has_full_control_of_state = 195
+				}
+			}
+		}
+
+		bypass = {
+		   any_enemy_country = {
+					has_full_control_of_state = 195
+				}
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { has_full_control_of_state = 195 }
+				195 = { 
+					add_building_construction = {
+						type = bunker
+						province = {
+							id = 149
+							id = 3151
+							id = 11068
+							id = 79
+							id = 6174
+						}
+						level = 5
+						instant_build = yes
+					}		
+				}
+		
+		   }
+	}
+	
+ }
+	
+	#施压芬兰  
+  focus = {  
+		id = SOV_shiyafenlan
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = SOV_lieninggelefangyuzxian   }
+		mutually_exclusive = { focus = SOV_aoniejiahuankaleilia }
+		available = {
+			country_exists = FIN
+			146 = { is_controlled_by = FIN }
+			
+		}
+		x = -1
+		y = 1
+		cost = 5 
+		relative_position_id = SOV_lieninggelefangyuzxian
+		ai_will_do = { 
+			factor = 1 
+		}
+	completion_reward = {
+	   FIN = {  country_event = { id = finland.1 } }
+			
+		}
+	}	
+	
+	#用奥涅加换卡累利阿  
+  focus = {  
+		id = SOV_aoniejiahuankaleilia
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = SOV_lieninggelefangyuzxian   }
+		mutually_exclusive = { focus = SOV_shiyafenlan }
+		available = {
+			country_exists = FIN
+			146 = { is_controlled_by = FIN }
+			
+		}
+		x = 1
+		y = 1
+		cost = 5 
+		relative_position_id = SOV_lieninggelefangyuzxian
+		ai_will_do = { 
+			factor = 1 
+		}
+	completion_reward = {
+	   FIN = {  country_event = { id = finland.10 } }
+			
+		}
+	}	
+	
+	#国防工业人民委员部
+	focus = {
+		id = SOV_guofanggongye_commissariat
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = SOV_xiboliyajiwulaer }
+		x = 0
+		y = 1
+		relative_position_id = SOV_xiboliyajiwulaer
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = peoples_commissariat_focus
+		}
+	}
+	
+	 #自然改造计划
+	focus = {
+		id = SOV_gaizao_da_ziran
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = SOV_kaifabakuyoutian }
+		x = 0
+		y = 1
+		relative_position_id = SOV_kaifabakuyoutian
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			controls_state = 404
+		}
+
+		completion_reward = {
+			add_political_power = 120
+			add_resource = {
+				type = rubber
+				amount = 15
+				state = 404
+			}
+		}
+	}
+	
+	#第三个五年计划
+   focus = {
+		id = SOV_disangewujniajihua
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		prerequisite = { focus = SOV_gaizao_da_ziran }
+		prerequisite = { focus = SOV_guofanggongye_commissariat }
+		prerequisite = { focus = SOV_qianghuadiqutieluwang }
+		x = 0
+		y = 1
+	    relative_position_id = SOV_guofanggongye_commissariat
+		cost = 6
+
+		ai_will_do = {
+			factor = 4 
+		}
+		available = {
+		   date > 1938.1.1
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		air_experience = 20
+		army_experience = 20
+			add_tech_bonus = {
+				name = CHI_unified_industrial_planning
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = air_doctrine
+			}
+		} 
+	}
+	
+	#建设斯大林经济体制
+	focus = {
+		id = SOV_sdljingjitizhi
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = SOV_disangewujniajihua }
+		x = 0
+		y = 1
+		relative_position_id = SOV_disangewujniajihua
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+				has_country_leader = { ruling_only = yes name = "约瑟夫·斯大林" }
+			}
+			
+		bypass = {
+		NOT = {has_country_leader = { ruling_only = yes name = "约瑟夫·斯大林" }}
+
+		}
+
+		completion_reward = {
+			add_ideas = SOV_sdljingjitizhi
+			add_research_slot = 1
+			add_political_power = 200
+		}
+	}
+	
+	#下塔吉尔工业中心
+	focus = {
+		id = SOV_xiatajier
+		icon = GFX_focus_generic_army_tanks2
+	 	prerequisite = { focus = SOV_sdljingjitizhi  }
+		available = {
+			
+				653 = { is_controlled_by = SOV }
+			
+		}
+		x = -2
+		y = 1
+		cost = 10
+		relative_position_id = SOV_sdljingjitizhi
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			653 = {
+			    add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+	
+	#摩尔曼斯克不冻港
+	focus = {
+		id = SOV_moermansike
+		icon = GFX_focus_generic_cruiser2
+	 	prerequisite = { focus = SOV_sdljingjitizhi  }
+		available = {
+			
+				213 = { is_controlled_by = SOV }
+			
+		}
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = SOV_sdljingjitizhi
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			213 = {
+			    add_extra_state_shared_building_slots = 8
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 5
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+	
+	
+	#车里雅宾斯克工业中心
+	focus = {
+		id = SOV_cheliyabingsike
+		icon = GFX_goal_generic_air_production
+	 	prerequisite = { focus = SOV_sdljingjitizhi  }
+		available = {
+			
+				572 = { is_controlled_by = SOV }
+			
+		}
+		x = 2
+		y = 1
+		cost = 10
+		relative_position_id = SOV_sdljingjitizhi
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			572 = {
+			    add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+	
+	#完成农业集体化
+	focus = {
+		id = SOV_wanchengnongyejitihua
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = SOV_sdljingjitizhi }
+		x = -1
+		y = 2
+		relative_position_id = SOV_sdljingjitizhi
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SOV_wanchengnongyejitihua
+		}
+	}
+	
+	#劳动环后备军 
+	focus = {
+		id = SOV_reserve_army_of_labour
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = SOV_sdljingjitizhi }
+		x = 1
+		y = 2
+		relative_position_id = SOV_sdljingjitizhi
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SOV_reserve_army_of_labour
+		}
+	} 
+	
+	#莫斯科七姐妹 
+	focus = {
+		id = SOV_mosikeqijiemei
+		icon = GFX_focus_eng_crush_the_dream
+		prerequisite = { focus = SOV_reserve_army_of_labour }
+		prerequisite = { focus = SOV_wanchengnongyejitihua }
+		x = 0
+		y = 3
+		relative_position_id = SOV_sdljingjitizhi
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+				has_country_leader = { ruling_only = yes name = "约瑟夫·斯大林" }
+			}
+
+		completion_reward = {
+			add_ideas = SOV_mosikeqijiemei
+		}
+	}
+	
+	 #扩大山地部队
+	focus = { 
+		id = SOV_special_forces
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = SOV_kaifabakuyoutian }
+		
+		x = 2
+		y = 1
+		relative_position_id = SOV_kaifabakuyoutian
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = special_forces
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1
+				uses = 1
+				technology = tech_mountaineers2
+				technology = tech_mountaineers3
+			}
+		}
+	}
+	
+	 #索取黑海出海口
+	focus = {
+		id = SOV_heihai_chuhaikou
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = SOV_special_forces }
+		available = {
+		  OR = {
+		        has_completed_focus = SOV_hejie_japan
+				has_completed_focus = SOV_bayuefengbsao_japan
+		  
+		  }
+		
+		  }
+		x = 1
+		y = 1
+		relative_position_id = SOV_special_forces
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			OR = { 
+				owns_state = 341
+				341 = { is_claimed_by = ROOT }
+			}
+			OR = { 
+				owns_state = 347
+				347 = { is_claimed_by = ROOT }
+			}
+			OR = { 
+				owns_state = 340
+				340 = { is_claimed_by = ROOT }
+			}
+			OR = { 
+				owns_state = 339
+				339 = { is_claimed_by = ROOT }
+			}
+		}
+		completion_reward = {
+			add_state_claim = 341
+			add_state_claim = 347
+			add_state_claim = 340
+			add_state_claim = 339
+			add_named_threat = { threat = 2 name = SOV_claim_on_the_straits }
+		}
+	}
+	  #对希腊最后通牒
+	focus = {
+		id = SOV_xilai_zuihou
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = SOV_heihai_chuhaikou }
+		available = {
+			is_puppet = no
+			341 = { is_controlled_by = SOV }
+			347 = { is_controlled_by = SOV }
+			340 = { is_controlled_by = SOV }
+			339 = { is_controlled_by = SOV }
+		}
+		bypass = {
+			187 = { is_controlled_by = SOV }
+		}
+		x = 0
+		y = 1
+		relative_position_id = SOV_heihai_chuhaikou
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			add_state_claim = 187
+			if = {
+				limit = { country_exists = GRE }
+				GRE = { country_event = { id = greece.1 days = 1 } }
+			}
+		}
+	}
+	
+	  #索取新疆
+	focus = {
+		id = SOV_duoque_sinkiang
+		icon = GFX_focus_generic_provoke_border_clashes
+		prerequisite = { focus = SOV_special_forces }
+		available = {
+			JAP = { has_war_with = CHI }
+		}
+		x = -1
+		y = 1
+		relative_position_id = SOV_special_forces
+		cost = 4.5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		bypass = {
+			OR = {
+				NOT = { country_exists = SIK }
+				AND = {
+					OR = { 
+						owns_state = 618
+						618 = { is_claimed_by = ROOT }
+					}
+					OR = { 
+						owns_state = 617
+						617 = { is_claimed_by = ROOT }
+					}
+					OR = { 
+						owns_state = 619
+						619 = { is_claimed_by = ROOT }
+					}
+					OR = { 
+						owns_state = 287
+						287 = { is_claimed_by = ROOT }
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_state_claim = 618
+			add_state_claim = 617
+			add_state_claim = 287
+			add_state_claim = 619
+			add_named_threat = { threat = 2 name = SOV_claim_on_sinkiang_threat }
+		}
+	}
+	
+	 #出兵中东
+	focus = {
+		id = SOV_chubing_zhongdong
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = SOV_duoque_sinkiang }
+		x = 0
+		y = 1
+		relative_position_id = SOV_duoque_sinkiang
+		cost = 10
+		available = {
+		  OR = {
+		        has_completed_focus = SOV_hejie_japan
+				has_completed_focus = SOV_bayuefengbsao_japan
+		  
+		  }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_war_with = GER
+				factor = 0
+			}
+			modifier = {
+				AND = {
+					has_war_with = ENG
+					surrender_progress > 0.3
+				}
+				factor = 0
+			}
+			modifier = {
+				has_war_with = RAJ
+				factor = 5
+			}
+		}
+		will_lead_to_war_with = PER
+		will_lead_to_war_with = IRQ
+		will_lead_to_war_with = AFG
+		bypass = {
+			PER = {
+				NOT = { owns_state = 419 }
+				NOT = { owns_state = 420 }
+				NOT = { owns_state = 266 }
+			}
+			IRQ = {
+				NOT = { owns_state = 676 }
+				NOT = { owns_state = 291 }
+			}
+			AFG = {
+				NOT = { owns_state = 267 }
+				NOT = { owns_state = 415 }
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = { 
+					PER = {
+						OR = {
+							owns_state = 419
+							owns_state = 420
+							owns_state = 266
+						}
+					} 
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = PER
+					generator = { 419 420 266 }
+				}
+			}
+			if = {
+				limit = { 
+					IRQ = {
+						OR = {
+							owns_state = 676
+							owns_state = 291
+						}
+					} 
+				}			
+				create_wargoal = {
+					type = take_state_focus
+					target = IRQ
+					generator = { 676 291 }
+				}
+			}
+			if = {
+				limit = {
+					AFG = {
+						OR = {
+							owns_state = 267
+							owns_state = 415
+						}
+					} 
+				}			
+				create_wargoal = {
+					type = take_state_focus
+					target = AFG
+					generator = { 267 415 }
+				}
+			}
+			ENG = {
+				add_opinion_modifier = { target = SOV modifier = middle_east_expansionism }
+			}
+			FRA = {
+				add_opinion_modifier = { target = SOV modifier = middle_east_expansionism }
+			}
+			USA = {
+				add_opinion_modifier = { target = SOV modifier = middle_east_expansionism }
+			}
+			# REVISIT Possibly add other Allies faction members as well
+		}
+	}
+	
+	 #发展红海军
+	focus = {
+		id = SOV_kuodahiajun_fleet
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = SOV_shiyafenlan   focus = SOV_aoniejiahuankaleilia           }
+		available = { has_offensive_war = no }
+		x = -1
+		y = 1
+		relative_position_id = SOV_aoniejiahuankaleilia
+		cost = 8.5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = SOV_expand_red_fleet_2dockyards }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}				
+			}
+			add_tech_bonus = {
+				name = ships_bonus
+				bonus = 1
+				uses = 2
+				category = naval_equipment
+			}			
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = SOV_expand_red_fleet_2dockyards
+			}
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = SOV_expand_red_fleet_2dockyards
+			}
+			add_tech_bonus = {
+				name = ships_bonus
+				bonus = 1
+				uses = 2
+				category = naval_equipment
+			}
+		}
+	}
+	
+	
+	  #苏联红军
+	focus = {
+		id = SOV_army_effort
+		icon = GFX_goal_shuangshouzhangzhi
+		
+		x = 19  #朱可夫 goal_zhukefu
+		y = 0   #图哈切夫斯基 goal_tuhaqiefusiji
+		cost = 10
+		
+		available = {
+		OR = {
+				has_completed_focus = SOV_great_purge
+				has_completed_focus = SOV_permanent_revolution
+				
+			}	
+		}
+		ai_will_do = {   
+			factor = 1000
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		
+		}
+	}
+	  #朱可夫理论
+	focus = {
+		id = SOV_zhukefulilun
+		icon = GFX_goal_zhukefu
+		prerequisite = { focus = SOV_army_effort }
+		  mutually_exclusive = { focus = SOV_tuhaqiefusiji   } 
+		x = -2
+		y = 1
+		relative_position_id = SOV_army_effort
+		cost = 10
+		ai_will_do = {   
+			factor = 100
+		}
+		available = {
+		custom_trigger_tooltip = {
+				tooltip = SOV_zhukefulilun_tt
+				has_unit_leader = 410
+			} 	
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			air_experience = 25
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1
+				uses = 1
+				category = air_doctrine
+			}
+			137 = {
+			    add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+			229 = {
+			    add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+			220 = {
+			    add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+			217 = {
+			    add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	 #图哈切夫斯基理论
+	focus = {   
+		id = SOV_tuhaqiefusiji
+		icon = GFX_goal_tuhaqiefusiji
+		prerequisite = { focus = SOV_army_effort }
+	    mutually_exclusive = { focus = SOV_zhukefulilun   }
+		x = 2
+		y = 1
+		relative_position_id = SOV_army_effort
+		cost = 10
+		ai_will_do = {   
+			factor = 100
+		}
+		available = {
+		custom_trigger_tooltip = {
+				tooltip = SOV_tuhaqiefusiji_tt
+				has_unit_leader = 401
+			} 	
+				
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1
+				uses = 1
+				category = air_doctrine
+			}
+			206 = {
+			    add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			202 = {
+			    add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			220 = {
+			    add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			217 = {
+			    add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	 #强化步兵火力
+	focus = { 
+		id = SOV_equipment_effort
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SOV_zhukefulilun }
+		
+		x = 0
+		y = 1
+		relative_position_id = SOV_zhukefulilun
+		cost = 10
+
+		available = {
+			NOT = { has_idea = trotskyite_plot }
+			custom_trigger_tooltip = {
+				tooltip = SOV_has_not_officers_purged_tt
+				NOT = { has_idea = officers_purged }			
+				NOT = { has_idea = officers_purged_2 }			
+				NOT = { has_idea = officers_purged_3 }			
+				NOT = { has_idea = officers_purged_4 }			
+				NOT = { has_idea = officers_purged_5 }			
+				NOT = { has_idea = officers_purged_6 }			
+				NOT = { has_idea = officers_purged_7 }			
+				NOT = { has_idea = officers_purged_8 }			
+				NOT = { has_idea = officers_purged_9 }			
+				NOT = { has_idea = officers_purged_10 }			
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+				
+			}
+		}
+	}
+	
+	#前沿优势火力
+	focus = { 
+		id = SOV_dapaobing
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = SOV_equipment_effort  }
+		x = 0
+		y = 1
+		relative_position_id = SOV_equipment_effort
+		
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		
+		add_ideas = SOV_dapaobing
+		
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+	
+	#敌后游击作战
+	focus = { 
+		id = SOV_dihouyoujizuozhan
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = SOV_dapaobing }
+		relative_position_id = SOV_dapaobing
+		available = {
+			
+		}
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = SOV_dihouyoujizuozhan
+		}
+	}
+	 #新式坦克
+ focus = {
+	id = SOV_xinshitanke
+	icon = GFX_goal_continuous_armor_production
+	prerequisite = { focus = SOV_zhukefulilun }
+	x = -2
+	y = 1
+	relative_position_id = SOV_zhukefulilun
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+	available = {
+			NOT = { has_idea = trotskyite_plot }
+			custom_trigger_tooltip = {
+				tooltip = SOV_has_not_officers_purged_tt
+				NOT = { has_idea = officers_purged }			
+				NOT = { has_idea = officers_purged_2 }			
+				NOT = { has_idea = officers_purged_3 }			
+				NOT = { has_idea = officers_purged_4 }			
+				NOT = { has_idea = officers_purged_5 }			
+				NOT = { has_idea = officers_purged_6 }			
+				NOT = { has_idea = officers_purged_7 }			
+				NOT = { has_idea = officers_purged_8 }			
+				NOT = { has_idea = officers_purged_9 }			
+				NOT = { has_idea = officers_purged_10 }			
+			}
+		}
+	bypass = {}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	} 
+
+	completion_reward = {
+	    add_ideas = SOV_jiakuaitankeshengchan
+		add_tech_bonus = {
+			name = CHI_zhongguo_panzers
+			bonus = 1
+			uses = 1
+			category = armor
+		}
+	}
+}
+ #航空崇拜
+focus = {
+		id = SOV_hankongchongbai_cult
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = SOV_zhukefulilun }
+		x = -4
+		y = 1
+		relative_position_id = SOV_zhukefulilun
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			air_experience = 25
+
+			add_tech_bonus = {
+				name = air_bonus
+				bonus = 1
+				uses = 1
+				category = light_air
+				category = medium_air
+				category = heavy_air
+			}
+		}
+	}
+	
+		#单一首长制
+	focus = { 
+		id = SOV_danyioshouzhangzhi
+		icon = GFX_goal_danyishouzhangzhi
+		prerequisite = { focus = SOV_xinshitanke }
+		available = {
+			
+		} 
+		x = 0
+		y = 1
+		relative_position_id = SOV_xinshitanke
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = SOV_danyioshouzhangzhi
+		}
+	}
+	
+	 #近卫军
+	focus = {
+		id = SOV_jignweijun
+		icon = GFX_goal_sulianjingweijun
+		prerequisite = { focus = SOV_danyioshouzhangzhi }
+		available = {
+			
+		}
+		x = 0
+		y = 1
+		relative_position_id = SOV_danyioshouzhangzhi
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SOV_jignweijun
+			
+		}
+	}
+	  #强化对地支援
+	focus = { 
+		id = SOV_CAS_effort
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = SOV_hankongchongbai_cult }
+		x = 0
+		y = 1
+		relative_position_id = SOV_hankongchongbai_cult
+		cost = 10
+
+		available = {
+			NOT = { has_idea = trotskyite_plot }
+			custom_trigger_tooltip = {
+				tooltip = SOV_has_not_officers_purged_tt
+				NOT = { has_idea = officers_purged }			
+				NOT = { has_idea = officers_purged_2 }			
+				NOT = { has_idea = officers_purged_3 }			
+				NOT = { has_idea = officers_purged_4 }			
+				NOT = { has_idea = officers_purged_5 }			
+				NOT = { has_idea = officers_purged_6 }			
+				NOT = { has_idea = officers_purged_7 }			
+				NOT = { has_idea = officers_purged_8 }			
+				NOT = { has_idea = officers_purged_9 }			
+				NOT = { has_idea = officers_purged_10 }			
+			}
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1
+				ahead_reduction = 1
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	} 
+	  #暗夜女巫
+	focus = {
+		id = SOV_588_hanhkongtuan
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = SOV_CAS_effort }
+		x = 0
+		y = 1
+		relative_position_id = SOV_CAS_effort
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			air_experience = 25
+			set_rule = {
+				can_generate_female_aces = yes
+			}
+			if = {
+				limit = {
+					SOV = { has_full_control_of_state = 219 }
+				}
+				custom_effect_tooltip = SOV_night_witches_tt
+				hidden_effect = {
+					load_oob = "SOV_night_witches"
+				}
+			}
+		}
+	}
+	
+	  #最高统帅部
+	focus = {
+		id = SOV_zuigaotongshuabu
+		icon = GFX_focus_generic_combined_arms
+		prerequisite = { focus = SOV_jignweijun }
+		prerequisite = { focus = SOV_dihouyoujizuozhan }
+	
+		x = 1
+		y = 1
+		relative_position_id = SOV_jignweijun
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+			every_army_leader = {
+				add_planning = 1
+				add_defense = 1
+				add_attack = 1
+			}
+			add_ideas = SOV_zuigaotongshuabu
+			remove_ideas = SOV_bujinrenyidtanke 
+			
+		}
+	} 
+	
+	 #空军地面领航员
+	focus = {      
+		id = SOV_duiianlinghangyuan
+		icon = GFX_goal_continuous_air_production
+		prerequisite = { focus = SOV_588_hanhkongtuan }
+		prerequisite = { focus = SOV_jignweijun }
+	
+		x = 1
+		y = 1
+		relative_position_id = SOV_588_hanhkongtuan
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+			add_ideas = SOV_duiianlinghangyuan
+			
+		}
+	} 
+	
+	 #空地一体化
+	focus = {        
+		id = SOV_kongdiyitihua
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = SOV_duiianlinghangyuan }
+		prerequisite = { focus = SOV_zuigaotongshuabu }
+	
+		x = 1
+		y = 1
+		relative_position_id = SOV_duiianlinghangyuan
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+			add_ideas = SOV_kongdiyitihua
+			
+		}
+	} 
+	
+	 #骑兵现代化
+	focus = {        
+		id = SOV_qibingxiandaihua
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = SOV_tuhaqiefusiji }
+		x = 0
+		y = 1
+		relative_position_id = SOV_tuhaqiefusiji
+		cost = 10
+
+		available = {
+			NOT = { has_idea = trotskyite_plot }
+			custom_trigger_tooltip = {
+				tooltip = SOV_has_not_officers_purged_tt
+				NOT = { has_idea = officers_purged }			
+				NOT = { has_idea = officers_purged_2 }			
+				NOT = { has_idea = officers_purged_3 }			
+				NOT = { has_idea = officers_purged_4 }			
+				NOT = { has_idea = officers_purged_5 }			
+				NOT = { has_idea = officers_purged_6 }			
+				NOT = { has_idea = officers_purged_7 }			
+				NOT = { has_idea = officers_purged_8 }			
+				NOT = { has_idea = officers_purged_9 }			
+				NOT = { has_idea = officers_purged_10 }			
+			}
+		}
+
+		completion_reward = {
+			
+			add_ideas = SOV_qibingxiandaihua
+			
+		}
+	} 
+	
+	 #机械化攻势
+	focus = {        
+		id = SOV_jixiehuagongshi
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = SOV_qibingxiandaihua }
+		x = 0
+		y = 1
+		relative_position_id = SOV_qibingxiandaihua
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 20
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1
+				uses = 1
+                category = armor
+			}
+		   add_tech_bonus = {
+		  	name = ombined_arms_warfare
+			bonus = 1
+			uses = 1
+			category = cat_mechanized_equipment
+		}
+			
+     }
+  } 
+  
+   #大规模战争动员
+	focus = {         
+		id = SOV_daguimozhanzhengdongyuan
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = SOV_jixiehuagongshi }
+		x = 0
+		y = 1
+		relative_position_id = SOV_jixiehuagongshi
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SOV_daguimozhanzhengdongyuan
+     }
+  } 
+  
+   #改革军事理论
+	focus = {
+		id = SOV_doctrine_effort
+		icon = GFX_goal_rhineland
+		prerequisite = { focus = SOV_tuhaqiefusiji }
+		x = 2
+		y = 1
+		relative_position_id = SOV_tuhaqiefusiji
+		cost = 10
+
+		available = {
+			NOT = { has_idea = trotskyite_plot }
+			custom_trigger_tooltip = {
+				tooltip = SOV_has_not_officers_purged_tt
+				NOT = { has_idea = officers_purged }			
+				NOT = { has_idea = officers_purged_2 }			
+				NOT = { has_idea = officers_purged_3 }			
+				NOT = { has_idea = officers_purged_4 }			
+				NOT = { has_idea = officers_purged_5 }			
+				NOT = { has_idea = officers_purged_6 }			
+				NOT = { has_idea = officers_purged_7 }			
+				NOT = { has_idea = officers_purged_8 }			
+				NOT = { has_idea = officers_purged_9 }			
+				NOT = { has_idea = officers_purged_10 }			
+			}
+		}
+
+		completion_reward = {
+			army_experience = 150
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	  #重申政治委员重要性
+	focus = {
+		id = SOV_political_commissars
+		icon = GFX_goal_sulianhongju
+		prerequisite = { focus = SOV_doctrine_effort }
+		available = {
+		}
+		x = 0
+		y = 1
+		relative_position_id = SOV_doctrine_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SOV_political_commissars
+			add_political_power = 200
+		}
+	}
+	
+	#诸兵种联合战术
+	focus = {   
+		id = SOV_bingzhong_lianhe
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = SOV_political_commissars }
+		x = 0 
+		y = 1 
+		relative_position_id = SOV_political_commissars
+		cost = 10
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+				
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 20
+			add_ideas = SOV_bingzhong_lianhe
+			remove_ideas = SOV_bujinrenyidtanke 
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1
+				uses = 1
+                category = armor
+				
+			}
+			add_tech_bonus = {
+		  	name = ombined_arms_warfare
+			bonus = 1
+			uses = 1
+			category = cat_mechanized_equipment
+		}
+		}	
+    }
+	#对敌战略轰炸
+   focus = {
+		id = SOV_bomber_focus
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = SOV_tuhaqiefusiji }
+		x = 4
+		y = 1
+		relative_position_id = SOV_tuhaqiefusiji
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+		}
+	}	
+   #敌后空降作战
+focus = {
+		id = SOV_kongzhongtuji_forcesbudui
+		icon = GFX_focus_generic_paratrooper
+		prerequisite = { focus = SOV_bomber_focus }
+		x = 0
+		y = 1
+		relative_position_id = SOV_bomber_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1
+				uses = 1
+				technology = paratroopers2
+				technology = paratroopers3
+			}
+			
+		}
+	}	
+	#现代化后勤保障
+ focus = {
+	id = SOV_xiandaihuahouqinbaozhang
+	icon = GFX_goal_generic_army_motorized
+	prerequisite = { focus = SOV_kongzhongtuji_forcesbudui}
+	x = 0
+	y = 1
+	relative_position_id = SOV_kongzhongtuji_forcesbudui
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		
+	}
+
+	available = {
+			NOT = { has_idea = trotskyite_plot }
+			custom_trigger_tooltip = {
+				tooltip = SOV_has_not_officers_purged_tt
+				NOT = { has_idea = officers_purged }			
+				NOT = { has_idea = officers_purged_2 }			
+				NOT = { has_idea = officers_purged_3 }			
+				NOT = { has_idea = officers_purged_4 }			
+				NOT = { has_idea = officers_purged_5 }			
+				NOT = { has_idea = officers_purged_6 }			
+				NOT = { has_idea = officers_purged_7 }			
+				NOT = { has_idea = officers_purged_8 }			
+				NOT = { has_idea = officers_purged_9 }			
+				NOT = { has_idea = officers_purged_10 }			
+			}
+		}
+	 
+	completion_reward = {
+		every_army_leader = {
+			add_logistics = 2
+			add_defense = 1
+			add_planning = 1
+		}
+		add_tech_bonus = {
+			name = SOV_xiandaihuahouqinbaozhang
+			bonus = 1
+			uses = 1
+			technology = tech_field_hospital
+			technology = tech_field_hospital2
+			technology = tech_field_hospital3
+			technology = tech_field_hospital4
+			technology = tech_logistics_company
+			technology = tech_logistics_company2
+			technology = tech_logistics_company3
+			technology = tech_logistics_company4
+		}
+	}
+}
+
+ #武装力量总参谋部
+	focus = {
+		id = SOV_wuzhuangliliangzcmb
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = SOV_daguimozhanzhengdongyuan }
+		prerequisite = { focus = SOV_bingzhong_lianhe }
+		available = {
+		}
+		x = 1 
+		y = 1
+		relative_position_id = SOV_daguimozhanzhengdongyuan
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SOV_wuzhuangliliangzcmb
+			
+		}
+	}
+	
+	#大规模炮火准备
+	focus = {  
+		id = SOV_daguimopaohouzhunbie
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = SOV_bingzhong_lianhe  }
+		prerequisite = { focus = SOV_xiandaihuahouqinbaozhang  }
+		x = -1
+		y = 1
+		relative_position_id = SOV_xiandaihuahouqinbaozhang
+		
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		
+		add_ideas = SOV_dapaobing
+		
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+	
+	 #完成大纵深理论
+	focus = {
+		id = SOV_wanchengdazongsheng
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = SOV_wuzhuangliliangzcmb }
+	    prerequisite = { focus = SOV_daguimopaohouzhunbie }
+		x = 1
+		y = 1
+		relative_position_id = SOV_wuzhuangliliangzcmb
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+			add_ideas = wanchengdazongsheng
+			
+		}
+	}
+	 #改善斯大林防线
+	focus = {
+		id = SOV_gaishensidalingfangxian
+		icon = GFX_focus_generic_coastal_fort
+		prerequisite = { focus = SOV_army_effort    }
+		available = { has_offensive_war = no }
+		x = 4
+		y = 1
+		relative_position_id = SOV_army_effort
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			209 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 6
+						province = 415
+						instant_build = yes
+					}
+				}
+				
+			}
+			210 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 3333
+						instant_build = yes
+					}
+				}
+			}
+			207 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 3219
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 6371
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 6220
+						instant_build = yes
+					}
+				}
+			}
+			206 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 11370
+						instant_build = yes
+					}
+				}
+			}
+			202 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 7
+						province = 525
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 7
+						province = 3494
+						instant_build = yes
+					}
+				}
+
+			}
+			203 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 7
+						province = 11409
+						instant_build = yes
+					}
+				}
+			}
+			192 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 754
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 741
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 11670
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	 #加强远东防御
+	focus = {
+		id = SOV_jiangqiang_yuandongfagyu
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus =  SOV_army_effort }
+		x = -4
+		y = 1
+		relative_position_id = SOV_army_effort
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			563 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					custom_effect_tooltip = SOV_far_east_fortification_forts_1
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 4719
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 12622
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 10559
+							instant_build = yes
+						}
+					}
+				}					
+			}
+			657 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					custom_effect_tooltip = SOV_far_east_fortification_forts_2
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 7763
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 4725
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 10655
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 7801
+							instant_build = yes
+						}
+					}
+				}
+			}
+			409 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					custom_effect_tooltip = SOV_far_east_fortification_forts_3
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 12189
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 10466
+							instant_build = yes
+						}
+					}
+				}
+			}
+			408 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 11643
+						instant_build = yes
+					}
+				}
+			}
+			
+		}
+	}
+	
+	  #工业迁移
+	focus = {
+		id = SOV_gongyedazhuanyi
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = SOV_zhukefulilun focus = SOV_tuhaqiefusiji   }
+		x = 2
+		y = 1
+		relative_position_id = SOV_zhukefulilun
+		cost = 1
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				NOT = { has_war_with = GER }
+			}
+		}
+
+		available = {
+			has_war = yes
+			573 = {
+				is_owned_and_controlled_by = SOV
+			}
+			582 = {
+				is_owned_and_controlled_by = SOV
+			} 
+		}
+
+		bypass = {
+			NOT = { 219 = { is_owned_and_controlled_by = ROOT } }
+			NOT = { 195 = { is_owned_and_controlled_by = ROOT } }
+			NOT = { 242 = { is_owned_and_controlled_by = ROOT } }
+		}
+
+		completion_reward = {
+			unlock_decision_tooltip = SOV_relocate_industry_from_moscow
+			unlock_decision_tooltip = SOV_relocate_industry_from_leningrad
+			unlock_decision_tooltip = SOV_relocate_industry_from_smolensk			
+		}
+	}
+	
+	#保卫莫斯科
+	focus = {
+		id = SOV_daoweimosike
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = SOV_gongyedazhuanyi }
+		available = {
+			
+			219 = {
+				is_controlled_by = ROOT
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = SOV_gongyedazhuanyi
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			army_experience = 5
+			219 = {
+				custom_effect_tooltip = SOV_defense_of_moscow_forts
+				hidden_effect = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 3391
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 6414
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 9348
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 301
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 9378
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 6283
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 3259
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 11282
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 6380
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	 #西伯利亚后备军
+	focus = {  
+		id = SOV_yuebeiyizhidu
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		prerequisite = { focus = SOV_daoweimosike }
+		x = 0
+		y = 1
+		relative_position_id = SOV_daoweimosike
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SOV_yuebeiyizhidu
+			
+		}
+	}
+	
+	#斯大林宪法
+	focus = {
+		id = SOV_sidaling_xianfa
+		icon = GFX_goal_support_communism
+		x = 29
+		y = 0
+		cost = 9
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+				has_country_leader = { ruling_only = yes name = "约瑟夫·斯大林" }
+			}
+			
+		bypass = {
+		NOT = {has_country_leader = { ruling_only = yes name = "约瑟夫·斯大林" }}
+
+		}
+
+		completion_reward = {
+			add_political_power = 160
+		}
+	}
+	 #宣扬集体主义
+	focus = {
+		id = SOV_xuanyang_jitichuyi
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = SOV_sidaling_xianfa }
+		
+		x = -1
+		y = 1
+		relative_position_id = SOV_sidaling_xianfa
+		cost = 5
+		ai_will_do = {
+			factor = 0.25
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 120
+			add_ideas = SOV_collectivist_propaganda
+		}
+	}
+	 #个人英雄主义
+	focus = {
+		id = SOV_geren_yengxingzhuyi
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = SOV_sidaling_xianfa }
+		
+		x = 1
+		y = 1
+		relative_position_id = SOV_sidaling_xianfa
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = konstantin_rokossovsky 
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = georgy_zhukov
+			
+		}
+	}
+	 #国际主义精神
+	focus = {
+		id = SOV_internationalism_focus
+		icon = GFX_goal_support_communism 
+		prerequisite = { focus = SOV_geren_yengxingzhuyi }
+		prerequisite = { focus = SOV_xuanyang_jitichuyi }
+		x = 0
+		y = 2
+		relative_position_id = SOV_sidaling_xianfa
+		cost = 5
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				any_neighbor_country = {
+					is_major = yes
+					has_government = communism
+				}
+			}			
+			modifier = {
+				factor = 0
+				AND = {
+					is_historical_focus_on = yes
+					NOT = { has_government = communism }
+				}
+			}
+		}
+
+		completion_reward = {
+			add_ideas = SOV_internationalism_focus
+			add_political_power = 100
+		}
+	}	
+	 #社会主义的现实主义
+	focus = {
+		id = SOV_shehuizhuyi_xianshizhuyi
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = SOV_internationalism_focus }
+		x = 2
+		y = 1
+		relative_position_id = SOV_internationalism_focus
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	 #社会主义科学
+	focus = {
+		id = SOV_shehuizhuyi_science
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = SOV_internationalism_focus  }
+		x = -2
+		y = 1
+		relative_position_id = SOV_internationalism_focus
+		cost = 9
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = socialist_science_focus
+		}
+	}
+	 #政治正确
+	focus = {
+		id = SOV_political_correctness
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = SOV_internationalism_focus }
+		x = 0
+		y = 1
+		relative_position_id = SOV_internationalism_focus
+		cost = 6
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}		
+			add_political_power = 200
+			add_ideas = idea_political_correctness
+		}
+	}
+	 #新时代公民
+	focus = { 
+		id = SOV_xsd_gongming
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = SOV_political_correctness }
+		prerequisite = { focus = SOV_shehuizhuyi_science }
+		prerequisite = { focus = SOV_shehuizhuyi_xianshizhuyi }
+		x = 0
+		y = 1
+		relative_position_id = SOV_political_correctness
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		    add_ideas = SOV_xsd_gongming
+			hidden_effect = {
+				set_rule = {
+					can_use_kamikaze_pilots = yes
+				}
+			}
+			custom_effect_tooltip = kamikaze_focus_tooltip
+		}
+	}
+	 #崇尚科学
+	focus = {
+		id = SOV_chongsheng_kexue
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = SOV_shehuizhuyi_science }
+		x = 0
+		y = 1
+		relative_position_id = SOV_shehuizhuyi_science
+		cost = 6
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = progress_cult_focus
+		}
+	}
+	 #科学进步
+	focus = {
+		id = SOV_zengjiaextra_lingixna
+		icon = GFX_focus_research
+		prerequisite = { focus = SOV_shehuizhuyi_xianshizhuyi }
+		x = 0
+		y = 1
+		relative_position_id = SOV_shehuizhuyi_xianshizhuyi
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+   #外交方针
+	focus = {
+		id = SOV_political_effort
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = SOV_sidaling_xianfa }
+		x = 5
+		y = 1
+		relative_position_id = SOV_sidaling_xianfa
+		cost = 1
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	 #反法西斯外交
+	focus = {
+		id = SOV_fanfaxisi_diplomacy
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = SOV_political_effort }
+		x = 0
+		y = 1
+		relative_position_id = SOV_political_effort
+		cost = 2
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_government = fascism
+				factor = 0
+			}
+
+			modifier = {
+				factor = 3
+				ai_irrationality < 25
+			}
+
+			modifier = {
+				factor = 0.75
+				ai_irrationality > 30
+			}
+
+			modifier = {
+				factor = 0.5
+				ai_irrationality > 40
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			USA = { 
+				if = {
+					limit = { NOT = { has_government = fascism } }
+					add_opinion_modifier = { target = SOV modifier = anti_fascist_diplomacy_focus } 
+				}
+			}
+			ENG = { 
+				if = {
+					limit = { NOT = { has_government = fascism } }
+					add_opinion_modifier = { target = SOV modifier = anti_fascist_diplomacy_focus } 
+				}
+			}
+			FRA = { 
+				if = {
+					limit = { NOT = { has_government = fascism } }
+					add_opinion_modifier = { target = SOV modifier = anti_fascist_diplomacy_focus } 
+				}
+			}
+			every_other_country = {
+				limit = { has_government = fascism }
+				add_opinion_modifier = { target = SOV modifier = anti_fascist_diplomacy_fascists }
+			}
+		}
+	}
+	 #吞并唐努图瓦
+	focus = {
+		id = SOV_tunbing_tangnutuva
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = SOV_sidaling_xianfa }
+		available = { is_puppet = no }
+		bypass = {
+			NOT = { country_exists = TAN }
+		}
+		x = 3
+		y = 1
+		relative_position_id = SOV_sidaling_xianfa
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			TAN = {
+				country_event = { id = soviet.14 }
+			}
+		}
+	}
+	 #索取波罗的海三国
+	focus = {
+		id = SOV_suoqueboldh_baltic
+		icon = GFX_focus_RAJ_indian_gurkhas
+		prerequisite = { focus = SOV_fanfaxisi_diplomacy }
+		x = 1
+		y = 1
+		relative_position_id = SOV_fanfaxisi_diplomacy
+		cost = 5
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				date < 1939.1.1
+				NOT = { 
+					GER = { has_completed_focus = GER_demand_memel }
+				}
+			}
+		}
+		bypass = {
+			OR = { 
+				owns_state = 11
+				11 = { is_claimed_by = ROOT }
+			}
+			OR = { 
+				owns_state = 12
+				12 = { is_claimed_by = ROOT }
+			}
+			OR = { 
+				owns_state = 189
+				189 = { is_claimed_by = ROOT }
+			}
+			OR = { 
+				owns_state = 190
+				190 = { is_claimed_by = ROOT }
+			}
+		}
+		completion_reward = {
+			add_state_claim = 11
+			add_state_claim = 189
+			add_state_claim = 12
+			add_state_claim = 190
+			add_named_threat = { threat = 1 name = SOV_claims_on_baltic }
+
+			every_other_country = {
+				limit = {					
+					OR = {
+						owns_state = 11
+						owns_state = 12
+						owns_state = 189
+						owns_state = 190
+					}
+				}
+				add_opinion_modifier = { target = SOV modifier = threat_to_baltic }
+			}
+		}
+	}
+	 #波罗的海安全保障
+	focus = {
+		id = SOV_baopzhengbaoloudihai
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = SOV_suoqueboldh_baltic }
+		x = 0
+		y = 1
+		relative_position_id = SOV_suoqueboldh_baltic
+		cost = 10
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				date < 1939.1.1
+			}	
+		}
+		bypass = {
+			OR = { 
+				owns_state = 146
+				146 = { is_claimed_by = ROOT }
+			}
+			OR = { 
+				owns_state = 191
+				191 = { is_claimed_by = ROOT }
+			}
+			OR = { 
+				owns_state = 13
+				13 = { is_claimed_by = ROOT }
+			}
+		}
+		completion_reward = {
+			add_state_claim = 146 # Karjala
+			# Estonia
+			add_state_claim = 191 
+			add_state_claim = 13
+			add_named_threat = { threat = 1 name = SOV_baltic_security }
+			FIN = {
+				add_timed_idea = {
+					idea = communist_pressure
+					days = 365
+				}              
+			}
+			SWE = {
+				add_timed_idea = {
+					idea = communist_pressure
+					days = 365
+				}             
+			}
+			DEN = {
+				add_timed_idea = {
+					idea = communist_pressure
+					days = 365
+				}             
+			}
+			NOR = {
+				add_timed_idea = {
+					idea = communist_pressure
+					days = 365
+				}             
+			}
+		}
+	}
+	  #索取比萨拉比亚
+	focus = {
+		id = SOV_suoque_bessarabia
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = SOV_fanfaxisi_diplomacy }
+		x = -1
+		y = 1
+		relative_position_id = SOV_fanfaxisi_diplomacy
+		cost = 6
+		ai_will_do = {
+			factor = 2.5
+			modifier = {
+				factor = 0
+				date < 1939.1.1
+			}	
+			modifier = {
+				factor = 200
+				GER = { has_government = democratic }
+			}		
+		}
+		bypass = {
+			OR = { 
+				owns_state = 78
+				78 = { is_claimed_by = ROOT }
+			}
+			OR = { 
+				owns_state = 80
+				80 = { is_claimed_by = ROOT }
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = { 78 = { OWNER = { NOT = { is_in_faction_with = ROOT} } } }
+				add_state_claim = 78
+			}
+			if = {
+				limit = { 80 = { OWNER = { NOT = { is_in_faction_with = ROOT} } } }
+				add_state_claim = 80
+			}
+			add_named_threat = { threat = 1 name = SOV_claim_bessarabia }
+			random_other_country = {
+				limit = { owns_state = 78 }
+				add_opinion_modifier = { target = SOV modifier = claimed_bessarabia }
+				set_country_flag = SOV_added_claimed_bessarabia
+			}
+			if = {
+				limit = {
+					any_other_country = {
+						owns_state = 78
+						NOT = {	owns_state = 80 }
+					}
+				}
+				random_other_country = {
+					limit = { 
+						owns_state = 80 
+						NOT = { has_country_flag = SOV_added_claimed_bessarabia }
+					}
+					add_opinion_modifier = { target = SOV modifier = claimed_bucovina }
+				}
+			}
+		}
+	}
+	 #对波兰提出领土要求
+	focus = {
+		id = SOV_suoquelingtu_poland
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = SOV_suoque_bessarabia }
+		x = 0
+		y = 1
+		relative_position_id = SOV_suoque_bessarabia
+		cost = 10
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				date < 1939.1.1
+			}	
+			modifier = {
+				factor = 200
+				GER = { has_government = democratic }
+			}
+		}
+
+		bypass = {
+			OR = {
+				has_idea = SOV_molotov_ribbentrop_pact
+
+				NOT = { country_exists = POL }
+
+				AND = {
+					OR = { 
+						owns_state = 91
+						91 = { is_claimed_by = ROOT }
+					}
+					OR = { 
+						owns_state = 93
+						93 = { is_claimed_by = ROOT }
+					}
+					OR = { 
+						owns_state = 94
+						94 = { is_claimed_by = ROOT }
+					}
+					OR = { 
+						owns_state = 95
+						95 = { is_claimed_by = ROOT }
+					}
+					OR = { 
+						owns_state = 96
+						96 = { is_claimed_by = ROOT }
+					}
+					OR = { 
+						owns_state = 89
+						89 = { is_claimed_by = ROOT }
+					}
+				}
+			}			
+		}
+
+		completion_reward = {
+			# REVISIT Covers Polish border, may want to add/remove some states
+			add_state_claim = 96
+			add_state_claim = 95
+			add_state_claim = 94
+			add_state_claim = 93
+			add_state_claim = 91
+			add_state_claim = 89
+			add_named_threat = { threat = 3 name = SOV_claims_on_poland }
+
+			every_other_country = {
+				limit = { 
+					OR = {
+						owns_state = 96
+						owns_state = 95
+						owns_state = 94
+						owns_state = 93
+						owns_state = 91
+						owns_state = 89
+					}
+				}
+				add_opinion_modifier = { target = SOV modifier = claimed_eastern_poland }
+			}
+		}
+	}
+	 #索取波兰东部
+	focus = {
+		id = SOV_suoquebolandongbu_poland
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = SOV_suoquelingtu_poland }
+		mutually_exclusive = { focus = SOV_baozhengboalnqnquan_protection }
+		x = -1
+		y = 1
+		relative_position_id = SOV_suoquelingtu_poland
+		cost = 10
+		available = {
+			is_puppet = no
+			NOT =  { is_in_faction_with = POL }
+			NOT = { has_war_with = POL }
+			POL = {
+				OR = {
+					96 = { is_owned_and_controlled_by = POL }
+					95 = { is_owned_and_controlled_by = POL }
+					94 = { is_owned_and_controlled_by = POL }
+					93 = { is_owned_and_controlled_by = POL }
+					91 = { is_owned_and_controlled_by = POL }
+					89 = { is_owned_and_controlled_by = POL }
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				date < 1939.1.1
+			}
+
+			modifier = {
+				factor = 0.5
+				ai_irrationality > 20
+			}
+			modifier = {
+				factor = 0.5
+				ai_irrationality > 25
+			}
+			modifier = {
+				factor = 0.5
+				ai_irrationality > 30
+			}
+			modifier = {
+				factor = 0.1
+				ai_irrationality > 35
+			}
+		}
+		completion_reward = {
+			POL = {
+				country_event = { id = poland.2 }
+				custom_effect_tooltip = needs_approval
+			}
+			effect_tooltip = {
+				SOV = {
+					if = {
+						limit = { POL = { owns_state = 96 controls_state = 96 } }
+						transfer_state = 96
+					}
+					if = {
+						limit = { POL = { owns_state = 95 controls_state = 95 } }
+						transfer_state = 95
+					}
+					if = {
+						limit = { POL = { owns_state = 94 controls_state = 94 } }
+						transfer_state = 94
+					}
+					if = {
+						limit = { POL = { owns_state = 93 controls_state = 93 } }
+						transfer_state = 93
+					}
+					if = {
+						limit = { POL = { owns_state = 91 controls_state = 91 } }
+						transfer_state = 91
+					}
+					if = {
+						limit = { POL = { owns_state = 89 controls_state = 89 } }
+						transfer_state = 89
+					}
+				}
+			}
+		}
+	}
+	 #给予波兰保护
+	focus = {
+		id = SOV_baozhengboalnqnquan_protection
+		icon = GFX_focus_generic_polish_deal
+		prerequisite = { focus = SOV_suoquelingtu_poland }
+		mutually_exclusive = { focus = SOV_suoquebolandongbu_poland }
+		available = {
+			POL = {
+				country_exists = POL
+				has_war = no
+				is_puppet = no
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = SOV_suoquelingtu_poland
+		cost = 10
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				date < 1939.1.1
+			}
+
+			modifier = {
+				factor = 0.5
+				ai_irrationality < 24
+			}
+			modifier = {
+				factor = 0.5
+				ai_irrationality < 20
+			}
+			modifier = {
+				factor = 0.5
+				ai_irrationality < 15
+			}
+			modifier = {
+				factor = 0.1
+				ai_irrationality < 10
+			}
+		}
+		completion_reward = {
+			POL = {
+				country_event = { id = poland.5 }
+				custom_effect_tooltip = needs_approval
+				effect_tooltip = {
+					add_state_claim = 5
+					add_state_claim = 63
+					add_state_claim = 68
+					add_state_claim = 66
+					add_state_claim = 67
+					custom_effect_tooltip = SOV_offer_poland_protection_tt
+				}
+			}
+			effect_tooltip = {
+				SOV = {
+					if = {
+						limit = { POL = { owns_state = 96 controls_state = 96 } }
+						transfer_state = 96
+					}
+					if = {
+						limit = { POL = { owns_state = 95 controls_state = 95 } }
+						transfer_state = 95
+					}
+					if = {
+						limit = { POL = { owns_state = 94 controls_state = 94 } }
+						transfer_state = 94
+					}
+					if = {
+						limit = { POL = { owns_state = 93 controls_state = 93 } }
+						transfer_state = 93
+					}
+					if = {
+						limit = { POL = { owns_state = 91 controls_state = 91 } }
+						transfer_state = 91
+					}
+					if = {
+						limit = { POL = { owns_state = 89 controls_state = 89 } }
+						transfer_state = 89
+					}
+				}
+			}
+		}
+	}
+	 #大雷雨计划
+	focus = { 
+		id = SOV_daleiyujihua_germany
+		icon = GFX_focus_attack_germany
+		prerequisite = { focus = SOV_suoquebolandongbu_poland focus = SOV_baozhengboalnqnquan_protection   }
+		available = {
+			country_exists = GER
+			custom_trigger_tooltip = {
+				tooltip = SOV_war_with_germany_tt
+				NOT = { has_idea = SOV_molotov_ribbentrop_pact }
+			}
+			NOT = { has_idea = trotskyite_plot }
+			custom_trigger_tooltip = {
+				tooltip = SOV_has_not_officers_purged_tt
+				NOT = { has_idea = officers_purged }			
+				NOT = { has_idea = officers_purged_2 }			
+				NOT = { has_idea = officers_purged_3 }			
+				NOT = { has_idea = officers_purged_4 }			
+				NOT = { has_idea = officers_purged_5 }			
+				NOT = { has_idea = officers_purged_6 }			
+				NOT = { has_idea = officers_purged_7 }			
+				NOT = { has_idea = officers_purged_8 }			
+				NOT = { has_idea = officers_purged_9 }			
+				NOT = { has_idea = officers_purged_10 }			
+			}
+		}
+		bypass = {
+			has_war_with = GER
+		}
+		will_lead_to_war_with = GER
+		x = -1
+		y = 1
+		relative_position_id = SOV_baozhengboalnqnquan_protection
+		cost = 10
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				OR = {
+					AND = {
+						has_completed_focus = SOV_bayuefengbsao_japan
+						JAP = { has_capitulated = no }
+					}
+					AND = {
+						has_completed_focus = SOV_xiaomieyingguo_uk
+						ENG = { has_capitulated = no }
+					}
+					has_war = yes
+				}
+				OR = {
+					any_enemy_country = {
+						is_neighbor_of = ROOT
+					}
+					alliance_strength_ratio > 0.75
+				}
+			}
+
+			modifier = {
+				factor = 2
+
+				ROM = {
+					is_in_faction_with = GER
+				}
+			}
+			modifier = {
+				factor = 200
+				GER = { has_government = democratic }
+				FRA = { has_government = fascism }
+				GER = { has_war_with = FRA }
+			}
+		}	
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = GER
+			} 
+		}
+	}
+	 #ZET行动
+	focus = {
+		id = SOV_xindong_zet
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
+		prerequisite = { focus = SOV_fanfaxisi_diplomacy }
+		available = {
+			has_equipment = {
+				infantry_equipment > 199
+			}
+			country_exists = CHI
+			country_exists = PRC
+			CHI = { has_war_with = JAP }
+		}
+		continue_if_invalid = yes
+		bypass = {
+			CHI = {
+				OR = {
+					exists = no
+					is_puppet = yes
+				}
+
+			}
+		}
+		select_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_war_with = CHI
+						CHI = {
+							has_war_with = PRC
+						}
+					}
+				}
+				send_equipment = {
+					target = CHI
+					type = infantry_equipment
+					amount = 200
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_war_with = PRC
+					}
+				}
+				send_equipment = {
+					target = PRC
+					type = infantry_equipment
+					amount = 200
+				}
+			}
+		}
+		x = 3
+		y = 1
+		relative_position_id = SOV_fanfaxisi_diplomacy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+	CHI = {
+		add_equipment_to_stockpile = { type = light_tank_equipment_1 amount = 500 producer = SOV }
+		add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 10000
+				producer = SOV
+			}
+		add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 150
+				producer = SOV
+		      }
+		
+		   }
+			if = {
+				limit = {
+					NOT = {
+						has_war_with = CHI
+						CHI = {
+							has_war_with = PRC
+						}
+					}
+				}
+				CHI = {
+					add_opinion_modifier = { target = SOV modifier = operation_zet_chi }				
+				}
+				JAP = { add_opinion_modifier = { target = SOV modifier = operation_zet_jap } }
+				PRC = { add_opinion_modifier = { target = SOV modifier = operation_zet_jap } }
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_war_with = PRC
+					}
+				}
+				CHI = {
+					add_opinion_modifier = { target = SOV modifier = operation_zet_jap }				
+				}
+				JAP = { add_opinion_modifier = { target = SOV modifier = operation_zet_jap } }
+				PRC = { add_opinion_modifier = { target = SOV modifier = operation_zet_chi } }
+			}
+		}
+	}
+	 #风暴行动
+	focus = {
+		id = SOV_bayuefengbsao_japan
+		icon = GFX_focus_attack_japan
+		prerequisite = { focus = SOV_jieshoukanglian }
+		mutually_exclusive = { focus = SOV_hejie_japan }
+		x = 1
+		y = 1
+		relative_position_id = SOV_jieshoukanglian
+		available = {
+			country_exists = JAP
+			NOT = { has_idea = trotskyite_plot }
+			custom_trigger_tooltip = {
+				tooltip = SOV_has_not_officers_purged_tt
+				NOT = { has_idea = officers_purged }			
+				NOT = { has_idea = officers_purged_2 }			
+				NOT = { has_idea = officers_purged_3 }			
+				NOT = { has_idea = officers_purged_4 }			
+				NOT = { has_idea = officers_purged_5 }			
+				NOT = { has_idea = officers_purged_6 }			
+				NOT = { has_idea = officers_purged_7 }			
+				NOT = { has_idea = officers_purged_8 }			
+				NOT = { has_idea = officers_purged_9 }			
+				NOT = { has_idea = officers_purged_10 }			
+			}
+		}
+		will_lead_to_war_with = JAP
+		cost = 1
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				OR = {
+					AND = {
+						has_completed_focus = SOV_war_with_germany
+						GER = { has_capitulated = no }
+					}
+					AND = {
+						has_completed_focus = SOV_xiaomieyingguo_uk
+						ENG = { has_capitulated = no }
+					}
+					has_war = yes
+				}
+				OR = {
+					any_enemy_country = {
+						is_neighbor_of = ROOT
+					}
+					alliance_strength_ratio > 0.9
+				}
+			}
+		}
+		bypass = {
+			OR = {
+				has_war_with = JAP
+				NOT = { country_exists = JAP }
+			}
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = JAP
+			} 
+		}
+	}
+	 #大清洗
+	focus = {
+		id = SOV_great_purge
+		icon = GFX_goal_generic_war_with_comintern
+		available = {
+			NOT = { has_country_flag = counter_purge }
+			has_government = communism
+		}
+		x = 3
+		y = 0
+		relative_position_id = SOV_permanent_revolution
+		cost = 30
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				any_claim = yes
+				has_war = yes
+			}
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = SOV_great_purge_bypass_tt
+				has_country_flag = counter_purge
+			}
+		}
+
+		select_effect = {
+			country_event = { id = soviet.24 days = 1 }
+			set_country_flag = SOV_purge_started
+		} 
+		completion_reward = {
+			custom_effect_tooltip = SOV_great_purge_tt
+			custom_effect_tooltip = SOV_great_purge_tt2
+			
+				add_timed_idea = {
+					idea = junguan_quefajingyan
+					days = 2000
+				}
+			
+	     hidden_effect = { 		
+             if = {
+				limit = {
+					SOV = { is_ai = yes }
+				}
+			set_technology = { superior_firepower = 1  }
+			set_technology = { sup_delay = 1  }
+			set_technology = { mobile_defence = 1  }
+			set_technology = { intergrated_support = 1  }
+			set_technology = { regimental_combat_teams = 1  }
+			set_technology = { dispersed_support = 1  }
+			set_technology = { overwhelming_firepower = 1  }
+			set_technology = { concentrated_fire_plans = 1  }
+			set_technology = { combined_arms = 1  }
+			set_technology = { tactical_control = 1  }
+			set_technology = { air_land_battle = 1  }
+			set_technology = { centralized_fire_control = 1  }
+			set_technology = { forward_observers = 1  }
+			set_technology = { advanced_firebases = 1  }
+			set_technology = { shock_and_awe = 1  }
+			
+			set_technology = { trench_warfare = 1  }
+			set_technology = { prepared_defense = 1  }
+			set_technology = { grand_assault = 1  }
+			set_technology = { grand_mechanized_offensive = 1  }
+			set_technology = { assault_concentration = 1  }
+			set_technology = { branch_interoperation = 1  }
+			set_technology = { assault_breakthrough = 1  }
+			set_technology = { central_planning = 1  }
+			set_technology = { c3i_theory = 1  }
+			set_technology = { infantry_offensive = 1  }
+			set_technology = { armored_operations = 1  }
+			set_technology = { infiltration_assault = 1  }
+			set_technology = { night_assault_tactics = 1  }
+			set_technology = { attritional_containment = 1  }
+			set_technology = { infiltration_in_depth = 1  }
+			
+			set_technology = { pocket_defence = 1  }
+			set_technology = { defence_in_depth = 1  }
+			set_technology = { large_front_operations = 1  }
+			set_technology = { deep_operations = 1  }
+			set_technology = { operational_concentration = 1  }
+			set_technology = { vast_offensives = 1  }
+			set_technology = { breakthrough_priority = 1  }
+			set_technology = { mechanized_wave = 1  }
+			set_technology = { continuous_offensive = 1  }
+			set_technology = { human_wave_offensive = 1  }
+			set_technology = { human_infantry_offensive = 1  }
+			set_technology = { large_front_offensive = 1  }
+			set_technology = { peoples_army = 1  }
+			set_technology = { guerilla_warfare = 1  }
+			every_army_leader = {
+				add_planning = 2
+				add_defense = 2
+				add_attack = 2
+			}
+			}			
+		}
+			
+			#全面军事清洗。最严厉的惩罚
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = purge_1_group_a
+						has_country_flag = purge_1_group_b
+					}
+					OR = {						
+						has_country_flag = purge_2_group_a
+						has_country_flag = purge_2_group_b
+					}
+				}
+				add_timed_idea = {
+					idea = officers_purged
+					days = 1460
+				}
+				hidden_effect = {
+					country_event = { id = soviet.37 days = 146 }				
+				}
+				hidden_effect = {
+					news_event = { hours = 6 id = news.219 }
+				}
+			}
+
+			#1次军事清洗。 较低的惩罚
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							NOT = { 
+								OR = { 
+									has_country_flag = purge_1_group_a
+									has_country_flag = purge_1_group_b
+								}
+							}
+							OR = {						
+								has_country_flag = purge_2_group_a
+								has_country_flag = purge_2_group_b
+							}
+						}
+						AND = {
+							OR = { 
+								has_country_flag = purge_1_group_a
+								has_country_flag = purge_1_group_b
+							}
+							NOT = {
+								OR = {						
+									has_country_flag = purge_2_group_a
+									has_country_flag = purge_2_group_b
+								}
+							}
+						}
+					}
+				}
+				add_timed_idea = {
+					idea = officers_purged_4
+					days = 1021
+				}
+				hidden_effect = {
+					country_event = { id = soviet.40 days = 146 }				
+				}
+			}	
+
+			#没有军事清洗。最低惩罚
+			if = {
+				limit = { 
+					NOT = {
+						OR = {
+							has_country_flag = purge_1_group_a
+							has_country_flag = purge_1_group_b
+						}
+					}
+					NOT = {
+						OR = {
+							has_country_flag = purge_2_group_a
+							has_country_flag = purge_2_group_b
+						}
+					}
+				}
+				add_timed_idea = {
+					idea = officers_purged_7
+					days = 583
+				}
+				hidden_effect = {
+					country_event = { id = soviet.43 days = 146 }				
+				}
+			}
+
+			remove_ideas = trotskyite_plot
+			add_ideas = trotskyite_plot_purged
+
+			hidden_effect = {
+				if = {
+					limit = { 
+						any_other_country = {
+							is_major = yes
+							has_offensive_war_with = SOV
+						}
+					}
+					country_event = { id = soviet.46 days = 3 }
+				}				 
+			}
+		}
+	}
+     #永远的革命
+	focus = {
+		id = SOV_permanent_revolution
+		icon = GFX_focus_ger_great_red_menace
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOV_permanent_revolution_tt
+				has_country_flag = counter_purge
+			}
+			has_government = communism
+			has_civil_war = no
+		}
+		x = 10
+		y = 0
+		relative_position_id = SOV_sidaling_xianfa
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		remove_ideas = SOV_yiguoshzy
+		remove_ideas = SOV_gerenchongbai
+			if = {
+				limit = {
+					has_idea = trotskyite_plot
+				}
+			remove_ideas = trotskyite_plot
+			}	
+			if = {
+				limit = { has_country_flag = counter_purge }
+				remove_country_leader_trait = permanent_revolutionary
+				add_country_leader_trait = triumphant_revolutionary
+			}
+			if = {
+				limit = { NOT = { has_country_flag = counter_purge } }
+				custom_effect_tooltip = SOV_permanent_revolution_tt2
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_rehabilitated_military
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SOV_great_purge focus = SOV_permanent_revolution }
+		mutually_exclusive = { focus = SOV_nkvd_primacy }
+		x = -2
+		y = 1
+		relative_position_id = SOV_great_purge
+		cost = 7
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				any_claim = yes
+				has_war = yes
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = rehabilitated_military_focus
+		}
+	}
+
+	focus = {
+		id = SOV_military_reorganization
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = SOV_rehabilitated_military }
+		x = 0
+		y = 1
+		relative_position_id = SOV_rehabilitated_military
+		cost = 6
+		ai_will_do = {
+			factor = 0.25
+			modifier = {
+				factor = 1000
+				any_claim = yes
+				has_war = yes
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+			army_experience = 20
+		}
+	}
+
+	focus = {
+		id = SOV_nkvd_primacy
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = SOV_great_purge }
+		mutually_exclusive = { focus = SOV_rehabilitated_military }
+		x = 0
+		y = 1
+		relative_position_id = SOV_great_purge
+		cost = 10
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 1000
+				any_claim = yes
+				has_war = yes
+			}
+		}	
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = nkvd
+		}
+	}
+
+	focus = {
+		id = SOV_nkvd_divisions
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = SOV_nkvd_primacy }
+		x = 0
+		y = 1
+		relative_position_id = SOV_nkvd_primacy
+		cost = 4
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1000
+				any_claim = yes
+				has_war = yes
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = SOV_nkvd_upgrade_tooltip
+
+			swap_ideas = {
+				remove_idea = nkvd
+				add_idea = nkvd_2
+			}
+		}
+	}
+      #战争的教训
+	focus = {
+		id = SOV_lessons_of_war
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = SOV_nkvd_divisions focus = SOV_military_reorganization }
+		available = {
+			OR = {
+				date > 1941.1.1
+				has_country_flag = SOV_war_since_purge
+			}
+		}
+		x = -1
+		y = 1
+		relative_position_id = SOV_nkvd_divisions
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1000
+				any_claim = yes
+				has_war = yes
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 20
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1
+				uses = 1
+				category = armor
+			}
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1
+				category = land_doctrine
+			}
+			if = { limit = { has_idea = officers_purged } remove_ideas = officers_purged }
+			if = { limit = { has_idea = officers_purged_2 } remove_ideas = officers_purged_2 }
+			if = { limit = { has_idea = officers_purged_3 } remove_ideas = officers_purged_3 }
+			if = { limit = { has_idea = officers_purged_4 } remove_ideas = officers_purged_4 }
+			if = { limit = { has_idea = officers_purged_5 } remove_ideas = officers_purged_5 }
+			if = { limit = { has_idea = officers_purged_6 } remove_ideas = officers_purged_6 }
+			if = { limit = { has_idea = officers_purged_7 } remove_ideas = officers_purged_7 }
+			if = { limit = { has_idea = officers_purged_8 } remove_ideas = officers_purged_8 }
+			if = { limit = { has_idea = officers_purged_9 } remove_ideas = officers_purged_9 }
+			if = { limit = { has_idea = officers_purged_10 } remove_ideas = officers_purged_10 }			
+			if = { limit = { has_idea = SOV_great_patriotic_war } remove_ideas = SOV_great_patriotic_war }
+			if = { limit = { has_idea = SOV_great_patriotic_war_2 } remove_ideas = SOV_great_patriotic_war_2 }
+			if = { limit = { has_idea = SOV_great_patriotic_war_3 } remove_ideas = SOV_great_patriotic_war_3 }
+			if = { limit = { has_idea = SOV_great_patriotic_war_4 } remove_ideas = SOV_great_patriotic_war_4 }
+			if = { limit = { has_idea = SOV_great_patriotic_war_5 } remove_ideas = SOV_great_patriotic_war_5 }			
+		}
+	}
+
+
+	focus = {
+		id = SOV_research_city_experiment
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = SOV_lessons_of_war }
+		available = {
+
+		}
+		x = 0
+		y = 1
+		relative_position_id = SOV_lessons_of_war
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nuclear_bonus
+				bonus = 1
+				category = nuclear
+			}
+		}
+	}
+
+
+	focus = {
+		id = SOV_diversify_the_programme
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = SOV_research_city_experiment }
+		available = {
+
+		}
+		x = 0
+		y = 1
+		relative_position_id = SOV_research_city_experiment
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret
+				bonus = 1
+				uses = 2
+				category = rocketry
+			}
+		}
+	}
+
+
+	focus = {
+		id = SOV_closed_city_network
+		icon = GFX_focus_research
+		prerequisite = { focus = SOV_diversify_the_programme }
+		available = {
+
+		}
+		x = 0
+		y = 1
+		relative_position_id = SOV_diversify_the_programme
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	
+	  #施密尔舒
+	focus = {
+		id = SOV_smersh
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = SOV_great_purge }
+		available = {
+			OR = {
+				has_war_with = GER
+				has_war_with = JAP
+				has_war_with = ENG
+				has_war_with = FRA
+				has_war_with = USA
+				has_war_with = ITA
+			}
+		}
+		bypass = {
+			NOT = { has_idea = trotskyite_plot_purged }
+		}
+		x = 2
+		y = 1
+		relative_position_id = SOV_great_purge
+		cost = 9.5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = SOV_smersh_tt
+			remove_ideas = trotskyite_plot_purged
+		}
+	}
+	
+	#镇压游击
+	focus = {
+		id = SOV_partisan_suppression
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = SOV_smersh }
+		x = 0
+		y = 1
+		relative_position_id = SOV_smersh
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_ideas = partisan_suppression_focus
+		}
+	}
+	 #苏联国家安全总局
+	focus = {
+		id = SOV_qieka
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = SOV_great_purge }
+		x = 4
+		y = 1
+		relative_position_id = SOV_great_purge
+		cost = 7
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SOV_qieka
+		}
+	}
+	
+	
+	#远洋海军
+	focus = {
+		id = SOV_yuanyang_haijun
+		icon = GFX_goal_generic_navy_battleship
+		x = 49
+		y = 0
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_tech_bonus = {
+				name = bb_bonus
+				bonus = 2
+				uses = 1
+				category = bb_tech
+				category = shbb_tech
+				
+			}
+		}
+	}
+	
+	
+	
+	focus = {
+		id = SOV_naval_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = SOV_yuanyang_haijun }
+		x = -1
+		y = 1
+		relative_position_id = SOV_yuanyang_haijun
+		cost = 7
+
+		available_if_capitulated = yes
+
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+	
+	focus = {
+		id = SOV_naval_efforttwo
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = SOV_yuanyang_haijun }
+		x = 5
+		y = 1
+		relative_position_id = SOV_yuanyang_haijun
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+	
+	focus = {
+		id = SOV_haijunluzhandui
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = SOV_naval_effort }		
+		x = -2
+		y = 1
+		relative_position_id = SOV_naval_effort
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SOV_haijunluzhandui
+				bonus = 1
+				uses = 1
+				technology = marines
+				technology = marines2
+			}
+		}
+	}
+	
+ focus = {
+	id = SOV_dinggouquzhujian
+	icon = GFX_goal_generic_navy_anti_submarine
+	prerequisite = { focus = SOV_naval_effort }
+	x = 0
+	y = 1
+	relative_position_id = SOV_naval_effort
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = SOV_dinggouquzhujian
+			bonus = 1
+			uses = 1
+			category = dd_tech
+		}
+	}
+}
+
+
+focus = {
+	id = SOV_qingxingxyjian
+	icon = GFX_goal_generic_navy_cruiser
+	prerequisite = { focus = SOV_naval_effort }
+	x = 2
+	y = 1
+	relative_position_id = SOV_naval_effort
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = SOV_qingxingxyjian
+			bonus = 1
+			uses = 1
+			category = cl_tech
+		}
+	}
+}
+
+
+
+
+focus = {
+	id = SOV_zhongxingxunyangjian
+	icon = GFX_goal_generic_navy_cruiser
+	prerequisite = { focus = SOV_qingxingxyjian }
+	x = 0
+	y = 1
+	relative_position_id = SOV_qingxingxyjian
+
+	cost = 9
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = SOV_zhongxingxunyangjian
+			bonus = 1
+			uses = 1
+			category = ca_tech
+		}
+	}
+}
+
+
+	
+focus = {
+		id = SOV_zhanliejianyabfa
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = SOV_naval_efforttwo }
+		x = 6
+		y = 1
+		relative_position_id = SOV_naval_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+				add_tech_bonus = {
+				name = bb_bonus
+				bonus = 2
+				uses = 1
+				category = bb_tech
+				category = shbb_tech
+				
+			}
+		}
+	}
+
+
+	
+	focus = {
+		id = SOV_zhanliexunyangjian
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = SOV_zhanliejianyabfa }
+		x = 0
+		y = 1
+		relative_position_id = SOV_zhanliejianyabfa
+		cost = 9
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1
+				ahead_reduction = 1
+				uses = 1
+				technology = basic_battlecruiser
+
+			}
+		}
+	}
+
+	
+	focus = {
+		id = SOV_submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = SOV_naval_efforttwo }
+		x = 4
+		y = 1
+		relative_position_id = SOV_naval_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1
+				ahead_reduction = 1
+				uses = 1
+				category = ss_tech
+				
+			}
+		}
+	}
+
+	
+	focus = {
+		id = SOV_jiadasubmarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = SOV_submarine_effort }
+		x = 0
+		y = 1
+		relative_position_id = SOV_submarine_effort
+		cost = 9
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name =  SOV_jiadasubmarine_effort
+				bonus = 1
+				ahead_reduction = 1
+				uses = 1
+				technology = improved_submarine
+				technology = advanced_submarine
+			}
+		}
+	}
+
+	
+	
+	focus = {
+		id = SOV_hangkongmujian
+		icon =  GFX_goal_generic_navy_carrier
+		prerequisite = { focus = SOV_dinggouquzhujian }
+		prerequisite = { focus = SOV_qingxingxyjian }
+		x = 0
+		y = 1
+		relative_position_id = SOV_dinggouquzhujian
+		cost = 9
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = GER_aircraft_carrier
+				bonus = 1
+				ahead_reduction = 1
+				uses = 1
+				category = cv_tech
+				
+		   }
+		}
+	}
+	
+	
+	focus = {
+	id = SOV_hangmu_air_wing
+	icon = GFX_goal_generic_occupy_start_war
+	prerequisite = { focus = SOV_hangkongmujian }
+	prerequisite = { focus = SOV_zhongxingxunyangjian }
+	x = 1
+	y = 1
+	relative_position_id = SOV_hangkongmujian
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = SOV_naval_aviation
+			bonus = 1
+			uses = 2
+			category = naval_air
+		}
+	}
+}
+
+
+
+	focus = {
+		id = SOV_flexible_navy
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = SOV_yuanyang_haijun }
+		mutually_exclusive = { focus = SOV_large_navy }
+		x = 1
+		y = 1
+		relative_position_id = SOV_yuanyang_haijun
+		cost = 9
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 1
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+
+	
+	
+	focus = {
+		id =  SOV_large_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus =  SOV_yuanyang_haijun }
+		mutually_exclusive = { focus = SOV_flexible_navy }
+		x = 3
+		y = 1
+		relative_position_id = SOV_yuanyang_haijun
+		cost = 9
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 1
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+	
+	#接收抗联残部
+	focus = {
+		id = SOV_jieshoukanglian
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = SOV_xindong_zet }
+		available = {
+        	
+		}
+		x = 0
+		y = 1
+		cost = 2
+		relative_position_id = SOV_xindong_zet
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 10000
+		}
+	}
+	  #对日和解
+	focus = {
+		id = SOV_hejie_japan
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+		prerequisite = { focus = SOV_jieshoukanglian }
+		mutually_exclusive = { focus = SOV_bayuefengbsao_japan }
+		available = {			
+			is_puppet = no
+			JAP = { NOT = { is_in_faction = yes } } 
+			NOT = { has_war_with = JAP }
+		}
+
+		bypass = {
+			NOT = { country_exists = JAP }
+		}
+		x = -1
+		y = 1
+		relative_position_id = SOV_jieshoukanglian
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			JAP = {
+				add_opinion_modifier = { target = SOV modifier = border_conflict_reconciled }
+				country_event = { id = soviet.23 days = 1 }
+				effect_tooltip = { transfer_state = 655 }
+			}
+		}
+	}
+	  #对英战争
+	focus = {
+		id = SOV_xiaomieyingguo_uk
+		icon = GFX_focus_attack_britain
+		prerequisite = { focus = SOV_xilai_zuihou }
+		prerequisite = { focus = SOV_chubing_zhongdong }
+		available = {
+			country_exists = ENG
+			NOT = { has_idea = trotskyite_plot }
+			custom_trigger_tooltip = {
+				tooltip = SOV_has_not_officers_purged_tt
+				NOT = { has_idea = officers_purged }			
+				NOT = { has_idea = officers_purged_2 }			
+				NOT = { has_idea = officers_purged_3 }			
+				NOT = { has_idea = officers_purged_4 }			
+				NOT = { has_idea = officers_purged_5 }			
+				NOT = { has_idea = officers_purged_6 }			
+				NOT = { has_idea = officers_purged_7 }			
+				NOT = { has_idea = officers_purged_8 }			
+				NOT = { has_idea = officers_purged_9 }			
+				NOT = { has_idea = officers_purged_10 }			
+			}
+		}
+		bypass = {
+			has_war_with = ENG
+		}
+		will_lead_to_war_with = ENG
+		x = 1
+		y = 1
+		relative_position_id = SOV_chubing_zhongdong
+		cost = 10
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+
+				OR = {
+					AND = {
+						has_completed_focus = SOV_bayuefengbsao_japan
+						JAP = { has_capitulated = no }
+					}
+					AND = {
+						has_completed_focus = SOV_xiaomieyingguo_uk
+						ENG = { has_capitulated = no }
+					}
+					has_war = yes
+				}
+				OR = {
+					any_enemy_country = {
+						is_neighbor_of = ROOT
+					}
+					alliance_strength_ratio > 0.9
+				}
+			}
+		}	
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ENG
+			} 
+		}
+	}
+	
+	#强化古比雪夫  
+	focus = {
+		id = SOV_qianghuabubixuefu
+		icon = GFX_focus_generic_home_defense
+	 	prerequisite = { focus = SOV_nkvd_divisions }
+		prerequisite = { focus = SOV_partisan_suppression }
+		available = {
+			
+				251 = { is_controlled_by = SOV }
+				
+		}
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = SOV_nkvd_divisions
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			251 = {
+			add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 5
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+						type = air_base
+						level = 3
+						instant_build = yes
+					}
+			}
+			
+			
+		}
+	}
+	
+	#扩大古拉格
+  focus = {
+		id = SOV_kuodagulage
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		prerequisite = { focus = SOV_qianghuabubixuefu }
+		x = 0
+		y = 1
+		relative_position_id = SOV_qianghuabubixuefu
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+
+		}
+		bypass = {
+	   }
+
+		completion_reward = { 
+			add_ideas = SOV_kuodagulage
+		}
+	}
+	
+	 #惩戒营
+	focus = {
+		id = SOV_chengjieying
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = SOV_kuodagulage  }
+		x = 0
+		y = 1
+		relative_position_id = SOV_kuodagulage
+		cost = 7
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		     army_experience = 25
+			add_ideas = SOV_chengjieying
+		}
+	}
+	  #创办夜校
+	focus = {
+		id = SOV_chuangbanyexuiao
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = SOV_xsd_gongming }
+        x = 0
+		y = 1
+		cost = 10
+		relative_position_id = SOV_xsd_gongming
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = { 
+				remove_idea = SOV_wenamngrenkou
+				add_idea = SOV_wenamngrenkou2
+			}
+		}
+	}
+	
+	 #军队文化教育
+	focus = {
+		id = SOV_junduiwenhjiaoyue
+		icon = GFX_goal_shuangshouzhangzhi
+		prerequisite = { focus = SOV_chuangbanyexuiao }
+        x = 0
+		y = 1
+		cost = 10
+		relative_position_id = SOV_chuangbanyexuiao
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = { 
+				remove_idea = SOV_wenamngrenkou2
+				add_idea = SOV_wenamngrenkou3
+			}
+		}
+	} 
+	
+	 #普及义务教育
+	focus = {
+		id = SOV_pujiyiwujiaoyu
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = SOV_junduiwenhjiaoyue }
+        x = 0
+		y = 1
+		cost = 10
+		relative_position_id = SOV_junduiwenhjiaoyue
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			remove_ideas = SOV_wenamngrenkou3 
+		}
+	}
+	
+	
+	 #不断革命
+	focus = {
+		id = SOV_budungeming
+		icon = GFX_focus_attack_soviet
+		prerequisite = { focus = SOV_permanent_revolution }
+        x = -1
+		y = 1
+		cost = 10
+		relative_position_id = SOV_permanent_revolution
+		ai_will_do = {
+			factor = 1
+		} 
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SOV_budungeming 
+		}
+	}
+	
+	
+	
+	 #工人政府
+	focus = {
+		id = SOV_gongrenzhengfu
+		icon = GFX_focus_eng_liberate_the_home_of_marx
+		prerequisite = { focus = SOV_budungeming }
+        x = 0
+		y = 1
+		cost = 10
+		relative_position_id = SOV_budungeming
+		ai_will_do = {
+			factor = 1 
+		} 
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SOV_gongrenzhengfu 
+		}
+	}
+	
+	 #超工业化 
+	focus = { 
+		id = SOV_chagongyehua
+		icon = GFX_goal_support_fourth_int
+		prerequisite = { focus = SOV_gongrenzhengfu }
+		prerequisite = { focus = SOV_military_reorganization }
+        x = 1
+		y = 1
+		cost = 10
+		relative_position_id = SOV_gongrenzhengfu
+		ai_will_do = {
+			factor = 1 
+		} 
+ 
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SOV_chagongyehua 
+		}
+	}
+	
+	 #无产者的祖国
+	focus = {
+		id = SOV_wuchanzhedezuoguo
+		icon = GFX_focus_hol_legacy_of_the_de_zeven_provincien_mutiny
+		prerequisite = { focus = SOV_chagongyehua }
+		x = 0
+		y = 1
+		relative_position_id = SOV_chagongyehua
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 500
+			SOV = {
+				create_faction = SOV_wuchanjiejitongmeng
+			}
+		hidden_effect = {	
+			add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 100
+					producer = SWE
+				}
+			add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 100
+					producer = NOR
+				}
+			add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 100
+					producer = AFG
+				}
+            add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 100
+					producer = AST
+				}		
+           add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 100
+					producer = PAR
+				}					
+			add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 1000
+					producer = ENG
+				}
+			add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 1000
+					producer = FRA
+				}	
+				
+		}
+      custom_effect_tooltip = SOV_wuchanzhedezuoguo_tip
+			
+		}
+	}
+	
+	
+	
+	
+}

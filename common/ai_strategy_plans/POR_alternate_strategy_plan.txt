@@ -1,0 +1,449 @@
+POR_estadonovo_fascism_plan = {
+	name = "Portugal estado novo fascism plan"
+	desc = "Portugal estado novo fascism plan"
+
+	enable = {
+		original_tag = POR
+		OR = {
+			AND = {
+				has_completed_focus = POR_fascism_estado_novo
+				NOT = { has_completed_focus = POR_new_government }
+			}
+			OR = {
+				has_country_flag = POR_AI_ESTADONOVO_FASCISM
+				has_game_rule = {
+					rule = POR_ai_behavior
+					option = ESTADONOVO_FASCISM
+				}
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		POR_continue_estado_novo
+		POR_fascism_estado_novo
+		POR_small_mobilization
+		POR_spain_civilwar
+		POR_galiza_invasion
+		POR_spanish_africa
+		POR_people_for_country
+		POR_national_control
+		POR_catholic_church
+		POR_austerity
+		POR_national_guard
+		POR_industrial_a
+		POR_industrial_b
+		POR_colony_uplifting
+		POR_colony_division
+		POR_industrial_c
+		POR_colony_industrial
+		POR_colony_empire
+		POR_refuse_england
+		POR_nationalist_dip
+		POR_rose_color
+		POR_saopaulo_conference
+		POR_brazil_integration
+		POR_brazil_uplift
+		POR_station_uruguay
+		POR_fortless
+		POR_national_research_a
+		POR_reconfirmation_berlin_conference
+		POR_demand_zimbabwe
+		POR_inter_ocean_trade
+		POR_colony_claim
+		POR_war_support
+		POR_wartime_law
+		POR_emergency_moblization
+		POR_demand_morroco
+		POR_demand_cape
+		POR_opening_law
+		POR_with_axis
+		POR_wartime_research
+		POR_national_industrial_b
+		POR_great_fleet
+		POR_navy_foundation
+		POR_military_research
+		POR_navy_ready
+		POR_dockyard
+		POR_war_uplifting
+		POR_war_infntry
+		POR_licence_a
+		POR_colony_empire_economy
+		POR_licence_b
+		POR_gold_standard
+		POR_gain_liberia
+		POR_legend_of_the_voyager
+		POR_private_ship
+
+
+
+
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POR_estadonovo_democratic_plan = {
+	name = "Portugal Estado Novo Democratic plan"
+	desc = "Portugal Estado Novo Democratic plan"
+
+	enable = {
+		original_tag = POR
+		OR = {
+			has_completed_focus = POR_democratic_estado_nove
+			has_country_flag = POR_AI_ESTADONOVO_DEMOCRATIC
+			has_game_rule = {
+				rule = POR_ai_behavior 
+				option = ESTADONOVO_DEMOCRATIC
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		POR_small_mobilization
+		POR_continue_estado_novo
+		POR_industrial_a
+		POR_decolonization
+		POR_national_research_b
+		POR_democratic_estado_nove
+		POR_free_trade
+		POR_fortless
+		POR_concordat
+		POR_economic_partnership_brazil
+		POR_political_power
+		POR_stablity_uplifting
+		POR_pact_iberico
+		POR_autonomy_government
+		POR_air_ready
+		POR_catholic_church
+		POR_austerity
+		POR_war_support
+		POR_wartime_law
+		POR_emergency_moblization
+		POR_1386_ally
+		POR_industrial_b
+		POR_industrial_d
+		POR_home_resource
+		POR_stablity_industrial
+		POR_neutral_diplo
+		POR_upgrade_home
+		POR_manpower
+		POR_home_industrial
+		POR_national_army
+		POR_national_research_c
+		POR_threaty_england
+		POR_navy_ready
+		POR_commonwealth_trade
+		POR_lendlease_acts
+		POR_export_weapon
+		POR_industrial_upgrade
+		POR_volunteer
+
+
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POR_NEW_DEMOCRATIC_plan = {
+	name = "Portugal new democratic plan"
+	desc = "Portugal new democratic plan"
+
+	enable = {
+		original_tag = POR
+		OR = {
+			has_completed_focus = POR_democratic_government
+			has_game_rule = {
+				rule = POR_ai_behavior
+				option = NEW_DEMOCRATIC
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		POR_spain_civilwar
+		POR_galiza_invasion
+		POR_spanish_africa
+		POR_colony_uplifting
+		POR_core_for_island
+		POR_new_government
+		POR_small_mobilization
+		POR_democratic_government
+		POR_interference
+		POR_clear_confusion
+		POR_industrial_a
+		POR_industrial_c
+		POR_national_research_system
+		POR_colony_division
+		POR_industrial_b
+		POR_catholic_church
+		POR_1386_ally
+		POR_economic_partnership_brazil
+		POR_concordat
+		POR_colony_industrial
+		POR_colony_empire
+		POR_saopaulo_conference
+		POR_brazil_integration
+		POR_austerity
+		POR_war_support
+		POR_wartime_law
+		POR_emergency_moblization
+		POR_rose_color
+		POR_request_zimbabwe
+		POR_colony_upgrade
+		POR_dockyard
+		POR_military_research
+		POR_reconfirmation_berlin_conference
+		POR_war_uplifting
+		POR_colony_claim
+		POR_colony_empire_economy
+		POR_demand_morroco
+		POR_lendlease_acts
+		POR_export_weapon
+		POR_with_england
+		POR_unity_iberia
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POR_ROYALIST_plan = {
+	name = "Portugal royalist plan"
+	desc = "Portugal royalist plan"
+
+	enable = {
+		original_tag = POR
+		OR = {
+			has_completed_focus = POR_loyalist_government
+			has_country_flag = POR_AI_ROYALIST
+			has_game_rule = {
+				rule = POR_ai_behavior 
+				option = ROYALIST
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		POR_new_government
+		POR_loyalist_government
+		POR_king_return
+		POR_clear_confusion
+		POR_spain_civilwar
+		POR_galiza_invasion
+		POR_spanish_africa
+		POR_small_mobilization
+		POR_colony_uplifting
+		POR_colony_division
+		POR_core_for_island
+		POR_catholic_church
+		POR_national_research_system
+		POR_industrial_a
+		POR_industrial_c
+		POR_colony_industrial
+		POR_colony_empire
+		POR_refuse_england
+		POR_saopaulo_conference
+		POR_brazil_integration
+		POR_inter_ocean_trade
+		POR_national_industrial
+		POR_national_industrial_b
+		POR_brazil_uplift
+		POR_industrial_b
+		POR_dockyard
+		POR_rose_color
+		POR_fortless
+		POR_stablity_uplifting
+		POR_pact_iberico
+		POR_stablity_industrial
+		POR_austerity
+		POR_concordat
+		POR_war_uplifting
+		POR_war_infntry
+		POR_demand_zimbabwe
+		POR_great_fleet
+		POR_reconfirmation_berlin_conference
+		POR_navy_ready
+		POR_navy_foundation
+		POR_war_support
+		POR_national_research_a
+		POR_wartime_law
+		POR_private_ship
+		POR_emergency_moblization
+		POR_mobilization
+		POR_colony_claim
+		POR_demand_morroco
+		POR_colony_empire_economy
+		POR_gold_standard
+		POR_gain_liberia
+		POR_legend_of_the_voyager
+		POR_air_ready
+		POR_fighter
+		POR_demand_cape
+		POR_air_doctrine
+		POR_carrier
+
+
+
+
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POR_COMMUNIST_plan = {
+	name = "Portugal communist plan"
+	desc = "Portugal communist plan"
+
+	enable = {
+		original_tag = POR
+		OR = {
+			has_completed_focus = POR_communist_government
+			has_country_flag = POR_AI_COMMUNIST
+			has_game_rule = {
+				rule = POR_ai_behavior 
+				option = COMMUNIST
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		POR_new_government
+		POR_communist_government
+		POR_overturn_estado_novo
+		POR_communist_dip
+		POR_small_mobilization
+		POR_clear_confusion
+		POR_decolonization
+		POR_return_goa
+		POR_national_research_b
+		POR_autonomy_government
+		POR_national_research_system
+		POR_refuse_england
+		POR_saopaulo_conference
+		POR_brazil_integration
+		POR_brazil_uplift
+		POR_political_uplift
+		POR_fortless
+		POR_stablity_uplifting
+		POR_austerity
+		POR_pact_iberico
+		POR_industrial_a
+		POR_national_guard
+		POR_industrial_b
+		POR_industrial_d
+		POR_upgrade_home
+		POR_manpower
+		POR_home_resource
+		POR_war_support
+		POR_wartime_law
+		POR_emergency_moblization
+		POR_private_ship
+		POR_mobilization
+		POR_national_army
+		POR_home_industrial
+		POR_national_research_c
+		POR_national_industrial
+		POR_inter_ocean_trade
+		POR_oil_upgrade
+		POR_dockyard
+		POR_home_fleet
+		POR_national_industrial_b
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

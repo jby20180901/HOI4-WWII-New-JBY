@@ -1,0 +1,576 @@
+﻿POL_DD_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_DESTROYERS
+  for_countries = {
+    POL
+  }
+  type = ship
+  ship_types = {
+    ship_hull_light
+    destroyer
+  }
+  prefix = "ORP "
+  fallback_name = "波兰海军第%s号驱逐舰"  # Niszczyciel %d
+  unique = {
+    "葛罗姆"  # Grom
+    "迅雷"  # Błyskawica
+    "闪电"  # Piorun
+    "飓风"  # Orkan
+    "库亚维亚克"  # Kujawiak
+    "希拉扎克"  # Ślązak
+    "珀莫泽林"  # Pomorzanin
+    "克拉科维亚克"  # Krakowiak
+    "攀登"  # Góral
+    "马祖尔"  # Mazur
+    "卡舒"  # Kaszub
+    "库尔普"  # Kurp
+    "风暴"  # Burza
+    "狂风"  # Wicher
+    "加兰德"  # Garland
+    "飓风"  # Ouragan
+    "华沙"  # Warszawa
+    "利沃夫"  # Lwów
+    "维尔纽斯"  # Wilno
+    "波兹南"  # Poznan
+    "克拉科夫"  # Kraków
+    "维斯拉"  # Wisla
+    "格丁尼亚"  # Gdynia
+    "格但斯克"  # Gdansk
+    "克拉科夫"  # Kraków
+    "扎德沃泽"  # Zadwórze
+    "普洛切"  # Plowce
+    "奥德切特维登斯卡"  # Odsiecz Wiedenska
+    "普斯科夫"  # Psków
+    "拉兹恩"  # Raszyn
+    "普瑟米斯"  # Przemysl
+    "科钦"  # Chocim
+    "基尔裘姆"  # Kircholm
+    "丰希罗拉"  # Fuengirola
+  }
+}
+POL_CL_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CL
+  for_countries = {
+    POL
+  }
+  type = ship
+  ship_types = {
+    ship_hull_cruiser
+    light_cruiser
+  }
+  prefix = "ORP "
+  fallback_name = "波兰海军第%s号轻巡洋舰"  # Lekki Krążownik %d
+  unique = {
+    "巨龙"  # Dragon
+    "康拉德"  # Conrad
+    "波罗的海"  # Bałtyk
+    "国王瓦迪斯瓦夫四世"  # Król Wladyslaw IV
+    "利沃夫"  # Lwów
+    "维尔纽斯"  # Wilno
+    "波兹南"  # Poznan
+    "克拉科夫"  # Kraków
+    "维斯拉"  # Wisla
+    "格丁尼亚"  # Gdynia
+    "格但斯克"  # Gdansk
+    "华沙"  # Warszawa
+    "克拉科夫"  # Kraków
+    "扎德沃泽"  # Zadwórze
+    "普洛切"  # Plowce
+    "奥德切特维登斯卡"  # Odsiecz Wiedenska
+    "普斯科夫"  # Psków
+    "拉兹恩"  # Raszyn
+    "普瑟米斯"  # Przemysl
+    "科钦"  # Chocim
+    "基尔裘姆"  # Kircholm
+    "丰希罗拉"  # Fuengirola
+  }
+}
+POL_CA_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CA
+  for_countries = {
+    POL
+  }
+  type = ship
+  ship_types = {
+    ship_hull_cruiser
+    heavy_cruiser
+  }
+  prefix = "ORP "
+  fallback_name = "波兰海军第%s号重巡洋舰"  # Ciężki Krążownik %d
+  unique = {
+    "巨龙"  # Dragon
+    "康拉德"  # Conrad
+    "波罗的海"  # Bałtyk
+    "国王瓦迪斯瓦夫四世"  # Król Wladyslaw IV
+    "利沃夫"  # Lwów
+    "维尔纽斯"  # Wilno
+    "波兹南"  # Poznan
+    "克拉科夫"  # Kraków
+    "维斯拉"  # Wisla
+    "格丁尼亚"  # Gdynia
+    "格但斯克"  # Gdansk
+    "华沙"  # Warszawa
+    "克拉科夫"  # Kraków
+    "扎德沃泽"  # Zadwórze
+    "普洛切"  # Plowce
+    "奥德切特维登斯卡"  # Odsiecz Wiedenska
+    "普斯科夫"  # Psków
+    "拉兹恩"  # Raszyn
+    "普瑟米斯"  # Przemysl
+    "科钦"  # Chocim
+    "基尔裘姆"  # Kircholm
+    "丰希罗拉"  # Fuengirola
+  }
+}
+POL_BB_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_BB
+  for_countries = {
+    POL
+  }
+  type = ship
+  ship_types = {
+    ship_hull_heavy
+    battleship
+  }
+  prefix = "ORP "
+  fallback_name = "波兰海军第%s号战列舰"  # Pancernik %d
+  unique = {
+    "尤泽夫·毕苏斯基"  # Józef Pilsudski
+    "国王瓦迪斯瓦夫四世"  # Król Wladyslaw IV
+    "斯泰凡·巴托雷"  # Stefan Batory
+    "索宾斯基三世"  # Jan Sobieski
+    "卡齐米日大帝"  # Kazimierz Wielki
+    "博莱斯瓦夫一世"  # Boleslaw Chrobry
+    "扬 卡齐米日"  # Jan Kazimierz
+    "斯坦尼斯瓦夫 科涅茨波尔斯基"  # Stanislaw Koniecpolski
+    "斯坦尼斯瓦夫·茹乌凯夫斯基"  # Stanislaw Zólkiewski
+    "扬·扎莫伊斯基"  # Jan Zamoyski
+    "斯坦尼斯瓦夫·兰茨科龙斯基"  # Stanislaw Lanckoronski
+    "斯特凡·恰尔涅茨基"  # Stefan Czarniecki
+    "扬·卡罗尔·赫特基耶维奇"  # Jan Karol Chodkiewicz
+  }
+}
+POL_BC_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_BC
+  for_countries = {
+    POL
+  }
+  type = ship
+  ship_types = {
+    ship_hull_heavy
+    battle_cruiser
+  }
+  prefix = "ORP "
+  fallback_name = "波兰海军第%s号战列巡洋舰"  # Krążownik %d
+  unique = {
+    "尤泽夫·毕苏斯基"  # Józef Pilsudski
+    "国王瓦迪斯瓦夫四世"  # Król Wladyslaw IV
+    "斯泰凡·巴托雷"  # Stefan Batory
+    "索宾斯基三世"  # Jan Sobieski
+    "卡齐米日大帝"  # Kazimierz Wielki
+    "博莱斯瓦夫一世"  # Boleslaw Chrobry
+    "扬 卡齐米日"  # Jan Kazimierz
+    "斯坦尼斯瓦夫 科涅茨波尔斯基"  # Stanislaw Koniecpolski
+    "斯坦尼斯瓦夫·茹乌凯夫斯基"  # Stanislaw Zólkiewski
+    "扬·扎莫伊斯基"  # Jan Zamoyski
+    "斯坦尼斯瓦夫·兰茨科龙斯基"  # Stanislaw Lanckoronski
+    "斯特凡·恰尔涅茨基"  # Stefan Czarniecki
+    "扬·卡罗尔·赫特基耶维奇"  # Jan Karol Chodkiewicz
+  }
+}
+POL_CV_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CARRIERS
+  for_countries = {
+    POL
+  }
+  type = ship
+  ship_types = {
+    ship_hull_carrier
+    carrier
+  }
+  prefix = "ORP "
+  fallback_name = "波兰海军第%s号航空母舰"  # Lotniskowiec %d
+  unique = {
+    "尤泽夫·毕苏斯基"  # Józef Pilsudski
+    "国王瓦迪斯瓦夫四世"  # Król Wladyslaw IV
+    "斯泰凡·巴托雷"  # Stefan Batory
+    "索宾斯基三世"  # Jan Sobieski
+    "卡齐米日大帝"  # Kazimierz Wielki
+    "博莱斯瓦夫一世"  # Boleslaw Chrobry
+    "扬 卡齐米日"  # Jan Kazimierz
+    "斯坦尼斯瓦夫 科涅茨波尔斯基"  # Stanislaw Koniecpolski
+    "斯坦尼斯瓦夫·茹乌凯夫斯基"  # Stanislaw Zólkiewski
+    "扬·扎莫伊斯基"  # Jan Zamoyski
+    "斯坦尼斯瓦夫·兰茨科龙斯基"  # Stanislaw Lanckoronski
+    "斯特凡·恰尔涅茨基"  # Stefan Czarniecki
+    "扬·卡罗尔·赫特基耶维奇"  # Jan Karol Chodkiewicz
+  }
+}
+POL_SS_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_SUBMARINES
+  for_countries = {
+    POL
+  }
+  type = ship
+  ship_types = {
+    ship_hull_submarine
+    submarine
+  }
+  prefix = "ORP "
+  fallback_name = "波兰海军第%s号潜艇"  # Okręt Podwodny %d
+  unique = {
+    "雕"  # Orzeł
+    "鹫"  # Sęp
+    "索科尔"  # Sokól
+    "山猪"  # Dzik
+    "鹰"  # Jastrząb
+    "图"  # Rys
+    "狼"  # Wilk
+    "山猫"  # Zbik
+    "秃鹰"  # Kondor
+    "秃头鹰"  # Bielik
+    "卡舒"  # Kaszub
+    "马祖尔"  # Mazur
+    "克拉科维亚克"  # Krakowiak
+    "希拉扎克"  # Ślązak
+    "库亚维亚克"  # Kujawiak
+    "库尔普"  # Kurp
+    "库亚维亚克"  # Kujawiak
+    "库亚维亚克"  # Kujawiak
+    "库亚维亚克"  # Kujawiak
+  }
+}
+POL_THEME_KINGS = {
+  name = NAME_THEME_KINGS
+  for_countries = {
+    POL
+  }
+  can_use = {
+    not = {
+      has_government = communism
+    }
+  }
+  type = ship
+  ship_types = {
+    ship_hull_heavy
+    battleship
+    battle_cruiser
+    ship_hull_carrier
+    carrier
+  }
+  prefix = "ORP "
+  unique = {
+    "斯泰凡·巴托雷"  # Stefan Batory
+    "索宾斯基三世"  # Jan III Sobieski
+    "卡齐米日大帝"  # Kazimierz Wielki
+    "博莱斯瓦夫一世"  # Bolesław Chrobry
+    "齐格蒙特三世"  # Zygmunt III Waza
+    "瓦迪斯瓦夫四世"  # Władysław IV Waza
+    "瓦迪斯瓦夫·贾吉略"  # Władysław Jagiełło
+    "齐格蒙特一世"  # Zygmunt I Stary
+    "瓦迪斯瓦夫·洛奇特科"  # Władysław Łokietek
+    "卡齐米日·贾吉罗梅"  # Kazimierz Jagielończyk
+    "齐格蒙特二世"  # Zygmunt II August
+    "博莱斯瓦夫·西缪伊"  # Bolesław Śmiały
+  }
+}
+POL_THEME_HISTORICAL_FIGURES = {
+  name = NAME_THEME_HISTORICAL_FIGURES
+  for_countries = {
+    POL
+  }
+  can_use = {
+    not = {
+      has_government = communism
+    }
+  }
+  type = ship
+  ship_types = {
+    ship_hull_heavy
+    battleship
+    battle_cruiser
+    ship_hull_carrier
+    carrier
+  }
+  prefix = "ORP "
+  unique = {
+    "约瑟夫·毕苏兹基"  # Józef Piłsudzki
+    "塔德乌什·科希丘什科"  # Tadeusz Kościuszko
+    "约瑟夫·波尼亚托夫斯基"  # Józef Poniatowski
+    "斯坦尼斯拉夫·齐奥凯夫斯基"  # Stanisław Żółkiewski
+    "扬·扎莫伊斯基"  # Jan Zamoyski
+    "斯特凡·恰尔涅茨基"  # Stefan Czarniecki
+    "扬·卡罗尔·赫特基耶维奇"  # Jan Karol Chodkiewicz
+    "斯坦尼斯拉夫·兰斯科罗恩斯基"  # Stanisław Lanckoroński
+    "杨·亨里克·达布罗夫斯基"  # Jan Henryk Dąbrowski
+    "马特乌什·西尔皮克"  # Mateusz Sierpinek
+    "阿伦德·迪克曼"  # Arend Dickmann
+    "卡齐米日·普拉斯基"  # Kazimierz Pułaski
+    "杨·赫韦留斯"  # Jan Heweliusz
+    "尼古拉·哥白尼"  # Mikołaj Kopernik
+    "扬·科哈诺夫斯基"  # Jan Kochanowski
+    "尼古拉·伊"  # Mikołaj Rej
+    "约瑟夫·本"  # Józef Bem
+    "约瑟夫·哈勒尔"  # Józef Haller
+    "斯坦尼斯拉夫·谢普特茨基"  # Stanisław Szeptycki
+    "瓦迪斯瓦夫·西科尔斯基"  # Władysław Sikorski
+    "卡齐米日·索森科夫斯基"  # Kazimierz Sosnkowski
+    "沃拉迪斯拉夫·安德斯"  # Władysław Anders
+    "斯坦尼斯拉夫·索萨博夫斯基"  # Stanisław Sosabowski
+  }
+}
+POL_THEME_WEATHER = {
+  name = NAME_THEME_WEATHER
+  for_countries = {
+    POL
+  }
+  type = ship
+  prefix = "ORP "
+  unique = {
+    "风暴"  # Burza
+    "迅雷"  # Błyskawica
+    "暴风"  # Sztorm
+    "冰雹"  # Grad
+    "狂风"  # Wicher
+    "闪电"  # Piorun
+    "狂风"  # Tornado
+    "极光"  # Zorza
+    "台风"  # Huragan
+    "霹雳"  # Grom
+    "暴雪"  # Zamieć
+    "哈尔尼"  # Halny
+    "飓风"  # Orkan
+    "飑"  # Szkwał
+  }
+}
+POL_THEME_RIVERS = {
+  name = NAME_THEME_RIVERS
+  for_countries = {
+    POL
+  }
+  type = ship
+  prefix = "ORP "
+  unique = {
+    "维斯瓦"  # Wisła
+    "错误"  # Bug
+    "纳雷乌"  # Narew
+    "瓦尔塔"  # Warta
+    "圣"  # San
+    "诺提克"  # Noteć
+    "豚"  # Wieprz
+    "德尼斯特"  # Dniestr
+    "雪貂"  # Prypeć
+    "利达"  # Lida
+    "皮利卡"  # Pilica
+    "威廉"  # Wilia
+  }
+}
+POL_THEME_ANIMALS = {
+  name = NAME_THEME_ANIMALS
+  for_countries = {
+    POL
+  }
+  type = ship
+  prefix = "ORP "
+  unique = {
+    "狼"  # Wilk
+    "雕"  # Orzeł
+    "鲨"  # Rekin
+    "格雷夫"  # Gryf
+    "猞猁"  # Ryś
+    "狗鱼"  # Szczupak
+    "青庄"  # Czapla
+    "信天翁"  # Albatros
+    "海鸥"  # Mewa
+    "雷比特沃"  # Rybitwa
+    "鸬鹚"  # Kormoran
+    "野猫"  # Żbik
+    "鹫"  # Sęp
+    "恰伊卡"  # Czajka
+    "燕子"  # Jaskółka
+    "祖拉夫"  # Żuraw
+    "鹘"  # Sokół
+    "秃头鹰"  # Bielik
+    "老虎"  # Tygrys
+    "狮"  # Lew
+    "豹"  # Pantera
+    "熊"  # Niedźwiedź
+    "山猪"  # Dzik
+    "鹰"  # Jastrząb
+  }
+}
+POL_THEME_REGIONS = {
+  name = NAME_THEME_REGIONS
+  for_countries = {
+    POL
+  }
+  type = ship
+  prefix = "ORP "
+  unique = {
+    "马佐夫舍"  # Mazowsze
+    "库亚维"  # Kujawy
+    "小波兰"  # Małopolska
+    "大波兰"  # Wielkopolska
+    "西里西亚"  # Śląsk
+    "波美拉尼亚"  # Pomorze
+    "波德拉谢"  # Podlasie
+    "波莱谢"  # Polesie
+    "圣十字"  # Świętokrzyskie
+    "维尔纽斯"  # Wileńszczyzna
+    "波多贺"  # Podhale
+    "波德卡帕拉奇"  # Podkapracie
+  }
+}
+POL_THEME_CITIES = {
+  name = NAME_THEME_CITIES
+  for_countries = {
+    POL
+  }
+  type = ship
+  prefix = "ORP "
+  unique = {
+    "马佐夫舍"  # Mazowsze
+    "库亚维"  # Kujawy
+    "小波兰"  # Małopolska
+    "大波兰"  # Wielkopolska
+    "西里西亚"  # Śląsk
+    "波美拉尼亚"  # Pomorze
+    "波德拉谢"  # Podlasie
+    "波莱谢"  # Polesie
+    "圣十字"  # Świętokrzyskie
+    "维尔纽斯"  # Wileńszczyzna
+    "波多贺"  # Podhale
+  }
+}
+POL_THEME_BATTLES = {
+  name = NAME_THEME_BATTLES
+  for_countries = {
+    POL
+  }
+  type = ship
+  prefix = "ORP "
+  unique = {
+    "格伦沃尔德"  # Grunwald
+    "奥尔沙"  # Orsza
+    "斯摩棱斯克"  # Smoleńsk
+    "基尔裘姆"  # Kircholm
+    "维也纳"  # Wiedeń
+    "科钦"  # Chocim
+    "拉兹恩"  # Raszyn
+    "橄榄油"  # Oliwa
+    "采迪尼亚"  # Cedynia
+    "珀夫泽"  # Płowce
+    "蚊"  # Komarów
+  }
+}
+POL_THEME_SLAVIC_MYTHOLOGY = {
+  name = NAME_THEME_SLAVIC_MYTHOLOGY
+  for_countries = {
+    POL
+  }
+  type = ship
+  prefix = "ORP "
+  unique = {
+    "吸血鬼"  # Strzyga
+    "艾特维尔"  # Aitwar
+    "老妪"  # Baba
+    "邦尼克"  # Bannik
+    "蛇怪"  # Bazyliszek
+    "贝尔特"  # Bełt
+    "贝兹科斯特"  # Bezkost
+    "贫困"  # Bieda
+    "恶魔"  # Bies
+    "鬼火"  # Błędny Ognik
+    "沃特尼克"  # Błotnik
+    "旱獭"  # Bobak
+    "布卡"  # Buka
+    "博古卡"  # Bogunka
+    "博罗维"  # Borowy
+    "拉沙"  # Leszy
+    "布泽吉纳"  # Brzegina
+    "布克"  # Buc
+    "比齐内克"  # Bzionek
+    "精灵"  # Chochlik
+    "熟悉"  # Chowaniec
+    "沉默"  # Cicha
+    "门塔纳·巴巴"  # Cmentarna Baba
+    "魔鬼"  # Czart
+    "博富拉"  # Boruta
+    "弗格斯"  # Fugas
+    "黑达斯"  # Hejdasz
+    "伊斯克泽斯基"  # Iskrzycki
+    "罗基塔"  # Rokita
+    "多布乔奇"  # Dobrochoczy
+    "多拉"  # Dola
+    "多莫维克"  # Domowik
+    "德瓦罗维"  # Dworowy
+    "祖父"  # Dziad
+    "九"  # Dziewiątko
+    "小妖精"  # Dziwożona
+    "法尔曼"  # Fajerman
+    "格涅丘赫"  # Gnieciuch
+    "格里芬"  # Gryf
+    "奥米尼克"  # Gumiennik
+    "赫门"  # Homen
+    "耶若塞克"  # Jaroszek
+    "巫婆"  # Jędza
+    "扬基"  # Julki
+    "风筝"  # Kania
+    "克拉巴特尼克"  # Klabaternik
+    "帽子"  # Kłobuk
+    "懒妇"  # Kocmołuch
+    "妖精"  # Krasnoludek
+    "蛇王"  # Król Wężów
+    "纸鸢"  # Latawiec
+    "诅咒"  # Licho
+    "拉瓦皮杜赫"  # Łapiduch
+    "纽卡"  # Newka
+    "马蒙那"  # Mamuna
+    "马卢达"  # Maruda
+    "马托哈"  # Matoha
+    "度量"  # Miernik
+    "米尔科·兹米"  # Mlekowy Żmij
+    "莫罗瓦·杰米扎"  # Morowa Dziewica
+    "霜"  # Mróz
+    "穆鲁泽克"  # Mrucek
+    "诺茨尼泽"  # Nocnica
+    "火马"  # Ognisty Koń
+    "惊骇"  # Paskudnik
+    "金童"  # Pieniężny Chłopczyk
+    "普诺尼克"  # Plonek
+    "普涅兹尼克"  # Płanetnik
+    "普沃尼克"  # Płonnik
+    "普尔德尼泽"  # Południca
+    "普诺尼茨"  # Poroniec
+    "苏沃斯尼克"  # Przyłożnik
+    "罗泽尼扎"  # Rodzanica
+    "美人鱼"  # Rusałka
+    "鱼王"  # Rybi Król
+    "司库"  # Skarbnik
+    "斯库尔"  # Skuła
+    "斯门达"  # Smęda
+    "龙"  # Smok
+    "斯博尼泽"  # Spaleniec
+    "克伦切克"  # Kręciek
+    "斯特拉特齐"  # Stradczę
+    "斯图卡茨"  # Stukacz
+    "人鱼"  # Syrena
+    "绍林茨"  # Szalińc
+    "沙莱伊"  # Szarlej
+    "萨托皮耶尔茨"  # Szątopierz
+    "死亡"  # Śmierć
+    "光明"  # Świetle
+    "思念"  # Tęsknica
+    "兔子"  # Trusia
+    "乌托皮耶茨"  # Utopiec
+    "翁皮耶斯"  # Wąpierz
+    "巨人"  # Wielkolud
+    "预言"  # Wieszczy
+    "维特日卡"  # Wietrzyca
+    "狼人"  # Wilkołak
+    "威拉"  # Wiła
+    "刽子手"  # Wisielec
+    "水瓶座"  # Wodnik
+    "梦魇"  # Zmora
+    "兹米"  # Żmij
+  }
+}

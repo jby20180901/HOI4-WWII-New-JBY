@@ -1,0 +1,334 @@
+add_namespace = finland
+
+country_event = {
+    # Swedish support
+	id = finland.0 
+    title = finland.0.t # The localisable text that appears as a header
+    desc = finland.0.d # The localisable main text body that appears
+	picture = GFX_report_event_soviet_finnish_pact # Image displayed alongside the text.
+
+	is_triggered_only = yes # Optional : if set to "yes" the event will only occur by command
+
+	hidden = no # Optional : if set to "yes" no one will see the event
+
+	fire_only_once = no # Optional : if set to "yes" the event will never occur more than once
+	
+	option = { # Join the winter war
+		name = finland.0.a # The localisable text that appears on the button.
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				SWE = { has_idea = SWE_Affirmed_Neutrality }
+			}
+			SWE = {remove_ideas = SWE_Affirmed_Neutrality}
+		}
+		else_if = {
+			limit = {
+				SWE = { has_idea = neutrality_idea }
+			}
+			SWE = { remove_ideas = neutrality_idea }
+		}
+		if = {
+			limit = {
+				SWE = { is_in_faction = yes
+						is_faction_leader = yes }
+			}
+			SWE = { add_to_faction = FIN }
+		}
+		else_if = {
+			limit = {
+				SWE = { is_in_faction = yes }
+			}
+			SWE = { add_to_faction = FIN }
+		}
+		else = {
+			SWE = { create_faction = NordicAnitSOVorg }
+			SWE = { add_to_faction = FIN }
+		}
+		
+		
+		
+	}
+    option = { # Send equipment
+		name = finland.0.b # The localisable text that appears on the button.
+	}
+}
+
+# Soviet Ultimatum
+country_event = {
+	id = finland.1
+	title = finland.1.t
+	desc = finland.1.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = finland.1.a
+		ai_chance = { 
+		factor = 0
+		modifier = { # Don't accept if in a faction that can protect them
+				factor = 0
+				OR = {
+					any_other_country = {
+						is_major = yes
+						OR = {
+							is_in_faction_with = FIN
+							has_guaranteed = FIN
+						}
+					}
+					has_idea = anti_soviet_pact
+				}
+			}
+		}
+		SOV = {
+			country_event = { days = 5 id = soviet.12 }
+			effect_tooltip = {
+				transfer_state = 146
+			}
+		}
+	}
+	option = { # Refuse
+		name = finland.1.b
+		ai_chance = { factor = 100 }
+		SOV = {
+			country_event = { days = 5 id = soviet.13 }
+			declare_war_on = {
+			target = FIN
+			type = puppet_wargoal_focus
+			}
+		}
+	}
+}
+	
+
+#Surrender when Soviet has taken too much land
+country_event = {
+	id = finland.7
+	title = finland.7.t
+	desc = finland.7.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	trigger = {
+		tag = FIN
+		has_war_with = SOV
+		surrender_progress > 0.25
+		has_civil_war = no
+		is_in_faction = no
+	}
+
+	mean_time_to_happen = { days = 20 }
+
+	fire_only_once = yes
+
+	#Surrender and offer territory
+	option = {
+		name = finland.7.a
+		ai_chance = {
+			base = 8
+		}
+		SOV = {
+			country_event = { id = finland.8 }
+		}
+		custom_effect_tooltip = finland.7.a_tt
+		effect_tooltip = {
+			SOV = { 
+				white_peace = {
+					tag = FIN 
+					message = FIN_agree_peace 
+				}
+				if = {
+					limit = {
+						SWE = { has_war_with = SOV }
+						NOT = {
+							AND = {
+								SWE = { is_in_faction_with = GER }
+								GER = { has_war_with = SOV }
+							}
+						}
+					}
+					SOV = {
+						white_peace = {
+							tag = SWE
+							message = FIN_agree_peace
+						}
+					}
+				}
+			}
+			transfer_state = 146
+			transfer_state = 147
+			if = {
+				limit = {
+					722 = {
+						is_claimed_by = SOV
+					}
+				}
+				SOV = { remove_state_claim = 722 }
+			}
+		}
+	}
+
+	#Never give up!
+	option = {
+		name = finland.7.b
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+#Soviet response to Finish surrender
+country_event = {
+	id = finland.8
+	title = finland.8.t
+	desc = finland.8.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+
+	#Accept surrender
+	option = {
+		name = finland.8.a
+		ai_chance = {
+			base = 9
+		}
+		white_peace = FIN
+		transfer_state = 146
+		transfer_state = 147
+		if = {
+			limit = {
+				722 = {
+					is_claimed_by = SOV
+				}
+			}
+			remove_state_claim = 722
+		}
+		FIN = {
+			add_ai_strategy = {
+				type = antagonize
+				id = "SOV"			
+				value = 200
+			}
+		}
+		if = {
+			limit = {
+				GER = {
+					is_subject = no
+					not = { is_in_faction_with = SOV}
+				}
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "GER"			
+				value = 200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = "GER"			
+				value = 200
+			}
+			GER = {
+				add_ai_strategy = {
+					type = alliance
+					id = "FIN"			
+					value = 200
+				}
+			}
+		}
+	}
+
+	#Take it all
+	option = {
+		name = finland.8.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}			
+		}
+		FIN = { country_event = { id = finland.9 } }
+	}
+}
+
+#Soviet says no!
+country_event = {
+	id = finland.9
+	title = finland.9.t
+	desc = finland.9.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+
+	option = {
+		name = finland.9.a
+	}
+}
+
+
+#用奥涅加换卡累利阿
+country_event = {
+	id = finland.10
+	title = finland.10.t
+	desc = finland.10.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+
+	option = {
+		name = finland.10.a #好吧，我们同意
+		ai_chance = { factor = 0}
+		SOV = {
+			country_event = { id = finland.11 }
+			}
+	}
+	option = {
+		name = finland.10.b #想得美！
+		ai_chance = { factor = 100}
+		SOV = {
+			country_event = { id = soviet.13 }
+			effect_tooltip = {
+				declare_war_on = {
+					target = FIN
+					type = puppet_wargoal_focus
+				}
+			}
+		}
+	}
+	
+}
+
+
+ #芬兰同意用奥涅加换卡累利阿
+country_event = {
+	id = finland.11
+	title = finland.11.t
+	desc = finland.11.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+
+	option = {
+		name = finland.11.a
+		SOV = { transfer_state = 146 }
+		FIN = { transfer_state = 215 }
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

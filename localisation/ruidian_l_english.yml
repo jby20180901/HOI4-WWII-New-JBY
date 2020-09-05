@@ -1,0 +1,155 @@
+﻿l_english:
+ SWE_zhongshi_gongye:0 "工业发展"
+ SWE_zhongshi_gongye_desc:0"工业是唯一生产现代化劳动手段的部门，它决定着国民经济现代化的速度、规模和水平，在当代世界各国国民经济中起着主导作用。工业还为自身和国民经济其他各个部门提供原材料、燃料和动力，为人民物质文化生活提供工业消费品；它还是国家财政收入的主要源泉，是国家经济自主、政治独立、国防现代化的根本保证。"
+ SWE_infrastructure_effort:0"运兵铁路网"
+ SWE_infrastructure_effort_desc:0"铁路军事运输是指军队利用铁路列车输送人员和物资的运输。是军事运输的一种方式。铁路运输具有运量大、运距远、速度快、成本低、受天候影响小等特点，是战略、战役后方实施军事运输的主要手段。"
+ SWE_production_effort:0"扩大萨博军工厂"
+ SWE_production_effort_desc:0"兵工厂指能制造武器、弹药、装备，同时可进行修理的工厂。是国防的基础。我们决不允许军事生产能力拖后腿。"
+ SWE_yikeesiyu_wukuang:0"伊克斯约贝格钨矿厂"
+ SWE_yikeesiyu_wukuang_desc:0"钨在冶金和金属材料领域中属高熔点稀有金属或称难熔稀有金属。钨及其合金是现代工业、国防及高新技术应用中的极为重要的功能材料之一，广泛应用于航天、原子能、船舶、汽车工业、电气工业、电子工业、化学工业等诸多领域。特别是含钨高温合金主要应用于燃气轮机、火箭、导弹及核反应堆的部件，高比重钨基合金则用于反坦克和反潜艇的穿甲弹头。"
+ SWE_production_effort_2:0"投资博福斯公司"
+ SWE_production_effort_2_desc:0"博福斯公司起源于17世纪，1894年被诺贝尔收购，目前产品涉及火炮、弹药、坦克、装甲车、鱼雷和扫雷系统等领域。"
+ SWE_construction_effort_2:0"民用企业投资"
+ SWE_construction_effort_2_desc:0"继续扩建我们的工厂能使我们加快贸易物资的生产并加大工业建设力度。"
+ SWE_touzi_jiaoyu:0"斯德哥尔摩大学国有化"
+ SWE_touzi_jiaoyu_desc:0"斯德哥尔摩大学（瑞典语：Stockholms universitet）位于瑞典首都斯德哥尔摩，始建于1878年，是瑞典国立大学。拥有人文、社会科学、法学、自然科学与数理等领域系所。"
+ SWE_army_effort:0"国防部国家防御计划书"
+ SWE_army_effort_desc:0"该计划由国防部长福尔克·亨格中将起草，具体内容为瑞典在战争时期的防卫计划以及做好长期敌后游击作战的方案。"
+ SWE_getelandao_kongjunjidi:0"哥特兰岛空军基地"
+ SWE_getelandao_kongjunjidi_desc:0"我们可以将哥特兰岛打造成一艘不会沉没的航空母舰，一旦计划完成，我们在波罗的海地区的军事力量将得到大大增强。"
+ SWE_motorization_effort:0"摩托化步兵"
+ SWE_motorization_effort_desc:0"摩托化步兵通常是机动到对方小口径火炮的射程外，一般为3至5公里外，下车后进入进攻出发阵地，汽车此时隐蔽，在炮兵火力支援的炮火支援阶段（一般为30到50分钟时间），尔后边运动，边由连战斗队形展开成排战斗队形，最后展开成组战斗队形，在距离敌机枪有效射程的距离边缘（一般为400至600米），展开成冲击战斗队形，高速冲击敌防御前沿，实施最后突破。"
+ SWE_armor_effort:0"装甲部队"
+ SWE_armor_effort_desc:0"陆军中以坦克和其他装甲车辆为基本装备的战斗兵种，又称坦克兵，是陆军的重要突击力量。装甲兵具有猛烈的火力、广泛的机动力和良好的防护力，可以减轻常规武器和核武器袭击的损害，并能迅速利用常规火力突击和核突击的效果，实施快速机动、猛烈突击，在短时间之内歼击敌人。"
+ SWE_ruidian_diguo:0"瑞典-德国军事合作"
+ SWE_ruidian_diguo_desc:0"通过与德国的军事合作将有效提高我军的作战方式。"
+ SWE_yuebeiyizhidu:0"预备役制度"
+ SWE_yuebeiyizhidu_desc:0"预备役是同现役相区别的一种兵役义务。依照法律规定，在年龄、政治、身体适合服兵役而未服现役的公民，以及服现役期满退出现役后符合服预备役条件的人员，统称预备役人员（包括预备役军官和预备役士兵）。预备役人员根据国家需要，随时准备应征入伍。预备役制度的完善程度和预备役人员的数、质量情况，通常是衡量一个国家军事力量强弱的重要因素之一。"
+ SWE_equipment_effort:0"更新武器装备"
+ SWE_equipment_effort_desc:0"陆军所使用的装备日新月异，我们将集中精力研发最好的装备让我们的战士使用。"
+ SWE_aviation_effort:0"陆军航空兵建设"
+ SWE_aviation_effort_desc:0"陆军航空兵是陆军前沿性主战兵种，具有强大火力、超越突击能力以及精确打击能力，是陆军实施非线式、非接触、全纵深机动作战的骨干力量。"
+ SWE_CAS_effort:0"重视近距支援机"
+ SWE_CAS_effortt_desc:0"现代化战争不仅需要地面的支援，还需要空中支援。"
+ SWE_fighter_focus:0"重视战斗机"
+ SWE_fighter_focus_desc:0"在第一次世界大战中，空战越来越频繁，在战斗机开发中保持领先的地位将使我们在未来处于优势。"
+ SWE_bomber_focus:0"重视轰炸机"
+ SWE_bomber_focus_desc:0"飞机作为军用是从侦察开始的，空中侦察的作用是无可置疑的，在侦察飞行中，顺便甩几颗手榴弹或迫击炮弹就成了“轰炸机”的开端。"
+ SWE_zhongxingfighter_focus:0"重型战斗机编队"
+ SWE_zhongxingfighter_focus_desc:0"在各国空军，重型战斗机是战斗机高端部分，由于拥有较大的载弹量和较远的航程，并且可以携带更多的机载设备，重型战斗机一般被用来作为“精兵”和主力。"
+ SWE_zhongxingbomber_focus:0"战略轰炸机编队"
+ SWE_zhongxingbomber_focus_desc:0"战略轰炸机一般是指用来执行战略任务的中、远程轰炸机。既可做战略进攻武器使用，在必要时也遂行战术轰炸任务，支援陆、海军作战。"
+ SWE_extra_tech_slot_2:0"空军科研"
+ SWE_extra_tech_slot_2_desc:0"我国空军的快速进步让我们在科研上有了新的突破。"
+ SWE_naval_effort:0"维持波罗的海军事存在"
+ SWE_naval_effort_desc:0"我们首要目标是扩建我们的海军。将所有资源投入到新船坞建设和水面舰艇的研究中。"
+ SWE_flexible_navy:0"掌控波罗的海"
+ SWE_flexible_navy_desc:0"潜艇技术的进步将彻底改变海战，让我们针对敌人的护航有效的打击。"
+ SWE_large_navy:0 "冲出波罗的海"
+ SWE_large_navy_desc:0 "海军学说将变得更为重视大型战舰，并且确保护航舰队的安全，这些需求使得我们应当开发相应的舰船。"
+ SWE_submarine_effort:0 "重视潜艇"
+ SWE_submarine_effort_desc:0 "潜艇是自鱼雷艇发明以来最激动人心的发展。我们要做好的不仅是防备潜艇，还要利用它偷袭敌方舰队。"
+ SWE_cruiser_effort:0 "重视巡洋舰"
+ SWE_cruiser_effort_desc:0 "在研发出更先进的战列舰之前，先以稍微轻型的巡洋舰来替代。"
+ SWE_destroyer_effort:0 "重视驱逐舰"
+ SWE_destroyer_effort_desc:0 "研究潜艇的设计和战术时，我们也学会了如何应对这些战术。驱逐舰将成为其中关键。"
+ SWE_capital_ships_effort:0 "重视主力舰"
+ SWE_capital_ships_effort_desc:0 "拥有最多战列舰的国家才能统领海洋。战列舰与航空母舰分别代表了旧时代及新时代的海军优势。"
+ SWE_extra_tech_slot_4:0 "海军发展"
+ SWE_extra_tech_slot_4_desc:0 "我国的海军发展我们在科研上有了新的突破。"
+ SWE_special_forces:0 "特种部队"
+ SWE_special_forces_desc:0 "我们需要精锐的部队，优先发展山地部队。"
+ SWE_democracy_tt:0 "禁止所有非民主党派。\n"
+ SWE_request_occupation_tt:0 "所有§Y挪威§！由§Y德国控制！或者他们派系中的某个人。\ n所有§Y丹麦§！由§Y德国控制§！或者他们派系中的某个人。\ n"
+ SWE_political_effort:0 "重视政治"
+ SWE_political_effort_desc:0 "笔墨比刀剑更有力。"
+ SWE_neutrality_focus:0 "保持中立"
+ SWE_neutrality_focus_desc:0 "有些时候，选择远离这个被分裂的世界，是最明智的"
+ SWE_abandon_neutrality:0 "放弃中立"
+ SWE_abandon_neutrality_desc:0 "笔墨可能很强大，但步枪比笔墨更强大得多。"
+ SWE_authoritarianism:0 "威权主义"
+ SWE_authoritarianism_desc:0 "在这个充满暴力的时代，我们不需要没有效率的官僚主义和不必要辩论的政府，我们需要的是一个能够完成事情并做出决定的政府。"
+ SWE_democracy:0 "禁止非民主党派"
+ SWE_democracy_desc:0 "我们不能让这个时代潮流改变我们国家内部的政治局面，我们必须遵守我们的原则，为了我们国家人民的利益做出选择吧。"
+ SWE_deterrence:0 "保持威慑"
+ SWE_deterrence_desc:0 "只有当你能确保别人不会违反中立原则时，你宣布中立才是最稳妥的。"
+ SWE_join_allies:0 "加入同盟国"
+ SWE_join_allies_desc:0 "英国将保护我们。"
+ SWE_nordic_alliance:0 "北欧联盟"
+ SWE_nordic_alliance_desc:0 "英国终将被诅咒！我们唯一关心的是自己国家的利益。如果我们与我们的北欧兄弟团结起来，我们将就能抵抗敌人。"
+ SWE_align_the_nords:0 "与北欧结盟"
+ SWE_align_the_nords_desc:0 "驯服我们的邻国以保护我们的边界不受法西斯的侵扰，这符合我们的利益。"
+ SWE_join_comintern:0 "加入共产国际"
+ SWE_join_comintern_desc:0 "法西斯最大的敌人是红熊，他们才是我们的卫士。"
+ SWE_join_axis:0 "加入轴心国"
+ SWE_join_axis_desc:0 "我们不会对下一次的重大对抗坐视不管，我们今天将在欧洲的范围内进行斗争，以便创造一个明天在全球范围更强大更重要的瑞典。"
+ SWE_invade_the_neighbours:0 "侵略邻国"
+ SWE_invade_the_neighbours_desc:0 "对瑞典安全的最大风险是在我们最亲近的国家驻扎的外国军队。让我们通过向北海推进来保护我们的边界，这样我们的边界就安全了，我们也可以顺利进入北海了。"
+ SWE_request_occupation:0 "占领斯堪的纳维亚"
+ SWE_request_occupation_desc:0 "德国占有瑞典拥有的土地，也许如果我们好好问候问候他们，他们兴许会把它还给我们。"
+ SWE_integrate_the_neighbours:0 "整合斯堪的纳维亚"
+ SWE_integrate_the_neighbours_desc:0 "瑞典唯一的缺点是没有足够的人力，我们需要把周围的邻居们吸收到瑞典，而在文化上相差无几的丹麦人和挪威人或许会帮助我们。"
+ SWE_nationalism_focus:0 "法西斯宣传"
+ SWE_nationalism_focus_desc:0 "什么才叫正确的方式，向右走就是！"
+ SWE_internationalism_focus:0 "共产主义宣传"
+ SWE_internationalism_focus_desc:0 "通往伟大之路的下一个转折点就在于此，往左走！"
+ SWE_Befriend_Germany:0 "与德国友好"
+ SWE_Befriend_Germany_desc:0 "我们大量的钢铁目前正被卖给旁边的邻居，我们与他们保持良好的关系似乎相当自然。"
+ SWE_Spy_On_Germany:0 "拦截瑞典电报"
+ SWE_Spy_On_Germany_desc:0 "德国使用我们的电报线与斯堪的纳维亚的部队进行通信。 我们可以拦截这个信号并用它来支持和帮助英国人。"
+ SWE_USNR:0 "北欧社会主义共和国联盟"
+ SWE_USNR_desc:0 "我们的邻居在我们的控制之下，我们现在可以开始整合它们，将它们团结在一个强大的北欧国家联盟。 北欧社会主义共和国联盟万岁！"
+ SWE_invade_finland:0 "入侵芬兰"
+ SWE_invade_finland_desc:0 "斯堪的纳维亚在我们的控制之下，现在是时候向东看了！芬兰，这是我们伟大道路上的下一个街区。"
+ SWE_Reclaim_the_Empire:0 "重建帝国"
+ SWE_Reclaim_the_Empire_desc:0 "以前的瑞典比今天大得多。现在是时候让我们收回我们应有的土地和权利了，更重要的是，我们应该创造出有史以来最伟大的瑞典。"
+ SWE_Embargo_Germany:0 "对德国禁运"
+ SWE_Embargo_Germany_desc:0 "德国依靠我们的钢铁为工业提供资源，对他们禁运，这样会直接打击他们的经济。"
+ SWE_Nordic_Coop:0 "北欧经济合作"
+ SWE_Nordic_Coop_desc:0 "通过将我们的经济与斯堪的纳维亚的其他经济体相结合，我们可以利用我们经济的优势和它们经济的实力，让我们创造出一个比其他经济体还要强大的经济体！"
+ SWE_invite_finland:0 "邀请芬兰"
+ SWE_invite_finland_desc:0 "芬兰处在一个危险的位置，它在苏联的旁边，不管怎样，他们都是我们的北欧兄弟，保护他们的安全符合我们的利益。"
+ SWE_invite_baltic_states:0 "邀请波罗的海国家"
+ SWE_invite_baltic_states_desc:0 "波罗的海国家受到苏联的威胁，它们曾经是瑞典帝国的一部分，他们需要我们的保护。"
+ SWE_Vanguard_of_the_Baltic:0 "波罗的海先锋"
+ SWE_Vanguard_of_the_Baltic_desc:0 "瑞典海军的骄傲"
+ SWE_Vanguard_tt:0 "获得一艘新的 §Y战列舰§! 在斯德哥尔摩。\n"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

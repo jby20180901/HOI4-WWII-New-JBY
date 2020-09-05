@@ -1,0 +1,548 @@
+
+	shared_focus = {
+		id = SEA_Colonial_economy
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		x = 2
+		y = 0
+		ai_will_do = {
+				factor = 5
+			}
+		completion_reward = {
+				random_owned_controlled_state = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+								type = industrial_complex
+								level = 1
+								instant_build = yes
+							}
+					}
+			}
+
+	}
+	shared_focus = {
+		id = SEA_Colonial_army
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		x = 10
+		y = 0
+		
+		ai_will_do = {
+				factor = 2
+			}
+		completion_reward = {
+				army_experience = 15
+				custom_effect_tooltip = SEA_Colonial_army_tt
+				hidden_effect = {
+					division_template = { name = "Colonial army" is_locked = no regiments = { infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } infantry = { x = 2 y = 0 } } }
+					random_owned_controlled_state = {
+						create_unit = { 
+							division = "name = \"1. Colonial army\" division_template = \"Colonial army\" start_experience_factor = 0" 
+							owner = ROOT
+						}
+						create_unit = { 
+							division = "name = \"2. Colonial army\" division_template = \"Colonial army\" start_experience_factor = 0" 
+							owner = ROOT
+						}
+					}
+				}
+			}
+
+	}
+	shared_focus = {
+		id = SEA_Basic_investment
+		icon = GFX_focus_generic_industry_2
+		cost = 10.00
+		prerequisite = {
+			focus = SEA_Colonial_economy
+		}
+		x = 1
+		y = 1
+		relative_position_id = SEA_Colonial_economy
+		
+		ai_will_do = {
+				factor = 2.5
+			}
+		completion_reward = {
+				random_owned_controlled_state = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+								type = industrial_complex
+								level = 1
+								instant_build = yes
+							}
+					}
+			}
+
+	}
+	shared_focus = {
+		id = SEA_Develop_the_colony
+		icon = GFX_focus_generic_industry_2
+		cost = 10.00
+		prerequisite = {
+			focus = SEA_Basic_investment
+		}
+		x = 2
+		y = 1
+		relative_position_id = SEA_Basic_investment
+		
+		ai_will_do = {
+				factor = 2
+			}
+		completion_reward = {
+				random_owned_controlled_state = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+								type = industrial_complex
+								level = 1
+								instant_build = yes
+							}
+					}
+			}
+
+	}
+	shared_focus = {
+		id = SEA_Colonial_infrastructure
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = SEA_Colonial_economy
+		}
+		x = -1
+		y = 1
+		relative_position_id = SEA_Colonial_economy
+		
+		ai_will_do = {
+				factor = 2
+			}
+		completion_reward = {
+				random_owned_controlled_state = {
+						add_building_construction = {
+								type = infrastructure
+								level = 1
+								instant_build = yes
+							}
+					}
+			}
+
+	}
+	shared_focus = {
+		id = SEA_Invest_in_rural_areas
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		prerequisite = {
+			focus = SEA_Colonial_infrastructure
+		}
+		x = -1
+		y = 1
+		relative_position_id = SEA_Colonial_infrastructure
+
+		completion_reward = {
+				random_owned_controlled_state = {
+						add_building_construction = {
+								type = infrastructure
+								level = 1
+								instant_build = yes
+							}
+					}
+			}
+		
+	}
+	shared_focus = {
+		id = SEA_Regional_development
+		icon = GFX_focus_generic_industry_3
+		cost = 10.00
+		prerequisite = {
+			focus = SEA_Develop_the_colony
+		}
+		x = 0
+		y = 2
+		relative_position_id = SEA_Develop_the_colony
+		completion_reward = {
+				remove_ideas = SEA_Unbalanced_development
+				random_owned_controlled_state = {
+						add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+								type = industrial_complex
+								level = 3
+								instant_build = yes
+							}
+					}
+			}
+		available = {
+				num_of_civilian_factories > 10
+			}
+
+	}
+	shared_focus = {
+		id = SEA_Expand_the_education_system
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = SEA_Regional_development
+		}
+		x = 1
+		y = 1
+		relative_position_id = SEA_Regional_development
+
+		completion_reward = {
+				add_research_slot = 1
+			}
+			
+	}
+	shared_focus = {
+		id = SEA_Improve_rural_development
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = SEA_Invest_in_rural_areas
+		}
+		x = 0
+		y = 2
+		relative_position_id = SEA_Invest_in_rural_areas
+		
+		completion_reward = {
+				random_owned_controlled_state = {
+						add_building_construction = {
+								type = infrastructure
+								level = 2
+								instant_build = yes
+							}
+					}
+			}
+
+	}
+	shared_focus = {
+		id = SEA_Resource_export
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SEA_Colonial_infrastructure
+		}
+		prerequisite = {
+			focus = SEA_Basic_investment
+		}
+		x = 0
+		y = 2
+		relative_position_id = SEA_Colonial_economy
+		
+		ai_will_do = {
+				factor = 2
+			}
+		completion_reward = {
+				random_owned_controlled_state = {
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+								type = industrial_complex
+								level = 2
+								instant_build = yes
+							}
+					}
+			}
+
+	}
+	shared_focus = {
+		id = SEA_Focus_on_cash_crop
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = SEA_Basic_investment
+		}
+		prerequisite = {
+			focus = SEA_Resource_export
+		}
+		mutually_exclusive = {
+			focus = SEA_Focus_on_construction
+		}
+		x = 0
+		y = 2
+		relative_position_id = SEA_Basic_investment
+		
+		completion_reward = {
+				add_ideas = SEA_Cash_crop
+			}
+
+	}
+	shared_focus = {
+		id = SEA_Focus_on_construction
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = SEA_Colonial_infrastructure
+		}
+		prerequisite = {
+			focus = SEA_Resource_export
+		}
+		mutually_exclusive = {
+			focus = SEA_Focus_on_cash_crop
+		}
+		x = 0
+		y = 2
+		relative_position_id = SEA_Colonial_infrastructure
+		
+		completion_reward = {
+				random_owned_controlled_state = {
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+								type = industrial_complex
+								level = 2
+								instant_build = yes
+							}
+					}
+			}
+
+	}
+	shared_focus = {
+		id = SEA_Colonial_education
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = SEA_Focus_on_construction
+			focus = SEA_Focus_on_cash_crop
+		}
+		x = 0
+		y = 2
+		relative_position_id = SEA_Resource_export
+		
+		completion_reward = {
+				add_research_slot = 1
+			}
+		
+	}
+	shared_focus = {
+		id = SEA_Government_reform
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = SEA_Colonial_education
+		}
+		prerequisite = {
+			focus = SEA_Improve_rural_development
+		}
+		prerequisite = {
+			focus = SEA_Regional_development
+		}
+		x = 0
+		y = 1
+		relative_position_id = SEA_Colonial_education
+
+		completion_reward = {
+				remove_ideas = Southeast_asian_colony
+			}
+		available = {
+				has_idea = Southeast_asian_colony
+			}
+		
+	}
+	shared_focus = {
+		id = SEA_Prepare_for_war
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SEA_Colonial_army
+		}
+		x = -2
+		y = 1
+		relative_position_id = SEA_Colonial_army
+		
+		completion_reward = {
+				random_owned_controlled_state = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+								type = arms_factory
+								level = 1
+								instant_build = yes
+							}
+					}
+			}
+		available = {
+				OR = {
+						threat > 0.1
+						any_other_country = {
+								has_wargoal_against = ROOT
+							}
+						any_other_country = {
+								is_justifying_wargoal_against = ROOT
+							}
+					}
+			}
+
+	}
+	shared_focus = {
+		id = SEA_Metropolitan_country_officer
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = SEA_Colonial_army
+		}
+		x = 0
+		y = 1
+		relative_position_id = SEA_Colonial_army
+		
+		completion_reward = {
+				add_ideas = SEA_Metropolitan_country_officer
+			}
+
+	}
+	shared_focus = {
+		id = SEA_Army_exercises
+		icon = GFX_focus_generic_combined_arms
+		cost = 10.00
+		prerequisite = {
+			focus = SEA_Metropolitan_country_officer
+		}
+		x = -1
+		y = 1
+		relative_position_id = SEA_Metropolitan_country_officer
+		
+		completion_reward = {
+				army_experience = 15
+			}
+
+	}
+	shared_focus = {
+		id = SEA_Metropolitan_country_training_system
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		prerequisite = {
+			focus = SEA_Metropolitan_country_officer
+		}
+		x = 1
+		y = 1
+		relative_position_id = SEA_Metropolitan_country_officer
+		
+		completion_reward = {
+				swap_ideas = {
+						remove_idea = SEA_Metropolitan_country_officer
+						add_idea = SEA_Metropolitan_country_officer_2
+					}
+			}
+
+	}
+	shared_focus = {
+		id = SEA_Metropolitan_country_arms
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = SEA_Metropolitan_country_training_system
+		}
+		x = 1
+		y = 1
+		relative_position_id = SEA_Metropolitan_country_training_system
+		
+		completion_reward = {
+				random_owned_controlled_state = {
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+								type = arms_factory
+								level = 2
+								instant_build = yes
+							}
+					}
+				add_autonomy_ratio = {
+						value = -0.05
+						localization = SEA_Metropolitan_country_arms
+					}
+			}
+
+	}
+	shared_focus = {
+		id = SRA_We_can
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10.00
+		prerequisite = {
+			focus = SEA_Army_exercises
+		}
+		prerequisite = {
+			focus = SEA_Metropolitan_country_training_system
+		}
+		x = 0
+		y = 2
+		relative_position_id = SEA_Metropolitan_country_officer
+		continue_if_invalid = yes
+
+		completion_reward = {
+				swap_ideas = {
+						remove_idea = SEA_Colonial_army
+						add_idea = SEA_Colonial_army_2
+					}
+			}
+		available = {
+				has_army_experience > 200
+			}
+		
+	}
+	shared_focus = {
+		id = SEA_Focus_on_defense
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = SRA_We_can
+		}
+		mutually_exclusive = {
+			focus = SEA_Offensive_ability
+		}
+		x = -1
+		y = 1
+		relative_position_id = SRA_We_can
+		
+		completion_reward = {
+				swap_ideas = {
+						remove_idea = SEA_Colonial_army_2
+						add_idea = SEA_Colonial_army_defense_focus
+					}
+			}
+
+	}
+	shared_focus = {
+		id = SEA_Offensive_ability
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10.00
+		prerequisite = {
+			focus = SRA_We_can
+		}
+		mutually_exclusive = {
+			focus = SEA_Focus_on_defense
+		}
+		x = 1
+		y = 1
+		relative_position_id = SRA_We_can
+		
+		completion_reward = {
+				swap_ideas = {
+						remove_idea = SEA_Colonial_army_2
+						add_idea = SEA_Colonial_army_offensive_focus
+					}
+			}
+
+	}
+	shared_focus = {
+		id = SEA_Wartime_production
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SEA_Prepare_for_war
+		}
+		x = 0
+		y = 2
+		relative_position_id = SEA_Prepare_for_war
+
+		completion_reward = {
+				random_owned_controlled_state = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+								type = arms_factory
+								level = 1
+								instant_build = yes
+							}
+					}
+			}
+		available = {
+				OR = {
+						threat > 0.5
+						has_war = yes
+					}
+			}
+		
+	}
+

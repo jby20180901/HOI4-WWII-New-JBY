@@ -1,0 +1,23 @@
+﻿l_english:
+ 
+ PRODUCTION_MATERIALS_FOOD:0 "粮食"
+ food_desc:0 "充足的粮食后勤，是军队战斗力的保证，除此之外，还能用于投资在期货市场上换取经济收入"
+ PRODUCTION_MATERIALS_COAL:0 "煤炭"
+ coal_desc:0 "煤炭，俗称黑金，充足的供能才能维持军工厂的运作，除此之外，还能用于投资在期货市场上换取经济收入"
+ PRODUCTION_MATERIALS_MONEY:0 "商业产出"
+ money_desc:0 "各种生产活动的利润，可以支持各种国家工程"
+ money_maker:0 "金融中心"
+ money_maker_desc:0 "一种可以为国家经济总量带来促进的建筑"
+ food_maker:0 "粮食产区"
+ food_maker_desc:0 "只有气候水源都合适的地方才能建设农业基地，只能通过科技进步来增产，不过，农业学家估计，21世纪之后我们就可以掌握在不毛之地耕种的技术了。"
+ coal_maker:0 "深井煤矿"
+ coal_maker_desc:0 "除了本来就容易开采的露天煤矿，有些地方的工人还绞尽脑汁地勘察到了埋藏在深处的煤矿，按目前的技术水平，已经勘察不到新的煤矿了，不过，矿物学家估计，21世纪之后我们就可以掌握在一些意想不到的地方开采煤炭的技术了。"
+ 
+ 
+ food_maker_plural:0 "商品粮食产区"
+ coal_maker_plural:0 "深井煤矿"
+ money_maker_plural:0 "金融中心"
+ 
+ technical_training_focus1:0 "突破技术瓶颈的采矿技术"
+ technical_training_focus2:0 "突破技术瓶颈的农业技术"
+ 

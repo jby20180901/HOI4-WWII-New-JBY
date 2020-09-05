@@ -1,0 +1,127 @@
+guiTypes = {
+	 containerWindowType = {
+     name = "cash_container_1"
+     position = { x = 170 y = 10 }
+     buttonType ={
+           name ="cash_bg_1"
+           spriteType = "GFX_generic_box_smallest"
+           position = { x=0 y=0 }
+       }
+ 
+       iconType = {
+           name ="cash_icon_1"
+           spriteType = "GFX_cash"
+           position = { x= 7 y = 6 }
+       }
+       instantTextBoxType = {
+           name ="cash_text_1"
+           position = { x= 15 y = 4 }
+           font = "hoi_18mbs"
+           text = "[?money]"
+           format = center
+           maxWidth = 46
+           maxHeight = 24
+           fixedsize = yes
+     
+           pdx_tooltip = "MONEY_1"
+           pdx_tooltip_delayed = "money_1"
+       }
+   }
+ containerWindowType = {
+       name = "cash_container_2"
+       position = { x = 240 y = 10 }
+       buttonType ={
+           name ="cash_bg_2"
+           spriteType = "GFX_generic_box_smallest"
+           position = { x=0 y=0 }
+       }
+       iconType = {
+           name ="cash_icon_2"
+           spriteType = "GFX_walfare_icon"
+           position = { x= 7 y = 6 }
+       }
+ 
+       instantTextBoxType = {
+           name ="cash_text_2"
+           position = { x= 15 y = 4 }
+           font = "hoi_18mbs"
+           text = "[?cost]"
+           format = center
+           maxWidth = 46
+           maxHeight = 24
+           fixedsize = yes
+     
+           pdx_tooltip = "COST"
+           pdx_tooltip_delayed = "cost"
+       }
+   }
+   
+   containerWindowType = {
+       name = "cash_container_3"
+       position = { x = 310 y = 10 }
+       buttonType ={
+           name ="cash_bg_3"
+           spriteType = "GFX_generic_box_smallest"
+           position = { x=0 y=0 }
+       }
+       iconType = {
+           name ="cash_icon_3"
+           spriteType = "GFX_surplus"
+           position = { x= -2 y = -1 }
+       }
+ 
+       instantTextBoxType = {
+           name ="cash_text_3"
+           position = { x= 15 y = 4 }
+           font = "hoi_18mbs"
+           text = "[?remainder]"
+           format = center
+           maxWidth = 46
+           maxHeight = 24
+           fixedsize = yes
+     
+           pdx_tooltip = "REMAINDER"
+           pdx_tooltip_delayed = "remainder"
+       }
+   }
+
+  
+      containerWindowType = {
+       name = "cash_container_4"
+       position = { x = 380 y = 10 }
+       buttonType ={
+           name ="cash_bg_4"
+           spriteType = "GFX_generic_box_smallest"
+           position = { x=0 y=0 }
+       }
+       iconType = {
+           name ="cash_icon_4"
+           spriteType = "GFX_budget"
+           position = { x= 3 y = 0 }
+       }
+ 
+       instantTextBoxType = {
+           name ="cash_text_4"
+           position = { x= 15 y = 4 }
+           font = "hoi_18mbs"
+           text = "[?mil_bud]"
+           format = center
+           maxWidth = 46
+           maxHeight = 24
+           fixedsize = yes
+     
+           pdx_tooltip = "MIL_BUDGET"
+           pdx_tooltip_delayed = "mil_budget"
+       }
+   }
+   
+   containerWindowType = {
+       name = "cover_bg"
+       position = { x = 434 y = 425 }
+        iconType = {
+           name ="cover_bg"
+           spriteType = "cover_bg"
+           position = { x= 3 y = 0 }
+       }
+   }
+}

@@ -1,0 +1,147 @@
+﻿URG_DD_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_DESTROYERS
+  for_countries = {
+    URG
+  }
+  type = ship
+  ship_types = {
+    ship_hull_light
+    destroyer
+  }
+  prefix = "ROU "
+  fallback_name = "乌拉圭海军第%d号驱逐舰"
+  unique = {
+    "乌拉圭"
+    "蒙得维的亚"
+    "马尔多纳多"
+    "罗恰"
+    "科洛尼亚"
+    "阿尔提加斯"
+    "科洛尼亚"
+    "里奥内格罗"
+    "派桑杜"
+  }
+}
+URG_CL_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CL
+  for_countries = {
+    URG
+  }
+  type = ship
+  ship_types = {
+    ship_hull_cruiser
+    light_cruiser
+  }
+  prefix = "ROU "
+  fallback_name = "乌拉圭海军第%d号轻巡洋舰"
+  unique = {
+    "乌拉圭"
+    "蒙得维的亚"
+    "马尔多纳多"
+    "罗恰"
+    "科洛尼亚"
+    "阿尔提加斯"
+    "科洛尼亚"
+    "里奥内格罗"
+    "派桑杜"
+  }
+}
+URG_CA_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CA
+  for_countries = {
+    URG
+  }
+  type = ship
+  ship_types = {
+    ship_hull_cruiser
+    heavy_cruiser
+  }
+  prefix = "ROU "
+  fallback_name = "乌拉圭海军第%d号重巡洋舰"
+  unique = {
+    "乌拉圭"
+    "蒙得维的亚"
+    "马尔多纳多"
+    "罗恰"
+    "科洛尼亚"
+    "阿尔提加斯"
+    "科洛尼亚"
+    "里奥内格罗"
+    "派桑杜"
+  }
+}
+URG_BB_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_BB
+  for_countries = {
+    URG
+  }
+  type = ship
+  ship_types = {
+    ship_hull_heavy
+    battleship
+  }
+  prefix = "ROU "
+  fallback_name = "乌拉圭海军第%d号战列舰"
+  unique = {
+    "阿尔提加斯"
+    "克劳迪奥"
+  }
+}
+URG_BC_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_BC
+  for_countries = {
+    URG
+  }
+  type = ship
+  ship_types = {
+    ship_hull_heavy
+    battle_cruiser
+  }
+  prefix = "ROU "
+  fallback_name = "乌拉圭海军第%d号战列巡洋舰"
+  unique = {
+    "阿尔提加斯"
+    "克劳迪奥"
+  }
+}
+URG_CV_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CARRIERS
+  for_countries = {
+    URG
+  }
+  type = ship
+  ship_types = {
+    ship_hull_carrier
+    carrier
+  }
+  prefix = "ROU "
+  fallback_name = "乌拉圭海军第%d号航空母舰"
+  unique = {
+    "东方共和国"
+    "蒙得维的亚"
+  }
+}
+URG_SS_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_SUBMARINES
+  for_countries = {
+    URG
+  }
+  type = ship
+  ship_types = {
+    ship_hull_submarine
+    submarine
+  }
+  prefix = "ROU "
+  fallback_name = "乌拉圭海军第%d号潜艇"
+  unique = {
+    "乌拉圭"
+    "蒙得维的亚"
+    "马尔多纳多"
+    "罗恰"
+    "科洛尼亚"
+    "阿尔提加斯"
+    "科洛尼亚"
+    "里奥内格罗"
+    "派桑杜"
+  }
+}

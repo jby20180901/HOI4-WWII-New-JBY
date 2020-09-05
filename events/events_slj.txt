@@ -1,0 +1,152 @@
+﻿#########################
+## EastAsia Mod Events ##
+#########################
+
+add_namespace = eastasia
+
+
+#日军进攻济南
+country_event = {
+	id = eastasia.97
+	title = eastasia.97.t
+	desc = eastasia.97.d
+	picture = GFX_report_event_ace_died
+	
+	trigger = {
+		OR = {
+			614 = { is_controlled_by = JAP }
+			743 = { is_controlled_by = JAP }
+		}
+		JAP = { has_war_with = CHI }
+		tag = SLJ
+		NOT = { has_global_flag = kangri_slj_fangqijinan }
+	}
+	
+	immediate = {
+		set_global_flag = kangri_slj_fangqijinan
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = eastasia.97.a
+		ai_chance = { factor = 0 }
+		add_political_power = 150
+	}
+	option = {
+		name = eastasia.97.b
+		ai_chance = { factor = 100 }
+		SLJ = {
+			add_political_power = -100
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 5000
+				producer = SLJ
+			}
+		}
+		JAP = { transfer_state = 743 }
+		CHI = { country_event = eastasia.98 }
+	}
+}
+
+#韩复榘弃守济南PRC
+country_event = {
+	id = eastasia.98
+	title = eastasia.98.t
+	desc = eastasia.98.d
+	picture = GFX_report_event_chinese_soldiers_running
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = eastasia.98.a
+		news_event = { days = 2 id = eastasia.99 }
+	}
+}
+
+#韩复榘被秘密处死
+news_event = {
+	id = eastasia.99
+	title = eastasia.99.t
+	desc = eastasia.99.d
+	picture = GFX_SLJ_qiangbi_hanfuqu_new
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = eastasia.99.a
+		trigger = { 
+			NOT = {
+				TAG = SLJ
+				TAG = CHI
+			}
+		}
+		
+	}
+	option = {
+		name = eastasia.99.c
+		trigger = { TAG = CHI }
+		if = {
+			limit = { SLJ = { is_ai = yes } }
+			CHI = { annex_country = { target = SLJ transfer_troops = yes } }
+			SLJ = {	remove_state_core = 597 }
+			SLJ = {	remove_state_core = 743 }
+			every_state = {
+					limit = {
+						is_claimed_by = SLJ
+						}
+					remove_claim_by = SLJ
+			}
+			
+			
+		}
+	}
+}
+
+#响应东北军抗日
+country_event = {
+	id = eastasia.105
+	title = eastasia.105.t
+	desc = eastasia.105.d
+	picture = GFX_report_event_japan_army_mountainside
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = eastasia.105.a
+		ai_chance = { factor = 70 }
+		DBJ = {
+			country_event = eastasia.106
+			annex_country = { target = SLJ transfer_troops = yes }
+		}
+	}
+	option = {
+		name = eastasia.105.b
+		ai_chance = { factor = 30 }
+		add_political_power = 100
+		DBJ = { country_event = eastasia.106 }
+		SLJ = { declare_war_on = { target = JAP type = annex_everything } }
+	}
+	
+}
+
+#抗日响应DBJ
+country_event = {
+	id = eastasia.106
+	title = eastasia.106.t
+	desc = eastasia.106.d
+	picture = GFX_report_event_japan_army_mountainside
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = eastasia.106.a
+		ai_chance = { factor = 100 }
+		add_political_power = 50
+		
+	}
+}

@@ -1,0 +1,2012 @@
+﻿capital = 64
+
+oob = "GER_1936"
+
+set_fuel_ratio = 0.8
+
+# Starting tech
+set_technology = {
+    dangweijun_0 = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	gwtank = 1
+	basic_light_tank = 1
+	improved_light_tank = 1
+	basic_heavy_tank = 1
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	tactical_bomber1 = 1
+	strategic_bomber1 = 1
+	CAS1 = 1
+	naval_bomber1 = 1
+	
+	mobile_warfare = 1
+	trade_interdiction = 1
+	formation_flying = 1
+	synth_oil_experiments = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		basic_heavy_cruiser = 1
+		early_battleship = 1
+		basic_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+	set_naval_oob = "GER_1936_naval"
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		panzerschiffe = 1
+		pre_dreadnoughts = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		mtg_transport = 1
+		basic_torpedo = 1
+		improved_ship_torpedo_launcher = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_secondary_battery = 1
+		improved_secondary_battery = 1
+		basic_depth_charges = 1
+		sonar = 1
+		basic_cruiser_armor_scheme = 1
+	}
+	set_naval_oob = "GER_1936_naval_mtg"
+}
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+
+
+set_variable = { var = ger_gateway_to_europe_influence value = 0 }
+
+set_variable = { var = wehrmacht_anger value = 0 }
+set_variable = { var = ss_anger value = 0 }
+set_research_slots = 4
+set_convoys = 200
+set_stability = 0.75 
+set_war_support = 0.3
+
+#Trade
+create_import = {
+		resource = tungsten
+		factories = 1
+		exporter = SWE
+}
+
+
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 20
+	fascism = 60
+	communism = 20
+}
+
+create_faction = Axis
+add_to_faction = GER
+
+
+add_ideas = {
+    GER_youtairen
+    GER_yuanshou
+    GER_Ludendorff
+    GER_rongkeguizi
+    GER_fanersai
+	sour_loser
+	german_guofangjun
+	german_dangweijun
+	general_staff
+	limited_exports
+	limited_conscription
+	partial_economic_mobilisation
+	
+}
+add_ideas = GER_mefo_bills_1
+
+activate_mission = GER_mefo_bills_mission
+
+create_country_leader = {
+	name = "阿道夫·希特勒"
+	desc = "POLITICS_ADOLF_HITLER_DESC"
+	picture = "GER_adfxtl.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		fascist_demagogue
+		armaments_organizer
+		army_chief_morale_3
+		dictator
+		warmonger
+		anti_communist
+		propaganda_expert
+		anti_democrat
+		backroom_windbag
+		ideological_groupie
+		armaments_aficionado
+		connected_citizen
+		rearmer
+		leider
+		headstrong
+		adventurous_daredevil
+		nationalist_symbol
+		
+	}
+}
+
+create_country_leader = {
+	name = "威廉二世"
+	desc = "   "
+	picture = "ger_weilian_ershi.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = { 
+	  
+		
+	}
+}
+
+create_country_leader = {
+	name = "康拉德·阿登纳"
+	desc = "POLITICS_KONRAD_ADENAUER_DESC"
+	picture = "GER_adengna.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "威廉·皮克"
+	desc = "POLITICS_WILHELM_PIECK_DESC"
+	picture = "GER_pike.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+		#stalins_puppet # This will now be added in on_actions if SOV releases the country as a puppet via action or war conference
+		exiled # He left in 1933 so he should still be exiled
+	}
+}
+
+#create_country_leader = {
+#	name = "奥托韦尔斯"
+#	desc = "POLITICS_OTTO_WELS_DESC"
+#	picture = "奥托韦尔斯.dds"
+#	expire = "1939.1.16"
+#	ideology = socialism
+#	traits = {
+#		exiled
+#		union_man
+#	}
+#}
+#
+#create_country_leader = {
+#	name = "恩斯特·台尔曼"
+#	desc = "POLITICS_ERNST_THALMANN_DESC"
+#	picture = "恩斯特·台尔曼.dds"
+#	expire = "1956.1.1"
+#	ideology = stalinism
+#	traits = {
+#		assassination_survivor
+#		stalins_puppet
+#		political_prisoner
+#	}
+#}
+
+add_namespace = {
+	name = "ger_unit_leader"
+	type = unit_leader
+}
+
+create_corps_commander = {
+	name = "格尔德·冯·龙德施泰特"
+	desc = "POLITICS_LDSTT_DESC"
+	picture = "GER_q.dds"
+	traits = {   career_officer skilled_staffer infantry_officer  organizer inflexible_strategist    }
+	skill = 5
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 5
+	logistics_skill = 5
+	id = 1
+}
+
+create_corps_commander = {
+	name = "京特·冯·克鲁格"
+	desc = "POLITICS_JTFKLG_DESC"
+	picture = "GER_w.dds"
+	traits = {  cavalry_officer armor_officer bearer_of_artillery panzer_leader }
+	skill = 4
+	id = 2
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "弗里德里希·保卢斯"
+	desc = "POLITICS_FLDLXBLS_DESC"
+	picture = "GER_e.dds"
+	traits = { trait_cautious armor_officer skilled_staffer  }
+	skill = 2
+	id = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "埃尔温·隆美尔"
+	desc = "POLITICS_AEWLME_DESC"
+	picture = "GER_r.dds"
+	traits = {  zhangjia_xianfeng trickster trait_reckless  desert_fox  war_hero armor_officer media_personality }
+	skill = 5
+	id = 4
+	attack_skill = 5
+	defense_skill = 5
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "沃尔特·温克"
+	desc = " "
+	id = 49801
+	picture = "GER_WPERTE_WENKE.dds"
+	traits = {  zhangjia_xianfeng armor_officer panzer_leader}
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "埃里希·冯·曼施坦因"
+	desc = "POLITICS_MSTY_DESC"
+	picture = "GER_t.dds"
+	traits = {   zhangjia_xianfeng  trickster armor_officer skilled_staffer  organizer panzer_leader brilliant_strategist trait_engineer }
+	skill = 5
+	id = 5
+	attack_skill = 5
+	defense_skill = 5
+	planning_skill = 5
+	logistics_skill = 5
+}
+
+create_corps_commander = {
+	name = "海因茨·古德里安"
+	desc = "POLITICS_GDLA_DESC"
+	picture = "GER_y.dds"
+	traits = {  zhangjia_xianfeng cavalry_leader trickster brilliant_strategist panzer_leader armor_officer  panzer_expert combined_arms_expert }
+	skill = 5
+	id = 6
+	attack_skill = 5
+	defense_skill = 5
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "威廉·利斯特"
+	desc = "POLITICS_WLLST_DESC"
+	picture = "GER_u.dds"
+	traits = { career_officer inflexible_strategist }
+	skill = 3
+	id = 7
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "埃瓦尔德·冯·克莱斯特"
+	desc = "POLITICS_FKLST_DESC"
+	picture = "GER_i.dds"
+	traits = { zhangjia_xianfeng panzer_leader armor_officer trait_cautious }
+	skill = 3
+	id = 8
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "费多尔·冯·博克"
+	desc = "POLITICS_FBK_DESC"
+	picture = "GER_o.dds"
+	traits = { harsh_leader trait_cautious panzer_leader skilled_staffer  organizer   }
+	skill = 4
+	id = 9
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "瓦尔特·莫德尔"
+	desc = "POLITICS_WETMDE_DESC"
+	picture = "GER_p.dds"
+	traits = { savenger  brilliant_strategist  organizer   skilled_staffer   urban_assault_specialist   }
+	skill = 4
+	id = 10
+	attack_skill = 4
+	defense_skill = 6
+	planning_skill = 5
+	logistics_skill = 5
+}
+
+create_corps_commander = {
+	name = "马克西米连·冯·魏克斯"
+	desc = "POLITICS_MKXMFWKS_DESC"
+	picture = "GER_a.dds"
+	traits = { cavalry_officer cavalry_expert armor_officer  panzer_leader}
+	skill = 4
+	id = 11
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "威廉·冯·勒布"
+	desc = "POLITICS_WLFLB_DESC"
+	picture = "GER_s.dds"
+	traits = {  bearer_of_artillery panzer_leader organizer skilled_staffer }
+	skill = 4
+	id = 13
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "乔尔格-汉斯·莱因哈特"
+	desc = "POLITICS_WLFLB_DESC"
+	picture = "GER_d.dds"
+	traits = { trait_cautious armor_officer panzer_leader }
+	skill = 3
+	id = 14
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+
+create_corps_commander = {
+	name = "库尔特·斯图登特"
+	picture = "GER_f.dds"
+	traits = { commando trait_reckless  paratrooper }
+	skill = 4
+	id = 16
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "埃尔温·冯·维茨莱本"
+	picture = "GER_g.dds"
+	traits = { infantry_officer career_officer }
+	skill = 4
+	id = 17
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "赫尔曼·霍特"
+	picture = "GER_h.dds"
+	traits = {  zhangjia_xianfeng panzer_leader trait_reckless armor_officer }
+	skill = 3
+	id = 18
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "冯·菲廷霍夫·谢尔"
+	picture = "GER_Von_Vietinghoff.dds"
+	traits = {  zhangjia_xianfeng panzer_leader trait_reckless armor_officer }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "黑尔姆特·魏德林"
+	picture = "GER_Ludwig_Weidling.dds"
+	traits = {  zhangjia_xianfeng  trait_reckless armor_officer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "艾里希·霍普纳"
+	id = 49802
+	picture = "GER_ailixi_huopuna.dds"
+	traits = {  zhangjia_xianfeng panzer_leader  trait_reckless armor_officer }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "约翰内斯·布拉斯科维茨"
+	picture = "GER_j.dds"
+	traits = { infantry_officer }
+	skill = 3
+	id = 19
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "弗雷德里希·弗洛姆"
+	id = 94803
+	picture = "GER_Fromm_Friedrich.dds"
+	traits = { bearer_of_artillery }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "保罗·豪塞尔"
+	picture = "GER_k.dds"
+	traits = { zhangjia_xianfeng deguo_wuzhangdangweijun panzer_leader armor_officer politically_connected }
+	skill = 4
+	id = 20
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "弗里德里希·舒尔茨"
+	picture = "GER_l.dds"
+	traits = { infantry_officer }
+	skill = 3
+	id = 21
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 3
+}
+
+
+
+create_corps_commander = {
+	name = "奥托·库姆"
+	id = 94804
+	picture = "GER_z.dds"
+	traits = {  deguo_wuzhangdangweijun  }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "赫伯特-恩斯特·法尔"
+	id = 94805
+	picture = "GER_Herbert_Ernst_Vahl).dds"
+	traits = {  deguo_wuzhangdangweijun  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+
+create_corps_commander = {
+	name = "贝尔海姆·比特里希"
+	id = 94806
+	picture = "GER_x.dds"
+	traits = { trait_engineer  deguo_wuzhangdangweijun  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "赫尔贝特·奥托·吉勒"
+	id = 94807
+	picture = "GER_c.dds"
+	traits = { swamp_fox   deguo_wuzhangdangweijun  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "西奥多尔·艾克"
+	id = 94808
+	picture = "GER_v.dds"
+	traits = {  deguo_wuzhangdangweijun  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+
+create_corps_commander = {
+	name = "库尔特·冯·蒂佩斯基尔希"
+	picture = "GER_Kurt_Von_Tippelskirch.dds"
+	traits = {    }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "威廉·雷迪乌"
+	id = 94809
+	picture = "GER_Wilhelm_Rediew.dds"
+	traits = { deguo_wuzhangdangweijun politically_connected   }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+
+create_corps_commander = {
+	name = "齐格弗里特·马赛"
+	picture = "GER_Siegfried_Marseille.dds"
+	traits = {    }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "弗朗兹·奥古斯贝尔格"
+	id = 94810
+	picture = "GER_Franz_Augsberger.dds"
+	traits = { deguo_wuzhangdangweijun politically_connected   }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+
+
+create_corps_commander = {
+	name = "阿尔弗雷德·约德尔"
+	picture = "GER_b.dds"
+	traits = { politically_connected career_officer skilled_staffer organizer  }
+	skill = 3
+	id = 23
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "汉斯·克莱勃斯"
+	picture = "GER_hansi_kelaibosi.dds"
+	traits = { politically_connected career_officer panzer_leader armor_officer  skilled_staffer organizer  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "汉斯·施派德尔"
+	picture = "GER_Hans_Spidel.dds"
+	traits = {  skilled_staffer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+
+create_corps_commander = {
+	name = "约瑟夫·迪特里希"
+	id = 94811
+	picture = "GER_n.dds"
+	traits = { deguo_wuzhangdangweijun  armor_officer politically_connected brilliant_strategist trait_reckless }
+	skill = 4
+	id = 24
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "哈索·冯·曼陀菲尔"
+	picture = "GER_m.dds"
+	traits = { zhangjia_xianfeng  panzer_leader  armor_officer  combined_arms_espert}
+	skill = 4
+	id = 25
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "阿尔伯特·凯塞林"
+	picture = "GER_wq.dds"
+	traits = {trait_engineer   trait_mountaineer hill_fighter bearer_of_artillery infantry_leader ambusher }
+	skill = 4
+	id = 32
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "哥特哈德·海因里希"
+	picture = "GER_ww.dds"
+	traits = { trait_engineer infantry_officer trait_cautious }
+	skill = 3
+    id = 33
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "恩斯特 - 埃伯哈德"
+	picture = "GER_we.dds"
+	traits = { winter_specialist trait_engineer war_hero }
+	skill = 3
+	id = 34
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "尤利乌斯·施坦因纳"
+	picture = "GER_wr.dds"
+	traits = {  deguo_wuzhangdangweijun politically_connected  trait_cautious   media_personality    }
+	skill = 3
+	id = 35
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "恩斯特·冯·布施"
+	picture = "GER_wt.dds"
+	traits = {    inflexible_strategist  bearer_of_artillery  skilled_staffer   }
+	skill = 4
+	id = 46
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "费迪南德·舍尔纳"
+	picture = "GER_wy.dds"
+	traits = { rmor_officer panzer_leader career_officer trait_mountaineer winter_specialist winter_expert hill_fighter adaptable }
+	skill = 4
+	id = 47
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+
+create_corps_commander = {
+	name = "瓦尔特·冯·布劳希奇"
+	picture = "GER_wu.dds"
+	traits = { politically_connected  skilled_staffer   media_personality brilliant_strategist  career_officer  thorough_planner  }
+	skill = 4
+	id = 48
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+
+create_corps_commander = {
+	name = "冯·屈希勒尔"
+	picture = "GER_wi.dds"
+	traits = {offensive_doctrine  trait_reckless panzer_leader   harsh_leader     }
+	skill = 4
+	id = 49
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "瓦尔特·冯·赖歇瑙"
+	picture = "GER_wo.dds"
+	traits = { career_officer skilled_staffer  urban_assault_specialist trait_mountaineer }
+	skill = 4
+	id = 49
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "威廉·凯特尔"
+	picture = "GER_wp.dds"
+	traits = {   logistics_wizard skilled_staffer_desc  skilled_staffer organizer   }
+	skill = 4
+	id = 50
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_field_marshal = {
+	name = "维尔纳·冯·布隆贝格"
+	picture = "GER_wa.dds"
+	traits = { old_guard  trickster skilled_staffer  career_officer  war_hero  trait_cautious  }
+	skill = 4
+	id = 51
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "阿道夫·施特劳斯"
+	picture = "GER_ws.dds"
+	traits = { naval_invader   }
+	skill = 2
+	id = 52
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "埃里希·弗里德里希"
+	picture = "GER_wd.dds"
+	traits = { bearer_of_artillery }
+	skill = 3
+	id = 53
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "埃里希·亚伯拉罕"
+	picture = "GER_wf.dds"
+	traits = {commando   panzer_leader           }
+	skill = 3
+	id = 54
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "艾伯哈德·冯·马肯森"
+	picture = "GER_wg.dds"
+	traits = {old_guard skilled_staffer   }
+	skill = 2
+	id = 55
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+
+create_corps_commander = {
+	name = "爱德华·迪特尔"
+	picture = "GER_wj.dds"
+	traits = { rmor_officer  swamp_fox    }
+	skill = 3
+	id = 57
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "迪特里希·冯·肖尔蒂茨"
+	picture = "GER_wk.dds"
+	traits = { jungle_rat politically_connected }
+	skill = 2
+	id = 58
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "冯·托马"
+	picture = "GER_wl.dds"
+	traits = { inflexible_strategist panzer_leader }
+	skill = 3
+	id = 59
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "弗朗茨·冯·埃普骑士"
+	picture = "GER_wz.dds"
+	traits = {  desert_fox  old_guard    }
+	skill = 3
+	id = 60
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+
+create_corps_commander = {
+	name = "弗朗茨·哈尔德"
+	picture = "GER_wx.dds"
+	traits = { winter_specialist  }
+	skill = 3
+	id = 61
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "弗雷德里希·多尔曼"
+	picture = "GER_wc.dds"
+	traits = { media_personality infantry_officer   }
+	skill = 4
+	id = 62
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "格奥尔格·科普勒"
+	picture = "GER_wv.dds"
+	traits = { career_officer infantry_officer    }
+	skill = 2
+	id = 63
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "格奥尔格·林德曼"
+	picture = "GER_wb.dds"
+	traits = { jungle_rat  urban_assault_specialist   }
+	skill = 1
+	id = 64
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "格奥尔格-汉斯·莱因哈特"
+	picture = "GER_wn.dds"
+	traits = {winter_specialist fortress_buster  }
+	skill = 2
+	id = 65
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "汉斯·瓦伦丁·胡贝"
+	picture = "GER_wm.dds"
+	traits = { naval_invader bearer_of_artillery armor_officer panzer_leader  }
+	skill = 2
+	id = 66
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "汉斯-于尔根·冯·阿尼姆"
+	picture = "GER_eq.dds"
+	traits = { politically_connected rmor_officer  }
+	skill = 2
+	id = 67
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "赫尔曼·弗奇"
+	picture = "GER_ew.dds"
+	traits = { trait_cautious    }
+	skill = 2
+	id = 68
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "京特·布鲁门特里特"
+	picture = "GER_ee.dds"
+	traits = { harsh_leader career_officer  }
+	skill = 3
+	id = 69
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 4
+	logistics_skill = 2
+}
+
+
+create_corps_commander = {
+	name = "卡尔·阿尔门丁格尔"
+	picture = "GER_er.dds"
+	traits = { trait_reckless  urban_assault_specialist }
+	skill = 2
+	id = 70
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "卡尔·埃贝尔"
+	picture = "GER_et.dds"
+	traits = { politically_connected   harsh_leader  }
+	skill = 3
+	id = 71
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "卡尔·斯特雷克尔"
+	picture = "GER_ey.dds"
+	traits = {infantry_officer  career_officer     }
+	skill = 2
+	id = 72
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "卡尔·希尔佩特"
+	picture = "GER_eu.dds"
+	traits = {  }
+	skill = 4
+	id = 73
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "库尔特·蔡茨勒"
+	picture = "GER_ei.dds"
+	traits = { jungle_rat swamp_fox   }
+	skill = 2
+	id = 74
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "库尔特·冯·布雷森"
+	picture = "GER_eo.dds"
+	traits = { trickster  }
+	skill = 2
+	id = 75
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "冯·埃克沃德"
+	picture = "GER_ep.dds"
+	traits = { panzer_leader  }
+	skill = 2
+	id = 76
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "库尔特·迈尔"
+	picture = "GER_ea.dds"
+	traits = { panzer_leader rmor_officer  zhangjia_xianfeng  }
+	skill = 3
+	id = 77
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "库诺-汉斯·冯·波特"
+	picture = "GER_es.dds"
+	traits = { naval_invader  bearer_of_artillery }
+	skill = 2
+	id = 78
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+
+create_corps_commander = {
+	name = "莱因哈德·海德里希"
+	picture = "GER_ed.dds"
+	traits = {  deguo_wuzhangdangweijun politically_connected media_personality career_officer  harsh_leader    }
+	skill = 4
+	id = 78
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "鲁道夫·冯·比瑙"
+	picture = "GER_ef.dds"
+	traits = { inflexible_strategist }
+	skill = 2
+	id = 79
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+
+create_corps_commander = {
+	name = "路德维希·贝克"
+	picture = "GER_eg.dds"
+	traits = { hill_fighter  ranger }
+	skill = 2
+	id = 80
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+
+create_corps_commander = {
+	name = "欧根·冯·舒伯特"
+	picture = "GER_eh.dds"
+	traits = { bearer_of_artillery  }
+	skill = 2
+	id = 81
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "赫尔曼·雷克纳格尔"
+	picture = "GER_heerman_leikenaer.dds"
+	traits = {  career_officer   }
+	skill = 2
+	id = 83
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "提奥多尔·艾克"
+	picture = "GER_ek.dds"
+	traits = { hill_fighter cavalry_officer    }
+	skill = 2
+	id = 84
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "瓦尔特·海茨"
+	picture = "GER_el.dds"
+	traits = { politically_connected  }
+	skill = 3
+	id = 85
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+
+create_corps_commander = {
+	name = "威廉·阿道夫·莱因哈德"
+	picture = "GER_ez.dds"
+	traits = {inflexible_strategist swamp_fox    }
+	skill = 2
+	id = 86
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+
+create_corps_commander = {
+	name = "威廉·布格道夫"
+	picture = "GER_ex.dds"
+	traits = {war_hero   }
+	skill = 2
+	id = 87
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "威廉·亚当"
+	picture = "GER_ec.dds"
+	traits = { rmor_officer   }
+	skill = 2
+	id = 88
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "维尔纳·冯·弗立契"
+	picture = "GER_ev.dds"
+	traits = {urban_assault_specialist   }
+	skill = 2
+	id = 89
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+
+create_corps_commander = {
+	name = "约阿希姆·派普"
+	picture = "GER_eb.dds"
+	traits = { fortress_buster deguo_wuzhangdangweijun armor_officer panzer_leader }
+	skill = 2
+	id = 91
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+
+create_corps_commander = {
+	name = "约翰内斯·弗里斯纳"
+	picture = "GER_en.dds"
+	traits = { trait_mountaineer }
+	skill = 2
+	id = 92
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+
+create_corps_commander = {
+	name = "约瑟夫·哈佩"
+	picture = "GER_em.dds"
+	traits = { commando  armor_officer panzer_leader }
+	skill = 2
+	id = 93
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+
+create_corps_commander = {
+	name = "埃尔哈尔德·米尔奇"
+	picture = "GER_rq.dds"
+	traits = { commando career_officer   }
+	skill = 3
+	id = 94
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "阿尔弗雷德·克勒尔"
+	picture = "GER_ry.dds"
+	traits = {  trickster      }
+	skill = 1
+	id = 98
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "奥托·德斯洛赫"
+	picture = "GER_ru.dds"
+	traits = {  trickster   commando    }
+	skill = 2
+	id = 99
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+
+create_corps_commander = {
+	name = "布鲁诺·洛泽"
+	picture = "GER_ri.dds"
+	traits = {  trickster   commando  career_officer  }
+	skill = 2
+	id = 100
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+
+create_navy_leader = {
+	name = "卡尔·冯·邓尼茨"
+	picture = "GER_ra.dds"
+	traits = { navy_career_officer seawolf silent_hunter torpedo_expert lancer loading_drill_master }
+	skill = 5
+	id = 26
+	attack_skill = 5
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 5
+}
+
+create_navy_leader = {
+	name = "埃里希·雷德尔"
+	picture = "GER_rs.dds"
+	traits = { naval_lineage battleship_adherent cruiser_captain }
+	skill = 4
+	id = 27
+	attack_skill = 3
+	defense_skill = 4
+	maneuvering_skill = 3
+	coordination_skill = 3
+}
+
+create_navy_leader = {
+	name = "阿尔弗雷德·萨尔瓦奇特"
+		picture = "GER_rd.dds"
+	traits = { old_guard_navy }
+	skill = 4
+	id = 28
+	attack_skill = 4
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "赫尔曼·贝姆"
+		picture = "GER_rf.dds"
+	traits = { craven superior_tactician }
+	skill = 4
+	id = 29
+	attack_skill = 3
+	defense_skill = 4
+	maneuvering_skill = 4
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "威廉·马沙尔"
+		picture = "GER_rg.dds"
+	traits = { old_guard_navy bold}
+	skill = 4
+	id = 30
+	attack_skill = 4
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "刚瑟·呂特晏斯"
+	picture = "GER_rh.dds"
+	traits = { gentlemanly navy_career_officer superior_tactician }
+	skill = 3
+	id = 31
+	attack_skill = 4
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "埃里希·贝依"
+	picture = "GER_rj.dds"
+	traits = { old_guard_navy  }
+	skill = 4
+	id = 36
+	attack_skill = 4
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "奥斯卡·库梅茨"
+	picture = "GER_rk.dds"
+	traits = { seawolf }
+	skill = 4
+	id = 37
+	attack_skill = 4
+	defense_skill = 3
+	maneuvering_skill = 4
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "奥托·克雷齐默尔"
+	picture = "GER_rl.dds"
+	traits = { blockade_runner  }
+	skill = 4
+	id = 38
+	attack_skill = 4
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "汉斯·冯·弗雷德伯格"
+	picture = "GER_rz.dds"
+	traits = { spotter }
+	skill = 4
+	id = 39
+	attack_skill = 4
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "汉斯·朗斯多夫"
+	picture = "GER_rx.dds"
+	traits = { blockade_runner   }
+	skill = 4
+	id = 40
+	attack_skill = 4
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "卡尔.威泽尔"
+	picture = "GER_rc.dds"
+	traits = { air_controller }
+	skill = 3
+	id = 41
+	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 3
+}
+
+create_navy_leader = {
+	name = "康拉德.阿尔布雷希特"
+	picture = "GER_rv.dds"
+	traits = { seawolf  }
+	skill = 3
+	id = 42
+	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 3
+}
+
+create_navy_leader = {
+	name = "海德里希"
+	picture = "GER_rb.dds"
+	traits = { seawolf  }
+	skill = 4
+	id = 43
+	attack_skill = 4
+	defense_skill = 4
+	maneuvering_skill = 3
+	coordination_skill = 3
+}
+
+create_navy_leader = {
+	name = "鲁尔夫·卡尔斯"
+	picture = "GER_rn.dds"
+	traits = { superior_tactician }
+	skill = 4
+	id = 44
+	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 4
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "罗尔夫.卡尔斯"
+	picture = "GER_rm.dds"
+	traits = { air_controller  }
+	skill = 3
+	id = 45
+	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 3
+}
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	create_operative_leader = {
+		name = "奥托·斯科尔兹内"
+		picture = "AUS_Skeer_Znei.dds"
+		traits = { operative_commando }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { GER }
+	}
+
+	create_operative_leader = {
+		name = "尼古拉斯·里特"
+		picture = "GER_Nikolaus_Ritter.dds"
+		traits = { operative_safe_cracker }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { GER }
+	}
+	create_operative_leader = {
+		name = "埃莉萨·巴兹纳"
+		picture = "GER_ailisai_bazina.dds"
+		traits = { operative_infiltrator }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { GER }
+	}
+}
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	### Ship Variants ###
+	## 1936 Start ##
+	# Light Cruisers #
+	create_equipment_variant = {
+		name = "柯尼斯堡级"
+		type = light_cruiser_1
+		parent_version = 0
+		upgrades = {
+			ship_reliability_upgrade = 2
+			ship_engine_upgrade = 2
+			ship_gun_upgrade = 2
+			ship_anti_air_upgrade = 2
+		}
+		obsolete = yes
+	}
+	# Heavy Cruisers #
+	create_equipment_variant = {
+		name = "德意志级"
+		type = heavy_cruiser_1
+		parent_version = 0
+		upgrades = {
+			ship_reliability_upgrade = 1
+			ship_engine_upgrade = 1
+			ship_armor_upgrade = 1
+			ship_gun_upgrade = 2
+		}
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	create_equipment_variant = {
+		name = "德意志级"
+		type = ship_hull_cruiser_panzerschiff
+		name_group = GER_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+        	fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_battery_slot = ship_heavy_battery_2
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			rear_1_custom_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_airplane_launcher_1
+    	}
+	}
+	create_equipment_variant = {
+		name = "24级"
+		type = ship_hull_light_1
+		name_group = GER_TB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Z-1934级"
+		type = ship_hull_light_2
+		name_group = GER_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Z-1934A级"
+		type = ship_hull_light_2
+		name_group = GER_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+	create_equipment_variant = {
+		name = "II级"
+		type = ship_hull_submarine_1
+		name_group = GER_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "VII级"
+		type = ship_hull_submarine_2
+		name_group = GER_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_2
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "科尼斯堡级"
+		type = ship_hull_cruiser_1
+		name_group = GER_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = ship_light_medium_battery_1
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "埃姆登级"
+		type = ship_hull_cruiser_1
+		name_group = GER_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = ship_light_medium_battery_1
+			mid_2_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "布来梅级"
+		type = ship_hull_cruiser_1
+		name_group = GER_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			mid_1_custom_slot = ship_anti_air_1
+			mid_2_custom_slot = ship_mine_layer_1
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "莱比锡级"
+		type = ship_hull_cruiser_2
+		name_group = GER_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			front_1_custom_slot = ship_anti_air_1
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = ship_light_medium_battery_1
+			rear_1_custom_slot = ship_airplane_launcher_1
+		}
+	}
+	create_equipment_variant = {
+		name = "希佩海军上将级"
+		type = ship_hull_cruiser_2
+		name_group = GER_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_2
+			front_1_custom_slot = ship_anti_air_1
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = ship_airplane_launcher_1
+			rear_1_custom_slot = ship_medium_battery_2
+		}
+	}
+	create_equipment_variant = {
+		name = "沙恩霍斯特级"
+		type = ship_hull_heavy_2
+		name_group = GER_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_2
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_bb_1
+			front_1_custom_slot = ship_anti_air_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = ship_secondaries_1
+			rear_1_custom_slot = ship_heavy_battery_2
+		}
+	}
+	create_equipment_variant = {
+		name = "德意志级"
+		type = ship_hull_pre_dreadnought
+		name_group = GER_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_bb_1
+			front_1_custom_slot = ship_anti_air_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+}
+
+create_equipment_variant = {
+	name = "Ju 86"
+	type = tac_bomber_equipment_0
+	upgrades = {
+		plane_tac_bomb_upgrade = 5
+		plane_range_upgrade = 5
+		plane_engine_upgrade = 5
+		plane_reliability_upgrade = 10
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Do 17"
+	type = tac_bomber_equipment_0
+	upgrades = {
+		plane_tac_bomb_upgrade = 5
+		plane_range_upgrade = 1
+		plane_engine_upgrade = 1
+		plane_reliability_upgrade = 5
+	}
+	obsolete = yes
+}
+
+
+## 1939 Start ##
+1939.1.1 = {
+	if = {
+		limit = {
+			not = { has_dlc = "Man the Guns" }
+		}
+		# Submarines #
+		create_equipment_variant = {
+			name = "VIIA级"
+			type = submarine_2
+			parent_version = 0
+			upgrades = {
+				ship_reliability_upgrade = 1
+				sub_engine_upgrade = 1
+				sub_stealth_upgrade = 1
+				sub_torpedo_upgrade = 1
+			}
+		}
+		# Destroyer #
+		create_equipment_variant = {
+			name = "Z-1936级"
+			type = destroyer_2
+			parent_version = 0
+			upgrades = {
+				ship_torpedo_upgrade = 2
+				destroyer_engine_upgrade = 2
+				ship_ASW_upgrade = 2
+				ship_anti_air_upgrade = 2
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		create_equipment_variant = {
+			name = "Z 1936 Class"
+			type = ship_hull_light_2
+			name_group = GER_DD_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_light_battery_2
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = light_ship_engine_2
+				fixed_ship_torpedo_slot = ship_torpedo_1
+				rear_1_custom_slot = ship_depth_charge_1
+			}
+		}
+		create_equipment_variant = {
+			name = "俾斯麦级"
+			type = ship_hull_heavy_2
+			name_group = GER_BB_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_heavy_battery_3
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = heavy_ship_engine_2
+				fixed_ship_secondaries_slot = ship_secondaries_2
+				fixed_ship_armor_slot = ship_armor_bb_2
+				front_1_custom_slot = ship_anti_air_1
+				mid_1_custom_slot = ship_airplane_launcher_1
+				mid_2_custom_slot = ship_secondaries_2
+				rear_1_custom_slot = ship_heavy_battery_3
+			}
+		}
+		create_equipment_variant = {
+			name = "齐柏林级"
+			type = ship_hull_carrier_1
+			name_group = GER_CV_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_deck_slot_1 = ship_deck_space
+				fixed_ship_deck_slot_2 = ship_deck_space
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = carrier_ship_engine_2
+				fixed_ship_secondaries_slot = ship_secondaries_1
+				front_1_custom_slot = ship_deck_space
+			}
+		}
+	}
+	create_equipment_variant = {
+		name = "He 112"
+		type = fighter_equipment_1
+		upgrades = {
+			plane_gun_upgrade = 1
+			plane_range_upgrade = 1  
+			plane_engine_upgrade = 0
+			plane_reliability_upgrade = 2
+		}
+	}
+	create_equipment_variant = {
+		name = "Bf 109 E"
+		type = fighter_equipment_1
+		upgrades = {
+			plane_gun_upgrade = 2
+			plane_range_upgrade = 1  
+			plane_engine_upgrade = 2
+			plane_reliability_upgrade = 4
+		}
+	}
+	# Heavy Cruisers #
+	#create_equipment_variant = {
+	#	name = "德意志级"
+	#	type = heavy_cruiser_1
+	#	parent_version = 0
+	#	upgrades = {
+	#		ship_reliability_upgrade = 1
+	#		ship_engine_upgrade = 1
+	#		ship_armor_upgrade = 1
+	#		ship_gun_upgrade = 2
+	#	}
+	#	obsolete = yes
+	#}
+}

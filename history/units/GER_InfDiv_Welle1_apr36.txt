@@ -1,0 +1,55 @@
+﻿#######国防军第一波次第一批#######
+division_template = {
+	name = "国防军步兵师（360401）"
+
+	division_names_group = GER_Inf_01
+
+	regiments = {
+		auto_rifle = { x = 0 y = 0 }
+		auto_rifle = { x = 0 y = 1 }
+		auto_rifle = { x = 0 y = 2 }
+        auto_rifle = { x = 1 y = 0 }
+		auto_rifle = { x = 1 y = 1 }
+		auto_rifle = { x = 1 y = 2 }
+        auto_rifle = { x = 2 y = 0 }
+		auto_rifle = { x = 2 y = 1 }
+		auto_rifle = { x = 2 y = 2 }
+		artillery_brigade = { x = 3 y = 0 }
+	}
+	
+	support = {
+        engineer = { x = 0 y = 0 }
+        artillery = { x = 0 y = 1 }
+	}
+}
+units = {
+
+	division= {	
+		name = "德国国防军第34步兵师"
+		location = 9547
+		division_template = "国防军步兵师（360401）"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.1
+	}
+	division= {	
+		name = "德国国防军第25步兵师"
+		location = 6555
+		division_template = "国防军步兵师（360401）"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.1
+	}
+	division= {	
+		name = "德国国防军第33步兵师"
+		location = 6444
+		division_template = "国防军步兵师（360401）"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.1
+	}
+	division= {	
+		name = "德国国防军第26步兵师"
+		location = 3398
+		division_template = "国防军步兵师（360401）"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.1
+	}
+}

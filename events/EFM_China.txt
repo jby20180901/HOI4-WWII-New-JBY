@@ -1,0 +1,5012 @@
+###########################
+# East Focus Mod Chinese Events
+###########################
+
+add_namespace = EMF_china
+
+#加入我们
+country_event = {
+	id = EMF_china.10
+	title = EMF_china.10.t
+	desc = EMF_china.10.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.10.a
+			annex_country = { target = FROM transfer_troops = yes }
+		}
+}
+
+
+#效忠于我们
+country_event = {
+	id = EMF_china.11
+	title = EMF_china.11.t
+	desc = EMF_china.11.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.11.a
+			set_autonomy = { target = FROM autonomy_state = autonomy_dominion } 
+		}
+}
+
+
+
+
+
+#最后关头
+country_event = {
+	id = EMF_china.12
+	title = EMF_china.12.t
+	desc = EMF_china.12.d
+	picture = GFX_report_event_lushan_speech
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CHI
+		JAP = { has_war_with = CHI }  
+	}
+	option = {
+		name = EMF_china.12.a
+		add_war_support = 0.1
+		add_stability = 0.2
+			hidden_effect = {
+				country_event = {
+					days = 5
+					id = news.1002
+				}
+			}
+	}
+}
+
+# China requires attack
+country_event = {
+	id = EMF_china.13
+	title = EMF_china.13.t
+	desc = EMF_china.13.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 95 }
+		name = EMF_china.13.a
+		FROM = { country_event = { id = EMF_china.14 days = 30 } }
+	}
+	option = {
+		ai_chance = { factor = 5 }
+		name = EMF_china.13.b
+			declare_war_on = {
+					target = PRC
+					type = annex_everything
+				}
+			FROM = { country_event = { id = EMF_china.15 days = 1 } }
+			set_country_flag = CHI_Warlord_accept_order
+		}
+}
+country_event = {
+	id = EMF_china.14
+	title = EMF_china.14.t
+	desc = EMF_china.14.d
+	picture = GFX_report_event_chinese_soldiers_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.14.a
+		add_political_power = -50
+	}
+}
+country_event = {
+	id = EMF_china.15
+	title = EMF_china.15.t
+	desc = EMF_china.15.d
+	picture = GFX_report_event_chinese_army_training
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.15.a
+		add_political_power = 50
+	}
+}
+
+# Look for support
+country_event = {
+	id = EMF_china.16
+	title = EMF_china.16.t
+	desc = EMF_china.16.d
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 95 }
+		name = EMF_china.16.a
+	}
+	option = {
+		ai_chance = { factor = 5 }
+		name = EMF_china.16.b
+			FROM = { country_event = { id = EMF_china.17 days = 1 } }
+			add_ai_strategy = {
+					type = befriend
+					id = "CHI"
+					value = 50
+				}
+			add_ai_strategy = {
+					type = support
+					id = "CHI"
+					value = 100
+				}
+			add_ai_strategy = {
+					type = send_volunteers_desire
+					id = "CHI"
+					value = 50
+				}
+		}
+}
+country_event = {
+	id = EMF_china.17
+	title = EMF_china.17.t
+	desc = EMF_china.17.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.17.a
+		add_political_power = 50
+	}
+}
+
+# Sixth encirclement campaign processing
+country_event = {
+	id = EMF_china.18
+	title = EMF_china.18.t
+	desc = EMF_china.18.d
+	picture = GFX_report_event_generic_battle
+	
+	trigger = {
+		tag = CHI
+		has_country_flag = CHI_Sixth_encirclement_campaign_processing
+		OR = {
+			XBJ = {
+				has_government = communism
+				NOT = {
+					has_country_flag = CHI_communism_warlord_with_sixth_encirclement_campaign
+				}
+			}
+			SLJ = {
+				has_government = communism
+				NOT = {
+					has_country_flag = CHI_communism_warlord_with_sixth_encirclement_campaign
+				}
+			}
+			SHX = {
+				has_government = communism
+				NOT = {
+					has_country_flag = CHI_communism_warlord_with_sixth_encirclement_campaign
+				}
+			}
+			GXC = {
+				has_government = communism
+				NOT = {
+					has_country_flag = CHI_communism_warlord_with_sixth_encirclement_campaign
+				}
+			}
+			YXC = {
+				has_government = communism
+				NOT = {
+					has_country_flag = CHI_communism_warlord_with_sixth_encirclement_campaign
+				}
+			}
+			YUN = {
+				has_government = communism
+				NOT = {
+					has_country_flag = CHI_communism_warlord_with_sixth_encirclement_campaign
+				}
+			}
+			XSM = {
+				has_government = communism
+				NOT = {
+					has_country_flag = CHI_communism_warlord_with_sixth_encirclement_campaign
+				}
+			}
+			XXC = {
+				has_government = communism
+				NOT = {
+					has_country_flag = CHI_communism_warlord_with_sixth_encirclement_campaign
+				}
+			}
+			DBJ = {
+				has_government = communism
+				NOT = {
+					has_country_flag = CHI_communism_warlord_with_sixth_encirclement_campaign
+				}
+			}
+		}
+	}
+	option = {
+		name = EMF_china.18.a
+		every_other_country = {
+			limit = {
+				OR = {
+					tag = XBJ
+					tag = SLJ
+					tag = SHX
+					tag = GXC
+					tag = YXC
+					tag = YUN
+					tag = XSM
+					tag = XXC
+					tag = DBJ
+				}
+				has_government = communism
+				NOT = {
+					has_country_flag = CHI_communism_warlord_with_sixth_encirclement_campaign
+				}
+			}
+			set_country_flag = CHI_communism_warlord_with_sixth_encirclement_campaign
+			CHI = { create_wargoal = { type = annex_everything target = PREV } }
+		}
+	}
+}
+
+# North china autonomy
+country_event = {
+	id = EMF_china.19
+	title = EMF_china.19.t
+	desc = EMF_china.19.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 90
+				strength_ratio = {
+					tag = FROM
+					ratio > 0.75
+				}
+			}
+		}
+		name = EMF_china.19.a
+			FROM = { country_event = { id = EMF_china.20 days = 1 } }
+			JAP = { country_event = { id = EMF_china.20 days = 1 } }
+			every_other_country = {
+				limit = {
+					tag = SHX
+					tag = SLJ
+					NOT = { has_war_with = XBJ }
+				}
+				country_event = { id = EMF_china.21 days = 1 }
+			}
+			set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+				}
+			add_popularity = {
+					ideology = democratic
+					popularity = 0.75
+				}
+			hidden_effect = {
+				country_event = {
+						days = 0
+						id = news.1046
+					}
+			}
+			set_global_flag = CHI_Form_north_china_autonomy
+	}
+	option = {
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 10
+				strength_ratio = {
+					tag = FROM
+					ratio > 0.75
+				}
+			}
+		}
+		name = EMF_china.19.b
+			FROM = { country_event = { id = EMF_china.22 days = 1 } }
+		}
+}
+country_event = {
+	id = EMF_china.20
+	title = EMF_china.20.t
+	desc = EMF_china.20.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.20.a
+		diplomatic_relation = {
+				country = XBJ
+				relation = non_aggression_pact
+			}
+	}
+}
+country_event = {
+	id = EMF_china.21
+	title = EMF_china.21.t
+	desc = EMF_china.21.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 70
+				strength_ratio = {
+					tag = FROM
+					ratio > 0.75
+				}
+			}
+		}
+		name = EMF_china.21.a
+		FROM = { country_event = { id = EMF_china.23 days = 1 } }
+	}
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 30
+				strength_ratio = {
+					tag = FROM
+					ratio > 0.75
+				}
+			}
+		}
+		name = EMF_china.21.b
+		FROM = { country_event = { id = EMF_china.22 days = 1 } }
+	}
+}
+country_event = {
+	id = EMF_china.22
+	title = EMF_china.22.t
+	desc = EMF_china.22.d
+	picture = GFX_report_event_chinese_soldiers_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.22.a
+	}
+}
+country_event = {
+	id = EMF_china.23
+	title = EMF_china.23.t
+	desc = EMF_china.23.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.23.a
+		annex_country = { target = FROM transfer_troops = yes }
+	}
+}
+
+
+# We influence north china
+country_event = {
+	id = EMF_china.24
+	title = EMF_china.24.t
+	desc = EMF_china.24.d
+	picture = GFX_report_event_generic_rally
+	
+	mean_time_to_happen = {
+		days = 45
+	}
+	
+	trigger = {
+		tag = CHI
+		has_global_flag = CHI_Form_north_china_autonomy
+		XBJ = {
+			exists = yes
+			is_puppet = no
+			has_government = democratic
+			}
+		NOT = {
+			has_war_with = XBJ
+		}
+	}
+	option = {
+		ai_chance = { factor = 50 }
+		name = EMF_china.24.a
+		add_political_power = -50
+		XBJ = {
+			add_popularity = {
+					ideology = neutrality
+					popularity = 0.1
+				}
+		}
+	}
+	option = {
+		ai_chance = { factor = 50 }
+		name = EMF_china.24.b
+	}
+}
+country_event = {
+	id = EMF_china.25
+	title = EMF_china.24.t
+	desc = EMF_china.24.d
+	picture = GFX_report_event_generic_rally
+	
+	mean_time_to_happen = {
+		days = 45
+	}
+	
+	trigger = {
+		tag = JAP
+		has_global_flag = CHI_Form_north_china_autonomy
+		XBJ = {
+			exists = yes
+			is_puppet = no
+			has_government = democratic
+			}
+		NOT = {
+			has_war_with = XBJ
+		}
+	}
+	option = {
+		ai_chance = { factor = 50 }
+		name = EMF_china.24.a
+		add_political_power = -50
+		XBJ = {
+			add_popularity = {
+					ideology = fascism
+					popularity = 0.1
+				}
+		}
+	}
+	option = {
+		ai_chance = { factor = 50 }
+		name = EMF_china.24.b
+	}
+}
+
+# Cooperation action with japan (economic)
+country_event = {
+	id = EMF_china.26
+	title = EMF_china.26.t
+	desc = EMF_china.26.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 90 }
+		name = EMF_china.26.a
+		add_ideas = CHI_Sino_japan_economic_cooperation_2
+		FROM = { country_event = { id = EMF_china.27 days = 1 } }
+	}
+
+	option = {
+		ai_chance = { factor = 10 }
+		name = EMF_china.26.b
+		FROM = { country_event = { id = EMF_china.28 days = 1 } }
+	}
+}
+country_event = {
+	id = EMF_china.27
+	title = EMF_china.27.t
+	desc = EMF_china.27.d
+	picture = GFX_report_event_hitler_handshake
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.27.a
+		add_ideas = CHI_Sino_japan_economic_cooperation
+	}
+}
+country_event = {
+	id = EMF_china.28
+	title = EMF_china.28.t
+	desc = EMF_china.28.d
+	picture = GFX_report_event_chinese_soldiers_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.28.a
+	}
+}
+
+# Cooperation action with japan (anti comintern)
+country_event = {
+	id = EMF_china.29
+	title = EMF_china.29.t
+	desc = EMF_china.29.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 90 }
+			trigger = {
+				CHI = {
+					is_subject = no
+				}
+			}
+		name = EMF_china.29.a
+		FROM = {
+				add_ideas = CHI_Anti_communist
+				country_event = { id = EMF_china.30 days = 1 }
+			}
+	}
+	option = {
+		ai_chance = { factor = 90 }
+			trigger = {
+				CHI = {
+					is_subject_of = JAP
+				}
+			}
+		name = EMF_china.29.b
+		FROM = {
+				add_ideas = CHI_Anti_communist
+				country_event = { id = EFM_independent.50 days = 1 }
+			}
+	}
+
+	option = {
+		ai_chance = { factor = 10 }
+		name = EMF_china.29.c
+		FROM = { country_event = { id = EFM_independent.51 days = 1 } }
+	}
+}
+country_event = {
+	id = EMF_china.30
+	title = EMF_china.30.t
+	desc = EMF_china.30.d
+	picture = GFX_report_event_hitler_handshake
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.30.a
+		ROOT = {
+			set_rule = { can_create_factions = yes }
+			create_faction = CHI_Sino_japan_anti_communist_alliance
+		}
+		ROOT = { add_to_faction = JAP }
+		JAP = { 
+			add_ai_strategy = {
+				type = alliance
+				id = "CHI"
+				value = 200
+			}
+		}
+	}
+}
+
+# Assist indochina
+country_event = {
+	id = EMF_china.31
+	title = EMF_china.31.t
+	desc = EMF_china.31.d
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 70 }
+		name = EMF_china.31.a
+		FROM = {
+			set_autonomy = {
+					target = VIN
+					autonomy_state = autonomy_dominion
+				}
+			VIN = {
+					add_ideas = CHI_Chinese_support_us_for_independent
+					drop_cosmetic_tag = yes
+				}
+			country_event = { id = EFM_independent.50 hours = 12 }
+		}
+	}
+	option = {
+		ai_chance = { factor = 30 }
+		name = EMF_china.31.b
+		add_opinion_modifier = {
+			target = FROM
+			modifier = Nations_estrangement
+		}
+		FROM = { country_event = { id = EFM_independent.51 hours = 12 } }
+		hidden_trigger = {
+			FROM = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = Nations_estrangement
+				}
+			}
+		}
+	}
+}
+
+# Anti comintern support
+country_event = {
+	id = EMF_china.32
+	title = EMF_china.32.t
+	desc = EMF_china.32.d
+	picture = GFX_report_event_generic_panzer_attack
+	
+	trigger = {
+		has_idea = CHI_Sino_japan_common_anti_communist
+		OR = {
+			has_defensive_war_with = SOV
+			has_defensive_war_with = PRC
+		}
+		NOT = {
+			has_war_with = JAP
+			has_war_with = CHI
+		}
+	}
+	option = {
+		ai_chance = { factor = 90 }
+		name = EMF_china.32.a
+		every_other_country = {
+			limit = {
+				has_idea = CHI_Sino_japan_common_anti_communist
+			}
+			country_event = { id = EMF_china.33 days = 1 }
+		}
+	}
+	option = {
+		ai_chance = { factor = 10 }
+		name = EMF_china.32.b
+		every_other_country = {
+			limit = {
+				has_idea = CHI_Sino_japan_common_anti_communist
+			}
+			remove_ideas = CHI_Sino_japan_common_anti_communist
+		}
+		remove_ideas = CHI_Sino_japan_common_anti_communist
+	}
+}
+country_event = {
+	id = EMF_china.33
+	title = EMF_china.33.t
+	desc = EMF_china.33.d
+	picture = GFX_report_event_generic_panzer_attack
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 90 }
+		name = EMF_china.33.a
+		if = {
+			limit = {
+				FROM = { has_war_with = SOV }
+			}
+			add_to_war = {
+				targeted_alliance = FROM
+				enemy = SOV
+			}
+		}
+		if = {
+			limit = {
+				FROM = { has_war_with = PRC }
+			}
+			add_to_war = {
+				targeted_alliance = FROM
+				enemy = PRC
+			}
+		}
+	}
+	option = {
+		ai_chance = { factor = 10 }
+		name = EMF_china.33.b
+		every_other_country = {
+			limit = {
+				has_idea = CHI_Sino_japan_common_anti_communist
+			}
+			remove_ideas = CHI_Sino_japan_common_anti_communist
+		}
+		remove_ideas = CHI_Sino_japan_common_anti_communist
+		FROM = { country_event = { id = EMF_china.34 days = 1 } }
+	}
+}
+country_event = {
+	id = EMF_china.34
+	title = EMF_china.34.t
+	desc = EMF_china.34.d
+	picture = GFX_report_event_chinese_soldiers_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.34.a
+		add_opinion_modifier = {
+			target = FROM
+			modifier = refused_alliance
+		}
+	}
+}
+
+# Faction Reorganization
+country_event = {
+	id = EMF_china.35
+	title = EMF_china.35.t
+	desc = EMF_china.35.d
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 50 }
+		name = EMF_china.35.a
+		create_country_leader = {
+				name = "汪精卫"
+				desc = "POLITICS_WANG_JINGWEI_DESC"
+				picture = "gfx/leaders/CHI/Portrait_China_Generic_Wang_Jingwei.dds"
+				expire = "1950.1.1"
+				ideology = despotism
+				traits = {  }
+			}
+		create_country_leader = {
+				name = "蒋介石"
+				desc = "POLITICS_CHIANG_KAI-SHEK_DESC"
+				picture = "Portrait_China_Chiang_Kai_Shek.dds"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = { chinese_government_leader generallissimo }
+			}
+	}
+	option = {
+		ai_chance = { factor = 50 }
+		name = EMF_china.35.b
+		create_country_leader = {
+				name = "蒋介石"
+				desc = "POLITICS_CHIANG_KAI-SHEK_DESC"
+				picture = "Portrait_China_Chiang_Kai_Shek.dds"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = { chinese_government_leader generallissimo }
+			}
+	}
+}
+
+
+# Italy diplomacy event
+country_event = {
+	id = EMF_china.36
+	title = EMF_china.36.t
+	desc = EMF_china.36.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.36.a
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 90
+				ITA = {
+					has_opinion = {
+							target = CHI
+							value > 30
+						}
+				}
+			}
+		}
+			add_opinion_modifier = {
+					target = FROM
+					modifier = Nations_friendly
+				}
+			FROM = {
+					country_event = { days = 1 id = EMF_china.37 }
+				}
+			JAP = {
+					country_event = { days = 1 id = EMF_china.39 }
+				}
+			add_opinion_modifier = {
+					target = JAP
+					modifier = Nations_estrangement
+				}
+			set_global_flag = CHI_sino_ita_trade_agreement
+		}
+	option = {
+		name = EMF_china.36.b
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 10
+				ITA = {
+					has_opinion = {
+							target = CHI
+							value > 30
+						}
+				}
+			}
+		}
+			FROM = {
+					country_event = { days = 1 id = EMF_china.38 }
+				}
+		}
+}
+country_event = {
+	id = EMF_china.37
+	title = EMF_china.37.t
+	desc = EMF_china.37.d
+	picture = GFX_report_event_hitler_handshake
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.37.a
+			add_opinion_modifier = {
+					target = FROM
+					modifier = Nations_friendly
+				}
+		}
+}
+country_event = {
+	id = EMF_china.38
+	title = EMF_china.38.t
+	desc = EMF_china.38.d
+	picture = GFX_report_event_generic_truck
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.38.a
+		}
+}
+# Japan
+country_event = {
+	id = EMF_china.39
+	title = EMF_china.39.t
+	desc = EMF_china.39.d
+	picture = GFX_report_event_japanese_chinese_surrender
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.39.a
+			add_opinion_modifier = {
+					target = JAP
+					modifier = Nations_estrangement
+				}
+		}
+}
+
+# Arms trading with italy
+country_event = {
+	id = EMF_china.40
+	title = EMF_china.40.t
+	desc = EMF_china.40.d
+	picture = GFX_report_event_generic_lend_lease
+	
+	is_triggered_only = yes
+#	mean_time_to_happen = { days = 120 }
+#	
+#	trigger = {
+#		tag = CHI
+#		is_subject = no
+#		has_global_flag = CHI_sino_ita_trade_agreement
+#		NOT = { has_war_with = ITA }
+#		NOT = {
+#			ITA = { has_government = communism }
+#			has_government = communism
+#		}
+#	}
+	
+	option = {
+		ai_chance = { factor = 45 }
+		name = EMF_china.40.a
+		ITA = {
+				country_event = { id = EMF_china.41 days = 1 }
+			}
+		}
+	option = {
+		ai_chance = { factor = 45 }
+		name = EMF_china.40.b
+		ITA = {
+				country_event = { id = EMF_china.42 days = 1 }
+			}
+		}
+	option = {
+		ai_chance = { factor = 10 }
+		name = EMF_china.40.c
+		}
+}
+country_event = {
+	id = EMF_china.41
+	title = EMF_china.41.t
+	desc = EMF_china.41.d
+	picture = GFX_report_event_generic_lend_lease
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 90 }
+		name = EMF_china.41.a
+		FROM = {
+				country_event = { id = EMF_china.43 days = 1 }
+			}
+		if = {
+			limit = {
+				has_equipment = { infantry_equipment > 500 }
+			}
+			send_equipment = { target = FROM type = infantry_equipment amount = 500 }
+		}
+		if = {
+			limit = {
+				has_equipment = { infantry_equipment < 500 }
+			}
+				add_equipment_to_stockpile = {
+						type = infantry_equipment_1
+						amount = -500
+						producer = ITA
+				}
+				FROM = {
+					add_equipment_to_stockpile = {
+							type = infantry_equipment_1
+							amount = 500
+							producer = ITA
+					}
+				}
+		}
+		add_political_power = 50
+		}
+	option = {
+		ai_chance = { factor = 10 }
+		name = EMF_china.41.b
+		FROM = {
+				country_event = { id = EMF_china.45 days = 1 }
+			}
+		clr_global_flag = CHI_sino_ita_trade_agreement
+		}
+}
+country_event = {
+	id = EMF_china.42
+	title = EMF_china.42.t
+	desc = EMF_china.42.d
+	picture = GFX_report_event_generic_lend_lease
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 90 }
+		name = EMF_china.42.a
+		FROM = {
+				country_event = { id = EMF_china.44 days = 1 }
+			}
+		if = {
+			limit = {
+				has_equipment = { fighter > 50 }
+			}
+			send_equipment = { target = FROM type = fighter amount = 50 }
+		}
+		if = {
+			limit = {
+				has_equipment = { fighter < 50 }
+			}
+				add_equipment_to_stockpile = {
+						type = fighter_equipment_1
+						amount = -50
+						producer = ITA
+				}
+				FROM = {
+					add_equipment_to_stockpile = {
+							type = fighter_equipment_1
+							amount = 50
+							producer = ITA
+					}
+				}
+		}
+		add_political_power = 100
+		}
+	option = {
+		ai_chance = { factor = 10 }
+		name = EMF_china.42.b
+		FROM = {
+				country_event = { id = EMF_china.45 days = 1 }
+			}
+		clr_global_flag = CHI_sino_ita_trade_agreement
+		}
+}
+country_event = {
+	id = EMF_china.43
+	title = EMF_china.43.t
+	desc = EMF_china.43.d
+	picture = GFX_report_event_generic_lend_lease
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.43.a
+		add_political_power = -50
+		}
+}
+country_event = {
+	id = EMF_china.44
+	title = EMF_china.44.t
+	desc = EMF_china.44.d
+	picture = GFX_report_event_generic_lend_lease
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.44.a
+		add_political_power = -100
+		}
+}
+country_event = {
+	id = EMF_china.45
+	title = EMF_china.45.t
+	desc = EMF_china.45.d
+	picture = GFX_report_event_chinese_soldiers_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.45.a
+		}
+}
+
+country_event = {
+	id = EMF_china.50
+	title = EMF_china.50.t
+	desc = EMF_china.50.d
+	picture = GFX_report_event_Sino_German_cooperation_1926_1
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.50.a
+		ai_chance = { factor = 90 }
+		add_opinion_modifier = {
+				target = FROM
+				modifier = Nations_friendly
+		}
+		FROM = {
+				country_event = { id = EMF_china.51 days = 10 }
+			}
+	}
+
+	option = {
+		ai_chance = { factor = 10 }
+		name = EMF_china.50.b
+		FROM = {
+				country_event = { id = EMF_china.52 days = 20 }
+			}
+		add_opinion_modifier = {
+				target = FROM
+				modifier = Nations_estrangement
+		}
+	}
+}
+country_event = {
+	id = EMF_china.51
+	title = EMF_china.51.t
+	desc = EMF_china.51.d
+	picture = GFX_report_event_Sino_German_cooperation_1926_1
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.51.a
+		add_opinion_modifier = {
+				target = FROM
+				modifier = Nations_friendly
+		}
+	}
+}
+country_event = {
+	id = EMF_china.52
+	title = EMF_china.52.t
+	desc = EMF_china.52.d
+	picture = GFX_report_event_chinese_soldiers_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.52.a
+		add_opinion_modifier = {
+				target = FROM
+				modifier = Nations_estrangement
+		}
+	}
+}
+
+# HAPRO
+country_event = {
+	id = EMF_china.53
+	title = EMF_china.53.t
+	desc = EMF_china.53.d
+	picture = GFX_report_event_Sino_German_cooperation_1926_2
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 89 }
+		name = EMF_china.53.a
+		add_political_power = -50
+		GER = {
+				country_event = { id = EMF_china.54 days = 5 }
+			}
+	}
+	option = {
+		ai_chance = { factor = 10 }
+		name = EMF_china.53.b
+		add_political_power = -75
+		GER = {
+				country_event = { id = EMF_china.55 days = 5 }
+			}
+		}
+	option = {
+		ai_chance = { factor = 1 }
+		name = EMF_china.53.c
+		}
+}
+country_event = {
+	id = EMF_china.54
+	title = EMF_china.54.t
+	desc = EMF_china.54.d
+	picture = GFX_report_event_Sino_German_cooperation_1926_2
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 95 }
+		name = EMF_china.54.a
+		FROM = {
+				country_event = { id = EMF_china.56 days = 5 }
+				country_event = { id = EMF_china.60 days = 30 }
+			}
+		add_opinion_modifier = {
+				target = FROM
+				modifier = EFM_Expand_trade
+		}
+	}
+	option = {
+		ai_chance = { factor = 5 }
+		name = EMF_china.54.b
+		FROM = {
+				country_event = { id = EMF_china.57 days = 5 }
+			}
+	}
+}
+country_event = {
+	id = EMF_china.55
+	title = EMF_china.55.t
+	desc = EMF_china.55.d
+	picture = GFX_report_event_Sino_German_cooperation_1926_2
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 90 }
+		name = EMF_china.55.a
+		add_opinion_modifier = {
+				target = FROM
+				modifier = Nations_friendly
+		}
+		FROM = {
+				country_event = { id = EMF_china.56 days = 5 }
+				country_event = { id = EMF_china.61 days = 30 }
+			}
+		add_opinion_modifier = {
+				target = FROM
+				modifier = EFM_Expand_exports_to_germany
+			}
+		}
+	option = {
+		ai_chance = { factor = 10 }
+		name = EMF_china.55.b
+		FROM = {
+				country_event = { id = EMF_china.57 days = 5 }
+				country_event = { id = EMF_china.60 days = 30 }
+			}
+		add_opinion_modifier = {
+				target = FROM
+				modifier = EFM_Expand_trade
+		}
+	}
+}
+#GER Agree
+country_event = {
+	id = EMF_china.56
+	title = EMF_china.56.t
+	desc = EMF_china.56.d
+	picture = GFX_report_event_Sino_German_cooperation_1926_3
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.56.a
+			add_opinion_modifier = {
+					target = FROM
+					modifier = Nations_friendly
+			}
+		}
+}
+#GER Refuse
+country_event = {
+	id = EMF_china.57
+	title = EMF_china.57.t
+	desc = EMF_china.57.d
+	picture = GFX_report_event_Sino_German_cooperation_1926_1
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.57.a
+		
+		}
+}
+
+#Seek German support
+country_event = {
+	id = EMF_china.58
+	title = EMF_china.58.t
+	desc = EMF_china.58.d
+	picture = GFX_report_event_Sino_German_cooperation_1926_1
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.58.a
+		ai_chance = { factor = 90 
+		modifier = {
+			add = -70
+			GER = {
+					has_opinion = {
+						target = CHI
+						value < 75
+					}
+				}
+			}
+		}
+		set_global_flag = ger_german_will_support_sino
+		give_guarantee = CHI
+		effect_tooltip = {
+				ROOT = {
+					send_equipment = { target = FROM type = infantry_equipment amount = 1000 }
+					send_equipment = { target = FROM type = support_equipment amount = 300 }
+					send_equipment = { target = FROM type = light_tank_equipment amount = 100 }
+				}
+			}
+		FROM = {
+				country_event = { id = EMF_china.156 days = 1 }
+			}
+		}
+	option = {
+		name = EMF_china.58.b
+		ai_chance = { factor = 10 
+		modifier = {
+			add = 70
+			GER = {
+					has_opinion = {
+						target = CHI
+						value < 75
+					}
+				}
+			}
+		}
+		FROM = {
+				country_event = { id = EMF_china.57 days = 1 }
+			}
+		}
+}
+
+# Affect German diplomacy
+country_event = {
+	id = EMF_china.59
+	title = EMF_china.59.t
+	desc = EMF_china.59.d
+	picture = GFX_report_event_chinese_soldiers_running
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.59.a
+		ai_chance = { factor = 30 
+		modifier = {
+			add = 40
+			GER = {
+					has_opinion = {
+						target = CHI
+						value > 29
+					}
+				}
+			}
+		}
+		add_opinion_modifier = {
+				target = CHI
+				modifier = Nations_friendly
+		}
+		CHI = {
+				country_event = { id = EMF_china.56 days = 1 }
+			}
+		}
+	option = {
+		name = EMF_china.59.b
+		ai_chance = { factor = 70 
+		modifier = {
+			add = -40
+			GER = {
+					has_opinion = {
+						target = CHI
+						value > 29
+					}
+				}
+			}
+		}
+		add_opinion_modifier = {
+				target = JAP
+				modifier = Nations_friendly
+		}
+		CHI = {
+				country_event = { id = EMF_china.57 days = 1 }
+			}
+		}
+}
+
+# German weapons
+country_event = {
+	id = EMF_china.60
+	title = EMF_china.60.t
+	desc = EMF_china.60.d
+	picture = GFX_report_event_Sino_German_cooperation_1926_2
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.60.a
+		ai_chance = { factor = 90 
+		modifier = {
+			add = -40
+			GER = {
+					has_opinion = {
+						target = CHI
+						value > 39
+					}
+				}
+			}
+		}
+		add_equipment_to_stockpile = { type = light_tank_equipment_1 amount = 50 producer = GER }
+		add_equipment_to_stockpile = { type = support_equipment_1 amount = 150 producer = GER }
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 500 producer = GER }
+		add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 100 producer = GER }
+		add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = 100 producer = GER }
+		GER = { country_event = { days = 1 id = EMF_china.62 } }
+		}
+	option = {
+		name = EMF_china.60.b
+		ai_chance = { factor = 10 
+		modifier = {
+			add = 40
+			GER = {
+					has_opinion = {
+						target = CHI
+						value > 39
+					}
+				}
+			}
+		}
+		add_equipment_to_stockpile = { type = light_tank_equipment_1 amount = 10 producer = GER }
+		add_equipment_to_stockpile = { type = support_equipment_1 amount = 50 producer = GER }
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 250 producer = GER }
+		add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 30 producer = GER }
+		add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = 20 producer = GER }
+		add_political_power = -100
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+}
+country_event = {
+	id = EMF_china.61
+	title = EMF_china.61.t
+	desc = EMF_china.61.d
+	picture = GFX_report_event_Sino_German_cooperation_1926_2
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.61.a
+		ai_chance = { factor = 90 
+		modifier = {
+			add = -40
+			GER = {
+					has_opinion = {
+						target = CHI
+						value > 39
+					}
+				}
+			}
+		}
+		add_equipment_to_stockpile = { type = light_tank_equipment_1 amount = 100 producer = GER }
+		add_equipment_to_stockpile = { type = support_equipment_1 amount = 300 producer = GER }
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 1000 producer = GER }
+		add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 150 producer = GER }
+		add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = 150 producer = GER }
+		GER = { country_event = { days = 1 id = EMF_china.62 } }
+		}
+	option = {
+		name = EMF_china.61.b
+		ai_chance = { factor = 10 
+		modifier = {
+			add = 40
+			GER = {
+					has_opinion = {
+						target = CHI
+						value > 39
+					}
+				}
+			}
+		}
+		add_equipment_to_stockpile = { type = light_tank_equipment_1 amount = 25 producer = GER }
+		add_equipment_to_stockpile = { type = support_equipment_1 amount = 75 producer = GER }
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 400 producer = GER }
+		add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 50 producer = GER }
+		add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = 25 producer = GER }
+		add_political_power = -150
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+}
+country_event = {
+	id = EMF_china.62
+	title = EMF_china.62.t
+	desc = EMF_china.62.d
+	picture = GFX_report_event_Sino_German_cooperation_1926_2
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.62.a
+			add_timed_idea = { idea = CHI_Sino_German_cooperation days = 120 }
+			add_equipment_to_stockpile = { type = light_tank_equipment_1 amount = -25 producer = GER }
+			add_equipment_to_stockpile = { type = support_equipment_1 amount = -75 producer = GER }
+			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = -400 producer = GER }
+			add_equipment_to_stockpile = { type = artillery_equipment_1 amount = -50 producer = GER }
+			add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = -25 producer = GER }
+		}
+}
+
+# Buy fighter
+country_event = {
+	id = EMF_china.70
+	title = EMF_china.70.t
+	desc = EMF_china.70.d
+	picture = GFX_report_event_airplane_factory
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 70 }
+		name = EMF_china.70.a
+		add_equipment_to_stockpile = { type = fighter_equipment_0 amount = -50 producer = ROOT }
+		FROM = {
+				country_event = { id = EMF_china.71 days = 5 }
+			}
+		}
+	option = {
+		ai_chance = { factor = 30 }
+		name = EMF_china.70.b
+		FROM = {
+				country_event = { id = EMF_china.72 days = 5 }
+			}
+	}
+}
+country_event = {
+	id = EMF_china.71
+	title = EMF_china.71.t
+	desc = EMF_china.71.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.71.a
+		add_equipment_to_stockpile = { type = fighter_equipment_0 amount = 50 producer = FROM }
+		}
+}
+country_event = {
+	id = EMF_china.72
+	title = EMF_china.72.t
+	desc = EMF_china.72.d
+	picture = GFX_report_event_chinese_soldiers_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.72.a
+		}
+}
+# Chennault
+country_event = {
+	id = EMF_china.73
+	title = EMF_china.73.t
+	desc = EMF_china.73.d
+	picture = GFX_report_event_claire_lee_chennault
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.73.a
+			add_ideas = CHI_Chennault_volunteer_team
+			add_equipment_to_stockpile = {
+					type = fighter_equipment_0
+					amount = 100
+					producer = USA
+				}
+		}
+}
+country_event = {
+	id = EMF_china.74
+	title = EMF_china.74.t
+	desc = EMF_china.74.d
+	picture = GFX_report_event_claire_lee_chennault_2
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.74.a
+			swap_ideas = {
+					remove_idea = CHI_Chennault_volunteer_team
+					add_idea = CHI_American_volunteer_group
+				}
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				USA = {
+					set_country_flag = CHI_flying_tigers
+					add_war_support = 0.05
+					add_ai_strategy = {
+						type = send_volunteers_desire
+						id = "ROOT"
+						value = 200
+					}
+					add_ai_strategy = {
+						type = support
+						id = "ROOT"
+						value = 200
+					}
+					hidden_effect = {
+						news_event = { id = wtt_news.34 days = 1 }
+					}
+					unlock_decision_tooltip = CHI_flying_tigers
+				}
+			}
+		}
+}
+
+# Soviet Volunteer Group
+country_event = {
+	id = EMF_china.75
+	title = EMF_china.75.t
+	desc = EMF_china.75.d
+	picture = GFX_report_event_soviet_volunteer_group
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.75.a
+			air_experience = 25
+			add_ideas = CHI_soviet_volunteer_group
+			add_equipment_to_stockpile = { type = fighter_equipment_0 amount = 80 producer = SOV }
+			add_equipment_to_stockpile = { type = tac_bomber_equipment_0 amount = 25 producer = SOV }
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				SOV = {
+					set_country_flag = CHI_soviet_volunteer_group
+					air_experience = 25
+					add_ai_strategy = {
+						type = send_volunteers_desire
+						id = "ROOT"
+						value = 200
+					}
+					add_ai_strategy = {
+						type = support
+						id = "ROOT"
+						value = 200
+					}
+					unlock_decision_tooltip = CHI_soviet_volunteer_group
+				}
+			}
+		}
+}
+
+# Win the Hebei competition
+country_event = {
+	id = EMF_china.76
+	title = EMF_china.76.t
+	desc = EMF_china.76.d
+	picture = GFX_report_event_generic_rally
+	
+	trigger = {
+		tag = HPC
+		is_subject = no
+		has_global_flag = CHI_Form_north_china_autonomy
+		OR = {
+			fascism > 0.5
+			neutrality > 0.5
+		}
+	}
+	option = {
+		name = EMF_china.76.a
+		if = {
+			limit = {
+				neutrality > 0.5
+			}
+			CHI = { country_event = { id = EMF_china.77 days = 1 } }
+			JAP = { country_event = { id = EMF_china.78 days = 1 } }
+		}
+		if = {
+			limit = {
+				fascism > 0.5
+			}
+			CHI = { country_event = { id = EMF_china.78 days = 1 } }
+			JAP = { country_event = { id = EMF_china.77 days = 1 } }
+		}
+		clr_country_flag = CHI_Form_north_china_autonomy
+	}
+}
+country_event = {
+	id = EMF_china.77
+	title = EMF_china.77.t
+	desc = EMF_china.77.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.77.a
+			add_political_power = 100
+			set_autonomy = { target = FROM autonomy_state = autonomy_integrated_puppet }
+		}
+}
+country_event = {
+	id = EMF_china.78
+	title = EMF_china.78.t
+	desc = EMF_china.78.d
+	picture = GFX_report_event_japanese_soldiers_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.78.a
+			add_political_power = -100
+		}
+}
+
+# France Return to Guangzhou Bay
+country_event = {
+	id = EMF_china.79
+	title = EMF_china.79.t
+	desc = EMF_china.79.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 90 }
+		name = EMF_china.79.a
+			FROM = { country_event = { id = EMF_china.80 days = 5 } }
+			add_opinion_modifier = {
+				target = CHI
+				modifier = Nations_friendly
+			}
+		}
+	option = {
+		ai_chance = { factor = 10 }
+		name = EMF_china.79.b
+			FROM = { country_event = { id = EFM_independent.51 hours = 12 } }
+		}
+}
+country_event = {
+	id = EMF_china.80
+	title = EMF_china.80.t
+	desc = EMF_china.80.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.80.a
+			transfer_state = 728
+			add_opinion_modifier = {
+				target = FRA
+				modifier = Nations_friendly
+			}
+		}
+}
+
+
+#ROC SOV Non-A-Pact
+country_event = {
+	id = EMF_china.217
+	title = EMF_china.217.t
+	desc = EMF_china.217.d
+	picture = GFX_report_event_stalin_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.217.a
+		diplomatic_relation = {
+			country = CHI
+			relation = non_aggression_pact
+		}
+	}
+}
+
+#ROC SOV Friendly-Pact
+country_event = {
+	id = EMF_china.218
+	title = EMF_china.218.t
+	desc = EMF_china.218.d
+	picture = GFX_report_event_stalin_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.218.a
+		SOV = {
+			add_opinion_modifier = {
+				target = CHI 
+				modifier = chi_sov_nice_pact
+				}
+			}
+		CHI = { add_opinion_modifier = { target = SOV modifier = chi_sov_nice_pact }}
+	}
+}
+
+#ROC join SOV faction
+country_event = {
+	id = EMF_china.219
+	title = EMF_china.219.t
+	desc = EMF_china.219.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 90 }
+		name = EMF_china.219.a
+		SOV = {
+add_to_faction = CHI }
+		}
+
+	option = {
+		ai_chance = { factor = 10 }
+		name = EMF_china.219.b
+		SOV = {
+add_opinion_modifier = {
+target = CHI modifier = refused_to_union }}
+
+		CHI = { add_opinion_modifier = { target = SOV modifier = refused_to_union }}
+	}
+}
+
+#ROC join allies
+country_event = {
+	id = EMF_china.220
+	title = EMF_china.220.t
+	desc = EMF_china.220.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.220.a
+			add_to_war = { targeted_alliance = CHI enemy = JAP }
+			every_other_country = {
+					limit = {
+							has_war_together_with = CHI
+						}
+					add_to_tech_sharing_group = CHI_Asia_theater_command
+				}
+		}
+}
+
+#Fall in Nanjing
+country_event = {
+	id = EMF_china.225
+	title = EMF_china.225.t
+	desc = EMF_china.225.d
+	picture = GFX_report_event_battle_of_shanghai
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = event_target:WTT_current_china_leader
+		JAP = {
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+		OR = {
+			JAP = {
+					has_war_with = event_target:WTT_current_china_leader
+					controls_state = 598
+				}
+				any_country = {
+						is_in_faction_with = JAP
+						has_war_together_with = JAP
+						has_war_with = event_target:WTT_current_china_leader
+						controls_state = 598
+					}
+				any_country = {
+						is_subject_of = JAP
+						has_war_together_with = JAP
+						has_war_with = event_target:WTT_current_china_leader
+						controls_state = 598
+					}
+		}
+		598 = { is_owned_by = event_target:WTT_current_china_leader }
+		event_target:WTT_current_china_leader = {
+			NOT = { has_country_flag = CHI_Transfer_capital_now }
+		}
+		NOT = { has_global_flag = EFM_battle_in_nanking }
+	}
+	
+	option = {
+		name = EMF_china.225.a
+		add_stability = -0.05
+		JAP = {
+				country_event = EMF_china.227
+			}
+		}
+}
+
+country_event = {
+	id = EMF_china.226
+	title = EMF_china.226.t
+	desc = EMF_china.226.d
+	picture = GFX_report_event_battle_of_shanghai
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = event_target:WTT_current_china_leader
+		JAP = {
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+		OR = {
+			JAP = {
+					has_war_with = event_target:WTT_current_china_leader
+					controls_state = 598
+				}
+				any_country = {
+						is_in_faction_with = JAP
+						has_war_together_with = JAP
+						has_war_with = event_target:WTT_current_china_leader
+						controls_state = 598
+					}
+				any_country = {
+						is_subject_of = JAP
+						has_war_together_with = JAP
+						has_war_with = event_target:WTT_current_china_leader
+						controls_state = 598
+					}
+		}
+		598 = { is_owned_by = event_target:WTT_current_china_leader }
+		event_target:WTT_current_china_leader = {
+			has_country_flag = CHI_Transfer_capital_now
+		}
+		NOT = { has_global_flag = EFM_battle_in_nanking }
+	}
+	
+	option = {
+		name = EMF_china.226.a
+		JAP = {
+			country_event = EMF_china.229
+			}
+		}
+}
+
+country_event = {
+	id = EMF_china.227
+	title = EMF_china.227.t
+	desc = EMF_china.227.d
+	picture = GFX_report_event_battle_of_shanghai
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.227.a
+			add_timed_idea = { idea = for_the_emperor_idea days = 100 }
+		}
+}
+
+country_event = {
+	id = EMF_china.229
+	title = EMF_china.229.t
+	desc = EMF_china.229.d
+	picture = GFX_report_event_battle_of_shanghai
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.229.a
+			add_timed_idea = { idea = for_the_emperor_idea days = 30 }
+		}
+}
+
+#Fall in Wuhan
+country_event = {
+	id = EMF_china.230
+	title = EMF_china.230.t
+	desc = EMF_china.230.d
+	picture = GFX_report_event_battle_of_wuhan_3
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = event_target:WTT_current_china_leader
+		JAP = {
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+		OR = {
+			JAP = {
+					has_war_with = event_target:WTT_current_china_leader
+					controls_state = 620
+				}
+			any_country = {
+					is_in_faction_with = JAP
+					has_war_with = event_target:WTT_current_china_leader
+					has_war_together_with = JAP
+					controls_state = 620
+				}
+			any_country = {
+					is_subject_of = JAP
+					has_war_with = event_target:WTT_current_china_leader
+					has_war_together_with = JAP
+					controls_state = 620
+				}
+		}
+		620 = { is_owned_by = event_target:WTT_current_china_leader }
+		event_target:WTT_current_china_leader = {
+			has_idea = CHI_Transfer_capital
+		}
+		NOT = { has_global_flag = EFM_battle_in_wuhan }
+	}
+	
+	option = {
+		name = EMF_china.230.a
+		JAP = {
+			country_event = EMF_china.231
+			white_peace = CHI
+			white_peace = PRC
+			white_peace = SHX
+			white_peace = GXC
+			white_peace = YUN
+			white_peace = SLJ
+			white_peace = XSM
+			white_peace = YXC
+			white_peace = XXC
+			white_peace = XBJ
+			}
+		event_target:WTT_current_china_leader = {
+			every_owned_state = {
+					limit = {
+						NOT = {
+							is_controlled_by = event_target:WTT_current_china_leader
+						}
+					}
+				JAP = {
+					transfer_state = PREV
+					}
+				}
+			}
+		}
+}
+
+country_event = {
+	id = EMF_china.231
+	title = EMF_china.231.t
+	desc = EMF_china.231.d
+	picture = GFX_report_event_battle_of_wuhan_3
+
+	mean_time_to_happen = { days = 1 }
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 55 }
+		name = EMF_china.231.a
+		event_target:WTT_current_china_leader = {
+			every_owned_state = {
+					limit = {
+					is_controlled_by = event_target:WTT_current_china_leader
+					}
+				JAP = {
+					transfer_state = PREV
+					}
+			}
+		}
+		if = {
+			limit = {
+				country_exists = CPG
+			}
+		JAP = {
+			every_owned_state = {
+				limit = {
+					is_controlled_by = JAP
+					is_claimed_by = CPG
+					is_core_of = PRC
+				}
+				CPG = {
+					transfer_state = PREV
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				country_exists = CNJ
+			}
+		JAP = {
+			every_owned_state = {
+				limit = {
+					is_controlled_by = JAP
+					is_claimed_by = CNJ
+					is_core_of = PRC
+				}
+				CNJ = {
+					transfer_state = PREV
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				GXC = { exists = no } 
+			}
+		PRC = {
+			annex_country = { target = event_target:WTT_current_china_leader transfer_troops = yes }
+			}
+		}
+		if = {
+			limit = {
+				country_exists = GXC
+			}
+		GXC = {
+			annex_country = { target = event_target:WTT_current_china_leader transfer_troops = yes }
+			}
+		}
+		if = {
+			limit = {
+				CNJ = { exists = no }
+				CPG = { exists = no }
+			}
+		JAP = {
+			every_owned_state = {
+					limit = {
+						NOT = { state = 524 }
+						NOT = { state = 744 }
+						is_core_of = event_target:WTT_current_china_leader
+					}
+				event_target:WTT_current_china_leader = {
+					transfer_state = PREV
+					}
+			}
+			puppet = event_target:WTT_current_china_leader
+			}
+		}
+		add_named_threat = { threat = 15 name = japan_puppet_china_threat_JAP }
+		set_global_flag = JAP_wins_second_sino_japanese_war
+		}
+	option = {
+		ai_chance = { factor = 40 }
+		name = EMF_china.231.b
+		event_target:WTT_current_china_leader = {
+			every_owned_state = {
+					limit = {
+					is_controlled_by = event_target:WTT_current_china_leader
+					}
+				JAP = {
+					transfer_state = PREV
+					}
+			}
+		}
+		if = {
+			limit = {
+				country_exists = CNJ
+				}
+		JAP = { annex_country = { target = CNJ } }
+			}
+		if = {
+			limit = {
+				country_exists = CPG
+				}
+		JAP = { annex_country = { target = CPG } }
+			}
+		JAP = {
+			annex_country = { target = XBJ }
+			annex_country = { target = SLJ }
+			}
+		if = {
+			limit = {
+				GXC = { exists = no } 
+			}
+		PRC = {
+			annex_country = { target = event_target:WTT_current_china_leader transfer_troops = yes }
+			}
+		}
+		if = {
+			limit = {
+				country_exists = GXC
+			}
+		GXC = {
+			annex_country = { target = event_target:WTT_current_china_leader transfer_troops = yes }
+			}
+		}
+		add_named_threat = { threat = 15 name = japan_defeat_china_threat_JAP }
+		set_global_flag = JAP_wins_second_sino_japanese_war
+		}
+	option = {
+		ai_chance = { factor = 5 }
+		name = EMF_china.231.c
+		}
+}
+
+country_event = {
+	id = EMF_china.232
+	title = EMF_china.232.t
+	desc = EMF_china.232.d
+	picture = GFX_report_event_battle_of_wuhan_1
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = event_target:WTT_current_china_leader
+		JAP = {
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+		OR = {
+			JAP = {
+					has_war_with = event_target:WTT_current_china_leader
+					controls_state = 620
+				}
+			any_country = {
+					is_in_faction_with = JAP
+					has_war_with = event_target:WTT_current_china_leader
+					has_war_together_with = JAP
+					controls_state = 620
+				}
+			any_country = {
+					is_subject_of = JAP
+					has_war_with = event_target:WTT_current_china_leader
+					has_war_together_with = JAP
+					controls_state = 620
+				}
+		}
+		620 = { is_owned_by = event_target:WTT_current_china_leader }
+		event_target:WTT_current_china_leader = {
+			NOT = {
+				has_idea = CHI_Transfer_capital
+			}
+		}
+		NOT = { has_global_flag = EFM_battle_in_wuhan }
+	}
+	
+	option = {
+		name = EMF_china.232.a
+		JAP = {
+			country_event = EMF_china.233
+			}
+		}
+}
+
+country_event = {
+	id = EMF_china.233
+	title = EMF_china.233.t
+	desc = EMF_china.233.d
+	picture = GFX_report_event_battle_of_wuhan_2
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.233.a
+			if = {
+				limit = {
+					has_idea = Imperial_Japanese_Army
+				}
+				remove_ideas = Imperial_Japanese_Army
+			}
+			add_war_support = -0.1
+		}
+}
+
+country_event = {
+	id = EMF_china.234
+	title = EMF_china.234.t
+	desc = EMF_china.234.d
+	picture = GFX_report_event_move_to_chongqing_2
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = event_target:WTT_current_china_leader
+		OR = {
+			OR = {
+				JAP = {
+						has_war_with = event_target:WTT_current_china_leader
+						controls_state = 607
+					}
+				any_country = {
+						is_in_faction_with = JAP
+						has_war_with = event_target:WTT_current_china_leader
+						has_war_together_with = JAP
+						controls_state = 607
+					}
+				any_country = {
+						is_subject_of = JAP
+						has_war_with = event_target:WTT_current_china_leader
+						has_war_together_with = JAP
+						controls_state = 607
+					}
+			}
+			OR = {
+				JAP = {
+						has_war_with = event_target:WTT_current_china_leader
+						controls_state = 606
+					}
+				any_country = {
+						is_in_faction_with = JAP
+						has_war_with = event_target:WTT_current_china_leader
+						has_war_together_with = JAP
+						controls_state = 606
+					}
+				any_country = {
+						is_subject_of = JAP
+						has_war_with = event_target:WTT_current_china_leader
+						has_war_together_with = JAP
+						controls_state = 606
+					}
+			}
+			OR = {
+				JAP = {
+						has_war_with = event_target:WTT_current_china_leader
+						controls_state = 600
+					}
+				any_country = {
+						is_in_faction_with = JAP
+						has_war_with = event_target:WTT_current_china_leader
+						has_war_together_with = JAP
+						controls_state = 600
+					}
+				any_country = {
+						is_subject_of = JAP
+						has_war_with = event_target:WTT_current_china_leader
+						has_war_together_with = JAP
+						controls_state = 600
+					}
+			}
+			OR = {
+				JAP = {
+						has_war_with = event_target:WTT_current_china_leader
+						controls_state = 602
+					}
+				any_country = {
+						is_in_faction_with = JAP
+						has_war_with = event_target:WTT_current_china_leader
+						has_war_together_with = JAP
+						controls_state = 602
+					}
+				any_country = {
+						is_subject_of = JAP
+						has_war_with = event_target:WTT_current_china_leader
+						has_war_together_with = JAP
+						controls_state = 602
+					}
+			}
+		}
+		event_target:WTT_current_china_leader = {
+			has_idea = CHI_Transfer_capital
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 40 }
+		name = EMF_china.234.a
+		}
+	option = {
+		ai_chance = { factor = 60 }
+		name = EMF_china.234.b
+			remove_ideas = CHI_Transfer_capital
+			set_country_flag = CHI_evacuated_from_wuhan
+			hidden_effect = {
+				news_event = { hours = 6 id = news.1042 }
+			}
+		}
+}
+
+#CHI Economic reform plan
+country_event = {
+	id = EMF_china.240
+	title = EMF_china.240.t
+	desc = EMF_china.240.d
+	picture = GFX_report_event_generic_read_write
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CHI
+		CHI = {
+			focus_progress = { focus = CHI_Economic_reform_plan progress > 0.5 }
+		}
+	}
+	
+	option = {
+		name = EMF_china.240.a
+		ai_chance = { factor = 50 }
+			set_country_flag = CHI_Economic_reform_plan_A
+		}
+	option = {
+		name = EMF_china.240.b
+		ai_chance = { factor = 50 }
+			set_country_flag = CHI_Economic_reform_plan_B
+		}
+}
+
+country_event = {
+	id = EMF_china.241
+	title = EMF_china.241.t
+	desc = EMF_china.241.d
+	picture = GFX_report_event_japanese_chinese_surrender
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.241.a
+			if = {
+				limit = {
+					has_country_flag = CHI_Economic_reform_plan_A
+				}
+	        swap_ideas = {
+                remove_idea = CHI_Economic_panic
+                add_idea = CHI_Economic_panic_2
+				}
+				clr_country_flag = CHI_Economic_reform_plan_A
+			}
+			if = {
+				limit = {
+					has_country_flag = CHI_Economic_reform_plan_B
+				}
+	        swap_ideas = {
+                remove_idea = CHI_Economic_panic
+                add_idea = CHI_Economic_panic_3
+				}
+				clr_country_flag = CHI_Economic_reform_plan_B
+			}
+		}
+}
+
+#CHI Rectify army
+country_event = {
+	id = EMF_china.242
+	title = EMF_china.242.t
+	desc = EMF_china.242.d
+	picture = GFX_report_event_generic_read_write
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CHI
+		CHI = {
+			focus_progress = { focus = CHI_Militia_question progress > 0.5 }
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 20 }
+		name = EMF_china.242.a
+			set_country_flag = CHI_Militia_A
+		}
+	option = {
+		ai_chance = { factor = 60 }
+		name = EMF_china.242.b
+			set_country_flag = CHI_Militia_B
+	        swap_ideas = {
+					remove_idea = CHI_army_over_expansion
+					add_idea = CHI_army_over_expansion_2
+				}
+		}
+	option = {
+		ai_chance = { factor = 20 }
+		name = EMF_china.242.c
+			set_country_flag = CHI_Militia_C
+	        swap_ideas = {
+					remove_idea = CHI_army_over_expansion
+					add_idea = CHI_army_over_expansion_4
+				}
+		}
+}
+
+country_event = {
+	id = EMF_china.243
+	title = EMF_china.243.t
+	desc = EMF_china.243.d
+	picture = GFX_report_event_japanese_chinese_surrender
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.243.a
+			if = {
+				limit = {
+					has_country_flag = CHI_Militia_A
+				}
+				clr_country_flag = CHI_Militia_A
+			}
+			if = {
+				limit = {
+					has_country_flag = CHI_Militia_B
+				}
+				country_event = EMF_china.244
+				clr_country_flag = CHI_Militia_B
+			}
+			if = {
+				limit = {
+					has_country_flag = CHI_Militia_C
+				}
+				country_event = EMF_china.244
+				clr_country_flag = CHI_Militia_C
+			}
+		}
+}
+
+country_event = {
+	id = EMF_china.244
+	title = EMF_china.244.t
+	desc = EMF_china.244.d
+	picture = GFX_report_event_japanese_chinese_surrender
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.244.a
+			add_timed_idea = { idea = CHI_army_over_expansion_3 days = 365 }
+		}
+}
+
+#CHI Stilwell is comming
+country_event = {
+	id = EMF_china.247
+	title = EMF_china.247.t
+	desc = EMF_china.247.d
+	picture = GFX_report_event_generic_read_write
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CHI
+		has_completed_focus = CHI_Asian_theatre
+		any_other_country = {
+				num_of_factories > 75
+				has_war_with = CHI
+				has_war_with = USA
+			}
+		NOT = { has_war_with = USA }
+	}
+	
+	option = {
+		name = EMF_china.247.a
+			add_ideas = Joseph_Stilwell_in_CHI
+			set_country_flag = Stilwell_is_comming_CHI
+		}
+}
+
+country_event = {
+	id = EMF_china.248
+	title = EMF_china.248.t
+	desc = EMF_china.248.d
+	picture = GFX_report_event_generic_read_write
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CHI
+		CHI = {
+			has_country_flag = Stilwell_is_comming_CHI
+			surrender_progress > 0.65
+		}
+	}
+	
+	option = {
+		name = EMF_china.248.b
+        create_country_leader = {
+                name = "约瑟夫·史迪威"
+                desc = "Joseph.W.Stilwell_DESC"
+                picture = "gfx/leaders/USA/Portrait_USA_Joseph_Stilwell.dds"
+                expire = "1950.1.1"
+                ideology = despotism
+                traits = { }
+            }
+        create_country_leader = {
+                name = "约瑟夫·史迪威"
+                desc = "Joseph.W.Stilwell_DESC"
+                picture = "gfx/leaders/USA/Portrait_USA_Joseph_Stilwell.dds"
+                expire = "1950.1.1"
+                ideology = leninism
+                traits = { }
+            }
+        create_country_leader = {
+                name = "约瑟夫·史迪威"
+                desc = "Joseph.W.Stilwell_DESC"
+                picture = "gfx/leaders/USA/Portrait_USA_Joseph_Stilwell.dds"
+                expire = "1950.1.1"
+                ideology = socialism
+                traits = { }
+            }
+			add_stability = -0.05
+		}
+}
+
+country_event = {
+	id = EMF_china.249
+	title = EMF_china.249.t
+	desc = EMF_china.249.d
+	picture = GFX_report_event_generic_read_write
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CHI
+		OR = {
+			CHI = {
+				has_country_flag = Stilwell_is_comming_CHI
+				surrender_progress < 0.2
+			}
+			date > 1944.8.1
+		}
+	}
+	
+	option = {
+		name = EMF_china.249.a
+			remove_ideas = Joseph_Stilwell_in_CHI
+			clr_country_flag = Stilwell_is_comming_CHI
+		}
+}
+
+#ROC join Axis
+country_event = {
+	id = EMF_china.250
+	title = EMF_china.250.t
+	desc = EMF_china.250.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 90 }
+		name = EMF_china.250.a
+		GER = {
+			add_to_faction = CHI
+			}
+		hidden_effect = {
+			country_event = {
+					days = 0
+					id = news.1027
+				}
+			}
+		}
+
+	option = {
+		ai_chance = { factor = 10 }
+		name = EMF_china.250.b
+		GER = {
+add_opinion_modifier = {
+target = CHI modifier = refused_to_union }}
+
+		CHI = { add_opinion_modifier = { target = GER modifier = refused_to_union }}
+	}
+}
+
+# Curve saves the ation
+country_event = {
+	id = EMF_china.251
+	title = EMF_china.251.t
+	desc = EMF_china.251.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 90 }
+		name = EMF_china.251.a
+		trigger = {
+			original_tag = JAP
+		}
+		effect_tooltip = {
+				CHI = {
+					remove_state_core = 328
+					remove_state_core = 610
+					remove_state_core = 714
+					remove_state_core = 715
+					remove_state_core = 716
+					remove_state_core = 717
+					remove_state_core = 524
+					remove_state_core = 796
+				}
+			}
+		hidden_effect = {
+				FROM = {
+					remove_state_core = 328
+					remove_state_core = 610
+					remove_state_core = 714
+					remove_state_core = 715
+					remove_state_core = 716
+					remove_state_core = 717
+					remove_state_core = 524
+					remove_state_core = 796
+				}
+			}
+		hidden_effect = {
+				diplomatic_relation = {
+					country = FROM
+					relation = non_aggression_pact
+					active = no
+				}
+			}
+		diplomatic_relation = {
+			country = FROM
+			relation = non_aggression_pact
+		}
+		FROM = { country_event = { id = EFM_independent.50 hours = 12 } }
+	}
+	option = {
+		ai_chance = { factor = 10 }
+		name = EMF_china.251.b
+		trigger = {
+			original_tag = JAP
+		}
+		FROM = { country_event = { id = EFM_independent.51 hours = 12 } }
+	}
+	option = {
+		name = EMF_china.251.a
+		trigger = {
+			NOT = { original_tag = JAP }
+		}
+		effect_tooltip = {
+				CHI = {
+					remove_state_core = 328
+					remove_state_core = 610
+					remove_state_core = 714
+					remove_state_core = 715
+					remove_state_core = 716
+					remove_state_core = 717
+					remove_state_core = 524
+					remove_state_core = 796
+				}
+			}
+	}
+}
+country_event = {
+	id = EMF_china.252
+	title = EMF_china.252.t
+	desc = EMF_china.252.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 70 }
+		name = EMF_china.252.a
+		trigger = {
+			original_tag = JAP
+		}
+		transfer_state = 743
+		add_ai_strategy = {
+				type = conquer
+				id = "CHI"
+				value = -50
+			}
+		add_ai_strategy = {
+				type = befriend
+				id = "CHI"
+				value = 50
+			}
+		hidden_effect = {
+				diplomatic_relation = {
+					country = FROM
+					relation = non_aggression_pact
+					active = no
+				}
+			}
+		diplomatic_relation = {
+			country = FROM
+			relation = non_aggression_pact
+		}
+		FROM = { country_event = { id = EFM_independent.50 hours = 12 } }
+	}
+	option = {
+		ai_chance = { factor = 30 }
+		name = EMF_china.252.b
+		trigger = {
+			original_tag = JAP
+		}
+		FROM = { country_event = { id = EFM_independent.51 hours = 12 } }
+	}
+	option = {
+		name = EMF_china.252.c
+		trigger = {
+			NOT = { original_tag = JAP }
+		}
+		effect_tooltip = {
+				JAP = { transfer_state = 743 }
+			}
+	}
+}
+
+#Asia alliance
+country_event = {
+	id = EMF_china.253
+	title = EMF_china.253.t
+	desc = EMF_china.253.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 50 }
+		name = EMF_china.253.a
+		CHI = { add_to_faction = JAP }
+		hidden_effect = {
+			country_event = {
+					days = 0
+					id = news.1025
+				}
+			}
+	}
+	option = {
+		ai_chance = { factor = 30 }
+		name = EMF_china.253.b
+		GER = { country_event = EMF_china.254 }
+	}
+	option = {
+		ai_chance = { factor = 20 }
+		name = EMF_china.253.c
+		CHI = { country_event = EMF_china.256 }
+	}
+}
+
+#Asia alliance 2
+country_event = {
+	id = EMF_china.254
+	title = EMF_china.254.t
+	desc = EMF_china.254.d
+	picture = GFX_report_event_german_italian_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.254.a
+		CHI = { country_event = EMF_china.255 }
+		}
+}
+
+#Asia alliance 3
+country_event = {
+	id = EMF_china.255
+	title = EMF_china.255.t
+	desc = EMF_china.255.d
+	picture = GFX_report_event_german_italian_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 90 }
+		name = EMF_china.255.a
+		GER = { add_to_faction = CHI }
+		}
+
+	option = {
+		ai_chance = { factor = 10 }
+		name = EMF_china.255.b
+		GER = {
+add_opinion_modifier = {
+target = CHI modifier = refused_to_union }}
+
+		CHI = { add_opinion_modifier = { target = GER modifier = refused_to_union }}
+
+		JAP = {
+add_opinion_modifier = {
+target = CHI modifier = refused_to_union }}
+
+		CHI = { add_opinion_modifier = { target = JAP modifier = refused_to_union }}
+	}
+}
+
+#Asia alliance 4
+country_event = {
+	id = EMF_china.256
+	title = EMF_china.256.t
+	desc = EMF_china.256.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 60 }
+		name = EMF_china.256.a
+		start_civil_war = {
+            	ideology = communism
+           	size = 0.5
+        		}
+		JAP = { country_event = EMF_china.257 }
+		}
+
+	option = {
+		ai_chance = { factor = 40 }
+		name = EMF_china.256.b
+    		add_state_core = 328
+    		add_state_core = 610
+    		add_state_core = 611
+    		add_state_core = 612
+    		add_state_core = 714
+    		add_state_core = 715
+    		add_state_core = 716
+    		add_state_core = 717
+    		JAP = {
+		create_wargoal = {
+		type = puppet_wargoal_focus target = CHI }
+            	remove_opinion_modifier = {
+                    target = CHI
+                    modifier = chi_jap_2nd_diplomacy_focus
+                }
+            		remove_opinion_modifier = {
+                	target = CHI
+                	modifier = chi_jap_diplomacy_focus
+                }
+		CHI = {
+                    	    remove_opinion_modifier = {
+                            target = JAP
+                            modifier = chi_jap_2nd_diplomacy_focus
+                        }
+                    	    remove_opinion_modifier = {
+                            target = JAP
+                            modifier = chi_jap_diplomacy_focus
+                        	}
+                	}
+        	}
+	}
+}
+
+#Asia alliance 5
+country_event = {
+	id = EMF_china.257
+	title = EMF_china.257.t
+	desc = EMF_china.257.d
+	picture = GFX_report_event_chinese_soldiers_running
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.257.a
+		puppet = CHI
+	#create_wargoal = {
+		#type = puppet_wargoal_focus target = PRC }
+		}
+}
+
+### Material deployment ##
+country_event = {
+	id = EMF_china.260
+	title = EMF_china.260.t
+	desc = EMF_china.260.d
+	picture = GFX_report_event_chinese_soldiers_running
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 70 }
+		name = EMF_china.260.a
+		add_ideas = CHI_Material_deployment_china_first
+		}
+	option = {
+		ai_chance = { factor = 20 }
+		name = EMF_china.260.b
+		every_other_country = {
+			limit = {
+			OR = {
+				tag = SHX
+				tag = GXC
+				tag = YUN
+				tag = XSM
+				tag = SIK
+				tag = XBJ
+				tag = YXC
+				tag = SLJ
+				tag = XXC
+				}
+				is_in_faction_with = CHI
+			}
+			add_ideas = CHI_Material_deployment_clique_first
+            country_event = {
+                    days = 1
+                    id = EMF_china.261
+                }
+			}
+		}
+	option = {
+		ai_chance = { factor = 10 }
+		name = EMF_china.260.c
+		add_ideas = CHI_Material_deployment_all
+		every_other_country = {
+			limit = {
+			OR = {
+				tag = SHX
+				tag = GXC
+				tag = YUN
+				tag = XSM
+				tag = SIK
+				tag = XBJ
+				tag = YXC
+				tag = SLJ
+				tag = XXC
+				}
+				is_in_faction_with = CHI
+			}
+			add_ideas = CHI_Material_deployment_all
+            country_event = {
+                    days = 1
+                    id = EMF_china.261
+                }
+		}
+	}
+}
+
+country_event = {
+	id = EMF_china.261
+	title = EMF_china.261.t
+	desc = EMF_china.261.d
+	picture = GFX_report_event_chinese_soldiers_running
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.261.a
+		
+		}
+}
+#Grand coalition event 
+country_event = {
+	id = EMF_china.262
+	title = EMF_china.262.t
+	desc = EMF_china.262.d
+	picture = GFX_report_event_Mao_and_Chiang
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.262.a
+		ai_chance = { factor = 40 }
+			add_ideas = communist_influence
+		}
+	option = {
+		name = EMF_china.262.b
+		ai_chance = { factor = 10 }
+			add_ideas = democratic_influence
+		}
+	option = {
+		name = EMF_china.262.c
+		ai_chance = { factor = 50 }
+			add_ideas = democratic_influence
+			add_ideas = communist_influence
+		}
+}
+
+
+#Zet
+country_event = {
+	id = EMF_china.310
+	title = EMF_china.310.t
+	desc = EMF_china.310.d
+	picture = GFX_report_event_generic_read_write
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SOV
+		is_puppet = no
+		CHI = { has_war_with = JAP }
+		OR = {
+			SOV = { has_completed_focus = SOV_operation_zet }
+			SOV = { is_in_faction_with = CHI }
+			SOV = { has_war_together_with = CHI }
+		}
+		NOT = { 
+			SOV = {
+				has_war_with = CHI
+				is_in_faction_with = PRC
+			}
+		}
+	}
+	
+	option = {
+		name = EMF_china.310.a
+		ai_chance = { factor = 90 
+		modifier = {
+			add = -70
+			SOV = {
+					has_opinion = {
+						target = CHI
+						value < -30
+					}
+				}
+			}
+		}
+		CHI = { country_event = { id = china.311 days = 5 } }
+		}
+	option = {
+		name = EMF_china.310.b
+		ai_chance = { factor = 10 
+		modifier = {
+			add = 70
+			SOV = {
+					has_opinion = {
+						target = CHI
+						value < -30
+					}
+				}
+			}
+		}
+		
+		}
+}
+country_event = {
+	id = EMF_china.311
+	title = EMF_china.311.t
+	desc = EMF_china.311.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.311.a
+		add_equipment_to_stockpile = { type = light_tank_equipment_1 amount = 30 producer = SOV }
+		add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 300 producer = SOV }
+		add_equipment_to_stockpile = { type = support_equipment_1 amount = 200 producer = SOV }
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 500 producer = SOV }
+		add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 50 producer = SOV }
+		add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = 50 producer = SOV }
+		}
+}
+
+#Arsenal of democracy
+country_event = {
+	id = EMF_china.312
+	title = EMF_china.312.t
+	desc = EMF_china.312.d
+	picture = GFX_report_event_generic_read_write
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		is_puppet = no
+		CHI = { has_war_with = JAP }
+		OR = {
+			USA = { has_completed_focus = USA_arsenal_of_democracy }
+			USA = { is_in_faction_with = CHI }
+			USA = { has_war_with = JAP }
+		}
+		NOT = { 
+			USA = {
+				has_war_with = CHI
+			}
+		}
+	}
+	
+	option = {
+		name = EMF_china.312.a
+		ai_chance = { factor = 90 
+		modifier = {
+			add = -70
+			USA = {
+					has_opinion = {
+						target = CHI
+						value < -30
+					}
+				}
+			}
+		}
+		CHI = { country_event = { days = 1 id = EMF_china.313 } }
+		}
+	option = {
+		name = EMF_china.312.b
+		ai_chance = { factor = 10 
+		modifier = {
+			add = 70
+			USA = {
+					has_opinion = {
+						target = CHI
+						value < -30
+					}
+				}
+			}
+		}
+
+		}
+}
+country_event = {
+	id = EMF_china.313
+	title = EMF_china.313.t
+	desc = EMF_china.313.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.313.a
+		add_equipment_to_stockpile = { type = light_tank_equipment_1 amount = 50 producer = USA }
+		add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 500 producer = USA }
+		add_equipment_to_stockpile = { type = support_equipment_1 amount = 500 producer = USA }
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 1000 producer = USA }
+		add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 100 producer = USA }
+		add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = 80 producer = USA }
+		}
+}
+
+
+
+# Japanese democratic civil war
+country_event = {
+	id = EMF_china.351
+	title = EMF_china.351.t
+	desc = EMF_china.351.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.351.a
+		add_ideas = CHI_Financial_support_the_japanese_democrats
+	}
+}
+country_event = {
+	id = EMF_china.352
+	title = EMF_china.352.t
+	desc = EMF_china.352.d
+	picture = GFX_report_event_generic_lend_lease
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.352.a
+		effect_tooltip = {
+				FROM = {
+					send_equipment = { target = ROOT type = infantry_equipment amount = 500 }
+				}
+			}
+		hidden_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 500 producer = CHI }
+		}
+	}
+}
+country_event = {
+	id = EMF_china.353
+	title = EMF_china.354.t
+	desc = EMF_china.353.d
+	picture = GFX_report_event_chinese_army_training
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.353.a
+		FROM = { add_to_war = { targeted_alliance = JAP enemy = ROOT } }
+	}
+}
+country_event = {
+	id = EMF_china.354
+	title = EMF_china.354.t
+	desc = EMF_china.354.d
+	picture = GFX_report_event_chinese_army_training
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.354.a
+		add_ai_strategy = {
+				type = alliance
+				id = "CHI"
+				value = 200
+			}
+	}
+}
+
+# China interference in the japanese civil war
+country_event = {
+	id = EMF_china.355
+	title = EMF_china.355.t
+	desc = EMF_china.355.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.355.a
+		add_ai_strategy = {
+				type = antagonize
+				id = "CHI"
+				value = 100
+			}
+	}
+}
+country_event = {
+	id = EMF_china.356
+	title = EMF_china.356.t
+	desc = EMF_china.356.d
+	picture = GFX_report_event_japanese_officers
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.356.a
+		add_ai_strategy = {
+				type = antagonize
+				id = "CHI"
+				value = 200
+			}
+	}
+}
+country_event = {
+	id = EMF_china.357
+	title = EMF_china.357.t
+	desc = EMF_china.357.d
+	picture = GFX_report_event_generic_lend_lease
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.357.a
+		add_ai_strategy = {
+				type = conquer
+				id = "CHI"
+				value = 200
+			}
+	}
+}
+country_event = {
+	id = EMF_china.358
+	title = EMF_china.358.t
+	desc = EMF_china.358.d
+	picture = GFX_report_event_japanese_chinese_surrender
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 50 }
+		name = EMF_china.358.a
+		JAP = { country_event = { id = EMF_china.359 hours = 6 } }
+		if = {
+			limit = {
+				SOV = {
+					has_government = communism
+				}
+			}
+			SOV = { country_event = { id = EMF_china.360 hours = 6 } }
+		}
+		FROM = {
+				add_to_war = { targeted_alliance = ROOT enemy = JAP }
+				puppet = ROOT
+			}
+		FROM = { country_event = { id = EFM_independent.50 hours = 12 } }
+	}
+	option = {
+		ai_chance = { factor = 50 }
+		name = EMF_china.358.b
+		FROM = { country_event = { id = EFM_independent.51 hours = 12 } }
+	}
+}
+country_event = {
+	id = EMF_china.359
+	title = EMF_china.359.t
+	desc = EMF_china.359.d
+	picture = GFX_report_event_japanese_chinese_surrender
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.359.a
+		add_ai_strategy = {
+				type = conquer
+				id = "CHI"
+				value = 200
+			}
+	}
+}
+country_event = {
+	id = EMF_china.360
+	title = EMF_china.360.t
+	desc = EMF_china.360.d
+	picture = GFX_report_event_soviet_japanese_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 90 }
+		name = EMF_china.360.a
+		if = {
+			limit = {
+				ROOT = {
+					is_in_faction = yes
+					is_faction_leader = yes
+				}
+			}
+			JAP = { country_event = { id = generic.5 } }
+		}
+		give_guarantee = JAP
+		add_to_war = { targeted_alliance = JAP enemy = CHI }
+	}
+	option = {
+		ai_chance = { factor = 10 }
+		name = EMF_china.360.b
+	}
+}
+
+
+
+### ###
+#CHI-JAP Mutual assistance agreement
+country_event = {
+	id = EMF_china.270
+	title = EMF_china.270.t
+	desc = EMF_china.270.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 50 }
+		name = EMF_china.270.a
+		CHI = { country_event = EMF_china.271 }
+	}
+	option = {
+		ai_chance = { factor = 30 }
+		name = EMF_china.270.b
+		end_puppet = MEN
+		CHI = { country_event = EMF_china.272 }
+		MEN = { country_event = EMF_china.274 }
+	}
+	option = {
+		ai_chance = { factor = 15 }
+		name = EMF_china.270.c
+		end_puppet = MEN
+		end_puppet = MAN
+		CHI = { country_event = EMF_china.273 }
+		MEN = { country_event = EMF_china.274 }
+		MAN = { country_event = EMF_china.275 }
+	}
+}
+
+#CHI-JAP Mutual assistance agreement 2
+country_event = {
+	id = EMF_china.271
+	title = EMF_china.271.t
+	desc = EMF_china.271.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 50 }
+		name = EMF_china.271.a
+		JAP = {
+			every_owned_state = {
+					limit = {
+						NOT = {
+							is_owned_by = CHI
+						}
+						is_core_of = CHI
+					}
+					CHI = {
+						transfer_state = PREV
+					}
+				}
+			}
+		add_political_power = 50
+		add_stability = 0.05
+		}
+
+	option = {
+		ai_chance = { factor = 50 }
+		name = EMF_china.271.b
+		JAP = {
+            		country_event = EMF_china.270
+        	}
+		JAP = {
+add_opinion_modifier = {
+target = CHI modifier = chi_jap_refused_the_return }}
+	}
+}
+
+#CHI-JAP Mutual assistance agreement 3
+country_event = {
+	id = EMF_china.272
+	title = EMF_china.272.t
+	desc = EMF_china.272.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 80 }
+		name = EMF_china.272.a
+		JAP = {
+			every_owned_state = {
+					limit = {
+						NOT = {
+							is_owned_by = CHI
+						}
+						is_core_of = CHI
+					}
+					CHI = {
+						transfer_state = PREV
+					}
+				}
+			}
+		add_political_power = 10
+		add_stability = 0.10
+		}
+	option = {
+		ai_chance = { factor = 20 }
+		name = EMF_china.272.b
+		JAP = {
+            		country_event = EMF_china.270
+        	}
+		JAP = {
+add_opinion_modifier = {
+target = CHI modifier = chi_jap_refused_the_return }}
+	}
+}
+
+#CHI-JAP Mutual assistance agreement 4
+country_event = {
+	id = EMF_china.273
+	title = EMF_china.273.t
+	desc = EMF_china.273.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.273.a
+		JAP = {
+			every_owned_state = {
+					limit = {
+						NOT = {
+							is_owned_by = CHI
+						}
+						is_core_of = CHI
+					}
+					CHI = {
+						transfer_state = PREV
+					}
+				}
+			}
+    		#set_state_controller = 328
+    		#set_state_controller = 609
+    		#set_state_controller = 610
+    		#set_state_controller = 714
+    		#set_state_controller = 715
+    		#set_state_controller = 716
+    		#set_state_controller = 717
+   		#set_state_owner = 328
+  		#set_state_owner = 609
+   		#set_state_owner = 610
+   		#set_state_owner = 714
+   		#set_state_owner = 715
+   		#set_state_owner = 716
+   		#set_state_owner = 717
+		add_state_core = 328
+    		add_state_core = 610
+    		add_state_core = 611
+    		add_state_core = 612
+    		add_state_core = 714
+    		add_state_core = 715
+    		add_state_core = 716
+    		add_state_core = 717
+		add_political_power = 150
+		add_stability = 0.15
+		JAP = {
+add_opinion_modifier = {
+target = CHI modifier = chi_jap_the_return }}
+		}
+}
+
+#Mengkukuo
+country_event = {
+	id = EMF_china.274
+	title = EMF_china.274.t
+	desc = EMF_china.274.d
+	picture = GFX_report_event_japanese_chinese_surrender
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 10 }
+		name = EMF_china.274.a
+		set_politics = {
+            		ruling_party = neutrality
+        	}
+		declare_war_on = { target = CHI type = annex_everything } 
+	}
+	option = {
+		ai_chance = { factor = 10 }
+		name = EMF_china.274.b
+		CHI = {
+            		annex_country = { target = MEN transfer_troops = yes }
+        	}
+	}
+	option = {
+		ai_chance = { factor = 80 }
+		name = EMF_china.274.b
+		MAN = {
+            		annex_country = { target = MEN transfer_troops = yes }
+        	}
+	}
+}
+
+#Puyi
+country_event = {
+	id = EMF_china.275
+	title = EMF_china.275.t
+	desc = EMF_china.275.d
+	picture = GFX_report_event_japanese_chinese_surrender
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 95 }
+		name = EMF_china.275.a
+		declare_war_on = { target = CHI type = annex_everything } 
+	}
+	option = {
+		ai_chance = { factor = 5 }
+		name = EMF_china.275.b
+		CHI = {
+            		annex_country = { target = MAN transfer_troops = yes }
+        	}
+	}
+}
+
+#Nanjing military conference
+country_event = {
+	id = EMF_china.280
+	title = EMF_china.280.t
+	desc = EMF_china.280.d
+	picture = report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 40 }
+		name = EMF_china.280.a
+		custom_effect_tooltip = EMF_china_280_A
+		hidden_effect = {
+				country_event = { days = 10 id = EMF_china.281 }
+				SIK = {
+						country_event = { days = 10 id = EMF_china.282 }
+					}
+				GXC = {
+						country_event = { days = 10 id = EMF_china.282 }
+					}
+				SHX = {
+						country_event = { days = 10 id = EMF_china.282 }
+					}
+				YUN = {
+						country_event = { days = 10 id = EMF_china.282 }
+					}
+				XSM = {
+						country_event = { days = 10 id = EMF_china.282 }
+					}
+				YXC = {
+						country_event = { days = 10 id = EMF_china.282 }
+					}
+				XXC = {
+						country_event = { days = 10 id = EMF_china.282 }
+					}
+				SLJ = {
+						country_event = { days = 10 id = EMF_china.282 }
+					}
+			}
+	}
+	option = {
+		ai_chance = { factor = 30 }
+		name = EMF_china.280.b
+		hidden_effect = {
+				country_event = { days = 10 id = EMF_china.281 }
+				SIK = {
+						country_event = { days = 10 id = EMF_china.283 }
+					}
+				GXC = {
+						country_event = { days = 10 id = EMF_china.283 }
+					}
+				SHX = {
+						country_event = { days = 10 id = EMF_china.283 }
+					}
+				YUN = {
+						country_event = { days = 10 id = EMF_china.283 }
+					}
+				XSM = {
+						country_event = { days = 10 id = EMF_china.283 }
+					}
+				YXC = {
+						country_event = { days = 10 id = EMF_china.283 }
+					}
+				XXC = {
+						country_event = { days = 10 id = EMF_china.283 }
+					}
+				SLJ = {
+						country_event = { days = 10 id = EMF_china.283 }
+					}
+			}
+		add_political_power = -150
+	}
+	option = {
+		ai_chance = { factor = 30 }
+		name = EMF_china.280.c
+		hidden_effect = {
+				SIK = {
+						country_event = { days = 10 id = EMF_china.59 }
+					}
+				GXC = {
+						country_event = { days = 10 id = EMF_china.59 }
+					}
+				SHX = {
+						country_event = { days = 10 id = EMF_china.59 }
+					}
+				YUN = {
+						country_event = { days = 10 id = EMF_china.59 }
+					}
+				XSM = {
+						country_event = { days = 10 id = EMF_china.59 }
+					}
+				YXC = {
+						country_event = { days = 10 id = EMF_china.59 }
+					}
+				XXC = {
+						country_event = { days = 10 id = EMF_china.59 }
+					}
+				SLJ = {
+						country_event = { days = 10 id = EMF_china.59 }
+					}
+			}
+		add_political_power = -350
+	}
+}
+country_event = {
+	id = EMF_china.281
+	title = EMF_china.281.t
+	desc = EMF_china.281.d
+	picture = GFX_report_event_japanese_chinese_surrender
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.281.a
+		start_civil_war = {
+				ideology = democratic
+				size = 0.5
+			}
+	}
+}
+country_event = {
+	id = EMF_china.282
+	title = EMF_china.282.t
+	desc = EMF_china.282.d
+	picture = GFX_report_event_japanese_chinese_surrender
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 85 }
+		name = EMF_china.282.a
+		if = {
+			limit = {
+				is_subject_of = CHI
+			}
+			set_autonomy = { target = ROOT autonomy_state = autonomy_free } 
+		}
+		declare_war_on = { target = CHI type = annex_everything }
+	}
+	option = {
+		ai_chance = { factor = 5 }
+		name = EMF_china.282.b
+		CHI = {
+            		country_event = EMF_china.10
+        	}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = {
+		ai_chance = { factor = 10 }
+		name = EMF_china.282.c
+	}
+}
+country_event = {
+	id = EMF_china.283
+	title = EMF_china.283.t
+	desc = EMF_china.283.d
+	picture = GFX_report_event_japanese_chinese_surrender
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 30 }
+		name = EMF_china.283.a
+		CHI = {
+				country_event = EMF_china.11
+        	}
+		add_political_power = 50
+	}
+	option = {
+		ai_chance = { factor = 30 }
+		name = EMF_china.283.b
+	}
+	option = {
+		ai_chance = { factor = 40 }
+		name = EMF_china.283.c
+		if = {
+			limit = {
+				is_subject_of = CHI
+			}
+			set_autonomy = { target = ROOT autonomy_state = autonomy_free } 
+		}
+		declare_war_on = { target = CHI type = annex_everything }
+	}
+}
+country_event = {
+	id = EMF_china.59
+	title = EMF_china.59.t
+	desc = EMF_china.59.d
+	picture = GFX_report_event_japanese_chinese_surrender
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 30 }
+		name = EMF_china.283.a
+		CHI = {
+				country_event = EMF_china.11
+        	}
+		add_political_power = 100
+	}
+	option = {
+		ai_chance = { factor = 50 }
+		name = EMF_china.283.b
+	}
+	option = {
+		ai_chance = { factor = 20 }
+		name = EMF_china.283.c
+		if = {
+			limit = {
+				is_subject_of = CHI
+			}
+			set_autonomy = { target = ROOT autonomy_state = autonomy_free } 
+		}
+		declare_war_on = { target = CHI type = annex_everything }
+	}
+}
+
+
+
+# 1st Sunset
+#country_event = {
+#	id = EMF_china.1000
+#	title = EMF_china.1000.t
+#	desc = EMF_china.1000.d
+#	picture = GFX_report_event_chinese_soldiers_01
+#
+#	fire_only_once = yes
+#
+#	trigger = {
+#		tag = JAP
+#		has_government = fascism
+#		OR = {
+#			has_war_with = CHI
+#			has_war_with = PRC
+#			has_war_with = SHX
+#			has_war_with = GXC
+#			has_war_with = YUN
+#			has_war_with = XSM
+#			has_war_with = XBJ
+#			has_war_with = SLJ
+#			has_war_with = XXC
+#			has_war_with = SIK
+#			has_war_with = YXC
+#		}
+#		MAN = { 
+#			OR = {
+#				has_capitulated = yes
+#				exists = no
+#				is_subject = no
+#				has_war_with = JAP
+#			}
+#		}
+#		JAP = {
+#			NOT = { 
+#				controls_state = 328
+#				controls_state = 608
+#				controls_state = 598
+#				controls_state = 716
+#			}
+#		}
+#		any_other_country = {
+#			OR = {
+#				tag = SOV
+#				tag = USA
+#				tag = ENG
+#				tag = FRA
+#				tag = GER
+#				tag = ITA
+#			}
+#			NOT = {
+#				controls_state = 525
+#				controls_state = 328
+#			}
+#		}
+#	}
+#
+#	
+#	option = {
+#		ai_chance = { factor = 10 }
+#		name = EMF_china.1000.a
+#		every_other_country = {
+#				limit = {
+#					OR ={
+#						tag = CHI
+#						tag = PRC
+#						tag = SHX
+#						tag = GXC
+#						tag = YUN
+#						tag = XSM
+#						tag = XBJ
+#						tag = SLJ
+#						tag = XXC
+#						tag = YXC
+#						tag = MAN
+#					}
+#					is_puppet = no
+#					has_war_with = JAP
+#					controls_state = 328
+#				}
+#				country_event = EMF_china.1002
+#        	}
+#		add_stability = -0.05
+#	}
+#	option = {
+#		ai_chance = { factor = 90 }
+#		name = EMF_china.1000.b
+#		every_other_country = {
+#				limit = {
+#					OR ={
+#						tag = CHI
+#						tag = PRC
+#						tag = SHX
+#						tag = GXC
+#						tag = YUN
+#						tag = XSM
+#						tag = XBJ
+#						tag = SLJ
+#						tag = XXC
+#						tag = YXC
+#						tag = MAN
+#					}
+#					has_war_with = JAP
+#				}
+#            	country_event = EMF_china.1001
+#        	}
+#	}
+#}
+# Refuse
+#country_event = {
+#	id = EMF_china.1001
+#	title = EMF_china.1001.t
+#	desc = EMF_china.1001.d
+#	picture = GFX_report_event_chinese_soldiers_01
+#
+#	is_triggered_only = yes
+#
+#	mean_time_to_happen = {
+#		days = 1
+#	}
+#	
+#	option = {
+#		name = EMF_china.1001.a
+#	}
+#}
+# Accept
+#country_event = {
+#	id = EMF_china.1002
+#	title = EMF_china.1002.t
+#	desc = EMF_china.1002.d
+#	picture = GFX_report_event_japanese_chinese_surrender
+#
+#	is_triggered_only = yes
+#
+#	mean_time_to_happen = {
+#		days = 1
+#	}
+#	
+#	option = {
+#		ai_chance = { factor = 95 }
+#		name = EMF_china.1002.a
+#		if = {
+#			limit = {
+#				MAN = {
+#					has_war_with = ROOT
+#					}
+#				}
+#			annex_country = { target = MAN transfer_troops = yes }
+#		}
+#		if = {
+#			limit = {
+#				MEN = { exists = yes }
+#				}
+#			annex_country = { target = MEN transfer_troops = yes }
+#		}
+#		if = {
+#			limit = {
+#				CNJ = { exists = yes }
+#				}
+#			annex_country = { target = CNJ transfer_troops = yes }
+#		}
+#		if = {
+#			limit = {
+#				CPG = { exists = yes }
+#				}
+#			annex_country = { target = CPG transfer_troops = yes }
+#		}
+#		KOR = {
+#			transfer_state = 527
+#			}
+#			give_guarantee = KOR
+#		JAP = {
+#			white_peace = CHI
+#			white_peace = PRC
+#			white_peace = SHX
+#			white_peace = GXC
+#			white_peace = YUN
+#			white_peace = SLJ
+#			white_peace = XSM
+#			white_peace = YXC
+#			white_peace = XXC
+#			white_peace = XBJ
+#			give_guarantee = KOR
+#		every_owned_state = {
+#					limit = {
+#						NOT = {
+#							is_owned_by = PRC
+#						}
+#						NOT = { state = 524 }
+#						NOT = { state = 744 }
+#						is_core_of = PRC
+#					}
+#					ROOT = {
+#						transfer_state = PREV
+#					}
+#			}
+#		}
+#		if = {
+#			limit = {
+#				524 = { is_controlled_by = ROOT } 
+#				744 = { is_controlled_by = ROOT } 
+#				}
+#			ROOT = { 
+#				transfer_state = 524
+#				transfer_state = 744
+#			}
+#		}
+#		hidden_effect = {
+#			country_event = { hours = 6 id = news.1033 }
+#		}
+#	}
+#	option = {
+#		name = EMF_china.1002.b
+#		ai_chance = { factor = 5 }
+#				add_stability = -0.1
+#	}
+#}
+
+# 2nd Sunset
+#country_event = {
+#	id = EMF_china.1003
+#	title = EMF_china.1003.t
+#	desc = EMF_china.1003.d
+#	picture = GFX_report_event_chinese_soldiers_01
+#
+#	fire_only_once = yes
+#
+#	trigger = {
+#		tag = JAP
+#		has_government = fascism
+#		OR = {
+#			has_war_with = CHI
+#			has_war_with = PRC
+#			has_war_with = SHX
+#			has_war_with = GXC
+#			has_war_with = YUN
+#			has_war_with = XSM
+#			has_war_with = XBJ
+#			has_war_with = SLJ
+#			has_war_with = SIK
+#			has_war_with = XXC
+#			has_war_with = YXC
+#		}
+#		MAN = { 
+#			OR = {
+#				has_capitulated = yes
+#				exists = no
+#				is_subject = no
+#				has_war_with = JAP
+#			}
+#		}
+#		MEN = { 
+#			OR = {
+#				has_capitulated = yes
+#				exists = no
+#				is_subject = no
+#			}
+#		}
+#		JAP = {
+#			NOT = { 
+#				controls_state = 525
+#				controls_state = 527
+#				controls_state = 328
+#				controls_state = 608
+#				controls_state = 598
+#				controls_state = 716
+#			}
+#		}
+#		any_other_country = {
+#			OR = {
+#				tag = SOV
+#				tag = USA
+#				tag = ENG
+#				tag = FRA
+#				tag = GER
+#				tag = ITA
+#			}
+#			NOT = {
+#				controls_state = 525
+#				controls_state = 328
+#			}
+#		}
+#	}
+#
+#	mean_time_to_happen = {
+#		days = 1
+#	}
+#	
+#	option = {
+#		ai_chance = { factor = 90 }
+#		name = EMF_china.1003.a
+#		every_other_country = {
+#				limit = {
+#					OR ={
+#						tag = CHI
+#						tag = PRC
+#						tag = SHX
+#						tag = GXC
+#						tag = YUN
+#						tag = XSM
+#						tag = XBJ
+#						tag = SLJ
+#						tag = XXC
+#						tag = YXC
+#						tag = MAN
+#					}
+#					is_puppet = no
+#					has_war_with = JAP
+#					controls_state = 525
+#				}
+#				country_event = EMF_china.1000
+#        	}
+#			release = KOR
+#	}
+#	option = {
+#		ai_chance = { factor = 10 }
+#		name = EMF_china.1003.b
+#           country_event = EMF_china.1005
+#			every_other_country = {
+#					limit = {
+#						OR ={
+#							tag = CHI
+#							tag = PRC
+#							tag = SHX
+#							tag = GXC
+#							tag = YUN
+#							tag = XSM
+#							tag = XBJ
+#							tag = SLJ
+#							tag = XXC
+#							tag = YXC
+#							tag = MAN
+#						}
+#						has_war_with = JAP
+#					}
+#					country_event = EMF_china.1001
+#			}
+#	}
+#}
+
+country_event = {
+	id = EMF_china.1000
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		if = {
+			limit = { 
+				PRC = {
+					OR ={
+						AND = {
+							controls_state = 328
+							controls_state = 714
+							has_full_control_of_state = 717
+						}
+						AND = {
+							controls_state = 328
+							controls_state = 717
+							has_full_control_of_state = 714
+						}
+						AND = {
+							controls_state = 714
+							controls_state = 717
+							has_full_control_of_state = 328
+						}
+					}
+				} 
+			}
+			PRC = { 
+				country_event = { id =wtt_japan.1261 } 
+			}
+		}
+		else = {
+			CHI =  { 
+				country_event = { id =wtt_japan.1261 } 
+			} 
+		}
+	}
+}
+
+#落日 － 同意谈判
+country_event = {
+	id = EMF_china.1001
+	title = EMF_china.1001.t
+	desc = EMF_china.1001.d
+	picture = GFX_report_event_generic_riot
+
+	is_triggered_only = yes
+	
+	option = { #签订和约
+		name = EMF_china.1001.a
+		ai_chance = { factor = 100 }
+			if = {
+				limit = {
+						CNJ = {
+								is_subject_of = JAP
+							}
+					}
+				every_state = {
+						limit = {
+								is_core_of = CNJ
+							}
+						remove_core_of = CNJ
+					}
+				every_state = {
+						limit = {
+								is_claimed_by = CNJ
+							}
+						remove_claim_by = CNJ
+					}
+			}
+			if = {
+				limit = {
+						CPG = {
+								is_subject_of = JAP
+							}
+					}
+				every_state = {
+						limit = {
+								is_core_of = CPG
+							}
+						remove_core_of = CPG
+					}
+				every_state = {
+						limit = {
+								is_claimed_by = CPG
+							}
+						remove_claim_by = CPG
+					}
+			}
+			if = {
+				limit = {
+						MEN = {
+								is_subject_of = JAP
+							}
+					}
+				every_state = {
+						limit = {
+								is_core_of = MEN
+							}
+						remove_core_of = MEN
+					}
+				every_state = {
+						limit = {
+								is_claimed_by = MEN
+							}
+						remove_claim_by = MEN
+					}
+			}
+			if = {
+				limit = {
+						MAN = {
+								is_subject_of = JAP
+							}
+					}
+				every_state = {
+						limit = {
+								is_core_of = MAN
+							}
+						remove_core_of = MAN
+					}
+				every_state = {
+						limit = {
+								is_claimed_by = MAN
+							}
+						remove_claim_by = MAN
+					}
+			}
+			if = {
+				limit = {
+						TWN = {
+								is_subject_of = JAP
+							}
+					}
+				every_state = {
+						limit = {
+								is_core_of = TWN
+							}
+						remove_core_of = TWN
+					}
+				every_state = {
+						limit = {
+								is_claimed_by = TWN
+							}
+						remove_claim_by = TWN
+					}
+			}
+			
+			annex_country = { target = CNJ transfer_troops = yes }
+			annex_country = { target = CPG transfer_troops = yes }
+			annex_country = { target = MEN transfer_troops = yes }
+			annex_country = { target = MAN transfer_troops = yes }
+			annex_country = { target = TWN transfer_troops = yes }
+			if = {
+				limit = {
+					event_target:WTT_current_china_leader = { #Chinese United Front
+						is_faction_leader = yes
+					}
+				}
+				every_country = {
+					limit = {
+						is_literally_china = yes
+					has_war_with = ROOT
+						is_in_faction_with = event_target:WTT_current_china_leader
+					}
+					every_state = {
+						limit = {
+							is_controlled_by = PREV
+							OR = {
+								is_owned_by = JAP
+								AND = {
+									is_owned_by = MEN
+									MEN = { is_subject_of = JAP }
+								}
+								AND = {
+									is_owned_by = MAN
+									MAN = { is_subject_of = JAP }
+								}
+							}
+						}
+						every_country = {
+							limit = {
+								is_literally_china = yes
+								controls_state = PREV
+							}
+							transfer_state = PREV
+						}
+					}
+					white_peace = ROOT
+				}
+			}
+			else = {
+				every_country = {
+					limit = {
+						is_literally_china = yes
+						has_war_with = ROOT
+					}
+					every_state = {
+						limit = {
+							is_controlled_by = PREV
+							OR = {
+								is_owned_by = JAP
+								AND = {
+									is_owned_by = MEN
+									MEN = { is_subject_of = JAP }
+								}
+								AND = {
+									is_owned_by = MAN
+									MAN = { is_subject_of = JAP }
+								}
+							}
+						}
+						every_country = {
+							limit = {
+								is_literally_china = yes
+								controls_state = PREV
+							}
+							transfer_state = PREV
+						}
+					}
+					white_peace = ROOT
+				}
+			}
+			PRK = { transfer_state = 797 }
+			PRK = { transfer_state = 527 }
+			KOR = { transfer_state = 525 }
+			
+			if = {
+				limit = {
+						TWN = {
+							is_subject_of = JAP
+							has_capitulated = yes
+						}
+					}
+				FROM = { puppet = TWN }
+			}
+			diplomatic_relation = { country = FROM relation = non_aggression_pact }
+			hidden_effect = {
+			               news_event = { hours = 9 id = news.724 }
+			    }
+	}
+	option = {
+		ai_chance = { factor = 0 }
+		name = EMF_china.1001.b
+			country_event = { hours = 6 id = EMF_china.1002 }
+	}
+}
+
+#内战爆发
+country_event = {
+	id = EMF_china.1002
+	title = EMF_china.1002.t
+	desc = EMF_china.1002.d
+	picture = GFX_report_event_generic_riot
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.1002.a
+			add_popularity = { ideology = democratic popularity = 0.3 }
+			add_popularity = { ideology = communism popularity = 0.3 }
+			random_list = {
+					45 = {
+						start_civil_war = { ideology = communism size = 0.5 }
+						}
+					45 = {
+						start_civil_war = { ideology = democratic size = 0.5 }
+						}
+					10 = {
+						start_civil_war = { ideology = neutrality size = 0.1 }
+						add_stability = 0.1
+						}
+				}
+			add_stability = -0.3
+			every_other_country = {
+				limit = {
+						NOT = {
+							tag = JAP
+							tag = KOR
+						}
+						controls_state = 525
+						KOR = {
+								exists = yes
+								is_subject = yes
+							}
+					}
+					puppet = KOR
+				}
+			every_other_country = {
+					limit = {
+						NOT = {
+							tag = JAP
+							tag = KOR
+						}
+						KOR = { exists = no }
+						controls_state = 525
+					}
+					transfer_state = 525
+					transfer_state = 527
+					country_event = { id = EMF_china.1007 days = 1 }
+				}
+			hidden_effect = {
+				country_event = { hours = 6 id = news.1032 }
+			}
+	}
+}
+
+country_event = {
+	id = EMF_china.1006
+	title = EMF_china.1006.t
+	desc = EMF_china.1006.d
+	picture = GFX_report_event_asian_politicians
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = CHI
+		KOR = { 
+			exists = yes
+			has_country_flag = JAP_Sunset_KOR_released
+		}
+	}
+	
+	option = {
+		name = EMF_china.1006.a
+			puppet = KOR
+	}
+}
+
+country_event = {
+	id = EMF_china.1007
+	title = EMF_china.1006.t
+	desc = EMF_china.1006.d
+	picture = GFX_report_event_asian_politicians
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.1006.a
+			release_puppet = KOR
+	}
+}
+
+############ Independent events ############
+
+country_event = {
+	id = EMF_china.1936
+	title = EMF_china.1936.t
+	desc = EMF_china.1936.d
+	picture = GFX_report_event_chinese_officers
+
+
+	trigger = {
+		has_idea = Chinese_Warlord
+		OR = {
+			num_of_civilian_factories > 8
+			num_of_military_factories > 8
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = EMF_china.1936.a
+			remove_ideas = Chinese_Warlord
+	}
+}
+
+############################################
+
+############################################
+
+############ original events from PanzerAlice ############
+country_event = {
+	id = EMF_china.2000
+	title = EMF_china.2000.t
+	desc = EMF_china.2000.d
+	picture = GFX_report_event_chinese_officers
+
+	trigger = {
+		has_global_flag = CHI_unite
+		OR = {
+			tag = GXC
+			tag = SHX
+			tag = YUN
+			tag = XSM
+			tag = SIK
+			tag = YXC
+			tag = XXC
+			tag = XBJ
+		}
+		surrender_progress > 0.3
+		has_war_with = JAP 
+		CHI = {
+			has_war_with = JAP 
+			has_defensive_war = yes
+		}
+		JAP = { has_offensive_war = yes }
+		is_subject = no
+	}
+
+	mean_time_to_happen = {
+		days = 14
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = EMF_china.2000.a
+		CHI = { 
+			country_event = { id = EMF_china.2001 days = 1 }
+		}
+	}
+}
+
+# FROM joins China (annex)
+country_event = {
+	id = EMF_china.2001
+	title = EMF_china.2001.t
+	desc = EMF_china.2001.d
+	picture = GFX_report_event_chinese_army_training
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.2001.a
+		puppet = FROM
+	}
+}
+
+#Wang Join Japan - ROC
+country_event = {
+	id = EMF_china.296
+	title = EMF_china.296.t
+	desc = EMF_china.296.d
+	picture = GFX_report_event_wang_join_japan
+
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = CHI
+				date > 1938.12.1
+			}
+			AND = {
+				tag = CNJ
+				is_subject_of = JAP
+				CHI = { exists = no }
+				NOT = {
+					has_global_flag = wang_join_japan_faction
+				}
+			}
+		}
+		has_global_flag = big_east_asia_speech
+		country_exists = JAP
+	}
+	
+	mean_time_to_happen = {
+		days = 90
+	}
+	
+	option = {
+		name = EMF_china.296.a
+			create_country_leader = {
+	        name = "胡适"
+	        desc = " "
+	        picture = "Portrait_China_Hu_Shi.dds"
+	        expire = "1965.1.1"
+	        ideology = fascism_ideology
+	        traits = {
+		            #
+	             } 
+          }
+		hidden_effect = {
+			country_event = { days = 5 id = news.1012 }
+		}
+	}
+}
+#落日 － 胜利
+country_event = {
+	id = EMF_china.1000
+	title = EMF_china.1000.t
+	desc = EMF_china.1000.d
+	picture = GFX_report_event_japanese_chinese_surrender
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 90 }
+		name = EMF_china.1000.a
+			FROM = { country_event = { hours = 6 id = EMF_china.1001 } }
+	}
+	option = {
+		JAP =  { set_country_flag = chinese_not_agree }
+		ai_chance = { factor = 10 }
+		name = EMF_china.1000.b
+			add_stability = -0.2
+			FROM = { country_event = { hours = 6 id = EFM_independent.51 } }
+	}
+}
+
+# 同意谈判
+country_event = {
+	id = EMF_china.1001
+	title = EMF_china.1001.t
+	desc = EMF_china.1001.d
+	picture = GFX_report_event_generic_riot
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.1001.a
+		CZD = {	release = KOR }
+	KOR = {
+		transfer_state = 525
+		transfer_state = 527
+		transfer_state = 797
+	}
+	if = {
+		limit = { 
+			PRC = { 
+				controls_state = 328
+				controls_state = 714
+				controls_state = 717			
+			}
+		}
+		KOR = {	release = PRK }
+		PRK = {
+			transfer_state = 525
+			transfer_state = 527
+			transfer_state = 797
+		}
+	
+		PRC = {
+			set_autonomy = { 
+			target = PRK 
+			autonomy_state = autonomy_colony
+			freedom_level = 0.35			
+			}
+		}
+		PRK = {
+			create_country_leader = {
+				name = "金日成"
+				desc = ""
+				picture = "gfx/leaders/Asia/portrait_asia_generic_land_14.dds"
+				expire = "1965.1.1"
+				ideology = stalinism
+				traits = {
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			CHI = { 
+				has_full_control_of_state = 328
+				has_full_control_of_state = 717
+			}
+		}
+	
+		CHI = {
+			set_autonomy = { 
+			target = KOR 
+			autonomy_state = autonomy_colony
+			freedom_level = 0.35			
+			}
+		}
+		KOR = {
+			create_country_leader = {
+				name = "李承晚"
+				desc = ""
+				picture = "gfx/leaders/Asia/portrait_asia_generic_land_10.dds"
+				expire = "1965.1.1"
+				ideology = conservatism
+				traits = {
+				}
+			}
+		}
+	}
+	
+	else_if = {
+		limit = { 
+			NOT = {
+				OR = {
+				CHI = { 
+					controls_state = 328 
+				}
+				PRC = {
+					controls_state = 328 
+				}
+				}
+				OR = {
+				CHI = { 
+					controls_state = 714
+				}
+				PRC = {
+					controls_state = 714
+				}
+				}
+				OR = {
+				CHI = { 
+					controls_state = 717
+				}
+				PRC = {
+					controls_state = 717 
+				}
+				}
+			}
+		}
+		KOR = { 
+			set_country_flag = { flag = just_be_liber days = 60 }
+			create_country_leader = {
+				name = "李承晚"
+				desc = ""
+				picture = "gfx/leaders/Asia/portrait_asia_generic_land_10.dds"
+				expire = "1965.1.1"
+				ideology = conservatism
+				traits = {
+				}
+			}
+		
+		}
+	}
+	if ={
+		limit = {
+			PRC = { controls_state = 612 } 
+		}
+		PRC = { transfer_state = 612 }
+	}
+	else = {
+		CHI = { transfer_state = 612 }
+	}
+	
+	if ={
+		limit = {
+			PRC = { controls_state = 608 } 
+		}
+		PRC = { transfer_state = 608 }
+	}
+	else = {
+		CHI = { transfer_state = 608 }
+	}
+	
+	if ={
+		limit = {
+			PRC = { controls_state = 611 } 
+		}
+		PRC = { transfer_state = 611 }
+	}
+	else = {
+		CHI = { transfer_state = 611 }
+	}
+	
+	if ={
+		limit = {
+			PRC = { controls_state = 609 } 
+		}
+		PRC = { transfer_state = 609 }
+	}
+	else = {
+		CHI = { transfer_state = 609 }
+	}
+	
+	if ={
+		limit = {
+			PRC = { controls_state = 610 } 
+		}
+		PRC = { transfer_state = 610 }
+	}
+	else = {
+		CHI = { transfer_state = 610 }
+	}
+	
+	if ={
+		limit = {
+			PRC = { controls_state = 714 } 
+		}
+		PRC = { transfer_state = 714 }
+	}
+	else = {
+		CHI = { transfer_state = 714 }
+	}
+	
+	if ={
+		limit = {
+			PRC = { controls_state = 715 } 
+		}
+		PRC = { transfer_state = 715 }
+	}
+	else = {
+		CHI = { transfer_state = 715 }
+	}
+	
+	if ={
+		limit = {
+			PRC = { controls_state = 716 } 
+		}
+		PRC = { transfer_state = 716 }
+	}
+	else = {
+		CHI = { transfer_state = 716 }
+	}
+	
+	if ={
+		limit = {
+			PRC = { controls_state = 745 } 
+		}
+		PRC = { transfer_state = 745 }
+	}
+	else = {
+		CHI = { transfer_state = 745 }
+	}
+	
+	if ={
+		limit = {
+			PRC = { controls_state = 743 } 
+		}
+		PRC = { transfer_state = 743 }
+	}
+	else = {
+		CHI = { transfer_state = 743 }
+	}
+	
+	if ={
+		limit = {
+			PRC = { controls_state = 328 } 
+		}
+		PRC = { transfer_state = 328 }
+	}
+	else = {
+		CHI = { transfer_state = 328 }
+	}
+	
+	if ={
+		limit = {
+			PRC = { controls_state = 717 } 
+		}
+		PRC = { transfer_state = 717 }
+	}
+	else = {
+		CHI = { transfer_state = 717 }
+	}
+	
+	if ={
+		limit = {
+			PRC = { controls_state = 761 } 
+		}
+		PRC = { transfer_state = 761 }
+	}
+	else = {
+		CHI = { transfer_state = 761 }
+	}
+	JAP = { set_country_flag = get_rid_of_Asia_war }
+	if = {  limit = { country_exists = CNJ 	}  CHI = { annex_country = { target = CNJ transfer_troops = no } }  }
+	every_country = {
+		limit = {
+			has_war_with = ROOT
+			is_in_faction_with = CHI
+		}
+		white_peace = JAP
+		if = { limit = { country_exists = CPG } white_peace = CPG }
+		if = { limit = { country_exists = CZD } white_peace = CZD }
+		if = { limit = { country_exists = TWN } white_peace = TWN }
+		if = { limit = { country_exists = MAN } white_peace = MAN }
+		if = { limit = { country_exists = MEN } white_peace = MEN }
+	}
+	
+	CHI = {
+		country_event = { id = china.450  days = 15 }
+	}
+			
+			
+			
+			
+			diplomatic_relation = { country = FROM relation = non_aggression_pact }
+			hidden_effect = {
+				country_event = { hours = 6 id = news.1034 }
+			}
+	}
+	option = {
+		ai_chance = { factor = 10 }
+		name = EMF_china.1001.b
+			country_event = { hours = 6 id = EMF_china.1002 }
+		JAP =  { set_country_flag = chinese_not_agree }
+	}
+}
+
+# 日本内战爆发
+country_event = {
+	id = EMF_china.1002
+	title = EMF_china.1002.t
+	desc = EMF_china.1002.d
+	picture = GFX_report_event_generic_riot
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EMF_china.1002.a
+			add_popularity = { ideology = democratic popularity = 0.3 }
+			add_popularity = { ideology = communism popularity = 0.3 }
+			random_list = {
+					45 = {
+						start_civil_war = { ideology = communism size = 0.5 }
+						}
+					45 = {
+						start_civil_war = { ideology = democratic size = 0.5 }
+						}
+					10 = {
+						start_civil_war = { ideology = neutrality size = 0.1 }
+						add_stability = 0.1
+						}
+				}
+			add_stability = -0.3
+			every_other_country = {
+				limit = {
+						NOT = {
+							tag = JAP
+							tag = KOR
+						}
+						controls_state = 525
+						KOR = {
+								exists = yes
+								is_subject = yes
+							}
+					}
+					puppet = KOR
+				}
+			every_other_country = {
+					limit = {
+						NOT = {
+							tag = JAP
+							tag = KOR
+						}
+						KOR = { exists = no }
+						controls_state = 525
+					}
+					transfer_state = 525
+					transfer_state = 527
+					country_event = { id = EMF_china.1007 days = 1 }
+				}
+			hidden_effect = {
+				country_event = { hours = 6 id = news.1032 }
+			}
+	}
+}
+
+############################################

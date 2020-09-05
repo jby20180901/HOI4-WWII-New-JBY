@@ -1,0 +1,630 @@
+
+category = 
+{
+ name = "Voices"
+ soundeffects = {
+	CXC_infantry_idle
+	CXC_infantry_neutral_combat
+	CXC_infantry_positive_combat
+	CXC_infantry_retreat
+	CXC_infantry_move_out
+	XXC_infantry_idle
+	XXC_infantry_neutral_combat
+	XXC_infantry_positive_combat
+	XXC_infantry_retreat
+	XXC_infantry_move_out
+ }
+  compressor = 
+ {
+	enabled = yes
+	pregain = 0.0
+	postgain = 2.0
+	ratio = 10.0
+	threshold = -10.0
+	attacktime = 0.030
+	releasetime = 1.2
+ }
+}
+
+##############
+
+soundeffect = {
+    name = "CXC_infantry_idle"
+    sounds = {
+        sound = chuanhua_Idle_001
+        sound = chuanhua_Idle_002
+		sound = ch_Idle_001
+        sound = ch_Idle_006
+        sound = ch_Idle_009
+        sound = ch_Idle_0010
+        sound = ch_Idle_0015
+        sound = ch_Idle_0018
+        sound = ch_Idle_0020
+        sound = ch_Idle_0027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = {
+    name = "CXC_infantry_neutral_combat"
+    sounds = {
+        sound = chuanhua_Neutral_001
+        sound = chuanhua_Neutral_002
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = {
+    name = "CXC_infantry_positive_combat"
+    sounds = {
+        sound = chuanhua_Positive_001
+        sound = chuanhua_Positive_002
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = {
+    name = "CXC_infantry_retreat"
+    sounds = {
+        sound = chuanhua_Retreat_001
+        sound = chuanhua_Retreat_002
+        sound = chuanhua_Retreat_003
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = {
+    name = "CXC_infantry_move_out"
+    sounds = {
+        sound = chuanhua_Positive_001
+        sound = chuanhua_Positive_002
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+##############
+
+soundeffect = {
+    name = "XXC_infantry_idle"
+    sounds = {
+        sound = chuanhua_Idle_001
+        sound = chuanhua_Idle_002
+		sound = ch_Idle_001
+        sound = ch_Idle_006
+        sound = ch_Idle_009
+        sound = ch_Idle_0010
+        sound = ch_Idle_0015
+        sound = ch_Idle_0018
+        sound = ch_Idle_0020
+        sound = ch_Idle_0027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = {
+    name = "XXC_infantry_neutral_combat"
+    sounds = {
+        sound = chuanhua_Neutral_001
+        sound = chuanhua_Neutral_002
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = {
+    name = "XXC_infantry_positive_combat"
+    sounds = {
+        sound = chuanhua_Positive_001
+        sound = chuanhua_Positive_002
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = {
+    name = "XXC_infantry_retreat"
+    sounds = {
+        sound = chuanhua_Retreat_001
+        sound = chuanhua_Retreat_002
+        sound = chuanhua_Retreat_003
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = {
+    name = "XXC_infantry_move_out"
+    sounds = {
+        sound = chuanhua_Positive_001
+        sound = chuanhua_Positive_002
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+
+############## AUDIO ASSETS
+
+############## chuanhua
+sound = 
+{
+	name = "chuanhua_Idle_001"
+	file = "chuanhua/chuanhua_Idle_001.wav"
+}
+sound = 
+{
+	name = "chuanhua_Idle_002"
+	file = "chuanhua/chuanhua_Idle_002.wav"
+}
+sound = 
+{
+	name = "chuanhua_Idle_003"
+	file = "chuanhua/chuanhua_Idle_003.wav"
+}
+sound = 
+{
+	name = "chuanhua_Idle_004"
+	file = "chuanhua/chuanhua_Idle_004.wav"
+}
+sound = 
+{
+	name = "chuanhua_Idle_005"
+	file = "chuanhua/chuanhua_Idle_005.wav"
+}
+sound = 
+{
+	name = "chuanhua_Idle_006"
+	file = "chuanhua/chuanhua_Idle_006.wav"
+}
+sound = 
+{
+	name = "chuanhua_Idle_007"
+	file = "chuanhua/chuanhua_Idle_007.wav"
+}
+sound = 
+{
+	name = "chuanhua_Idle_008"
+	file = "chuanhua/chuanhua_Idle_008.wav"
+}
+sound = 
+{
+	name = "chuanhua_Idle_009"
+	file = "chuanhua/chuanhua_Idle_009.wav"
+}
+sound = 
+{
+	name = "chuanhua_Idle_010"
+	file = "chuanhua/chuanhua_Idle_010.wav"
+}
+sound = 
+{
+	name = "chuanhua_Idle_011"
+	file = "chuanhua/chuanhua_Idle_011.wav"
+}
+sound = 
+{
+	name = "chuanhua_Idle_012"
+	file = "chuanhua/chuanhua_Idle_012.wav"
+}
+sound = 
+{
+	name = "chuanhua_Idle_013"
+	file = "chuanhua/chuanhua_Idle_013.wav"
+}
+sound = 
+{
+	name = "chuanhua_Idle_014"
+	file = "chuanhua/chuanhua_Idle_014.wav"
+}
+sound = 
+{
+	name = "chuanhua_Idle_015"
+	file = "chuanhua/chuanhua_Idle_015.wav"
+}
+sound = 
+{
+	name = "chuanhua_Idle_016"
+	file = "chuanhua/chuanhua_Idle_016.wav"
+}
+sound = 
+{
+	name = "chuanhua_Idle_017"
+	file = "chuanhua/chuanhua_Idle_017.wav"
+}
+sound = 
+{
+	name = "chuanhua_Idle_018"
+	file = "chuanhua/chuanhua_Idle_018.wav"
+}
+sound = 
+{
+	name = "chuanhua_Idle_019"
+	file = "chuanhua/chuanhua_Idle_019.wav"
+}
+sound = 
+{
+	name = "chuanhua_Idle_020"
+	file = "chuanhua/chuanhua_Idle_020.wav"
+}
+sound = 
+{
+	name = "chuanhua_Idle_021"
+	file = "chuanhua/chuanhua_Idle_021.wav"
+}
+sound = 
+{
+	name = "chuanhua_Idle_022"
+	file = "chuanhua/chuanhua_Idle_022.wav"
+}
+sound = 
+{
+	name = "chuanhua_Idle_023"
+	file = "chuanhua/chuanhua_Idle_023.wav"
+}
+sound = 
+{
+	name = "chuanhua_Idle_024"
+	file = "chuanhua/chuanhua_Idle_024.wav"
+}
+sound = 
+{
+	name = "chuanhua_Idle_025"
+	file = "chuanhua/chuanhua_Idle_025.wav"
+}
+sound = 
+{
+	name = "chuanhua_Idle_026"
+	file = "chuanhua/chuanhua_Idle_026.wav"
+}
+sound = 
+{
+	name = "chuanhua_Idle_027"
+	file = "chuanhua/chuanhua_Idle_027.wav"
+}
+sound = 
+{
+	name = "chuanhua_Neutral_001"
+	file = "chuanhua/chuanhua_Neutral_001.wav"
+}
+sound = 
+{
+	name = "chuanhua_Neutral_002"
+	file = "chuanhua/chuanhua_Neutral_002.wav"
+}
+sound = 
+{
+	name = "chuanhua_Neutral_003"
+	file = "chuanhua/chuanhua_Neutral_003.wav"
+}
+sound = 
+{
+	name = "chuanhua_Neutral_004"
+	file = "chuanhua/chuanhua_Neutral_004.wav"
+}
+sound = 
+{
+	name = "chuanhua_Neutral_005"
+	file = "chuanhua/chuanhua_Neutral_005.wav"
+}
+sound = 
+{
+	name = "chuanhua_Neutral_006"
+	file = "chuanhua/chuanhua_Neutral_006.wav"
+}
+sound = 
+{
+	name = "chuanhua_Neutral_007"
+	file = "chuanhua/chuanhua_Neutral_007.wav"
+}
+sound = 
+{
+	name = "chuanhua_Neutral_008"
+	file = "chuanhua/chuanhua_Neutral_008.wav"
+}
+sound = 
+{
+	name = "chuanhua_Neutral_009"
+	file = "chuanhua/chuanhua_Neutral_009.wav"
+}
+sound = 
+{
+	name = "chuanhua_Neutral_010"
+	file = "chuanhua/chuanhua_Neutral_010.wav"
+}
+sound = 
+{
+	name = "chuanhua_Neutral_011"
+	file = "chuanhua/chuanhua_Neutral_011.wav"
+}
+sound = 
+{
+	name = "chuanhua_Neutral_012"
+	file = "chuanhua/chuanhua_Neutral_012.wav"
+}
+sound = 
+{
+	name = "chuanhua_Neutral_013"
+	file = "chuanhua/chuanhua_Neutral_013.wav"
+}
+sound = 
+{
+	name = "chuanhua_Neutral_014"
+	file = "chuanhua/chuanhua_Neutral_014.wav"
+}
+sound = 
+{
+	name = "chuanhua_Neutral_015"
+	file = "chuanhua/chuanhua_Neutral_015.wav"
+}
+sound = 
+{
+	name = "chuanhua_Neutral_016"
+	file = "chuanhua/chuanhua_Neutral_016.wav"
+}
+sound = 
+{
+	name = "chuanhua_Neutral_017"
+	file = "chuanhua/chuanhua_Neutral_017.wav"
+}
+sound = 
+{
+	name = "chuanhua_Neutral_018"
+	file = "chuanhua/chuanhua_Neutral_018.wav"
+}
+sound = 
+{
+	name = "chuanhua_Neutral_019"
+	file = "chuanhua/chuanhua_Neutral_019.wav"
+}
+sound = 
+{
+	name = "chuanhua_Neutral_020"
+	file = "chuanhua/chuanhua_Neutral_020.wav"
+}
+sound = 
+{
+	name = "chuanhua_Neutral_021"
+	file = "chuanhua/chuanhua_Neutral_021.wav"
+}
+sound = 
+{
+	name = "chuanhua_Positive_001"
+	file = "chuanhua/chuanhua_Positive_001.wav"
+}
+sound = 
+{
+	name = "chuanhua_Positive_002"
+	file = "chuanhua/chuanhua_Positive_002.wav"
+}
+sound = 
+{
+	name = "chuanhua_Positive_003"
+	file = "chuanhua/chuanhua_Positive_003.wav"
+}
+sound = 
+{
+	name = "chuanhua_Positive_004"
+	file = "chuanhua/chuanhua_Positive_004.wav"
+}
+sound = 
+{
+	name = "chuanhua_Positive_005"
+	file = "chuanhua/chuanhua_Positive_005.wav"
+}
+sound = 
+{
+	name = "chuanhua_Positive_006"
+	file = "chuanhua/chuanhua_Positive_006.wav"
+}
+sound = 
+{
+	name = "chuanhua_Positive_007"
+	file = "chuanhua/chuanhua_Positive_007.wav"
+}
+sound = 
+{
+	name = "chuanhua_Positive_008"
+	file = "chuanhua/chuanhua_Positive_008.wav"
+}
+sound = 
+{
+	name = "chuanhua_Positive_009"
+	file = "chuanhua/chuanhua_Positive_009.wav"
+}
+sound = 
+{
+	name = "chuanhua_Positive_010"
+	file = "chuanhua/chuanhua_Positive_010.wav"
+}
+sound = 
+{
+	name = "chuanhua_Positive_011"
+	file = "chuanhua/chuanhua_Positive_011.wav"
+}
+sound = 
+{
+	name = "chuanhua_Positive_012"
+	file = "chuanhua/chuanhua_Positive_012.wav"
+}
+sound = 
+{
+	name = "chuanhua_Positive_013"
+	file = "chuanhua/chuanhua_Positive_013.wav"
+}
+sound = 
+{
+	name = "chuanhua_Positive_014"
+	file = "chuanhua/chuanhua_Positive_014.wav"
+}
+sound = 
+{
+	name = "chuanhua_Positive_015"
+	file = "chuanhua/chuanhua_Positive_015.wav"
+}
+sound = 
+{
+	name = "chuanhua_Positive_016"
+	file = "chuanhua/chuanhua_Positive_016.wav"
+}
+sound = 
+{
+	name = "chuanhua_Positive_017"
+	file = "chuanhua/chuanhua_Positive_017.wav"
+}
+sound = 
+{
+	name = "chuanhua_Positive_018"
+	file = "chuanhua/chuanhua_Positive_018.wav"
+}
+sound = 
+{
+	name = "chuanhua_Positive_019"
+	file = "chuanhua/chuanhua_Positive_019.wav"
+}
+sound = 
+{
+	name = "chuanhua_Positive_020"
+	file = "chuanhua/chuanhua_Positive_020.wav"
+}
+sound = 
+{
+	name = "chuanhua_Positive_021"
+	file = "chuanhua/chuanhua_Positive_021.wav"
+}
+sound = 
+{
+	name = "chuanhua_Positive_022"
+	file = "chuanhua/chuanhua_Positive_022.wav"
+}
+sound = 
+{
+	name = "chuanhua_Positive_023"
+	file = "chuanhua/chuanhua_Positive_023.wav"
+}
+sound = 
+{
+	name = "chuanhua_Positive_024"
+	file = "chuanhua/chuanhua_Positive_024.wav"
+}
+sound = 
+{
+	name = "chuanhua_Retreat_001"
+	file = "chuanhua/chuanhua_Retreat_001.wav"
+}
+sound = 
+{
+	name = "chuanhua_Retreat_002"
+	file = "chuanhua/chuanhua_Retreat_002.wav"
+}
+sound = 
+{
+	name = "chuanhua_Retreat_003"
+	file = "chuanhua/chuanhua_Retreat_003.wav"
+}
+sound = 
+{
+	name = "chuanhua_Retreat_004"
+	file = "chuanhua/chuanhua_Retreat_004.wav"
+}
+sound = 
+{
+	name = "chuanhua_Retreat_005"
+	file = "chuanhua/chuanhua_Retreat_005.wav"
+}
+sound = 
+{
+	name = "chuanhua_Retreat_006"
+	file = "chuanhua/chuanhua_Retreat_006.wav"
+}
+sound = 
+{
+	name = "chuanhua_Retreat_007"
+	file = "chuanhua/chuanhua_Retreat_007.wav"
+}
+sound = 
+{
+	name = "chuanhua_Retreat_008"
+	file = "chuanhua/chuanhua_Retreat_008.wav"
+}
+sound = 
+{
+	name = "chuanhua_Retreat_009"
+	file = "chuanhua/chuanhua_Retreat_009.wav"
+}
+sound = 
+{
+	name = "chuanhua_Retreat_010"
+	file = "chuanhua/chuanhua_Retreat_010.wav"
+}
+sound = 
+{
+	name = "chuanhua_Retreat_011"
+	file = "chuanhua/chuanhua_Retreat_011.wav"
+}
+sound = 
+{
+	name = "chuanhua_Retreat_012"
+	file = "chuanhua/chuanhua_Retreat_012.wav"
+}
+sound = 
+{
+	name = "chuanhua_Retreat_013"
+	file = "chuanhua/chuanhua_Retreat_013.wav"
+}
+sound = 
+{
+	name = "chuanhua_Retreat_014"
+	file = "chuanhua/chuanhua_Retreat_014.wav"
+}
+sound = 
+{
+	name = "chuanhua_Retreat_015"
+	file = "chuanhua/chuanhua_Retreat_015.wav"
+}
+sound = 
+{
+	name = "chuanhua_Retreat_016"
+	file = "chuanhua/chuanhua_Retreat_016.wav"
+}
+sound = 
+{
+	name = "chuanhua_Retreat_017"
+	file = "chuanhua/chuanhua_Retreat_017.wav"
+}
+sound = 
+{
+	name = "chuanhua_Retreat_018"
+	file = "chuanhua/chuanhua_Retreat_018.wav"
+}

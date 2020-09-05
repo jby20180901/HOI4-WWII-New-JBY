@@ -1,0 +1,1031 @@
+add_namespace = EFM_Mengkukuo
+
+
+# Japan control MEN
+country_event = {
+	id = EFM_Mengkukuo.1
+	title = EFM_Mengkukuo.1.t
+	picture = GFX_report_event_japanese_soldiers_02
+	desc = EFM_Mengkukuo.1.d
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MEN
+		exists = yes
+		is_subject = no
+		OR = {
+			fascism > 0.3
+			date > 1937.7.1
+		}
+		has_idea = MEN_Kwantung_army_special_agent_mechanism
+		JAP = {
+				exists = yes
+				is_subject = no
+			}
+		has_war = no
+		NOT = {
+				has_war_with = JAP
+			}
+	}
+	
+	option = {
+			name = EFM_Mengkukuo.1.a
+			if = {
+				limit = {
+					JAP = {
+						OR = {
+							has_government = neutrality
+							has_government = fascism
+						}
+						NOT = {
+							has_completed_focus = JAP_Stable_cabinet_system
+							has_completed_focus = JAP_Regroup_the_JCP
+						}
+					}
+				}
+				JAP = { country_event = { id = EFM_Mengkukuo.2 days = 1 } }
+			}
+			if = {
+				limit = {
+					JAP = {
+						OR = {
+							has_completed_focus = JAP_Stable_cabinet_system
+							has_completed_focus = JAP_Regroup_the_JCP
+						}
+					}
+				}
+				MAN = { country_event = { id = EFM_Mengkukuo.2 days = 1 } }
+			}
+			if = {
+				limit = {
+					JAP = {
+						NOT = {
+							has_government = fascism
+						}
+					}
+					MAN = {
+						exists = no
+					}
+				}
+				JAP = { country_event = { id = EFM_Mengkukuo.2 days = 1 } }
+			}
+		}
+}
+country_event = {
+	id = EFM_Mengkukuo.2
+	title = EFM_Mengkukuo.2.t
+	desc = EFM_Mengkukuo.2.d
+	picture = GFX_report_event_japanese_soldiers_02
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 90
+				is_historical_focus_on = yes
+			}
+		}
+		name = EFM_Mengkukuo.2.a
+			if = {
+				limit = {
+					has_country_flag = MEN_Lose_the_suiyuan_campaign
+				}
+				set_autonomy = { target = FROM autonomy_state = autonomy_wtt_imperial_protectorate }
+			}
+			if = {
+				limit = {
+					has_country_flag = MEN_Win_the_suiyuan_campaign
+				}
+				set_autonomy = { target = FROM autonomy_state = autonomy_wtt_imperial_associate }
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = MEN_Win_the_suiyuan_campaign
+						has_country_flag = MEN_Lose_the_suiyuan_campaign
+					}
+				}
+				set_autonomy = { target = FROM autonomy_state = autonomy_wtt_imperial_protectorate }
+			}
+		}
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+		name = EFM_Mengkukuo.2.b
+			FROM = {
+				create_country_leader = {
+					name = "李守信"
+					desc = ""
+					picture = "Portrait_Li_Shouxin.dds"
+					expire = "1965.1.1"
+					ideology = rexism
+					traits = {
+						spirit_of_genghis
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = MEN_Lose_the_suiyuan_campaign
+				}
+				set_autonomy = { target = FROM autonomy_state = autonomy_wtt_imperial_protectorate }
+			}
+			if = {
+				limit = {
+					has_country_flag = MEN_Win_the_suiyuan_campaign
+				}
+				set_autonomy = { target = FROM autonomy_state = autonomy_wtt_imperial_associate }
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = MEN_Win_the_suiyuan_campaign
+						has_country_flag = MEN_Lose_the_suiyuan_campaign
+					}
+				}
+				set_autonomy = { target = FROM autonomy_state = autonomy_wtt_imperial_protectorate }
+			}
+		}
+}
+
+# MEN join Japan
+country_event = {
+	id = EFM_Mengkukuo.3
+	title = EFM_Mengkukuo.3.t
+	desc = EFM_Mengkukuo.3.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EFM_Mengkukuo.3.a
+			add_opinion_modifier = {
+					target = FROM
+					modifier = men_jap_work_together
+				}
+		}
+}
+# Japan refuse
+country_event = {
+	id = EFM_Mengkukuo.4
+	title = EFM_Mengkukuo.4.t
+	desc = EFM_Mengkukuo.4.d
+	picture = GFX_report_event_chinese_soldiers_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EFM_Mengkukuo.4.a
+		}
+}
+# Japan accept
+country_event = {
+	id = EFM_Mengkukuo.5
+	title = EFM_Mengkukuo.5.t
+	desc = EFM_Mengkukuo.5.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EFM_Mengkukuo.5.a
+		}
+}
+
+# MEN Establish aoalition government
+country_event = {
+	id = EFM_Mengkukuo.6
+	title = EFM_Mengkukuo.6.t
+	desc = EFM_Mengkukuo.6.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 99 }
+		name = EFM_Mengkukuo.6.a
+			FROM = {
+				every_state = {
+						limit = {
+								is_owned_by = MEN
+							}
+						add_core_of = MEN
+					}
+				drop_cosmetic_tag = yes
+				country_event = { id = EFM_Mengkukuo.5 days = 1 }
+			}
+		}
+	option = {
+		ai_chance = { factor = 1 }
+		name = EFM_Mengkukuo.6.b
+			FROM = {
+				country_event = { id = EFM_Mengkukuo.4 days = 1 }
+			}
+		}
+}
+
+# Form mongolian government
+country_event = {
+	id = EFM_Mengkukuo.7
+	title = EFM_Mengkukuo.7.t
+	desc = EFM_Mengkukuo.7.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 99 }
+		name = EFM_Mengkukuo.7.a
+			FROM = {
+				country_event = { id = EFM_Mengkukuo.5 days = 1 }
+				}
+		}
+	option = {
+		ai_chance = { factor = 1 }
+		name = EFM_Mengkukuo.7.b
+			FROM = {
+				country_event = { id = EFM_Mengkukuo.4 days = 1 }
+			}
+		}
+}
+
+# MEN request transfer a state
+country_event = {
+	id = EFM_Mengkukuo.8
+	title = EFM_Mengkukuo.8.t
+	desc = EFM_Mengkukuo.8.d
+	picture = GFX_report_event_japanese_officers
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 99 }
+		name = EFM_Mengkukuo.8.a
+			FROM = {
+				transfer_state = 611
+				country_event = { id = EFM_Mengkukuo.5 days = 1 }
+			}
+		}
+	option = {
+		ai_chance = { factor = 1 }
+		name = EFM_Mengkukuo.8.b
+			FROM = {
+				country_event = { id = EFM_Mengkukuo.4 days = 1 }
+			}
+		}
+}
+country_event = {
+	id = EFM_Mengkukuo.9
+	title = EFM_Mengkukuo.9.t
+	desc = EFM_Mengkukuo.9.d
+	picture = GFX_report_event_japanese_officers
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 99 }
+		name = EFM_Mengkukuo.8.a
+			FROM = {
+				transfer_state = 621
+				transfer_state = 746
+				country_event = { id = EFM_Mengkukuo.5 days = 1 }
+			}
+		}
+	option = {
+		ai_chance = { factor = 1 }
+		name = EFM_Mengkukuo.8.b
+			FROM = {
+				country_event = { id = EFM_Mengkukuo.4 days = 1 }
+			}
+		}
+}
+country_event = {
+	id = EFM_Mengkukuo.10
+	title = EFM_Mengkukuo.10.t
+	desc = EFM_Mengkukuo.10.d
+	picture = GFX_report_event_japanese_officers
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 99 }
+		name = EFM_Mengkukuo.8.a
+			FROM = {
+				transfer_state = 616
+				transfer_state = 756
+				country_event = { id = EFM_Mengkukuo.5 days = 1 }
+			}
+		}
+	option = {
+		ai_chance = { factor = 1 }
+		name = EFM_Mengkukuo.8.b
+			FROM = {
+				country_event = { id = EFM_Mengkukuo.4 days = 1 }
+			}
+		}
+}
+country_event = {
+	id = EFM_Mengkukuo.11
+	title = EFM_Mengkukuo.11.t
+	desc = EFM_Mengkukuo.11.d
+	picture = GFX_report_event_japanese_officers
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 99 }
+		name = EFM_Mengkukuo.8.a
+			FROM = {
+				transfer_state = 617
+				transfer_state = 618
+				transfer_state = 760
+				transfer_state = 794
+				country_event = { id = EFM_Mengkukuo.5 days = 1 }
+			}
+		}
+	option = {
+		ai_chance = { factor = 1 }
+		name = EFM_Mengkukuo.8.b
+			FROM = {
+				country_event = { id = EFM_Mengkukuo.4 days = 1 }
+			}
+		}
+}
+
+# MEN request join china
+country_event = {
+	id = EFM_Mengkukuo.15
+	title = EFM_Mengkukuo.15.t
+	desc = EFM_Mengkukuo.15.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 70 }
+		name = EFM_Mengkukuo.15.a
+			SHX = {
+				country_event = { id = EFM_Mengkukuo.16 days = 1 }
+			}
+		}
+	option = {
+		ai_chance = { factor = 30 }
+		name = EFM_Mengkukuo.15.b
+			FROM = {
+				country_event = { id = EFM_Mengkukuo.4 days = 1 }
+			}
+		}
+}
+country_event = {
+	id = EFM_Mengkukuo.16
+	title = EFM_Mengkukuo.16.t
+	desc = EFM_Mengkukuo.16.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 50 }
+		name = EFM_Mengkukuo.16.a
+			MEN = {
+				country_event = { id = EFM_Mengkukuo.17 days = 1 }
+				set_country_flag = MEN_Demchugdongrub_join_china
+			}
+			FROM = {
+				country_event = { id = EFM_Mengkukuo.5 days = 1 }
+				give_guarantee = MEN
+			}
+			give_guarantee = MEN
+		}
+	option = {
+		ai_chance = { factor = 50 }
+		name = EFM_Mengkukuo.16.b
+			FROM = {
+				country_event = { id = EFM_Mengkukuo.4 days = 1 }
+			}
+			MEN = {
+				country_event = { id = EFM_Mengkukuo.22 days = 1 }
+			}
+			hidden_effect = { JAP = { country_event = { id = EFM_Mengkukuo.23 days = 1 } } }
+		}
+}
+# Agree
+country_event = {
+	id = EFM_Mengkukuo.17
+	title = EFM_Mengkukuo.17.t
+	desc = EFM_Mengkukuo.17.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EFM_Mengkukuo.17.a
+			transfer_state = 621
+			621 = { add_core_of = MEN }
+			set_country_flag = MEN_China_accept_rule_us
+			JAP = {
+				country_event = { id = EFM_Mengkukuo.18 days = 1 }
+			}
+		}
+}
+
+# Japan response
+country_event = {
+	id = EFM_Mengkukuo.18
+	title = EFM_Mengkukuo.18.t
+	desc = EFM_Mengkukuo.18.d
+	picture = GFX_report_event_japanese_soldiers_03
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 90 }
+		name = EFM_Mengkukuo.18.a
+			random_list = {
+				90 = {
+						transfer_state = 612
+						country_event = { id = EFM_Mengkukuo.19 days = 1 }
+						MEN = { country_event = { id = EFM_Mengkukuo.21 days = 1 } }
+					}
+				10 = {
+						country_event = { id = EFM_Mengkukuo.20 days = 1 }
+						MEN = { country_event = { id = EFM_Mengkukuo.20 days = 1 } }
+					}
+			}
+		}
+	option = {
+		ai_chance = { factor = 10 }
+		name = EFM_Mengkukuo.18.a
+		}
+}
+country_event = {
+	id = EFM_Mengkukuo.19
+	title = EFM_Mengkukuo.19.t
+	desc = EFM_Mengkukuo.19.d
+	picture = GFX_report_event_japanese_soldiers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EFM_Mengkukuo.19.a
+			add_political_power = 25
+		}
+}
+country_event = {
+	id = EFM_Mengkukuo.20
+	title = EFM_Mengkukuo.20.t
+	desc = EFM_Mengkukuo.20.d
+	picture = GFX_report_event_japanese_chinese_surrender
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EFM_Mengkukuo.20.a
+			add_political_power = -25
+		}
+}
+country_event = {
+	id = EFM_Mengkukuo.21
+	title = EFM_Mengkukuo.21.t
+	desc = EFM_Mengkukuo.21.d
+	picture = GFX_report_event_chinese_soldiers_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EFM_Mengkukuo.21.a
+			add_political_power = -25
+		}
+}
+
+# SHX reject
+country_event = {
+	id = EFM_Mengkukuo.22
+	title = EFM_Mengkukuo.22.t
+	desc = EFM_Mengkukuo.22.d
+	picture = GFX_report_event_chinese_soldiers_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EFM_Mengkukuo.22.a
+			hidden_effect = { 
+				set_politics = {
+						ruling_party = fascism
+						elections_allowed = no
+					}
+				retire_country_leader = yes
+				set_politics = {
+						ruling_party = neutrality
+						elections_allowed = no
+					}
+			}
+			retire_country_leader = yes
+		}
+}
+country_event = {
+	id = EFM_Mengkukuo.23
+	title = EFM_Mengkukuo.23.t
+	desc = EFM_Mengkukuo.23.d
+	picture = GFX_report_event_japan_army_mountainside
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EFM_Mengkukuo.23.a
+			create_wargoal = { type = annex_everything target = MEN }
+		}
+}
+
+# Japan control MEN again
+country_event = {
+	id = EFM_Mengkukuo.24
+	title = EFM_Mengkukuo.24.t
+	picture = GFX_report_event_japanese_soldiers_02
+	desc = EFM_Mengkukuo.24.d
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = JAP
+		controls_state = 612
+		MEN = {
+			exists = no
+		}
+	}
+	
+	option = {
+			ai_chance = { factor = 70 }
+			name = EFM_Mengkukuo.24.a
+			release = MEN
+			set_autonomy = { target = MEN autonomy_state = autonomy_integrated_puppet }
+			MEN = {
+					create_country_leader = {
+						name = "李守信"
+						desc = ""
+						picture = "Portrait_Li_Shouxin.dds"
+						expire = "1965.1.1"
+						ideology = rexism
+						traits = {
+							spirit_of_genghis
+						}
+					}
+				}
+		}
+	option = {
+			ai_chance = { factor = 30 }
+			name = EFM_Mengkukuo.24.b
+			trigger = {
+					MAN = {
+						OR = {
+							is_subject_of = ROOT
+							is_in_faction_with = ROOT
+						}
+					}
+				}
+			every_owned_state = {
+					limit = {
+							is_core_of = MEN
+						}
+					MAN = {
+							transfer_state = PREV
+						}
+				}
+		}
+}
+country_event = {
+	id = EFM_Mengkukuo.25
+	title = EFM_Mengkukuo.25.t
+	picture = GFX_report_event_japanese_soldiers_02
+	desc = EFM_Mengkukuo.25.d
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = JAP
+		MEN = {
+			exists = yes
+			is_subject_of = JAP
+			NOT = {
+				has_country_leader = {
+						name = "Prince Demchugdongrub"
+					}
+				}
+		}
+	}
+	
+	option = {
+			name = EFM_Mengkukuo.25.a
+			set_autonomy = { target = MEN autonomy_state = autonomy_integrated_puppet }
+			MEN = {
+				create_country_leader = {
+					name = "李守信"
+					desc = ""
+					picture = "Portrait_Li_Shouxin.dds"
+					expire = "1965.1.1"
+					ideology = rexism
+					traits = {
+						spirit_of_genghis
+					}
+				}
+			}
+		}
+}
+
+# MEN request receive chahar east
+country_event = {
+	id = EFM_Mengkukuo.26
+	title = EFM_Mengkukuo.26.t
+	desc = EFM_Mengkukuo.26.d
+	picture = GFX_report_event_japanese_officers
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 99 }
+		name = EFM_Mengkukuo.26.a
+			FROM = {
+				country_event = { id = EFM_Mengkukuo.27 days = 1 }
+			}
+		}
+	option = {
+		ai_chance = { factor = 1 }
+		name = EFM_Mengkukuo.26.b
+			FROM = {
+				country_event = { id = EFM_Mengkukuo.4 days = 1 }
+			}
+		}
+}
+country_event = {
+	id = EFM_Mengkukuo.27
+	title = EFM_Mengkukuo.27.t
+	desc = EFM_Mengkukuo.27.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EFM_Mengkukuo.27.a
+			create_field_marshal = {
+					name = "李守信"
+					portrait_path = "gfx/leaders/MEN/Portrait_Li_Shouxin.dds"
+					traits = {}
+					skill = 1
+				}
+			custom_effect_tooltip = MEN_Annex_chadong_special_administrative_region_tt
+			hidden_effect = {
+					load_oob = Li_Shouxin_Force
+				}
+		}
+}
+
+# End of Suiyuan Campaign
+country_event = {
+	id = EFM_Mengkukuo.28
+	title = EFM_Mengkukuo.28.t
+	desc = EFM_Mengkukuo.28.d
+	picture = GFX_report_event_japan_army_mountainside
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EFM_Mengkukuo.28.a
+			every_other_country = {
+					limit = {
+						owns_state = 621
+						has_war_with = MEN
+					}
+					white_peace = MEN
+				}
+			remove_ideas = MEN_Grand_han_righteous_army
+			if = {
+				limit = {
+					NOT = {
+						controls_state = 621
+					}
+				}
+				country_event = { id = EFM_Mengkukuo.29 days = 1 }
+				every_other_country = {
+						limit = {
+							controls_state = 621
+							has_war_with = MEN
+						}
+						country_event = { id = EFM_Mengkukuo.39 days = 1 }
+					}
+			}
+			if = {
+				limit = {
+					controls_state = 621
+				}
+				country_event = { id = EFM_Mengkukuo.30 days = 1 }
+				every_other_country = {
+						limit = {
+							controls_state = 621
+							has_war_with = MEN
+						}
+						country_event = { id = EFM_Mengkukuo.40 days = 1 }
+					}
+			}
+		}
+}
+country_event = {
+	id = EFM_Mengkukuo.29
+	title = EFM_Mengkukuo.29.t
+	desc = EFM_Mengkukuo.29.d
+	picture = GFX_report_event_chinese_soldiers_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EFM_Mengkukuo.29.a
+			set_country_flag = MEN_Lose_the_suiyuan_campaign
+			add_political_power = -50
+			add_stability = -0.05
+			add_popularity = {
+					ideology = fascism
+					popularity = 0.1
+				}
+		}
+}
+country_event = {
+	id = EFM_Mengkukuo.30
+	title = EFM_Mengkukuo.30.t
+	desc = EFM_Mengkukuo.30.d
+	picture = GFX_report_event_japanese_soldiers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EFM_Mengkukuo.30.a
+			set_country_flag = MEN_Win_the_suiyuan_campaign
+			transfer_state = 621
+			add_political_power = 100
+			add_stability = 0.05
+			add_popularity = {
+					ideology = fascism
+					popularity = 0.2
+				}
+		}
+}
+
+# MEN is required to become autonomous region
+country_event = {
+	id = EFM_Mengkukuo.31
+	title = EFM_Mengkukuo.31.t
+	desc = EFM_Mengkukuo.31.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 90 }
+		name = EFM_Mengkukuo.31.a
+			set_autonomy = { target = FROM autonomy_state = autonomy_integrated_puppet }
+			FROM = {
+				country_event = { id = EFM_Mengkukuo.5 days = 1 }
+			}
+		}
+	option = {
+		ai_chance = { factor = 10 }
+		name = EFM_Mengkukuo.31.b
+			FROM = {
+				country_event = { id = EFM_Mengkukuo.4 days = 1 }
+			}
+		}
+}
+
+# Declare independence
+country_event = {
+	id = EFM_Mengkukuo.32
+	title = EFM_Mengkukuo.32.t
+	desc = EFM_Mengkukuo.32.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 90 }
+		name = EFM_Mengkukuo.32.a
+			create_wargoal = {
+					type = annex_everything
+					target = FROM
+				}
+			FROM = { country_event = { id = EFM_Mengkukuo.33 days = 1 } }
+		}
+	option = {
+		ai_chance = { factor = 10 }
+		name = EFM_Mengkukuo.32.b
+				add_opinion_modifier = {
+					target = FROM
+					modifier = Nations_friendly
+				}
+			FROM = { country_event = { id = EFM_Mengkukuo.34 days = 1 } }
+		}
+}
+country_event = {
+	id = EFM_Mengkukuo.33
+	title = EFM_Mengkukuo.33.t
+	desc = EFM_Mengkukuo.33.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EFM_Mengkukuo.33.a
+				add_opinion_modifier = {
+					target = FROM
+					modifier = Nations_friendly
+				}
+		}
+}
+country_event = {
+	id = EFM_Mengkukuo.34
+	title = EFM_Mengkukuo.34.t
+	desc = EFM_Mengkukuo.34.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EFM_Mengkukuo.34.a
+		}
+}
+
+# MEN Order aircraft with japan
+country_event = {
+	id = EFM_Mengkukuo.35
+	title = EFM_Mengkukuo.35.t
+	desc = EFM_Mengkukuo.35.d
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 90 }
+		name = EFM_Mengkukuo.35.a
+			send_equipment = { target = FROM type = fighter amount = 25 }
+			add_political_power = 50
+			FROM = {
+				country_event = { id = EFM_Mengkukuo.5 days = 1 }
+				add_political_power = -50
+			}
+		}
+	option = {
+		ai_chance = { factor = 10 }
+		name = EFM_Mengkukuo.35.b
+			FROM = {
+				country_event = { id = EFM_Mengkukuo.4 days = 1 }
+			}
+		}
+}
+
+# MEN Attack SHX
+country_event = {
+	id = EFM_Mengkukuo.36
+	title = EFM_Mengkukuo.36.t
+	desc = EFM_Mengkukuo.36.d
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 95 }
+		name = EFM_Mengkukuo.36.a
+			send_equipment = { target = FROM type = infantry_equipment amount = 2000 }
+			if = {
+				limit = {
+					has_equipment = { CAS_equipment > 25 }
+				}
+				send_equipment = { target = FROM type = CAS_equipment amount = 25 }
+			}
+			if = {
+				limit = {
+					has_equipment = { CAS_equipment < 25 }
+				}
+					add_equipment_to_stockpile = {
+							type = CAS_equipment_1
+							amount = -25
+							producer = JAP
+					}
+					FROM = {
+						add_equipment_to_stockpile = {
+								type = CAS_equipment_1
+								amount = 25
+								producer = JAP
+						}
+					}
+			}
+			FROM = {
+				country_event = { id = EFM_Mengkukuo.37 days = 1 }
+			}
+		}
+	option = {
+		ai_chance = { factor = 5 }
+		name = EFM_Mengkukuo.36.b
+		}
+}
+country_event = {
+	id = EFM_Mengkukuo.37
+	title = EFM_Mengkukuo.37.t
+	desc = EFM_Mengkukuo.37.d
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EFM_Mengkukuo.37.a
+			send_equipment = { target = FROM type = fighter amount = 25 }
+		}
+}
+
+# Form Mongolia
+country_event = {
+	id = EFM_Mengkukuo.38
+	title = EFM_Mengkukuo.38.t
+	desc = EFM_Mengkukuo.38.d
+	picture = GFX_report_event_japanese_soldiers_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EFM_Mengkukuo.38.a
+			
+		}
+}
+
+# Win the suiyuan campaign
+country_event = {
+	id = EFM_Mengkukuo.39
+	title = EFM_Mengkukuo.39.t
+	desc = EFM_Mengkukuo.39.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EFM_Mengkukuo.39.a
+			add_political_power = 75
+		}
+}
+# Lose the suiyuan campaign
+country_event = {
+	id = EFM_Mengkukuo.40
+	title = EFM_Mengkukuo.40.t
+	desc = EFM_Mengkukuo.40.d
+	picture = GFX_report_event_chinese_soldiers_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EFM_Mengkukuo.40.a
+			add_political_power = -150
+		}
+}
+
+# MEN Control mongolia
+country_event = {
+	id = EFM_Mengkukuo.41
+	title = EFM_Mengkukuo.41.t
+	desc = EFM_Mengkukuo.41.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 90 }
+		name = EFM_Mengkukuo.41.a
+			FROM = {
+					annex_country = { target = MON }
+					country_event = { id = EFM_independent.50 hours = 6 }
+				}
+		}
+	option = {
+		ai_chance = { factor = 10 }
+		name = EFM_Mengkukuo.41.b
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				FROM = {
+					OVERLORD = { puppet = ROOT }
+				}
+			}
+			if = {
+				limit = {
+					is_subject = no
+				}
+				FROM = {
+					puppet = ROOT
+				}
+			}
+			FROM = { country_event = { id = EFM_independent.51 hours = 6 } }
+		}
+}

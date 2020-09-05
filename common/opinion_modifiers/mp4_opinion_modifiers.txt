@@ -1,0 +1,47 @@
+opinion_modifiers = {
+
+	POR_returned_our_territory = {
+		value = 50
+	}
+	POR_alliance = {
+		value = 50
+	}
+	POR_noalliance = {
+		value = -20
+	}
+	POR_rose_color_rel = {
+		value = -10
+	}
+	POR_pact_iberico_op = {
+		value = 20
+	}
+	POR_nationalist_diplo = {
+		value = 15
+	}
+	POR_communist_diplo = {
+		value = 15
+	}
+	POR_economic_partnership_brazil = {
+		value = 100
+		trade = yes
+	}
+	POR_commonwealth_trade_opinion = {
+		value = 100
+		trade = yes
+	}
+#	USA_work_with_the_bund = {
+#		value = 35
+#	}
+#	panay_inc_opinion_modifier = {
+#		value = -30
+#		months = 120
+#		decay = 0.125
+#	}
+#
+#	panay_inc2_opinion_modifier = {
+#		value = -15
+#		months = 60
+#		decay = 0.125
+#	}
+
+}	

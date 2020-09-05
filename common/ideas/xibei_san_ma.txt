@@ -1,0 +1,683 @@
+ideas = {
+
+	country = {
+		King_of_Ningxia = {
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_production_bonus
+			
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				production_speed_bunker_factor = 0.1
+			}
+		}
+		King_of_Qinghai = {
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_production_bonus
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+		
+		XSM_Strengthen_cavalry = {
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = porsche
+			
+			modifier = {
+				cavalry_attack_factor = 0.1
+				cavalry_defence_factor = 0.1
+			}
+		}
+		
+		XSM_Improve_production_efficiency = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+			modifier = {
+				motorized_attack_factor = 0.05
+				motorized_defence_factor = 0.05
+			}
+		}
+		
+		XSM_crisis_awareness = {
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_army_of_aggression_focus
+			
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				production_speed_bunker_factor = 0.1
+			}
+		}
+		XSM_local_talent = {
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_intel_bonus
+			
+			research_bonus = {
+				land_doctrine = 0.05
+			}
+		}
+		XSM_New_Army = {
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+			army_infantry_attack_factor = 0.05
+			army_infantry_defence_factor = 0.05
+			}
+		}
+		
+		XSM_stable_security = {
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ast_abandon_the_westminster_system
+			
+			modifier = {
+				local_factory_sabotage = -0.1
+				drift_defence_factor = 0.1
+			}
+		}
+		XSM_environmental_awareness_rise = {
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				monthly_population = 0.01
+			}
+		}
+		XSM_unity_of_xibei = {
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription = 0.02
+			}
+		}
+		
+		XSM_Restart_conflict = {
+		
+			picture = CZE_planning_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				generate_wargoal_tension = -0.4
+				join_faction_tension = -0.4
+				lend_lease_tension = -0.4
+				send_volunteers_tension = -0.4
+				guarantee_tension = -0.4
+			}
+		}
+		
+		XSM_Be_loyal_to_ROC = {
+		
+			picture = generic_morale_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				autonomy_gain = -0.1
+				communism_drift = -0.1
+				research_speed_factor = 0.1
+			}
+		}
+		XSM_Be_loyal_to_PRC = {
+		
+			picture = generic_morale_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				autonomy_gain = -0.1
+				communism_drift = 0.1
+				communism_acceptance = 100
+				research_speed_factor = 0.1
+			}
+		}
+		
+		XSM_Rule_of_Ma = {
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_deal_with_the_devil2
+			
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				political_power_cost = 0.25
+			}
+		}
+		
+		XSM_Rule_of_Ma_2 = {
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = YUG_federal_defense_council
+			
+			modifier = {
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.2
+			}
+		}
+		XSM_Rule_of_Ma_3 = {
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = YUG_federal_defense_council
+			
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				political_power_gain = 0.5
+			}
+		}
+		
+		XSM_Revolutionary_columns = {
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription = 0.01
+			}
+		}
+		
+		XSM_Closely_organized = {
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				army_morale_factor = 0.1
+			}
+		}
+		
+		XSM_Offensive_incentive = {
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				army_org = 5
+				army_attack_factor = 0.05
+			}
+		}
+		
+		XSM_Faithful_horses = {
+		
+			picture = generic_volunteer_expedition_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.25
+				opinion_gain_monthly_factor = 0.2
+				opinion_gain_monthly_same_ideology_factor = 0.15
+			}
+		}
+		
+		XSM_Japanese_technical_support = {
+		
+			picture = german_advisors
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.03
+			}
+		}
+		
+		XSM_Xibei_trade_zone = {
+		
+			picture = can_wartime_prices_and_trade_board
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+	}
+
+	political_advisor = {
+
+		XSM_fang_jing = {
+
+			picture = generic_political_advisor_asia_1
+			
+			allowed = {
+				original_tag = XSM
+			}
+			
+			traits = { smooth_talking_charmer }
+		}
+
+		XSM_zi_shen = {
+
+			picture = generic_political_advisor_asia_2
+				
+			allowed = {
+				original_tag = XSM
+			}
+			
+			traits = { backroom_backstabber }
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		XSM_li_shiqun = {
+
+			picture = generic_political_advisor_asia_3
+			
+			allowed = {
+				original_tag = XSM
+			}
+			
+			traits = { prince_of_terror }
+		}
+	}
+
+	theorist = {
+		XSM_keng_shoushan = {
+
+			picture = generic_army_asia_1
+			
+			allowed = {
+				original_tag = XSM
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		XSM_ma_hongkui = { 
+
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = XSM
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+	}
+
+	high_command = {
+
+		XSM_ma_donghai = {
+
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = XSM
+			}
+			
+			traits = { air_close_air_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		XSM_wu_qi = {
+
+			picture = generic_army_asia_1
+			
+			allowed = {
+				original_tag = XSM
+			}
+			
+			traits = { army_cavalry_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		XSM_au_yongrui = {
+
+			picture = generic_army_asia_2
+			
+			allowed = {
+				original_tag = XSM
+			}
+			
+			traits = { army_commando_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		XSM_ho_tengfei = {
+
+			picture = generic_navy_asia_2
+			
+			allowed = {
+				original_tag = XSM
+			}
+			
+			traits = { navy_fleet_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	army_chief = {
+		
+		XSM_ma_hongbin = {
+
+			picture = generic_army_asia_3
+			
+			allowed = {
+				original_tag = XSM
+			}
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		XSM_ma_buqing = {
+
+			picture = generic_army_asia_1
+			
+			allowed = {
+				original_tag = XSM
+			}
+			
+			traits = { army_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+		
+		XSM_may_chongan = {
+			
+			picture = generic_air_asia_1
+			
+			allowed = {
+				original_tag = XSM
+			}
+			
+
+			
+			traits = { air_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		XSM_chun_minsheng = {
+			
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = XSM
+			}
+			
+
+			
+			traits = { air_chief_night_operations_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	navy_chief = {
+
+		XSM_lian_zenguang = {
+			
+			picture = generic_navy_asia_1
+
+			allowed = {
+				original_tag = XSM
+			}
+					
+			traits = { navy_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		XSM_keng_gui = {
+			
+			picture = generic_navy_asia_3
+
+			allowed = {
+				original_tag = XSM
+			}
+					
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

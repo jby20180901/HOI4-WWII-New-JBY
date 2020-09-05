@@ -1,0 +1,64 @@
+sub_units = {
+
+	chizyj_army = { #国民党中央军
+		sprite = infantry
+		map_icon_category = infantry
+		special_forces = yes
+		mountaineers = yes
+		
+		priority = 5000
+		ai_priority = 5000
+		active = no
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+		}
+		
+		#基本属性
+		combat_width = 2
+		default_morale = 0.50
+		max_organisation = 50
+		max_strength = 50
+		suppression = 5
+		manpower = 1200
+		training_time = 30
+		supply_consumption = 0.06
+		weight = 0.50
+		#加成属性
+		initiative = 0.2
+		
+		can_be_parachuted = no
+		
+		need = {
+			infantry_equipment = 100
+		}
+		
+		forest = {
+			defence = 0.05
+			movement = 0.10
+		}
+		mountain = {
+			defence = 0.05
+			movement = 0.10
+		}
+		jungle = {
+			defence = 0.05
+			movement = 0.10
+		}
+		urban = {
+			attack = 0.05
+			defence = 0.10
+		}
+		
+	}
+	
+}

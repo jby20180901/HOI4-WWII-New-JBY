@@ -1,0 +1,30 @@
+technologies = {
+	technical_training_focus2 = {
+
+		research_cost = 1
+		
+		enable_building = {
+			building = food_maker
+			level = 1
+		}
+		
+		allow = {
+			always = no
+		}
+		
+	}
+	technical_training_focus1 = {
+
+		research_cost = 1
+		
+		enable_building = {
+			building = coal_maker
+			level = 1
+		}
+		
+		allow = {
+			always = no
+		}
+		
+	}
+}

@@ -1,0 +1,150 @@
+﻿#########################
+## EastAsia Mod Events ##
+#########################
+
+add_namespace = eastasia
+
+
+
+#阵营：联合反蒋
+news_event = {
+	id = eastasia.81
+	title = eastasia.81.t
+	desc = eastasia.81.d
+	picture = GFX_fanjiang_lianhe
+
+	major = yes
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			PRC = { remove_ideas = eastasia_idea_xiaojijiaogong }
+			DBJ = { remove_ideas = eastasia_idea_xiaojijiaogong }
+			XNM = { remove_ideas = eastasia_idea_xiaojijiaogong }
+		}
+	}
+	
+	option = {
+		name = eastasia.81.a
+		trigger = { NOT = { TAG = DBJ } }
+	}
+	option = {
+		name = eastasia.81.b
+		trigger = { TAG = DBJ }
+		set_global_flag = DBJ_unite
+		DBJ = {
+			#white_peace = PRC
+			create_faction = United_anti_Chiang
+			declare_war_on = { target = CHI type = annex_everything }
+		}
+		hidden_effect = {
+			GXC = { country_event = { id = eastasia.82 days = 2 } }
+			YXC = { country_event = { id = eastasia.82 days = 2 } }
+			PRC = { country_event = { id = eastasia.82 days = 2 } }
+			CXC = { country_event = { id = eastasia.82 days = 2 } }
+			XXC = { country_event = { id = eastasia.82 days = 2 } }
+			XSM = { country_event = { id = eastasia.82 days = 2 } }
+			XNM = { country_event = { id = eastasia.82 days = 2 } }
+			XBJ = { country_event = { id = eastasia.82 days = 2 } }
+			XJM = { country_event = { id = eastasia.82 days = 2 } }
+			SHX = { country_event = { id = eastasia.82 days = 2 } }
+			SLJ = { country_event = { id = eastasia.82 days = 2 } }
+			YUN = { country_event = { id = eastasia.82 days = 2 } }
+			QXC = { country_event = { id = eastasia.82 days = 2 } }
+			
+		}
+	}
+}
+
+#加入：联合反蒋
+country_event = {
+	id = eastasia.82
+	title = eastasia.82.t
+	desc = eastasia.82.d
+	picture = GFX_DBJ_fanjiang
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eastasia.82.a
+		ai_chance = { factor = 65 }
+		trigger = { NOT = { TAG = PRC } }
+		add_political_power = 50
+		DBJ = {
+			DBJ = { add_opinion_modifier = { target = ROOT modifier = Relationship_deterioration } }
+			add_political_power = -30
+			create_wargoal = {
+				type = annex_everything
+				target = ROOT
+			}
+		}
+	}
+	option = {
+		name = eastasia.82.b
+		ai_chance = { 
+			factor = 30 
+			modifier = {
+				factor = 95
+				tag = PRC
+			}
+		}
+		DBJ = { 
+			add_to_faction = ROOT 
+			white_peace = ROOT
+			DBJ = { add_opinion_modifier = { target = ROOT modifier = Relationship_improvement } }
+			ROOT = { add_opinion_modifier = { target = DBJ modifier = Relationship_improvement } }
+			country_event = eastasia.83
+		}
+	}
+	option = {
+		name = eastasia.82.c
+		ai_chance = { factor = 5 }
+		DBJ = { 
+			annex_country = { target = ROOT transfer_troops = yes }
+			country_event = eastasia.83
+		}
+	}
+}
+
+#DBJ信息，其他势力加入阵营
+country_event = {
+	id = eastasia.83
+	title = eastasia.83.t
+	desc = eastasia.83.d
+	picture = GFX_CHI_tanhuahui
+
+	is_triggered_only = yes
+
+	option = {
+		name = eastasia.83.a
+	}
+
+}
+
+#东北军的电文
+country_event = {
+	id = eastasia.94
+	title = eastasia.94.t
+	desc = eastasia.94.d
+	picture = GFX_china_shibingjihui
+
+	is_triggered_only = yes
+
+	option = {
+		name = eastasia.94.a
+		ai_chance = { factor = 50 }
+		news_event = eastasia.95
+	}
+	option = {
+		name = eastasia.94.b
+		ai_chance = { factor = 50 }
+		news_event = eastasia.96
+		custom_effect_tooltip = DBJ_huishimazhanshan_tip
+	}
+
+}

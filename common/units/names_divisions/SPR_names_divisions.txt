@@ -1,0 +1,419 @@
+﻿# Division template historical names system. Is a new method of naming the divisions based on the names-group assigned to it's template.
+# If we run out of all historical names, the names will be assigned in the old way.
+#
+# Each group has a made up tag. Use it if you want to append more, or replace existing names with the extra txt files (modding).
+#
+# for_countries - lists all countries that can use it. If empty, or entire tag is missing, all countries in the world can use it.
+#
+# can_use - is a trigger that locks/unlocks the group under specific circumstances. The trigger is in a country scope.
+#
+# division_types - is a list of tokens to corresponding unit types. A player can in fact use any group of names for a div.template
+#                  however this tag is a helper for an automated choice (for AI, or if the group must switch on it's own, because
+#                  for example the current one is no longer available due to the can_use trigger saying so).
+#                  In automated choice, the division template must have at least 1 of the following types for it to be chosen.
+#
+# fallback_name - Is going to be used if we run out of the scripted historical names. If you want to use the old division naming
+#                 mechanics to be used for fallbacks, then just skip this option.
+#
+# unordered - It's a list of historical division names that did not have a number. Regardless if such names happened in history or not
+#             this option is available here mainly for a mods.
+#
+# ordered - Is a list of all historical names. 
+#           Numbers must start from 1 and up. 
+#           Numbers can't repeat in one scope.
+#           If you script the name for this group, at the same number (for example in a mod in another file), the name will be override.
+#           All arguments between the brackets must be separated by spaces. Each argument is wrapped in "quotas".
+#           1st argument = The name. It must contain either: 
+#                          %d (for decimal number placement)
+#                          %s (for string number placement - ROMAN numbers like XIV).
+#           2nd argument is optional = A localizable text describing this historical division. The text will be visible in the tooltip
+#                                      where you choose the historical division name.
+#           3rd argument is optional = An URL preferably pointing to the WIKI. It's a future feature that is not currently working in
+#                                      the current game version.
+SPR_INF_01 = 
+{
+	name = "西班牙陆军步兵师"
+
+	for_countries = { SPR }
+
+	can_use = { 
+		NOT = { has_government = fascism } 
+	}
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { SPR_INF_01 }
+
+	fallback_name = "西班牙陆军第%d步兵师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "西班牙陆军第%d步兵师" }
+		2 = { "西班牙陆军第%d步兵师" }
+		3 = { "西班牙陆军第%d步兵师" }
+		4 = { "西班牙陆军第%d步兵师" }
+		5 = { "西班牙陆军第%d步兵师" }
+		6 = { "西班牙陆军第%d步兵师" }
+		7 = { "西班牙陆军第%d步兵师" }
+		8 = { "西班牙陆军第%d步兵师" }
+		9 = { "西班牙陆军第%d步兵师" }
+		10 = { "西班牙陆军第%d步兵师" }
+		11 = { "西班牙陆军第%d步兵师" }
+		12 = { "西班牙陆军第%d步兵师" }
+		13 = { "西班牙陆军第%d步兵师" }
+		14 = { "西班牙陆军第%d步兵师" }
+		15 = { "西班牙陆军第%d步兵师" }
+		16 = { "西班牙陆军第%d步兵师" }
+		17 = { "西班牙陆军第%d步兵师" }
+		18 = { "西班牙陆军第%d步兵师" }
+		19 = { "西班牙陆军第%d步兵师" }
+		20 = { "西班牙陆军第%d步兵师" }		
+	}
+}
+
+SPR_CAV_01 = 
+{
+	name = "西班牙陆军骑兵师"
+
+	for_countries = { SPR }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { SPR_INF_01 }
+
+	fallback_name = "西班牙陆军第%d骑兵师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "西班牙陆军第%d骑兵师" }
+		2 = { "西班牙陆军第%d骑兵师" }
+		3 = { "西班牙陆军第%d骑兵师" }
+		4 = { "西班牙陆军第%d骑兵师" }
+		5 = { "西班牙陆军第%d骑兵师" }
+		6 = { "西班牙陆军第%d骑兵师" }
+		7 = { "西班牙陆军第%d骑兵师" }
+		8 = { "西班牙陆军第%d骑兵师" }
+		9 = { "西班牙陆军第%d骑兵师" }
+		10 = { "西班牙陆军第%d骑兵师" }
+	}
+}
+
+SPR_MOT_01 = 
+{
+	name = "西班牙陆军摩步师"
+
+	for_countries = { SPR }
+
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { SPR_INF_01 }
+
+	fallback_name = "西班牙陆军第%d摩步师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "西班牙陆军第%d摩步师" }
+		2 = { "西班牙陆军第%d摩步师" }
+		3 = { "西班牙陆军第%d摩步师" }
+		4 = { "西班牙陆军第%d摩步师" }
+		5 = { "西班牙陆军第%d摩步师" }
+		6 = { "西班牙陆军第%d摩步师" }
+		7 = { "西班牙陆军第%d摩步师" }
+		8 = { "西班牙陆军第%d摩步师" }
+		9 = { "西班牙陆军第%d摩步师" }
+		10 = { "西班牙陆军第%d摩步师" }
+	}
+}
+
+SPR_MEC_01 = 
+{
+	name = "西班牙陆军机步师"
+
+	for_countries = { SPR }
+
+	can_use = { always = yes }
+
+	division_types = { "mechanized" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { SPR_INF_01 }
+
+	fallback_name = "西班牙陆军第%d机步师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "西班牙陆军第%d机步师" }
+		2 = { "西班牙陆军第%d机步师" }
+		3 = { "西班牙陆军第%d机步师" }
+		4 = { "西班牙陆军第%d机步师" }
+		5 = { "西班牙陆军第%d机步师" }
+		6 = { "西班牙陆军第%d机步师" }
+		7 = { "西班牙陆军第%d机步师" }
+		8 = { "西班牙陆军第%d机步师" }
+		9 = { "西班牙陆军第%d机步师" }
+		10 = { "西班牙陆军第%d机步师" }
+	}
+}
+
+SPR_ARM_01 = 
+{
+	name = "西班牙陆军装甲师"
+
+	for_countries = { SPR }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { SPR_INF_01 }
+
+	fallback_name = "西班牙陆军第%d装甲师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "西班牙陆军布鲁内特装甲师" }
+		2 = { "西班牙陆军第%d装甲师" }
+		3 = { "西班牙陆军第%d装甲师" }
+		4 = { "西班牙陆军第%d装甲师" }
+		5 = { "西班牙陆军第%d装甲师" }
+		6 = { "西班牙陆军第%d装甲师" }
+		7 = { "西班牙陆军第%d装甲师" }
+		8 = { "西班牙陆军第%d装甲师" }
+		9 = { "西班牙陆军第%d装甲师" }
+		10 = { "西班牙陆军第%d装甲师" }
+	}
+}
+
+SPR_PAR_01 = 
+{
+	name = "西班牙陆军空降师"
+
+	for_countries = { SPR }
+
+	can_use = { always = yes }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { SPR_INF_01 }
+
+	fallback_name = "西班牙陆军第%d空降师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "西班牙陆军第%d空降师" }
+		2 = { "西班牙陆军第%d空降师" }
+		3 = { "西班牙陆军第%d空降师" }
+		4 = { "西班牙陆军第%d空降师" }
+		5 = { "西班牙陆军第%d空降师" }
+		6 = { "西班牙陆军第%d空降师" }
+		7 = { "西班牙陆军第%d空降师" }
+		8 = { "西班牙陆军第%d空降师" }
+		9 = { "西班牙陆军第%d空降师" }
+		10 = { "西班牙陆军第%d空降师" }
+	}
+}
+
+SPR_MAR_01 = 
+{
+	name = "西班牙陆军陆战师"
+
+	for_countries = { SPR }
+
+	can_use = { always = yes }
+
+	division_types = { "marine" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { SPR_INF_01 }
+
+	fallback_name = "西班牙陆军第%d海军陆战师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "西班牙陆军第%d海军陆战师" }
+		2 = { "西班牙陆军第%d海军陆战师" }
+		3 = { "西班牙陆军第%d海军陆战师" }
+		4 = { "西班牙陆军第%d海军陆战师" }
+		5 = { "西班牙陆军第%d海军陆战师" }
+		6 = { "西班牙陆军第%d海军陆战师" }
+		7 = { "西班牙陆军第%d海军陆战师" }
+		8 = { "西班牙陆军第%d海军陆战师" }
+		9 = { "西班牙陆军第%d海军陆战师" }
+		10 = { "西班牙陆军第%d海军陆战师" }
+	}
+}
+
+SPR_MNT_01 = 
+{
+	name = "西班牙陆军山地师"
+
+	for_countries = { SPR }
+
+	can_use = { always = yes }
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { SPR_INF_01 }
+
+	fallback_name = "西班牙陆军第%d山地师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "西班牙陆军第%d山地师" }
+		2 = { "西班牙陆军第%d山地师" }
+		3 = { "西班牙陆军第%d山地师" }
+		4 = { "西班牙陆军第%d山地师" }
+		5 = { "西班牙陆军第%d山地师" }
+		6 = { "西班牙陆军第%d山地师" }
+		7 = { "西班牙陆军第%d山地师" }
+		8 = { "西班牙陆军第%d山地师" }
+		9 = { "西班牙陆军第%d山地师" }
+		10 = { "西班牙陆军第%d山地师" }
+	}
+}
+
+SPR_GAR_01 = 
+{
+	name = "西班牙陆军警备师"
+
+	for_countries = { SPR }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { SPR_INF_01 }
+
+	fallback_name = "西班牙陆军第%d守备师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "西班牙陆军巴利阿里群岛警备师" }
+		2 = { "西班牙陆军加那利群岛警备师" }
+		3 = { "西班牙陆军摩洛哥守备师" }
+		4 = { "西班牙陆军马耶史瓦戈守备师" }
+		5 = { "西班牙陆军马德里警备师" }
+		6 = { "西班牙陆军塞维利亚警备师" }
+		7 = { "西班牙陆军加里西亚警备师" }
+		8 = { "西班牙陆军巴塞罗那警备师" }
+		9 = { "西班牙陆军瓦伦西亚警备师" }
+		10 = { "西班牙陆军加的斯警备师" }
+		11 = { "西班牙陆军科鲁纳警备师" }
+		12 = { "西班牙陆军喀他赫纳警备师" }
+		13 = { "西班牙陆军布尔戈斯警备师" }
+		14 = { "西班牙陆军萨拉哥萨警备师" }
+		15 = { "西班牙陆军梅利利亚警备师" }
+		16 = { "西班牙陆军休达警备师" }
+		17 = { "西班牙陆军毕尔巴鄂警备师" }
+		18 = { "西班牙陆军巴利亚多利德警备师" }
+	}
+}
+
+SPA_INF_01 = 
+{
+	name = "国民军步兵师"
+
+	for_countries = { SPR }
+
+	can_use = { 
+		has_government = fascism 
+	}
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { SPR_INF_01 }
+
+	fallback_name = "西班牙陆军第%d步兵师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		11 = { "西班牙陆军第%d步兵师" }			# Re-ordered to be consistent with Nationalist Spain division naming 
+		12 = { "西班牙陆军第%d步兵师" }
+		21 = { "西班牙陆军第%d步兵师" }
+		22 = { "西班牙陆军第%d步兵师" }
+		31 = { "西班牙陆军第%d步兵师" }
+		32 = { "西班牙陆军第%d步兵师" }
+		41 = { "西班牙陆军第%d步兵师" }
+		42 = { "西班牙陆军第%d步兵师" }
+		51 = { "西班牙陆军第%d步兵师" }
+		52 = { "西班牙陆军第%d步兵师" }
+		61 = { "西班牙陆军第%d步兵师" }
+		62 = { "西班牙陆军第%d步兵师" }
+		71 = { "西班牙陆军第%d步兵师" }
+		72 = { "西班牙陆军第%d步兵师" }
+		81 = { "西班牙陆军第%d步兵师" }
+		82 = { "西班牙陆军第%d步兵师" }
+		91 = { "西班牙陆军第%d步兵师" }
+		92 = { "西班牙陆军第%d步兵师" }
+		101 = { "西班牙陆军第%d步兵师" }
+		102 = { "西班牙陆军第%d步兵师" }		
+		13 = { "西班牙陆军第%d步兵师" }
+		23 = { "西班牙陆军第%d步兵师" }
+		43 = { "西班牙陆军第%d步兵师" }
+		33 = { "西班牙陆军第%d步兵师" }
+		53 = { "西班牙陆军第%d步兵师" }
+		63 = { "西班牙陆军第%d步兵师" }
+		73 = { "西班牙陆军第%d步兵师" }
+		83 = { "西班牙陆军第%d步兵师" }
+		93 = { "西班牙陆军第%d步兵师" }
+		103 = { "西班牙陆军第%d步兵师" }
+		14 = { "西班牙陆军第%d步兵师" }
+		24 = { "西班牙陆军第%d步兵师" }
+		44 = { "西班牙陆军第%d步兵师" }
+		34 = { "西班牙陆军第%d步兵师" }
+		54 = { "西班牙陆军第%d步兵师" }
+		64 = { "西班牙陆军第%d步兵师" }
+		74 = { "西班牙陆军第%d步兵师" }
+		84 = { "西班牙陆军第%d步兵师" }
+		15 = { "西班牙陆军第%d步兵师" }
+		25 = { "西班牙陆军第%d步兵师" }
+		45 = { "西班牙陆军第%d步兵师" }
+		35 = { "西班牙陆军第%d步兵师" }
+		55 = { "西班牙陆军第%d步兵师" }
+		65 = { "西班牙陆军第%d步兵师" }
+		75 = { "西班牙陆军第%d步兵师" }
+		85 = { "西班牙陆军第%d步兵师" }
+		94 = { "西班牙陆军第%d步兵师" }
+		104 = { "西班牙陆军第%d步兵师" }
+		16 = { "西班牙陆军第%d步兵师" }
+		26 = { "西班牙陆军第%d步兵师" }
+		46 = { "西班牙陆军第%d步兵师" }
+		36 = { "西班牙陆军第%d步兵师" }
+		56 = { "西班牙陆军第%d步兵师" }
+		66 = { "西班牙陆军第%d步兵师" }
+		76 = { "西班牙陆军第%d步兵师" }
+	}
+}
+

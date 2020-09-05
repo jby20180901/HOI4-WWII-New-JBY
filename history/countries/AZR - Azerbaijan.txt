@@ -1,0 +1,66 @@
+﻿capital = 229 #阿塞拜疆
+
+#oob = "GER_1936"
+
+set_fuel_ratio = 0.8
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 100
+}
+
+create_country_leader = {
+	name = "亚基布·艾博弗" #法西斯
+	desc = " "
+	picture = "AZR_AIJI_BU.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "诺夫鲁兹·马马多夫" #中立
+	desc = "   "
+	picture = "AZR_MAMA_DUIOFU.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = { 
+	  
+		
+	}
+}
+
+create_country_leader = {
+	name = "梅赫丽班·阿利耶娃"  #民主
+	desc = " "
+	picture = "AZR_MEIHE_LIBAN.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "伊利哈姆·阿利耶夫"  #共产
+	desc = " "
+	picture = "AZR_HALI_YEFU.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+		
+	}
+}
+

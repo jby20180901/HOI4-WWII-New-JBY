@@ -1,0 +1,67 @@
+﻿division_template = {
+	name = "游击队"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "游击军第1突击纵队"
+		location = 1588
+		division_template = "游击队"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "游击军第2突击纵队"
+		location = 1588
+		division_template = "游击队"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "游击军第3突击纵队"
+		location = 1588
+		division_template = "游击队"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "游击军第4突击纵队"
+		location = 10567
+		division_template = "游击队"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "游击军第5突击纵队"
+		location = 10567
+		division_template = "游击队"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "游击军第6突击纵队"
+		location = 10567
+		division_template = "游击队"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "游击军第7突击纵队"
+		location = 10463
+		division_template = "游击队"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "游击军第8突击纵队"
+		location = 10463
+		division_template = "游击队"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "游击军第9突击纵队"
+		location = 10463
+		division_template = "游击队"
+		start_experience_factor = 0.2
+	}
+}

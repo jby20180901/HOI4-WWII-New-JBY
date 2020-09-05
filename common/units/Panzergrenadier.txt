@@ -1,0 +1,81 @@
+sub_units = {
+	Panzergrenadier = { #装甲掷弹兵团
+		sprite = mechanized
+		map_icon_category = infantry
+
+		priority = 610
+		ai_priority = 200
+		active = no
+
+		type = {
+			mechanized
+		}
+		
+		group = mobile
+		
+		categories = {
+			category_front_line
+			category_all_infantry
+			category_army
+		}
+
+		combat_width = 4
+
+		#Offensive Abilities
+		soft_attack = 0.4
+		hard_attack = 8.0
+		
+		#Size Definitions
+		max_strength = 30
+		max_organisation = 60
+		default_morale = 0.6
+		manpower = 3250
+
+		#Misc Abilities
+		training_time = 200
+		suppression = 4
+		weight = 4
+		
+		supply_consumption = 0.3
+		
+		
+		need = {
+			mechanized_equipment = 150
+			infantry_equipment = 200
+		}
+
+		forest = {
+			attack = -0.05
+		}
+		mountain = {
+			attack = -0.05
+		}
+		jungle = {
+			attack = -0.05
+		}
+		marsh = {
+			attack = -0.05
+		}
+		urban = {
+			attack = 0.30
+			defence = 0.50
+			movement = 0.10
+		}
+		
+		plains = {
+			attack = 0.30
+			defence = 0.50
+			movement = 0.10
+		}
+		river = {
+			attack = -0.2
+			movement = -0.2
+		}
+		amphibious = {
+			attack = -0.1
+		}
+
+		hardness = 0.45
+	}
+	
+}

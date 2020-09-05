@@ -1,0 +1,567 @@
+﻿capital = 111
+
+oob = "FIN_1936"
+
+set_research_slots = 3
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "FIN_1936_naval_mtg"
+	else = {
+		set_naval_oob = "FIN_1936_naval_legacy"
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_secondary_battery = 1
+		coastal_defense_ships = 1
+	}
+}
+
+add_ideas = {
+	limited_conscription
+	sisu
+	chaoxian_neutrality_ideaeas
+}
+
+set_technology = {
+   
+	infantry_weapons = 1
+	 cavalry_tech = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1			
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	early_submarine = 1
+	early_heavy_cruiser = 1
+}
+
+set_convoys = 5
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1933.7.1"
+	election_frequency = 36
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 10
+	fascism = 10
+	communism = 1
+	neutrality = 79
+}
+
+1939.1.1 = {
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 10
+			}
+
+			fascism = {
+				popularity = 10
+			}
+			
+			communism = {
+				popularity = 1
+			}
+
+			neutrality = {
+				popularity = 79
+			}
+		}
+		
+		ruling_party = neutrality
+		last_election = "1939.7.1"
+		election_frequency = 36
+		elections_allowed = yes
+	}
+}
+create_country_leader = {
+	name = "里斯托·吕蒂"
+	desc = "POLITICS_RISTO_HEIKKI_RYT_DESC"
+	picture = "Risto_Heikki_Ryt.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "阿莫·阿尔通"
+	desc = "POLITICS_AIMO_AALTONEN_DESC"
+	picture = "Amo_Altun.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "韦勒·安纳拉"
+	desc = "POLITICS_VILHO_ANNALA_DESC"
+	picture = "Weiler_Annala.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "柯尤苏泰·卡里奥"
+	desc = "POLITICS_KYÖSTI_KALLIO_DESC"
+	picture = "Koizumi_Kario.dds"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "埃里克·海因里希斯"
+	picture = "Eric_heinrichs.dds"
+	traits = { winter_specialist ranger }
+	skill = 4
+    attack_skill = 4
+    defense_skill = 4
+    planning_skill = 3
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "维尔霍·彼得·涅诺宁"
+	picture = "Vilho_Peter_Ninogenin.dds"
+	traits = { winter_specialist commando }
+	skill = 3
+    attack_skill = 3
+    defense_skill = 1
+    planning_skill = 4
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "阿·帕贾里"
+	picture = "A_Pajari.dds"
+	traits = {  }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+
+create_corps_commander = {
+	name = "阿道夫·埃罗特"
+	picture = "Adolf_Elliot.dds"
+	traits = { winter_specialist  }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+
+create_corps_commander = {
+	name = "阿尔波·K·马廷"
+	picture = "Alpo_K_Matin.dds"
+	traits = { winter_specialist  savenger   }
+	skill = 3
+    attack_skill = 2
+    defense_skill = 3
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "阿克塞尔爱郎"
+	picture = "Aksai_Erlang.dds"
+	traits = {  }
+	skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "阿内·锡沃"
+	picture = "Arne_Sivo.dds"
+	traits = { winter_specialist commando }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 2
+}
+create_corps_commander = {
+	name = "阿内·朱蒂莱恩"
+	picture = "Arne_Judilene.dds"
+	traits = { guerilla_fighter }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "埃诺·库瓦哈"
+	picture = "Enno_Kuwaha.dds"
+	traits = { winter_specialist  politically_connected  }
+	skill = 3
+    attack_skill = 2
+    defense_skill = 3
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "奥拉维·阿拉克皮"
+	picture = "Olavi_Arakpi.dds"
+	traits = {  commando }
+	skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "恩西奥·西拉斯沃"
+	picture = "Encio_Siilasvuo.dds"
+	traits = { winter_specialist commando }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "哈拉尔德·奥基斯特"
+	picture = "Harald_kister.dds"
+	traits = { winter_specialist  expert_improviser }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "哈利.金刚"
+	picture = "Harry_King_Kong.dds"
+	traits = {  }
+	skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "汉纳·汉纳克西拉"
+	picture = "Hannah_Hannack_Silas.dds"
+	traits = {  }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "霍·凯诺嫩"
+	picture = "Huo_Kai_Nuo_Nen.dds"
+	traits = { winter_specialist  }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "吉·拉帕纳"
+	picture = "Ji_Lappana.dds"
+	traits = { winter_specialist  }
+	skill = 2
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "贾尔伦.伦奎斯特"
+	picture = "Jallen_rehnquist.dds"
+	traits = { career_officer }
+	skill = 3
+    attack_skill = 3
+    defense_skill = 3
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "贾克科·瓦塔嫩"
+	picture = "Jacco_Vatanen.dds"
+	traits = { infantry_expert   }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 2
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "杰尔默·锡勒斯维"
+	picture = "Jarmer_Silesville.dds"
+	traits = {panzer_leader  }
+	skill = 3
+    attack_skill = 3
+    defense_skill = 3
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "卡尔弗雷德.里克威尔"
+	picture = "Carl_fred_ricwell.dds"
+	traits = { winter_specialist commando }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "卡勒沃·库基拉"
+	picture = "Kalevo_Kukila.dds"
+	traits = { winter_specialist trait_engineer  }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "卡洛·海斯卡尼"
+	picture = "Carlo_Haskani.dds"
+	traits = {   }
+	skill = 1
+    attack_skill = 2
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "库尔特·马蒂·沃伦斯"
+	picture = "Kurt_Marty_Volens.dds"
+	traits = { winter_specialist urban_assault_specialist }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "劳里·蒂嫩"
+	picture = "Laurie_Tinon.dds"
+	traits = { urban_assault_specialist }
+	skill = 1
+    attack_skill = 2
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+
+
+create_corps_commander = {
+	name = "劳里·马姆贝格"
+	picture = "Laurie_Mamberg.dds"
+	traits = { winter_specialist commando }
+	skill = 2
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "雷诺.奥哈拉马"
+	picture = "Renault_o_harama.dds"
+	traits = { winter_specialist commando }
+	skill = 1
+    attack_skill = 2
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "鲁本·拉古斯"
+	picture = "Reuben_lagus.dds"
+	traits = { t commando }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "伦纳特·厄施"
+	picture = "Lennert_Usher.dds"
+	traits = { winter_specialist commando }
+	skill = 2
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "马蒂·阿霍"
+	picture = "Marty_ahoe.dds"
+	traits = {  }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "马蒂·阿尼奥"
+	picture = "Marty_Agneau.dds"
+	traits = {  }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "帕沃·塔韦拉"
+	picture = "Paavo_Taavela.dds"
+	traits = { old_guard    }
+	skill = 2
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 2
+}
+create_corps_commander = {
+	name = "萨卡里·西梅利斯"
+	picture = "Sakari_Ziemelis.dds"
+	traits = {  }
+	skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "维约·图奥波"
+	picture = "Vieux_toubo.dds"
+	traits = { trait_engineer  }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "沃尔德马尔·黑格隆德"
+	picture = "Voldemar_Haegglund.dds"
+	traits = {  }
+	skill = 3
+    attack_skill = 2
+    defense_skill = 1
+    planning_skill = 3
+    logistics_skill = 2
+}
+
+
+create_corps_commander = {
+	name = "雨果.奥斯特曼"
+	picture = "Hugo_osterman.dds"
+	traits = { commando }
+	skill = 2
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "朱霍·海斯卡尼"
+	picture = "Johor_Haskani.dds"
+	traits = { trait_mountaineer  }
+	skill = 2
+    attack_skill = 3
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "萨卡里西.米利厄斯"
+	picture = "Carisi_milius.dds"
+	traits = { winter_specialist commando }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_field_marshal = {
+	name = "曼纳海姆"
+	picture = "Mannerheim.dds"
+	traits = {winter_specialist  ambusher savenger winter_expert  defensive_doctrine  logistics_wizard   }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_navy_leader = {
+	name = "埃罗.拉霍拉"
+	picture = "Arrow_Lahora.dds"
+	traits = {   }
+	skill = 2
+	
+}
+
+create_navy_leader = {
+	name = "瓦罗.里皮"
+	picture = "Varro_Lippi.dds"
+	traits = {   }
+	skill = 2
+	
+}

@@ -1,0 +1,107 @@
+#formable_nations = {
+#
+#	icon = generic_formable_nations
+#
+#	allowed = {
+#		has_dlc = "Waking the Tiger"
+#	}
+#}
+
+form_iberian_union_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_iberia
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_greater_bulgaria_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_greater_bulgaria
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_mexican_empire_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_mexican_empire
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_australasia_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_australasia
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_greater_finland_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_greater_finland
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_italian_empire_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_italian_empire
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_zapadoslavia_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_zapadoslavia
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_la_plata_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_la_plata
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_macedonia_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_macedonia
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}

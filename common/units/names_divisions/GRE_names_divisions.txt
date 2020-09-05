@@ -1,0 +1,383 @@
+﻿# Division template historical names system. Is a new method of naming the divisions based on the names-group assigned to it's template.
+# If we run out of all historical names, the names will be assigned in the old way.
+#
+# Each group has a made up tag. Use it if you want to append more, or replace existing names with the extra txt files (modding).
+#
+# for_countries - lists all countries that can use it. If empty, or entire tag is missing, all countries in the world can use it.
+#
+# can_use - is a trigger that locks/unlocks the group under specific circumstances. The trigger is in a country scope.
+#
+# division_types - is a list of tokens to corresponding unit types. A player can in fact use any group of names for a div.template
+#                  however this tag is a helper for an automated choice (for AI, or if the group must switch on it's own, because
+#                  for example the current one is no longer available due to the can_use trigger saying so).
+#                  In automated choice, the division template must have at least 1 of the following types for it to be chosen.
+#
+# fallback_name - Is going to be used if we run out of the scripted historical names. If you want to use the old division naming
+#                 mechanics to be used for fallbacks, then just skip this option.
+#
+# unordered - It's a list of historical division names that did not have a number. Regardless if such names happened in history or not
+#             this option is available here mainly for a mods.
+#
+# ordered - Is a list of all historical names. 
+#           Numbers must start from 1 and up. 
+#           Numbers can't repeat in one scope.
+#           If you script the name for this group, at the same number (for example in a mod in another file), the name will be override.
+#           All arguments between the brackets must be separated by spaces. Each argument is wrapped in "quotas".
+#           1st argument = The name. It must contain either: 
+#                          %d (for decimal number placement)
+#                          %s (for string number placement - ROMAN numbers like XIV).
+#           2nd argument is optional = A localizable text describing this historical division. The text will be visible in the tooltip
+#                                      where you choose the historical division name.
+#           3rd argument is optional = An URL preferably pointing to the WIKI. It's a future feature that is not currently working in
+#                                      the current game version.
+GRE_INF_01 = 
+{
+	name = "希腊陆军步兵师"
+
+	for_countries = { GRE }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { GRE_INF_01 }
+
+	fallback_name = "希腊陆军第%s步兵师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "希腊陆军伯罗奔尼撒步兵师" }
+		2 = { "希腊陆军中希腊步兵师" }
+		3 = { "希腊陆军西希腊步兵师" }
+		4 = { "希腊陆军爱奥尼亚步兵师" }
+		5 = { "希腊陆军南爱琴海兵师" }
+		6 = { "希腊陆军北爱琴海步兵师" }
+		7 = { "希腊陆军阿提卡步兵师" }
+		8 = { "希腊色雷斯步兵师" }
+		9 = { "希腊陆军第%s步兵师" }
+		10 = { "希腊陆军东马其顿步兵师" }
+		11 = { "希腊中马其顿步兵师" }
+		12 = { "希腊西马其顿步兵师" }
+		13 = { "希腊陆军克里特岛步兵师" }
+		14 = { "希腊陆军伊皮鲁斯步兵师" }
+		15 = { "希腊色萨利步兵师" }
+		16 = { "希腊陆军第%s步兵师" }
+		17 = { "希腊陆军第%s步兵师" }
+		18 = { "希腊陆军第%s步兵师" }
+		19 = { "希腊陆军第%s步兵师" }
+		20 = { "希腊陆军第%s步兵师" }		
+		21 = { "希腊陆军第%s步兵师" }		
+		22 = { "希腊陆军第%s步兵师" }		
+		23 = { "希腊陆军第%s步兵师" }		
+		24 = { "希腊陆军第%s步兵师" }		
+		25 = { "希腊陆军第%s步兵师" }		
+		26 = { "希腊陆军第%s步兵师" }		
+		27 = { "希腊陆军第%s步兵师" }		
+		28 = { "希腊陆军第%s步兵师" }		
+		29 = { "希腊陆军第%s步兵师" }		
+		30 = { "希腊陆军第%s步兵师" }		
+	}
+}
+
+GRE_CAV_01 = 
+{
+	name = "希腊陆军骑兵师"
+
+	for_countries = { GRE }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { GRE_INF_01 }
+
+	fallback_name = "希腊陆军第%s骑兵师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "希腊陆军科林斯运河骑兵师" }
+		2 = { "希腊迈锡尼骑兵师" }
+		3 = { "希腊奥林匹亚骑兵师" }
+		4 = { "希腊陆军纳夫普利翁骑兵师" }
+		5 = { "希腊陆军第%s骑兵师" }
+		6 = { "希腊陆军第%s骑兵师" }
+		7 = { "希腊陆军第%s骑兵师" }
+		8 = { "希腊陆军第%s骑兵师" }
+		9 = { "希腊陆军第%s骑兵师" }
+		10 = { "希腊陆军第%s骑兵师" }
+	}
+}
+
+GRE_MOT_01 = 
+{
+	name = "希腊陆军摩步师"
+
+	for_countries = { GRE }
+
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { GRE_INF_01 }
+
+	fallback_name = "希腊陆军第%s摩步师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		19 = { "希腊蒂林斯摩步师" }
+		1 = { "希腊陆军赫拉克勒斯摩步师" }
+		2 = { "希腊陆军埃皮道洛斯摩步师" }
+		3 = { "希腊陆军艾比达奥斯摩步师" }
+		4 = { "希腊陆军第%s摩步师" }
+		5 = { "希腊陆军第%s摩步师" }
+		6 = { "希腊陆军第%s摩步师" }
+		7 = { "希腊陆军第%s摩步师" }
+		8 = { "希腊陆军第%s摩步师" }
+		9 = { "希腊陆军第%s摩步师" }
+		10 = { "希腊陆军第%s摩步师" }
+	}
+}
+
+GRE_MEC_01 = 
+{
+	name = "希腊陆军机步师"
+
+	for_countries = { GRE }
+
+	can_use = { always = yes }
+
+	division_types = { "mechanized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { GRE_INF_01 }
+
+	fallback_name = "希腊陆军第%s机步师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		19 = { "希腊陆军第%s机步师" }
+		1 = { "希腊陆军第%s机步师" }
+		2 = { "希腊陆军第%s机步师" }
+		3 = { "希腊陆军第%s机步师" }
+		4 = { "希腊陆军第%s机步师" }
+		5 = { "希腊陆军第%s机步师" }
+		6 = { "希腊陆军第%s机步师" }
+		7 = { "希腊陆军第%s机步师" }
+		8 = { "希腊陆军第%s机步师" }
+		9 = { "希腊陆军第%s机步师" }
+		10 = { "希腊陆军第%s机步师" }
+	}
+}
+
+GRE_ARM_01 = 
+{
+	name = "希腊陆军装甲师"
+
+	for_countries = { GRE }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { GRE_INF_01 }
+
+	fallback_name = "希腊陆军第%s装甲师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		20 = { "希腊斯巴达装甲师" }
+		1 = { "希腊陆军米斯特拉斯装甲师" }
+		2 = { "希腊陆军莫纳巴西亚装甲师" }
+		3 = { "希腊陆军巴塞装甲师" }
+		4 = { "伯罗奔尼撒装甲师" }
+		5 = { "希腊陆军第%s装甲师" }
+		6 = { "希腊陆军第%s装甲师" }
+		7 = { "希腊陆军第%s装甲师" }
+		8 = { "希腊陆军第%s装甲师" }
+		9 = { "希腊陆军第%s装甲师" }
+		10 = { "希腊陆军第%s装甲师" }
+	}
+}
+
+GRE_PAR_01 = 
+{
+	name = "希腊陆军伞兵师"
+
+	for_countries = { GRE }
+
+	can_use = { always = yes }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { GRE_INF_01 }
+
+	fallback_name = "希腊陆军第%s伞兵师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "希腊陆军第%s伞兵师" }
+		2 = { "希腊陆军第%s伞兵师" }
+		3 = { "希腊陆军第%s伞兵师" }
+		4 = { "希腊陆军第%s伞兵师" }
+		5 = { "希腊陆军第%s伞兵师" }
+		6 = { "希腊陆军第%s伞兵师" }
+		7 = { "希腊陆军第%s伞兵师" }
+		8 = { "希腊陆军第%s伞兵师" }
+		9 = { "希腊陆军第%s伞兵师" }
+		10 = { "希腊陆军第%s伞兵师" }
+	}
+}
+
+GRE_MAR_01 = 
+{
+	name = "希腊陆军陆战师"
+
+	for_countries = { GRE }
+
+	can_use = { always = yes }
+
+	division_types = { "marine" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { GRE_INF_01 }
+
+	fallback_name = "希腊陆军第%s海军陆战队"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "希腊陆军第%s海军陆战队" }
+		2 = { "希腊陆军第%s海军陆战队" }
+		3 = { "希腊陆军第%s海军陆战队" }
+		4 = { "希腊陆军第%s海军陆战队" }
+		5 = { "希腊陆军第%s海军陆战队" }
+		6 = { "希腊陆军第%s海军陆战队" }
+		7 = { "希腊陆军第%s海军陆战队" }
+		8 = { "希腊陆军第%s海军陆战队" }
+		9 = { "希腊陆军第%s海军陆战队" }
+		10 = { "希腊陆军第%s海军陆战队" }
+	}
+}
+
+GRE_MNT_01 = 
+{
+	name = "希腊陆军山地师"
+
+	for_countries = { GRE }
+
+	can_use = { always = yes }
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { GRE_INF_01 }
+
+	fallback_name = "希腊陆军第%s山地师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "希腊陆军第%s山地师" }
+		2 = { "希腊陆军第%s山地师" }
+		3 = { "希腊陆军第%s山地师" }
+		4 = { "希腊陆军第%s山地师" }
+		5 = { "希腊陆军第%s山地师" }
+		6 = { "希腊陆军第%s山地师" }
+		7 = { "希腊陆军第%s山地师" }
+		8 = { "希腊陆军第%s山地师" }
+		9 = { "希腊陆军第%s山地师" }
+		10 = { "希腊陆军第%s山地师" }
+		11 = { "希腊陆军第%s山地师" }
+		12 = { "希腊陆军第%s山地师" }
+		13 = { "希腊陆军第%s山地师" }
+		14 = { "希腊陆军第%s山地师" }
+		15 = { "希腊陆军第%s山地师" }
+		16 = { "希腊陆军第%s山地师" }
+		17 = { "希腊陆军第%s山地师" }
+		18 = { "希腊陆军第%s山地师" }
+		19 = { "希腊陆军第%s山地师" }
+		20 = { "希腊陆军第%s山地师" }		
+		21 = { "希腊陆军第%s山地师" }		
+		22 = { "希腊陆军第%s山地师" }		
+		23 = { "希腊陆军第%s山地师" }		
+		24 = { "希腊陆军第%s山地师" }		
+		25 = { "希腊陆军第%s山地师" }		
+		26 = { "希腊陆军第%s山地师" }		
+		27 = { "希腊陆军第%s山地师" }		
+		28 = { "希腊陆军第%s山地师" }		
+		29 = { "希腊陆军第%s山地师" }		
+		30 = { "希腊陆军第%s步山地师" }		
+	}
+}
+
+GRE_GAR_01 = 
+{
+	name = "希腊陆军警备师"
+
+	for_countries = { GRE }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { GRE_INF_01 }
+
+	fallback_name = "希腊陆军第%s警备师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		21 = { "希腊陆军第%s警备师" }		
+		22 = { "希腊陆军第%s警备师" }		
+		23 = { "希腊陆军第%s警备师" }		
+		24 = { "希腊陆军第%s警备师" }		
+		25 = { "希腊陆军第%s步兵师" }		
+		26 = { "希腊陆军第%s警备师" }		
+		27 = { "希腊陆军第%s警备师" }		
+		28 = { "希腊陆军第%s警备师" }		
+		29 = { "希腊陆军第%s警备师" }		
+		30 = { "希腊陆军第%s警备师" }		
+		1 = { "希腊陆军第%s警备师" }
+		2 = { "希腊陆军第%s警备师" }
+		3 = { "希腊陆军第%s警备师" }
+		4 = { "希腊陆军第%s警备师" }
+		5 = { "希腊陆军第%s警备师" }
+		6 = { "希腊陆军第%s警备师" }
+		7 = { "希腊陆军第%s警备师" }
+		8 = { "希腊陆军第%s警备师" }
+		9 = { "希腊陆军第%s警备师" }
+		10 = { "希腊陆军第%s警备师" }
+		11 = { "希腊陆军第%s警备师" }
+		12 = { "希腊陆军第%s警备师" }
+		13 = { "希腊陆军第%s警备师" }
+		14 = { "希腊陆军第%s警备师" }
+		15 = { "希腊陆军第%s警备师" }
+		16 = { "希腊陆军第%s警备师" }
+		17 = { "希腊陆军第%s警备师" }
+		18 = { "希腊陆军第%s警备师" }
+		19 = { "希腊陆军第%s警备师" }
+		20 = { "希腊陆军第%s警备师" }		
+	}
+}
+

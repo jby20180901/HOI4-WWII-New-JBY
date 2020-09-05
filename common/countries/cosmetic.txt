@@ -1,0 +1,450 @@
+### DEFAULT COLOURS ###
+
+MAL_UK = {
+    color = rgb { 201 56 93 }
+    color_ui = rgb { 255 73 121 }
+}
+
+INS_HOL = {
+    color = rgb { 203 138 74 }
+    color_ui = rgb { 255 179 96 }
+}
+
+HUN_EMPIRE = {
+	color = rgb { 194 198 215 }
+	color_ui = rgb { 255 255 255 }
+}
+
+AUS_NOT_WHITE = {	
+	color = rgb { 249 126 98 }
+	color_ui = rgb { 255 164 127 }
+}
+
+SCA_UNIFIED = {
+	color = rgb { 0 102 204 }
+	color_ui = rgb { 0 102 204 }
+}
+
+NDC_UNIFIED = {
+	color = rgb { 0 76 153 }
+	color_ui = rgb { 0 76 153 }
+}
+
+GCO_UNIFIED = {
+	color = rgb { 255 255 51 }
+	color_ui = rgb { 255 255 51 }
+}
+
+PLC_UNIFIED = {
+	color = rgb { 255 125 160 }
+	color_ui = rgb { 255 125 160 }
+}
+
+UNL_UNIFIED = {
+	color = rgb { 255 128 0 }
+	color_ui = rgb { 255 128 0 }
+}
+
+USC_UNIFIED = {
+	color = rgb { 103 204 255 }
+	color_ui = rgb { 103 204 255 }
+}
+
+BAL_UNIFIED = {
+	color = rgb { 0 102 102 }
+	color_ui = rgb { 0 102 102 }
+}
+
+OTT_UNIFIED = {
+	color = rgb { 178 255 102 }
+	color_ui = rgb { 178 255 102 }
+}
+
+EUR_UNIFIED = {
+	color = rgb { 0 51 153 }
+	color_ui = rgb { 0 51 153 }
+}
+
+MUT_UNIFIED = {
+	color = rgb { 153 153 0 }
+	color_ui = rgb { 153 153 0 }
+}
+
+SPQR_UNIFIED = {
+	color = rgb { 153 0 0 }
+	color_ui = rgb { 153 0 0 }
+}
+
+PER_UNIFIED = {
+	color = rgb { 255 215 0 }
+	color_ui = rgb { 255 215 0 }
+}
+
+BYZ_UNIFIED = {
+	color = rgb { 143 12 125 }
+	color_ui = rgb { 143 12 125 }
+}
+
+ARA_UNIFIED = {
+	color = rgb { 85 102 0 }
+	color_ui = rgb { 85 102 0 }
+}
+
+MAJ_UNIFIED = {
+	color = rgb { 255 51 51 }
+	color_ui = rgb { 255 51 51 }
+}
+
+RAT_UNIFIED = {
+	color = rgb { 255 255 51 }
+	color_ui = rgb { 255 255 51 }
+}
+
+HRE_UNIFIED = {
+	color = rgb { 128 128 128 }
+	color_ui = rgb { 128 128 128 }
+}
+
+NOR_reichskommissariat = {
+	color = rgb { 115 115 115 }
+	color_ui = rgb { 122 145 93 }
+}
+
+HOL_reichskommissariat = {
+	color = rgb { 115 115 115 }
+	color_ui = rgb { 122 145 93 }
+}
+
+BEL_reichskommissariat = {
+	color = rgb { 115 115 115 }
+	color_ui = rgb { 122 145 93 }
+}
+
+BLR_reichskommissariat = {
+	color = rgb { 115 115 115 }
+	color_ui = rgb { 122 145 93 }
+}
+
+UKR_reichskommissariat = {
+	color = rgb { 115 115 115 }
+	color_ui = rgb { 122 145 93 }
+}
+
+SPR_civil_war = {
+	color = rgb { 200 100 31 }
+	color_ui = rgb { 245 123 38 }
+}
+
+GER_civil_war = {
+	color = HSV { 0.1 0.15 0.4 }
+	color_ui = rgb { 138 155 116 }
+}
+
+GER_provisional_gvt = {
+	color = rgb { 128 128 128 }
+	color_ui = rgb { 115 115 115 }
+}
+
+GER_german_empire = {
+	color = rgb { 128 128 128 }
+	color_ui = rgb { 115 115 115 }
+}
+
+GER_german_monarchy = {
+	color = rgb { 128 128 128 }
+	color_ui = rgb { 115 115 115 }
+}
+
+CHI_warlord_leader = {
+	color = hsv { 0.18 0.6 0.9 } #255 244 190
+	color_ui = hsv { 0.18 0.3 0.9 }
+}
+MAN_restored = {
+	color = rgb { 237 152 18 }
+	color_ui = rgb { 224 139 5 }
+}
+JAP_showa_restoration = {
+	color = rgb { 230 230 230 }
+}
+
+GER_greater_german_reich = {
+	color = rgb { 54 54 54 }
+	color_ui = rgb { 115 115 115 }
+}
+
+CHI_warlord_PRC = {
+	color = rgb { 245 12 55 }
+	color_ui = rgb { 178 34 60 }
+}
+
+### COUNTRY COLOURS ####
+
+BLACK = {
+	color = rgb { 10 10 10 }
+	color_ui = rgb { 10 10 10 }
+}
+
+CHARLESTON = {
+	color = rgb { 35 43 43 }
+	color_ui = rgb { 35 43 43 }
+}
+
+GREY = {
+	color = rgb { 127 127 127 }
+	color_ui = rgb { 127 127 127 }
+}
+
+SILVER = {
+	color = rgb { 130 135 150 }
+	color_ui = rgb { 130 135 150 }
+}
+
+WHITE = {
+	color = rgb { 250 250 250 }
+	color_ui = rgb { 250 250 250 }
+}
+
+BONE = {
+	color = rgb { 227 218 201 }
+	color_ui = rgb { 227 218 201 }
+}
+
+PINK = {
+	color = rgb { 250 190 200 }
+	color_ui = rgb { 250 190 200 }
+}
+
+BEAVER = {
+	color = rgb { 160 130 112 }
+	color_ui = rgb { 160 130 112 }
+}
+
+BROWN = {
+	color = rgb { 150 75 0 }
+	color_ui = rgb { 150 75 0 }
+}
+
+RED = {
+	color = rgb { 250 0 0 }
+	color_ui = rgb { 250 0 0 }
+}
+
+CRIMSON = {
+	color = rgb { 220 20 60 }
+	color_ui = rgb { 220 20 60 }
+}
+
+MAROON = {
+	color = rgb { 127 0 0 }
+	color_ui = rgb { 127 0 0 }
+}
+
+AUBURN = {
+	color = rgb { 165 40 40 }
+	color_ui = rgb { 165 40 40 }
+}
+
+ORANGE = {
+	color = rgb { 250 127 0 }
+	color_ui = rgb { 250 127 0 }
+}
+
+GOLD = {
+	color = rgb { 212 175 55 }
+	color_ui = rgb { 212 175 55 }
+}
+
+KHAKI = {
+	color = rgb { 240 230 140 }
+	color_ui = rgb { 240 230 140 }
+}
+
+YELLOW = {
+	color = rgb { 250 250 0 }
+	color_ui = rgb { 250 250 0 }
+}
+
+GREEN = {
+	color = rgb { 0 250 0 }
+	color_ui = rgb { 0 250 0 }
+}
+
+RUSSIAN = {
+	color = rgb { 103 146 103 }
+	color_ui = rgb { 103 146 103 }
+}
+
+PERIWINKLE = {
+	color = rgb { 200 200 250 }
+	color_ui = rgb { 200 200 250 }
+}
+
+CYAN = {
+	color = rgb { 0 250 250 }
+	color_ui = rgb { 0 250 250 }
+}
+
+SKY_BLUE = {
+	color = rgb { 135 206 235 }
+	color_ui = rgb { 135 206 235 }
+}
+
+VERDIGRIS = {
+	color = rgb { 67 180 175 }
+	color_ui = rgb { 67 180 175 }
+}
+
+AZURE = {
+	color = rgb { 0 127 250 }
+	color_ui = rgb { 0 127 250 }
+}
+
+BLUE = {
+	color = rgb { 0 0 250 }
+	color_ui = rgb { 0 0 250 }
+}
+
+ROYAL = {
+	color = rgb { 0 35 100 }
+	color_ui = rgb { 0 35 100 }
+}
+
+PRUSSIAN_BLUE = {
+	color = rgb { 0 49 83 }
+	color_ui = rgb { 0 49 83 }
+}
+
+INDIGO = {
+	color = rgb { 75 0 130 }
+	color_ui = rgb { 75 0 130 }
+}
+
+PURPLE = {
+	color = rgb { 127 0 127 }
+	color_ui = rgb { 127 0 127 }
+}
+
+FUCHSIA = {
+	color = rgb { 250 0 250 }
+	color_ui = rgb { 250 0 250 }
+}
+
+GER_GREY = {
+	color = rgb { 106 119 121 }
+	color_ui = rgb { 106 119 121 }
+}
+
+UK_RED = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 201 56 93 }
+}
+
+SOV_RED = {
+	color = rgb { 125 13 24 }
+	color_ui = rgb { 125 13 24 }
+}
+
+SWE_BLUE = {
+	color = rgb { 36 132 247 }
+	color_ui = rgb { 36 132 247 }
+}
+
+FRA_BLUE = {
+	color = rgb { 57 113 228 }
+	color_ui = rgb { 57 113 228 }
+}
+
+BEL_YELLOW = {
+	color = rgb { 193 171 8 }
+	color_ui = rgb { 193 171 8 }
+}
+
+NET_ORANGE = {
+	color = rgb { 203 138 74 }
+	color_ui = rgb { 23 138 74 }
+}
+
+CZE_BLUE = {
+	color = rgb { 54 167 156 }
+	color_ui = rgb { 54 167 156 }
+}
+
+POL_PINK = {
+	color = rgb { 197 92 106 }
+	color_ui = rgb { 197 92 106 }
+}
+
+AUS_WHITE = {
+	color = rgb { 194 198 215 }
+	color_ui = rgb { 194 198 215 }
+}
+
+LIT_YELLOW = {
+	color = rgb { 219 219 119 }
+	color_ui = rgb { 219 219 119 }
+}
+
+EST_BLUE = {
+	color = rgb { 50 135 175 }
+	color_ui = rgb { 50 135 175 }
+}
+
+LAT_BLUE = {
+	color = rgb { 75 77 186 }
+	color_ui = rgb { 75 77 186 }
+}
+
+ITA_GREEN = {
+	color = rgb { 67 127 63 }
+	color_ui = rgb { 67 127 63 }
+}
+
+YUG_PURPLE = {
+	color = rgb { 72 73 126 }
+	color_ui = rgb { 72 73 126 }
+}
+
+SWI_RED = {
+	color = rgb { 224 5 5 }
+	color_ui = rgb { 224 5 5 }
+}
+
+TUR_GREY = {
+	color = rgb { 171 190 152 }
+	color_ui = rgb { 171 190 152 }
+}
+
+GRE_BLUE = {
+	color = rgb { 93 181 227 }
+	color_ui = rgb { 93 181 227 }
+}
+
+ALB_PINK = {
+	color = rgb { 149 45 102 }
+	color_ui = rgb { 149 45 102 }
+}
+
+NOR_BROWN = {
+	color = rgb { 111 71 71 }
+	color_ui = rgb { 111 71 71 }
+}
+
+DEN_BROWN = {
+	color = rgb { 153 116 93 }
+	color_ui = rgb { 153 116 93 }
+}
+
+AUS_GREEN = {
+	color = rgb { 57 143 97 }
+	color_ui = rgb { 57 143 97 }
+}
+
+IRN_GREY = {
+	color = rgb { 71 113 97 }
+	color_ui = rgb { 71 113 97 }
+}
+
+USA_BLUE = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 20 133 237 }
+}

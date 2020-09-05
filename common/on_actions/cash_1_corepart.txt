@@ -1,0 +1,603 @@
+on_actions = {
+	on_startup = {
+		effect = {
+		every_country = {
+			if = {	
+				limit = {
+					check_variable = { num_controlled_states < 6 }
+				}
+				every_owned_state = {
+					add_resource = {
+						type = coal
+						amount = 10
+					}
+					add_resource = {
+						type = food
+						amount = 10
+					}
+					add_resource = {
+						type = money
+						amount = 10
+					}
+			}		
+			}	
+			if = {	
+				limit = {
+					check_variable = { num_controlled_states < 3 }
+				}
+				every_owned_state = {
+					add_resource = {
+						type = coal
+						amount = 10
+					}
+					add_resource = {
+						type = food
+						amount = 10
+					}
+					add_resource = {
+						type = money
+						amount = 20
+					}
+			}		
+			}
+		}
+		USA = {
+			
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 10
+				if = {
+					limit = { 
+						OR = {
+							check_variable = { infrastructure_level > 8 }
+						}
+					}
+					add_building_construction = {
+						type = money_maker
+						level = 6
+						instant_build = yes
+					}					
+				}
+				else = {
+					add_building_construction = {
+						type = money_maker
+						level = 3
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = food_maker
+						level = 2
+						instant_build = yes
+					}					
+				}
+			}
+			
+		}
+		CHI = {
+			every_owned_state = {
+				add_building_construction = {
+						type = money_maker
+						level = 1
+						instant_build = yes
+				}
+				add_building_construction = {
+						type = food_maker
+						level = 1
+						instant_build = yes
+				}
+			}
+		}
+		JAP = {
+			every_controlled_state = {
+				add_building_construction = {
+						type = food_maker
+						level = 2
+						instant_build = yes
+				}
+			}
+		}
+		every_state = {
+				add_extra_state_shared_building_slots = 20
+				if = {
+					limit = { 
+						OR = {
+							check_variable = { infrastructure_level = 10 }
+						}
+					}
+					add_building_construction = {
+						type = money_maker
+						level = 8
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coal_maker
+						level = 6
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = food_maker
+						level = 4
+						instant_build = yes
+					}					
+				}
+				else_if = {
+					limit = { 
+						OR = {
+							check_variable = { infrastructure_level = 9 }
+							check_variable = { infrastructure_level = 8 }
+							check_variable = { infrastructure_level = 7 }
+						}
+					}
+					add_building_construction = {
+						type = money_maker
+						level = 6
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coal_maker
+						level = 4
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = food_maker
+						level = 4
+						instant_build = yes
+					}					
+				}
+				else_if = {
+					limit = { 
+						OR = {
+							check_variable = { infrastructure_level = 6 }
+							check_variable = { infrastructure_level = 5 }
+						}
+					}
+					add_building_construction = {
+						type = money_maker
+						level = 5
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coal_maker
+						level = 4
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = food_maker
+						level = 4
+						instant_build = yes
+					}					
+				}
+				else_if = {
+					limit = { 
+						OR = {
+							check_variable = { infrastructure_level = 4 }
+						}
+					}
+					add_building_construction = {
+						type = money_maker
+						level = 3
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coal_maker
+						level = 3
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = food_maker
+						level = 5
+						instant_build = yes
+					}					
+				}
+				else_if = {
+					limit = { 
+						OR = {
+							check_variable = { infrastructure_level = 3 }
+							check_variable = { infrastructure_level = 2 }
+						}
+					}
+					add_building_construction = {
+						type = money_maker
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coal_maker
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = food_maker
+						level = 2
+						instant_build = yes
+					}
+				}
+				else_if = {
+					limit = { 
+						OR = {
+							check_variable = { infrastructure_level = 1 }
+							check_variable = { infrastructure_level = 0 }
+						}
+					}
+					add_building_construction = {
+						type = coal_maker
+						level = 1
+						instant_build = yes
+					}				
+				}
+		}
+		
+		SOV = {
+			every_owned_state = {
+				if = {
+					limit = { 
+						OR = {
+							check_variable = { infrastructure_level > 5 }
+						}
+					}
+					add_building_construction = {
+						type = money_maker
+						level = 4
+						instant_build = yes
+					}				
+				}
+				if = {
+					limit = { 
+						OR = {
+							check_variable = { infrastructure_level = 3 }
+							check_variable = { infrastructure_level = 2 }
+							check_variable = { infrastructure_level = 1 }
+							check_variable = { infrastructure_level = 0 }
+						}
+					}
+					remove_building = {
+						type = money_maker
+						level = 3
+						instant_build = yes
+					}
+					remove_building = {
+						type = coal_maker
+						level = 1
+						instant_build = yes
+					}
+					remove_building = {
+						type = food_maker
+						level = 2
+						instant_build = yes
+					}					
+				}
+				if = {
+					limit = { 
+						OR = {
+							check_variable = { infrastructure_level = 5 }
+							check_variable = { infrastructure_level = 4 }
+						}
+					}
+					remove_building = {
+						type = money_maker
+						level = 4
+						instant_build = yes
+					}
+					remove_building = {
+						type = coal_maker
+						level = 2
+						instant_build = yes
+					}
+					remove_building = {
+						type = food_maker
+						level = 1
+						instant_build = yes
+					}					
+				}
+			}
+		}
+		ENG = {
+			every_owned_state = {
+				if = {
+					limit = { 
+						AND = {
+							check_variable = { infrastructure_level < 6 }
+							NOT = { is_core_of = ENG }
+						}
+					}
+					remove_building = {
+						type = money_maker
+						level = 1
+						instant_build = yes
+					}
+					remove_building = {
+						type = coal_maker
+						level = 1
+						instant_build = yes
+					}
+					remove_building = {
+						type = food_maker
+						level = 1
+						instant_build = yes
+					}					
+				}
+			}
+		}
+		FRA = {
+			every_owned_state = {
+				if = {
+					limit = { 
+						AND = {
+							check_variable = { infrastructure_level < 6 }
+							NOT = { is_core_of = FRA }
+						}
+					}
+					remove_building = {
+						type = money_maker
+						level = 1
+						instant_build = yes
+					}
+					remove_building = {
+						type = coal_maker
+						level = 1
+						instant_build = yes
+					}
+					remove_building = {
+						type = food_maker
+						level = 1
+						instant_build = yes
+					}					
+				}
+			}
+		}
+		GER = {
+			every_owned_state = {
+				if = {
+					limit = { 
+						AND = {
+							check_variable = { infrastructure_level < 8 }
+						}
+					}
+					remove_building = {
+						type = money_maker
+						level = 1
+						instant_build = yes
+					}
+					remove_building = {
+						type = coal_maker
+						level = 1
+						instant_build = yes
+					}
+					remove_building = {
+						type = food_maker
+						level = 1
+						instant_build = yes
+					}					
+				}
+			}
+		}
+		
+		
+		every_country = {
+			
+			set_variable = { food_surplus_coef = 2.5   }
+			set_variable = { food_tex_coef = 0.25  }
+			set_variable = { coal_surplus_coef = 2.4   }
+			set_variable = { coal_tex_coef = 0.2  }
+			set_variable = { salary = 16 }
+			set_variable = { research_law = 100  }
+			set_variable = { build_law = 20  }
+			set_variable = { land_cost = 0  }
+			set_variable = { ariforce_cost = 0  }
+			set_variable = { naval_cost =  0 }
+			set_variable = { police_cost = 0 }
+			
+			set_array = { name = import_country }
+			
+			set_temp_variable = { temp_industry_food_surplus = resource@food }
+			multiply_temp_variable = { temp_industry_food_surplus = food_surplus_coef }
+			set_variable = { industry_food_surplus = temp_industry_food_surplus }
+			set_variable = { local_food = num_controlled_states }
+			multiply_variable = { local_food = 4 }
+			set_temp_variable = { temp_food_surplus = industry_food_surplus }
+			add_to_temp_variable = { temp_food_surplus = local_food }
+			set_variable = { food_surplus =  temp_food_surplus }			
+			
+			set_temp_variable = { temp_food_to_money = resource@food }
+			multiply_temp_variable ={ temp_food_to_money = food_tex_coef }  
+			set_variable = { food_to_money = temp_food_to_money  }
+
+			set_temp_variable = { temp_coal_surplus = resource@coal }
+			multiply_temp_variable = { temp_coal_surplus = coal_surplus_coef }
+			set_variable = { coal_surplus =  temp_coal_surplus }             
+			
+			set_temp_variable = { temp_coal_to_money = resource@coal }
+			multiply_temp_variable ={ temp_coal_to_money = coal_tex_coef }  
+			set_variable = { coal_to_money = temp_coal_to_money  }
+			
+			
+			
+			set_variable = { export_profit = import_country^num }
+			multiply_variable ={ export_profit = 300 }
+			
+			set_variable = { exported_money = resource_exported@money }
+			multiply_variable = { exported_money = 0.25 }
+			set_variable = { imported_money = resource_imported@money }
+			multiply_variable = { imported_money = 0.25 }
+			
+			set_temp_variable = { temp_money = resource_produced@money }
+			add_to_temp_variable = { temp_money = imported_money }
+			subtract_from_temp_variable = { temp_money = exported_money }
+
+
+			
+			add_to_temp_variable = { temp_money = food_to_money }
+			add_to_temp_variable = { temp_money = coal_to_money }         
+			set_variable = { money =  temp_money }
+			round_variable = money
+			
+			
+		
+			set_temp_variable = { temp_mil_fac = num_of_military_factories }
+			add_to_temp_variable { temp_mil_fac = num_of_naval_factories }
+			set_variable = { mil_fac = temp_mil_fac }
+			set_temp_variable = { temp_salary_cost = mil_fac }
+			multiply_temp_variable = { temp_salary_cost = salary }
+			set_variable = { total_salary  =  temp_salary_cost }
+			
+			set_temp_variable = { temp_research_cost = amount_research_slots }
+			multiply_temp_variable = { temp_research_cost = research_law }
+			set_variable = { total_research  =  temp_research_cost }
+			
+			
+			set_temp_variable = { temp_build_cost = num_of_civilian_factories_available_for_projects }
+			multiply_temp_variable = { temp_build_cost = build_law }
+			set_variable = { total_build  =  temp_build_cost }
+			
+			set_temp_variable = { temp_cost = total_salary }
+			add_to_temp_variable = { temp_cost = total_research }
+			add_to_temp_variable = { temp_cost = total_build } 
+			
+			set_variable = { cost =  temp_cost }
+			round_variable = cost
+	
+		
+		
+		
+		    set_variable = { dominate_remainder = money }
+			subtract_from_variable ={ dominate_remainder = cost }     
+			set_variable = { remainder = dominate_remainder }
+			add_to_variable = { remainder = export_profit }  
+			round_variable = remainder
+			
+			
+
+	
+			set_temp_variable = { temp_mil_bud = land_cost }		
+			add_to_temp_variable = { temp_mil_bud = naval_cost }    
+			add_to_temp_variable = { temp_mil_bud = airforce_cost }  
+			add_to_temp_variable = { temp_mil_bud = police_cost }  
+			set_variable = { mil_bud =  temp_mil_bud }
+			
+
+		
+			set_temp_variable = { temp_food_in_need = food_surplus }
+			set_variable = { soilder = num_equipment_in_armies_k@infantry_equipment }
+			multiply_variable = { soilder = 10 }
+			divide_temp_variable = { temp_food_in_need = soilder }
+			set_variable = { food_in_need = temp_food_in_need }
+			
+
+			set_temp_variable = { temp_coal_in_need = coal_surplus }
+			divide_temp_variable = { temp_coal_in_need = mil_fac }
+			set_variable = { coal_in_need = temp_coal_in_need  }
+			
+			
+			
+
+		}
+		}
+
+	}
+	on_daily ={
+		effect = {
+		
+			
+			set_temp_variable = { temp_industry_food_surplus = resource@food }
+			multiply_temp_variable = { temp_industry_food_surplus = food_surplus_coef }
+			set_variable = { industry_food_surplus = temp_industry_food_surplus }
+			set_variable = { local_food = num_controlled_states }
+			multiply_variable = { local_food = 4 }
+			set_temp_variable = { temp_food_surplus = industry_food_surplus }
+			add_to_temp_variable = { temp_food_surplus = local_food }
+			set_variable = { food_surplus =  temp_food_surplus }			
+			
+			set_temp_variable = { temp_food_to_money = resource@food }
+			multiply_temp_variable ={ temp_food_to_money = food_tex_coef }  
+			set_variable = { food_to_money = temp_food_to_money  }
+
+			set_temp_variable = { temp_coal_surplus = resource@coal }
+			multiply_temp_variable = { temp_coal_surplus = coal_surplus_coef }
+			set_variable = { coal_surplus =  temp_coal_surplus }             
+			
+			set_temp_variable = { temp_coal_to_money = resource@coal }
+			multiply_temp_variable ={ temp_coal_to_money = coal_tex_coef }  
+			set_variable = { coal_to_money = temp_coal_to_money  }
+			
+			
+			
+			set_variable = { export_profit = import_country^num }
+			multiply_variable ={ export_profit = 300 }
+			
+			set_variable = { exported_money = resource_exported@money }
+			multiply_variable = { exported_money = 0.25 }
+			set_variable = { imported_money = resource_imported@money }
+			multiply_variable = { imported_money = 0.25 }
+			
+			set_temp_variable = { temp_money = resource_produced@money }
+			add_to_temp_variable = { temp_money = imported_money }
+			subtract_from_temp_variable = { temp_money = exported_money }
+
+
+			
+			add_to_temp_variable = { temp_money = food_to_money }
+			add_to_temp_variable = { temp_money = coal_to_money }         
+			set_variable = { money =  temp_money }
+			round_variable = money
+			
+			
+		
+			set_temp_variable = { temp_mil_fac = num_of_military_factories }
+			add_to_temp_variable { temp_mil_fac = num_of_naval_factories }
+			set_variable = { mil_fac = temp_mil_fac }
+			set_temp_variable = { temp_salary_cost = mil_fac }
+			multiply_temp_variable = { temp_salary_cost = salary }
+			set_variable = { total_salary  =  temp_salary_cost }
+			
+			set_temp_variable = { temp_research_cost = amount_research_slots }
+			multiply_temp_variable = { temp_research_cost = research_law }
+			set_variable = { total_research  =  temp_research_cost }
+			
+			
+			set_temp_variable = { temp_build_cost = num_of_civilian_factories_available_for_projects }
+			multiply_temp_variable = { temp_build_cost = build_law }
+			set_variable = { total_build  =  temp_build_cost }
+			
+			set_temp_variable = { temp_cost = total_salary }
+			add_to_temp_variable = { temp_cost = total_research }
+			add_to_temp_variable = { temp_cost = total_build } 
+			
+			set_variable = { cost =  temp_cost }
+			round_variable = cost
+	
+		
+		
+		
+		    set_variable = { dominate_remainder = money }
+			subtract_from_variable ={ dominate_remainder = cost }     
+			set_variable = { remainder = dominate_remainder }
+			add_to_variable = { remainder = export_profit }  
+			round_variable = remainder
+			
+			
+
+	
+			set_temp_variable = { temp_mil_bud = land_cost }		
+			add_to_temp_variable = { temp_mil_bud = naval_cost }    
+			add_to_temp_variable = { temp_mil_bud = airforce_cost }  
+			add_to_temp_variable = { temp_mil_bud = police_cost }  
+			set_variable = { mil_bud =  temp_mil_bud }
+			
+
+		
+			set_temp_variable = { temp_food_in_need = food_surplus }
+			set_variable = { soilder = num_equipment_in_armies_k@infantry_equipment }
+			multiply_variable = { soilder = 10 }
+			divide_temp_variable = { temp_food_in_need = soilder }
+			set_variable = { food_in_need = temp_food_in_need }
+			
+
+			set_temp_variable = { temp_coal_in_need = coal_surplus }
+			divide_temp_variable = { temp_coal_in_need = mil_fac }
+			set_variable = { coal_in_need = temp_coal_in_need  }
+		
+		
+		}
+	
+	}
+
+}

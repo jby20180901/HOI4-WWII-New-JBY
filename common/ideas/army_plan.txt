@@ -1,0 +1,332 @@
+ideas = 
+{
+	army_food = {
+		
+		law = yes
+		
+		army_food_1 ={
+			removal_cost = -1
+			cancel_if_invalid = no
+			on_add = {
+				ROOT = {
+					set_variable = { 
+						var = crops_and_coals_fa
+						value = 0.75
+					}
+				}
+			}
+			level = 1
+			modifier = { experience_loss_factor = 0.35
+						max_planning = -0.25
+						planning_speed = -0.25
+						dig_in_speed_factor = -0.3
+						casualty_trickleback = -0.35 }
+			
+			cost = 100
+			ai_will_do = {      }
+		}
+		
+		army_food_2 ={
+			removal_cost = -1
+			cancel_if_invalid = no
+			on_add = {
+				ROOT = {
+					set_variable = { 
+						var = crops_and_coals_fa
+						value = 1.5
+					}
+				}
+			}
+			level = 2
+			modifier = { experience_loss_factor = 0.2
+						max_planning = -0.17
+						planning_speed = -0.17
+						dig_in_speed_factor = -0.2
+						casualty_trickleback = -0.2}
+			cost = 100
+			ai_will_do = {      }
+		}
+		
+		army_food_3 ={
+			removal_cost = -1
+			cancel_if_invalid = no
+			on_add = {
+				ROOT = {
+					set_variable = { 
+						var = crops_and_coals_fa
+						value = 2.25
+					}
+				}
+			}
+			level = 3
+			modifier = { experience_loss_factor = 0.12
+						max_planning = -0.1
+						planning_speed = -0.1
+						dig_in_speed_factor = -0.1
+						casualty_trickleback = -0.12			}
+			cost = 100
+			ai_will_do = {
+			factor = -1 
+			modifier = {
+					add = 500
+					has_country_flag = choose_food_3
+				}			}
+		}
+		
+		army_food_4 ={
+			removal_cost = -1
+			cancel_if_invalid = no
+			on_add = {
+				ROOT = {
+					set_variable = { 
+						var = crops_and_coals_fa
+						value = 3
+					}
+				}
+			}
+			default = yes
+			level = 4
+			
+			cost = 100
+			ai_will_do = {
+			factor = -1 
+			modifier = {
+					add = 500
+					has_country_flag = choose_food_4
+				}
+			}
+		}
+		
+		army_food_5 ={
+			removal_cost = -1
+			cancel_if_invalid = no
+			on_add = {
+				ROOT = {
+					set_variable = { 
+						var = crops_and_coals_fa
+						value = 3.75
+					}
+				}
+			}
+			level = 5
+			modifier = { experience_loss_factor = -0.12
+						max_planning = 0.1
+						planning_speed = 0.1
+						dig_in_speed_factor = 0.1
+						casualty_trickleback = 0.12}
+			
+			cost = 100
+			ai_will_do = {  
+				factor = -1 
+				modifier = {
+					add = 500
+					has_country_flag = choose_food_5
+				}
+			}
+		}
+		
+		army_food_6 ={
+			removal_cost = -1
+			cancel_if_invalid = no
+			on_add = {
+				ROOT = {
+					set_variable = { 
+						var = crops_and_coals_fa
+						value = 4.5
+					}
+				}
+			}
+			level = 6
+			modifier = { experience_loss_factor = -0.2
+						max_planning = 0.17
+						planning_speed = 0.17
+						dig_in_speed_factor = 0.2
+						casualty_trickleback = 0.2			}
+			
+			cost = 100
+			ai_will_do = {      }
+		}
+		
+		army_food_7 ={
+			removal_cost = -1
+			cancel_if_invalid = no
+			on_add = {
+				ROOT = {
+					set_variable = { 
+						var = crops_and_coals_fa
+						value = 5.25
+					}
+				}
+			}
+			level = 7
+			modifier = { experience_loss_factor = -0.35
+						max_planning = 0.25
+						planning_speed = 0.25
+						dig_in_speed_factor = 0.3
+						casualty_trickleback = 0.35			}
+			
+			cost = 100
+			ai_will_do = {      }
+		}
+		
+	
+	
+	}
+	
+	
+	army_produce = {
+		
+		law = yes
+		
+		army_produce_1 ={
+			removal_cost = -1
+			cancel_if_invalid = no
+			on_add = {
+				ROOT = {
+					set_variable = { 
+						var = army_coal
+						value = 3
+					}
+				}
+			}
+			level = 1
+			modifier = { production_factory_efficiency_gain_factor = -0.15 }
+			
+
+			cost = 100
+			ai_will_do = {      }
+		}
+		army_produce_2 ={
+			removal_cost = -1
+			cancel_if_invalid = no
+			on_add = {
+				ROOT = {
+					set_variable = { 
+						var = army_coal
+						value = 4
+					}
+				}
+			}
+			level = 2
+			modifier = { production_factory_efficiency_gain_factor = -0.1 }
+
+			cost = 100
+			ai_will_do = {      }
+		}	
+		army_produce_3 ={
+			removal_cost = -1
+			cancel_if_invalid = no
+			on_add = {
+				ROOT = {
+					set_variable = { 
+						var = army_coal
+						value = 5
+					}
+				}
+			}
+			level = 3
+			modifier = { production_factory_efficiency_gain_factor = -0.05 }
+
+			cost = 100
+			ai_will_do = {
+            factor = -1 
+			modifier = {
+					add = 500
+					has_country_flag = choose_coal_3
+				}
+            modifier = { 
+			  factor  = 200
+			  has_country_flag = choose_coal_3 }			}
+		}
+		army_produce_4 ={
+			removal_cost = -1
+			cancel_if_invalid = no
+			on_add = {
+				ROOT = {
+					set_variable = { 
+						var = army_coal
+						value = 6
+					}
+				}
+			}
+			level = 4
+			default = yes
+
+			cost = 100
+			ai_will_do = {
+            factor = -1 
+			modifier = {
+					add = 500
+					has_country_flag = choose_coal_4
+				}
+            modifier = { 
+			  factor  = 200
+			  has_country_flag = choose_coal_4 }			}
+		}
+		army_produce_5 ={
+			removal_cost = -1
+			cancel_if_invalid = no
+			on_add = {
+				ROOT = {
+					set_variable = { 
+						var = army_coal
+						value = 7
+					}
+				}
+			}
+			level = 5
+			modifier = { production_factory_efficiency_gain_factor = 0.05 }
+
+			cost = 100
+			ai_will_do = {  
+            factor = -1 
+			modifier = {
+					add = 500
+					has_country_flag = choose_coal_5
+				}
+            modifier = { 
+			  factor  = 200
+			  has_country_flag = choose_coal_5 }			
+			  }
+		}
+		army_produce_6 ={
+			removal_cost = -1
+			cancel_if_invalid = no
+			on_add = {
+				ROOT = {
+					set_variable = { 
+						var = army_coal
+						value = 8
+					}
+				}
+			}
+			level = 6
+			modifier = { production_factory_efficiency_gain_factor = 0.1 }
+
+			cost = 100
+			ai_will_do = {      }
+		}
+		army_produce_7 ={
+			removal_cost = -1
+			cancel_if_invalid = no
+			on_add = {
+				ROOT = {
+					set_variable = { 
+						var = army_coal
+						value = 9
+					}
+				}
+			}
+			level = 7
+			modifier = { production_factory_efficiency_gain_factor = 0.15 }
+
+			cost = 100
+			ai_will_do = {      }
+		}
+		
+	
+	}
+	
+	
+	
+}

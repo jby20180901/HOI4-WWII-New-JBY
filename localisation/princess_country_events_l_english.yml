@@ -1,0 +1,181 @@
+﻿l_english:
+ 
+ ### 通用 ###
+ 
+ Buy_Ship.1.t:0 "订购的主力舰完工"
+ Buy_Ship.1.d:0 "我们在国外订购的两艘战列舰已经完工了，我们应该马上把她们接回祖国，并将她们正式编入我国海军。"
+ Buy_Ship.1.a:0 "好极了！"
+ 
+ Buy_Ship.2.t:0 "战列舰交易订单"
+ Buy_Ship.2.d:0 "我们刚刚和外国签订了一个订单，我方将为他们订造两艘战列舰，报酬就是我们可以得到他们30%的工业产出。"
+ Buy_Ship.2.a:0 "很好，我们要马上开工。"
+ 
+ Buy_Ship.3.t:0 "订购的巡洋舰完工"
+ Buy_Ship.3.d:0 "我们在国外订购的三艘巡洋舰已经完工了，我们应该马上把她们接回祖国，并将她们正式编入我国海军。"
+ Buy_Ship.3.a:0 "好极了！"
+ 
+ Buy_Ship.4.t:0 "巡洋舰交易订单"
+ Buy_Ship.4.d:0 "我们刚刚和外国签订了一个订单，我方将为他们订造三艘巡洋舰，报酬就是我们可以得到他们20%的工业产出。"
+ Buy_Ship.4.a:0 "很好，我们要马上开工。"
+ 
+ 
+ 
+ ### 中华帝国 ###
+ 
+ princess_china_empire.1.t:0 "帝国的新首都"
+ princess_china_empire.1.d:0 "登基大典已经办完了，接下来就是要为帝国选定一个新的首都了。"
+ princess_china_empire.1.a:0 "天子卫国门，迁都顺天。"
+ princess_china_empire.1.b:0 "迁都应天才能证明我们是民国的继承者。"
+ princess_china_empire.1.c:0 "迁都洛阳，我们要恢复华夏文明的辉煌！"
+ princess_china_empire.1.e:0 "我们在此经营多年，无需迁都。"
+ CHN_shun_tian_tt:0 "天子卫国门！\n"
+ CHN_ying_tian_tt:0 "我们继承了民国！\n"
+ CHN_shen_du_tt:0 "恢复华夏帝国的辉煌！\n"
+ CHN_bu_qian_du_tt:0 "新朝廷新气象，无需迁都。\n"
+ 
+ princess_china_empire.2.t:0 "中国要求我们臣服"
+ princess_china_empire.2.d:0 "中原地区已经统一了，现在，中国人要求我们再一次向他们臣服！"
+ princess_china_empire.2.a:0 "中国曾经将我们的大片领土割让出去！"
+ princess_china_empire.2.b:0 "我们无力与中国抗衡！"
+ 
+ princess_china_empire.3.t:0 "西藏臣服了"
+ princess_china_empire.3.d:0 "藏人自知无法与我们抗衡，他们选择再一次加入我们的帝国。"
+ princess_china_empire.3.a:0 "这样很好！"
+ 
+ princess_china_empire.4.t:0 "西藏拒绝臣服"
+ princess_china_empire.4.d:0 "藏人宣称我们曾害得他们失去大量土地，他们绝不会再向我们称臣......"
+ princess_china_empire.4.a:0 "那就只有开战了！"
+ 
+ princess_china_empire.5.t:0 "中国要求我们投降"
+ princess_china_empire.5.d:0 "中原已经统一，新的政权要求我们立刻投降，没有任何谈判的余地，并宣布我们是一个非法政权......"
+ princess_china_empire.5.a:0 "我们是个非法政权！"
+ princess_china_empire.5.b:0 "我们绝不投降！"
+ 
+ princess_china_empire.6.t:0 "满洲承认他们是非法政权"
+ princess_china_empire.6.d:0 "满洲承认他们是一个非法的政权，并宣布愿意向我们投降。"
+ princess_china_empire.6.a:0 "很好！"
+ 
+ princess_china_empire.7.t:0 "满洲不承认他们是非法政权"
+ princess_china_empire.7.d:0 "满洲拒绝了我们的最后通牒，并宣布他们是一个独立的国家，看来我们必须要采取行动了。"
+ princess_china_empire.7.a:0 "那就只有开战了！"
+ 
+ princess_china_empire.8.t:0 "人造卫星试验成功"
+ princess_china_empire.8.d:0 "我们的付出终于有了回报！我们的第一颗人造卫星在经过了精细的准备工作后，从我国的第一个导弹试验基地发射成功。在卫星的电池用尽前，她将一直在太空中播放我们的国歌！成千上万的中国人聚集在卫星预计经过的地区，每个人都流下了激动的泪水，我们可以自豪的向世界宣告：旧的中国已经不复存在，现在的中国是说话算数的！"
+ princess_china_empire.8.a:0 "中国现在是说话算数的！"
+ 
+ princess_china_empire.9.t:0 "成为世界航天史第一"
+ princess_china_empire.9.d:0 "我国是世界上第一个将宇航员送上太空的国家！我们的载人航天器搭载着我们的英雄从太空中返航时，我们的天子将亲自为其接风洗尘！而我们的政府首脑也无一例外的自发来为宇航员接风，'世界第一'的历史上第一次出现了'中国'的名字！"
+ princess_china_empire.9.a:0 "要敢于做世界第一！"
+ 
+ 
+ 
+ ### 中国 ###
+ 
+ princess_chinese_event.1.t:0 "中山舰的悲歌"
+ princess_chinese_event.1.d:0 "'弟兄们，我们一艘孤舰，肯定挡不住数十架敌机的轰炸，那我们抵抗的意义，又在哪里呢？今天，就是要用我们的死，让日本人知道，中国，有不怕死的海军！'昨日，我们在长江上的最后一艘军舰，中山舰被日军击沉了。这是中山舰的舰长最后留下的话，而中山舰的舰长萨师俊，就是萨镇冰老先生的侄子。\n\n'我们一家三代海军，却又毁在日本人手里，中国的海军之梦什么时候才能实现啊！'"
+ princess_chinese_event.1.a:0 "萨老为中国近代海军留下了一颗火种！"
+ princess_chinese_event.1.tt:0 "海军军官§R萨师俊§!战死。\n"
+ princess_chinese_event.1_fire:0 "'中山舰的悲歌'已被触发。"
+ 
+ 
+ 
+ ### 重庆谈判 ###
+ 
+ princess_Chongqing_Negotiation_event.1.t:0 "一封来自重庆的邀请"
+ princess_Chongqing_Negotiation_event.1.d:0 "我们收到了一封令人吃惊的电报，蒋介石邀请毛主席亲自前往重庆谈判。蒋介石经常以请客，谈判为名义扣押政治对手，这很有可能是蒋介石的又一出'鸿门宴'，我们该作何回复？"
+ princess_Chongqing_Negotiation_event.1.a:0 "不去，蒋介石摆了多少鸿门宴！"
+ princess_Chongqing_Negotiation_event.1.b:0 "去，就算被扣，共产党照样能保证集体领导。"
+ princess_Chongqing_Negotiation_event.1.c:0 "暂时不做回复，伺机而动。"
+ 
+ princess_Chongqing_Negotiation_event.2.t:0 "中共拒绝了和谈"
+ princess_Chongqing_Negotiation_event.2.d:0 "中共明确的拒绝了和谈，并宣称这是我们的又一次'鸿门宴'。现在，我们可以发动宣传机器，大肆宣传中共破坏和平的行为了。"
+ princess_Chongqing_Negotiation_event.2.a:0 "太好了！"
+ 
+ princess_Chongqing_Negotiation_event.3.t:0 "人民倒向了蒋介石"
+ princess_Chongqing_Negotiation_event.3.d:0 "国民党以'中共拒绝和平建国的谈判'为标题大肆宣传我们破坏和平，是挑起内战的罪魁祸首。民心已经倒向了国民党一边，有些原本支持我们的人现在已经转而支持国民党了。"
+ princess_Chongqing_Negotiation_event.3.a:0 "糟糕！"
+ 
+ princess_Chongqing_Negotiation_event.4.t:0 "毛泽东信心满满的来到重庆"
+ princess_Chongqing_Negotiation_event.4.d:0 "毛泽东毫不犹豫的选择了亲赴重庆谈判。他对这次谈判显得格外的自信，他期望和我们进行正式的接触，以此来谋求和平民主建国。"
+ princess_Chongqing_Negotiation_event.4.a:0 "扣押他，要挟共产党就范。"
+ princess_Chongqing_Negotiation_event.4.b:0 "我们还是先和他谈谈吧。"
+ 
+ princess_Chongqing_Negotiation_event.5.t:0 "毛主席被扣押"
+ princess_Chongqing_Negotiation_event.5.d:0 "毛主席不顾民盟和中共中央的劝阻，独自一人赴重庆与蒋介石谈判，但蒋介石并没有谈判的意思。毛主席刚一下飞机就被蒋介石扣押，我们的指战员纷纷请战，要求与国民党决裂，并救出毛泽东主席。"
+ princess_Chongqing_Negotiation_event.5.a:0 "哦不，毛主席！"
+ princess_Chongqing_Negotiation_event.5.b:0 "让代主席刘少奇继续领导中国共产党！"
+ 
+ princess_Chongqing_Negotiation_event.6.t:0 "前两封电报没有回音"
+ princess_Chongqing_Negotiation_event.6.d:0 "我们发去延安的两封电报都没有回音，看来中共也害怕失去毛泽东这个领袖，我们可以趁机造势，让人民看看谁才是破坏和平的罪魁祸首！"
+ princess_Chongqing_Negotiation_event.6.a:0 "再发电报，让赫尔利将军和张治中亲自去请。"
+ 
+ princess_Chongqing_Negotiation_event.7.t:0 "赫尔利大使前来延安"
+ princess_Chongqing_Negotiation_event.7.d:0 "美国的赫尔利将军和张治中将军受蒋介石的委托亲自来到延安，赫尔利大使是代表美国前来调停国共关系的，我们是否应该答应他们的邀请？"
+ princess_Chongqing_Negotiation_event.7.a:0 "既然赫尔利大使担保，那就信他一次。"
+ princess_Chongqing_Negotiation_event.7.b:0 "绝不屈从于美帝国主义！"
+ 
+ princess_Chongqing_Negotiation_event.8.t:0 "军队的缩编问题"
+ princess_Chongqing_Negotiation_event.8.d:0 "我们已经做出了让步，将军队缩编到48个师，并让出南方的部分解放区，可国民党仍旧不同意。看起来他们是在有意拖延时间，为了打破僵局，我们也许可以做出更大的让步？"
+ princess_Chongqing_Negotiation_event.8.a:0 "这是绝不可接受的，要交枪那就大家都交。"
+ princess_Chongqing_Negotiation_event.8.b:0 "为了和平，我们愿做最大让步，24个师。"
+ 
+ princess_Chongqing_Negotiation_event.9.t:0 "发动上党战役"
+ princess_Chongqing_Negotiation_event.9.d:0 "中共已经做出了让步，他们让出了部分解放区，并将军队缩编到48个师。但蒋委员长认为，他们让出的地区只是无暇顾及的边角余料，而缩编军队也是保留了精锐。况且他们还在往东北派兵，我们必须抢先于他们进入东北，而上党，是我军由铁路北上的大门。我们可以提出让他们缩编到24个师，在谈判桌上拖住毛泽东，让他无法为延安出谋划策，而我们将趁机夺取上党及其周围县城。"
+ princess_Chongqing_Negotiation_event.9.a:0 "我们必须打开北上的大门，迫使共产党做出更大的让步。"
+ 
+ princess_Chongqing_Negotiation_event.10.t:0 "发动上党战役"
+ princess_Chongqing_Negotiation_event.10.d:0 "中共已经做出了让步，他们让出了部分解放区，并将军队缩编到48个师。但蒋委员长认为，他们让出的地区只是无暇顾及的边角余料，而缩编军队也是保留了精锐。况且他们还在往东北派兵，我们必须抢先于他们进入东北，而上党，是我军由铁路北上的大门。我们可以提出让他们缩编到24个师，在谈判桌上拖住毛泽东，让他无法为延安出谋划策，而我们将趁机夺取上党及其周围县城。"
+ princess_Chongqing_Negotiation_event.10.a:0 "我们必须打开北上的大门，迫使共产党做出更大的让步。"
+ 
+ princess_Chongqing_Negotiation_event.11.t:0 "上党战役"
+ princess_Chongqing_Negotiation_event.11.d:0 "蒋介石要在谈判桌上拖住毛主席，并集结重兵进攻上党及其周边解放区，但毛主席却抢先一步做出了缩编到24个师的决定，打了国民党的谈判代表一个措手不及。毛主席及时得到了上党战役的战报，并下达了新的命令，上党战役以我们的全胜而告终。"
+ princess_Chongqing_Negotiation_event.11.a:0 "这应该能让国民党好好坐下来谈一谈了。"
+ 
+ princess_Chongqing_Negotiation_event.12.t:0 "上党惨败"
+ princess_Chongqing_Negotiation_event.12.d:0 "蒋介石要在谈判桌上拖住毛主席，并集结重兵进攻上党及其周边解放区，他们以24个师为标准，强迫我们压缩军队，毛主席和他们据理力争，与他们僵持在谈判桌上，而国民党趁机大举进攻上党及其周边解放区，我们被打了个措手不及，不得不撤出上党，国民党北上的大门已经打开......"
+ princess_Chongqing_Negotiation_event.12.a:0 "要是让毛主席来指挥的话......"
+ 
+ princess_Chongqing_Negotiation_event.13.t:0 "双十协定"
+ princess_Chongqing_Negotiation_event.13.d:0 "经过了艰难的谈判，我们终于和毛泽东签订了'双十协定'，当然，这只是个草案，还有很多具体问题需要谈判，但毛泽东来重庆的任务已经圆满完成了，他即将返回延安。"
+ princess_Chongqing_Negotiation_event.13.a:0 "再进一步，要求他们缩编到20个师！"
+ princess_Chongqing_Negotiation_event.13.b:0 "贪心不足蛇吞象！适可而止吧。"
+ 
+ princess_Chongqing_Negotiation_event.14.t:0 "蒋介石要求缩编到20个师"
+ princess_Chongqing_Negotiation_event.14.d:0 "我们已经签订了'双十协定'，但得寸进尺的蒋介石又要求我们缩编到20个师，我们已经退让的够多了，绝不能再退让了！"
+ princess_Chongqing_Negotiation_event.14.a:0 "没有信誉的老蒋！"
+ princess_Chongqing_Negotiation_event.14.b:0 "答应他，已经让了这么多了，再让几个师又何妨？"
+ 
+ princess_Chongqing_Negotiation_event.15.t:0 "主席胜利归来"
+ princess_Chongqing_Negotiation_event.15.d:0 "毛主席已经和国民党签订了'双十协定'，虽然还有很多的具体问题需要谈判，但毛主席的任务已经圆满完成了。"
+ princess_Chongqing_Negotiation_event.15.a:0 "我担心国民党会不会遵守协定。"
+ princess_Chongqing_Negotiation_event.15.b:0 "欢迎主席胜利归来！"
+ 
+ princess_Chongqing_Negotiation_event.16.t:0 "中共的底线"
+ princess_Chongqing_Negotiation_event.16.d:0 "中共拒绝了我们的要求，并宣布蒋介石是一个言而无信的人，24个师是他们的底线，绝不能再压缩。"
+ princess_Chongqing_Negotiation_event.16.a:0 "我们尊重他们的底线。"
+ princess_Chongqing_Negotiation_event.16.b:0 "那就只有开战了......"
+ 
+ princess_Chongqing_Negotiation_event.17.t:0 "蒋介石孤注一掷"
+ princess_Chongqing_Negotiation_event.17.d:0 "蒋介石已经决定孤注一掷，他的部队赶到机场扣押了准备返回延安的毛主席，并宣布动员，看来全面内战已经不可避免了......"
+ princess_Chongqing_Negotiation_event.17.a:0 "哦不，毛主席！"
+ princess_Chongqing_Negotiation_event.17.b:0 "让代主席刘少奇继续领导中国共产党！"
+ 
+ princess_Chongqing_Negotiation_event.18.t:0 "中共没有履行诺言"
+ princess_Chongqing_Negotiation_event.18.d:0 "中共并没有履行他们压缩军队的诺言，我们已经有了充足的理由违反我们签下的和约。"
+ princess_Chongqing_Negotiation_event.18.a:0 "言而无信的中共！"
+ 
+ princess_Chongqing_Negotiation_event.19.t:0 "中共履行了他们的诺言"
+ princess_Chongqing_Negotiation_event.19.d:0 "中共已经履行了他们的诺言，他们已经按照我们的要求把军队编制压缩到了上限以内，现在该轮到我们实现对人民的承诺的时候了。"
+ princess_Chongqing_Negotiation_event.19.a:0 "我们也要履行我们的诺言！"
+ princess_Chongqing_Negotiation_event.19.b:0 "是时候爆发全面内战了！"
+ 
+ princess_suobiandao_24_geshi_fire:0 "国民党要求我们缩编到24个师\n"
+ 
+ princess_suobiandao_20_geshi_fire:0 "国民党要求我们缩编到20个师\n"
+ 
+ princess_maozedong_beikouya_fire:0 "毛泽东被扣押\n"
+ 
+ 
+ 
+ 
+ 

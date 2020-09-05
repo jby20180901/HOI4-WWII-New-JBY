@@ -1,0 +1,305 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_idea_slot_land_budget"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	
+	
+	spriteType = {
+		name = "GFX_idea_slot_airforce_budget"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	
+	
+	spriteType = {
+		name = "GFX_idea_slot_naval_budget"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	
+	
+	spriteType = {
+		name = "GFX_idea_slot_backup_budget"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_build_0"
+		texturefile = "gfx/interface/ideas/generic_wall_line.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_build_1"
+		texturefile = "gfx/interface/ideas/generic_intel_bonus.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_build_2"
+		texturefile = "gfx/interface/ideas/generic_morale_bonus.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_build_3"
+		texturefile = "gfx/interface/ideas/idea_royal_arsenal.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_research_0"
+		texturefile = "gfx/interface/ideas/idea_aioc.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_research_1"
+		texturefile = "gfx/interface/ideas/idea_jap_duplicate_research.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_research_2"
+		texturefile = "gfx/interface/ideas/generic_research_bonus.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_research_3"
+		texturefile = "gfx/interface/ideas/idea_rock_island_arsenal.dds"
+	}
+}
+
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_intellegenc_0"
+		texturefile = "gfx/interface/ideas/generic_spy_intel.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_intellegenc_1"
+		texturefile = "gfx/interface/ideas/generic_spy_intel.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_intellegenc_2"
+		texturefile = "gfx/interface/ideas/generic_spy_political.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_intellegenc_3"
+		texturefile = "gfx/interface/ideas/generic_spy_coup.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_food_tex_level_1"
+		texturefile = "gfx/interface/ideas/idea_generic_agrarian_reform.dds"
+	}
+}spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_food_tex_level_2"
+		texturefile = "gfx/interface/ideas/generic_production_bonus.dds"
+	}
+}spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_food_tex_level_3"
+		texturefile = "gfx/interface/ideas/generic_disjointed_gov.dds"
+	}
+}spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_food_tex_level_4"
+		texturefile = "gfx/interface/ideas/FRA_scw_intervention_nationalists_focus.dds"
+	}
+}spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_food_tex_level_5"
+		texturefile = "gfx/interface/ideas/generic_democratic_drift_bonus.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_food_tex_level_6"
+		texturefile = "gfx/interface/ideas/idea_norfolk_naval_yard.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_coal_tex_level_1"
+		texturefile = "gfx/interface/ideas/idea_generic_agrarian_reform.dds"
+	}
+}spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_coal_tex_level_2"
+		texturefile = "gfx/interface/ideas/generic_production_bonus.dds"
+	}
+}spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_coal_tex_level_3"
+		texturefile = "gfx/interface/ideas/generic_disjointed_gov.dds"
+	}
+}spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_coal_tex_level_4"
+		texturefile = "gfx/interface/ideas/FRA_scw_intervention_nationalists_focus.dds"
+	}
+}spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_coal_tex_level_5"
+		texturefile = "gfx/interface/ideas/generic_democratic_drift_bonus.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_coal_tex_level_6"
+		texturefile = "gfx/interface/ideas/idea_norfolk_naval_yard.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_budget_toomore_DEBUFF"
+		texturefile = "gfx/interface/ideas/idea_generic_army_problems.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_poverty_country_DEBUFF"
+		texturefile = "gfx/interface/ideas/idea_chi_hyper_inflation.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_buy_master_weapon"
+		texturefile = "gfx/interface/ideas/idea_generic_purge.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_econ_bankrupt_DEBUFF"
+		texturefile = "gfx/interface/ideas/idea_chi_hyper_inflation.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_food_support_level_1"
+		texturefile = "gfx/interface/ideas/idea_generic_agrarian_reform.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_food_support_level_2"
+		texturefile = "gfx/interface/ideas/idea_generic_agrarian_reform.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_food_support_level_3"
+		texturefile = "gfx/interface/ideas/idea_generic_agrarian_reform.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_food_support_level_4"
+		texturefile = "gfx/interface/ideas/idea_generic_agrarian_reform.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_food_support_level_5"
+		texturefile = "gfx/interface/ideas/idea_generic_agrarian_reform.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_food_support_level_6"
+		texturefile = "gfx/interface/ideas/idea_generic_agrarian_reform.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_food_support_level_7"
+		texturefile = "gfx/interface/ideas/idea_generic_agrarian_reform.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_food_support_level_8"
+		texturefile = "gfx/interface/ideas/idea_generic_agrarian_reform.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_food_support_level_9"
+		texturefile = "gfx/interface/ideas/idea_generic_agrarian_reform.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_coal_support_level_1"
+		texturefile = "gfx/interface/ideas/idea_north_american_aviation.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_coal_support_level_2"
+		texturefile = "gfx/interface/ideas/idea_north_american_aviation.dds"
+	}
+}spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_coal_support_level_3"
+		texturefile = "gfx/interface/ideas/idea_north_american_aviation.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_coal_support_level_4"
+		texturefile = "gfx/interface/ideas/idea_north_american_aviation.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_coal_support_level_5"
+		texturefile = "gfx/interface/ideas/idea_north_american_aviation.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_coal_support_level_6"
+		texturefile = "gfx/interface/ideas/idea_north_american_aviation.dds"
+	}
+}spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_coal_support_level_7"
+		texturefile = "gfx/interface/ideas/idea_north_american_aviation.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_coal_support_level_8"
+		texturefile = "gfx/interface/ideas/idea_north_american_aviation.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_coal_support_level_9"
+		texturefile = "gfx/interface/ideas/idea_north_american_aviation.dds"
+	}
+}

@@ -1,0 +1,134 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_chi_alexander_von_falkenhausen"
+		texturefile = "gfx/interface/ideas/chi_alexander_von_falkenhausen.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_chi_claire_lee_chennault"
+		texturefile = "gfx/interface/ideas/chi_claire_lee_chennault.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_king_rama_viii"
+		texturefile = "gfx/interface/ideas/king_rama_viii.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_emperor_puyi"
+		texturefile = "gfx/interface/ideas/emperor_puyi.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_emperor_showa"
+		texturefile = "gfx/interface/ideas/emperor_showa.dds"
+	}
+}
+
+
+
+
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_IJA"
+		texturefile = "gfx/interface/ideas/IJA.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_kmt_flag"
+		texturefile = "gfx/interface/ideas/kmt_flag.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_japan_puppet_flag"
+		texturefile = "gfx/interface/ideas/japan_puppet_flag.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_kwantung_army"
+		texturefile = "gfx/interface/ideas/kwantung_army.dds"
+	}
+}
+
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_reza_shah"
+		texturefile = "gfx/interface/ideas/reza_shah.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_mohammad_reza_shah"
+		texturefile = "gfx/interface/ideas/mohammad_reza_shah.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_CHI_never_surrender"
+		texturefile = "gfx/interface/ideas/idea_can_send_in_the_zombies.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_PRC_never_surrender"
+		texturefile = "gfx/interface/ideas/idea_can_send_in_the_zombies.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_erzhanshenglizhe"
+		texturefile = "gfx/interface/ideas/idea_can_send_in_the_zombies.dds"
+	}
+}
+
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_house_of_osman"
+		texturefile = "gfx/interface/ideas/house_of_osman.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_grand_national_assembly_of_turkey"
+		texturefile = "gfx/interface/ideas/grand_national_assembly_of_turkey.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_caliph_abdulmecid_II"
+		texturefile = "gfx/interface/ideas/caliph_abdulmecid_II.dds"
+	}
+}
+
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_PRC_no_more_time_for_PLA"
+		texturefile = "gfx/interface/ideas/idea_cze_planning_bonus.dds"
+	}
+}
+
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_JAP_live_or_die"
+		texturefile = "gfx/interface/ideas/idea_beretta.dds"
+	}
+}
+
+
+
+

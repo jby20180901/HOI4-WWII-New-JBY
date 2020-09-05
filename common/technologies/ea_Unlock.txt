@@ -1,0 +1,178 @@
+technologies = {
+	
+	@1918 = 0
+	@1936 = 2
+	@1938 = 4
+	@1939 = 6
+	@1940 = 8
+	@1941 = 10
+	@1942 = 12
+	@1943 = 14
+	@1944 = 16
+	@1945 = 18
+	@1946 = 20
+
+	
+	
+	tezhong_recon_0 = {
+	
+		enable_subunits = {
+			tezhong_recon
+		}
+		
+	}
+	
+	penhuo_gongbing_0 = {
+	
+		enable_subunits = {
+			penhuo_gongbing
+		}
+		
+	}
+	
+	chizyj_army_0 = {
+	
+		enable_subunits = {
+			chizyj_army
+		}
+		
+	}
+	
+	chiusa_army_0 = {
+	
+		enable_subunits = {
+			chiusa_army
+		}
+		
+	}
+	
+	medium_panzer_0 = {
+	
+		enable_subunits = {
+			medium_panzer
+		}
+		
+	}
+	
+	kongjiang_panzer_0 = {
+	
+		enable_subunits = {
+			kongjiang_panzer
+		}
+		
+	}
+	
+	su_heavy_panzer_0 = {
+	
+		enable_subunits = {
+			su_heavy_panzer
+		}
+		
+	}
+	
+	main_panzer_0 = {
+	
+		enable_subunits = {
+			main_panzer
+		}
+		
+	}
+	
+	heavy_panzer_0 = {
+	
+		enable_subunits = {
+			heavy_panzer
+		}
+		
+	}
+	
+	light_panzer_0 = {
+	
+		enable_subunits = {
+			light_panzer
+		}
+		
+	}
+	
+	firepower_unit_0 = {
+	
+		enable_subunits = {
+			firepower_unit
+		}
+		
+	}
+	
+	sniper_0 = {
+	
+		enable_subunits = {
+			sniper
+		}
+		
+	}
+	
+	faxie_army_0 = {
+	
+		enable_subunits = {
+			faxie_army
+		}
+		
+	}
+	
+	militia_0 = {
+	
+		enable_subunits = {
+			militia
+		}
+		
+	}
+	
+	red_unit_0 = {
+	
+		enable_subunits = {
+			red_unit
+		}
+		
+	}
+	
+	Panzergrenadier_0 = {
+	
+		enable_subunits = {
+			Panzergrenadier
+		}
+		
+	}
+	
+	liberation_army_0 = {
+	
+		enable_subunits = {
+			liberation_army
+		}
+		
+	}
+	
+	kanto_army_0 = {
+	
+		enable_subunits = {
+			kanto_army
+		}
+		
+	}
+	
+	teaching_unit_0 = {
+	
+		enable_subunits = {
+			teaching_unit
+		}
+		
+	}
+	
+	dangweijun_0 = {
+	
+		enable_subunits = {
+			dangweijun
+		}
+		
+	}
+	
+	
+}

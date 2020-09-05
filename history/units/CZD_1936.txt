@@ -1,0 +1,36 @@
+﻿division_template = {
+	name = "朝鲜军步兵师"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+	}
+	priority = 4
+}
+
+
+OOB ###
+units### = {
+	
+	
+}
+
+
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "CZD"
+		}
+		requested_factories = 2
+		progress = 0.55
+		efficiency = 100
+	}
+	
+}
+
+

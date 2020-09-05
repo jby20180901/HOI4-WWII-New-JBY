@@ -1,0 +1,157 @@
+﻿ITA = { 
+	submarine = { 
+		prefix = "Smg" 
+		generic = { "潜艇" } 
+		unique = { 
+			# Current models (2 Glauco class, 3 Pietro Calvi class, 2 Argo class, 10 Serie 600 - Perla class, 17 Serie 600 - Adua class, 11 Marcello class, 5 Benedetto Brin class, 4 Console Generale Liuzzi class, 
+			# 6 Marconi class, 4 Ammiragli class, 13 Serie 600 - Platino class, 6 Tritone Prima Serie class, 8 Tritone Seconda Serie class) 
+			"格老根号" "塔利亚号" "耶特罗·卡尔维号" "朱塞佩·芬齐号" "恩里科·塔茨利号" "阿尔戈号" "帆水母号" "琥珀号" "绿玉号" "科拉洛号" "碧玉号" "宝石号" "鸢尾花号" "孔雀石号" "缟玛瑙号" "珍珠号" "绿松石号" "阿德号" "阿拉吉号" 
+			"阿拉当号" "阿夏恩号" "阿克苏姆号" "贝卢尔号" "达贾博号" "德希号" "德博号" "贡德尔号" "拉方尔号" "玛卡勒号" "内利号" "希雷号" "坦宾号" "斯西克号" "谢贝利号" "马塞罗号" "丹多洛号" "韦涅罗号" "普罗望那号" 
+			"摩契尼哥号" "纳尼号" "巴尔巴里戈号" "伊莫号" "洛西尼号" "司令卡佩罗号" "司令方 迪布鲁诺号" "布林号" "伽伐尼号" "古列尔莫蒂号" "阿基米德号" "托里切利号" "总领事里尤兹号" "阿尔皮诺 巴尼奥利尼号" 
+			"纳尔多朱利亚尼号" "船长塔兰蒂尼号" "古格利尔莫·马科尼号" "列奥纳多·达芬奇号" "米凯莱·比安奇号" "路易吉·托雷利号" "亚历山德罗马拉斯皮纳号" "焦雷巴拉卡号" "海军上将圣邦号" "海军上将卡格尼号" 
+			"海军上将米罗号" "海军上将卡拉乔洛号" "钢铁号" "雪花号" "白银号" "海星号" "象牙号" "布龙佐号" "钴号" "玉号" "花岗岩号" "镍号" "铂金号" "斑岩号" "钨号" "法螺号" "涡流号" "巨浪号" 
+			"浪潮号" "涡流号" "舡鱼号" "钡号" "锂号" "钠号" "钾号" "铜号" "铁号" "锌号" "铅号" 
+			# Cancelled/Not completed/Reconstructed (6 Tritone Prima Serie class, 16 Tritone Seconda Serie class, 2 Bragadin class, 1 Pietro Micca class, 3 Foca class, YUG Smeli, YUG Osvetnik) 
+			"海鳗号" "鳗鱼号" "鲷号" "鲈鱼号" "石斑鱼号" "登蒂斯号" "铬号" "黄铜号" "镉号" "钒号" "铱号" "钌号" "黄金号" "铝号" "锑号" "磷号" "锰号" "硫号" "硅号" "镁号" 
+			"汞号" "石棉号" "马科·安东尼奥·布拉加丁号" "菲利波·科里多尼号" "皮特罗·米卡号" "福卡号" "特洛波斯号" "小海蟹号" "安东尼奥·巴雅蒙蒂号" "弗朗切斯科·里斯莫多号" 
+			# Older models (4 Balilla class, 4 Mameli class, 4 Vettor Pisani class, 1 Ettore Fieramosca class, 4 Fratelli Bandiera class, 4 Squalo class, 7 Serie 600 - Argonauta class, 2 Settembrini class, 
+			# 3 Archimede class, 12 Serie 600 - Sirena class) 
+			"巴利拉号" "多梅尼科·米尔尔号" "恩里科·托蒂号" "安东尼奥 希楚萨号" "戈弗里多·马梅利号" "皮埃 凯波尼号" "乔瓦尼·达普罗奇达号" "蒂托·斯皮里号" "韦托·皮萨尼号" "马坎东尼奥·科隆纳号" "乔瓦尼 巴萨恩号" "德席杰内号" 
+			"埃托拉莫斯卡号" "弗拉特里 班迪耶拉号" "卢恰诺·马纳拉号" "桑雷尔·桑塔罗萨号" "西罗·梅诺蒂号" "鲨鱼号" "独角鲸号" "德尔菲诺号" "海象号" "船蛸号" "菲萨利亚号" "杰利号" "珍地那号" "海蜇号" "萨尔帕号" "蛇号" 
+			"路易吉塞特布里尼号" "鲁吉罗·塞蒂莫号" "加利莱奥·加利雷号" "埃万热莉斯塔·托赖斯利号" "加利莱奥·费拉里斯号" "紫晶号" "安菲特里特号" "钻石号" "加拉蒂亚号" "水中仙女号" "海卫二号" "翁迪纳号" "红宝石号" "警笛号" "翡翠号" 
+			"黄玉号" "蓝宝石号" 
+			# Fictional names start here (10 fictional) 
+			"锕号" "氮号" "溴号" "碳号" "氦号" "钼号" "锇号" "氧号" "硒号" "钨号" 
+		} 
+	} 
+	destroyer = { 
+		prefix = "RCT" 
+		generic = { "驱逐舰" } 
+		unique = { 
+			# Current models (12 Soldati Prima Serie class, 5 Soldati Seconda Serie class, 32 Spica class, 13 Ariete class, 4 Orsa class, 16 Ciclone class) 
+			"黑色衬衫号" "阿尔皮诺号" "炮手号" "阿斯卡里号" "阿瓦利号" "狙击兵号" "龙骑兵号" "科拉齐耶雷号" "步枪兵号" "工程师号" "掷弹兵号" "枪手号" "轰炸机号" "海盗号" "罗马军团号" "机枪手号" 
+			"维特号" "斯皮嘎号" "阿斯托雷号" "克莱姆内号" "半人马号" "卡斯托雷号" "奇尼奥号" "卡诺波号" "仙后座号" "佩尔塞奥号" "西里奥号" "射手座号" "织女星号" "艾尔帕兰号" "仙女座号" "牵牛星号" "心大星号" "苍鹭号" "昴宿六号" 
+			"阿雷瑟萨号" "阿里尔号" "昴宿星号" "波卢切号" "帕拉德号" "帕尔泰诺佩号" "利拉号" "天秤座号" "卢波号" "林塞号" "克里欧号" "瑟茜号" "卡利俄铂号" "卡利普索号" "艾略特号" "阿图罗号" "御夫座号" "参宿七号" "波江座号" "龙骑号" "短剑团号" 
+			"斯帕达号" "达加号" "匕首号" "蓝旗亚号" "戟号" "北极星号" "奥萨号" "毕加索号" "猎户座号" "浣熊号" "信风号" "安莫索号" "火热号" "大胆号" "矮粒多号" "旋风号" "弗图那尔号" "吉卜力号" "格罗波号" 
+			"无畏号" "冲动号" "不屈号" "大无畏号" "季风号" "台风号" "飓风号" 
+			# Cancelled/Not completed/Reconstructed (1 Leone class, 2 Soldati Seconda Serie class, Dubrovnik, 2 Sebenico class, 20 Comandanti Medaglia d'Oro class, 2 Ariete class) 
+			"豹号" "卡里斯塔号" "班长号" "普雷穆达号" "塞贝尼科号" "卢布亚纳号" "司令马哥尼号" "司令巴罗尼号" "司令伯希尼号" "司令博迪号" "司令卡撒那号" "司令库斯号" 
+			"司令德克里斯托法罗号" "司令德阿罗号" "司令埃斯波西托号" "司令菲奥里利号" "司令丰塔纳号" "司令吉安那塔西奥号" "司令乔珀号" "司令乔治斯号" 
+			"司令米兰号" "司令诺卡加卡号" "司令诺瓦罗号" "司令罗多卡那克齐号" "司令鲁塔号" "司令托斯卡纳号" "菲翁达号" "十字弓号" 
+			# Older models (2 Mirabello class, 3 Leone class, 8 Rosolino Pilo class, Audace, 4 Giuseppe Sirtori class, 7 Giuseppe La Masa class, 4 Palestro class, 6 Generale Antonio Cantore class, 4 Curtatone class, 
+			# 4 Quintino Sella class, 4 Nazario Sauro class, 12 Navigatori class, 8 Turbine class, 4 Dardo Prima Serie class, 4 Dardo Seconda Serie class, 4 Maestrale class, 4 Oriani class) 
+			"卡洛·米拉贝洛号" "奥古斯托·里伯蒂号" "狮子座号" "豹号" "虎号" "罗索利诺·皮洛号" "朱塞佩·塞萨尔·阿伯号" "朱塞佩·德扎号" "朱塞佩·米索里号" "安东尼奥·莫斯托号" "伊波利托·尼沃号" "兄弟凯罗利号" 
+			"西蒙娜斯基亚菲诺号" "奥迪斯号" "朱塞佩西尔托里号" "乔瓦尼·阿塞比号" "温琴佐·焦尔达诺·奥西尼号" "弗朗切斯科·斯托科号" "朱塞佩·拉马萨号" "安盖洛·巴西尼号" "恩里科·科森斯号" "吉辛托·卡里尼号" "尼科拉·法布里齐号" 
+			"朱塞佩·法里纳拉号" "贾科莫·美第奇号" "帕勒斯号" "孔菲耶恩扎号" "圣马蒂诺号" "索尔费里诺号" "将军安东尼奥·坎图尔号" "将军安东诺·卡西诺号" "将军安东尼奥齐诺托号" "将军卡洛·蒙塔纳里号" 
+			"将军阿希尔·帕帕号" "将军马尔切洛·普雷斯蒂娜里号" "库尔塔托号" "卡拉塔菲米号" "卡斯特尔费达号" "蒙赞巴诺号" "昆泰诺·塞拉号" "弗朗切斯科·克里斯皮号" "乔瓦尼·尼科特拉号" "贝诺·里卡索利号" "纳萨里奥·索罗号" 
+			"塞萨尔·巴蒂斯蒂号" "达尼埃莱·马尼号" "弗朗切斯科·纳洛号" "阿菲舍达莫斯托号" "安东尼奥·达诺利号" "尼古罗索达雷科号" "乔瓦尼·达韦拉扎诺号" "兰其罗托 马诺塞诺号" "利昂纳·潘科尔多号" "埃马纽埃尔·佩萨格诺号" 
+			"安东尼奥·皮加费塔号" "卢卡·塔里戈号" "安东尼奥托·索迪马尔号" "乌戈利诺维瓦尔第号" "尼科洛·泽奥号" "涡轮号" "亚德里亚号" "北风号" "爱斯皮罗号" "埃罗号" "雨云号" "奥斯特罗号" "泽菲洛号" "达尔多号" "弗雷恰号" "萨埃塔号" "斯特拉莱号" 
+			"班尼路号" "霹雳号" "闪电号" "雷电号" "西北风号" "东北风号" "西南风号" "热风号" "阿尔弗雷多·奥里亚尼号" "阿尔菲耶里号" "吉奥斯·卡渠奇号" "温琴佐·吉贝尔蒂号" 
+			# Fictional names start here (1 Mirabello class, 2 Indomito class, 1 Rosolino Pilo class, 2 Giuseppe La Masa class) 
+			"卡洛·阿尔贝托丑号" "潜伏号" "不宁号" "皮拉德 布隆泽蒂号" "阿戈斯蒂诺·伯塔尼号" "贝尼迪托·凯罗利号" 
+		} 
+	} 
+	light_cruiser = { 
+		prefix = "RI" 
+		generic = { "轻型巡洋舰" } 
+		unique = { 
+			# Current models (2 Duca d'Aosta class, 2 Duca degli Abruzzi class, 4 Capitani Romani class) 
+			"埃马努埃莱·菲利贝托 奥斯塔公爵号" "欧亨尼奥·萨沃亚号" "杜卡阿布鲁齐号" "朱塞佩加里波第号" "蒂奥·雷戈洛号" "西皮奥恩·阿弗里卡诺号" "朱利奥·热芒尼科号" "旁派马格诺号" 
+			# Cancelled/Not completed/Reconstructed (8 Capitani Romani class, 2 San Giorgio class, 2 Etna class, 2 Costanzo Ciano class) 
+			"卢西奥新罗科尔内利奥索号" "卡欧马里奥号" "奥塔维亚诺奥古斯托号" "乌尔皮奥·特拉依亚诺号" "克劳迪奥·德鲁索号" "克劳迪奥蒂贝里奥号" "维皮萨谬斯 阿格里帕号" "保罗·埃米利奥号" "圣乔治号" "圣马可号" "埃特纳号" "维苏威号" 
+			"科斯坦索·恰诺号" "威尼斯号" 
+			# Older models (SMS Pillau, SMS Strassburg, 4 Giussano class, 2 Cadorna class, 2 Montecuccoli class) 
+			"巴里号" "塔兰托号" "阿尔贝托·达·吉萨诺号" "艾伯里科·巴比安号" "巴托洛梅奥·科莱奥尼号" "乔瓦尼·阿尔·班德·黑号" "路易吉·卡多纳号" "阿曼多·迪亚兹号" "雷蒙多·蒙特克科利号" "马齐奥·阿滕德洛号" 
+			# Fictional names start here (2 WWI Basilicata class, 7 pre-WWI Regioni class, 6 WWI Esploratori class) 
+			"巴西利卡塔号" "坎帕尼亚号" "伦巴第号" "卡拉布里亚号" "易北号" "伊特鲁里亚号" "利古里亚号" "普利亚号" "翁布里亚号" "第四号" "尼诺·比克西号" "马沙拉号" "利比亚号" "安科纳号" "布林迪西号" 
+		} 
+	} 
+	heavy_cruiser = { 
+		prefix = "RI" 
+		generic = { "重型巡洋舰" } 
+		unique = { 
+			# Current models (2 Trento class, 4 Zara class, 1 Bolzano class) 
+			"特伦托号" "的里雅斯特号" "扎拉号" "阜姆号" "戈里齐亚号" "波拉号" "博尔扎诺号" 
+			# Older models (1 WWI San Giorgio class) 
+			"圣乔治号" 
+			# Fictional names start here (3 WWI Vettor Pisani class, 3 WWI Giuseppe Garibaldi class, 2 WWI Pisa class, 1 WWI San Giorgio class
+			"韦托·皮萨尼号" "卡洛·阿尔贝托号" "马科·波洛号" "朱塞佩加里波第号" "瓦雷泽号" "弗朗切斯科·费吕克西奥号" "比萨号" "阿马尔菲号" "圣马可号" 
+		} 
+	} 
+	battle_cruiser = { 
+		prefix = "RN" 
+		generic = { "战列巡洋舰" } 
+		unique = { 
+			# Cancelled/Not completed (4 Francesco Caracciolo class) 
+			"弗朗切斯科·卡拉乔洛号" "克里斯托福罗·科伦坡号" "马坎东尼奥·科隆纳号" "弗朗切斯科·莫罗西尼号" 
+			# Fictional names start here (2 pre-WWI Principe Amedeo class) 
+			"普林西比号" "帕莱斯塔号" 
+		} 
+	} 
+	battleship = { 
+		prefix = "RN" 
+		generic = { "战列舰" } 
+		unique = { 
+			# Current models (2 Conte Di Cavour class, 2 Caio Duilio class, 3 Littorio class) 
+			"康特迪富尔号" "朱利奥·塞萨尔号" "卡欧杜伊利奥号" "安德烈埃·多里亚号" "利托里奥号" "维托里奥·威尼托号" "罗马号" 
+			# Cancelled/Not completed/Reconstructed (1 Littorio class, 1 Italia class) 
+			"因佩罗号" "意大利号" 
+			# Fictional names start here (1 WWI Conte Di Cavour class, 1 WWI Dante Alighieri class) 
+			"列奥纳多·达芬奇号" "丹特·阿莱里号" 
+		} 
+	} 
+	carrier = { 
+		prefix = "RN" 
+		generic = { "航空母舰" } 
+		unique = { 
+			# Cancelled/Not completed/Reconstructed (1 Aquila class, 1 Sparviero class) 
+			"雄鹰号" "麻鹰号" 
+			# Fictional names start here (1 fictional, 1 pre-WWI Europa class, 1 WWI Giuseppe Miraglia class) 
+			"鹘号" "欧洲号" "朱塞佩·米拉格利亚号" 
+		} 
+	} 
+	air_wing_names_template = AIR_WING_NAME_ITA_FALLBACK
+
+	infantry = { 
+		prefix = "" 
+		generic = { "步兵师" } 
+		generic_pattern = "UNIT_GENERIC_NAME_ITA" 
+		unique = {} 
+	} 
+	marine = { 
+		prefix = "" 
+		generic = { "两栖师" } 
+		generic_pattern = "UNIT_GENERIC_NAME_ITA" 
+		unique = {} 
+	} 
+	mountaineers = { 
+		prefix = "" 
+		generic = { "高山师" } 
+		generic_pattern = "UNIT_GENERIC_NAME_ITA" 
+		unique = {} 
+	} 
+	cavalry = { 
+		prefix = "" 
+		generic = { "高速机动师" } 
+		generic_pattern = "UNIT_GENERIC_NAME_ITA" 
+		unique = {} 
+	} 
+	motorized = { 
+		prefix = "" 
+		generic = { "摩化师" } 
+		generic_pattern = "UNIT_GENERIC_NAME_ITA" 
+		unique = {} 
+	} 
+	light_armor = { 
+		prefix = "" 
+		generic = { "装甲师" } 
+		generic_pattern = "UNIT_GENERIC_NAME_ITA" 
+		unique = {} 
+	} 
+	medium_armor = { 
+		prefix = "" 
+		generic = { "装甲师" } 
+		generic_pattern = "UNIT_GENERIC_NAME_ITA" 
+		unique = {} 
+	} 
+}

@@ -1,0 +1,17 @@
+saopaulo_conference = {
+	icon = generic_foreign_policy
+	allowed = {
+		original_tag = POR
+	#	has_country_flag = POR_saopaulo_conference_timer_flag
+	}
+	#visible = {
+	#	tag = POR
+	#	has_country_flag = ENG_imperial_conference_timer_flag
+	#}
+}
+portugal_annex_uruguay = {
+	icon = border_war
+	allowed = {
+		original_tag = POR
+	}
+}

@@ -1,0 +1,2471 @@
+﻿capital = 219
+
+oob = "SOV_1936"
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "SOV_1936_naval_mtg"
+	else = {
+		set_naval_oob = "SOV_1936_naval_legacy"
+	}
+}
+
+set_research_slots = 4
+set_stability = 0.5
+set_war_support = 0.8
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	paratroopers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	gwtank = 1
+	basic_light_tank = 1  # PLACEHOLDER
+	#basic_heavy_tank = 1  # PLACEHOLDER
+	#basic_medium_tank = 1 # PLACEHOLDER
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	strategic_bomber1 = 1
+	naval_bomber1 = 1
+	mass_assault = 1
+	fleet_in_being = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		mtg_transport = 1
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+
+
+
+set_convoys = 50
+
+set_politics = {
+	ruling_party = communism
+	last_election = "1933.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 10
+	fascism = 2
+	communism = 88
+}
+
+create_faction = Comintern
+add_to_faction = SOV
+add_to_faction = MON
+add_to_faction = TAN
+
+
+add_ideas = {
+	trotskyite_plot
+	home_of_revolution
+	chaoxian_neutrality_ideaeas
+	SOV_yap
+	SOV_laodong
+	SOV_sulhongju
+	SOV_nvbing
+	SOV_wenamngrenkou
+	SOV_yiguoshzy
+	SOV_gerenchongbai
+	SOV_bujinrenyidtanke
+}
+
+create_country_leader = {
+	name = "约瑟夫·斯大林"
+	desc = "POLITICS_JOSEPH_STALIN_DESC"
+	picture = "SOV_sidaling.dds"
+	expire = "1953.3.1"
+	ideology = stalinism
+	traits = {
+	
+	connected_citizen
+	comintern_workhorse
+	veteran_communist
+	war_industrialist
+	captain_of_industry
+	rearmer
+	red_army_organizer
+	communist_revolutionary
+	staunch_stalinist
+	ideological_groupie
+	anti_fascist_agent
+	leider
+	adventurous_daredevil
+	anti_democrat	
+	}
+}
+
+create_country_leader = {
+	name = "康斯坦丁·罗德萨维斯基"
+	desc = "POLITICS_KONSTANTIN_RODZAEVSKY_DESC"
+	picture = "SOV_luodesaweisiji.dds"
+	expire = "1953.3.1"
+	ideology = fascism_ideology
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "亚历山大·克伦斯基"
+	desc = "POLITICS_ALEXANDER_FYODOROVICH_KERENSKY_DESC"
+	picture = "SOV_kelunsiji.dds"
+	expire = "1953.3.1"
+	ideology = socialism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "安德烈·弗拉索夫"
+	desc = "   "
+	picture = "SOV_v.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = { 
+	  
+		
+	}
+}
+
+add_namespace = {
+	name = "unit_leader_sov"
+	type = unit_leader
+}
+
+create_corps_commander = {
+	name = "格奥尔吉·朱可夫"
+	id = 410
+	picture = "SOV_q.dds"
+	traits = { fulongzhi_junshixiao cavalry_officer cavalry_leader panzer_leader brilliant_strategist winter_specialist winter_expert }
+	skill = 5
+    attack_skill = 5
+	defense_skill = 5
+	planning_skill = 5
+	logistics_skill = 5
+}
+
+create_corps_commander = {
+	name = "康斯坦丁·罗科索夫斯基"
+	id = 402
+	picture = "SOV_w.dds"
+	traits = {cavalry_officer  cavalry_leader panzer_leader armor_officer winter_specialist winter_expert urban_assault_specialist }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "亚历山大·华西列夫斯基"
+	id = 407
+	picture = "SOV_e.dds"
+	traits = {career_officer infantry_officer infantry_leader infantry_expert organizer  brilliant_strategist     }
+	skill = 4
+    attack_skill = 4
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "鲍里斯·沙波什尼科夫"
+	picture = "SOV_r.dds"
+	traits = { war_hero career_officer brilliant_strategist organizer skilled_staffer     }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "尼古拉·瓦图丁"
+	picture = "SOV_t.dds"
+	traits = { fulongzhi_junshixiao organizer panzer_leader combined_arms_expert  brilliant_strategist trait_reckless  }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill =4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "伊万·科涅夫"
+	id = 408
+	picture = "SOV_y.dds"
+	traits = {fulongzhi_junshixiao  infantry_officer infantry_leader infantry_expert organizer   brilliant_strategist   }
+	skill = 5
+    attack_skill = 4
+	defense_skill = 5
+	planning_skill = 2
+	logistics_skill = 5
+}
+
+create_corps_commander = {
+	name = "谢苗·铁木辛哥"
+	id = 404
+	picture = "SOV_u.dds"
+	traits = {cavalry_officer cavalry_leader panzer_leader winter_specialist      }
+	skill = 4
+    attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_field_marshal = {
+	name = "克里门特·伏罗希洛夫"
+	id = 405
+	picture = "SOV_i.dds"
+	traits = { war_hero old_guard politically_connected inflexible_strategist offensive_doctrine  career_officer   }
+	skill = 5
+    attack_skill = 5
+	defense_skill = 5
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_field_marshal = {
+	name = "米哈伊尔·图哈切夫斯基"
+	id = 401
+	picture = "SOV_o.dds"
+	traits = {  war_hero offensive_doctrine brilliant_strategist career_officer infantry_officer trait_recklesslogistics_wizard  dazongshen_chuangshiren thorough_planner }
+	skill = 6
+    attack_skill = 6
+	defense_skill = 5
+	planning_skill = 6
+	logistics_skill = 5
+}
+
+create_field_marshal = {
+	name = "谢苗·布琼尼"
+	picture = "SOV_p.dds"
+	traits = { cavalry_officer  cavalry_leader  cavalry_expert inspirational_leader war_hero  inflexible_strategist  }
+	skill = 5
+    attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "伊凡·琼亚克贺夫斯基"
+	picture = "SOV_a.dds"
+	traits = { armor_officer }
+	skill = 1 
+    attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "伊萨·普利耶夫"
+	picture = "SOV_s.dds"
+	traits = { cavalry_officer }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "列奥尼德·戈沃罗夫"
+	picture = "SOV_d.dds"
+	traits = { cavalry_officer savenger organizer expert_improviser}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "格里戈里·库利克"
+	picture = "SOV_f.dds"
+	traits = { old_guard career_officer politically_connected inflexible_strategist }
+	skill = 1	
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "基里尔·梅列茨科夫"
+	picture = "SOV_g.dds"
+	traits = { trait_reckless infantry_officer expert_improviser}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "菲利普.戈利科夫"
+	picture = "SOV_h.dds"
+	traits = { career_officerexpert_improviser }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "安德烈·叶廖缅科"
+	picture = "SOV_j.dds"
+	traits = {fulongzhi_junshixiao cavalry_officer cavalry_leader urban_assault_specialist     }
+	skill = 4
+    attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "格奥尔基·扎哈罗夫"
+	picture = "SOV_k.dds"
+	traits = { career_officer }
+	skill = 1 
+    attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "雅科夫 谢里德尼奇恩科"
+	picture = "SOV_l.dds"
+	traits = { cavalry_officer infantry_officer expert_improviser}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "马克斯·安德烈耶维奇"
+	picture = "SOV_z.dds"
+	traits = { career_officer }
+	skill = 1
+    attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "里卡德 奇彼所夫"
+	picture = "SOV_x.dds"
+	traits = { trickster }
+	skill = 3
+    attack_skill = 1
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "瓦西里·库兹涅佐夫"
+	picture = "SOV_c.dds"
+	traits = { commando infantry_officer trait_engineer expert_improviser combined_arms_espert  }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "安德烈·弗拉索夫"
+	picture = "SOV_v.dds"
+	traits = { winter_specialist infantry_officer }
+	id = 412
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "伊万· 费迪尼茵斯基"
+	picture = "SOV_b.dds"
+	traits = { infantry_officer }
+	skill = 1 
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "马克西姆· 普尔卡耶夫"
+	picture = "SOV_n.dds"
+	traits = { career_officer politically_connected combined_arms_espert}
+	skill = 3
+    attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "库兹马·加利茨基"
+	picture = "SOV_m.dds"
+	traits = { infantry_officer }
+	skill = 1 
+    attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "马基恩·波波夫"
+	picture = "SOV_wq.dds"
+	traits = { winter_specialist infantry_officer brilliant_strategist }
+	skill = 2
+    attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "尼可拉·伯扎林"
+	picture = "SOV_ww.dds"
+	traits = { infantry_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "亚历山大·戈尔巴托夫"
+	picture = "SOV_we.dds"
+	traits = { career_officer cavalry_officer }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "基里尔·莫斯卡连科"
+	picture = "SOV_wr.dds"
+	traits = {  }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "梅德· 莱里申科"
+	picture = "SOV_wt.dds"
+	traits = {armor_officer trait_reckless  }
+	skill = 1 
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "安德烈·格列奇科"
+	picture = "SOV_wy.dds"
+	traits = { cavalry_officer fulongzhi_junshixiao }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "罗季翁·马利诺夫斯基"
+	picture = "SOV_wu.dds"
+	traits = { urban_assault_specialist  adaptable trait_engineer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "瓦西里·崔可夫"
+	picture = "SOV_wi.dds"
+	traits = {  fulongzhi_junshixiao naval_liason armor_officer panzer_leader panzer_expert   }
+	skill = 4
+    attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+
+create_field_marshal = {
+	name = "瓦西里·布柳赫尔"
+	id = 400002
+	picture = "SOV_wo.dds"
+	traits = { trickster career_officer  infantry_officer  war_hero trait_cautious politically_connected inspirational_leader  }
+	skill = 4
+    attack_skill = 4
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+
+create_field_marshal = {
+	name = "亚历山大·叶戈罗夫"
+	id = 400001
+	picture = "SOV_wp.dds"
+	traits = { inspirational_leader  offensive_doctrine war_hero  cavalry_officer politically_connected rmor_officer trait_reckless   }
+	skill = 4
+    attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "伊万诺维奇·古谢夫"
+	picture = "SOV_wa.dds"
+	traits = { brilliant_strategist trait_mountaineer  }
+	skill = 3
+    attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "阿波罗诺维奇·科罗捷耶夫"
+	picture = "SOV_ws.dds"
+	traits = { politically_connected  naval_invader   }
+	skill = 3
+    attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "阿尔捷米耶维奇·阿尔捷米耶夫"
+	picture = "SOV_wd.dds"
+	traits = { politically_connected trait_mountaineer   }
+	skill = 3
+    attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "阿尔谢尼耶维奇·戈格利泽"
+	picture = "SOV_wf.dds"
+	traits = {  expert_improviser   skirmisher }
+	skill = 3
+    attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "阿法纳西耶维奇·夏坚科"
+	picture = "SOV_wg.dds"
+	traits = { commando    career_officer   }
+	skill = 3
+    attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "阿列克谢耶维奇·别洛夫"
+	picture = "SOV_wh.dds"
+	traits = { commando    hill_fighter     }
+	skill = 2
+    attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "埃拉斯托维奇·别尔扎林"
+	picture = "SOV_wj.dds"
+	traits = {      }
+	skill = 2
+    attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "埃马努伊洛维奇·亚基尔"
+	picture = "SOV_wk.dds"
+	traits = {   ranger      }
+	skill = 2
+    attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "安德烈耶维奇·列伊捷尔"
+	picture = "SOV_wl.dds"
+	traits = {  politically_connected     }
+	skill = 2
+    attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+
+
+
+create_corps_commander = {
+	name = "彼得罗维奇·奥金佐夫"
+	picture = "SOV_wz.dds"
+	traits = {   skirmisher  armor_officer   }
+	skill = 3
+    attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "沃罗诺夫"
+	picture = "SOV_wx.dds"
+	traits = { fulongzhi_junshixiao  bearer_of_artillery  career_officer  }
+	skill = 3
+    attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+
+create_corps_commander = {
+	name = "彼得罗维奇·波克罗夫斯基"
+	picture = "SOV_wc.dds"
+	traits = {   career_officer  cavalry_officer     }
+	skill = 3
+    attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "彼得罗维奇·基尔波诺斯"
+	picture = "SOV_wv.dds"
+	traits = {   politically_connected   winter_specialist     }
+	skill = 2
+    attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "彼得罗维奇·乌博列维奇"
+	picture = "SOV_wb.dds"
+	traits = {       }
+	skill = 2
+    attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "德米特里耶维奇·洛克季奥诺夫"
+	picture = "SOV_wn.dds"
+	traits = {  trait_engineer     fortress_buster     }
+	skill = 2
+    attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "迪米特里·彼得连科"
+	picture = "SOV_eq.dds"
+	traits = { war_hero    }
+	skill = 1
+    attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "尔盖耶维奇·热尔托夫"
+	picture = "SOV_ew.dds"
+	traits = {     fortress_buster     }
+	skill = 2
+    attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "费多罗维奇·费季科"
+	picture = "SOV_ee.dds"
+	traits = {     fortress_buster     }
+	skill = 3
+    attack_skill = 1
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "费多罗维奇·乌斯季诺夫"
+	picture = "SOV_er.dds"
+	traits = {         }
+	skill = 3
+    attack_skill = 1
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "费多谢耶维奇·日马琴科"
+	picture = "SOV_et.dds"
+	traits = {  desert_fox    fortress_buster   trait_engineer     }
+	skill = 3
+    attack_skill = 3
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+
+create_corps_commander = {
+	name = "福米奇·什特科夫"
+	picture = "SOV_ey.dds"
+	traits = {   desert_fox          }
+	skill = 3
+    attack_skill = 1
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+
+create_corps_commander = {
+	name = "格奥尔基耶维奇·昌奇巴泽"
+	picture = "SOV_eu.dds"
+	traits = {   desert_fox     winter_specialist       }
+	skill = 3
+    attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "格奥尔吉耶维奇·特鲁菲缅科"
+	picture = "SOV_ei.dds"
+	traits = {   desert_fox     winter_specialist       }
+	skill = 2
+    attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+
+create_corps_commander = {
+	name = "格里戈利耶维奇·巴甫洛夫"
+	picture = "SOV_eo.dds"
+	traits = { fulongzhi_junshixiao armor_officer   panzer_leader panzer_expert  }
+	skill = 3
+    attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+
+
+create_corps_commander = {
+	name = "吉洪诺维奇·格里申"
+	picture = "SOV_ep.dds"
+	traits = {    }
+	skill = 1
+    attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "卡皮托诺维奇·马兰金"
+	picture = "SOV_ea.dds"
+	traits = {  winter_specialist   }
+	skill = 2
+    attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "雷泽诺夫"
+	picture = "SOV_es.dds"
+	traits = {  trickster   }
+	skill = 1
+    attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "列夫·扎哈洛维奇·麦赫利斯"
+	picture = "SOV_ed.dds"
+	traits = {  politically_connected   }
+	skill = 2
+    attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "列柳申科"
+	picture = "SOV_ef.dds"
+	traits = {  politically_connected  trickster  winter_specialist }
+	skill = 3
+    attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "罗季奥诺维奇·阿帕纳先科"
+	picture = "SOV_eg.dds"
+	traits = {  media_personality    }
+	skill = 3
+    attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+
+create_corps_commander = {
+	name = "洛格维诺维奇·罗曼年科"
+	picture = "SOV_eh.dds"
+	traits = {  career_officer   }
+	skill = 2
+    attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "马特维·扎哈罗夫"
+	picture = "SOV_ej.dds"
+	traits = {  career_officer   }
+	skill = 2
+    attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "梅福季耶维奇·马纳加罗夫"
+	picture = "SOV_ek.dds"
+	traits = {    }
+	skill = 2
+    attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "米哈伊尔·伊里奇·卡扎科夫"
+	picture = "SOV_el.dds"
+	traits = { bearer_of_artillery    }
+	skill = 2
+    attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+
+create_corps_commander = {
+	name = "米哈伊洛维奇·卡尔贝舍夫"
+	picture = "SOV_ez.dds"
+	traits = { naval_invader      }
+	skill = 2
+    attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "米哈伊洛维奇·奇斯佳科夫"
+	picture = "SOV_ex.dds"
+	traits = { naval_invader   politically_connected      }
+	skill = 2
+    attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "米哈伊洛维奇·桑达洛夫"
+	picture = "SOV_ec.dds"
+	traits = { naval_invader    cavalry_officer       }
+	skill = 2
+    attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "米哈伊洛维奇·施特恩"
+	picture = "SOV_ev.dds"
+	traits = { naval_invader          }
+	skill = 2
+    attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "米特里耶维奇·茨维塔耶夫"
+	picture = "SOV_eb.dds"
+	traits = { rmor_officer  }
+	skill = 2
+    attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "尼古拉·布尔加宁"
+	picture = "SOV_en.dds"
+	traits = { jungle_rat     }
+	skill = 2
+    attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "尼古拉耶维奇·阿波隆诺夫"
+	picture = "SOV_em.dds"
+	traits = {    }
+	skill = 1
+    attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "尼古拉耶维奇·博戈柳博夫"
+	picture = "SOV_rq.dds"
+	traits = {    }
+	skill = 1
+    attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "尼古拉耶维奇·古谢夫"
+	picture = "SOV_rw.dds"
+	traits = {  old_guard    }
+	skill = 1
+    attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+
+create_corps_commander = {
+	name = "尼古拉耶维奇·列谢利泽"
+	picture = "SOV_re.dds"
+	traits = {   urban_assault_specialist }
+	skill = 1
+    attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "尼古拉耶维奇·沙罗欣"
+	picture = "SOV_rr.dds"
+	traits = { swamp_fox    }
+	skill = 1
+    attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "尼基福罗维奇·克鲁格洛夫"
+	picture = "SOV_rt.dds"
+	traits = { commando       }
+	skill = 1
+    attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "尼基福罗维奇·纳戈尔内"
+	picture = "SOV_ry.dds"
+	traits = { commando    fortress_buster    }
+	skill = 2
+    attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "帕夫兰季耶维奇·别洛博罗多夫"
+	picture = "SOV_ru.dds"
+	traits = { old_guard       }
+	skill = 2
+    attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "帕夫洛维奇·普霍夫"
+	picture = "SOV_ri.dds"
+	traits = { old_guard   trait_mountaineer     }
+	skill = 2
+    attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "斯捷潘诺维奇·格罗马金"
+	picture = "SOV_ro.dds"
+	traits = {  trait_mountaineer     }
+	skill = 2
+    attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "斯捷潘诺维奇·舒米洛夫"
+	picture = "SOV_rp.dds"
+	traits = {  panzer_leader   rmor_officer        }
+	skill = 3
+    attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "瓦里西·尼古拉耶维奇·戈尔多夫"
+	picture = "SOV_ra.dds"
+	traits = {    old_guard          }
+	skill = 3
+    attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "瓦西里耶维奇·博尔金"
+	picture = "SOV_rs.dds"
+	traits = {    old_guard    politically_connected       }
+	skill = 2
+    attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "瓦西里耶维奇·格列戈列夫"
+	picture = "SOV_rd.dds"
+	traits = {    old_guard    media_personality      }
+	skill = 2
+    attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "瓦西里耶维奇·赫鲁廖夫"
+	picture = "SOV_rf.dds"
+	traits = {    harsh_leader      media_personality      }
+	skill = 2
+    attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "瓦西里耶维奇·切尔内绍夫"
+	picture = "SOV_rg.dds"
+	traits = {    media_personality      }
+	skill = 2
+    attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "瓦西里耶维奇·斯莫罗季诺夫"
+	picture = "SOV_rh.dds"
+	traits = {    media_personality      }
+	skill = 1
+    attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "谢尔盖耶维奇·马利宁"
+	picture = "SOV_rj.dds"
+	traits = {   inflexible_strategist   }
+	skill = 1
+    attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "谢苗诺维奇·阿巴库莫夫"
+	picture = "SOV_rk.dds"
+	traits = {   trait_reckless   }
+	skill = 1
+    attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "谢苗诺维奇·比留佐夫"
+	picture = "SOV_rl.dds"
+	traits = {  war_hero     fulongzhi_junshixiao    }
+	skill = 2
+    attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "谢苗诺维奇·霍津"
+	picture = "SOV_rz.dds"
+	traits = {   cavalry_officer   }
+	skill = 2
+    attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "谢苗诺维奇·扎多夫"
+	picture = "SOV_rx.dds"
+	traits = {   naval_invader   hill_fighter  }
+	skill = 3
+    attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "雅科夫列维奇·科尔帕克奇"
+	picture = "SOV_rc.dds"
+	traits = {  swamp_fox    hill_fighter  }
+	skill = 3
+    attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "亚历山大罗维奇·帕夫洛夫"
+	picture = "SOV_rv.dds"
+	traits = {  swamp_fox  commando      hill_fighter  }
+	skill = 3
+    attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "亚历山德罗维奇·弗罗洛夫"
+	picture = "SOV_rb.dds"
+	traits = {  old_guard      }
+	skill = 2
+    attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "亚历山德罗维奇·日丹诺夫"
+	picture = "SOV_rn.dds"
+	traits = {  old_guard  politically_connected    }
+	skill = 2
+    attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "亚历山德罗维奇·尤什科维奇"
+	picture = "SOV_rm.dds"
+	traits = {  old_guard  politically_connected  media_personality  }
+	skill = 2
+    attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "叶夫兰皮耶维奇·别洛科斯科夫"
+	picture = "SOV_tq.dds"
+	traits = { career_officer infantry_officer }
+	skill = 2
+    attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "叶夫兰皮耶维奇·奇比索夫"
+	picture = "SOV_tw.dds"
+	traits = { career_officer infantry_officer bearer_of_artillery  }
+	skill = 3
+    attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "伊万·切尔尼亚霍夫斯基"
+	picture = "SOV_te.dds"
+	traits = {  cavalry_officer   }
+	skill = 1
+    attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "伊万·巴格拉米扬"
+	picture = "SOV_tr.dds"
+	traits = { war_hero  inflexible_strategist  career_officer  rmor_officer  }
+	skill = 4
+    attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "伊万·弗拉基米罗维奇"
+	picture = "SOV_tt.dds"
+	traits = {  desert_fox        }
+	skill = 1
+    attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "伊万·伊里奇·柳德尼科夫"
+	picture = "SOV_ty.dds"
+	traits = {  desert_fox   trickster        }
+	skill = 2
+    attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "伊万诺维奇·巴托夫"
+	picture = "SOV_tu.dds"
+	traits = {  winter_specialist   trickster        }
+	skill = 2
+    attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "伊万诺维奇·费久宁斯基"
+	picture = "SOV_ti.dds"
+	traits = { winter_specialist  infantry_officer infantry_leader infantry_expert    }
+	skill = 4
+    attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "伊万诺维奇·戈罗多维科夫"
+	picture = "SOV_to.dds"
+	traits = { winter_specialist  trait_engineer     }
+	skill = 2
+    attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "伊万诺维奇·克雷洛夫"
+	picture = "SOV_tp.dds"
+	traits = { winter_specialist  fortress_buster       }
+	skill = 2
+    attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "伊万诺维奇·马斯连尼科夫"
+	picture = "SOV_ta.dds"
+	traits = { winter_specialist        }
+	skill = 1
+    attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "伊万诺维奇·托尔布欣"
+	picture = "SOV_ts.dds"
+	traits = { fortress_buster          }
+	skill = 1
+    attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+
+create_corps_commander = {
+	name = "伊万诺维奇·沃斯特鲁霍夫"
+	picture = "SOV_td.dds"
+	traits = {commando }
+	skill = 1
+    attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "因诺肯季耶维奇·安东诺夫"
+	picture = "SOV_tf.dds"
+	traits = { }
+	skill = 1
+    attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "扎哈罗维奇·科布洛夫"
+	picture = "SOV_tg.dds"
+	traits = { }
+	skill = 2
+    attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "扎哈罗维奇·罗曼诺夫斯基"
+	picture = "SOV_th.dds"
+	traits = {urban_assault_specialist  }
+	skill = 2
+    attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "扎扎哈罗维奇·梅赫利斯"
+	picture = "SOV_tj.dds"
+	traits = {  }
+	skill = 2
+    attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+
+create_navy_leader = {
+	name = "菲利浦·阿科亚布斯基"
+	picture = "SOV_tk.dds"
+	traits = { ground_pounder ironside }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "谢尔盖·戈尔什科夫"
+	id = 411
+	picture = "SOV_tl.dds"
+	traits = { navy_career_officer bold }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 2
+}
+
+
+create_navy_leader = {
+	name = "阿塞尼·哥诺弗科"
+	id = 409
+	picture = "SOV_tx.dds"
+	traits = { arctic_water_expert spotter }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	maneuvering_skill = 3
+	coordination_skill = 3
+}
+
+create_navy_leader = {
+	name = "弗拉基米尔·科萨诺夫"
+	id = 403
+	picture = "SOV_tc.dds"
+	traits = { seawolf }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "安德列·亚历山德罗"
+	picture = "SOV_tv.dds"
+	traits = { old_guard_navy }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "安德烈·特罗菲莫维奇"
+	picture = "SOV_tb.dds"
+	traits = { old_guard_navy }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "鲍里斯.弗拉基米罗维奇"
+	picture = "SOV_tn.dds"
+	traits = { old_guard_navy }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "彼得·邦达连科"
+	picture = "SOV_tm.dds"
+	traits = { old_guard_navy }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "德米特里·罗加乔夫"
+	picture = "SOV_yq.dds"
+	traits = {  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "弗拉基米尔·法捷耶夫"
+	picture = "SOV_yw.dds"
+	traits = { superior_tactician  }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "弗拉基米尔·利奥"
+	picture = "SOV_ye.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "弗拉基米尔·特里比茨"
+	picture = "SOV_yr.dds"
+	traits = { superior_tactician  }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "弗拉基米尔·贝利"
+	picture = "SOV_yt.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "格拉西莫维奇-库兹涅佐夫"
+	picture = "SOV_yy.dds"
+	traits = { superior_tactician  naval_lineage  fly_swatter }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	maneuvering_skill = 4
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "康斯坦丁·萨莫伊洛夫"
+	picture = "SOV_yu.dds"
+	traits = { blockade_runner  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "列夫·加勒"
+	picture = "SOV_yi.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "梅耶·安德烈耶维奇"
+	picture = "SOV_yo.dds"
+	traits = { blockade_runner  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "米哈伊尔·索洛维约夫"
+	picture = "SOV_yp.dds"
+	traits = {  }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "米哈伊尔·沃龙佐夫"
+	picture = "SOV_ya.dds"
+	traits = { blockade_runner  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "米哈伊洛维奇·鲁缅采夫"
+	picture = "SOV_ys.dds"
+	traits = {  spotter  }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "奥西波维奇·阿布拉莫夫"
+	picture = "SOV_yd.dds"
+	traits = { fly_swatter  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "米哈伊洛维奇·哈拉莫夫"
+	picture = "SOV_yf.dds"
+	traits = { spotter   }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "尼古拉·亚历山德罗维奇"
+	picture = "SOV_yg.dds"
+	traits = { fly_swatter  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "彼得·斯米尔诺夫"
+	id = 400003
+	picture = "SOV_yh.dds"
+	traits = {air_controller flight_deck_manager fighter_director  }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	maneuvering_skill = 4
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "帕维尔.耶维奇阿布金"
+	picture = "SOV_yj.dds"
+	traits = { fly_swatter  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "帕维尔·阿列克谢耶维奇"
+	picture = "SOV_yk.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "伊万诺维奇·博尔图诺夫"
+	picture = "SOV_yl.dds"
+	traits = { air_controller  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+	
+}
+
+create_navy_leader = {
+	name = "乔治·斯捷潘诺夫"
+	picture = "SOV_yz.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "塞拉菲姆"
+	picture = "SOV_yx.dds"
+	traits = { air_controller  }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "斯捷潘诺维奇·伊萨科夫"
+	picture = "SOV_yc.dds"
+	traits = { old_guard_navy    }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 1
+	maneuvering_skill = 3
+	coordination_skill = 1
+}
+
+
+create_navy_leader = {
+	name = "瓦西里·普拉托诺夫"
+	picture = "SOV_yv.dds"
+	traits = {  air_controller }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "瓦西里耶维奇·安东诺夫"
+	picture = "SOV_yb.dds"
+	traits = { old_guard_navy    }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "维克多.切诺基"
+	picture = "SOV_yn.dds"
+	traits = {  }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "维克托·瓦西里耶夫"
+	picture = "SOV_ym.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "伊格纳季.耶维奇"
+	picture = "SOV_uq.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "亚历山大·弗罗洛夫"
+	picture = "SOV_uw.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "亚历山大·卡洛维奇"
+	picture = "SOV_ur.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "亚历山大·斯塔尔"
+	picture = "SOV_ut.dds"
+	traits = { old_guard_navy    }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+
+create_navy_leader = {
+	name = "亚历山大·亚历山德罗夫"
+	picture = "SOV_uy.dds"
+	traits = { seawolf     }
+	skill = 3
+	attack_skill = 1
+	defense_skill = 3
+	maneuvering_skill = 1
+	coordination_skill = 3
+}
+
+create_navy_leader = {
+	name = "叶夫根尼"
+	picture = "SOV_ui.dds"
+	traits = { old_guard_navy    }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "伊利亚·伊里奇·阿扎罗夫"
+	picture = "SOV_uo.dds"
+	traits = { seawolf     }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "伊万·帕帕宁"
+	picture = "SOV_up.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "伊万·斯捷潘诺维奇"
+	picture = "SOV_ua.dds"
+	traits = {  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "伊万·尤马舍夫"
+	id = 400004
+	picture = "SOV_us.dds"
+	traits = {ironside big_guns_expert ground_pounder safety_first  }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	maneuvering_skill = 4
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "伊万诺维奇.贝科夫"
+	picture = "SOV_ud.dds"
+	traits = {  }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "尤里·F.拉尔"
+	picture = "SOV_uf.dds"
+	traits = { old_guard_navy    }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "戈尔杰伊·列芙琴科"
+	id = 406
+	picture = "SOV_tz.dds"
+	traits = { big_guns_expert ground_pounder safety_first ironside }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	maneuvering_skill = 4
+	coordination_skill = 4
+} 
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	create_operative_leader = {
+		name = "亚历山大·拉多"
+		GFX = GFX_portrait_alexander_rado
+		traits = { operative_natural_orator }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { SOV HUN }
+	}
+
+	create_operative_leader = {
+		name = "金·菲尔比"
+		picture = "SOV_portrait_kim_philby.dds"
+		traits = { operative_double_agent operative_infiltrator }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { SOV ENG }
+	}
+	create_operative_leader = {
+		name = "理查德·佐尔格"
+		picture = "SOV_portrait_richard_sorge.dds"
+		traits = { operative_well_groomed }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { SOV GER }
+	}
+	create_operative_leader = {
+		name = "武田毅雄"
+		picture = "SOV_portrait_fengtian_yixing.dds"
+		traits = { operative_linguist }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { SOV JAP }
+	}
+	create_operative_leader = {
+		name = "尾崎秀实"
+		picture = "SOV_portrait_weiqi_xiushi.dds"
+		traits = { operative_linguist }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { SOV JAP }
+	}
+}
+
+### VARIANTS ###
+# 1936 Start #
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Ship Variants ###
+	create_equipment_variant = {
+		name = "I型十二月党人级"
+		type = submarine_1
+		upgrades = {
+			ship_reliability_upgrade = 1
+			sub_engine_upgrade = 1
+			sub_stealth_upgrade = 1
+			sub_torpedo_upgrade = 1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "IX型中央级"
+		type = submarine_2
+		upgrades = {
+			ship_reliability_upgrade = 1
+			sub_engine_upgrade = 1
+			sub_stealth_upgrade = 1
+			sub_torpedo_upgrade = 1
+		}
+	}
+	create_equipment_variant = {
+		name = "列宁格勒级"
+		type = destroyer_1
+		upgrades = {
+			ship_torpedo_upgrade = 3
+			destroyer_engine_upgrade = 3
+			ship_ASW_upgrade = 3
+			ship_anti_air_upgrade = 3
+		}
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Submarines #
+	create_equipment_variant = {			
+		name = "AG级"
+		type = ship_hull_submarine_1
+		name_group = SOV_SS_SHCHUKA
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "I型十二月党人级"			# represents Debakrist, B class, L-55 sub
+		type = ship_hull_submarine_1
+		name_group = SOV_SS_SHCHUKA
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = ship_torpedo_sub_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "II型列尼涅兹级"				# represents Leninets series II, XI
+		type = ship_hull_submarine_2
+		name_group = SOV_SS_LENINETS
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = ship_mine_layer_sub
+		}
+	}
+	create_equipment_variant = {
+		name = "V型梭子鱼级"				# represents Shchuka series III, V, V-bis, V-bis-2
+		type = ship_hull_submarine_1
+		name_group = SOV_SS_SHCHUKA
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_2
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "IX型中央级"				# 'Stalinets', series IX, IX-bis, IX-bis-2 and P-class
+		type = ship_hull_submarine_2
+		name_group = SOV_SS_STALINETS
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_2
+			fixed_ship_engine_slot = sub_ship_engine_2
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "X型梭子鱼级"				
+		type = ship_hull_submarine_1
+		name_group = SOV_SS_SHCHUKA
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_2
+			fixed_ship_engine_slot = sub_ship_engine_2
+			rear_1_custom_slot = empty
+		}
+	}
+	# Destroyers #
+	create_equipment_variant = {
+		name = "奥菲斯级"						# represents Yakov Sverdlov, Frunze, and Orfey classes
+		type = ship_hull_light_1
+		name_group = SOV_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "蛇岛级"						# represents Fidonisi and Izyaslav classes
+		type = ship_hull_light_1
+		name_group = SOV_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "列宁格勒级"				
+		type = ship_hull_light_2
+		name_group = SOV_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+	create_equipment_variant = {
+		name = "臭虫级"					# minelayer
+		type = ship_hull_light_1
+		name_group = SOV_MINELAYERS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = empty
+			mid_1_custom_slot = ship_mine_layer_1
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+	}
+	# Light Cruisers #
+	create_equipment_variant = {
+		name = "共产国际级"
+		type = ship_hull_cruiser_1
+		name_group = SOV_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			mid_1_custom_slot = ship_light_medium_battery_1
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "红色乌克兰级"
+		type = ship_hull_cruiser_1
+		name_group = SOV_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			mid_1_custom_slot = ship_light_medium_battery_1
+			mid_2_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+	}
+	create_equipment_variant = {
+		name = "马蒂级"
+		type = ship_hull_cruiser_1				# minelayer
+		name_group = SOV_MINELAYERS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+	}
+ # Heavy Cruisers #
+		create_equipment_variant = {
+			name = "基洛夫级"
+			type = ship_hull_cruiser_1
+			name_group = SOV_CA_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_medium_battery_1
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = cruiser_ship_engine_2
+				fixed_ship_armor_slot = ship_armor_cruiser_1
+				mid_1_custom_slot = ship_airplane_launcher_1
+				mid_2_custom_slot = ship_anti_air_1
+				rear_1_custom_slot = ship_medium_battery_1
+			}
+		}
+	# Battleships #
+	create_equipment_variant = {
+		name = "马拉特级"					
+		type = ship_hull_heavy_1
+		name_group = SOV_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_bb_1
+			front_1_custom_slot = ship_heavy_battery_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+}
+
+# 1939 Start #
+1939.1.1 = {
+	if = {
+		limit = { not = { has_dlc = "Man the Guns" } }
+		# Ship variants #
+		create_equipment_variant = {
+			name = "X型梭子鱼级"
+			type = submarine_2
+			upgrades = {
+				ship_reliability_upgrade = 3
+				sub_engine_upgrade = 3
+				sub_stealth_upgrade = 3
+				sub_torpedo_upgrade = 3
+			}
+		}
+
+		create_equipment_variant = {
+			name = "高尔基级"
+			type = heavy_cruiser_2
+			upgrades = {
+				ship_reliability_upgrade = 2
+				ship_engine_upgrade = 2
+				ship_armor_upgrade = 2
+				ship_gun_upgrade = 2
+			}
+		}
+	}
+	if = {
+		limit = { has_dlc = "Man the Guns" }
+		# Submarines #
+		create_equipment_variant = {
+			name = "XIII型列尼涅兹级"				
+			type = ship_hull_submarine_2
+			name_group = SOV_SS_LENINETS
+			parent_version = 0
+			modules = {
+				fixed_ship_torpedo_slot = ship_torpedo_sub_2
+				fixed_ship_engine_slot = sub_ship_engine_2
+				rear_1_custom_slot = ship_mine_layer_sub
+			}
+		}
+		create_equipment_variant = {
+			name = "XIV型K级"				
+			type = ship_hull_submarine_3
+			name_group = SOV_SS_SHCHUKA
+			parent_version = 0
+			modules = {
+				fixed_ship_torpedo_slot = ship_torpedo_sub_2
+				fixed_ship_engine_slot = sub_ship_engine_3
+				front_1_custom_slot = ship_mine_layer_sub
+				mid_1_custom_slot = empty
+				rear_1_custom_slot = ship_torpedo_sub_2
+			}
+		}
+		# Destroyers #
+		create_equipment_variant = {
+			name = "愤怒级"				
+			type = ship_hull_light_2
+			name_group = SOV_DD_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_light_battery_2
+				fixed_ship_anti_air_slot = empty
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = light_ship_engine_2
+				fixed_ship_torpedo_slot = empty
+				mid_1_custom_slot = empty
+				rear_1_custom_slot = ship_depth_charge_1
+			}
+			obsolete = yes
+		}
+		create_equipment_variant = {
+			name = "机智级"				
+			type = ship_hull_light_3
+			name_group = SOV_DD_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_light_battery_2
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = light_ship_engine_2
+				fixed_ship_torpedo_slot = empty
+				mid_1_custom_slot = empty
+				rear_1_custom_slot = ship_depth_charge_1
+			}
+		}
+		create_equipment_variant = {
+			name = "塔什干级"				
+			type = ship_hull_light_3
+			name_group = SOV_DD_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_light_battery_2
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = light_ship_engine_3
+				fixed_ship_torpedo_slot = ship_torpedo_1
+				mid_1_custom_slot = ship_anti_air_1
+				rear_1_custom_slot = ship_depth_charge_1
+			}
+		}
+	}
+}

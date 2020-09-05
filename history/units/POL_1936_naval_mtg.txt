@@ -1,0 +1,21 @@
+﻿units = {
+
+	######## NAVAL OOB ########
+	fleet = {
+		name = "波兰海军驱逐舰编队"
+		naval_base = 362 
+		task_force = {				
+			name = "Polska Flota Niszczycieli"
+			location = 362 # Danzig
+			ship = { name = "ORP 风暴号" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = POL version_name = "Wicher Class" } } }	
+			ship = { name = "ORP 烈风号" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = POL version_name = "Wicher Class" } } }	
+		}		
+		task_force = {
+			name = "波兰海军潜艇编队"
+			location = 362 # Danzig
+			ship = { name = "ORP 图号" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = POL version_name = "Wilk Class" } } }					
+			ship = { name = "ORP 狼号" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = POL version_name = "Wilk Class" } } }					
+			ship = { name = "ORP 山猫号" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = POL version_name = "Wilk Class" } } }			
+		}
+	}
+}

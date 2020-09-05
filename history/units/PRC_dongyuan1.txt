@@ -1,0 +1,39 @@
+﻿
+division_template = {
+	name = "农民赤卫队"
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 1 y = 0 }
+	}
+}
+units = {
+
+	
+	division = {
+		name = "农民赤卫队一大队"
+		location = 8049
+		division_template = "农民赤卫队"
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "农民赤卫队二大队"
+		location = 8049
+		division_template = "农民赤卫队"
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "农民赤卫队三大队"
+		location = 8049
+		division_template = "农民赤卫队"
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "农民赤卫队四大队"
+		location = 8049
+		division_template = "农民赤卫队"
+		start_equipment_factor = 0.85
+	}
+	
+	
+	
+}

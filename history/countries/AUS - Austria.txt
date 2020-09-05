@@ -1,0 +1,199 @@
+﻿capital = 4
+
+oob = "AUS_1936"
+
+set_research_slots = 3
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_support = 1		
+	tech_mountaineers = 1
+	early_fighter = 1
+}
+
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1930.11.9"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 48
+	fascism = 50
+	democratic = 1
+	communism = 1
+}
+
+
+set_stability = 0.50
+
+create_country_leader = {
+	name = "库尔特·舒施尼格"
+	desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+	picture = "Kurt_Schuschnigg.dds"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "卡尔·伦纳"
+	desc = "POLITICS_KARL_RENNER_DESC"
+	picture = "Karl_Renne.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "阿图尔·赛斯-英夸特"
+	desc = "POLITICS_ARTHUR_SEYSS_INQUART_DESC"
+	picture = "Artur_Seth_Inquart.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "艾尔弗雷德·克拉汉弗"
+	desc = "POLITICS_ALFRED_KLAHR_DESC"
+	picture = "Alfred_Clapham.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "罗伯特.马丁尼"
+	portrait_path = "gfx/leaders/AUS/Robert_Martini.dds"
+	traits = { trait_mountaineer trickster }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "约翰·米克"
+	portrait_path = "gfx/leaders/AUS/John_Mick.dds"
+	traits = { trait_mountaineer trickster }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "马克西米·安吉利斯"
+	portrait_path = "gfx/leaders/AUS/AUS_Maximilian_de_Angelis.dds"
+	traits = { trait_mountaineer  }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "弗兰兹·布姆"
+	portrait_path = "gfx/leaders/AUS/AUS_Franz_Bhme.dds"
+	traits = {  trait_cautious  old_guard    }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "费迪南·福尔廷"
+	picture = "AUS_Fdinan_Ferting.dds"
+	traits = {  paratrooper       }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "库尔特·盖金舍"
+	picture = "AUS_Kerte_Gjinshen.dds"
+	traits = {     politically_connected    }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "马豪斯·海茨瑙亚" #狙击手，铁十字骑士十字勋章获得者，击杀345人，最远击杀距离为1100米（2100码）
+	picture = "AUS_Mhaoshi.dds"
+	traits = {         }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "柯特·冯·杰瑟"
+	picture = "AUS_Ke_TE-Feng.dds"
+	traits = {     commando  career_officer  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "朱利叶斯·灵尔"
+	picture = "AUS_Zliyesi_tu.dds"
+	traits = { commando career_officer organisational_leade  }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "威克·冯·托林"
+	picture = "AUS_WEKE_feng_TUOling.dds"
+	traits = {         }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "艾哈德·劳斯"
+	picture = "GER_wh.dds"
+	traits = {  zhangjia_xianfeng  trickster brilliant_strategist panzer_leader armor_officer career_officer      }
+	skill = 4
+	id = 56
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 4
+}

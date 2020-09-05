@@ -1,0 +1,1060 @@
+ideas = {
+
+	country = {
+		PHI_Turbulent = {
+		
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.25
+				consumer_goods_factor = 0.05
+				conscription_factor = -0.05
+			}
+		}
+		PHI_Turbulent_2 = {
+		
+			picture = generic_deal_with_the_devil
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.20
+				consumer_goods_factor = 0.04
+				conscription_factor = -0.04
+			}
+		}
+		PHI_Turbulent_3 = {
+		
+			picture = generic_deal_with_the_devil
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.15
+				consumer_goods_factor = 0.03
+				conscription_factor = -0.03
+			}
+		}
+		PHI_Turbulent_4 = {
+		
+			picture = generic_deal_with_the_devil
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.10
+				consumer_goods_factor = 0.02
+				conscription_factor = -0.02
+			}
+		}
+		PHI_Turbulent_5 = {
+		
+			picture = generic_deal_with_the_devil
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.05
+				consumer_goods_factor = 0.01
+				conscription_factor = -0.01
+			}
+		}
+		PHI_Nation_building = {
+		
+			picture = generic_reserve_divisions
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		PHI_Muslim_community = {
+		
+			picture = raj_marginalized_muslim_community
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+		PHI_Muslim_autonomous_region = {
+		
+			picture = raj_marginalized_muslim_community_happy
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		PHI_Marginalized_group = {
+		
+			picture = raj_marginalized_muslim_community_angry
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 0.25
+			}
+		}
+		
+		PHI_Agricultural_economy = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+			
+		}
+		
+		PHI_Philippine_autonomous_government = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				consumer_goods_factor = -0.02
+				production_factory_start_efficiency_factor = 0.02
+				industrial_capacity_factory = 0.02
+				stability_factor = 0.05
+			}
+		}
+		PHI_Philippine_government = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_start_efficiency_factor = 0.04
+				industrial_capacity_factory = 0.04
+				stability_factor = 0.075
+			}
+		}
+		PHI_Philippine_workers_government = {
+		
+			picture = trotskyite_plot_purged
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				conscription_factor = 0.03
+				industrial_capacity_factory = 0.1
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		PHI_Autarchic_government = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = ast_abandon_the_westminster_system
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_start_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		PHI_Pro_japanese_government = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = warrior_traditions_idea
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.1
+				stability_factor = -0.05
+			}
+		}
+		PHI_National_assembly = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				political_advisor_cost_factor = -0.1
+				stability_factor = 0.05
+			}
+		}
+		PHI_Bicameral_congress = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				political_advisor_cost_factor = -0.2
+				stability_factor = 0.1
+				autonomy_gain = 0.1
+				army_core_defence_factor = 0.05
+			}
+		}
+		PHI_Philippine_judicial_system = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_victors_of_ww1
+			
+			modifier = {
+				autonomy_gain = 0.1
+				master_builds_freedom_effect = -0.1
+				foreign_subversive_activites = -0.1
+			}
+		}
+		
+		PHI_Perfection_of_democratic_institutions = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				democratic_drift = 0.1
+			}
+		}
+		PHI_Douglas_MacArthur = {
+
+			available = {
+				has_capitulated = no
+				is_subject_of = USA
+				USA = {
+					NOT = {
+						has_country_leader = {
+								name = "Douglas MacArthur"
+							}
+					}
+				}
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = douglas_macarthur
+			
+			modifier = {
+				experience_gain_army_factor = 0.02
+				army_org_factor = 0.1
+				military_leader_cost_factor = -0.2
+			}
+
+		}
+		PHI_Horizon_metropolitan_country = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_volunteer_expedition_bonus
+
+			rule = {
+				can_send_volunteers = yes
+			}
+			
+			modifier = {
+				send_volunteers_tension = -0.5
+				send_volunteer_size = 5
+			}
+
+		}
+		PHI_Accelerate_independent_process = {
+
+			available = {
+				is_subject_of = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = can_patriation
+			
+			modifier = {
+				autonomy_gain = 0.4
+			}
+		}
+		
+		PHI_Anti_american_consciousness = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = saf_ossewabrandwag_fascism
+			
+			modifier = {
+				fascism_drift = 0.1
+			}
+		}
+		PHI_Philippines_ambition = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				army_morale_factor = 0.1
+			}
+		}
+		
+		PHI_Army_expansion = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				training_time_factor = -0.03
+			}
+
+		}
+		PHI_Military_school = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_army_war_college
+			
+			modifier = {
+				max_command_power = 25
+			}
+
+		}
+		PHI_Army_recruitment = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription = 0.02
+			}
+
+		}
+		PHI_Army_dominate = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ast_volunteer_defence_corps
+			
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+
+		}
+		
+		PHI_Expand_the_marine = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = HUN_secret_rearmament 
+			
+			modifier = {
+				special_forces_cap = 0.1
+			}
+
+		}
+		PHI_Marines_dominate = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_reserve_divisions 
+			
+			modifier = {
+				special_forces_cap = 0.3
+			}
+
+		}
+		PHI_Jungle_war_training = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				special_forces_attack_factor = 0.1
+				special_forces_defence_factor = 0.1
+			}
+
+		}
+		
+		PHI_Rudeltaktik = {
+
+			picture = FRA_army_of_aggression_focus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				submarine = {
+					build_cost_ic = -0.1
+					convoy_raiding_coordination = 0.1
+				}
+			}
+		}
+		PHI_Focus_on_coastal_defense = {
+
+			picture = generic_coastal_navy
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				ship_hull_light = {
+					build_cost_ic = -0.1
+				}
+			}
+		}
+		PHI_Attack_trade_route = {
+
+			picture = generic_sea_focused_navy
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				ship_hull_light = {
+					lg_attack = 0.2
+					naval_range = -0.2
+					build_cost_ic = -0.1
+				}
+				destroyer = {
+					convoy_raiding_coordination = 0.2
+				}
+			}
+		}
+		PHI_Build_a_green_water_navy = {
+
+			picture = generic_sea_focused_navy
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				ship_hull_light = {
+					build_cost_ic = -0.1
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.1
+				}
+			}
+		}
+		PHI_Fleet_in_being = {
+
+			picture = generic_navy_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				ship_hull_light = {
+					build_cost_ic = -0.1
+				}
+				ship_hull_cruiser = {
+					hg_attack = 0.2
+					naval_range = -0.3
+					armor_value = 0.1
+					build_cost_ic = -0.1
+				}
+				ship_hull_heavy = {
+					hg_attack = 0.2
+					naval_range = -0.3
+					armor_value = 0.2
+				}
+			}
+		}
+		
+		PHI_Guaranteed_quantity_advantage = {
+
+			picture = generic_bomber_production_diverted
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				fighter_equipment = {
+					build_cost_ic = -0.1
+				}
+				cv_fighter_equipment = {
+					build_cost_ic = -0.1
+				}
+				heavy_fighter_equipment = {
+					build_cost_ic = -0.1
+				}
+			}
+		}
+		PHI_Quality_priority = {
+
+			picture = generic_fighter_production_diverted
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				fighter_equipment = {
+					air_attack = 0.1
+				}
+				cv_fighter_equipment = {
+					air_attack = 0.1
+				}
+				heavy_fighter_equipment = {
+					air_attack = 0.1
+				}
+			}
+		}
+	}
+	
+	political_advisor = {
+
+		PHI_sergio_osmena = {
+
+			picture = generic_political_advisor_asia_2
+			
+			allowed = {
+				original_tag = PHI
+			}
+			
+			traits = { silent_workhorse }
+		}
+
+		PHI_emilio_aguinaldo = {
+
+			picture = generic_political_advisor_asia_3
+				
+			allowed = {
+				original_tag = PHI
+			}
+			
+			traits = { popular_figurehead }
+		}
+
+		PHI_juan_sumulong = {
+
+			picture = generic_political_advisor_asia_1
+			
+			allowed = {
+				original_tag = PHI
+			}
+			
+			traits = { prince_of_terror }
+		}
+	}	
+
+	army_chief = {
+		
+		PHI_leoncio_s_tan = {
+			
+			picture = generic_army_asia_2
+
+			allowed = {
+				original_tag = PHI
+			}
+			
+			traits = { army_chief_morale_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+
+		PHI_basilio_j_valdez = {
+
+			picture = generic_army_asia_4
+			
+			allowed = {
+				original_tag = PHI
+			}
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+	air_chief = {
+		
+
+		PHI_pelagio_cruz = {
+			
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = PHI
+			}
+			
+			traits = { air_chief_all_weather_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
+		PHI_edwin_andrews = {
+
+			picture = generic_air_asia_3
+			
+			allowed = {
+				original_tag = PHI
+			}
+			
+			traits = { air_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	navy_chief = {
+		
+
+		PHI_santiago_nuval = {
+			
+			picture = generic_navy_asia_1
+
+			allowed = {
+				original_tag = PHI
+			}
+					
+			traits = { navy_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
+		PHI_eustacio_orobia = {
+			
+			picture = generic_navy_asia_3
+
+			allowed = {
+				original_tag = PHI
+			}
+					
+			traits = { navy_chief_commerce_raiding_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	high_command = {
+
+		PHI_vicente_p_lim = {
+
+			picture = generic_army_asia_3
+			
+			allowed = {
+				original_tag = PHI
+			}
+			
+			traits = { army_regrouping_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		PHI_heraclio_alano = {
+
+			picture = generic_army_asia_1
+			
+			allowed = {
+				original_tag = PHI
+			}
+			
+			traits = { army_armored_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		PHI_basilio_fernando = {
+
+			picture = generic_air_asia_3
+			
+			allowed = {
+				original_tag = PHI
+			}
+			
+			traits = { air_airborne_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		PHI_jose_v_andrada = {
+
+			picture = generic_navy_asia_1
+			
+			allowed = {
+				original_tag = PHI
+			}
+			
+			traits = { navy_fleet_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+
+
+	theorist = {
+		PHI_benito_n_ebuen = {
+
+			picture = generic_army_asia_5
+			
+			allowed = {
+				original_tag = PHI
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		PHI_ramon_a_alcaraz = { 
+
+			picture = generic_air_asia_3
+			
+			allowed = {
+				original_tag = PHI
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+
+		PHI_victor_h_dizon = {
+
+			picture = generic_navy_asia_3
+			
+			allowed = {
+				original_tag = PHI
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.10
+			}
+			
+			traits = { naval_theorist }
+		}
+
+	}
+
+
+
+}

@@ -1,0 +1,37 @@
+﻿l_english:
+ motorized_anti_tank_brigade:0 "摩托化反坦克炮营"
+ motorized_anti_tank_brigade_desc:0 "摩托化反坦克炮营"
+ motorized_anti_air_brigade:0 "摩托化防空炮营"
+ motorized_anti_air_brigade_desc:0 "摩托化防空炮营"
+ motorized_artillery_brigade:0 "摩托化炮兵营"
+ motorized_artillery_brigade_desc:0 "摩托化炮兵营"
+ 
+ cavalry_anti_tank_brigade:0 "骡马化反坦克炮营"
+ cavalry_anti_tank_brigade_desc:0 "骡马化反坦克炮营"
+ cavalry_anti_air_brigade:0 "骡马化防空炮营"
+ cavalry_anti_air_brigade_desc:0 "骡马化防空炮营"
+ cavalry_artillery_brigade:0 "骡马化炮兵营"
+ cavalry_artillery_brigade_desc:0 "骡马化炮兵营"
+
+ dangweijun:0 "党卫军步兵营"
+ dangweijun_desc:0 "党卫军步兵营"
+
+
+
+ prc.3.t:0 "中国要求归还领土"
+ prc.3.d:0 "中印这段争议始于1914年的中英藏西姆拉会谈，在会上英国全权特使威廉·亨利·麦克马洪提出麦克马洪线为西藏和英属印度之间的边界，该线将达旺等地区割与英国。后来英藏代表皆签字批准该线，中方代表则因中央政府反对而没有签字。中方至今的观点是：西藏是中国的一部分，不是一个主权独立的国家，因此西姆拉会谈条约只有单方签字（即英国），应视为无效。中国所坚持的是中印传统线。 "
+ prc.3.a:0 "同意归还"
+ prc.3.b:0 "拒绝"
+ 
+ prc.4.t:0 "印度同意"
+ prc.4.d:0 "印度人同意将领土归还给我们。"
+ prc.4.a:0 "太好了"
+ 
+ prc.5.t:0 "印度拒绝"
+ prc.5.d:0 "印度人不同意将领土归还给我们。"
+ prc.5.a:0 "给他们的颜色瞧瞧！"
+
+
+ 
+
+

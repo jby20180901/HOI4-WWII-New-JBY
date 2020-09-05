@@ -1,0 +1,348 @@
+###太祖间谍###
+
+branch_intelligence = {
+
+	prc_upgrade_economy_civilian = {
+	
+		picture = GFX_prc_agency_economy_department
+		frame = GFX_upgrade_frame_economy
+		sound = Spy_Agency_Intel_Upgrades_Confirm
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		modifiers_during_progress = {
+			civilian_factory_use = 5
+		}
+		
+		available = {
+			tag = PRC
+			PRC = { has_country_flag = taizu_var_jiandie_upgrade_end }
+		}
+		
+		visible = {
+			original_tag = PRC
+		}
+		
+		level = {
+			modifier = {
+				civilian_intel_factor = 0.10
+			}
+			complete_effect = {
+				subtract_from_variable = {
+					var = taizu_var_jiandie_upgrade1_frequency
+					value = 1
+				}
+			}
+		}
+		level = {
+			modifier = {
+				civilian_intel_factor = 0.10
+			}
+			complete_effect = {
+				subtract_from_variable = {
+					var = taizu_var_jiandie_upgrade1_frequency
+					value = 1
+				}
+			}
+		}
+		level = {
+			modifier = {
+				civilian_intel_factor = 0.10
+			}
+			complete_effect = {
+				subtract_from_variable = {
+					var = taizu_var_jiandie_upgrade1_frequency
+					value = 1
+				}
+			}
+		}
+		level = {
+			modifier = {
+				civilian_intel_factor = 0.10
+			}
+			complete_effect = {
+				subtract_from_variable = {
+					var = taizu_var_jiandie_upgrade1_frequency
+					value = 1
+				}
+			}
+		}
+	}
+	
+	prc_upgrade_army_department = {
+	
+		picture = GFX_agency_army_department
+		frame = GFX_upgrade_frame_army
+		sound = Spy_Agency_Intel_Upgrades_Confirm
+		
+		ai_will_do = {
+			factor = 2
+		}
+		
+		modifiers_during_progress = {
+			civilian_factory_use = 5
+		}
+		
+		visible = {
+			original_tag = PRC 
+		}
+		
+		available = {
+			tag = PRC
+			PRC = { has_country_flag = taizu_var_jiandie_upgrade_end }
+		}
+		
+		level = {
+			modifier = {
+				army_intel_factor = 0.1
+			}
+			complete_effect = {
+				subtract_from_variable = {
+					var = taizu_var_jiandie_upgrade2_frequency
+					value = 1
+				}
+			}
+		}
+		level = {
+			modifier = {
+				army_intel_factor = 0.1
+			}
+			complete_effect = {
+				subtract_from_variable = {
+					var = taizu_var_jiandie_upgrade2_frequency
+					value = 1
+				}
+			}
+		}
+		level = {
+			modifier = {
+				army_intel_factor = 0.1
+			}
+			complete_effect = {
+				subtract_from_variable = {
+					var = taizu_var_jiandie_upgrade2_frequency
+					value = 1
+				}
+			}
+		}
+	}
+	
+	prc_upgrade_naval_department = {
+	
+		picture = GFX_agency_naval_department
+		frame = GFX_upgrade_frame_naval
+		sound = Spy_Agency_Intel_Upgrades_Confirm
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		modifiers_during_progress = {
+			civilian_factory_use = 5
+		}
+		
+		available = {
+			tag = PRC
+			PRC = { has_country_flag = taizu_var_jiandie_upgrade_end }
+		}
+		visible = {
+			original_tag = PRC
+		}
+		level = {
+			modifier = {
+				navy_intel_factor = 0.1
+			}
+			complete_effect = {
+				subtract_from_variable = {
+					var = taizu_var_jiandie_upgrade3_frequency
+					value = 1
+				}
+			}
+		}
+		level = {
+			modifier = {
+				navy_intel_factor = 0.1
+			}
+			complete_effect = {
+				subtract_from_variable = {
+					var = taizu_var_jiandie_upgrade3_frequency
+					value = 1
+				}
+			}
+		}
+	}
+	
+	prc_upgrade_airforce_department = {
+	
+		picture = GFX_agency_airforce_department
+		frame = GFX_upgrade_frame_airforce
+		sound = Spy_Agency_Intel_Upgrades_Confirm
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		modifiers_during_progress = {
+			civilian_factory_use = 5
+		}
+		
+		available = {
+			tag = PRC
+			PRC = { has_country_flag = taizu_var_jiandie_upgrade_end }
+		}
+		visible = {
+			original_tag = PRC
+		}
+		level = {
+			modifier = {
+				airforce_intel_factor = 0.1
+			}
+			complete_effect = {
+				subtract_from_variable = {
+					var = taizu_var_jiandie_upgrade4_frequency
+					value = 1
+				}
+			}
+		}
+		level = {
+			modifier = {
+				airforce_intel_factor = 0.1
+			}
+			complete_effect = {
+				subtract_from_variable = {
+					var = taizu_var_jiandie_upgrade4_frequency
+					value = 1
+				}
+			}
+		}
+	}
+	
+	
+	
+}
+
+branch_defense = {
+	
+	prc_upgrade_passive_defense = {
+	
+		picture = GFX_agency_defense_department
+		frame = GFX_upgrade_frame_defense
+		sound = Spy_Agency_Defense_Upgrades_Confirm
+		
+		ai_will_do = {
+			factor = 2
+		}
+		
+		modifiers_during_progress = {
+			civilian_factory_use = 5
+		}
+		
+		available = {
+			tag = PRC
+			PRC = { has_country_flag = taizu_var_jiandie_upgrade_end }
+		}
+		
+		visible = {
+			original_tag = PRC
+		}
+		
+		level = {
+			modifier = {
+				intelligence_agency_defense = 1.5
+			}
+			complete_effect = {
+				subtract_from_variable = {
+					var = taizu_var_jiandie_upgrade5_frequency
+					value = 1
+				}
+			}
+		}
+		
+		level = {
+			modifier = {
+				intelligence_agency_defense = 1.25
+			}
+			complete_effect = {
+				subtract_from_variable = {
+					var = taizu_var_jiandie_upgrade5_frequency
+					value = 1
+				}
+			}
+		}
+		
+		level = {
+			modifier = {
+				intelligence_agency_defense = 1
+			}
+			complete_effect = {
+				subtract_from_variable = {
+					var = taizu_var_jiandie_upgrade5_frequency
+					value = 1
+				}
+			}
+		}
+		
+		level = {
+			modifier = {
+				intelligence_agency_defense = 1
+			}
+			complete_effect = {
+				subtract_from_variable = {
+					var = taizu_var_jiandie_upgrade5_frequency
+					value = 1
+				}
+			}
+		}
+		
+	}
+
+	prc_upgrade_anti_partisan = {
+	
+		picture = GFX_agency_anti_partisan
+		sound = Spy_Agency_Defense_Upgrades_Confirm
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			tag = PRC
+			PRC = { has_country_flag = taizu_var_jiandie_upgrade_end }
+		}
+		
+		visible = {
+			original_tag = PRC
+		}
+		
+		modifiers_during_progress = {
+			civilian_factory_use = 5
+		}
+		
+		level = {
+			modifier = {
+				root_out_resistance_effectiveness_factor = 0.25
+			}
+			complete_effect = {
+				subtract_from_variable = {
+					var = taizu_var_jiandie_upgrade6_frequency
+					value = 1
+				}
+			}
+		}
+		
+		level = {
+			modifier = {
+				root_out_resistance_effectiveness_factor = 0.25
+			}
+			complete_effect = {
+				subtract_from_variable = {
+					var = taizu_var_jiandie_upgrade6_frequency
+					value = 1
+				}
+			}
+		}
+	}
+	
+}

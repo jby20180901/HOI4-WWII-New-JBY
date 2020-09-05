@@ -1,0 +1,477 @@
+﻿# Division template historical names system. Is a new method of naming the divisions based on the names-group assigned to it's template.
+# If we run out of all historical names, the names will be assigned in the old way.
+#
+# Each group has a made up tag. Use it if you want to append more, or replace existing names with the extra txt files (modding).
+#
+# for_countries - lists all countries that can use it. If empty, or entire tag is missing, all countries in the world can use it.
+#
+# can_use - is a trigger that locks/unlocks the group under specific circumstances. The trigger is in a country scope.
+#
+# division_types - is a list of tokens to corresponding unit types. A player can in fact use any group of names for a div.template
+#                  however this tag is a helper for an automated choice (for AI, or if the group must switch on it's own, because
+#                  for example the current one is no longer available due to the can_use trigger saying so).
+#                  In automated choice, the division template must have at least 1 of the following types for it to be chosen.
+#
+# fallback_name - Is going to be used if we run out of the scripted historical names. If you want to use the old division naming
+#                 mechanics to be used for fallbacks, then just skip this option.
+#
+# unordered - It's a list of historical division names that did not have a number. Regardless if such names happened in history or not
+#             this option is available here mainly for a mods.
+#
+# ordered - Is a list of all historical names. 
+#           Numbers must start from 1 and up. 
+#           Numbers can't repeat in one scope.
+#           If you script the name for this group, at the same number (for example in a mod in another file), the name will be override.
+#           All arguments between the brackets must be separated by spaces. Each argument is wrapped in "quotas".
+#           1st argument = The name. It must contain either: 
+#                          %d (for decimal number placement)
+#                          %s (for string number placement - ROMAN numbers like XIV).
+#           2nd argument is optional = A localizable text describing this historical division. The text will be visible in the tooltip
+#                                      where you choose the historical division name.
+#           3rd argument is optional = An URL preferably pointing to the WIKI. It's a future feature that is not currently working in
+#                                      the current game version.
+POL_INF_01 = 
+{
+	name = "波兰陆军步兵师"
+
+	for_countries = { POL }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { POL_INF_01 }
+
+	fallback_name = "波兰陆军第%d步兵师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "波兰毕苏斯基步兵师" }
+		2 = { "波兰亚维-滨海步兵师" }
+		3 = { "波兰陆军大波兰步兵师" }
+		4 = { "波兰陆军小波兰步兵师" }
+		5 = { "波兰陆军罗兹步兵师" }
+		6 = { "波兰下西里西亚步兵师" }
+		7 = { "波兰卢布林步兵师" }
+		8 = { "波兰卢布斯卡步兵师" }
+		9 = { "波兰马佐夫舍步兵师" }
+		10 = { "波兰奥波莱步兵师" }
+		11 = { "波兰喀尔巴阡步兵师" }
+		12 = { "波兰波德拉谢步兵师" }
+		13 = { "波兰滨海步兵师" }
+		14 = { "波兰西里西亚d步兵师" }
+		15 = { "波兰圣十字步兵师" }
+		16 = { "波兰瓦尔米亚步兵师" }
+		17 = { "波兰马祖里步兵师" }
+		18 = { "波兰克拉科夫步兵师" }
+		19 = { "波兰陆军大波兰地区戈茹夫步兵师" }
+		20 = { "波兰陆军瓦乌布日赫步兵师" }		
+		23 = { "波兰陆军弗沃茨瓦韦克步兵师" }		
+		24 = { "波兰陆军绿山城步兵师" }		
+		25 = { "波兰陆军塔尔努夫步兵师" }		
+		26 = { "波兰陆军霍茹夫步兵师" }		
+		27 = { "波兰陆军卡利什步兵师" }		
+		28 = { "波兰陆军科沙林步兵师" }		
+		29 = { "波兰陆军莱格尼察步兵师" }		
+		30 = { "波兰陆军布札希尼步兵师" }		
+		21 = { "波兰陆军第%d步兵师" }		
+		22 = { "波兰陆军第%d步兵师" }		
+		31 = { "波兰陆军第%d步兵师" }		
+		32 = { "波兰陆军第%d步兵师" }		
+		34 = { "波兰陆军第%d步兵师" }		
+		40 = { "波兰陆军第%d步兵师" }		
+		42 = { "波兰陆军第%d步兵师" }		
+		43 = { "波兰陆军第%d步兵师" }		
+		46 = { "波兰陆军第%d步兵师" }		
+		47 = { "波兰陆军第%d步兵师" }		
+		48 = { "波兰陆军第%d步兵师" }		
+		49 = { "波兰陆军第%d步兵师" }		
+		51 = { "波兰陆军第%d步兵师" }		
+		52 = { "波兰陆军第%d步兵师" }		
+		53 = { "波兰陆军第%d步兵师" }		
+		54 = { "波兰陆军第%d步兵师" }		
+		76 = { "波兰陆军第%d步兵师" }		
+		77 = { "波兰陆军第%d步兵师" }		
+		78 = { "波兰陆军第%d步兵师" }		
+		79 = { "波兰陆军第%d步兵师" }		
+		80 = { "波兰陆军第%d步兵师" }		
+		81 = { "波兰陆军第%d步兵师" }		
+		85 = { "波兰陆军第%d步兵师" }		
+		88 = { "波兰陆军第%d步兵师" }		
+		89 = { "波兰陆军第%d步兵师" }		
+		90 = { "波兰陆军第%d步兵师" }		
+		33 = { "波兰陆军第%d边防师" }		
+		35 = { "波兰陆军第%d边防师" }		
+		36 = { "波兰陆军第%d边防师" }		
+		38 = { "波兰陆军第%d边防师" }		
+		39 = { "波兰陆军第%d边防师" }		
+		41 = { "波兰陆军第%d边防师" }		
+		44 = { "波兰陆军第%d边防师" }		
+		45 = { "波兰陆军第%d边防师" }		
+		50 = { "波兰陆军第%d边防师" }		
+		55 = { "波兰陆军第%d边防师" }		
+		60 = { "波兰陆军第%d边防师" }		
+	}
+}
+
+POL_CAV_01 = 
+{
+	name = "波兰陆军骑兵师"
+
+	for_countries = { POL }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { POL_INF_01 }
+
+	fallback_name = "波兰陆军第%d骑兵师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		101 = { "波兰陆军克拉科夫骑兵旅" }		# use historical named brigades for initial names then default numbered divisions for ahistorical names
+		102 = { "波兰陆军克雷索瓦骑兵旅" }		
+		103 = { "波兰陆军马佐维耶卡骑兵旅" }		
+		104 = { "波兰陆军诺格洛卡骑兵旅" }		
+		105 = { "波兰陆军波德拉斯卡骑兵旅" }		
+		106 = { "波兰陆军波多尔斯卡骑兵旅" }		
+		107 = { "波兰陆军波莫斯卡骑兵旅" }		
+		108 = { "波兰陆军苏瓦尔斯卡骑兵旅" }		
+		109 = { "波兰陆军大波兰骑兵旅" }		
+		110 = { "波兰陆军威伦斯卡骑兵旅" }		
+		111 = { "波兰陆军沃林斯卡骑兵旅" }		
+		1 = { "波兰陆军奥尔什丁骑兵师" }
+		2 = { "波兰陆军别尔斯科-比亚瓦骑兵师" }
+		3 = { "波兰陆军热舒夫骑兵师" }
+		4 = { "波兰陆军鲁达希隆斯卡骑兵师" }
+		5 = { "波兰陆军雷布尼克骑兵师" }
+		6 = { "波兰陆军蒂黑骑兵师" }
+		7 = { "波兰陆军栋布罗瓦古尔尼恰骑兵师" }
+		8 = { "波兰陆军普沃茨克骑兵师" }
+		9 = { "波兰陆军奥波莱骑兵师" }
+		10 = { "波兰陆军埃尔布隆格骑兵师" }
+	}
+}
+
+POL_MOT_01 = 
+{
+	name = "波兰陆军摩化骑兵师"
+
+	for_countries = { POL }
+
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { POL_INF_01 }
+
+	fallback_name = "波兰陆军第%d摩步师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		101 = { "波兰陆军华沙摩步师" }
+		10 = { "波兰弗罗茨瓦夫摩步师" }
+		1 = { "波兰毕苏茨基摩步师" }
+		2 = { "波兰罗兹摩步师" }
+		3 = { "波兰波兹南摩步师" }
+		4 = { "波兰格但斯克摩步师" }
+		5 = { "波兰比得哥什摩步师" }
+		6 = { "波兰卢布林摩步师" }
+		7 = { "波兰卡托维兹摩步师" }
+		8 = { "波兰比亚韦斯托克摩步师" }
+		9 = { "波兰陆军第%d摩步师" }
+		11 = { "波兰喀尔巴阡摩步师" }
+		12 = { "波兰陆军第%d摩步师" }
+		13 = { "波兰陆军第%d摩步师" }
+		14 = { "波兰陆军第%d摩步师" }
+		15 = { "波兰陆军第%d摩步师" }
+		16 = { "波兰陆军第%d摩步师" }
+		17 = { "波兰陆军第%d摩步师" }
+		18 = { "波兰陆军第%d摩步师" }
+		19 = { "波兰陆军第%d摩步师" }
+		20 = { "波兰陆军第%d摩步师" }		
+		23 = { "波兰陆军第%d摩步师" }		
+		24 = { "波兰陆军第%d摩步师" }		
+		25 = { "波兰陆军第%d摩步师" }		
+		26 = { "波兰陆军第%d摩步师" }		
+		27 = { "波兰陆军第%d摩步师" }		
+		28 = { "波兰陆军第%d摩步师" }		
+		29 = { "波兰陆军第%d摩步师" }		
+		30 = { "波兰陆军第%d摩步师" }		
+	}
+}
+
+POL_MEC_01 = 
+{
+	name = "波兰陆军机步师"
+
+	for_countries = { POL }
+
+	can_use = { always = yes }
+
+	division_types = { "mechanized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { POL_INF_01 }
+
+	fallback_name = "波兰陆军第%d机步师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		101 = { "波兰陆军华沙机步师" }
+		10 = { "波兰陆军第%d机步师" }
+		1 = { "波兰苏茨基机步师" }
+		2 = { "波兰陆军第%d机步师" }
+		3 = { "波兰陆军第%d机步师" }
+		4 = { "波兰陆军第%d机步师" }
+		5 = { "波兰陆军第%d机步师" }
+		6 = { "波兰陆军第%d机步师" }
+		7 = { "波兰陆军第%d机步师" }
+		8 = { "波兰陆军第%d机步师" }
+		9 = { "波兰陆军第%d机步师" }
+		11 = { "波兰喀尔巴阡机步师" }
+		12 = { "波兰陆军第%d机步师" }
+		13 = { "波兰陆军第%d机步师" }
+		14 = { "波兰陆军第%d机步师" }
+		15 = { "波兰陆军第%d机步师" }
+		16 = { "波兰陆军第%d机步师" }
+		17 = { "波兰陆军第%d机步师" }
+		18 = { "波兰陆军第%d机步师" }
+		19 = { "波兰陆军第%d机步师" }
+		20 = { "波兰陆军第%d机步师" }		
+		23 = { "波兰陆军第%d机步师" }		
+		24 = { "波兰陆军第%d机步师" }		
+		25 = { "波兰陆军第%d机步师" }		
+		26 = { "波兰陆军第%d机步师" }		
+		27 = { "波兰陆军第%d机步师" }		
+		28 = { "波兰陆军第%d机步师" }		
+		29 = { "波兰陆军第%d机步师" }		
+		30 = { "波兰陆军第%d机步师" }		
+	}
+}
+
+POL_ARM_01 = 
+{
+	name = "波兰陆军装甲师"
+
+	for_countries = { POL }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { POL_INF_01 }
+
+	fallback_name = "波兰陆军第%d装甲师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "波兰格丁尼亚装甲师" }
+		2 = { "波兰琴斯托霍瓦装甲师" }
+		3 = { "波兰拉多姆装甲师" }
+		4 = { "波兰索斯诺维茨装甲师" }
+		5 = { "波兰陆军托伦装甲师" }
+		6 = { "波兰凯尔采装甲师" }
+		7 = { "波兰格利维采装甲师" }
+		8 = { "波兰扎布热装甲师" }
+		9 = { "波兰比托姆装甲师" }
+		10 = { "波兰陆军第%d装甲师" }
+	}
+}
+
+POL_PAR_01 = 
+{
+	name = "波兰陆军伞兵师"
+
+	for_countries = { POL }
+
+	can_use = { always = yes }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { POL_INF_01 }
+
+	fallback_name = "波兰陆军第%d伞兵师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "波兰陆军第%d伞兵师" }
+		2 = { "波兰陆军第%d伞兵师" }
+		3 = { "波兰陆军第%d伞兵师" }
+		4 = { "波兰陆军第%d伞兵师" }
+		5 = { "波兰陆军第%d伞兵师" }
+		6 = { "波兰陆军第%d伞兵师" }
+		7 = { "波兰陆军第%d伞兵师" }
+		8 = { "波兰陆军第%d伞兵师" }
+		9 = { "波兰陆军第%d伞兵师" }
+		10 = { "波兰陆军第%d伞兵师" }
+	}
+}
+
+POL_MAR_01 = 
+{
+	name = "波兰陆军陆战师"
+
+	for_countries = { POL }
+
+	can_use = { always = yes }
+
+	division_types = { "marine" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { POL_INF_01 }
+
+	fallback_name = "波兰陆军第%d陆战师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "波兰陆军第%d陆战师" }
+		2 = { "波兰陆军第%d陆战师" }
+		3 = { "波兰陆军第%d陆战师" }
+		4 = { "波兰陆军第%d陆战师" }
+		5 = { "波兰陆军第%d陆战师" }
+		6 = { "波兰陆军第%d陆战师" }
+		7 = { "波兰陆军第%d陆战师" }
+		8 = { "波兰陆军第%d陆战师" }
+		9 = { "波兰陆军第%d陆战师" }
+		10 = { "波兰陆军第%d陆战师" }
+	}
+}
+
+POL_MNT_01 = 
+{
+	name = "波兰陆军山地师"
+
+	for_countries = { POL }
+
+	can_use = { always = yes }
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { POL_INF_01 }
+
+	fallback_name = "波兰陆军第%d山地步兵师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		21 = { "波兰陆军第%d山地步兵师" }		
+		22 = { "波兰陆军第%d山地步兵师" }		
+		1 = { "波兰毕苏茨基山地步兵师" }
+		2 = { "波兰陆军第%d山地步兵师" }
+		3 = { "波兰陆军第%d山地步兵师" }
+		4 = { "波兰陆军第%d山地步兵师" }
+		5 = { "波兰陆军第%d山地步兵师" }
+		6 = { "波兰陆军第%d山地步兵师" }
+		7 = { "波兰陆军第%d山地步兵师" }
+		8 = { "波兰陆军第%d山地步兵师" }
+		9 = { "波兰陆军第%d山地步兵师" }
+		10 = { "波兰陆军第%d山地步兵师" }
+		11 = { "波兰喀尔巴阡山地步兵师" }
+		12 = { "波兰陆军第%d山地步兵师" }
+		13 = { "波兰陆军第%d山地步兵师" }
+		14 = { "波兰陆军第%d山地步兵师" }
+		15 = { "波兰陆军第%d山地步兵师" }
+		16 = { "波兰陆军第%d山地步兵师" }
+		17 = { "波兰陆军第%d山地步兵师" }
+		18 = { "波兰陆军第%d山地步兵师" }
+		19 = { "波兰陆军第%d山地步兵师" }
+		20 = { "波兰陆军第%d山地步兵师" }		
+		23 = { "波兰陆军第%d山地步兵师" }		
+		24 = { "波兰陆军第%d山地步兵师" }		
+		25 = { "波兰陆军第%d山地步兵师" }		
+		26 = { "波兰陆军第%d山地步兵师" }		
+		27 = { "波兰陆军第%d山地步兵师" }		
+		28 = { "波兰陆军第%d山地步兵师" }		
+		29 = { "波兰陆军第%d山地步兵师" }		
+		30 = { "波兰陆军第%d山地步兵师" }		
+	}
+}
+
+POL_GAR_01 = 
+{
+	name = "波兰陆军警备师"
+
+	for_countries = { POL }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { POL_INF_01 }
+
+	fallback_name = "波兰陆军第%d边防师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		33 = { "波兰陆军第%d边防师" }		
+		35 = { "波兰陆军第%d边防师" }		
+		36 = { "波兰陆军第%d边防师" }		
+		38 = { "波兰陆军第%d边防师" }		
+		39 = { "波兰陆军第%d边防师" }		
+		41 = { "波兰陆军第%d边防师" }		
+		44 = { "波兰陆军第%d边防师" }		
+		45 = { "波兰陆军第%d边防师" }		
+		50 = { "波兰陆军第%d边防师" }		
+		55 = { "波兰陆军第%d边防师" }		
+		60 = { "波兰陆军第%d边防师" }		
+		201 = { "波兰切尔斯克守备兵团" }		
+		202 = { "波兰波兹南守备兵团" }		
+		203 = { "波兰匈牙利边防兵团" }		
+		204 = { "波兰莫德林守备兵团" }		
+		205 = { "波兰斯堆守备兵团" }		
+		206 = { "波兰克奥提科夫守备兵团" }		
+		207 = { "波兰路里涅特守备兵团" }		
+		208 = { "波兰里内卡守备兵团" }		
+		31 = { "波兰陆军第%d边防师" }		
+		32 = { "波兰陆军第%d边防师" }		
+		34 = { "波兰陆军第%d边防师" }		
+		40 = { "波兰陆军第%d边防师" }		
+		42 = { "波兰陆军第%d边防师" }		
+		43 = { "波兰陆军第%d边防师" }		
+		46 = { "波兰陆军第%d边防师" }		
+		47 = { "波兰陆军第%d边防师" }		
+		48 = { "波兰陆军第%d边防师" }		
+		49 = { "波兰陆军第%d边防师" }		
+		51 = { "波兰陆军第%d边防师" }		
+		52 = { "波兰陆军第%d边防师" }		
+		53 = { "波兰陆军第%d边防师" }		
+		54 = { "波兰陆军第%d边防师" }		
+		76 = { "波兰陆军第%d边防师" }		
+		77 = { "波兰陆军第%d边防师" }		
+		78 = { "波兰陆军第%d边防师" }		
+		79 = { "波兰陆军第%d边防师" }		
+		80 = { "波兰陆军第%d边防师" }		
+		81 = { "波兰陆军第%d边防师" }		
+		85 = { "波兰陆军第%d边防师" }		
+		88 = { "波兰陆军第%d边防师" }		
+		89 = { "波兰陆军第%d边防师" }		
+		90 = { "波兰陆军第%d边防师" }		
+	}
+}
+

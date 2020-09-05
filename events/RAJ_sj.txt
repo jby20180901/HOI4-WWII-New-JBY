@@ -1,0 +1,31 @@
+﻿add_namespace = RAJ_yudl
+news_event = {
+	id = RAJ_yudl.1
+	title = RAJ_yudl.1.t
+	desc = RAJ_yudl.1.d
+	picture = GFX_news_event_generic_sign_treaty2
+	is_triggered_only = yes
+	option = {
+		name = RAJ_yudl.1.a
+	}
+}
+news_event = {
+	id = RAJ_yudl.2
+	title = RAJ_yudl.2.t
+	desc = RAJ_yudl.2.d
+	picture = GFX_news_event_generic_sign_treaty2
+	is_triggered_only = yes
+	option = {
+		name = RAJ_yudl.2.a
+	}
+}
+news_event = {
+	id = RAJ_yudl.3
+	title = RAJ_yudl.3.t
+	desc = RAJ_yudl.3.d
+	picture = GFX_news_event_generic_sign_treaty2
+	is_triggered_only = yes
+	option = {
+		name = RAJ_yudl.3.a
+	}
+}

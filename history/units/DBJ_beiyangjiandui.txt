@@ -1,0 +1,24 @@
+﻿units = {
+
+	navy = {
+		name = "新北洋舰队"
+		base = 1150
+		location = 1150
+		ship = { name = "威海" definition = light_cruiser equipment = { light_cruiser_1 = {amount = 1 owner = DBJ } } }
+		ship = { name = "镇海" definition = light_cruiser equipment = { light_cruiser_1 = {amount = 1 owner = DBJ } } }
+		ship = { name = "利济" definition = light_cruiser equipment = { light_cruiser_1 = {amount = 1 owner = DBJ } } }
+		
+		ship = { name = "江平" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = DBJ } } }
+		ship = { name = "江安" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = DBJ } } }
+		ship = { name = "江通" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = DBJ } } }
+		
+		ship = { name = "海圻" definition = heavy_cruiser equipment = { heavy_cruiser_1 = {amount = 1 owner = DBJ } } }
+		ship = { name = "江泰" definition = heavy_cruiser equipment = { heavy_cruiser_1 = {amount = 1 owner = DBJ } } }
+		ship = { name = "肇和" definition = heavy_cruiser equipment = { heavy_cruiser_1 = {amount = 1 owner = DBJ } } }
+		
+		ship = { name = "同昌" definition = light_cruiser equipment = { light_cruiser_1 = {amount = 1 owner = DBJ } } }
+		ship = { name = "江津" definition = light_cruiser equipment = { light_cruiser_1 = {amount = 1 owner = DBJ } } }
+		ship = { name = "靖安" definition = light_cruiser equipment = { light_cruiser_1 = {amount = 1 owner = DBJ } } }
+		
+	}
+}

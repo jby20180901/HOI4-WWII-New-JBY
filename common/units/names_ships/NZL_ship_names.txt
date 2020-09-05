@@ -1,0 +1,310 @@
+﻿NZL_DD_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_DESTROYERS
+  for_countries = {
+    NZL
+  }
+  type = ship
+  ship_types = {
+    ship_hull_light
+    destroyer
+  }
+  prefix = "HMNZS "
+  fallback_name = "新西兰海军第%s号驱逐舰"  # Destroyer %s
+  unique = {
+    "南芥"  # Arabis
+    "杨梅"  # Arbutus
+    "哈威亚"  # Hawea
+    "卡尼里"  # Kaniere
+    "普卡基"  # Pukaki
+    "罗托伊蒂"  # Rotoiti
+    "陶波"  # Taupo
+    "图提拉"  # Tutira
+    "伊丘卡"  # Echuca
+    "冲刺"  # Thrust
+    "因弗雷尔"  # Inverell
+    "凯马"  # Kiama
+    "斯托尔"  # Stawell
+    "奥塔哥"  # Otago
+    "塔拉纳基"  # Taranaki
+    "怀卡托"  # Waikato
+    "布莱克浦"  # Blackpool
+    "坎特伯雷"  # Canterbury
+    "防御者"  # Defender
+    "泰阿鲁阿"  # Taiaroa
+    "怀特玛塔"  # Waitemata
+    "庞尼克"  # Poneke
+    "阿莫克"  # Amokura
+  }
+}
+NZL_CL_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CL
+  for_countries = {
+    NZL
+  }
+  type = ship
+  ship_types = {
+    ship_hull_cruiser
+    light_cruiser
+  }
+  prefix = "HMNZS "
+  fallback_name = "新西兰海军第%s号轻巡洋舰"  # Light Cruiser %s
+  unique = {
+    "利安德"  # Leander
+    "阿喀琉斯"  # Achilles
+    "冈比亚"  # Gambia
+    "库克群岛"  # Cook Islands
+    "诺斯兰"  # Northland
+    "奥克兰"  # Auckland
+    "吉斯伯恩"  # Gisborne
+    "霍克斯湾"  # Hawkes Bay
+    "惠灵顿"  # Wellington
+    "纳尔逊"  # Nelson
+    "韦斯特兰"  # Westland
+    "马尔伯勒"  # Marlborough
+    "坎特伯雷"  # Canterbury
+    "奥塔哥"  # Otago
+    "南国"  # Southland
+    "贝罗纳"  # Bellona
+    "黑太子"  # Black Prince
+    "保皇"  # Royalist
+    "查塔姆"  # Chatham
+    "达尼丁"  # Dunedin
+    "迪奥米德"  # Diomede
+    "夜莺"  # Philomel
+  }
+}
+NZL_CA_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CA
+  for_countries = {
+    NZL
+  }
+  type = ship
+  ship_types = {
+    ship_hull_cruiser
+    heavy_cruiser
+  }
+  prefix = "HMNZS "
+  fallback_name = "新西兰海军第%s号重巡洋舰"  # Heavy Cruiser %s
+  unique = {
+    "诺斯兰"  # Northland
+    "奥克兰"  # Auckland
+    "吉斯伯恩"  # Gisborne
+    "塔拉纳基"  # Taranaki
+    "霍克斯湾"  # Hawkes Bay
+    "惠灵顿"  # Wellington
+    "纳尔逊"  # Nelson
+    "韦斯特兰"  # Westland
+    "马尔伯勒"  # Marlborough
+    "坎特伯雷"  # Canterbury
+    "奥塔哥"  # Otago
+    "南国"  # Southland
+  }
+}
+NZL_BB_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_BB
+  for_countries = {
+    NZL
+  }
+  type = ship
+  ship_types = {
+    ship_hull_heavy
+    battleship
+  }
+  prefix = "HMNZS "
+  fallback_name = "新西兰海军第%s号战列舰"  # Battleship %s
+  unique = {
+    "新西兰"  # New Zealand
+    "诺斯兰"  # Northland
+    "奥克兰"  # Auckland
+    "吉斯伯恩"  # Gisborne
+    "塔拉纳基"  # Taranaki
+    "霍克斯湾"  # Hawkes Bay
+    "惠灵顿"  # Wellington
+    "纳尔逊"  # Nelson
+    "韦斯特兰"  # Westland
+    "马尔伯勒"  # Marlborough
+    "坎特伯雷"  # Canterbury
+    "奥塔哥"  # Otago
+    "南国"  # Southland
+  }
+}
+NZL_BC_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_BC
+  for_countries = {
+    NZL
+  }
+  type = ship
+  ship_types = {
+    ship_hull_heavy
+    battle_cruiser
+  }
+  prefix = "HMNZS "
+  fallback_name = "新西兰海军第%s号战列巡洋舰"  # Battlecruiser %s
+  unique = {
+    "新西兰"  # New Zealand
+    "诺斯兰"  # Northland
+    "奥克兰"  # Auckland
+    "吉斯伯恩"  # Gisborne
+    "塔拉纳基"  # Taranaki
+    "霍克斯湾"  # Hawkes Bay
+    "惠灵顿"  # Wellington
+    "纳尔逊"  # Nelson
+    "韦斯特兰"  # Westland
+    "马尔伯勒"  # Marlborough
+    "坎特伯雷"  # Canterbury
+    "奥塔哥"  # Otago
+    "南国"  # Southland
+  }
+}
+NZL_CV_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CARRIERS
+  for_countries = {
+    NZL
+  }
+  type = ship
+  ship_types = {
+    ship_hull_carrier
+    carrier
+  }
+  prefix = "HMNZS "
+  fallback_name = "新西兰海军第%s号航空母舰"  # Carrier %s
+  unique = {
+    "复仇"  # Vengeance
+    "新西兰"  # New Zealand
+    "诺斯兰"  # Northland
+    "奥克兰"  # Auckland
+    "吉斯伯恩"  # Gisborne
+    "塔拉纳基"  # Taranaki
+    "霍克斯湾"  # Hawkes Bay
+    "惠灵顿"  # Wellington
+    "纳尔逊"  # Nelson
+    "韦斯特兰"  # Westland
+    "马尔伯勒"  # Marlborough
+    "坎特伯雷"  # Canterbury
+    "奥塔哥"  # Otago
+    "南国"  # Southland
+    "斯塔福德"  # Stafford
+    "塞登"  # Seddon
+    "哈尔·琼斯"  # Hall-Jones
+    "瓦德"  # Ward
+    "梅西"  # Massey
+  }
+}
+NZL_SS_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_SUBMARINES
+  for_countries = {
+    NZL
+  }
+  type = ship
+  ship_types = {
+    ship_hull_submarine
+    submarine
+  }
+  prefix = "HMNZS "
+  fallback_name = "新西兰海军第%s号潜艇"  # Submarine %s
+  unique = {
+    "南芥"  # Arabis
+    "杨梅"  # Arbutus
+    "哈威亚"  # Hawea
+    "卡尼里"  # Kaniere
+    "普卡基"  # Pukaki
+    "罗托伊蒂"  # Rotoiti
+    "陶波"  # Taupo
+    "图提拉"  # Tutira
+    "伊丘卡"  # Echuca
+    "冲刺"  # Thrust
+    "因弗雷尔"  # Inverell
+    "凯马"  # Kiama
+    "斯托尔"  # Stawell
+    "奥塔哥"  # Otago
+    "塔拉纳基"  # Taranaki
+    "怀卡托"  # Waikato
+    "布莱克浦"  # Blackpool
+    "坎特伯雷"  # Canterbury
+  }
+}
+NZL_PROVINCES = {
+  name = NAME_THEME_PROVINCES
+  for_countries = {
+    NZL
+  }
+  type = ship
+  prefix = "HMNZS "
+  unique = {
+    "奥克兰"  # Auckland
+    "新普利茅斯"  # New Plymouth
+    "霍克斯湾"  # Hawkes Bay
+    "惠灵顿"  # Wellington
+    "纳尔逊"  # Nelson
+    "马尔伯勒"  # Marlborough
+    "诺斯兰"  # Northland
+    "韦斯特兰"  # Westland
+    "坎特伯雷"  # Canterbury
+    "奥塔哥"  # Otago
+    "南国"  # Southland
+  }
+}
+NZL_CITIES = {
+  name = NAME_THEME_CITIES
+  for_countries = {
+    NZL
+  }
+  type = ship
+  prefix = "HMNZS "
+  unique = {
+    "奥克兰"  # Auckland
+    "惠灵顿"  # Wellington
+    "克莱斯特彻奇"  # Christchurch
+    "汉密尔顿"  # Hamilton
+    "陶兰加"  # Tauranga
+    "内皮尔·黑斯廷斯"  # Napier-Hastings
+    "达尼丁"  # Dunedin
+    "北帕莫斯顿"  # Palmerston North
+    "纳尔逊"  # Nelson
+    "旺阿雷"  # Whangarei
+    "新普利茅斯"  # New Plymouth
+    "因弗卡吉尔"  # Invercargill
+    "旺格努伊"  # Whanganui
+    "吉斯伯恩"  # Gisborne
+  }
+}
+NZL_TRIBES = {
+  name = NAME_THEME_TRIBES
+  for_countries = {
+    NZL
+  }
+  type = ship
+  prefix = "HMNZS "
+  unique = {
+    "毛利"  # Maori
+    "奥波里"  # Aopouri
+    "纳普西"  # Ngapuhi
+    "恩加鲁鲁"  # Ngarauru
+    "恩加蒂波里"  # Ngatipouri
+    "纳塔胡"  # Ngaitahu
+    "纳提瓦图瓦"  # Ngatiwhatua
+    "恩加提泰"  # Ngatitai
+    "恩加蒂帕阿"  # Ngatipaoa
+    "恩加蒂兰吉"  # Ngatierangi
+    "恩加提瓦卡"  # Ngatiwhaka-aue
+    "恩加卡瓦"  # Ngatiraukawa
+    "恩加蒂曼尼亚波托"  # Ngatimaniapoto
+    "恩加塔瓦"  # Ngatiawa
+    "恩提图华雷图瓦"  # Ngatituwharetoa
+    "恩塔蒂玛"  # Ngatitama
+    "恩加蒂卢努伊"  # Ngatiruanui
+    "恩加蒂霍"  # Ngatihau
+    "恩加蒂帕"  # Ngatiapa
+    "恩加蒂托"  # Ngatitoa
+    "恩加提卡胡努努"  # Ngatikahungunu
+    "恩格太奥"  # Ngahitao
+    "拉拉瓦"  # Rarawa
+    "兰基塔勒"  # Rangitane
+    "塔拉纳基"  # Taranaki
+    "蒂乌雷雷瓦"  # Te Urewera
+    "瓦特阿图亚"  # Te Whakatohea
+    "瓦努阿帕努伊"  # Whanauapanui
+    "怀卡托"  # Waikato
+    "乌里奥豪"  # Uriohau
+  }
+}

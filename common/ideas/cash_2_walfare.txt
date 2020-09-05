@@ -1,0 +1,527 @@
+ideas = {
+
+	salary_law= {
+		law = yes
+		
+		salary_0 = {
+				allowed = {
+				}
+				cost = 100
+				removal_cost = -1
+				on_add = { ROOT = { set_variable = { salary = 4 } } }
+				modifier = {
+					stability_factor = -0.15
+					war_support_factor = -0.15
+					drift_defence_factor = -0.30
+					political_power_factor = -0.45
+				}
+				allowed_to_remove = {
+				}
+				ai_will_do = {
+					base = 0
+					modifier = { 
+						AND = {
+							check_variable = { AI_money_check < 8x_sal  }
+						}   
+						add = 100  
+					}
+					factor = 10
+				}
+		}
+		salary_1 = {
+				allowed = {
+				}
+				cost = 100
+				removal_cost = -1
+				on_add = { ROOT = { set_variable = { salary = 8 } } }
+				modifier = {
+					stability_factor = -0.10
+					war_support_factor = -0.10
+					drift_defence_factor = -0.20
+					political_power_factor = -0.3
+				}
+				allowed_to_remove = {
+				}
+				ai_will_do = {
+					base = 0
+					modifier = { 
+						AND = {
+							NOT = { check_variable = { AI_money_check < 8x_sal  } }
+							check_variable = { AI_money_check < 12x_sal  }
+						}   
+						add = 100  
+					}
+					factor = 10
+				}
+		}
+		salary_2 = {
+				allowed = {
+				}
+				cost = 100
+				removal_cost = -1
+				on_add = { ROOT = { set_variable = { salary = 12 } } }
+				modifier = {
+					stability_factor = -0.05
+					war_support_factor = -0.05
+					drift_defence_factor = -0.10
+					political_power_factor = -0.15
+				}
+				allowed_to_remove = {
+				}
+				ai_will_do = {
+					base = 0
+					modifier = { 
+						AND = {
+							NOT = { check_variable = { AI_money_check < 12x_sal  } }
+							check_variable = { AI_money_check < 16x_sal  }
+						}   
+						add = 100  
+					}
+					factor = 10
+				}
+		}
+		salary_3 = {
+				allowed = {
+				}
+				cost = 100
+				removal_cost = -1
+				on_add = { ROOT = { set_variable = { salary = 16 } } }
+				modifier = {
+					stability_factor = 0
+					war_support_factor = 0
+					drift_defence_factor = 0
+			    
+				}
+				default = yes
+				allowed_to_remove = {
+				}
+				ai_will_do = {
+					base = 0
+					modifier = { 
+						AND = {
+							NOT = { check_variable = { AI_money_check < 16x_sal  } }
+							check_variable = { AI_money_check < 20x_sal  }
+						}   
+						add = 100  
+					}
+					factor = 10
+				}
+		}
+		salary_4 = {
+				allowed = {
+				}
+				cost = 100
+				removal_cost = -1
+				on_add = { ROOT = { set_variable = { salary = 20 } } }
+				modifier = {
+					stability_factor = 0.1
+					war_support_factor = 0.1
+					drift_defence_factor = 0.15
+					political_power_factor = 0.15
+				}
+				allowed_to_remove = {
+				}
+				ai_will_do = {
+					base = 0
+					modifier = { 
+						AND = {
+							NOT = { check_variable = { AI_money_check < 20x_sal  } }
+							check_variable = { AI_money_check < 24x_sal  }
+						}   
+						add = 100  
+					}
+					factor = 10
+				}
+		}
+		salary_5 = {
+				allowed = {
+				}
+				cost = 100
+				removal_cost = -1
+				on_add = { ROOT = { set_variable = { salary = 24 } } }
+				modifier = {
+					stability_factor = 0.2
+					war_support_factor = 0.2
+					drift_defence_factor = 0.30
+					political_power_factor = 0.3
+			    
+				}
+				allowed_to_remove = {
+				}
+				ai_will_do = {
+					base = 0
+					modifier = { 
+						AND = {
+							NOT = { check_variable = { AI_money_check < 24x_sal  } }
+							check_variable = { AI_money_check < 28x_sal  }
+						}   
+						add = 100  
+					}
+					factor = 10
+				}
+		}
+		salary_6 = {
+				allowed = {
+				}
+				cost = 100
+				removal_cost = -1
+				on_add = { ROOT = { set_variable = { salary = 28 } } }
+				modifier = {
+					stability_factor = 0.3
+					war_support_factor = 0.3
+					drift_defence_factor = 0.45
+					political_power_factor = 0.45
+				}
+				allowed_to_remove = {
+				}
+				ai_will_do = {
+					base = 0
+					modifier = { 
+						AND = {
+							NOT = { check_variable = { AI_money_check < 28x_sal  } }
+						}   
+						add = 100  
+					}
+					factor = 10
+				}
+		}
+	}
+
+
+    build= {
+		law = yes
+		build_0 = {
+				allowed = {
+				}
+				cost = 100
+				removal_cost = -1
+				on_add = { ROOT = { set_variable = { build_law = 5 } } }
+				modifier = {
+					production_speed_buildings_factor = -0.15
+				}
+				allowed_to_remove = {
+				}
+				ai_will_do = {
+					base = 0
+					modifier = { 
+						AND = {
+							check_variable = { AI_money_check < 10x_build  }
+						}   
+						add = 100  
+					}
+					factor = 10
+				}
+		}
+		build_1 = {
+				allowed = {
+				}
+				cost = 100
+				removal_cost = -1
+				on_add = { ROOT = { set_variable = { build_law = 10 } } }
+				modifier = {
+					production_speed_buildings_factor = -0.10
+				}
+				allowed_to_remove = {
+				}
+				ai_will_do = {
+					base = 0
+					modifier = { 
+						AND = {
+							NOT = { check_variable = { AI_money_check < 10x_build  } }
+							check_variable = { AI_money_check < 15x_build  }
+						}   
+						add = 100  
+					}
+					factor = 10
+				}
+		}
+		build_2 = {
+				allowed = {
+				}
+				cost = 100
+				removal_cost = -1
+				on_add = { ROOT = { set_variable = { build_law = 15 } } }
+				modifier = {
+					production_speed_buildings_factor = -0.05
+				}
+				allowed_to_remove = {
+				}
+				ai_will_do = {
+					base = 0
+					modifier = { 
+						AND = {
+							NOT = { check_variable = { AI_money_check < 15x_build  } }
+							check_variable = { AI_money_check < 20x_build  }
+						}   
+						add = 100  
+					}
+					factor = 10
+				}
+		}
+		build_3 = {
+				allowed = {
+				}
+				cost = 100
+				removal_cost = -1
+				on_add = { ROOT = { set_variable = { build_law = 20 } } }
+				modifier = {
+					production_speed_buildings_factor = 0
+				}
+				default = yes
+				allowed_to_remove = {
+				}
+				ai_will_do = {
+					base = 0
+					modifier = { 
+						AND = {
+							NOT = { check_variable = { AI_money_check < 20x_build  } }
+							check_variable = { AI_money_check < 25x_build  }
+						}   
+						add = 100  
+					}
+					factor = 10
+				}
+		}
+		build_4 = {
+				allowed = {
+				}
+				cost = 100
+				removal_cost = -1
+				on_add = { ROOT = { set_variable = { build_law = 25 } } }
+				modifier = {
+					production_speed_buildings_factor = 0.1
+				}
+				allowed_to_remove = {
+				}
+				ai_will_do = {
+					base = 0
+					modifier = { 
+						AND = {
+							NOT = { check_variable = { AI_money_check < 25x_build  } }
+							check_variable = { AI_money_check < 30x_build  }
+						}   
+						add = 100  
+					}
+					factor = 10
+				}
+		}
+		build_5 = {
+				allowed = {
+				}
+				cost = 100
+				removal_cost = -1
+				on_add = { ROOT = { set_variable = { build_law = 30 } } }
+				modifier = {
+					production_speed_buildings_factor = 0.2
+				}
+				allowed_to_remove = {
+				}
+				ai_will_do = {
+					base = 0
+					modifier = { 
+						AND = {
+							NOT = { check_variable = { AI_money_check < 30x_build  } }
+							check_variable = { AI_money_check < 35x_build  }
+						}   
+						add = 100  
+					}
+					factor = 10
+				}
+		}
+		build_6 = {
+				allowed = {
+				}
+				cost = 100
+				removal_cost = -1
+				on_add = { ROOT = { set_variable = { build_law = 35 } } }
+				modifier = {
+					production_speed_buildings_factor = 0.3
+				}
+				allowed_to_remove = {
+				}
+				ai_will_do = {
+					base = 0
+					modifier = { 
+						AND = {
+							NOT = { check_variable = { AI_money_check < 35x_build  } }
+						}   
+						add = 100  
+					}
+					factor = 10
+				}
+		}
+	}
+   
+	 research_bud= {
+		law = yes
+		research_0 = {
+			allowed = {
+				always = yes
+			}
+			cost = 100
+			removal_cost = -1
+			on_add = { ROOT = { set_variable = { research_law = 25 } } }
+			modifier = {
+				research_speed_factor = -0.15
+			}
+			allowed_to_remove = {
+			}
+			ai_will_do = {
+				base = 0
+				modifier = { 
+					AND = {
+						check_variable = { AI_money_check < 50x_research  }
+					}   
+					add = 100  
+				}
+				factor = 10
+			}
+		}
+		research_1 = {
+			allowed = {
+				always = yes
+			}
+			cost = 100
+			removal_cost = -1
+			on_add = { ROOT = { set_variable = { research_law = 50 } } }
+			modifier = {
+				research_speed_factor = -0.10
+			}
+			allowed_to_remove = {
+			}
+			ai_will_do = {
+				base = 0
+				modifier = { 
+					AND = {
+						NOT = { check_variable = { AI_money_check < 50x_research  } }
+						check_variable = { AI_money_check < 75x_research  }
+					}   
+					add = 100  
+				}
+				factor = 10
+			}
+		}
+		research_2 = {
+			allowed = {
+				always = yes
+			}
+			cost = 100
+			removal_cost = -1
+			on_add = { ROOT = { set_variable = { research_law = 75 } } }
+			modifier = {
+				research_speed_factor = -0.05
+			}
+			allowed_to_remove = {
+			}
+			ai_will_do = {
+				base = 0
+				modifier = { 
+					AND = {
+						NOT = { check_variable = { AI_money_check < 75x_research  } }
+						check_variable = { AI_money_check < 100x_research  }
+					}   
+					add = 100  
+				}
+				factor = 10
+			}
+		}
+		
+		research_3 = {
+			allowed = {
+				always = yes
+			}
+			cost = 100
+			removal_cost = -1
+			on_add = { ROOT = { set_variable = { research_law = 100 } } }
+			modifier = {
+				research_speed_factor = 0
+			}
+			default = yes
+			allowed_to_remove = {
+			}
+			ai_will_do = {
+				base = 0
+				modifier = { 
+					AND = {
+						NOT = { check_variable = { AI_money_check < 100x_research  } }
+						check_variable = { AI_money_check < 125x_research  }
+					}   
+					add = 100  
+				}
+				factor = 10
+			}
+		}
+		research_4 = {
+			allowed = {
+				always = yes
+			}
+			cost = 100
+			removal_cost = -1
+			on_add = { ROOT = { set_variable = { research_law = 125 } } }
+			modifier = {
+				research_speed_factor = 0.1
+			}
+			allowed_to_remove = {
+			}
+			ai_will_do = {
+				base = 0
+				modifier = { 
+					AND = {
+						NOT = { check_variable = { AI_money_check < 125x_research  } }
+						check_variable = { AI_money_check < 150x_research  }
+					}   
+					add = 100  
+				}
+				factor = 10
+			}
+		}
+		research_5 = {
+			allowed = {
+				always = yes
+			}
+			cost = 100
+			removal_cost = -1
+			on_add = { ROOT = { set_variable = { research_law = 150 } } }
+			modifier = {
+				research_speed_factor = 0.2
+			}
+			allowed_to_remove = {
+			}
+			ai_will_do = {
+				base = 0
+				modifier = { 
+					AND = {
+						NOT = { check_variable = { AI_money_check < 150x_research  } }
+						check_variable = { AI_money_check < 175x_research  }
+					}   
+					add = 100  
+				}
+				factor = 10
+			}
+		}
+		research_6 = {
+			allowed = {
+				always = yes
+			}
+			cost = 100
+			removal_cost = -1
+			on_add = { ROOT = { set_variable = { research_law = 175 } } }
+			modifier = {
+				research_speed_factor = 0.3
+			}
+			allowed_to_remove = {
+			}
+			ai_will_do = {
+				base = 0
+				modifier = { 
+					AND = {
+						NOT = { check_variable = { AI_money_check < 175x_research  } }
+					}   
+					add = 100  
+				}
+				factor = 10
+			}
+		}
+	
+	
+}

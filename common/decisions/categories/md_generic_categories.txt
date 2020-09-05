@@ -1,0 +1,64 @@
+#formable_nations = {
+#
+#	icon = generic_formable_nations
+#
+#	allowed = {
+#		has_dlc = "Waking the Tiger"
+#	}
+#}
+
+festivities_category = {
+
+	icon = generic_generic
+
+	allowed = {
+	}
+}
+
+military_of_peace_category = {
+
+	icon = ger_military_buildup
+
+	allowed = {
+	}
+}
+
+master_of_puppets_category = {
+
+	icon = generic_independence
+
+	allowed = {
+	}
+}
+
+coalition_government_category = {
+
+	icon = power_struggle
+
+	allowed = {
+	}
+}
+
+partisans_category = {
+
+	icon = infiltration
+
+	allowed = {
+	}
+}
+
+internal_issues_category = {
+
+	icon = generic_industry
+
+	allowed = {
+	}
+}
+
+enabling_act_category = {
+
+	icon = generic_generic
+
+	allowed = {
+	}
+}

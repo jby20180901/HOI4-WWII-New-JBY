@@ -1,0 +1,222 @@
+ideas = {
+	country = { 
+		budget_toomore_DEBUFF  = {
+			picture = idea_generic_army_problems
+			allowed = {  }
+
+			modifier = {   
+				war_support_weekly = -0.02
+				stability_weekly = -0.02
+			}
+		}
+		poverty_country_DEBUFF = {
+			picture = idea_chi_hyper_inflation
+			allowed = {  }
+
+			modifier = {
+				surrender_limit = -0.2
+			}
+		}
+		
+		econ_bankrupt_DEBUFF = {
+			picture = idea_chi_hyper_inflation
+			allowed = {  }
+
+			modifier = {
+				surrender_limit = -0.1
+			}
+		}
+		
+		buy_master_weapon = {
+			picture = idea_generic_purge
+
+			modifier = {
+				consumer_goods_factor = 0.30
+			}
+		}
+		
+		food_support_level_1 = { 
+			picture = idea_generic_agrarian_reform
+			modifier = {
+				monthly_population = -0.5
+				conscription_factor =  -0.6
+				experience_loss_factor = 0.4
+				reliability_factor = -0.6
+				supply_consumption_factor = 0.2
+				attrition = 0.4
+			}
+
+		}
+		food_support_level_2 = {
+			picture = idea_generic_agrarian_reform
+			modifier = {  
+				monthly_population = -0.375
+				conscription_factor =  -0.45
+				experience_loss_factor = 0.3
+				reliability_factor = -0.45
+				supply_consumption_factor = 0.15
+				attrition = 0.3
+			}
+		}
+		food_support_level_3 = { 
+			picture = idea_generic_agrarian_reform
+			modifier = {   
+				monthly_population = -0.25
+				conscription_factor =  -0.30
+				experience_loss_factor = 0.2
+				reliability_factor = -0.3
+				supply_consumption_factor = 0.1
+				attrition = 0.2
+
+			}
+		}
+		food_support_level_4 = { 
+			picture = idea_generic_agrarian_reform
+			modifier = {   
+				monthly_population = -0.125
+				conscription_factor =  -0.15
+				experience_loss_factor = 0.1
+				reliability_factor = -0.15
+				supply_consumption_factor = 0.05
+				attrition = 0.1
+			}
+		}
+		food_support_level_5 = { 
+			picture = idea_generic_agrarian_reform
+			modifier = { 
+				monthly_population = 0
+				conscription_factor =  0
+				experience_loss_factor = 0
+			}			
+		}
+		food_support_level_6 = {
+			picture = idea_generic_agrarian_reform
+			modifier = {  
+				monthly_population = 0.125
+				conscription_factor =  0.15
+				experience_loss_factor = -0.1
+				reliability_factor = 0.15
+				supply_consumption_factor = -0.05
+				attrition = -0.1
+			}
+		}
+		food_support_level_7 = { 
+			picture = idea_generic_agrarian_reform
+			modifier = {   
+				monthly_population = 0.25
+				conscription_factor =  0.30
+				experience_loss_factor = -0.2
+				reliability_factor = 0.30
+				supply_consumption_factor = -0.1
+				attrition = -0.2
+			}
+		}
+		food_support_level_8 = { 
+			picture = idea_generic_agrarian_reform
+			modifier = {   
+				monthly_population = 0.375
+				conscription_factor =  0.45
+				experience_loss_factor = -0.3
+				reliability_factor = 0.45
+				supply_consumption_factor = -0.15
+				attrition = -0.3
+			}
+		}
+		food_support_level_9 = { 
+			picture = idea_generic_agrarian_reform
+			modifier = { 
+				monthly_population = 0.5
+				conscription_factor =  0.6
+				experience_loss_factor = -0.4
+				reliability_factor = 0.60
+				supply_consumption_factor = -0.2
+				attrition = -0.4
+			}			
+		}
+		
+		
+		coal_support_level_1 = { 
+			picture = idea_north_american_aviation
+			modifier = {   
+				industrial_capacity_factory = -0.4
+				production_factory_max_efficiency_factor = -0.4
+				production_factory_efficiency_gain_factor = -0.4
+			
+			}
+		}
+		coal_support_level_2 = {
+			picture = idea_north_american_aviation
+			modifier = {   
+				industrial_capacity_factory = -0.3
+				production_factory_max_efficiency_factor = -0.3
+				production_factory_efficiency_gain_factor = -0.3
+			
+			}
+		}
+		coal_support_level_3 = { 
+			picture = idea_north_american_aviation
+			modifier = {   
+				industrial_capacity_factory = -0.2
+				production_factory_max_efficiency_factor = -0.2
+				production_factory_efficiency_gain_factor = -0.2
+			
+			}
+		}
+		coal_support_level_4 = { 
+			picture = idea_north_american_aviation
+			modifier = {   
+				industrial_capacity_factory = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+			
+			}
+		}
+		coal_support_level_5 = { 
+			picture = idea_north_american_aviation
+			modifier = {   
+				industrial_capacity_factory = 0
+				production_factory_max_efficiency_factor = 0
+				production_factory_efficiency_gain_factor = 0
+			}
+		}
+		coal_support_level_6 = {
+			picture = idea_north_american_aviation
+			modifier = {   
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			
+			}
+		}
+		coal_support_level_7 = { 
+			picture = idea_north_american_aviation
+			modifier = {   
+				industrial_capacity_factory = 0.2
+				production_factory_max_efficiency_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.2
+			
+			}
+		}
+		coal_support_level_8 = { 
+			picture = idea_north_american_aviation
+			modifier = {   
+				industrial_capacity_factory = 0.3
+				production_factory_max_efficiency_factor = 0.3
+				production_factory_efficiency_gain_factor = 0.3
+			
+			}
+		}
+		coal_support_level_9 = { 
+			picture = idea_north_american_aviation
+			modifier = {   
+				industrial_capacity_factory = 0.4
+				production_factory_max_efficiency_factor = 0.4
+				production_factory_efficiency_gain_factor = 0.4
+			}
+		}
+		
+		
+		
+		
+	}
+}

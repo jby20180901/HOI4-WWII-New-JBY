@@ -1,0 +1,100 @@
+on_actions = {
+
+	on_daily ={
+	
+		effect = {
+		
+		
+				if = {
+					limit = {
+						ROOT = {
+							AND = {
+								check_variable = { remainder < 0 }
+								NOT = { check_variable = { remainder < -25 } }
+								has_idea = salary_0
+								has_idea = build_0
+								has_idea = research_0
+							}
+						}
+					}
+						 
+					ROOT = { 
+						add_ideas = econ_bankrupt_DEBUFF
+					}
+				}
+				else = {
+					ROOT = {
+						clr_country_flag = click_econ_bankrupt_inform
+						remove_ideas = econ_bankrupt_DEBUFF
+					}
+				}
+
+
+
+
+				if = {
+					limit = {
+						ROOT = {
+							AND = {
+								check_variable = { remainder < -25 }
+								has_idea = salary_0
+								has_idea = build_0
+								has_idea = research_0
+							}
+						}
+					}
+						 
+					ROOT = { 
+						add_ideas = poverty_country_DEBUFF
+					}
+				}
+				else = {
+					ROOT = {
+						clr_country_flag = click_poverty_country_inform
+						remove_ideas = poverty_country_DEBUFF
+					}
+				}
+				
+				if = { 
+					limit = {
+						ROOT = {
+							AND = {
+								check_variable = { mil_bud > remainder }
+								check_variable = { mil_bud > 0 }
+							}
+						}
+					} 
+					ROOT = { 
+						add_ideas = budget_toomore_DEBUFF
+					}
+				}
+				else = {
+					ROOT = {
+						clr_country_flag = click_budget_toomore_inform
+						remove_ideas = budget_toomore_DEBUFF
+					}
+				}
+			
+				if = { 
+					limit = {
+						ROOT = {
+							AND = { 
+								check_variable = { remainder < 0 }
+								OR = {
+									NOT = { has_idea = salary_0 }
+									NOT = { has_idea = build_0 }
+									NOT = { has_idea = research_0 }
+								}
+							}
+						}
+					}
+					ROOT = { country_event = { id = cash.0 } }
+				}
+				
+		}
+		
+    }
+	
+}
+
+  

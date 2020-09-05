@@ -1,0 +1,378 @@
+on_actions = {
+
+	on_daily ={
+	
+		effect = {
+		
+			if = {
+				limit = {
+					ROOT = { 
+						NOT = { check_variable = { food_in_need  >  1  } }
+						NOT = { has_idea = food_support_level_1 }
+					}
+				}
+				ROOT = { 
+					add_ideas = food_support_level_1  
+					remove_ideas = food_support_level_2
+					remove_ideas = food_support_level_3
+					remove_ideas = food_support_level_4
+					remove_ideas = food_support_level_5
+					remove_ideas = food_support_level_6
+					remove_ideas = food_support_level_7
+					remove_ideas = food_support_level_8
+					remove_ideas = food_support_level_9
+				}
+			}
+			
+			else_if = {
+				limit = {
+					ROOT = { 
+						check_variable = { food_in_need  >  1   }
+						NOT = { check_variable = { food_in_need  >  2  } }
+						NOT = { has_idea = food_support_level_2 }
+					}
+				}
+				ROOT = { 
+					remove_ideas = food_support_level_1  
+					add_ideas= food_support_level_2
+					remove_ideas = food_support_level_3
+					remove_ideas = food_support_level_4
+					remove_ideas = food_support_level_5
+					remove_ideas = food_support_level_6
+					remove_ideas = food_support_level_7
+					remove_ideas = food_support_level_8
+					remove_ideas = food_support_level_9
+				}
+			}
+			
+			else_if = {
+				limit = {
+					ROOT = { 
+						check_variable = { food_in_need  >  2   }
+						NOT = { check_variable = { food_in_need  >  3  } }
+						NOT = { has_idea = food_support_level_3 }
+					}
+				}
+				ROOT = { 
+					remove_ideas = food_support_level_1  
+					remove_ideas = food_support_level_2
+					add_ideas = food_support_level_3
+					remove_ideas = food_support_level_4
+					remove_ideas = food_support_level_5
+					remove_ideas = food_support_level_6
+					remove_ideas = food_support_level_7
+					remove_ideas = food_support_level_8
+					remove_ideas = food_support_level_9
+				}
+			}
+			
+			else_if = {
+				limit = {
+					ROOT = { 
+						check_variable = { food_in_need  >  3   }
+						NOT = { check_variable = { food_in_need  >  4  } }
+						NOT = { has_idea = food_support_level_4 }
+					}
+				}
+				ROOT = { 
+					remove_ideas = food_support_level_1  
+					remove_ideas = food_support_level_2
+					remove_ideas = food_support_level_3
+					add_ideas = food_support_level_4
+					remove_ideas = food_support_level_5
+					remove_ideas = food_support_level_6
+					remove_ideas = food_support_level_7
+					remove_ideas = food_support_level_8
+					remove_ideas = food_support_level_9
+				}
+			}
+			
+			else_if = {
+				limit = {
+					ROOT = { 
+						check_variable = { food_in_need  >  4   }
+						NOT = { check_variable = { food_in_need  >  5  } }
+						NOT = { has_idea = food_support_level_5 }
+					}
+				}
+				ROOT = { 
+					remove_ideas = food_support_level_1  
+					remove_ideas = food_support_level_2
+					remove_ideas = food_support_level_3
+					remove_ideas = food_support_level_4
+					add_ideas = food_support_level_5
+					remove_ideas = food_support_level_6
+					remove_ideas = food_support_level_7
+					remove_ideas = food_support_level_8
+					remove_ideas = food_support_level_9
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						check_variable = { food_in_need  >  5   }
+						NOT = { check_variable = { food_in_need  >  6  } }
+						NOT = { has_idea = food_support_level_6 }
+					}
+				}
+				ROOT = { 
+					remove_ideas = food_support_level_1  
+					remove_ideas = food_support_level_2
+					remove_ideas = food_support_level_3
+					remove_ideas = food_support_level_4
+					remove_ideas = food_support_level_5
+					add_ideas = food_support_level_6
+					remove_ideas = food_support_level_7
+					remove_ideas = food_support_level_8
+					remove_ideas = food_support_level_9
+				}
+			}
+			
+			else_if = {
+				limit = {
+					ROOT = { 
+						check_variable = { food_in_need  >  6   }
+						NOT = { check_variable = { food_in_need  >  7  } }
+						NOT = { has_idea = food_support_level_7 }
+					}
+				}
+				ROOT = { 
+					remove_ideas = food_support_level_1  
+					remove_ideas = food_support_level_2
+					remove_ideas = food_support_level_3
+					remove_ideas = food_support_level_4
+					remove_ideas = food_support_level_5
+					remove_ideas = food_support_level_6
+					add_ideas = food_support_level_7
+					remove_ideas = food_support_level_8
+					remove_ideas = food_support_level_9
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						check_variable = { food_in_need  >  7   }
+						NOT = { check_variable = { food_in_need  >  8  } }
+						NOT = { has_idea = food_support_level_8 }
+					}
+				}
+				ROOT = { 
+					remove_ideas = food_support_level_1  
+					remove_ideas = food_support_level_2
+					remove_ideas = food_support_level_3
+					remove_ideas = food_support_level_4
+					remove_ideas = food_support_level_5
+					remove_ideas = food_support_level_6
+					remove_ideas = food_support_level_7
+					add_ideas = food_support_level_8
+					remove_ideas = food_support_level_9
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						check_variable = { food_in_need  >  8   }
+						NOT = { has_idea = food_support_level_9 }
+					}
+				}
+				ROOT = { 
+					remove_ideas = food_support_level_1  
+					remove_ideas = food_support_level_2
+					remove_ideas = food_support_level_3
+					remove_ideas = food_support_level_4
+					remove_ideas = food_support_level_5
+					remove_ideas = food_support_level_6
+					remove_ideas = food_support_level_7
+					remove_ideas = food_support_level_8
+					add_ideas = food_support_level_9
+				}
+			}
+			
+			if = {
+				limit = {
+					ROOT = { 
+						NOT = { check_variable = { coal_in_need  >  4  } }
+						NOT = { has_idea = coal_support_level_1 }
+					}
+				}
+				ROOT = { 
+					add_ideas = coal_support_level_1  
+					remove_ideas = coal_support_level_2
+					remove_ideas = coal_support_level_3
+					remove_ideas = coal_support_level_4
+					remove_ideas = coal_support_level_5
+					remove_ideas = coal_support_level_6
+					remove_ideas = coal_support_level_7
+					remove_ideas = coal_support_level_8
+					remove_ideas = coal_support_level_9
+				}
+			}
+			
+			else_if = {
+				limit = {
+					ROOT = { 
+						check_variable = { coal_in_need  >  4  }
+						NOT = { check_variable = { coal_in_need  >  8  } }
+						NOT = { has_idea = coal_support_level_2 }
+					}
+				}
+				ROOT = { 
+					remove_ideas = coal_support_level_1  
+					add_ideas= coal_support_level_2
+					remove_ideas = coal_support_level_3
+					remove_ideas = coal_support_level_4
+					remove_ideas = coal_support_level_5
+					remove_ideas = coal_support_level_6
+					remove_ideas = coal_support_level_7
+					remove_ideas = coal_support_level_8
+					remove_ideas = coal_support_level_9
+				}
+			}
+			
+			else_if = {
+				limit = {
+					ROOT = { 
+						check_variable = { coal_in_need  >  8   }
+						NOT = { check_variable = { coal_in_need  >  12  } }
+						NOT = { has_idea = coal_support_level_3 }
+					}
+				}
+				ROOT = { 
+					remove_ideas = coal_support_level_1  
+					remove_ideas = coal_support_level_2
+					add_ideas = coal_support_level_3
+					remove_ideas = coal_support_level_4
+					remove_ideas = coal_support_level_5
+					remove_ideas = coal_support_level_6
+					remove_ideas = coal_support_level_7
+					remove_ideas = coal_support_level_8
+					remove_ideas = coal_support_level_9
+				}
+			}
+			
+			else_if = {
+				limit = {
+					ROOT = { 
+						check_variable = { coal_in_need  >  12   }
+						NOT = { check_variable = { coal_in_need  >  16  } }
+						NOT = { has_idea = coal_support_level_4 }
+					}
+				}
+				ROOT = { 
+					remove_ideas = coal_support_level_1  
+					remove_ideas = coal_support_level_2
+					remove_ideas = coal_support_level_3
+					add_ideas = coal_support_level_4
+					remove_ideas = coal_support_level_5
+					remove_ideas = coal_support_level_6
+					remove_ideas = coal_support_level_7
+					remove_ideas = coal_support_level_8
+					remove_ideas = coal_support_level_9
+				}
+			}
+			
+			else_if = {
+				limit = {
+					ROOT = { 
+						check_variable = { coal_in_need  >  16   }
+						NOT = { check_variable = { coal_in_need  >  20  } }
+						NOT = { has_idea = coal_support_level_5 }
+					}
+				}
+				ROOT = { 
+					remove_ideas = coal_support_level_1  
+					remove_ideas = coal_support_level_2
+					remove_ideas = coal_support_level_3
+					remove_ideas = coal_support_level_4
+					add_ideas = coal_support_level_5
+					remove_ideas = coal_support_level_6
+					remove_ideas = coal_support_level_7
+					remove_ideas = coal_support_level_8
+					remove_ideas = coal_support_level_9
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						check_variable = { coal_in_need  >  20   }
+						NOT = { check_variable = { coal_in_need  >  24  } }
+						NOT = { has_idea = coal_support_level_6 }
+					}
+				}
+				ROOT = { 
+					remove_ideas = coal_support_level_1  
+					remove_ideas = coal_support_level_2
+					remove_ideas = coal_support_level_3
+					remove_ideas = coal_support_level_4
+					remove_ideas = coal_support_level_5
+					add_ideas = coal_support_level_6
+					remove_ideas = coal_support_level_7
+					remove_ideas = coal_support_level_8
+					remove_ideas = coal_support_level_9
+				}
+			}
+			
+			else_if = {
+				limit = {
+					ROOT = { 
+						check_variable = { coal_in_need  >  24   }
+						NOT = { check_variable = { coal_in_need  >  28  } }
+						NOT = { has_idea = coal_support_level_7 }
+					}
+				}
+				ROOT = { 
+					remove_ideas = coal_support_level_1  
+					remove_ideas = coal_support_level_2
+					remove_ideas = coal_support_level_3
+					remove_ideas = coal_support_level_4
+					remove_ideas = coal_support_level_5
+					remove_ideas = coal_support_level_6
+					add_ideas = coal_support_level_7
+					remove_ideas = coal_support_level_8
+					remove_ideas = coal_support_level_9
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						check_variable = { coal_in_need  >  28   }
+						NOT = { check_variable = { coal_in_need  >  32  } }
+						NOT = { has_idea = coal_support_level_8 }
+					}
+				}
+				ROOT = { 
+					remove_ideas = coal_support_level_1  
+					remove_ideas = coal_support_level_2
+					remove_ideas = coal_support_level_3
+					remove_ideas = coal_support_level_4
+					remove_ideas = coal_support_level_5
+					remove_ideas = coal_support_level_6
+					remove_ideas = coal_support_level_7
+					add_ideas = coal_support_level_8
+					remove_ideas = coal_support_level_9
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						check_variable = { coal_in_need  >  32   }
+						NOT = { has_idea = coal_support_level_9 }
+					}
+				}
+				ROOT = { 
+					remove_ideas = coal_support_level_1  
+					remove_ideas = coal_support_level_2
+					remove_ideas = coal_support_level_3
+					remove_ideas = coal_support_level_4
+					remove_ideas = coal_support_level_5
+					remove_ideas = coal_support_level_6
+					remove_ideas = coal_support_level_7
+					remove_ideas = coal_support_level_8
+					add_ideas = coal_support_level_9
+				}
+			}
+		}
+		
+	}
+	
+}

@@ -1,0 +1,517 @@
+ideas = {
+	
+	country = {
+    
+        #联合空军训练计划
+        CHI_joint_air_training_scheme = {
+
+			picture = generic_air_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			available = {
+				
+			}
+
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_air = 0.05
+				experience_gain_air_factor = 0.1
+				air_mission_xp_gain_factor = 0.1
+				air_training_xp_gain_factor = 0.2
+			}
+		}
+        #确保马六甲航线
+        CHI_secure_the_imperial_shipping_routes = {
+
+			picture = kure_naval_arsenal
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			equipment_bonus = {
+				ship_hull_cruiser = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		### 万国来朝 ###
+		princess_wanguo_laichao_idea = {
+            
+			picture = FRA_la_deluge#ast_abandon_the_westminster_system
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+                local_resources_factor = 0.1
+                non_core_manpower = 0.35
+                conscription = 0.03
+				conscription_factor = 0.25
+                local_factory_sabotage = -0.5 #破坏建设几率
+				resistance_growth = -0.5 #抵抗增长速度
+				required_garrison_factor = 0.1 #驻军需求
+				target_sabotage_cost = -0.5 #破坏活动花费
+			}
+			
+		}
+		### 天命攸归 ###
+		princess_tianming_yougui_idea = {
+		
+			picture = china_empire
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.5
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.2
+			}
+			
+		}
+		
+		### 一百年的海军之梦 ###
+		princess_yibainiande_haijunzhimeng_idea = {
+		
+			picture = china_sa_zhenbing
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.25
+				industrial_capacity_dockyard = 0.2
+			}
+			
+		}
+		
+		### 打散重编的军队 ###
+		princess_dasanchongbiande_jundui_idea = {
+		
+			picture = chi_army_corruption
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+			
+		}
+		
+		### 信任军队 ###
+		princess_xinren_jundui_idea = {
+		
+			picture = generic_infantry_bonus
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.25
+			}
+			
+		}
+		
+		### 重庆谈判正在进行 ###
+		princess_chongqingtanpan_zhengzaijinxing_idea = {
+		
+			picture = generic_disjointed_gov
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				justify_war_goal_time = 10
+			}
+			
+		}
+		
+		### 中央军事委员会 ###
+		princess_zhongyang_junshiweiyuanhui_idea = {
+		
+			picture = general_staff
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_leader_start_planning_level = 1
+				army_org_Factor = 0.05
+				planning_speed = 0.2
+			}
+		}
+		
+		### 训练有素的军队 ###
+		princess_xunlianyousude_jundui_idea = {
+		
+			picture = generic_morale_bonus
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_org_Factor = 0.1
+			}
+			
+		}
+		
+		### 加强中央集权 ###
+		princess_jiaqiang_zhongyangjiquan_idea = {
+		
+			picture = generic_spy_political
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				neutrality_drift = 0.05
+			}
+			
+		}
+		
+		### 人民民主专政 ###
+		princess_renmin_minzhuzhuanzheng_idea = {
+		
+			picture = generic_intel_bonus
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				communism_drift = 0.2
+			}
+			
+		}
+		
+		### 走向共和 ###
+		princess_zouxiang_gonghe_idea = {
+		
+			picture = generic_victors_of_ww1
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				democratic_drift = 0.2
+			}
+			
+		}
+		
+		### 华夏的荣光 ###
+		princess_huaxiade_rongguang_idea = {
+		
+			picture = man_low_legitimacy5
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = 0.2
+			}
+			
+		}
+		
+		### 天朝 ###
+		princess_tianchao_idea = {
+		
+			picture = china_empire
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				neutrality_drift = 0.2
+			}
+			
+		}
+		
+		### 研发更先进的导弹 ###
+		princess_yanfagengxianjinde_daodan_idea = {
+			
+			picture = generic_research_bonus
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			research_bonus = {
+				rocketry = 0.15
+			}
+	
+			modifier = {
+				production_speed_rocket_site_factor = 0.15
+			}
+	
+		}
+		
+		### 取缔全国的娼妓 ###
+		princess_qudiquanguode_changji_idea = {
+		
+			picture = HUN_treaty_of_triannon
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+				stability_weekly = 0.05
+			}
+			
+		}
+		
+		### 反腐倡廉 ###
+		princess_fanfu_changlian_idea = {
+		
+			picture = ROM_king_carol_ii_hedonist
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+			
+		}
+		
+		### 逐渐被接纳的新币 ###
+		princess_zhujianbeijienade_xinqianbi_idea = {
+		
+			picture = SOV_scientist_defect
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_weekly = 0.01
+			}
+			
+		}
+		
+		### 华夏特色经济 ###
+		princess_huaxiatese_jingji_idea = {
+		
+			picture = chi_hyper_inflation
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.5
+			}
+			
+		}
+		
+		### 订购主力舰 ###
+		princess_dinggou_zhulijian_idea = {
+		
+			picture = generic_Buy_Ships_1
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = -0.3
+			}
+			
+		}
+		
+		### 主力舰订单 ###
+		princess_zhulijian_dingdan_idea = {
+		
+			picture = generic_Buy_Ships_2
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.3
+			}
+			
+		}
+		
+		### 订购巡洋舰 ###
+		princess_dinggou_xunyangjian_idea = {
+		
+			picture = generic_Buy_Ships_1
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = -0.2
+			}
+			
+		}
+        #new_south_wales_rc
+        #NZL_port_chalmers_shipbuilding
+		#MTG_naval_treaty_adherent
+        #MTG_naval_treaty_adherent_reduced
+        #electric_boat_company
+        #newport_news_shipbuilding
+        #yokosuka_naval_arsenal 
+        #kure_naval_arsenal 
+        #sasebo_naval_arsenal 
+        #Cockatoo_doe
+        #evans_deakin_co
+        #generic_naval_manufacturer_2 
+        #generic_naval_manufacturer_3
+        #generic_naval_manufacturer_1
+        ### 订购驱逐舰 ###
+		princess_dinggou_quzhujian_idea = {
+		
+			picture = generic_Buy_Ships_1
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = -0.1
+			}
+			
+		}
+        
+		### 巡洋舰订单 ###
+		princess_xunyangjian_dingdan_idea = {
+		
+			picture =generic_Buy_Ships_2
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.2
+			}
+			
+		}
+		
+		### 走向繁荣富强1 ###
+		princess_zouxiang_fanrongfuqiang_1_idea = {
+		
+			picture = weixing_1
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.25
+				industrial_capacity_factory = 0.2
+			}
+			
+		}
+		
+		### 走向繁荣富强2 ###
+		princess_zouxiang_fanrongfuqiang_2_idea = {
+		
+			picture = weixing_1
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.5
+				industrial_capacity_factory = 0.4
+			}
+			
+		}
+		
+	}
+	
+}
+
+
+
+

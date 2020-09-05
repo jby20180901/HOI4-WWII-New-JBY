@@ -1,0 +1,284 @@
+﻿capital = 615
+
+oob = "SHX_1936"
+
+set_stability = 0.7
+set_war_support = 0.4
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	cavalry_tech = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+}
+
+add_ideas = {
+	SHX_baojinganming
+}
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_0
+	amount = 2000
+	producer = SHX
+}
+
+give_military_access = CHI
+give_military_access = XBJ
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 100
+}
+
+create_country_leader = {
+	name = "阎锡山"
+	desc = "POLITICS_YAN_XISHAN_DESC"
+	picture = "gfx/leaders/SHX/Portrait_China_Chiang_yan_xishan.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+	china_warlord
+	shanxi_clique_leader
+		
+	}
+}
+create_country_leader = {
+	name = "傅作义"
+	desc = " "
+	picture = "gfx/leaders/SHX/Portrait_China_Chiang_fu_zuoyi.dds"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "苏体仁"
+	desc = " "
+	picture = "gfx/leaders/SHX/Portrait_China_Suti_ren.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "商震"
+	desc = " "
+	picture = "gfx/leaders/SHX/SHX_shangzheng.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "陈长捷"
+	portrait_path = "gfx/leaders/SHX/Portrait_China_Chiang_chen_changjie.dds"
+	traits = { career_officer  inflexible_strategist }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander  = {
+	name = "楚云飞"
+	desc = "POLITICS_CHUYUNFEI_DESC"
+	portrait_path = "gfx\leaders\CHIA/Portrait_China_Chiang_Chu_Yunfei.dds"
+	traits = {  liangjian_jingshen huangpu_junxiao infantry_officer  career_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "董其武"
+	portrait_path = "gfx/leaders/SHX/Portrait_China_Chiang_dong_qiwu.dds"
+	traits = { urban_assault_specialist  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_field_marshal  = {
+	name = "傅作义"
+	portrait_path = "gfx/leaders/SHX/Portrait_China_Chiang_fu_zuoyi.dds"
+	traits = { skilled_staffer   inflexible_strategist  trait_reckless  }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+
+create_corps_commander = {
+	name = "高桂滋"
+	portrait_path = "gfx/leaders/SHX/Portrait_China_Chiang_gao_guizi.dds"
+	traits = { defensive_doctrine   }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "李服膺"
+	portrait_path = "gfx/leaders/SHX/Portrait_China_Chiang_li_fuying.dds"
+	traits = { offensive_doctrine   }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "刘汝明"
+	portrait_path = "gfx/leaders/SHX/Portrait_China_Chiang_liu_ruming.dds"
+	traits = {    }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "孙楚"
+	portrait_path = "gfx/leaders/SHX/Portrait_China_Chiang_sun_chu.dds"
+	traits = {   career_officer   }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "孙兰峰"
+	portrait_path = "gfx/leaders/SHX/Portrait_China_Chiang_sun_lanfeng.dds"
+	traits = {   trait_reckless    }
+	skill = 1
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "汤恩伯"
+	portrait_path = "gfx/leaders/SHX/Portrait_China_Chiang_tang_enbo.dds"
+	traits = {  career_officer  infantry_officer   politically_connected   inflexible_strategist    }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "杨爱源"
+	portrait_path = "gfx/leaders/SHX/Portrait_China_Chiang_yang_aiyuan.dds"
+	traits = {       }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "赵锡章"
+	portrait_path = "gfx/leaders/SHX/Portrait_China_Chiang_zhao_xizhang.dds"
+	traits = {    trait_mountaineer     }
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "郝梦龄"
+	picture = "Hao_Mengling.dds"
+	traits = {    infantry_officer   trait_reckless    }
+	skill = 1
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+
+create_corps_commander = {
+	name = "佟麟阁"
+	picture = "Tong_linge.dds"
+	traits = {    infantry_officer   trait_reckless career_officer   }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+
+create_corps_commander = {
+	name = "杨效欧"
+	portrait_path = "gfx/leaders/SHX/SHX_yangxiaoou.dds"
+	traits = { trait_engineer   }
+	skill = 1
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "周玳"
+	portrait_path = "gfx/leaders/SHX/SHX_zhoudai.dds"
+	traits = { old_guard }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "李培基"
+	portrait_path = "gfx/leaders/SHX/SHX_lipeiji.dds"
+	traits = { guerilla_fighter  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+	
+}
+
+create_field_marshal = {
+	name = "商震"
+	portrait_path = "gfx/leaders/SHX/SHX_shangzheng.dds"
+	traits = { guerilla_fighter  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}

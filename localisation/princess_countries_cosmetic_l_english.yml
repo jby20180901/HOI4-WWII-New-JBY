@@ -1,0 +1,26 @@
+﻿l_english:
+ 
+ ### 中华帝国 ###
+ 
+ CHN_EMPIRE_fascism:0 "中华帝国"
+ CHN_EMPIRE_fascism_DEF:0 "中华帝国"
+ CHN_EMPIRE_communism:0 "中华人民共和国"
+ CHN_EMPIRE_communism_DEF:0 "中华人民共和国"
+ CHN_EMPIRE_democratic:0 "中国"
+ CHN_EMPIRE_democratic_DEF:0 "中国"
+ CHN_EMPIRE_neutrality:0 "中华帝国"
+ CHN_EMPIRE_neutrality_DEF:0 "中华帝国"
+ 
+ CHN_EMPIRE_neutrality_name:0 "中国朝廷"
+ CHN_EMPIRE_neutrality_party:0 "中国朝廷"
+ CHN_EMPIRE_fascism_name:0 "立宪帝政党"
+ CHN_EMPIRE_fascism_party:0 "立宪帝政党"
+ CHN_EMPIRE_democratic_name:0 "共和派"
+ CHN_EMPIRE_democratic_party:0 "共和派"
+ CHN_EMPIRE_communism_name:0 "中央人民政府"
+ CHN_EMPIRE_communism_party:0 "中央人民政府"
+ 
+ 
+ 
+ 
+ 

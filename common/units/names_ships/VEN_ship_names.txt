@@ -1,0 +1,154 @@
+﻿VEN_DD_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_DESTROYERS
+  for_countries = {
+    VEN
+  }
+  type = ship
+  ship_types = {
+    ship_hull_light
+    destroyer
+  }
+  prefix = "ARV "
+  fallback_name = "委内瑞拉第%d号驱逐舰"
+  unique = {
+    "新埃斯帕塔"
+    "苏利亚"
+    "阿拉瓜"
+    "克莱门特海军上将"
+    "弗洛雷斯将军"
+    "莫兰将军"
+    "布里昂海军上将"
+    "奥斯特拉将军"
+    "加西亚海军上将"
+  }
+}
+VEN_CL_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CL
+  for_countries = {
+    VEN
+  }
+  type = ship
+  ship_types = {
+    ship_hull_cruiser
+    light_cruiser
+  }
+  prefix = "ARV "
+  fallback_name = "委内瑞拉第%d号轻巡洋舰"
+  unique = {
+    "马拉凯"
+    "巴基西梅托"
+    "巴伦西亚"
+    "佩塔雷·特克斯"
+    "波多拉克鲁兹"
+    "库马纳"
+    "马图林"
+    "索塔文托"
+    "龟岛"
+    "佩德雷加尔"
+  }
+}
+VEN_CA_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CA
+  for_countries = {
+    VEN
+  }
+  type = ship
+  ship_types = {
+    ship_hull_cruiser
+    heavy_cruiser
+  }
+  prefix = "ARV "
+  fallback_name = "委内瑞拉第%d号重巡洋舰"
+  unique = {
+    "马拉凯"
+    "巴基西梅托"
+    "巴伦西亚"
+    "佩塔雷·特克斯"
+    "波多拉克鲁兹"
+    "库马纳"
+    "马图林"
+    "索塔文托"
+    "龟岛"
+    "佩德雷加尔"
+  }
+}
+VEN_BB_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_BB
+  for_countries = {
+    VEN
+  }
+  type = ship
+  ship_types = {
+    ship_hull_heavy
+    battleship
+  }
+  prefix = "ARV "
+  fallback_name = "委内瑞拉第%d号战列舰"
+  unique = {
+    "科罗内尔"
+    "圣保罗海军上将"
+    "加拉加斯"
+  }
+}
+VEN_BC_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_BC
+  for_countries = {
+    VEN
+  }
+  type = ship
+  ship_types = {
+    ship_hull_heavy
+    battle_cruiser
+  }
+  prefix = "ARV "
+  fallback_name = "委内瑞拉第%d号战列巡洋舰"
+  unique = {
+    "科罗内尔"
+    "圣保罗海军上将"
+    "加拉加斯"
+  }
+}
+VEN_CV_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CARRIERS
+  for_countries = {
+    VEN
+  }
+  type = ship
+  ship_types = {
+    ship_hull_carrier
+    carrier
+  }
+  prefix = "ARV "
+  fallback_name = "委内瑞拉第%d号航空母舰"
+  unique = {
+    "委内瑞拉共和国"
+    "西蒙 玻利瓦尔"
+    "乌尔达内塔将军"
+    "布里昂海军上将"
+    "苏布莱特将军"
+    "萨洛姆将军"
+  }
+}
+VEN_SS_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_SUBMARINES
+  for_countries = {
+    VEN
+  }
+  type = ship
+  ship_types = {
+    ship_hull_submarine
+    submarine
+  }
+  prefix = "ARV "
+  fallback_name = "委内瑞拉第%d号潜艇"
+  unique = {
+    "萨瓦洛"
+    "加勒比"
+    "克莱门特海军上将"
+    "弗洛雷斯将军"
+    "莫兰将军"
+    "布里昂海军上将"
+    "奥斯特拉将军"
+    "加西亚海军上将"
+  }
+}

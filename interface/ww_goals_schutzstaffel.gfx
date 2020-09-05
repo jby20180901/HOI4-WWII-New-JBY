@@ -1,0 +1,244 @@
+spriteTypes = {	
+
+	#### Schutzstaffel goal icons
+	
+	SpriteType = {
+	name = "GFX_goal_generic_axis_build_ss_infantry"
+	texturefile = "gfx/interface/goals/goal_generic_axis_build_ss_infantry.dds"	
+	}
+	
+	### 1. SS-Division
+	SpriteType = {
+	name = "GFX_goal_div_lssah"
+	texturefile = "gfx/interface/goals/goal_div_lssah.dds"		
+	}
+	
+	### 2. SS-Division
+	SpriteType = {
+	name = "GFX_goal_div_reich"
+	texturefile = "gfx/interface/goals/goal_div_reich.dds"			
+	}
+	
+	### 3. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_totenkopf"
+	texturefile = "gfx/interface/goals/goal_div_totenkopf.dds"			
+	}
+	
+	### 4. SS-Division
+	SpriteType = {
+	name = "GFX_goal_div_polizei"
+	texturefile = "gfx/interface/goals/goal_div_polizei.dds"			
+	}
+	
+	### 5. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_wiking"
+	texturefile = "gfx/interface/goals/goal_div_wiking.dds"			
+	}
+	
+	### 6. SS-Division
+	SpriteType = {
+	name = "GFX_goal_div_nord"
+	texturefile = "gfx/interface/goals/goal_div_nord.dds"			
+	}
+	
+	### 7. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_prinz_eugen"
+	texturefile = "gfx/interface/goals/goal_div_prinz_eugen.dds"			
+	}
+	
+	### 8. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_florian_geyer"
+	texturefile = "gfx/interface/goals/goal_div_florian_geyer.dds"			
+	}
+	
+	### 9. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_hohenstaufen"
+	texturefile = "gfx/interface/goals/goal_div_hohenstaufen.dds"			
+	}
+	
+	### 10. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_frundsberg"
+	texturefile = "gfx/interface/goals/goal_div_frundsberg.dds"			
+	}
+	
+	### 11. SS-Division		
+	SpriteType = {
+	name = "GFX_goal_div_nordland"
+	texturefile = "gfx/interface/goals/goal_div_nordland.dds"			
+	}
+	
+	### 12. SS-Division		
+	SpriteType = {
+	name = "GFX_goal_div_hitlerjugend"
+	texturefile = "gfx/interface/goals/goal_div_hitlerjugend.dds"			
+	}
+	
+	### 13. SS-Division		
+	SpriteType = {
+	name = "GFX_goal_div_handschar"
+	texturefile = "gfx/interface/goals/goal_div_handschar.dds"			
+	}
+	
+	### 14. SS-Division		
+	SpriteType = {
+	name = "GFX_goal_div_galizien"
+	texturefile = "gfx/interface/goals/goal_div_galizien.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_lettische_legion"
+	texturefile = "gfx/interface/goals/goal_generic_axis_build_ss_infantry.dds"	
+	}
+	
+	### 15. SS-Division			
+	SpriteType = {
+	name = "GFX_goal_div_lettische_nr_eins"
+	texturefile = "gfx/interface/goals/goal_div_lettische_nr_eins.dds"			
+	}
+	
+	### 16. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_rfss"
+	texturefile = "gfx/interface/goals/goal_div_rfss.dds"			
+	}
+	
+	### 17. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_berlichingen"
+	texturefile = "gfx/interface/goals/goal_div_berlichingen.dds"			
+	}
+	
+	### 18. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_horst_wessel"
+	texturefile = "gfx/interface/goals/goal_div_horst_wessel.dds"			
+	}
+	
+	### 19. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_lettische_nr_zwei"
+	texturefile = "gfx/interface/goals/goal_div_lettische_nr_zwei.dds"			
+	}
+	
+	### 20. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_estnische"
+	texturefile = "gfx/interface/goals/goal_div_estnische.dds"			
+	}
+	
+	### 21. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_skanderbeg"
+	texturefile = "gfx/interface/goals/goal_div_skanderbeg.dds"			
+	}
+	
+	### 22. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_maria_theresa"
+	texturefile = "gfx/interface/goals/goal_div_maria_theresa.dds"			
+	}
+	
+	### 23. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_nederland"
+	texturefile = "gfx/interface/goals/goal_div_nederland.dds"			
+	}
+	
+	### 24. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_karstjager"
+	texturefile = "gfx/interface/goals/goal_div_karstjager.dds"			
+	}
+	
+	### 25. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_hunyadi"
+	texturefile = "gfx/interface/goals/goal_div_hunyadi.dds"			
+	}
+	
+	### 26. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_hungaria"
+	texturefile = "gfx/interface/goals/goal_div_hungaria.dds"			
+	}
+					
+	### 27. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_langemarck"
+	texturefile = "gfx/interface/goals/goal_div_langemarck.dds"			
+	}
+	
+	### 28. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_wallonien"
+	texturefile = "gfx/interface/goals/goal_div_wallonien.dds"			
+	}
+	
+	### 29. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_italienische"
+	texturefile = "gfx/interface/goals/goal_div_italienische.dds"			
+	}
+	
+	### 30. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_russische"
+	texturefile = "gfx/interface/goals/goal_div_russische.dds"			
+	}
+	
+	### 31. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_kukuruz"
+	texturefile = "gfx/interface/goals/goal_div_kukuruz.dds"			
+	}
+	
+	### 32. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_januar"
+	texturefile = "gfx/interface/goals/goal_div_januar.dds"			
+	}
+	
+	### 33. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_charlemagne"
+	texturefile = "gfx/interface/goals/goal_div_charlemagne.dds"			
+	}
+	
+	### 34. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_landstorm"
+	texturefile = "gfx/interface/goals/goal_div_landstorm.dds"			
+	}
+	
+	### 35. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_polizei_wirth"
+	texturefile = "gfx/interface/goals/goal_div_polizei_wirth.dds"			
+	}
+	
+	### 36. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_dirlewanger"
+	texturefile = "gfx/interface/goals/goal_div_dirlewanger.dds"			
+	}
+	
+	### 37. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_lutzow"
+	texturefile = "gfx/interface/goals/goal_div_lutzow.dds"			
+	}
+	
+	### 38. SS-Division	
+	SpriteType = {
+	name = "GFX_goal_div_nibelungen"
+	texturefile = "gfx/interface/goals/goal_div_nibelungen.dds"			
+	}
+						
+###end																		
+}

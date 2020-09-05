@@ -1,0 +1,779 @@
+ideas = {
+
+	country = {
+	portugal_past_heritage = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			picture = generic_coastal_navy
+			
+			modifier = {
+				ai_get_ally_desire_factor = -150
+			}
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+	}
+
+	portugal_austerity = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			picture = civilian_economy
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+	}
+
+	democratic_influence_mp4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				democratic_drift = 0.05
+			}
+	}
+
+	concordat_mp4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			picture = generic_deal_with_the_devil2
+			
+			modifier = {
+				stability_factor = 0.05
+				industrial_capacity_factory = 0.05
+				communism_drift = -0.01
+			}
+	}
+
+	neutral_law_mp4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			cancel = {
+				has_war = yes
+			}
+			removal_cost = -1
+
+			picture = neutrality_idea
+			
+			modifier = {
+				generate_wargoal_tension = 0.25
+				join_faction_tension = 1.00
+				ai_get_ally_desire_factor = -100
+				stability_factor = 0.05
+				production_speed_bunker_factor = 0.15
+				production_speed_coastal_bunker_factor = 0.15
+				production_speed_anti_air_building_factor = 0.15
+				production_speed_radar_station_factor = 0.15
+				enemy_justify_war_goal_time = 0.35
+			}
+	}
+
+	lendlease_acts_mp4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_foreign_capital
+
+			modifier = {
+				#industrial_capacity_factory = 0.05
+				lend_lease_tension = -1.00
+			}	
+	}
+
+	export_weapon_mp4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_foreign_capital
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+				lend_lease_tension = -1.00
+				production_speed_arms_factory_factor = 0.05
+			}	
+	}
+
+	export_weapon_upgrade_mp4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_foreign_capital
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+				lend_lease_tension = -1.00
+				production_speed_arms_factory_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				global_building_slots_factor = 0.10
+			}	
+	}
+
+	rose_color_plan = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = hol_the_foundations_of_defense
+
+			modifier = {
+				attrition = -0.05
+				max_planning = 0.1
+				justify_war_goal_time = -0.25
+			}	
+	}
+
+	saopaulo_conference = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = HUN_treaty_of_triannon
+			modifier = {
+				political_power_gain = -0.75
+			}	
+	}
+
+	saopaulo_conference_with_ENG = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = HUN_treaty_of_triannon
+			modifier = {
+				political_power_gain = -1.10
+			}	
+	}
+
+support_under_war_0 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_reserve_divisions
+
+			modifier = {
+				war_support_factor = 0.05
+				conscription = 0.0025
+			}	
+			
+}
+
+support_under_war_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_reserve_divisions
+
+			modifier = {
+				war_support_factor = 0.10
+				stability_factor = 0.05
+				planning_speed = 0.1
+				conscription = 0.005
+				surrender_limit = 0.05
+			}	
+			
+}
+
+colony_devision_mp4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_army_war_college
+
+			modifier = {
+				non_core_manpower = 0.10
+				training_time_factor = 0.05
+			}	
+}
+
+colony_empire_mo4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_coastal_defense_ships
+
+			modifier = {
+				non_core_manpower = 0.15
+				conscription = 0.01
+				war_support_factor = 0.05
+				industrial_capacity_dockyard = 0.05
+				training_time_factor = 0.05
+			}	
+}
+
+legend_of_the_voyager_mp4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_coastal_defense_ships
+
+			modifier = {
+				non_core_manpower = 0.25
+				conscription = 0.015
+				war_support_factor = 0.1
+				industrial_capacity_dockyard = 0.25
+			}	
+}
+
+small_mobilization = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_army_war_college
+
+			modifier = {
+				military_leader_cost_factor = -0.50
+				army_leader_start_level = 1
+				army_leader_start_attack_level= 1
+			}	
+}
+
+mobilization_mp4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_manpower_bonus
+
+			modifier = {
+				conscription = 0.03
+			}	
+}
+
+
+manpower_research = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_army_war_college
+
+			modifier = {
+				weekly_manpower = 300
+			}	
+}
+
+socialist_partnership = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = communism
+			}
+			removal_cost = -1
+			picture = generic_communist_army
+
+			modifier = {
+				conscription = 0.01
+				army_morale_factor = 0.1
+				research_speed_factor = 0.05
+			}	
+}
+
+home_industrial = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = man_five_year_plan_industry
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_arms_factory_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_dockyard_factor = 0.05
+				global_building_slots_factor = 0.1
+			}	
+}
+
+home_industrial_research = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = man_five_year_plan_industry
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_arms_factory_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_dockyard_factor = 0.05
+				global_building_slots_factor = 0.1
+				research_speed_factor = 0.065
+			}	
+}
+
+emergency_moblization_mp4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = man_five_year_plan_industry
+
+			modifier = {
+				training_time_factor = -0.3
+				army_core_defence_factor = 0.1
+			}	
+}
+
+pact_iberico = {
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+				is_in_faction = yes
+			}
+
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				enemy_justify_war_goal_time = 0.35
+				ai_get_ally_desire_factor = -75
+				stability_factor = 0.15
+				join_faction_tension = 0.25
+				send_volunteers_tension = 0.25
+				guarantee_tension = 0.25
+				drift_defence_factor = 0.35
+				production_speed_buildings_factor = 0.05
+			}	
+}
+
+great_fleet = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_navy_bonus
+			equipment_bonus = {
+				ship_hull_heavy = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+}
+
+home_fleet = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_navy_bonus
+			equipment_bonus = {
+				ship_hull_light = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+}
+
+fleet_upgrade_mp4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_coastal_defense_ships2
+			modifier = {
+				navy_refit_speed = 0.35
+				experience_gain_navy = 0.02
+			}
+}
+
+national_army_mp4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				conscription = 0.025
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.2
+				training_time_factor = -0.1
+			}
+}
+
+licenses_acquire_a_mp4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = civilian_economy
+			modifier = {
+				license_purchase_cost = -0.5
+			}
+}
+
+licenses_acquire_b_mp4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = civilian_economy
+			modifier = {
+				license_purchase_cost = -0.75
+				license_production_speed = 0.25
+			}
+}
+
+volunteer_for_commonwealth = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				send_volunteers_tension = -0.20
+				send_volunteer_divisions_required = -1.0
+				send_volunteer_size = 2
+				planning_speed = 0.10
+			}
+}
+
+gold_standard_mp4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_goods_red_bonus
+			modifier = {
+				stability_factor = 0.15
+				industrial_capacity_factory = 0.15
+				consumer_goods_factor = 0.05
+				political_power_factor = 0.15
+			}
+}
+
+political_war_mp4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_purge
+			modifier = {
+				stability_factor = -0.30
+				political_power_factor = -0.1
+				communism_drift = 0.02
+				fascism_drift = 0.02
+				neutrality_drift = 0.02
+			}
+}
+
+people_for_country = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_manpower_bonus
+
+			modifier = {
+				conscription_factor = 0.15
+				training_time_factor = -0.05
+			}
+}
+}
+
+
+	political_advisor = {
+
+		POR_zzz_staunch_monarchist = {
+
+			picture = generic_political_advisor_europe_1
+
+			allowed = {
+				original_tag = POR
+			}
+
+			cost = 75
+
+			ai_will_do = {
+				factor = 2
+			}
+
+			traits = { royalist_portugal_mp4 }
+			available = {
+					has_completed_focus = POR_loyalist_government
+			}
+		}
+
+		POR_pp_economist = {
+
+			picture = generic_political_advisor_europe_3
+
+			allowed = {
+				original_tag = POR
+			}
+
+			cost = 75
+
+			ai_will_do = {
+				factor = 3
+			}
+
+			traits = { economist_portugal_mp4 }
+			available = {
+					has_completed_focus = POR_loyalist_government
+			}
+		}
+
+		POR_syncretic_revanchist = {
+
+			picture = generic_political_advisor_europe_2
+
+			allowed = {
+				original_tag = POR
+			}
+
+			cost = 75
+			
+			available = {
+				has_completed_focus = POR_nationalist_dip
+			}
+
+			ai_will_do = {
+				factor = 2
+			}
+			
+			traits = { syncretic_revanchist }
+		}
+
+		POR_democratic_portugal_mp4 = {
+
+			picture = generic_political_advisor_europe_2
+
+			allowed = {
+				original_tag = POR
+			}
+			ai_will_do = {
+				factor = 2
+			}
+			cost = 150
+
+			traits = { democratic_portugal_mp4 }
+			available = {
+					OR = {
+						has_government = democratic
+					}
+			}
+		}
+
+		POR_war_industrialist = {
+
+			picture = generic_political_advisor_europe_1
+
+			allowed = {
+				original_tag = POR
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			cost = 150
+
+			traits = { war_industrialist }
+			available = {
+					OR = {
+						has_government = communism
+						has_government = democratic
+					}
+			}
+		}
+
+		POR_economic_organizer = {
+			
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = POR
+			}
+
+			cost = 100
+			
+			traits = { economic_organizer }
+
+			ai_will_do = {
+				factor = 5
+			}
+			available = {
+					has_government = communism
+			}
+		}
+
+	}
+
+	high_command = {
+		POR_command_navy_naval_air_defense = {
+			
+			allowed = {
+				original_tag = POR
+			}
+			picture = generic_political_advisor_europe_3
+			cost = 150
+
+			traits = { navy_naval_air_defense_2 }
+			
+			ai_will_do = {
+				factor = 1.5
+			}
+
+			available = {
+					has_completed_focus = POR_nationalist_dip
+			}
+
+		}
+	}
+
+	naval_manufacturer = {
+		
+		designer = yes
+		
+		arsenal_alfeite_mp = {
+			
+			picture = generic_naval_manufacturer_1
+
+			
+			allowed = {
+				original_tag = POR
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			equipment_bonus = {
+				# need to find information on ships made
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+
+			available = {
+					has_completed_focus = POR_navy_ready
+			}
+			ai_will_do = {
+				factor = 1.5
+			}
+		}
+	}
+
+}

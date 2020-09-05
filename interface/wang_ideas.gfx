@@ -1,0 +1,300 @@
+spriteTypes = {	
+	
+	###新的内阁
+	
+	
+	spriteType = {
+		name = "GFX_idea_qianxuesen"
+		texturefile = "gfx/interface/ideas/idea_qianxuesen.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_xizhongxun"
+		texturefile = "gfx/interface/ideas/idea_xizhongxun.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_likenong"
+		texturefile = "gfx/interface/ideas/idea_likenong.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_sulianzhuanjia"
+		texturefile = "gfx/interface/ideas/idea_sulianzhuanjia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CSGC"
+		texturefile = "gfx/interface/ideas/idea_CSGC.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_kelubo"
+		texturefile = "gfx/interface/ideas/idea_kelubo.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_neimengjixie"
+		texturefile = "gfx/interface/ideas/idea_neimengjixie.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KMDB"
+		texturefile = "gfx/interface/ideas/idea_KMDB.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_zhude"
+		texturefile = "gfx/interface/ideas/idea_zhude.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_maozedong"
+		texturefile = "gfx/interface/ideas/idea_maozedong.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_taozhu"
+		texturefile = "gfx/interface/ideas/idea_taozhu.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_chenyun"
+		texturefile = "gfx/interface/ideas/idea_chenyun.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_luoruiqing"
+		texturefile = "gfx/interface/ideas/idea_luoruiqing.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_renbishi"
+		texturefile = "gfx/interface/ideas/idea_renbishi.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pengzhen"
+		texturefile = "gfx/interface/ideas/idea_pengzhen.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_lifuchun"
+		texturefile = "gfx/interface/ideas/idea_lifuchun.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_lixiannian"
+		texturefile = "gfx/interface/ideas/idea_lixiannian.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_liushaoqi"
+		texturefile = "gfx/interface/ideas/idea_liushaoqi.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_dengxiaoping"
+		texturefile = "gfx/interface/ideas/idea_dengxiaoping.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_zhouenlai"
+		texturefile = "gfx/interface/ideas/idea_zhouenlai.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_suyu"
+		texturefile = "gfx/interface/ideas/idea_suyu.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_lide"
+		texturefile = "gfx/interface/ideas/idea_lide.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_xuhaidong"
+		texturefile = "gfx/interface/ideas/idea_xuhaidong.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_fangziyi"
+		texturefile = "gfx/interface/ideas/idea_fangziyi.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_liuyalou"
+		texturefile = "gfx/interface/ideas/idea_liuyalou.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_liuhuaqing"
+		texturefile = "gfx/interface/ideas/idea_liuhuaqing.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_xiaojinguang"
+		texturefile = "gfx/interface/ideas/idea_xiaojinguang.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_nierongzhen"
+		texturefile = "gfx/interface/ideas/idea_nierongzhen.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_chenyi"
+		texturefile = "gfx/interface/ideas/idea_chenyi.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_xiaohua"
+		texturefile = "gfx/interface/ideas/idea_xiaohua.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_linbiao"
+		texturefile = "gfx/interface/ideas/idea_linbiao.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_maning"
+		texturefile = "gfx/interface/ideas/idea_maning.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_yeting"
+		texturefile = "gfx/interface/ideas/idea_yeting.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_zuoquan"
+		texturefile = "gfx/interface/ideas/idea_zuoquan.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_yejianying"
+		texturefile = "gfx/interface/ideas/idea_yejianying.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_yefei"
+		texturefile = "gfx/interface/ideas/idea_yefei.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_helong"
+		texturefile = "gfx/interface/ideas/idea_helong.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_dengzhaoxiang"
+		texturefile = "gfx/interface/ideas/idea_dengzhaoxiang.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_wufaxian"
+		texturefile = "gfx/interface/ideas/idea_wufaxian.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pengdehuai"
+		texturefile = "gfx/interface/ideas/idea_pengdehuai.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_baiqiuen"
+		texturefile = "gfx/interface/ideas/idea_baiqiuen.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_mahaide"
+		texturefile = "gfx/interface/ideas/idea_mahaide.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_liuguifu"
+		texturefile = "gfx/interface/ideas/idea_liuguifu.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_GER_aiying_sitan" #爱因斯坦
+		texturefile = "gfx/interface/ideas/GER_aiying_sitan.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_feierduio_boke" #博克
+		texturefile = "gfx/interface/ideas/GER_feierduio_boke.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_baolusi" #保卢斯
+		texturefile = "gfx/interface/ideas/GER_baolusi.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_keluge" #克鲁格
+		texturefile = "gfx/interface/ideas/GER_keluge.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_modeer" #莫德尔
+		texturefile = "gfx/interface/ideas/GER_modeer.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_lixitehuofen" #赫尔曼.摩根泰勒
+		texturefile = "gfx/interface/ideas/GER_lixitehuofen.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_situdengte" #约瑟夫·卡姆胡伯
+		texturefile = "gfx/interface/ideas/GER_situdengte.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_hansiyeshunneike" #汉斯.耶顺内克
+		texturefile = "gfx/interface/ideas/GER_hansiyeshunneike.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_GER_kelaibosi" #克莱勃斯
+		texturefile = "gfx/interface/ideas/GER_kelaibosi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_GER_lebu" #勒布
+		texturefile = "gfx/interface/ideas/GER_lebu.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_GER_lweideling" #魏德林
+		texturefile = "gfx/interface/ideas/GER_lweideling.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_GER_weikesi" #魏克斯
+		texturefile = "gfx/interface/ideas/GER_weikesi.dds"
+	}
+	spriteType = {
+		name = "GFX_dongbeijun_jiaogong" 
+		texturefile = "gfx\event_pictures\dongbeijun_jiaogong.dds"
+	}
+	spriteType = {
+		name = "GFX_dongbeijun_yuzhonggongmitan" 
+		texturefile = "gfx\event_pictures\dongbeijun_yuzhonggongmitan.dds"
+	}
+	spriteType = {
+		name = "GFX_dongbeijun_jiaogong2" 
+		texturefile = "gfx\event_pictures\dongbeijun_jiaogong2.dds"
+	}
+	spriteType = {
+		name = "GFX_buzaishikunshoule_icon" 
+		texturefile = "gfx\event_pictures\buzaishikunshoule_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_kangsheng" 	#康生
+		texturefile = "gfx\interface\ideas\idea_kangsheng.dds"
+	}
+	spriteType = {
+		name = "GFX_taizu_var_kongbai2" 
+		texturefile = "gfx\interface\taizu\taizu_var_kongbai2.dds"
+	}
+	spriteType = {
+		name = "GFX_jiandie_upgrade_icon" 
+		texturefile = "gfx\interface\taizu\jiandie_upgrade_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_PRC_jimou_quhutunlang_icon"
+		texturefile = "gfx\interface\goals\PRC_jimou_quhutunlang_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_PRC_zhongongzhongyangshehuibu_icon"
+		texturefile = "gfx\interface\goals\PRC_zhongongzhongyangshehuibu_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_PRC_zhonggongzhongyangdiaochabu_icon"
+		texturefile = "gfx\interface\goals\PRC_zhonggongzhongyangdiaochabu_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_PRC_heyanghuchengjiangjunjiechu_icon"
+		texturefile = "gfx\interface\goals\PRC_heyanghuchengjiangjunjiechu_icon.dds"
+	}
+	
+	
+	###特工###
+	spriteType = {
+		name = "GFX_yuzecheng" #余则成
+		texturefile = "gfx\interface\operatives\agencies\spy_yuzecheng.dds"
+	}
+	spriteType = {
+		name = "GFX_prc_agency_economy_department"  #铭牌1
+		texturefile = "gfx\interface\operatives\prc_agency_economy_department.dds"
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_logo_prc_shehuibu"  #社会部
+		texturefile = "gfx\interface\operatives\agencies\intelligence_agency_logo_prc_shehuibu.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_focus_wang_prc_chenglizhonggongzhongyangshehuibu"  #社会部（国策）
+		texturefile = "gfx\interface\goals\focus_wang_prc_chenglizhonggongzhongyangshehuibu.dds"
+	}
+	spriteType = {
+		name = "GFX_PRC_jimou_erhujingshi"
+		texturefile = "gfx\interface\goals\PRC_jimou_erhujingshi.dds"
+	}
+	
+}

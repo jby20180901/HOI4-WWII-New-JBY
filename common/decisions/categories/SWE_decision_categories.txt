@@ -1,0 +1,17 @@
+nordic_coups = {
+	
+	icon = generic_communism
+	visible = {
+		original_tag = SWE
+		has_completed_focus = SWE_align_the_nords
+	}
+}
+
+nordic_integration = {
+	icon = generic_communism
+	visible = {
+		original_tag = SWE
+		has_completed_focus = SWE_USNR
+	}
+}
+}

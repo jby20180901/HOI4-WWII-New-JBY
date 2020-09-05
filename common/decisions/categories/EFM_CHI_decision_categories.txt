@@ -1,0 +1,22 @@
+CHI_Military_affairs_commission_resolution = {
+	icon = generic_independence
+	allowed = {
+		is_literally_china = yes
+	}
+	visible = {
+		always = yes
+		owns_state = 598
+	}
+}
+
+CHI_Diplomatic_relations_with_germany = {
+	icon = generic_political_actions
+	allowed = {
+		is_literally_china = yes
+	}
+	visible = {
+		has_completed_focus = CHI_jiaqiangzhongdeguanxi
+	}
+}
+
+

@@ -1,0 +1,845 @@
+﻿
+division_template = {
+	name = "乙种师团" 			# (Square) Infantry Division - 4 infantry regiments (3k men each), 1 field artillery regiment - abstracted into infantry,
+	division_names_group = JAP_INF_01
+									# 1 engineering regiment, 1 recon regiment
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		artillery_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+		light_armor = { x = 4 y = 0 }
+		light_armor = { x = 4 y = 1 }
+
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "甲种师团" 
+	division_names_group = JAP_INF_01
+	
+	regiments = {
+		kanto_army = { x = 0 y = 0 }
+		kanto_army = { x = 0 y = 1 }
+		kanto_army = { x = 0 y = 2 }
+		kanto_army = { x = 0 y = 3 }
+		kanto_army = { x = 0 y = 4 }
+		kanto_army = { x = 1 y = 0 }
+		kanto_army = { x = 1 y = 1 }
+		kanto_army = { x = 1 y = 2 }
+		kanto_army = { x = 1 y = 3 }
+		kanto_army = { x = 1 y = 4 }
+		artillery_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+		
+		light_armor = { x= 3 y = 0 }
+		light_armor = { x= 3 y = 1 }
+		light_armor = { x= 3 y = 2 }
+		
+		kanto_army = { x = 4 y = 0 }
+		kanto_army = { x = 4 y = 1 }
+		kanto_army = { x = 4 y = 2 }
+		kanto_army = { x = 4 y = 3 }
+		kanto_army = { x = 4 y = 4 }
+		
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		logistics_company = { x = 0 y = 1 }
+		signal_company = { x = 0 y = 2 }
+		maintenance_company = { x = 0 y = 3 }
+	}
+	priority = 5
+}
+
+
+division_template = {
+	name = "独立混成旅团" 	# Independent Mixed Brigade: 5 infantry battalions (4k men total), 1 field artillery basttalion - abstracted into infantry,
+	division_names_group = JAP_IMB_01
+										# 1 engineering battalion
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		light_armor = { x= 2 y = 0 }
+		light_armor = { x= 2 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "骑兵师团" 			# Cavalry Division - 2 Cavalry Division regiments (3k men); 1 mounted artillery regiment
+	division_names_group = JAP_CAV_01
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "汽车师团" 			# Motorized divisions - 4 motorized infantry regiments (3k men each), 1 recon regiment, 
+	division_names_group = JAP_MOT_01
+										#1 engineer regiment, 1 mounted artillery regiment
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+		motorized = { x = 3 y = 0 }
+		motorized = { x = 3 y = 1 }
+		motorized = { x = 3 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		recon = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "陆战队"				#This template covers SNLF divisions; historically there were roughly 5 total, with 1 being paratroopers
+	division_names_group = JAP_MAR_01
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}	
+	priority = 2
+}
+division_template = {
+	name = "守备师团" 			# Garrison template - represents Imperial Manchukuo Army infantry divisions: 2 infantry regiments (3k men) -- militia (lowest equipment, experience)
+	division_names_group = JAP_GAR_01
+										# Also represents (over-sized) IJN Base Defense Unit (island, city and naval base garrisons): 2 infantry rgts (3k men), 1 field artillery rgt (abstracted), 1 engineering rgt
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+
+
+##### OOB #####
+units = {
+
+	#Kita Homengun - North Japan Army
+	division = { # "日本陆军第7熊步兵师团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 12421 #Asahigawa
+		division_template = "甲种师团"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "日本陆军大凑港守备师团"
+		location = 9859 #Ominato Naval Base
+		division_template = "守备师团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+		
+	}
+	division = {
+		name = "日本陆军千岛基地守备队"
+		location = 1399 #Shumshu
+		division_template = "守备师团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3	
+	}
+	division = { # "Karafuto Dokuritsu Konsei Ryodan"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 201
+		}
+		location = 12446 #Toyohara
+		division_template = "独立混成旅团"
+		start_experience_factor = 0.3
+	}
+
+	#Chuo Homengun - East Japan Army
+	division = { # "日本陆军第2玉步兵师团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 7087 #Shizuoka
+		division_template = "甲种师团"
+		start_experience_factor = 0.3
+	}
+	division = { # "近卫汽车师团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 601
+		}
+		location = 1182 #Tokyo
+		division_template = "甲种师团"			# Elite Guard unit (highest experience, best equipment)
+		start_experience_factor = 0.4
+	}
+	division = {
+		name = "日本陆军大坂守备师团"
+		location = 7072 #Osaka
+		division_template = "甲种师团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3	
+	}
+	division = {
+		name = "日本陆军横须贺特战军团"
+		location = 9998 #Yokosuka
+		division_template = "陆战队"
+		start_experience_factor = 0.3
+	}
+
+	#Roppou Homengun - West Japan Army
+	division = { # "日本陆军第4典步兵师团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 9950 #Nagasaki
+		division_template = "甲种师团"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "日本陆军吴港守备师团"
+		location = 1092 #Hiroshima
+		division_template = "守备师团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+		
+	}
+	division = {
+		name = "日本陆军佐世保守备师团"
+		location = 9950 #Sasebo/Nagasaki
+		division_template = "守备师团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3		
+	}
+
+
+	#Taiwan Homengun - Taiwan Army
+	division = {
+		name = "台日本陆军湾守备师团"
+		location = 7186 #Taipei
+		division_template = "守备师团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3		
+	}
+
+	#3 Homengun - 3rd Field Army
+	division = { # "日本陆军第3这步兵师团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 7186 #Taipei
+		division_template = "甲种师团"
+		start_experience_factor = 0.3
+	}
+	division = { # "日本陆军第6梅步兵师团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 7186 #Taipei
+		division_template = "甲种师团"
+		start_experience_factor = 0.3
+	}
+	division = { # "日本陆军第11分色步兵师团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 11
+		}
+		location = 7186 #Taipei
+		division_template = "甲种师团"
+		start_experience_factor = 0.3
+	}
+
+
+	#Chosen Gun - Korea Army
+	division = { # "日本陆军第19虎步兵师团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 19
+		}
+		location = 4052 #Pyongyang
+		division_template = "甲种师团"
+		start_experience_factor = 0.3
+	}
+	division = { # "日本陆军第20麻步兵师团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 20
+		}
+		location = 7125 #Seoul
+		division_template = "甲种师团"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "日本陆军镇海警备团"
+		location = 4056 #Pusan
+		division_template = "守备师团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3		
+	}
+
+
+	### Island IJN Garrisons ###
+
+	division = {
+		name = "日本陆军冲绳警备团"
+		location = 11932 #Naha
+		division_template = "守备师团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3	
+	}
+
+
+	#1 Konkyochi Ichigun
+	division = {
+		name = "日本陆军塞班岛守备师团"
+		location = 3995 #Saipan
+		division_template = "守备师团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3		
+	}
+	division = {
+		name = "日本陆军硫磺岛守备师团"
+		location = 13025 #Iwo Jima
+		division_template = "守备师团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3		
+	}
+	division = {
+		name = "日本陆军南鸟岛守备师团"
+		location = 13026 #Marcus Island
+		division_template = "守备师团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3	
+	}
+
+	#2 Konkyochi Ichigun
+	division = {
+		name = "日本陆军亚普守备师团"
+		location = 13028 #Yap
+		division_template = "守备师团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3		
+	}
+	division = {
+		name = "日本陆军帕劳守备师团"
+		location = 4357 #Palau
+		division_template = "守备师团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3		
+	}
+	division = {
+		name = "日本陆军特鲁克守备师团"
+		location = 2489 #Truk
+		division_template = "守备师团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3		
+	}
+	division = {
+		name = "日本陆军萨塔万守备师团"
+		location = 13035 #Satawan
+
+		division_template = "守备师团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+		
+	}
+	division = {
+		name = "日本陆军乌利西环礁守备师团"
+		location = 13029 #Ulithi
+		division_template = "守备师团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3		
+	}
+
+	#3 Konkyochi Ichigun
+	division = {
+		name = "日本陆军夸贾林环礁守备师团"
+		location = 13041 #Kwajalein
+		division_template = "守备师团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3		
+	}
+	division = {
+		name = "日本陆军埃内韦塔克环礁守备师团"
+		location = 13046 #Eniwetok
+		division_template = "守备师团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3		
+	}
+	division = {
+		name = "日本陆军澎贝岛守备师团"
+		location = 13036 #Ponape
+		division_template = "守备师团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3		
+	}
+	division = {
+		name = "日本陆军迈利环礁守备师团"
+		location = 13040 #Mili
+		division_template = "守备师团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3		
+	}
+	division = {
+		name = "日本陆军马洛埃拉普环礁守备师团"
+		location = 13043 #Maleolap
+		division_template = "守备师团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+		
+	}
+
+
+	##### Kwantung Army #####
+	#Garrisons
+
+	division = {
+		name = "日本陆军满铁守备师团" # Manchuria Railway Guard
+		location = 11771 #Mukden
+		division_template = "守备师团"		# Japanese garrison (better than militia, but still with older equipment)
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7	
+	}
+	division = {
+		name = "日本陆军关东军常备师团"
+		location = 4572 #Hsinking
+		division_template = "甲种师团"		# Japanese garrison (better than militia, but still with older equipment)
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7		
+	}
+	division = {
+		name = "日本陆军旅顺守备师团"
+		location = 1150 #Dalian
+		division_template = "守备师团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3		
+	}
+	division = { # "日本陆军第9竹步兵师团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 6944 #Near Changkufeng Lake
+		division_template = "甲种师团"
+		start_experience_factor = 0.3
+	}
+	division = { # "日本陆军第14甘蔗步兵师团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 14
+		}
+		location = 3843 #Eastern Manchuria
+		division_template = "甲种师团"
+		start_experience_factor = 0.3
+	}
+	#Hoppou Manchuko Homengun - Northern Manchukuo Army
+	division = {
+		name = "日本陆军第1独立守备师团"
+		location = 7743
+		division_template = "甲种师团"		# Japanese garrison (better than militia, but still with older equipment)
+		start_equipment_factor = 0.7		
+	}
+	division = {
+		name = "日本陆军第2独立守备师团"
+		location = 10541
+		division_template = "甲种师团"		# Japanese garrison (better than militia, but still with older equipment)
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7		
+	}
+	division = { # "日本陆军第1球步兵师团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10612
+		division_template = "甲种师团"
+		start_experience_factor = 0.3
+	}
+	division = { # "日本陆军第1骑兵师团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7697
+		division_template = "骑兵师团"
+		start_experience_factor = 0.2
+	}
+
+	# 5 Homengun - 5th Field Army
+	division = {
+		name = "日本陆军第3独立守备师团"
+		location = 10521
+		division_template = "守备师团"		# Japanese garrison (better than militia, but still with older equipment)
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+		
+	}
+	division = {
+		name = "日本陆军第4独立守备师团"
+		location = 10368
+		division_template = "守备师团"		# Japanese garrison (better than militia, but still with older equipment)
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+		
+	}
+	division = {
+		name = "日本陆军第5独立守备师团"
+		location = 10698
+		division_template = "守备师团"		# Japanese garrison (better than militia, but still with older equipment)
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+		
+	}
+	division = {
+		name = "日本陆军第6独立守备师团"
+		location = 12500
+		division_template = "守备师团"		# Japanese garrison (better than militia, but still with older equipment)
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+		
+	}
+	division = { # "日本陆军第8太多步兵师团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 1693
+		division_template = "甲种师团"
+		start_experience_factor = 0.3
+	}
+	division = { # "日本陆军第12肯步兵师团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 7569
+		division_template = "甲种师团"
+		start_experience_factor = 0.3
+	}
+	
+	### Chumo Gun -- Inner Mongolian Army ###
+	division = { # "蒙古第一骑兵师团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 101
+		}
+		location = 12469
+		division_template = "骑兵师团"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_experience_factor = 0.2
+	}
+	division = { # "蒙古第二骑兵师团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 102
+		}
+		location = 12469
+		division_template = "骑兵师团"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_experience_factor = 0.2
+	}
+	division = { # "蒙古第三骑兵师团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 7812
+		division_template = "骑兵师团"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_experience_factor = 0.2
+	}
+	division = { # "蒙古第四骑兵师团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 104
+		}
+		location = 7812
+		division_template = "骑兵师团"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_experience_factor = 0.2
+	}
+	division = { # "蒙古第五骑兵师团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 105
+		}
+		location = 10429
+		division_template = "骑兵师团"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_experience_factor = 0.2
+	}
+	division = { # "蒙古第6骑兵师团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 106
+		}
+		location = 10429
+		division_template = "骑兵师团"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_experience_factor = 0.2
+	}
+	division = { # "蒙古第7骑兵师团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 107
+		}
+		location = 3978
+		division_template = "骑兵师团"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_experience_factor = 0.2
+	}
+	division = { # "蒙古第8骑兵师团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 108
+		}
+		location = 3978
+		division_template = "骑兵师团"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_experience_factor = 0.2
+	}
+
+
+	### Kita-Shina Ichigun - North China Army ###
+	#Independents
+	division = { # "日本陆军第5暗汽车师团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 3955 #East Hebei Autonomous Council
+		division_template = "汽车师团"
+		start_experience_factor = 0.3
+	}
+	division = { # "日本陆军和谐独立混成旅团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3900 #East Hebei Autonomous Council
+		division_template = "独立混成旅团"
+		start_experience_factor = 0.3
+	}
+	division = { # "日本陆军小学生独立混成旅团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 11
+		}
+		location = 11822 #East Hebei Autonomous Council
+		division_template = "独立混成旅团"
+		start_experience_factor = 0.3
+	}
+
+	#2 Homengun - 2nd Field Army
+
+	division = { # "日本陆军第10铁步兵师团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 10
+		}
+		location = 881
+		division_template = "甲种师团"
+		start_experience_factor = 0.3
+	}
+	division = { # "日本陆军第16牡蛎步兵师团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 16
+		}
+		location = 9768
+		division_template = "甲种师团"
+		start_experience_factor = 0.3
+	}
+
+}
+
+#AIRCRAFT
+air_wings = {
+	### IJA Air Forces ###
+	# 1 Hikodan -- Tokyo
+	282 = { 
+		# 1 Hiko Rentai -- Kawasaki Ki-10
+		fighter_equipment_0 = {
+			owner = "JAP" 
+			amount = 72
+		}
+		# 16 Hiko Rentai -- Kawasaki Ki-10
+		fighter_equipment_0 = {
+			owner = "JAP" 
+			amount = 72
+		}
+		# 6 Hiko Rentai -- Mitsubishi Ki-2
+		CAS_equipment_1 =  {
+			owner = "JAP" 
+			amount = 54
+		}
+		# 9 Hiko Rentai -- Mitsubishi Ki-1
+		tac_bomber_equipment_0 =  {
+			owner = "JAP" 
+			amount = 54
+		}
+	}
+
+	# 2 Hikodan -- Dalian
+	716 = {
+		# 3 Hiko Rentai -- Kawasaki Ki-10
+		fighter_equipment_0 = {
+			owner = "JAP" 
+			amount = 72
+		}
+		# 5 Hiko Rentai -- Kawasaki Ki-3
+		CAS_equipment_1 =  {
+			owner = "JAP" 
+			amount = 54
+		}
+	}
+
+	# 3 Hikodan -- Taiwan
+	524 = {
+		# 10 Hiko Rentai -- Kawasaki Ki-3
+		CAS_equipment_1 =  {
+			owner = "JAP" 
+			amount = 54
+		}
+
+	}
+
+	### IJN Air Forces ###
+	# 1 Rengo Kokutai -- Taiwan
+	524 = {
+		# Kizarazu Kokutai -- Aichi D1A2
+		cv_CAS_equipment_1 = {
+			owner = "JAP" 
+			amount = 60
+		}
+		# Kanoya Kokutai -- Aichi D1A2
+		cv_CAS_equipment_1 = {
+			owner = "JAP" 
+			amount = 60
+		}
+	}
+
+	# 2 Rengo Kokutai -- Taiwan
+	524 = {
+		# 12 Kokutai -- Nakajima A4N1
+		cv_fighter_equipment_0 = {
+			owner = "JAP" 
+			amount = 72
+		}
+		# 13 Kokutai -- Mitsubishi B2M2
+		cv_nav_bomber_equipment_1 = {
+			owner = "JAP" 
+			amount = 48
+		}
+	}
+
+	### Akagi CAG -- Hiroshima (while Akagi is refit)
+	529 = { 
+		cv_fighter_equipment_0 =  {
+			owner = "JAP" 
+			amount = 12
+		}
+		cv_CAS_equipment_1 = {
+			owner = "JAP" 
+			amount = 9
+		}
+		cv_nav_bomber_equipment_1 =  {
+			owner = "JAP" 
+			amount = 9
+		}
+
+	}
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = 
+{
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "JAP"
+		}
+		requested_factories = 3
+		progress = 0.1
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "JAP" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "JAP" 
+		}
+		requested_factories = 1
+		progress = 0.4
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_0
+			creator = "JAP" 
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = cv_nav_bomber_equipment_1
+			creator = "JAP" 
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
+	}
+}

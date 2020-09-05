@@ -1,0 +1,210 @@
+﻿division_template = {
+	name = "上海派遣军"
+	division_names_group = JAP_INF_01
+	regiments = {
+		kanto_army = { x = 0 y = 0 }
+		kanto_army = { x = 0 y = 1 }
+		kanto_army = { x = 0 y = 2 }
+		kanto_army = { x = 0 y = 3 }
+		kanto_army = { x = 0 y = 4 }
+		kanto_army = { x = 1 y = 0 }
+		kanto_army = { x = 1 y = 1 }
+		kanto_army = { x = 1 y = 2 }
+		kanto_army = { x = 1 y = 3 }
+		kanto_army = { x = 1 y = 4 }
+		artillery_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+		
+		light_armor = { x= 3 y = 0 }
+		light_armor = { x= 3 y = 1 }
+		light_armor = { x= 3 y = 2 }
+		
+		kanto_army = { x = 4 y = 0 }
+		kanto_army = { x = 4 y = 1 }
+		kanto_army = { x = 4 y = 2 }
+		kanto_army = { x = 4 y = 3 }
+		kanto_army = { x = 4 y = 4 }
+		
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		logistics_company = { x = 0 y = 1 }
+		signal_company = { x = 0 y = 2 }
+		maintenance_company = { x = 0 y = 3 }
+	}
+	priority = 5
+}
+
+
+
+
+##### OOB #####
+	
+units = {
+
+###丙###
+
+	division = {
+		name = "日本上海派遣军第30师团"
+		location = 7014
+		division_template = "上海派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.8	
+	}
+	
+	division = {
+		name = "日本上海派遣军第31师团"
+		location = 7014
+		division_template = "上海派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.8	
+	}
+	
+	division = {
+		name = "日本上海派遣军第32师团"
+		location = 7014
+		division_template = "上海派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.8	
+	}
+	
+	division = {
+		name = "日本上海派遣军第33师团"
+		location = 7014
+		division_template = "上海派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.8
+	}
+	
+	division = {
+		name = "日本上海派遣军第34师团"
+		location = 7014
+		division_template = "上海派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.8
+	}
+	
+	division = {
+		name = "日本上海派遣军第35师团"
+		location = 7014
+		division_template = "上海派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.8
+	}
+	
+	division = {
+		name = "日本上海派遣军第36师团"
+		location = 12076
+		division_template = "上海派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.8
+	}
+	
+	division = {
+		name = "日本上海派遣军第37师团"
+		location = 12076
+		division_template = "上海派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.8
+	}
+	
+	division = {
+		name = "日本上海派遣军第38师团"
+		location = 12076
+		division_template = "上海派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.8
+	}
+	
+	division = {
+		name = "日本上海派遣军第39师团"
+		location = 12076
+		division_template = "上海派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.8
+	}
+	
+	
+	###陆战队###
+
+	division = {
+		name = "日本海军陆战队"
+		location = 12076
+		division_template = "上海派遣军"
+		start_equipment_factor = 1
+		start_experience_factor = 1	
+	}
+	
+###独立守备队###
+
+	division = {
+		name = "日本上海派遣军第1独立守备队"
+		location = 7014
+		division_template = "上海派遣军"
+		start_experience_factor = 1
+	}
+	
+	division = {
+		name = "日本上海派遣军第2独立守备队"
+		location = 7014
+		division_template = "上海派遣军"
+		start_experience_factor = 1
+	}
+	
+	division = {
+		name = "日本上海派遣军第3独立守备队"
+		location = 7014
+		division_template = "上海派遣军"
+		start_experience_factor = 1
+	}
+	
+	division = {
+		name = "日本上海派遣军第4独立守备队"
+		location = 12052
+		division_template = "上海派遣军"
+		start_experience_factor = 1
+	}
+	
+	division = {
+		name = "日本上海派遣军第5独立守备队"
+		location = 12052
+		division_template = "上海派遣军"
+		start_experience_factor = 1
+	}
+	
+	division = {
+		name = "日本上海派遣军第6独立守备队"
+		location = 12052
+		division_template = "上海派遣军"
+		start_experience_factor = 1
+	}
+	
+	division = {
+		name = "日本上海派遣军第7独立守备队"
+		location = 12052
+		division_template = "上海派遣军"
+		start_experience_factor = 1
+	}
+	
+	division = {
+		name = "日本上海派遣军第8独立守备队"
+		location = 12052
+		division_template = "上海派遣军"
+		start_experience_factor = 1
+	}
+	
+	division = {
+		name = "日本上海派遣军第9独立守备队"
+		location = 12052
+		division_template = "上海派遣军"
+		start_experience_factor = 1
+	}
+	
+	division = {
+		name = "日本上海派遣军第10独立守备队"
+		location = 12052
+		division_template = "上海派遣军"
+		start_experience_factor = 1
+	}
+	
+}

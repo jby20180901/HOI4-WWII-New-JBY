@@ -1,0 +1,80 @@
+sub_units = {
+       #机枪连
+	firepower_unit = {
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		active = no
+		affects_speed = no
+
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_army
+		}
+		
+		combat_width = 0
+
+		#基本属性
+		
+		manpower = 150
+		supply_consumption = 0.03
+		default_morale = 0.3
+		max_strength = 2
+		max_organisation = 20
+		weight = 0.20
+		suppression = 2
+		training_time = 10
+		maximum_speed = 1.8
+		
+		recon = 1
+		initiative = 0.05
+		
+		# Support nerfs to combat abilities
+		defense = 0.5
+		breakthrough = 0.5
+		soft_attack = 4
+		hard_attack = 1
+		
+		can_be_parachuted = no
+		
+		essential = {
+			auto_equipment
+		}
+
+		need = {
+			auto_equipment = 15
+		}
+
+		can_be_parachuted = yes
+		
+		hills = {
+			defence = 0.25
+			movement = -0.10
+		}
+		forest = {
+			defence = -0.30
+			movement = -0.10
+		}
+		jungle = {
+			defence = -0.30
+			movement = -0.10
+		}
+		fort = {
+			attack = 1
+		}
+		urban = {
+			attack = 1
+		}
+
+	}
+	
+
+}

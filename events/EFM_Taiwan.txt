@@ -1,0 +1,490 @@
+add_namespace = EFM_Taiwan
+
+# Taiwan sotoku fu want control the south asia
+country_event = {
+	id = EFM_Taiwan.1
+	title = EFM_Taiwan.1.t
+	picture = GFX_report_event_japanese_transport_soldiers
+	is_triggered_only = yes
+	desc = EFM_Taiwan.1.d
+		option = {
+				name = EFM_Taiwan.1.a
+				ai_chance = { factor = 90 }
+				FROM = {
+					country_event = { id = EFM_Taiwan.2 days = 1 }
+					set_country_flag = TWN_Allowed_set_dai_sotoku
+				}
+			}
+		option = {
+				name = EFM_Taiwan.1.b
+				ai_chance = { factor = 10 }
+				FROM = {
+					country_event = { id = EFM_Taiwan.3 days = 1 }
+				}
+				add_political_power = -75
+			}
+	}
+
+# Agree
+country_event = {
+	id = EFM_Taiwan.2
+	title = EFM_Taiwan.2.t
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	desc = EFM_Taiwan.2.d
+		option = {
+				name = EFM_Taiwan.2.a
+				
+			}
+	}
+# Reject
+country_event = {
+	id = EFM_Taiwan.3
+	title = EFM_Taiwan.3.t
+	picture = GFX_report_event_chinese_soldiers_02
+	is_triggered_only = yes
+	desc = EFM_Taiwan.3.d
+		option = {
+				name = EFM_Taiwan.3.a
+				
+			}
+	}
+
+country_event = {
+	id = EFM_Taiwan.4
+	title = EFM_Taiwan.4.t
+	picture = GFX_report_event_asian_politicians
+	desc = EFM_Taiwan.4.d
+	
+	mean_time_to_happen = { days = 30 }
+	
+	trigger = {
+		tag = TWN
+		has_idea = TWN_Go_forward_south
+		any_state = { 
+				is_controlled_by = JAP
+				OR = {
+						region = 160
+						region = 142
+						region = 188
+						region = 159
+						region = 187
+						region = 93
+						region = 158
+						region = 167
+					}
+			}
+	}
+	
+	option = {
+		name = EFM_Taiwan.4.a
+		every_state = {
+			limit = {
+				is_controlled_by = JAP
+				OR = {
+						region = 160
+						region = 142
+						region = 188
+						region = 159
+						region = 187
+						region = 93
+						region = 158
+						region = 167
+					}
+				}
+				TWN = { transfer_state = PREV }
+			}
+		add_political_power = -25
+		JAP = { country_event = { id = EFM_Taiwan.5 days = 1 } }
+	}
+}
+# Japan response
+country_event = {
+	id = EFM_Taiwan.5
+	title = EFM_Taiwan.5.t
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	desc = EFM_Taiwan.5.d
+		option = {
+				name = EFM_Taiwan.5.a
+				
+			}
+	}
+	
+# Japan ready for battle
+country_event = {
+	id = EFM_Taiwan.6
+	title = EFM_Taiwan.6.t
+	picture = GFX_report_event_japanese_army_parade
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = JAP
+		any_other_country = {
+				OR = {
+						tag = TWN
+						original_tag = TWN
+					}
+				has_government = communism
+				is_subject = no
+				has_civil_war = no
+			}
+	}
+	
+	desc = EFM_Taiwan.6.d
+		option = {
+				name = EFM_Taiwan.6.a
+		if = {
+			every_country = {
+				limit = {
+						OR = {
+								tag = TWN
+								original_tag = TWN
+							}
+						has_government = communism
+					}
+				JAP = { declare_war_on = { target = PREV type = annex_everything } }
+			}
+		}
+	}
+}
+
+# Taiwan contact with comchina/USSR
+country_event = {
+	id = EFM_Taiwan.7
+	title = EFM_Taiwan.7.t
+	picture = GFX_report_event_soviet_finnish_pact
+	is_triggered_only = yes
+	desc = EFM_Taiwan.7.d
+		option = {
+				name = EFM_Taiwan.7.a
+				ai_chance = { factor = 90 }
+				FROM = {
+					country_event = { id = EFM_Taiwan.2 days = 1 }
+					give_guarantee = ROOT
+				}
+				give_guarantee = FROM
+			}
+		option = {
+				name = EFM_Taiwan.7.b
+				ai_chance = { factor = 10 }
+				FROM = {
+					country_event = { id = EFM_Taiwan.3 days = 1 }
+				}
+			}
+	}
+	
+# Taiwan request autonomy
+country_event = {
+	id = EFM_Taiwan.8
+	title = EFM_Taiwan.8.t
+	picture = GFX_report_event_generic_sign_treaty2
+	is_triggered_only = yes
+	desc = EFM_Taiwan.8.d
+		option = {
+				name = EFM_Taiwan.8.a
+				ai_chance = { factor = 90 }
+				FROM = {
+					country_event = { id = EFM_Taiwan.2 days = 1 }
+				}
+				custom_effect_tooltip = TWN_Strive_for_autonomy_tt
+				hidden_effect = {
+						JAP = {
+								set_autonomy = {
+										target = TWN
+										autonomy_state = autonomy_reichsprotectorate
+									}
+							}
+					}
+			}
+		option = {
+				name = EFM_Taiwan.8.b
+				ai_chance = { factor = 10 }
+				FROM = {
+					country_event = { id = EFM_Taiwan.3 days = 1 }
+					add_ideas = TWN_Japan_reject_us_have_goverment
+				}
+			}
+	}
+	
+# Taiwan
+country_event = {
+	id = EFM_Taiwan.9
+	title = EFM_Taiwan.9.t
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	desc = EFM_Taiwan.9.d
+		option = {
+				name = EFM_Taiwan.9.a
+				ai_chance = { factor = 90 }
+				FROM = {
+					country_event = { id = EFM_Taiwan.10 days = 1 }
+				}
+				add_opinion_modifier = {
+					target = FROM
+					modifier = Nations_friendly
+				}
+			}
+		option = {
+				name = EFM_Taiwan.9.b
+				ai_chance = { factor = 10 }
+				FROM = {
+					country_event = { id = EFM_Taiwan.11 days = 1 }
+				}
+				add_opinion_modifier = {
+					target = FROM
+					modifier = Nations_estrangement
+				}
+			}
+	}
+# Recognition
+country_event = {
+	id = EFM_Taiwan.10
+	title = EFM_Taiwan.10.t
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	desc = EFM_Taiwan.10.d
+		option = {
+				name = EFM_Taiwan.10.a
+				add_opinion_modifier = {
+					target = FROM
+					modifier = Nations_friendly
+				}
+			}
+	}
+# Ignored
+country_event = {
+	id = EFM_Taiwan.11
+	title = EFM_Taiwan.11.t
+	picture = GFX_report_event_chinese_soldiers_02
+	is_triggered_only = yes
+	desc = EFM_Taiwan.11.d
+		option = {
+				name = EFM_Taiwan.11.a
+				add_opinion_modifier = {
+					target = FROM
+					modifier = Nations_estrangement
+				}
+			}
+	}
+	
+# China response
+country_event = {
+	id = EFM_Taiwan.12
+	title = EFM_Taiwan.12.t
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	desc = EFM_Taiwan.12.d
+		option = {
+				name = EFM_Taiwan.12.a
+				ai_chance = { factor = 30 }
+				FROM = {
+					country_event = { id = EFM_Taiwan.10 days = 1 }
+				}
+				add_opinion_modifier = {
+					target = FROM
+					modifier = Nations_friendly
+				}
+			}
+		option = {
+				name = EFM_Taiwan.12.b
+				ai_chance = { factor = 70 }
+				FROM = {
+					country_event = { id = EFM_Taiwan.11 days = 1 }
+				}
+				add_opinion_modifier = {
+					target = FROM
+					modifier = Nations_estrangement
+				}
+			}
+	}
+	
+# Taiwan contact with japan
+country_event = {
+	id = EFM_Taiwan.13
+	title = EFM_Taiwan.13.t
+	picture = GFX_report_event_soviet_finnish_pact
+	is_triggered_only = yes
+	desc = EFM_Taiwan.13.d
+		option = {
+				name = EFM_Taiwan.13.a
+				ai_chance = { factor = 90 }
+				FROM = {
+					country_event = { id = EFM_Taiwan.2 days = 1 }
+					give_guarantee = ROOT
+				}
+				give_guarantee = FROM
+			}
+		option = {
+				name = EFM_Taiwan.13.b
+				ai_chance = { factor = 10 }
+				FROM = {
+					country_event = { id = EFM_Taiwan.3 days = 1 }
+				}
+			}
+	}
+	
+# Taiwan contact with US
+country_event = {
+	id = EFM_Taiwan.14
+	title = EFM_Taiwan.14.t
+	picture = GFX_report_event_soviet_finnish_pact
+	is_triggered_only = yes
+	desc = EFM_Taiwan.14.d
+		option = {
+				name = EFM_Taiwan.14.a
+				ai_chance = { factor = 90 }
+				FROM = {
+					country_event = { id = EFM_Taiwan.2 days = 1 }
+				}
+				give_guarantee = FROM
+			}
+		option = {
+				name = EFM_Taiwan.14.b
+				ai_chance = { factor = 10 }
+				FROM = {
+					country_event = { id = EFM_Taiwan.3 days = 1 }
+				}
+			}
+	}
+	
+# Is losing control taiwan
+country_event = {
+	id = EFM_Taiwan.15
+	title = EFM_Taiwan.15.t
+	picture = GFX_report_event_japanese_parade
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = JAP
+		any_other_country = {
+				OR = {
+						tag = TWN
+						original_tag = TWN
+					}
+				is_subject_of = JAP
+				has_idea = TWN_Japan_reject_us_have_goverment
+				compare_autonomy_progress_ratio > 0.75
+			}
+	}
+	
+	desc = EFM_Taiwan.15.d
+		option = {
+				name = EFM_Taiwan.15.a
+				hidden_effect = {
+					set_autonomy = { target = TWN autonomy_state = autonomy_colony }
+				}
+				TWN = { country_event = { id = EFM_Taiwan.16 days = 1 } }
+			}
+}
+country_event = {
+	id = EFM_Taiwan.16
+	title = EFM_Taiwan.16.t
+	picture = GFX_report_event_japanese_parade
+	is_triggered_only = yes
+	desc = EFM_Taiwan.16.d
+		option = {
+				name = EFM_Taiwan.16.a
+			}
+	}
+	
+# Taiwan contact with nanking
+country_event = {
+	id = EFM_Taiwan.17
+	title = EFM_Taiwan.17.t
+	picture = GFX_report_event_japanese_chinese_surrender
+	is_triggered_only = yes
+	desc = EFM_Taiwan.17.d
+		option = {
+				name = EFM_Taiwan.17.a
+				ai_chance = { factor = 70 }
+				FROM = {
+					country_event = { id = EFM_Taiwan.18 days = 1 }
+				}
+				set_autonomy = { target = FROM autonomy_state = autonomy_puppet }
+			}
+		option = {
+				name = EFM_Taiwan.17.b
+				ai_chance = { factor = 30 }
+				FROM = {
+					country_event = { id = EFM_Taiwan.19 days = 1 }
+				}
+				add_opinion_modifier = {
+					target = FROM
+					modifier = Nations_friendly
+				}
+			}
+	}
+country_event = {
+	id = EFM_Taiwan.18
+	title = EFM_Taiwan.18.t
+	picture = GFX_report_event_taiwan_retrocession
+	is_triggered_only = yes
+	desc = EFM_Taiwan.18.d
+		option = {
+				name = EFM_Taiwan.18.a
+			}
+	}
+country_event = {
+	id = EFM_Taiwan.19
+	title = EFM_Taiwan.19.t
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	desc = EFM_Taiwan.19.d
+		option = {
+				name = EFM_Taiwan.19.a
+				add_opinion_modifier = {
+					target = FROM
+					modifier = Nations_friendly
+				}
+			}
+	}
+	
+# Taiwan Representation with Nanjing
+country_event = {
+	id = EFM_Taiwan.20
+	title = EFM_Taiwan.20.t
+	picture = GFX_report_event_taiwan_retrocession
+	is_triggered_only = yes
+	desc = EFM_Taiwan.20.d
+		option = {
+				name = EFM_Taiwan.20.a
+				ai_chance = { factor = 80 }
+				FROM = {
+					country_event = { id = EFM_Taiwan.2 days = 1 }
+					set_country_flag = TWN_Allow_the_establishment_of_an_autonomous_government
+				}
+			}
+		option = {
+				name = EFM_Taiwan.20.b
+				ai_chance = { factor = 20 }
+				FROM = {
+					country_event = { id = EFM_Taiwan.3 days = 1 }
+				}
+			}
+	}
+	
+# Taiwan Build an autonomous government
+country_event = {
+	id = EFM_Taiwan.21
+	title = EFM_Taiwan.21.t
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	desc = EFM_Taiwan.21.d
+		option = {
+				name = EFM_Taiwan.21.a
+			}
+	}
+# Taiwan Build an provincial government
+country_event = {
+	id = EFM_Taiwan.22
+	title = EFM_Taiwan.22.t
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	desc = EFM_Taiwan.22.d
+		option = {
+				name = EFM_Taiwan.22.a
+			}
+	}

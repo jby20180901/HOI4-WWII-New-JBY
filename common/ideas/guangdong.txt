@@ -1,0 +1,624 @@
+ideas = {
+	country = {
+	
+		GUD_Golden_Age = {
+
+			picture = generic_agrarian_reform
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				political_power_gain = 0.3
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+		GUD_Golden_Era = {
+
+			picture = generic_agrarian_reform
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				political_power_gain = 0.5
+				production_speed_buildings_factor = 0.2
+				industrial_capacity_factory = 0.2
+			}
+		}
+		GUD_Army_loyalty = {
+
+			picture = chi_incompetent_officers
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				political_power_cost = 0.1
+				army_morale_factor = -0.1
+			}
+		}
+		
+		GUD_Trade_strategy = {
+
+			picture = can_wartime_prices_and_trade_board
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+		GUD_Military_modernization = {
+
+			picture = ast_volunteer_defence_corps
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			research_bonus = {
+				land_doctrine = 0.05
+			}
+		}
+		GUD_Purchasing_equipment = {
+
+			picture = generic_acquire_tanks
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = GUD
+			}
+
+			allowed_civil_war = {
+			}
+			
+			modifier = {
+				license_armor_purchase_cost = -0.2
+				license_infantry_purchase_cost = -0.2
+			}
+		}
+		GUD_Increase_efficiency = {
+
+			picture = generic_war_preparation
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		
+		GUD_Economic_impact = {
+		
+			picture = FRA_factory_strikes
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = -0.1
+			}
+		}
+		GUD_Affected_government = {
+		
+			picture = ast_classify_aliens
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.1
+				production_speed_buildings_factor = -0.1
+				industrial_capacity_factory = -0.1
+			}
+		}
+		GUD_Rule_of_nanking = {
+		
+			picture = generic_pp_unity_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		GUD_Rectify_the_drawbacks = {
+		
+			picture = generic_flexible_foreign_policy
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				political_power_cost = -0.1
+			}
+		}
+		GUD_Focus_on_economic = {
+		
+			picture = generic_foreign_capital
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		GUD_Support_the_army = {
+		
+			picture = ast_volunteer_defence_corps
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.2
+			}
+		}
+		
+		GUD_Island_defense_facility = {
+
+			picture = generic_fortify_the_borders
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				production_speed_bunker_factor = 0.2
+				production_speed_coastal_bunker_factor = 0.2
+			}
+		}
+		GUD_Restore_territory = {
+
+			picture = generic_morale_bonus
+
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				army_morale_factor = 0.1
+				army_org_factor = 0.05
+			}
+		}
+		GUD_Develop_hainan = {
+
+			picture = generic_production_bonus
+
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				production_speed_infrastructure_factor = 0.2
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		GUD_Rebuild_the_government = {
+
+			picture = generic_pp_unity_bonus
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				political_power_gain = 0.25
+			}
+		}
+		GUD_Governance_experience = {
+
+			picture = ast_all_in
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+		
+		GUD_Modernized_guangdong_army = {
+
+			picture = german_advisors
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			research_bonus = {
+				land_doctrine = 0.1
+			}
+		}
+		GUD_Japanese_technical_support = {
+
+			picture = generic_air_bonus
+
+			available = {
+				NOT = { has_war_with = JAP }
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			research_bonus = {
+				naval_doctrine = 0.1
+				air_doctrine = 0.1
+			}
+		}
+		GUD_Chinese_technical_support = {
+
+			picture = generic_goods_red_bonus
+
+			available = {
+				NOT = { has_war_with = JAP }
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		
+		GUD_Excellent_technician = {
+		
+			picture = generic_bomber_production_diverted
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			research_bonus = {
+				light_air = 0.07
+				medium_air = 0.07
+				naval_air = 0.07
+			}
+		}
+		
+
+		
+		
+		GUD_Intruder = {
+		
+			picture = FRA_national_mobilization_focus
+
+			available = {
+				has_offensive_war_with = GXC
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+			}
+		}
+		GUD_Guangxi_mobilization = {
+		
+			picture = generic_morale_bonus
+
+			available = {
+				has_defensive_war_with = CHI
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.1
+				army_morale_factor = 0.1
+				minimum_training_level = -0.25
+				training_time_factor = -0.1
+				production_lack_of_resource_penalty_factor = -0.1
+			}
+		}
+		
+	}
+	political_advisor = {
+
+		GUD_taktra_rinpoche = {
+
+			picture = generic_political_advisor_asia_3
+			
+			allowed = {
+				original_tag = GUD
+			}
+			
+			traits = { silent_workhorse }
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		GUD_jigme_taring = {
+
+			picture = generic_political_advisor_asia_1
+				
+			allowed = {
+				original_tag = GUD
+			}
+			
+			traits = { war_industrialist }
+		}
+
+		GUD_reting_rimpoche = {
+
+			picture = generic_political_advisor_asia_2
+			
+			allowed = {
+				original_tag = GUD
+			}
+			
+			traits = { compassionate_gentleman }
+		}
+	}
+
+	theorist = {
+		GUD_gyato_wangdu = {
+
+			picture = generic_army_asia_2
+			
+			allowed = {
+				original_tag = GUD
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		GUD_sampo_tsewang_rigzin = { 
+
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = GUD
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+
+		GUD_chama_samphe = {
+					
+					
+			allowed = {
+				original_tag = GUD
+			}
+			
+			picture = generic_political_advisor_asia_3
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			
+			traits = { naval_theorist }
+		}
+	}
+
+	high_command = {
+
+		GUD_khemey_sonam_wangdi = {
+
+			picture = generic_army_asia_2
+			
+			allowed = {
+				original_tag = GUD
+			}
+			
+			traits = { army_regrouping_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		GUD_chaghoe_namgyal_dorje = {
+
+			picture = generic_army_asia_1
+			
+			allowed = {
+				original_tag = GUD
+			}
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		GUD_tenpa_jamyang = {
+
+			picture = generic_army_asia_4
+			
+			allowed = {
+				original_tag = GUD
+			}
+			
+			traits = { army_cavalry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		GUD_jamyang_rabten = {
+
+			picture = generic_navy_asia_2
+			
+			allowed = {
+				original_tag = GUD
+			}
+			
+			traits = { navy_anti_submarine_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	army_chief = {
+		
+		GUD_lobsang_tenzin = {
+
+			picture = generic_army_asia_3
+			
+			allowed = {
+				original_tag = GUD
+			}
+			
+			traits = { army_chief_organizational_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		GUD_jampal_rabgye_rinpoche = {
+
+			picture = generic_army_asia_5
+			
+			allowed = {
+				original_tag = GUD
+			}
+			
+			traits = { army_chief_morale_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+		
+		GUD_bapa_yeshe = {
+			
+			picture = generic_air_asia_1
+			
+			allowed = {
+				original_tag = GUD
+			}
+			
+
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		GUD_chodak_karma = {
+			
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = GUD
+			}
+			
+
+			
+			traits = { air_chief_safety_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	navy_chief = {
+
+		GUD_lhalu_tsewang_dorje = {
+			
+			picture = generic_navy_asia_3
+
+			allowed = {
+				original_tag = GUD
+			}
+					
+			traits = { navy_chief_naval_aviation_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		GUD_sogyal_rinpoche = {
+			
+			picture = generic_navy_asia_2
+
+			allowed = {
+				original_tag = GUD
+			}
+					
+			traits = { navy_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

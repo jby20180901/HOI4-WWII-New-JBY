@@ -1,0 +1,24 @@
+ai_historical_focus_list_CXC = {
+	ai_national_focuses = {
+		EastAsia_CXC_jianlichuankangzhengfu
+		EastAsia_CXC_wuzhuangdikang
+		EastAsia_CXC_hejie
+		EastAsia_CXC_chuanguihongxieding
+		EastAsia_CXC_kangzhan
+		EastAsia_CXC_fanneizhan
+		EastAsia_CXC_weihutongyi
+		EastAsia_CXC_jichujunshixunlian
+		EastAsia_CXC_jichuxueshuo
+		EastAsia_CXC_jidongzuozhan
+		EastAsia_CXC_midtank
+		EastAsia_CXC_kongjunjidi
+		EastAsia_CXC_zhandouji
+		EastAsia_CXC_hongzhaji
+		EastAsia_CXC_binggongchang1
+		EastAsia_CXC_binggongchang2
+		EastAsia_CXC_r1
+		EastAsia_CXC_minyonggongchang1
+		EastAsia_CXC_minyonggongchang2
+		EastAsia_CXC_r2
+	}
+}

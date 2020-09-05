@@ -1,0 +1,46 @@
+division_template = {
+	name = "德械师"
+	division_names_group = CHI_INF_01
+	regiments = {
+		teaching_unit = { x = 0 y = 0 }
+		teaching_unit = { x = 0 y = 1 }
+		teaching_unit = { x = 0 y = 2 }
+		teaching_unit = { x = 0 y = 3 }
+		teaching_unit = { x = 0 y = 4 }
+		artillery_brigade = { x = 1 y = 0 }
+		artillery_brigade = { x = 1 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		field_hospital = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 }
+	}
+	priority = 5
+}
+
+units = {
+
+	### 德械师 ###
+	division = {
+		name = "中国工农红军德械教导团"
+		location = 8049
+		division_template = "德械师"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "GER" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "GER" } }
+		
+	}
+	division = {
+		name = "中国工农红军德械1团"
+		location = 8049
+		division_template = "德械师"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "GER" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "GER" } }
+	}

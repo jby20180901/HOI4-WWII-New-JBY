@@ -1,0 +1,362 @@
+leader_traits = {
+	
+	northeast_army_leader = {
+		random = no
+		ai_get_ally_desire_factor = 50
+		ai_strategy = {
+			type = antagonize
+			id = "JAP"			
+			value = 200
+		}
+		ai_strategy = {
+			type = antagonize
+			id = "MAN"			
+			value = 200
+		}
+		ai_strategy = {
+			type = befriend
+			id = "JAP"			
+			value = -100
+		}
+		ai_strategy = {
+			type = befriend
+			id = "JAP"			
+			value = -100
+		}
+		ai_strategy = {
+			type = alliance
+			id = "JAP"			
+			value = -200
+		}
+		ai_strategy = {
+			type = alliance
+			id = "MAN"			
+			value = -200
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#无上的医者
+	wushangdeyizhe = {
+		random = no
+		weekly_manpower = 2000
+		experience_loss_factor = -0.1
+		conscription  = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#精湛的医者
+	jingzhandeyizhe = {
+		random = no
+		weekly_manpower = 1000
+		experience_loss_factor = -0.05
+		conscription  = 0.02
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#兵器天才
+	bingqitiancai = {
+		random = no
+		
+		army_infantry_attack_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#真正的伟人
+	zhenzhengdeweiren = {
+		random = no
+		justify_war_goal_time = -0.15
+		non_core_manpower = 0.02
+		weekly_manpower = 500
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#人民爱戴的总理
+	saint_zhou  = {
+		random = no
+		consumer_goods_factor = -0.05
+		stability_factor = 0.10
+		opinion_gain_monthly_factor = 0.30
+		trade_opinion_factor = 0.2
+		communism_drift = 0.05
+		political_power_factor = 0.15
+	    
+		ai_will_do = {
+			factor = 0.2
+		}
+	}
+	#改革开放的总设计师
+	gaigekaifangdezongshejishi  = {
+		random = no
+		
+		production_speed_industrial_complex_factor = 0.2
+		production_speed_infrastructure_factor = 0.2
+		production_speed_synthetic_refinery_factor = 0.2
+		production_speed_arms_factory_factor = 0.2
+		production_speed_dockyard_factor = 0.2
+		production_speed_fuel_silo_factor = 0.2
+		production_factory_max_efficiency_factor = 0.1 #生产效率上限
+		industrial_capacity_dockyard = 0.1 #海军船坞产出
+		line_change_production_efficiency_factor = 0.1 #生产效率保持
+		research_speed_factor = 0.1 #研究速度
+		max_fuel_factor = 0.20 #燃油容量
+		
+		ai_will_do = {
+			factor = 0.2
+		}
+	}
+	#红色资本家
+	hongsezibenjia  = {
+		random = no
+		
+		production_speed_industrial_complex_factor = 0.1
+		production_speed_infrastructure_factor = 0.1
+		production_speed_synthetic_refinery_factor = 0.1
+		production_speed_arms_factory_factor = 0.1
+		production_speed_dockyard_factor = 0.1	
+		production_speed_fuel_silo_factor = 0.1
+		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
+		fascism_drift = 0.1
+		ai_will_do = {
+			factor = 0.2
+		}
+	}
+	#坚定的无产阶级战士
+	jiandingdewuchanjiejizhanshi  = {
+		random = no
+		production_speed_industrial_complex_factor = 0.1
+		production_speed_infrastructure_factor = 0.1
+		production_speed_synthetic_refinery_factor = 0.1
+		production_speed_arms_factory_factor = 0.1
+		foreign_subversive_activites = -0.5
+		drift_defence_factor = 0.2
+		communism_drift = 0.05
+		
+		ai_will_do = {
+			factor = 0.2
+		}
+	}
+	#人民卫士
+	renminweishi  = {
+		random = no
+		stability_factor = 0.15
+		foreign_subversive_activites = -0.3
+		ai_will_do = {
+			factor = 0.2
+		}
+	}
+	#社会主义经济的奠基人
+	shehuizhuyijingjidedianjiren  = {
+		random = no
+		
+		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
+		
+		production_factory_max_efficiency_factor = 0.1
+		production_factory_efficiency_gain_factor = 0.1
+		communism_drift = 0.05
+		
+		ai_will_do = {
+			factor = 0.2
+		}
+	}
+	#龙潭三杰
+	longtansanjie = {
+		random = no
+		operative_slot = 1
+		new_operative_slot_bonus = 3
+		agency_upgrade_time = -0.1
+		decryption_power = 10
+		ai_will_do = {
+			factor = 0.2
+		}
+	
+	}
+	#清党爪牙
+	qingdangzhaoya = {
+		random = no
+		sprite = 15
+		resistance_growth_on_our_occupied_states = 0.25
+		resistance_damage_to_garrison = -0.15
+		stability_factor = -0.05
+		subversive_activites_upkeep = -0.25
+		ai_will_do = {
+			factor = 0.2
+		}
+	}
+	
+	chinese_government_leader = {
+		random = no
+		political_power_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	progressive_advocates = {
+		random = no
+		research_time_factor = -0.03
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	shanxi_clique_leader = {
+		random = no
+		communism_drift = -0.01
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	new_guangxi_clique_leader = {
+		random = no
+		stability_factor = 0.1
+		surrender_limit = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	guangdong_province_chairman = {
+		random = no
+		production_speed_buildings_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	sichuan_province_chairman = {
+		random = no
+		drift_defence_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	shandong_province_chairman = {
+		random = no
+		drift_defence_factor = 0.2
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	yunnan_king = {
+		random = no
+		drift_defence_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	sinkiang_king = {
+		random = no
+		political_power_factor = 0.2
+		enemy_partisan_effect = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	hebei_chairman = {
+		random = no
+		join_faction_tension = -0.3
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	emperor_of_nguyen_dynasty = {
+		random = no
+		stability_factor = 0.3
+		army_core_attack_factor = 0.2
+		army_core_defence_factor = 0.2
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	greening_advocate = {
+		random = no
+		political_power_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	sotoku = {
+		random = no
+		political_power_factor = 0.1
+		production_speed_infrastructure_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	gunji_sotoku = {
+		random = no
+		political_power_factor = 0.1
+		production_speed_arms_factory_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	manchuria_faction = {
+		random = no
+		production_speed_buildings_factor = 0.05
+		monthly_population = 0.1
+		communism_acceptance = -85
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	manchurian_colonizer = {
+		random = no
+		local_resources_factor = 0.25
+		consumer_goods_factor = -0.05
+		monthly_population = -0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	
+	Ataturk = {
+		random = no
+		political_power_gain = 0.2
+		stability_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	turkish_war_hero = {
+		random = no
+		army_core_attack_factor = 0.1
+		army_core_defence_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

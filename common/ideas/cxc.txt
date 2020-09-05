@@ -1,0 +1,502 @@
+ideas = {
+	
+	country = {
+
+		#敌军一日不退出国境，川军则一日誓不还乡！
+		eastasia_idea_CXC_liuxiangyizhu = {
+			picture = CXC_shisikangri
+			allowed = {
+				always = no
+			} 
+			removal_cost = -1
+			
+			modifier = {
+                conscription = 0.010
+				training_time_army_factor = -0.20
+				army_morale_factor = 0.15
+				army_org_Factor = 0.15
+				army_infantry_attack_factor = 0.15
+			}
+		}
+		#稳定的川康局势
+		eastasia_idea_CXC_wendingdechuankang = {
+			picture = generic_pp_unity_bonus
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.10
+				production_speed_buildings_factor = -0.10
+				
+			}
+		}
+		
+		#共产主义的帮助
+		eastasia_idea_CXC_gongchanzhuyibangzhu = {
+			picture = home_of_the_revolution
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				army_org_factor = 0.05
+				political_power_factor = 0.25
+			}
+		}
+	
+		#元气大伤
+		eastasia_idea_CXC_yuanqidashang = {
+			picture = great_depression
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.10
+				army_org_factor = -0.15
+				industrial_capacity_factory = -0.15
+				consumer_goods_factor = -0.15
+			}
+		}
+		
+		#日渐统一的国家
+		eastasia_idea_CXC_tongyiqushi = {
+			picture = generic_volunteer_expedition_bonus
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.10
+				political_power_factor = 0.10
+			}
+		
+		}
+		
+		#为祖国统一而战
+		eastasia_idea_CXC_tongyiwansui = {
+			picture = ast_abandon_the_westminster_system
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.001
+				industrial_capacity_factory = 0.15
+				MONTHLY_POPULATION = 0.5
+				industrial_capacity_factory = 0.05
+				army_org_Factor = 0.10
+				consumer_goods_factor = -0.15
+				conscription_factor = 0.05
+			}
+		}
+		
+		#赤化的西康
+		eastasia_idea_CXC_chihuaxikang = {
+			picture = ast_abandon_the_westminster_system_communism
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05
+				conscription_factor = 0.05
+				conversion_cost_mil_to_civ_factor = -0.10
+				army_org_Factor = 0.10
+			}
+		}
+		
+		#背叛统一战线后出现
+		eastasia_idea_CXC_faxisitaitou = {
+			picture = generic_limited_exports
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = 0.05
+                local_resources_factor = 0.05
+			}
+		}
+		
+		#基础军事训练
+		eastasia_idea_CXC_xiandaijundui = {
+			picture = generic_infantry_equipment_manufacturer_2
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_org_Factor = 0.05
+				army_speed_factor = 0.05
+				army_attack_factor = 0.05
+				training_time_army_factor = -0.10
+			}
+		}
+		
+		#堡垒主义
+		eastasia_idea_CXC_baoleizhuyi = {
+			picture = ast_naval_auxiliary_patrol
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_bunker_factor = 0.5
+			}
+		}
+		
+		#现代军事学说体系
+		eastasia_idea_CXC_xiandaijunshixueshuo = {
+			picture = generic_motorized_equipment_manufacturer_2
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			
+			research_bonus = {
+				land_doctrine = 0.10
+                naval_doctrine = 0.10
+                air_doctrine = 0.10
+			}
+		}
+		
+		#机动至上主义
+		eastasia_idea_CXC_jidongzhishang = {
+			picture = generic_motorized_equipment_manufacturer_3
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_speed_factor = 0.25
+			}
+			
+			
+			
+		}
+		
+	
+	}
+	
+	
+	#################### cabinet ####################
+	
+	
+	#政治顾问
+	political_advisor = {
+
+		CXC_liuwenhui = {
+				
+			picture = generic_air_asia_1
+			
+			allowed = {
+				original_tag = CXC
+			}
+			
+			traits = { army_chief_maneuver_2 }
+			
+			
+		}
+		
+		CXC_sunzhen = {
+
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = CXC
+			}
+			
+			traits = { war_industrialist }
+			
+			
+		}
+		
+		CXC_dengxihou = {
+
+			picture = generic_air_asia_3
+			
+			allowed = {
+				original_tag = CXC
+			}
+			
+			traits = { army_chief_drill_2 }
+			
+			
+		}
+		
+		#川桂红协定后出现
+		CXC_wuyuzhang = {
+			picture = generic_air_asia_3
+			
+			available = {
+				has_completed_focus = EastAsia_CXC_chuanguihongxieding
+			}
+			
+			allowed = {
+				original_tag = CXC
+			}
+			
+			traits = { silent_workhorse }
+			
+			
+			
+		}
+		
+		
+		
+		
+		
+	}	
+
+	#陆军司令
+	army_chief = {
+		
+		CXC_liuxiang = {
+
+			picture = generic_navy_asia_3
+			
+			allowed = {
+				original_tag = CXC
+			}
+			
+			traits = { army_chief_morale_3 }
+			
+			
+		}
+		
+		CXC_lijiayu = {
+
+			picture = vladimir_tributs
+			
+			allowed = {
+				original_tag = CXC
+			}
+			
+			traits = { army_infantry_2 }
+			
+			
+			
+		}
+		
+	}
+
+	#空军司令
+	air_chief = {
+
+		CXC_luozezhou = {
+			
+			picture = generic_navy_south_america_3
+
+			allowed = {
+				original_tag = CXC
+			}
+					
+			traits = { air_air_superiority_1 }
+			
+			
+		}
+	}
+	
+	#海军司令
+	navy_chief = {
+	
+		CXC_yangsen = {
+
+			picture = generic_navy_asia_2
+			
+			allowed = {
+				original_tag = CXC
+			}
+					
+			traits = { air_naval_strike_1 }
+			
+			
+		}
+	}
+
+	#理论家
+	theorist = {
+	
+		CXC_tangshizun = {
+
+			picture = generic_navy_south_america_1
+			
+			allowed = {
+				original_tag = CXC
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.05
+			}
+			
+			traits = { blitzkrieg_theorist }
+			
+			
+		}
+		
+		#抗战出现
+		CXC_huagang = {
+			
+			picture = generic_army_asia_2
+			available = {
+				has_completed_focus = EastAsia_CXC_kangzhan
+			}
+			allowed = {
+				original_tag = CXC
+			}
+			research_bonus = {
+				cat_operational_integrity = 0.10
+			}
+			traits = { assault_avaition }
+			
+		}
+		
+		#与共结盟后出现
+		CXC_wangruofei = {
+			picture = generic_army_asia_5
+			available = {
+				has_completed_focus = EastAsia_CXC_yugongjiemeng
+			}
+			
+			allowed = {
+				original_tag = CXC
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.7
+			}
+			
+			traits = { military_theorist }
+		}
+
+	}
+	
+	materiel_manufacturer = {
+		
+		designer = yes
+		
+		#共党工作组后：共援兵工厂
+		CXC_gongyuanbinggongchang = {
+			allowed = {
+				original_tag = CXC
+			}
+			
+			available = {
+				has_completed_focus = EastAsia_CXC_gongjungongzuozu
+			}
+			
+			research_bonus = {
+				infantry_weapon = 0.10
+			}
+		
+			traits = {
+				infantry_equipment_manufacturer
+			}
+			
+			
+		}
+		
+		#参加抗战后
+		CXC_bentuqiangxiesuo = {
+			allowed = {
+				original_tag = CXC
+			}
+			
+			available = {
+				has_completed_focus = EastAsia_CXC_kangzhan
+			}
+			
+			research_bonus = {
+				artillery = 0.10
+			}
+			
+			traits = { artillery_manufacturer }
+			
+			
+			
+		}
+		
+	
+	}
+	
+	#军方高层
+	high_command = {
+		
+		CXC_wangmingzhang = {
+
+			picture = boris_shaposhnikov
+			
+			allowed = {
+				original_tag = CXC
+			}
+			
+			traits = { army_infantry_2 }
+			
+			
+		}
+		
+		CXC_zhaoweibin = {
+
+			picture = generic_army_asia_3
+			
+			allowed = {
+				original_tag = CXC
+			}
+			
+			traits = { army_artillery_1 }
+			
+			
+		}
+		
+		CXC_fanshaozeng = {
+
+			picture = generic_army_asia_2
+			
+			allowed = {
+				original_tag = CXC
+			}
+			
+			traits = { army_commando_1 }
+			
+			
+		}
+		
+		#抗战出现
+		CXC_wangzuanxu = {
+			
+			picture = generic_army_asia_7
+			available = {
+				has_completed_focus = EastAsia_CXC_kangzhan
+			}
+			allowed = {
+				original_tag = CXC
+			}
+			
+			traits = { army_logistics_1 }
+			
+			
+		}
+		
+	}
+
+}

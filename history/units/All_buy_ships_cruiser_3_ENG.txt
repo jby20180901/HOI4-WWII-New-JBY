@@ -1,0 +1,47 @@
+﻿instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			creator = "ENG" 
+			version_name = "镇级"
+		}
+		name = "镇级I"
+		requested_factories = 1
+		progress = 1
+		amount = 1
+	}
+	
+}
+
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			creator = "ENG" 
+			version_name = "镇级"
+		}
+		name = "镇级II"
+		requested_factories = 1
+		progress = 1
+		amount = 1
+	}
+	
+}
+
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			creator = "ENG" 
+			version_name = "镇级"
+		}
+		name = "镇级III"
+		requested_factories = 1
+		progress = 1
+		amount = 1
+	}
+	
+}
