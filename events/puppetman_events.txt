@@ -1,0 +1,211 @@
+﻿add_namespace = puppetman
+
+#State taken!
+country_event = {
+	id = puppetman.1
+	title = puppetman.1.t
+	desc = puppetman.1.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = puppetman.1.a
+	}	
+}
+
+#State returned!
+country_event = {
+	id = puppetman.2
+	title = puppetman.2.t
+	desc = puppetman.2.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = puppetman.2.a
+	}	
+}
+
+#State calimed!
+state_event = {
+	id = puppetman.3
+	title = puppetman.3.t
+	desc = puppetman.3.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = puppetman.3.a
+		effect_tooltip = {
+			var:claiming = { add_claim_by = ROOT }
+		}
+		hidden_effect = { set_variable = { claiming = 0 } }
+	}
+}
+
+#free election
+country_event = {
+	id = puppetman.4
+	title = puppetman.4.t
+	desc = puppetman.4.desc
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = puppetman.4.a
+		ai_chance = { 
+			base = 25
+			modifier = {
+				factor = 1.5
+				has_government = neutrality
+			}
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+		
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		if = {
+			limit = {
+				democratic < 0.2 
+			}
+			add_popularity = {
+				popularity = 0.4
+				ideology = democratic
+			}
+			else = {
+				if = {
+					limit = {
+						democratic < 0.4 
+					}
+					add_popularity = {
+						popularity = 0.2
+						ideology = democratic
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = puppetman.4.b
+		ai_chance = { 
+			base = 25
+			modifier = {
+				factor = 0.2
+				has_government = communism
+			}
+		}
+		
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		if = {
+			limit = {
+				fascism < 0.2 
+			}
+			add_popularity = {
+				popularity = 0.4
+				ideology = fascism
+			}
+			else = {
+				if = {
+					limit = {
+						fascism < 0.4 
+					}
+					add_popularity = {
+						popularity = 0.2
+						ideology = fascism
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = puppetman.4.c
+		ai_chance = { 
+			base = 25
+			modifier = {
+				factor = 0.2
+				has_government = fascism
+			}
+		}
+		
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
+		if = {
+			limit = {
+				communism < 0.2 
+			}
+			add_popularity = {
+				popularity = 0.4
+				ideology = communism
+			}
+			else = {
+				if = {
+					limit = {
+						communism < 0.4 
+					}
+					add_popularity = {
+						popularity = 0.2
+						ideology = communism
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = puppetman.4.d
+		ai_chance = { 
+			base = 25
+			modifier = {
+				factor = 1.5
+				has_government = fascism
+			}
+			modifier = {
+				factor = 1.5
+				has_government = communism
+			}
+		}
+		
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		if = {
+			limit = {
+				neutrality < 0.2 
+			}
+			add_popularity = {
+				popularity = 0.4
+				ideology = neutrality
+			}
+			else = {
+				if = {
+					limit = {
+						neutrality < 0.4 
+					}
+					add_popularity = {
+						popularity = 0.2
+						ideology = neutrality
+					}
+				}
+			}
+		}
+	}
+}
+
+
+	
+	

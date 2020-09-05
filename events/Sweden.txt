@@ -1,0 +1,210 @@
+add_namespace = sweden
+
+country_event = {
+    # Intervening in the winter war
+	id = sweden.10 
+    title = sweden.10.t # The localisable text that appears as a header
+    desc = sweden.10.d # The localisable main text body that appears
+	picture = GFX_report_event_soviet_finnish_pact # Image displayed alongside the text.
+
+	is_triggered_only = no # Optional : if set to "yes" the event will only occur by command
+
+	hidden = no # Optional : if set to "yes" no one will see the event
+
+	fire_only_once = yes # Optional : if set to "yes" the event will never occur more than once
+
+	trigger = {
+		has_idea = SWE_Prospering_Economy
+		has_capitulated = yes
+	}
+	option = {
+		name = sweden.10.a
+		remove_ideas = SWE_Prospering_Economy
+	}
+}
+	
+country_event = {
+    # Intervening in the winter war
+	id = sweden.0 
+    title = sweden.0.t # The localisable text that appears as a header
+    desc = sweden.0.d # The localisable main text body that appears
+	picture = GFX_report_event_soviet_finnish_pact # Image displayed alongside the text.
+
+	is_triggered_only = no # Optional : if set to "yes" the event will only occur by command
+
+	hidden = no # Optional : if set to "yes" no one will see the event
+
+	fire_only_once = yes # Optional : if set to "yes" the event will never occur more than once
+
+	trigger = {
+		NOT =  { is_in_faction_with = FIN }
+		original_tag = SWE
+		FIN = { has_defensive_war_with = SOV }
+		NOT = {
+			AND = {
+				is_in_faction_with = GER
+				GER = {has_non_aggression_pact_with = SOV}
+			}
+		}
+		NOT = { is_in_faction_with = SOV }
+	}
+	
+	option = { # Join the winter war
+		name = sweden.0.a # The localisable text that appears on the button.
+		country_event = { days = 5 id = finland.0 }
+		
+		
+		
+	}
+    option = { # Send equipment
+		name = sweden.0.b # The localisable text that appears on the button.
+        send_equipment = {
+			equipment = infantry_equipment
+			amount = 5000
+			target = FIN
+		}
+		if = {
+			limit = {
+				has_idea = SWE_Affirmed_Neutrality
+			}
+			swap_ideas = {
+				remove_idea = SWE_Affirmed_Neutrality
+				add_idea = SWE_Less_Neutral
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = neutrality_idea
+			}
+			swap_ideas = {
+				remove_idea = neutrality_idea
+				add_idea = SWE_Less_Neutral
+			}
+		}
+	}
+	option = { # do nothing
+		name = sweden.0. # The localisable text that appears on the button.
+        
+	}
+}
+
+country_event = {
+    # Intervening in the winter war
+	id = sweden.1 
+    title = sweden.1.t # The localisable text that appears as a header
+    desc = sweden.1.d # The localisable main text body that appears
+	picture = GFX_report_event_soviet_finnish_pact
+
+	is_triggered_only = no # Optional : if set to "yes" the event will only occur by command
+
+	hidden = no # Optional : if set to "yes" no one will see the event
+
+	fire_only_once = yes # Optional : if set to "yes" the event will never occur more than once
+
+	trigger = {
+		NOT =  { is_in_faction_with = FIN }
+		original_tag = SWE
+		FIN = { has_defensive_war_with = SOV }
+		AND = {
+			is_in_faction_with = GER
+			GER = {has_non_aggression_pact_with = SOV}
+		}
+		NOT = { is_in_faction_with = SOV }
+	}
+	
+    option = { # Send equipment
+		name = sweden.1.a # The localisable text that appears on the button.
+        send_equipment = {
+			equipment = infantry_equipment
+			amount = 6000
+			target = FIN
+		}
+		if = {
+			limit = {
+				has_idea = SWE_Affirmed_Neutrality
+			}
+			swap_ideas = {
+				remove_idea = SWE_Affirmed_Neutrality
+				add_idea = SWE_Less_Neutral
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = neutrality_idea
+			}
+			swap_ideas = {
+				remove_idea = neutrality_idea
+				add_idea = SWE_Less_Neutral
+			}
+		}
+	}
+	option = { # do nothing
+		name = sweden.1.b # The localisable text that appears on the button.
+        
+	}
+}
+
+country_event = {
+	#add to nordic alliance
+	id = sweden.2 
+    title = sweden.2.t # The localisable text that appears as a header
+    desc = sweden.2.d # The localisable main text body that appears
+	picture = GFX_report_event_soviet_finnish_pact
+
+	is_triggered_only = yes # Optional : if set to "yes" the event will only occur by command
+
+	hidden = no # Optional : if set to "yes" no one will see the event
+
+	fire_only_once = yes # Optional : if set to "yes" the event will never occur more than once
+	option = {
+		name = sweden.2.a
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				original_tag = DEN
+			}
+			SWE = {add_to_faction = DEN}
+		}
+		else_if = {
+			limit = {
+				original_tag = FIN
+			}
+			SWE = {add_to_faction = FIN}
+		}
+		else_if = {
+			limit = {
+				original_tag = ICE
+			}
+			SWE = {add_to_faction = ICE}
+		}
+		else_if = {
+			limit = {
+				original_tag = NOR
+			}
+			SWE = {add_to_faction = NOR}
+		}
+		else_if = {
+			limit = {
+				original_tag = LIT
+			}
+			SWE = {add_to_faction = LIT}
+		}
+		else_if = {
+			limit = {
+				original_tag = LAT
+			}
+			SWE = {add_to_faction = LAT}
+		}
+		else_if = {
+			limit = {
+				original_tag = EST
+			}
+			SWE = {add_to_faction = EST}
+		}
+	}
+	option = {
+		name = sweden.2.b
+	}
+	
+}
+		

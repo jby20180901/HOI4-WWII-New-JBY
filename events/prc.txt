@@ -1,0 +1,360 @@
+add_namespace = prc
+
+#中国工农红军誓词
+country_event = {
+    id = prc.1
+    title = prc.1.t
+    desc = prc.1.d
+    picture = GFX_china_xinjiangwenti
+
+    fire_only_once = yes
+	
+	trigger = { TAG = PRC }
+    option = {
+        name = prc.1.a	
+    }
+}
+
+
+
+#朝鲜：解放祖国
+country_event = {
+    id = prc.2
+    title = prc.2.t
+    desc = prc.2.d
+    picture = GFX_china_xinjiangwenti
+
+   is_triggered_only = yes
+	
+	
+    option = {
+        name = prc.2.a
+        PRC = {     country_event = {  days = 55  id = prc.9  }  }
+		declare_war_on = {
+			target = KOR
+			type = puppet_wargoal_focus
+		}
+		hidden_effect = { load_oob = "PRK_kangmeiyuanchao_PRC" }
+		
+		KOR = {
+		
+		hidden_effect = { load_oob = "KOR_kangri" }
+		
+		}
+		hidden_effect = {
+			country_event = { hours = 6 id = news.736 }
+		}
+		
+    }
+}
+
+
+#印度：中国要求归还领土
+country_event = {
+    id = prc.3
+    title = prc.3.t
+    desc = prc.3.d
+    picture = GFX_china_xinjiangwenti
+
+    is_triggered_only = yes
+	
+
+    option = {
+        name = prc.3.a
+        PRC = { country_event = prc.4 }
+		
+    }
+	
+	option = {
+        name = prc.3.b
+        trigger = { is_ai = no }
+		PRC = { country_event = prc.5 }
+    }
+} 
+
+
+#中国：印度同意
+country_event = {
+    id = prc.4
+    title = prc.4.t
+    desc = prc.4.d
+    picture = GFX_china_xinjiangwenti
+
+     is_triggered_only = yes
+	
+	
+
+    option = {
+        name = prc.4.a
+        PRC = { transfer_state = 434 }
+		
+    }
+}
+
+
+#中国：印度拒绝
+country_event = {
+    id = prc.5
+    title = prc.5.t
+    desc = prc.5.d
+    picture = GFX_china_xinjiangwenti
+
+     is_triggered_only = yes
+	
+	
+
+    option = {
+        name = prc.5.a
+       declare_war_on = {
+			target = RAJ
+			type = puppet_wargoal_focus
+		}
+		
+    }
+}
+
+
+#苏联：中国要求归还领土
+country_event = {
+    id = prc.11
+    title = prc.11.t
+    desc = prc.11.d
+	
+    picture = GFX_china_xinjiangwenti
+
+    is_triggered_only = yes
+	
+
+    option = {
+        name = prc.11.a
+        PRC = { country_event = prc.7 }
+		
+    }
+	 
+	option = {
+        name = prc.11.b
+        trigger = { is_ai = no }
+		PRC = { country_event = prc.8 }
+    }
+} 
+
+#中国：苏联同意
+country_event = {
+    id = prc.7
+    title = prc.7.t
+    desc = prc.7.d
+    picture = GFX_china_xinjiangwenti
+
+     is_triggered_only = yes
+	
+	
+
+    option = {
+        name = prc.7.a
+        PRC = { transfer_state = 329 }
+		PRC = { transfer_state = 408 }
+		PRC = { transfer_state = 655 }
+		PRC = { transfer_state = 409 }
+		PRC = { transfer_state = 560 }
+		PRC = { transfer_state = 561 }
+		PRC = { transfer_state = 657 }
+		PRC = { transfer_state = 537 }
+		PRC = { transfer_state = 330 }
+		
+    }
+}
+
+
+#中国：苏联拒绝
+country_event = {
+    id = prc.8
+    title = prc.8.t
+    desc = prc.8.d
+    picture = GFX_china_xinjiangwenti
+
+     is_triggered_only = yes
+	
+	
+
+    option = {
+        name = prc.8.a
+       declare_war_on = {
+			target = SOV
+			type = puppet_wargoal_focus
+		}
+		
+    }
+}
+
+#抗美援朝：毛岸英同志牺牲
+country_event = {
+    id = prc.9
+    title = prc.9.t
+    desc = prc.9.d
+    picture = GFX_cb7jl-ueah8
+
+     is_triggered_only = yes
+	
+	
+
+    option = {
+        name = prc.9.a
+      
+		
+    }
+}
+
+
+country_event = {
+    id = prc.451
+    title = prc.451.t
+    desc = prc.451.d
+    picture = GFX_cb7jl-ueah8
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+
+    option = {
+        name = prc.451.a
+    }
+}
+
+
+country_event = {
+    id = prc.452
+    title = prc.452.t
+    desc = prc.452.d
+    picture = GFX_cb7jl-ueah8
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	immediate = { 
+		PRC = { create_faction = CPOC_UNITY }
+		PRC = { set_country_flag = inveitable_civil_war }
+		
+	}
+
+    option = {
+        name = prc.452.a
+		PRC = { add_timed_idea = { idea = PRC_no_more_time_for_PLA days = 900 } }
+		hidden_effect = { 
+		
+			PRC = {  load_oob = "PRC_shoubeibingtuan" } 
+			PRC = {  load_oob = "PRC_SOV_reinforcements" } 
+			PRC = {  load_oob = "PRC_jiefangjun_ally" } 
+		
+		}
+		
+		PRC = {
+						create_corps_commander = {
+							name = "粟裕"
+							portrait_path = "gfx/leaders/PRC/suyu.dds"
+							traits = { infantry_officer brilliant_strategist hill_fighter trait_engineer }
+							id = 995681
+							skill = 5
+							attack_skill = 5
+							defense_skill = 5
+							planning_skill = 5
+							logistics_skill = 5
+						}
+						create_corps_commander = {
+							name = "彭雪枫"
+							portrait_path = "gfx/leaders/PRC/Portrait_ANQ_Peng_Xuefeng.dds"
+							traits = {  career_officer   }
+							id = 995682
+							skill = 4
+							attack_skill = 3
+							defense_skill = 3
+							planning_skill = 4
+							logistics_skill = 3
+						}
+						create_corps_commander = {
+							name = "周保中"
+							portrait_path = "gfx/leaders/GXC/Portrait_Yunnan_Zhou_Baozhong.dds"
+							traits = { trait_engineer }
+							id = 995683
+							skill = 3
+							attack_skill = 2
+							defense_skill = 2
+							planning_skill = 2
+							logistics_skill = 2
+						}
+					
+		}
+		country_event = { id = prc.500 days = 3 }
+		
+		GXC = { create_faction = CHI_NEU }
+		if = {  limit = { country_exists = YUN 	}  GXC = { add_to_faction = YUN } }
+		if = {  limit = { country_exists = XSM 	}  GXC = { add_to_faction = XSM } }
+		if = {  limit = { country_exists = XNM 	}  GXC = { add_to_faction = XNM } }
+		if = {  limit = { country_exists = SIK 	}  GXC = { add_to_faction = SIK } }
+		if = {  limit = { country_exists = SHX 	}  GXC = { add_to_faction = SHX } }
+		if = {  limit = { country_exists = YXC 	}  GXC = { add_to_faction = YXC } }
+		if = {  limit = { country_exists = XJM 	}  GXC = { add_to_faction = XJM } }
+		
+		
+		
+    }
+}
+
+
+country_event = {
+    id = prc.453
+    title = prc.453.t
+    desc = prc.453.d
+    picture = GFX_cb7jl-ueah8
+	fire_only_once = yes
+	
+    trigger = {
+		NOT = {
+			country_exists = CHI 
+			country_exists = SHX
+			country_exists = GXC
+		}
+		date > 1942.1.1
+		has_country_flag = inveitable_civil_war
+		TAG = PRC
+		PRC = { is_puppet = no }
+	}
+
+
+    option = {
+        name = prc.452.a
+		PRC = { set_faction_name = PRC_mao_faction }
+		PRC = {
+			if = {  limit = { country_exists = XSM 	}  CHI = { annex_country = { target = XSM transfer_troops = yes } }  }
+			if = {  limit = { country_exists = XJM 	}  CHI = { annex_country = { target = XJM transfer_troops = yes } }  }
+			if = {  limit = { country_exists = XNM 	}  CHI = { annex_country = { target = XNM transfer_troops = yes } }  } 
+		}
+    }
+
+}
+
+country_event = {
+    id = prc.500
+    title = prc.500.t
+    desc = prc.500.d
+	is_triggered_only = yes
+	fire_only_once = yes
+    picture = GFX_cb7jl-ueah8
+
+
+
+    option = {
+		name = prc.500.a
+		PRC = {
+		transfer_state = 621
+		transfer_state = 611
+		transfer_state = 612
+		transfer_state = 610
+		transfer_state = 715
+		transfer_state = 714
+		transfer_state = 761
+		transfer_state = 746
+		}
+		CHI = { country_event = {  id= china.501  days = 2 }  }
+    }
+
+}
+

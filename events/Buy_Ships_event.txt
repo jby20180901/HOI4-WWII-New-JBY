@@ -1,0 +1,69 @@
+﻿####################
+# Buy Shpis Events #
+####################
+
+add_namespace = Buy_Ship
+
+# 订购的主力舰完工
+country_event = {
+	id = Buy_Ship.1
+	title = Buy_Ship.1.t
+	desc = Buy_Ship.1.d
+	picture = GFX_princess_Buy_Ship_1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Buy_Ship.1.a
+		load_oob = All_buy_ships_battleship_2_ENG
+	}
+	
+}
+
+# 战列舰交易订单
+country_event = {
+	id = Buy_Ship.2
+	title = Buy_Ship.2.t
+	desc = Buy_Ship.2.d
+	picture = GFX_princess_Buy_Ship_1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Buy_Ship.2.a
+		add_timed_idea = { idea = princess_zhulijian_dingdan_idea days = 365 }
+	}
+	
+}
+
+# 订购的巡洋舰完工
+country_event = {
+	id = Buy_Ship.3
+	title = Buy_Ship.3.t
+	desc = Buy_Ship.3.d
+	picture = GFX_princess_Buy_Ship_1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Buy_Ship.3.a
+		load_oob = All_buy_ships_cruiser_3_ENG
+	}
+	
+}
+
+# 巡洋舰交易订单
+country_event = {
+	id = Buy_Ship.4
+	title = Buy_Ship.4.t
+	desc = Buy_Ship.4.d
+	picture = GFX_princess_Buy_Ship_1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Buy_Ship.4.a
+		add_timed_idea = { idea = princess_xunyangjian_dingdan_idea days = 365 }
+	}
+	
+}

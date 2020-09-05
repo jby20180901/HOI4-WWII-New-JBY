@@ -1,0 +1,332 @@
+add_namespace = EFM_Tibet
+
+# Test the nanjing
+country_event = {
+	id = EFM_Tibet.1
+	title = EFM_Tibet.1.t
+	picture = GFX_report_event_chinese_soldiers_fighting
+	is_triggered_only = yes
+	desc = EFM_Tibet.1.d
+		option = {
+				name = EFM_Tibet.1.a
+				ai_chance = { factor = 70 }
+				TIB = {
+					country_event = { id = EFM_Tibet.2 days = 1 }
+				}
+			}
+		option = {
+				name = EFM_Tibet.1.b
+				ai_chance = { factor = 30 }
+				TIB = {
+					country_event = { id = EFM_Tibet.3 days = 1 }
+				}
+			}
+	}
+	
+# Nanjing intense reaction
+country_event = {
+	id = EFM_Tibet.2
+	title = EFM_Tibet.2.t
+	picture = GFX_report_event_chinese_army_training
+	is_triggered_only = yes
+	desc = EFM_Tibet.2.d
+		option = {
+				name = EFM_Tibet.2.a
+				
+			}
+	}
+	
+# Nanjing reaction is cold
+country_event = {
+	id = EFM_Tibet.3
+	title = EFM_Tibet.3.t
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	desc = EFM_Tibet.3.d
+		option = {
+				name = EFM_Tibet.3.a
+				add_stability = 0.05
+			}
+	}
+	
+# Indian
+country_event = {
+	id = EFM_Tibet.4
+	title = EFM_Tibet.4.t
+	picture = GFX_report_event_chinese_soldiers_fighting
+	is_triggered_only = yes
+	desc = EFM_Tibet.4.d
+		option = {
+				name = EFM_Tibet.4.a
+				ai_chance = { factor = 40 }
+				TIB = {
+					country_event = { id = EFM_Tibet.5 days = 1 }
+				}
+			}
+		option = {
+				name = EFM_Tibet.4.b
+				ai_chance = { factor = 60 }
+				TIB = {
+					country_event = { id = EFM_Tibet.6 days = 1 }
+				}
+			}
+	}
+	
+# Indian good response
+country_event = {
+	id = EFM_Tibet.5
+	title = EFM_Tibet.5.t
+	picture = GFX_report_event_chinese_army_training
+	is_triggered_only = yes
+	desc = EFM_Tibet.5.d
+		option = {
+				name = EFM_Tibet.5.a
+				add_political_power = 120
+			}
+	}
+	
+# Indian reaction is cold
+country_event = {
+	id = EFM_Tibet.6
+	title = EFM_Tibet.6.t
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	desc = EFM_Tibet.6.d
+		option = {
+				name = EFM_Tibet.6.a
+				add_political_power = 50
+			}
+	}
+	
+# Economic cooperation
+country_event = {
+	id = EFM_Tibet.7
+	title = EFM_Tibet.7.t
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	desc = EFM_Tibet.7.d
+		option = {
+				name = EFM_Tibet.7.a
+				add_political_power = 50
+			}
+	}
+	
+# UK
+country_event = {
+	id = EFM_Tibet.8
+	title = EFM_Tibet.8.t
+	picture = GFX_report_event_ast_parliament_house
+	is_triggered_only = yes
+	desc = EFM_Tibet.8.d
+		option = {
+				name = EFM_Tibet.8.a
+				ai_chance = { factor = 30 }
+				FROM = {
+					country_event = { id = EFM_Tibet.9 days = 1 }
+				}
+				add_ai_strategy = {
+						type = befriend
+						id = "TIB"
+						value = 200
+					}
+				add_opinion_modifier = {
+						target = FROM
+						modifier = Nations_friendly
+					}
+			}
+		option = {
+				name = EFM_Tibet.8.b
+				ai_chance = { factor = 70 }
+				}
+	}
+	
+country_event = {
+	id = EFM_Tibet.9
+	title = EFM_Tibet.9.t
+	picture = GFX_report_event_chinese_japanese_handshake
+	is_triggered_only = yes
+	desc = EFM_Tibet.9.d
+		option = {
+				name = EFM_Tibet.9.a
+				add_political_power = 100
+				add_opinion_modifier = {
+						target = FROM
+						modifier = Nations_friendly
+					}
+			}
+	}
+	
+# Negotiate with nanking
+country_event = {
+	id = EFM_Tibet.10
+	title = EFM_Tibet.10.t
+	picture = GFX_report_event_chinese_japanese_handshake
+	is_triggered_only = yes
+	desc = EFM_Tibet.10.d
+		option = {
+				name = EFM_Tibet.10.a
+				ai_chance = { factor = 30 }
+				CHI = {
+					country_event = { id = EFM_Tibet.11 days = 1 }
+				}
+			}
+		option = {
+				name = EFM_Tibet.10.b
+				ai_chance = { factor = 70 }
+				CHI = {
+					country_event = { id = EFM_Tibet.12 days = 1 }
+				}
+			}
+	}
+	
+# Nanking response
+country_event = {
+	id = EFM_Tibet.11
+	title = EFM_Tibet.11.t
+	picture = GFX_report_event_chinese_japanese_handshake
+	is_triggered_only = yes
+	desc = EFM_Tibet.11.d
+		option = {
+				name = EFM_Tibet.11.a
+				ai_chance = { factor = 50 }
+				FROM = {
+					country_event = { id = EFM_Tibet.13 days = 1 }
+					add_ideas = TIB_Nanjing_economic_aid
+				}
+				add_political_power = -75
+			}
+		option = {
+				name = EFM_Tibet.11.b
+				ai_chance = { factor = 50 }
+				FROM = {
+					country_event = { id = EFM_Tibet.14 days = 1 }
+				}
+			}
+	}
+country_event = {
+	id = EFM_Tibet.12
+	title = EFM_Tibet.12.t
+	picture = GFX_report_event_chinese_japanese_handshake
+	is_triggered_only = yes
+	desc = EFM_Tibet.12.d
+		option = {
+				name = EFM_Tibet.12.a
+				ai_chance = { factor = 70 }
+				FROM = {
+					country_event = { id = EFM_Tibet.13 days = 1 }
+					add_ideas = TIB_Nanjing_funded_construction
+				}
+				add_political_power = -150
+				puppet = FROM
+			}
+		option = {
+				name = EFM_Tibet.12.b
+				ai_chance = { factor = 30 }
+				FROM = {
+					country_event = { id = EFM_Tibet.14 days = 1 }
+				}
+			}
+	}
+	
+# Agree
+country_event = {
+	id = EFM_Tibet.13
+	title = EFM_Tibet.13.t
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	desc = EFM_Tibet.13.d
+		option = {
+				name = EFM_Tibet.13.a
+				
+			}
+	}
+# Reject
+country_event = {
+	id = EFM_Tibet.14
+	title = EFM_Tibet.14.t
+	picture = GFX_report_event_chinese_soldiers_02
+	is_triggered_only = yes
+	desc = EFM_Tibet.14.d
+		option = {
+				name = EFM_Tibet.14.a
+				
+			}
+	}
+	
+# Lhasa declaration (Nanking)
+country_event = {
+	id = EFM_Tibet.15
+	title = EFM_Tibet.15.t
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+	desc = EFM_Tibet.15.d
+		option = {
+				name = EFM_Tibet.15.a
+				ai_chance = { factor = 55 }
+				FROM = {
+					country_event = { id = EFM_Tibet.16 days = 1 }
+				}
+				create_wargoal = { type = annex_everything target = FROM }
+			}
+		option = {
+				name = EFM_Tibet.15.b
+				ai_chance = { factor = 40 }
+				FROM = {
+					country_event = { id = EFM_Tibet.17 days = 1 }
+				}
+				add_opinion_modifier = {
+					target = FROM
+					modifier = Nations_estrangement
+				}
+			}
+		option = {
+				name = EFM_Tibet.15.c
+				ai_chance = { factor = 5 }
+				FROM = {
+					country_event = { id = EFM_Tibet.18 days = 1 }
+				}
+				add_opinion_modifier = {
+					target = FROM
+					modifier = Nations_friendly
+				}
+			}
+	}
+# Lhasa declaration (Tibet)
+country_event = {
+	id = EFM_Tibet.16
+	title = EFM_Tibet.16.t
+	picture = GFX_report_event_chinese_soldiers_fighting
+	is_triggered_only = yes
+	desc = EFM_Tibet.16.d
+		option = {
+				name = EFM_Tibet.16.a
+			}
+	}
+country_event = {
+	id = EFM_Tibet.17
+	title = EFM_Tibet.17.t
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	desc = EFM_Tibet.17.d
+		option = {
+				name = EFM_Tibet.17.a
+				add_opinion_modifier = {
+					target = FROM
+					modifier = Nations_estrangement
+				}
+			}
+	}
+country_event = {
+	id = EFM_Tibet.18
+	title = EFM_Tibet.18.t
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	desc = EFM_Tibet.18.d
+		option = {
+				name = EFM_Tibet.18.a
+				add_opinion_modifier = {
+					target = FROM
+					modifier = Nations_friendly
+				}
+			}
+	}

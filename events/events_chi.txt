@@ -1,0 +1,69 @@
+﻿#########################
+## EastAsia Mod Events ##
+#########################
+
+add_namespace = eastasia
+
+
+#收回租界（香港/澳门/广州湾/卢湾区）
+country_event = {
+    id = eastasia.12
+    title = eastasia.12.t
+    desc = eastasia.12.d
+    picture = GFX_china_shouhuizujie
+
+    fire_only_once = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = eastasia.12.a
+        ROOT = { transfer_state = 729 }
+        ROOT = { transfer_state = 728 }
+		ROOT = { transfer_state = 326 }
+	
+		
+    }
+}
+
+#移驻重庆新闻
+news_event = {
+	id = eastasia.102
+	title = eastasia.102.t
+	desc = eastasia.102.d
+	picture = GFX_CXC_chi_qiandu_chongqing_news
+	
+	major = yes
+	
+	trigger = {
+		JAP = { has_war_with = CHI }
+		CHI = { owns_state = 605 }
+		has_global_flag = XXC_liuxiangxunguo
+		NOT = { has_global_flag = chi_qianduchongqing }
+	}
+	
+	immediate = {
+		set_global_flag = chi_qianduchongqing
+	}
+	
+	mean_time_to_happen = {
+    	days = 1
+    }
+	
+	option = {
+		name = eastasia.102.a
+		trigger = { NOT = { TAG = CHI } }
+	}
+	option = {
+		name = eastasia.102.b
+		trigger = { 
+			TAG = CHI
+		}
+		set_capital = 605
+		add_timed_idea = {
+			idea = eastasia_idea_CHI_daqianxi
+			days = 60
+		}
+	}
+}
+

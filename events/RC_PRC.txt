@@ -1,0 +1,188 @@
+﻿add_namespace = realcommunismPRC
+
+country_event = {
+	id = realcommunismPRC.13 #滇系投诚
+	title = realcommunismPRC.13.t
+	desc = realcommunismPRC.13.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PRC
+		strength_ratio = {
+			tag = YUN
+			ratio > 1
+		}
+		country_exists = YUN
+		PRC = { is_puppet = no }
+		
+		OR = { 
+			PRC = { has_war_with = CHI }
+			NOT = { country_exists = CHI }
+		}
+		PRC = {
+			controls_state =605
+			controls_state =603
+		}
+		751 = { is_fully_controlled_by = PRC }
+		752 = { is_fully_controlled_by = PRC }
+		
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		ai_chance = {
+			factor = 1
+		}
+		name = realcommunismPRC.13.a
+		annex_country = { target = YUN transfer_troops = yes }
+		create_corps_commander = {
+	    name = "龙云"
+	    portrait_path = "gfx/leaders/YUN/portrait_yun_long_yun.dds"				
+		skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+	name = "卢汉"
+	portrait_path = "gfx/leaders/GXC/Portrait_Yunnan_Lu_Han.dds"
+	traits = { }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+	}
+	create_corps_commander = {
+	name = "曾泽生"
+	portrait_path = "gfx/leaders/GXC/Portrait_Yunnan_Zheng_Zhesheng.dds"
+	traits = { }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+	}
+	}
+}
+
+country_event = {
+	id = realcommunismPRC.14 #桂系投诚
+	title = realcommunismPRC.14.t
+	desc = realcommunismPRC.14.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PRC
+		strength_ratio = {
+			tag = GXC
+			ratio > 1
+		}
+		country_exists = GXC
+		
+		PRC = { is_puppet = no }
+		
+		OR = { 
+			PRC = { has_war_with = CHI }
+			NOT = { country_exists = CHI }
+		}
+		
+		PRC = {
+			controls_state =750
+		}
+		603 = { is_fully_controlled_by = PRC }
+		602 = { is_fully_controlled_by = PRC }
+		
+		}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		ai_chance = {
+			factor = 1
+		}
+		name = realcommunismPRC.14.a
+		annex_country = { target = GXC transfer_troops = yes }
+		
+	}
+}
+
+
+country_event = {
+	id = realcommunismPRC.15 #粤系投诚
+	title = realcommunismPRC.15.t
+	desc = realcommunismPRC.15.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PRC
+		strength_ratio = {
+			tag = YXC
+			ratio > 1
+		}
+		country_exists = YXC
+		PRC = { is_puppet = no }
+		
+		OR = { 
+			PRC = { has_war_with = CHI }
+			NOT = { country_exists = CHI }
+		}
+		
+		PRC = {
+			controls_state =595
+			controls_state =602
+		}
+		600 = { is_fully_controlled_by = PRC }
+		
+		}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		ai_chance = {
+			factor = 1
+		}
+		name = realcommunismPRC.15.a
+		annex_country = { target = YXC transfer_troops = yes }
+		
+		CHI = {
+				every_army_leader = {
+					if = {
+						limit = {
+							has_id = 65712
+						}
+						set_nationality = PRC
+					}
+				
+				}
+		}
+		YXC = {
+				every_army_leader = {
+					if = {
+						limit = {
+							has_id = 65712
+						}
+						set_nationality = PRC
+					}
+				
+				}
+		}
+		
+	}
+	
+}
+

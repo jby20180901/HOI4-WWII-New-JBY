@@ -1,0 +1,298 @@
+﻿#########################
+## EastAsia Mod Events ##
+#########################
+
+add_namespace = eastasia
+
+
+#两广事件（桂系）导火线
+country_event = {
+	id = eastasia.26
+	title = eastasia.26.t
+	desc = eastasia.26.d
+	picture = GFX_liangguangshijian_01
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		hours = 6
+	}
+	
+	immediate = {
+		set_global_flag = liangguangshijian_daohuoxian
+	}
+	
+	option = {
+		name = eastasia.26.a
+		ai_chance = { factor = 100 }
+		if = {
+				limit = {
+					YXC = {exists = yes}
+				}
+			YXC = { country_event = {  days = 1 id = eastasia.19 } }
+			}
+			
+		if = {
+				limit = {
+					YXC = {exists = no}
+				}
+			PRC = { country_event = eastasia.23 } 
+			}	
+		
+		declare_war_on = { target = CHI type = annex_everything }
+		add_opinion_modifier = { target = YXC modifier = GXC_lianhe_YXC }
+	}
+	option = {
+		name = eastasia.26.b
+		ai_chance = { factor = 0 }
+	}
+	
+}
+
+#两广事件：反蒋联合抗战
+country_event = {
+	id = eastasia.19
+	title = eastasia.19.t
+	desc = eastasia.19.d
+	picture = GFX_liangguangshijian_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = eastasia.19.b
+		ai_chance = { factor = 20 }
+		GXC = {
+	   add_named_threat = { threat = -1 name = GXC_fangjiangkangri   }
+	    }
+		effect_tooltip = {
+			declare_war_on = { target = CHI type = annex_everything }
+		}
+		hidden_effect = {
+			PRC = { country_event = eastasia.23 } 
+			news_event = eastasia.22
+			YXC = { add_opinion_modifier = { target = GXC modifier = GXC_lianhe_YXC } }
+			#declare_war_on = { target = CHI type = annex_everything }
+			add_to_war = {
+				targeted_alliance = GXC
+				enemy = CHI
+			}
+		}
+	}
+}
+#两广事件：吞并粤军
+country_event = {
+	id = eastasia.21
+	title = eastasia.21.t
+	desc = eastasia.21.d
+	picture = GFX_liangguangshijian_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = eastasia.21.a
+	}
+}
+#两广事件：联合反蒋抗战
+news_event = {
+	id = eastasia.22
+	title = eastasia.22.t
+	desc = eastasia.22.d
+	picture = GFX_liangguangshijian_03
+
+	major = yes
+	
+	is_triggered_only = yes
+
+	option = {
+	   
+		name = eastasia.22.a
+		ai_chance = { factor = 100 }
+		
+		immediate = {
+		set_global_flag = liangguangshijian_prc
+	}
+		
+		hidden_effect = {
+			news_event = { id = eastasia.25 days = 3 }
+		}
+	}
+}
+#两广事件：PRC化解
+country_event = {
+	id = eastasia.23
+	title = eastasia.22.t
+	desc = eastasia.22.d
+	picture = GFX_liangguangshijian_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eastasia.23.a
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = eastasia.23.b
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			GXC = { country_event = { days = 60 id = eastasia.24 } }
+			YXC = { country_event = { days = 60  id = eastasia.24 } }
+		}
+	}
+}
+#两广事件：结果
+country_event = {
+	id = eastasia.24
+	title = eastasia.24.t
+	desc = eastasia.24.d
+	picture = GFX_liangguangshijian_02
+
+	is_triggered_only = yes
+	
+	#mean_time_to_happen = { days = 2 }
+	
+	immediate = {
+		set_global_flag = liangguangshijian_chi_leader
+	}
+	
+	option = {
+		name = eastasia.24.a
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = eastasia.24.b
+		
+		ai_chance = { factor = 100 }
+		CHI = { 
+			white_peace = GXC
+			puppet = GXC
+			white_peace = YXC
+			puppet = YXC
+		}
+		hidden_effect = {
+			news_event = { id = eastasia.62 days = 2 }
+		}
+	}
+	option = {
+		name = eastasia.24.c
+		trigger = {
+			AND = {
+				is_ai = yes
+				tag = GXC
+			}
+		}
+		ai_chance = { factor = 100 }
+		CHI = { 
+			
+			white_peace = GXC
+			puppet = GXC
+			white_peace = YXC
+			puppet = YXC
+		}
+		hidden_effect = {
+			news_event = { id = eastasia.62 days = 1 }
+		}
+	}
+} 
+
+#两广事件：毛泽东通电全国
+news_event = {
+	id = eastasia.25
+	title = eastasia.25.t
+	desc = eastasia.25.d
+	picture = GFX_liangguangshijian_04
+	
+	
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	
+	has_global_flag =  liangguangshijian_prc
+	
+	NOT = {
+			has_global_flag = liangguangshijian_prc_huajie
+		}
+	}
+	
+	immediate = {
+		set_global_flag = liangguangshijian_prc_tongdianquanguo
+	}
+	
+	option = {
+		name = eastasia.25.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#两广事件和平解决新闻
+news_event = {
+	id = eastasia.62
+	title = eastasia.62.t
+	desc = eastasia.62.d
+	picture = GFX_GXC_chi_liangguangshijian_leader
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = {
+		set_global_flag = liangguangshijian_chi_leader
+	}
+	
+	option = {
+		name = eastasia.62.a
+		trigger = {
+			NOT = { TAG = CHI }
+			NOT = { TAG = YXC }
+		}
+	}
+	
+	option = {
+		name = eastasia.62.b
+		trigger = {
+			TAG = CHI
+		}
+		
+	set_autonomy = {
+		target = YXC
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.4
+	}
+	
+	set_autonomy = {
+		target = GXC
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.4
+	}
+	
+	
+		
+		
+	GXC = { every_unit_leader = {
+				set_nationality = CHI
+				}
+			}
+		
+	}
+	
+	option = {
+		name = eastasia.62.Z
+		trigger = {
+			 TAG = YXC 
+		}
+	create_country_leader = {
+	name = "余汉谋"
+	desc = " "
+    picture = "gfx/leaders/CHIA/Portrait_China_Chiang_Yu_Hanmou.dds"
+	expire = "9999.1.1"
+	ideology = despotism
+	traits = {
+	
+	china_warlord
+		
+	}
+}
+	}
+}

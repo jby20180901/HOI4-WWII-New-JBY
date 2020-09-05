@@ -1,0 +1,184 @@
+﻿add_namespace = chinaterritory
+
+
+#Hongkong, Macao and Guangzhouwang Issues
+country_event = {
+    id = chinaterritory.2
+    title = chinaterritory.2.t
+    desc = chinaterritory.2.d
+
+    trigger = {
+        controls_state = 283
+        controls_state = 287
+        controls_state = 325
+        controls_state = 328
+        controls_state = 524
+        controls_state = 591
+        controls_state = 592
+        controls_state = 593
+        controls_state = 594
+        controls_state = 595
+        controls_state = 596
+        controls_state = 597
+        controls_state = 598
+        controls_state = 599
+        controls_state = 600
+        controls_state = 601
+        controls_state = 602
+        controls_state = 603
+        controls_state = 604
+        controls_state = 605
+        controls_state = 606
+        controls_state = 607
+        controls_state = 608
+        controls_state = 609
+        controls_state = 610
+        controls_state = 611
+        controls_state = 612
+        controls_state = 613
+        controls_state = 614
+        controls_state = 615
+        controls_state = 616
+        controls_state = 617
+        controls_state = 618
+        controls_state = 619
+        controls_state = 620
+        controls_state = 621
+        controls_state = 622
+        controls_state = 714
+        controls_state = 715
+        controls_state = 716
+        controls_state = 717
+        is_puppet = no
+        SIK = { exists = no }
+        OR = {
+            AND = {
+                tag = SHX
+                PRC = { exists = no }
+                CHI = { exists = no }
+                XSM = { exists = no }
+                GXC = { exists = no }
+                YUN = { exists = no }
+            }
+            AND = {
+                tag = PRC
+                SHX = { exists = no }
+                CHI = { exists = no }
+                XSM = { exists = no }
+                GXC = { exists = no }
+                YUN = { exists = no }
+            }
+            AND = {
+                tag = CHI
+                SHX = { exists = no }
+                PRC = { exists = no }
+                XSM = { exists = no }
+                GXC = { exists = no }
+                YUN = { exists = no }
+            }
+            AND = {
+                tag = XSM
+                SHX = { exists = no }
+                CHI = { exists = no }
+                PRC = { exists = no }
+                GXC = { exists = no }
+                YUN = { exists = no }
+            }
+            AND = {
+                tag = GXC
+                SHX = { exists = no }
+                CHI = { exists = no }
+                XSM = { exists = no }
+                PRC = { exists = no }
+                YUN = { exists = no }
+            }
+            AND = {
+                tag = YUN
+                SHX = { exists = no }
+                CHI = { exists = no }
+                XSM = { exists = no }
+                PRC = { exists = no }
+                GXC = { exists = no }
+            }
+        }
+        OR = {
+            AND = {
+                MON = { exists = yes }
+                330 = { is_owned_by = MON }
+            }
+            AND = {
+                TAN = { exists = yes }
+                329 = { is_owned_by = TAN }
+            }
+        }
+        
+    }
+
+
+    mean_time_to_happen = {
+        days = 1
+        modifier = {
+            factor = 999999
+           
+        }
+    }
+
+    option = {
+        name = chinaterritory.2.a
+        ai_chance = { factor = 100 }
+        if = {
+            limit = {
+                326 = { is_owned_by = ENG }
+            }
+            ROOT = { transfer_state = 326 }
+            ENG = { add_opinion_modifier = { target = ROOT modifier = china_take_hongkong }}
+            326 = { add_core_of = ROOT }
+            add_named_threat = { threat = -1 name = chinaterritory.hongkong }
+            ROOT = { set_country_flag = united_china_hongkong }
+        }
+        if = {
+            limit = {
+                729 = { is_owned_by = POR }
+            }
+            ROOT = { transfer_state = 729 }
+            POR = { add_opinion_modifier = { target = ROOT modifier = china_take_macao }}
+            729 = { add_core_of = ROOT }
+            add_named_threat = { threat = -1 name = chinaterritory.macao }
+            ROOT = { set_country_flag = united_china_macao }
+        }
+        if = {
+            limit = {
+                728 = { is_owned_by = FRA }
+            }
+            ROOT = { transfer_state = 728 }
+            FRA = { add_opinion_modifier = { target = ROOT modifier = china_take_guangzhouwang }}
+            728 = { add_core_of = ROOT }
+            add_named_threat = { threat = -1 name = chinaterritory.guangzhouwang }
+            ROOT = { set_country_flag = united_china_guangzhouwang }
+        }
+        ROOT = { set_country_flag = united_china_south }
+    }
+
+    option = {
+        name = chinaterritory.2.b
+        if = {
+            limit = {
+                326 = { is_owned_by = ENG }
+            }
+            ENG = { add_opinion_modifier = { target = ROOT modifier = china_retain_hongkong }}
+        }
+        if = {
+            limit = {
+                729 = { is_owned_by = POR }
+            }
+            POR = { add_opinion_modifier = { target = ROOT modifier = china_retain_macao }}
+        }
+        if = {
+            limit = {
+                728 = { is_owned_by = FRA }
+            }
+            FRA = { add_opinion_modifier = { target = ROOT modifier = china_retain_guangzhouwang }}
+        }
+        ROOT = { set_country_flag = united_china_south }
+    }
+}

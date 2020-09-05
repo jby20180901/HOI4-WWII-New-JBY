@@ -1,0 +1,245 @@
+﻿#########################
+#  China Empire Events  #
+#########################
+
+add_namespace = princess_china_empire
+
+# 帝国的新首都
+country_event = {
+	id = princess_china_empire.1
+	title = princess_china_empire.1.t
+	desc = princess_china_empire.1.d
+	picture = GFX_princess_long_yi_1
+	
+	is_triggered_only = yes
+	
+	# 迁都北京【顺天】
+	option = {
+		name = princess_china_empire.1.a
+		custom_effect_tooltip = CHN_shun_tian_tt
+		trigger = {
+			owns_state = 608
+		}
+		hidden_effect = {
+			set_capital = 608
+		}
+		608 = { set_state_name = "顺天" }
+		set_province_name = { id = 9843 name = "顺天" }
+	}
+	
+	# 迁都南京【应天】
+	option = {
+		name = princess_china_empire.1.b
+		custom_effect_tooltip = CHN_ying_tian_tt
+		trigger = {
+			owns_state = 598
+		}
+		hidden_effect = {
+			set_capital = 598
+		}
+		598 = { set_state_name = "应天" }
+		set_province_name = { id = 11913 name = "应天" }
+	}
+	
+	# 迁都西安【神都】
+	option = {
+		name = princess_china_empire.1.c
+		custom_effect_tooltip = CHN_shen_du_tt
+		trigger = {
+			owns_state = 744
+		}
+		hidden_effect = {
+			set_capital = 744
+		}
+		744 = { set_state_name = "洛阳" }
+		set_province_name = { id = 7418 name = "神都" }
+	}
+	
+	# 无需迁都
+	option = {
+		name = princess_china_empire.1.e
+		custom_effect_tooltip = CHN_bu_qian_du_tt
+	}
+	
+}
+
+# 中国要求我们臣服
+country_event = {
+	id = princess_china_empire.2
+	title = princess_china_empire.2.t
+	desc = princess_china_empire.2.d
+	picture = GFX_princess_changdu_zhanyi_1
+	
+	is_triggered_only = yes
+	
+	# 中国曾经将我们的大片领土割让出去！
+	option = {
+		name = princess_china_empire.2.a
+		
+		FROM = {
+			country_event = { id = princess_china_empire.4 }
+		}
+	}
+	
+	# 我们无力与中国抗衡！
+	option = {
+		name = princess_china_empire.2.b
+		
+		FROM = {
+			country_event = { id = princess_china_empire.3 }
+		}
+	}
+	
+}
+
+# 西藏臣服了
+country_event = {
+	id = princess_china_empire.3
+	title = princess_china_empire.3.t
+	desc = princess_china_empire.3.d
+	picture = GFX_princess_changdu_zhanyi_1
+	
+	is_triggered_only = yes
+	
+	# 这样很好！
+	option = {
+		name = princess_china_empire.3.a
+		
+		annex_country = { target = TIB transfer_troops = no }
+	}
+	
+}
+
+# 西藏拒绝臣服
+country_event = {
+	id = princess_china_empire.4
+	title = princess_china_empire.4.t
+	desc = princess_china_empire.4.d
+	picture = GFX_princess_changdu_zhanyi_1
+	
+	is_triggered_only = yes
+	
+	# 那就只有开战了！
+	option = {
+		name = princess_china_empire.4.a
+		
+		create_wargoal = {
+			type = annex_everything
+			target = TIB
+		}
+	}
+	
+}
+
+# 中国要求我们投降
+country_event = {
+	id = princess_china_empire.5
+	title = princess_china_empire.5.t
+	desc = princess_china_empire.5.d
+	picture = GFX_princess_wei_manzhouguo_1
+	
+	is_triggered_only = yes
+	
+	# 我们是个非法政权！
+	option = {
+		name = princess_china_empire.5.a
+		
+		FROM = {
+			country_event = { id = princess_china_empire.6 }
+		}
+	}
+	
+	# 我们绝不投降！
+	option = {
+		name = princess_china_empire.5.a
+		
+		FROM = {
+			country_event = { id = princess_china_empire.7 }
+		}
+	}
+	
+}
+
+# 满洲承认他们是非法政权
+country_event = {
+	id = princess_china_empire.6
+	title = princess_china_empire.6.t
+	desc = princess_china_empire.6.d
+	picture = GFX_princess_wei_manzhouguo_1
+	
+	is_triggered_only = yes
+	
+	# 很好！
+	option = {
+		name = princess_china_empire.6.a
+		
+		annex_country = { target = MAN transfer_troops = no }
+	}
+	
+}
+
+# 满洲不承认他们是非法政权
+country_event = {
+	id = princess_china_empire.7
+	title = princess_china_empire.7.t
+	desc = princess_china_empire.7.d
+	picture = GFX_princess_wei_manzhouguo_1
+	
+	is_triggered_only = yes
+	
+	# 那就只有开战了！
+	option = {
+		name = princess_china_empire.7.a
+		
+		create_wargoal = {
+			type = annex_everything
+			target = MAN
+		}
+	}
+	
+}
+
+# 人造卫星试验成功
+country_event = {
+	id = princess_china_empire.8
+	title = princess_china_empire.8.t
+	desc = princess_china_empire.8.d
+	picture = GFX_princess_huo_jian_1
+	
+	is_triggered_only = yes
+	
+	# 中国现在是说话算数的！
+	option = {
+		name = princess_china_empire.8.a
+		
+		add_ideas = princess_zouxiang_fanrongfuqiang_1_idea
+		news_event = { hours = 12 id = princess_news.8 }
+	}
+	
+}
+
+# 成为世界航天史第一
+country_event = {
+	id = princess_china_empire.9
+	title = princess_china_empire.9.t
+	desc = princess_china_empire.9.d
+	picture = GFX_princess_huo_jian_1
+	
+	is_triggered_only = yes
+	
+	# 要敢于做世界第一！
+	option = {
+		name = princess_china_empire.9.a
+		
+		swap_ideas = {
+			remove_idea = princess_zouxiang_fanrongfuqiang_1_idea
+			add_idea = princess_zouxiang_fanrongfuqiang_2_idea
+		}
+		news_event = { hours = 12 id = princess_news.9 }
+	}
+	
+}
+
+
+
+

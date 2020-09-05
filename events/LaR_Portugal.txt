@@ -1,0 +1,1196 @@
+﻿###########################
+# Portugal Events
+###########################
+
+add_namespace = portugal
+
+#discuss_federation at BRA
+country_event = {
+	id = portugal.1
+	title = portugal.1.t
+	desc = portugal.1.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	#has_completed_focus
+	option = {#yes
+	name = portugal.1.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = 9
+				POR = {has_country_flag = POR_conference_discussion_1}
+			}
+			modifier = {
+				add = 19
+				POR = {has_country_flag = POR_conference_discussion_2}
+			}
+			modifier = {
+				add = 24
+				POR = {has_country_flag = POR_conference_discussion_3}
+			}
+			modifier = {
+				add = 34
+				POR = {has_country_flag = POR_conference_discussion_4}
+			}
+			modifier = {
+				add = 49
+				POR = {has_country_flag = POR_conference_discussion_5}
+			}
+			modifier = {
+				factor = 0.5
+				POR = { has_completed_focus = POR_contVINe_estado_novo }
+			}
+			modifier = {
+				add = 10
+				POR = { has_completed_focus = POR_economic_partnership_brazil }
+			}
+			modifier = {
+				factor = 0.8
+				POR = { has_government = communism }
+			}
+			modifier = {
+				add = 2
+				POR = { has_government = fascism }
+			}
+		}
+		POR = {country_event = { id = portugal.2 hours = 12 }}
+	}
+	option = {#no
+	name = portugal.1.b
+		ai_chance = {
+			base = 39
+			modifier = {
+				add = -9
+				POR = {has_country_flag = POR_conference_discussion_1}
+			}
+			modifier = {
+				add = -19
+				POR = {has_country_flag = POR_conference_discussion_2}
+			}
+			modifier = {
+				add = -29
+				POR = {has_country_flag = POR_conference_discussion_3}
+			}
+			modifier = {
+				add = -34
+				POR = {has_country_flag = POR_conference_discussion_4}
+			}
+			modifier = {
+				add = -39
+				POR = {has_country_flag = POR_conference_discussion_5}
+			}
+		}
+		POR = {country_event = { days = 1 id = portugal.3 }}
+	}
+	option = {#dominion
+	name = portugal.1.c
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 5
+				POR = {has_country_flag = POR_conference_discussion_3}
+			}
+			modifier = {
+				add = -10
+				POR = {has_country_flag = POR_conference_discussion_5}
+			}
+		}
+		POR = {country_event = { days = 1 id = portugal.4 }}
+	}
+}
+
+country_event = {#yes
+	id = portugal.2
+	title = portugal.2.t
+	desc = portugal.2.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { #cool
+		name = portugal.2.a
+		set_country_flag = POR_success_conference
+	}
+}
+country_event = {#no
+	id = portugal.3
+	title = portugal.3.t
+	desc = portugal.3.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.3.a
+	}
+}
+country_event = {#dominion
+	id = portugal.4
+	title = portugal.4.t
+	desc = portugal.4.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.4.a
+		set_autonomy = {
+			target = BRA
+			autonomy_state = autonomy_dominion
+		}
+	}
+}
+######################################################
+# pact iberico
+
+country_event = {#at spain
+	id = portugal.5
+	title = portugal.5.t
+	desc = portugal.5.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.5.a
+		POR = {country_event = { days = 1 id = portugal.6 }}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = portugal.5.b
+		POR = {country_event = { days = 1 id = portugal.7 }}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = portugal.6
+	title = portugal.6.t
+	desc = portugal.6.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.6.a
+			random_other_country = {
+				limit = {
+					original_tag = SPR
+				}
+				add_ideas = pact_iberico
+				add_opinion_modifier = { target = POR modifier = POR_pact_iberico_op }
+			}
+			add_ideas = pact_iberico
+	}
+}
+
+country_event = {
+	id = portugal.7
+	title = portugal.7.t
+	desc = portugal.7.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.7.a
+		add_political_power = -10
+		add_war_support = 0.10
+	}
+}
+
+###################################################
+#Berlin conference
+
+country_event = {
+	id = portugal.8
+	title = portugal.8.t
+	desc = portugal.8.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.8.a
+		add_political_power = -10
+		add_manpower = 20000
+		POR = {
+	    	transfer_state = 295
+		}
+		POR = {country_event = { days = 1 id = portugal.9 }}
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = 10
+				POR = { has_army_manpower = { size > 100000 } }
+			}
+			modifier = {
+				add = 10
+				POR = { has_army_manpower = { size > 150000 } }
+			}
+			modifier = {
+				add = 15
+				POR = { has_army_manpower = { size > 200000 } }
+			}
+			modifier = {
+				add = 10
+				BEL = { has_army_manpower = { size < 100000 } }
+			}
+		}
+	}
+	option = {
+		name =portugal.8.b
+		add_political_power = -10
+		add_stability = -0.025
+		POR = {
+			create_wargoal = {
+				type = take_state_focus
+				target = BEL
+				generator = { 295 }
+			}
+		}
+		POR = {country_event = { days = 1 id = portugal.10 }}
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0.5
+				BEL = { has_army_manpower = { size < 100000 } }
+			}
+			modifier = {
+				factor = 0
+				BEL = { has_army_manpower = { size < 50000 } }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = portugal.9
+	title = portugal.9.t
+	desc = portugal.9.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.9.a
+	}
+}
+
+country_event = {
+	id = portugal.10
+	title = portugal.10.t
+	desc = portugal.10.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.10.a
+		add_war_support = 0.02
+	}
+}
+###################################################
+country_event = {
+	id = portugal.11
+	title = portugal.11.t
+	desc = portugal.11.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+			name = portugal.11.a
+			start_civil_war = {
+				ruling_party = neutrality
+				ideology = ROOT
+				size = 0.3
+				only_own_territory = no
+				capital = 180
+				states = { 180 179 698 540 544 321 721}
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = POR_loyalist_party_long
+				name = POR_loyalist_party
+			}
+			create_country_leader = {
+				name = "摄政理事会"
+				picture = "Portrait_por_council.dds"
+				expire = "1965.1.1"
+				ideology = Centrism
+				traits = { regent_assembly_portugal_mp4 }
+			}
+			add_manpower = 20000
+			add_political_power = 150
+	}
+}
+######################################################
+##
+##  border conflict
+##( station urguay )
+######################################################
+country_event = {
+	id = portugal.12
+	title = portugal.12.t
+	desc = portugal.12.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.12.a
+		trigger = {
+			original_tag = POR
+		}
+		POR = {country_event = { days = 3 id = portugal.13 }}
+	}
+	option = {
+		name = portugal.12.b
+		trigger = {
+			original_tag = URG
+		}
+	}
+}
+country_event = {
+	id = portugal.13
+	title = portugal.13.t
+	desc = portugal.13.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {#annex
+		name = portugal.13.a
+		annex_country = {
+			target = URG
+			transfer_troops = no
+		}
+		every_state = {
+			limit = {
+				is_core_of = URG
+			}
+			add_core_of = POR
+		}
+
+	}
+}
+
+country_event = {
+	id = portugal.14
+	title = portugal.14.t
+	desc = portugal.14.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.14.a
+		trigger = {
+			original_tag = POR
+		}
+		add_political_power = -50
+	}
+	option = {
+		name = portugal.14.b
+		trigger = {
+			original_tag = URG
+		}
+		add_political_power = 150
+		add_manpower = 50000
+		add_stability = 0.15
+		army_experience = 150
+	}
+}
+
+country_event = {
+	id = portugal.15
+	title = portugal.15.t
+	desc = portugal.15.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.15.a
+		trigger = {
+			original_tag = POR
+		}
+		add_political_power = -25
+	}
+	option = {
+		name = portugal.15.b
+		trigger = {
+			original_tag = URG
+		}
+		add_political_power = 25
+		add_manpower = 10000
+		add_stability = 0.05
+		army_experience = 50
+	}
+}
+######################################################
+#Morroco
+######################################################
+country_event = {
+	id = portugal.16
+	title = portugal.16.t
+	desc = portugal.16.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.16.a
+		POR = {country_event = { days = 3 id = portugal.17 }}
+		POR = { 
+			transfer_state = 461
+			transfer_state = 462
+		}
+		diplomatic_relation = {
+			country = POR
+			relation = non_aggression_pact
+			active = yes
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0.9
+				FRA = { is_faction_leader = yes }
+			}
+		}
+	}
+	option = {
+		name = portugal.16.b
+		POR = {country_event = { days = 3 id = portugal.18 }}
+
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0.1
+				FRA = { has_civil_war = yes }
+			}
+			modifier = {
+				factor = 0.1
+				FRA = { is_major = no }
+			}
+			modifier = {
+				factor = 0.5
+				FRA = { has_war = yes}
+			}
+			modifier = {
+				factor = 0.0
+				FRA = { has_capitulated = yes }
+			}
+			modifier = {
+				factor = 0.6
+				HOL = { has_capitulated = yes }
+			}
+			modifier = {
+				factor = 0.6
+				BEL = { has_capitulated = yes }
+			}
+			modifier = {
+				factor = 0.6
+				LUX = { has_capitulated = yes }
+			}
+			modifier = {
+				factor = 0.8
+				POL = { has_capitulated = yes }
+			}
+			modifier = {
+				factor = 0.5
+				ENG = { has_capitulated = yes }
+			}
+			modifier = {
+				factor = 0.2
+				has_war_with = ENG
+			}
+			modifier = {
+				factor = 0.5
+				has_war_with = ITA
+			}
+			modifier = {
+				factor = 0.5
+				has_war_with = GER
+			}
+			modifier = {
+				factor = 0.5
+				has_war_with = JAP
+			}
+			modifier = {
+				factor = 0.5
+				has_war_with = SOV
+			}
+			modifier = {
+				factor = 0.5
+				has_war_with = USA
+			}
+			modifier = {
+				factor = 0.5
+				has_war_with = SPR
+			}
+		}
+	}
+}
+
+country_event = {
+	id = portugal.17
+	title = portugal.17.t
+	desc = portugal.17.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.17.a
+	}
+}
+
+country_event = {
+	id = portugal.18
+	title = portugal.18.t
+	desc = portugal.18.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.18.a
+		add_state_claim = 461
+		add_state_claim = 462
+		create_wargoal = {
+			type = take_state_focus
+			target = FRA
+			generator = { 461 }
+			generator = { 462 }
+		}
+	}
+}
+
+###################################################
+# demand zimbabwe
+#
+country_event = {
+	id = portugal.19
+	title = portugal.19.t
+	desc = portugal.19.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.19.a
+		if = {
+			limit = { POR = { has_country_flag = demandzim_545 } }
+	    	POR = { transfer_state = 545 }
+		}
+		if = {
+			limit = { POR = { has_country_flag = demandzim_542 } }
+	    	SAF = { transfer_state = 542 }
+		}
+		if = {
+			limit = { POR = { has_country_flag = demandzim_770 } }
+	    	POR = { transfer_state = 770 }
+		}
+		if = {
+			limit = { POR = { has_country_flag = demandzim_771 } }
+	    	POR = { transfer_state = 771 }
+		}
+		POR = {country_event = { days = 1 id = portugal.20 }}
+		ai_chance = {
+			base = 2
+			modifier = {
+				add = 10
+				has_completed_focus = ENG_home_defence
+			}
+			modifier = {
+				add = 25
+				AND = {
+					has_completed_focus = ENG_concessions_to_the_trade_unions
+					NOT = { has_government = communism }
+				}
+			}
+			modifier = {
+				add = 20
+				has_government = ROOT
+			}
+		}
+	}
+	option = {
+		name = portugal.19.b
+		POR = {country_event = { days = 1 id = portugal.21 }}
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = 5
+				has_completed_focus = ENG_global_defense
+			}
+			modifier = {
+				add = 10
+				has_completed_focus = ENG_maintaining_imperial_integrity
+			}
+		}
+	}
+}
+
+country_event = {
+	id = portugal.20
+	title = portugal.20.t
+	desc = portugal.20.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.20.a
+	}
+}
+
+country_event = {
+	id = portugal.21
+	title = portugal.21.t
+	desc = portugal.21.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.21.a
+		create_wargoal = {
+			type = take_state_focus
+			target = ENG
+			generator = { 545 }
+			generator = { 770 }
+			generator = { 771 }
+		}
+	}
+}
+
+########################
+# request zimbabwe
+#
+
+country_event = {
+	id = portugal.22
+	title = portugal.22.t
+	desc = portugal.22.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.22.a
+		POR = {
+			transfer_state = 545
+	    	transfer_state = 770
+	    	transfer_state = 771
+	    }
+	    if = {
+	    	limit = { ENG = { controls_state = 542 } }
+			SAF = {
+				transfer_state = 542
+		    }
+	    }
+	    add_political_power = 50
+	    add_stability = 0.1
+	    POR = {country_event = { days = 1 id = portugal.20 }}
+		ai_chance = {
+			base = 5
+			modifier = {
+				add = 10
+				has_completed_focus = ENG_home_defence
+			}
+			modifier = {
+				add = 25
+				AND = {
+					has_completed_focus = ENG_concessions_to_the_trade_unions
+					NOT = { has_government = communism }
+				}
+			}
+			modifier = {
+				add = 20
+				has_government = ROOT
+			}
+		}
+	}
+	option = {
+		name = portugal.22.b
+		add_political_power = -10
+		POR = {country_event = { days = 1 id = portugal.23 }}
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = 5
+				has_completed_focus = ENG_global_defense
+			}
+			modifier = {
+				add = 10
+				has_completed_focus = ENG_maintaining_imperial_integrity
+			}
+		}
+	}
+}
+
+country_event = {
+	id = portugal.23
+	title = portugal.23.t
+	desc = portugal.23.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.23.a
+	}
+}
+
+##########################################################
+# cape
+#
+
+country_event = {# at england
+	id = portugal.24
+	title = portugal.24.t
+	desc = portugal.24.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.24.a
+		POR = {
+			set_autonomy = {
+				target = SAF
+				autonomy_state = autonomy_dominion
+			}
+		}
+		POR = {country_event = { days = 1 id = portugal.25 }}
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 20
+				AND = {
+					has_completed_focus = ENG_concessions_to_the_trade_unions
+					NOT = { has_government = communism }
+				}
+			}
+			modifier = {
+				add = 10
+				has_war_support < 0.5
+			}
+			modifier = {
+				add = 10
+				has_war_support < 0.3
+			}
+			modifier = {
+				add = 15
+				has_war_support < 0.2
+			}
+			modifier = {
+				add = 15
+				has_war_support < 0.1
+			}
+		}
+	}
+	option = {
+		name = portugal.24.b
+		POR = {
+			create_wargoal = {
+				type = take_state_focus
+				target = SAF
+				generator = { 681 }
+			}
+		}
+		POR = {country_event = { days = 1 id = portugal.26 }}
+		ai_chance = {
+			base = 25
+		}
+	}
+}
+
+country_event = {
+	id = portugal.25
+	title = portugal.25.t
+	desc = portugal.25.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.25.a
+	}
+}
+
+country_event = {
+	id = portugal.26
+	title = portugal.26.t
+	desc = portugal.26.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.26.a
+	}
+}
+
+#######################
+#england_courage
+
+country_event = {
+	id = portugal.27
+	title = portugal.27.t
+	desc = portugal.27.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.27.a
+		army_experience = 10
+		add_manpower = 2000
+		add_war_support = 0.05
+		give_guarantee = POR
+		POR = {country_event = { days = 1 id = portugal.28 }}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = portugal.27.b
+		add_political_power = 50
+		POR = {country_event = { days = 1 id = portugal.29 }}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = {
+	id = portugal.28
+	title = portugal.28.t
+	desc = portugal.28.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.28.a
+		army_experience = 25
+		navy_experience = 25
+		air_experience = 25
+		add_war_support = 0.05
+		add_manpower = 2000
+	}
+}
+
+country_event = {
+	id = portugal.29
+	title = portugal.29.t
+	desc = portugal.29.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.29.a
+	}
+}
+
+##############################################
+#Salazar assasination
+#
+
+country_event = {
+	id = portugal.30
+	title = portugal.30.t
+	desc = portugal.30.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.30.a
+		add_stability = -0.4
+		add_political_power = -5
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.3
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.10
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "安东尼奥·卡尔莫纳"
+				desc = "POLITICS_ANTONIO_CARMONA_DESC"
+				picture = "Portrait_Portugal_ANTONIO_CARMONA.dds"
+				expire = "1965.1.1"
+				ideology = socialism
+				traits = { Anti_Democrat }
+			}
+			hidden_effect = {
+			create_country_leader = {
+				name = "安东尼奥·卡尔莫纳"
+				desc = "POLITICS_ANTONIO_CARMONA_DESC"
+				picture = "Portrait_Portugal_ANTONIO_CARMONA.dds"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = { Anti_Democrat }
+			}
+			create_country_leader = {
+				name = "安东尼奥·卡尔莫纳"
+				desc = "POLITICS_ANTONIO_CARMONA_DESC"
+				picture = "Portrait_Portugal_ANTONIO_CARMONA.dds"
+				expire = "1965.1.1"
+				ideology = Falangism
+				traits = { Anti_Democrat }
+			}
+			}
+	}
+}
+
+country_event = {
+	id = portugal.31
+	title = portugal.31.t
+	desc = portugal.31.d
+	picture = GFX_report_event_generic_ruins
+	
+	trigger = {
+		tag = POR
+		has_idea = political_war_mp4
+		OR = {
+			NOT = { has_completed_focus = POR_democratic_government }
+			NOT = { has_completed_focus = POR_king_return }
+			NOT = { has_completed_focus = POR_overturn_estado_novo }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 96
+	}
+	
+	option = {
+		name = portugal.31.a
+		random_owned_controlled_state = {
+			limit = { is_in_home_area = yes }
+			damage_building = {
+			    type = infrastructure
+			    damage = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = portugal.32
+	title = portugal.32.t
+	desc = portugal.32.d
+	picture = GFX_report_event_generic_ruins
+	
+	trigger = {
+		tag = POR
+		has_idea = political_war_mp4
+		OR = {
+			NOT = { has_completed_focus = POR_overturn_estado_novo }
+			NOT = { has_completed_focus = POR_king_return }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 48
+	}
+	
+	option = {
+		name = portugal.32.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.025
+		}
+		add_political_power = -5
+	}
+}
+
+country_event = {
+	id = portugal.33
+	title = portugal.33.t
+	desc = portugal.33.d
+	picture = GFX_report_event_generic_ruins
+	
+	trigger = {
+		tag = POR
+		has_idea = political_war_mp4
+	}
+	
+	mean_time_to_happen = {
+		days = 70
+	}
+	
+	option = {
+		name = portugal.33.a
+		random_owned_controlled_state = {
+			limit = { is_in_home_area = yes }
+			damage_building = {
+			    type = infrastructure
+			    damage = 1
+			}
+		}
+	}
+}
+
+#################################
+#USA guarantee
+
+country_event = {
+	id = portugal.34
+	title = portugal.34.t
+	desc = portugal.34.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {#yes
+		name = portugal.34.a
+
+		POR = { give_military_access = USA }
+		give_guarantee = POR
+		hidden_effect = {
+			POR = {country_event = { hours = 6 id = portugal.35 }}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {#no
+		name = portugal.34.b
+		hidden_effect = {
+			POR = {country_event = { hours = 6 id = portugal.36 }}
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 1
+				POR = { has_government = fascism }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = portugal.35
+	title = portugal.35.t
+	desc = portugal.35.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.35.a
+	}
+}
+
+country_event = {
+	id = portugal.36
+	title = portugal.36.t
+	desc = portugal.36.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.36.a
+	}
+}
+
+
+#####################################
+#fascism spain non aggression
+
+country_event = {
+	id = portugal.37
+	title = portugal.37.t
+	desc = portugal.37.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.37.a
+
+		diplomatic_relation = {
+			country = POR
+			relation = non_aggression_pact
+			active = yes
+		}
+
+		ai_chance = {
+			base = 5
+			modifier = {
+				add = 1
+				POR = { has_government = fascism }
+			}
+		}
+	}
+	option = {
+		name = portugal.37.b
+
+		set_country_flag = POR_D01_NON_AGGRESSION_CANCEL
+
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 1
+				POR = { has_government = communism }
+			}
+		}
+	}
+
+}
+
+
+#######################################
+#at spain for invasion news
+country_event = {
+	id = portugal.38
+	title = portugal.38.t
+	desc = portugal.38.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.38.a
+		add_state_claim = 171
+	}
+}
+
+country_event = {
+	id = portugal.39
+	title = portugal.39.t
+	desc = portugal.39.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = portugal.39.a
+			add_state_claim = 297
+			add_state_claim = 290
+			add_state_claim = 783
+			add_state_claim = 699
+	}
+}

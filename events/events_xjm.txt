@@ -1,0 +1,28 @@
+﻿#########################
+## EastAsia Mod Events ##
+#########################
+
+add_namespace = xjm
+
+#碦什之乱
+country_event = {
+	id = xjm.1
+	title = xjm.1.t
+	desc = xjm.1.desc
+	
+	picture = GFX_cb7jl-ueah8
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes	
+	
+	option = {
+		name = xjm.1.a
+		XJM = {
+		remove_state_claim = 287
+		remove_state_claim = 759
+		}
+        SIK = { annex_country = { target = XJM transfer_troops = yes } }
+	}
+
+}
