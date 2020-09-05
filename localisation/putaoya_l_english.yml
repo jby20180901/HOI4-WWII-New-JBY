@@ -1,0 +1,749 @@
+﻿l_english:
+ POR_colony_uplifting:0"海外殖民地政策"
+ POR_colony_uplifting_desc:0"我国拥有的殖民地仅次于列强各国。不仅是本国，与殖民地一起发展才是我国生存之道。 "
+ POR_austerity:0"紧缩政策"
+ POR_austerity_desc:0"伊比利亚半岛与德国、法国等大国相比在工业上处于劣势。必须通过团结国民来提高国力。 "
+ POR_industrial_a:0"工业发展""
+ POR_industrial_a_desc:0"为了提高国力，政府将致力于民间工业。"
+ POR_spain_civilwar:0"介入西班牙内战"
+ POR_spain_civilwar_desc:0"在西班牙发生了内战。动摇可能会蔓延到国民，对此，我国应该制定一些政策。"
+ POR_continue_estado_novo:0"爱斯塔德·诺沃连任"
+ POR_continue_estado_novo_desc:0"由萨拉泽尔首相担任的现政权"爱斯塔德·诺沃"做得很好。要引导我国更加稳定，就必须团结他原来的国家。""
+ POR_new_government:0"暗杀萨拉泽尔"
+ POR_new_government_desc:0"构筑独裁体制的现政权的实质性的首班，对萨拉泽尔首相暗杀计划高涨着。如果这次成功的话，葡萄牙全体肯定会产生巨大的动摇。"
+ POR_decolonization:0"去殖民地化"
+ POR_decolonization_desc:0" 应该抛弃以往的旧观念。即使紧紧抓住屈辱的柏林会议，也不应该继续殖民地政策。在现殖民地建立自治政府，和他们一起走过新时代。"
+ POR_military_research:0"推进军事研究"
+ POR_military_research_desc:0"科学技术在这个时代突飞猛进，军事武器和学说的发展也一样迅速。有必要革新陆军装备。"
+ POR_fighter:0"保卫祖国蓝天"
+ POR_fighter_desc:0"驱逐机实际上就是战斗机，中国一般也叫歼击机。不过驱逐机的主要任务是保卫自己的领空，即驱逐自己领空上敌方的战斗机，驱逐机也由次得名。"
+ POR_invasion:0"登陆战的制定"
+ POR_invasion_desc:0"我国大西洋散布着许多岛屿，把这个作为桥头保，准备几个攻击计划是很重要的。"
+ POR_wartime_law:0"通过战时法"
+ POR_wartime_law_desc:0"我们准备的紧急事态案很遗憾地变成了有效的。为进一步扩大战祸，必须进一步加深国民的团结"
+ POR_keep_desperately:0"死守命令"
+ POR_keep_desperately_desc:0"死守命令"
+ POR_fortless:0"本国要塞化"
+ POR_fortless_desc:0"不仅在西班牙内战，在整个欧洲动荡不安的现在，在本国建立要塞，预先准备防卫计划可以说是紧急的课题。"
+ POR_doctrine:0"学说发展"
+ POR_doctrine_desc:0"在前一场战争中看到的陆战原则已经过时了。必须作出政治努力才能取得这一进展。"
+ POR_emergency_moblization:0"紧急动员"
+ POR_emergency_moblization_desc:0"战祸正在扩大，我们的军备还不够充足。"
+ POR_war_support:0"战时下的团结"
+ POR_war_support_desc:0"全世界都在发生动荡不安。为防备紧急事态，事先推进法律整备比较好吧。"
+ POR_private_ship:0"征用私人船只"
+ POR_private_ship_desc:0"对我国来说连接海洋间的运输网是生命线。如果仅仅靠国家保有的运输船是无法支撑住这些的，那么能够依靠的只有民间的义勇吧。"
+ POR_mobilization:0"动员法"
+ POR_mobilization_desc:0"对于扩大战争，我们必须扩大征兵法。这是国民每个人都履行义务的时刻"
+ POR_wartime_research:0"战时研究"
+ POR_wartime_research_desc:0"即使在战争时期，也不可能停止军队的研究。有必要把更多的人才投入到多德林研究中去。"
+ POR_colony_division:0"殖民地征兵"
+ POR_colony_division_desc:0"我们拥有庞大的海外殖民地，鉴于今后的国际形势，有必要请殖民地的兄弟们协助我们保卫祖国。"
+ POR_industrial_c:0"城市工程"
+ POR_industrial_c_desc:0"优秀的城市首先由其运输网组成。整顿本国的基础设施，作为进一步发展的粮食。"
+ POR_colony_industrial:0"殖民地工业"
+ POR_colony_industrial_desc:0"我们所拥有的殖民地目前只是一个巨大的人口市场。发展大量工业，将有效扩大我国的利益。。"
+ POR_colony_empire:0"葡萄牙海上帝国"
+ POR_colony_empire_desc:0"曾经把大西洋作为内海，通过喜望峰周围的交易构筑了新时代的列强，也已经从人们的记忆中消失很久了。为了以往的荣耀为目标，我们应该付出任何努力。"
+ POR_colony_claim:0"取回荣耀"
+ POR_colony_claim_desc:0"西非、东非沿岸、印度、乃至东南亚，我们的帝国必须夺回曾经的辉煌。"
+ POR_clear_confusion:0"政治稳定"
+ POR_clear_confusion_desc:0"萨拉泽尔首相被暗杀以后，政治陷入了极大的混乱。但是，我们终于团结成了一个意识形态。现在是葡萄牙发展的目标和共同前进的时刻。"
+ POR_national_research_a:0"采用殖民地的科学家"
+ POR_national_research_a_desc:0"为了技术开发，探讨迎接殖民地的有力的科学家们到本国吧。"
+ POR_demand_morroco:0"收回摩洛哥"
+ POR_demand_morroco_desc:0"北非曾是我们葡萄牙人流血汗的最初荣幸。法国政府体弱多端，可能会要求这个的。"
+ POR_opening_law:0"工业开放"
+ POR_opening_law_desc:0"我们的房屋和殖民地仍然有扩张空间。让我们通过政府的投资推进工业化进程。"
+ POR_industrial_b:0"加强战争产业"
+ POR_industrial_b_desc:0"随时加强武器装备是对国家的挑战。为了满足军队的需求，必须加强军事工厂。"
+ POR_dockyard:0"造船厂扩建"
+ POR_dockyard_desc:0"我们在大西洋前面有一个很大的战场。通过扩建造船厂，我们将满足海军的需求。"
+ POR_great_fleet:0"创建海洋舰队"
+ POR_great_fleet_desc:0"为了保卫祖国和殖民地之间的广阔大西洋，你所需要的只是一艘庞大的战舰和一支庞大的舰队来跟随它。"
+ POR_antiair_navy:0"海军反空军"
+ POR_antiair_navy_desc:0""
+ POR_return_goa:0"戈尔归来"
+ POR_return_goa_desc:0"葡萄牙果阿，曾为其黄金繁荣感到骄傲，但那个时代已经过去。随着国际协调，果阿应该属于印度。"
+ POR_autonomy_government:0"非洲政府"
+ POR_autonomy_government_desc:0"在安哥拉，莫桑比克，几内亚比绍安装先进的自治政府。让我们与他们合作，共同致力于经济发展。"
+ POR_industrial_d:0"支持国内产业"
+ POR_industrial_d_desc:0"应优先考虑葡萄牙大陆居民的生活。我们将重点关注大陆的工业发展。"
+ POR_home_resource:0"扩建钢厂"
+ POR_home_resource_desc:0"葡萄牙在资源分配方面有一些偏见。让我们将首都的炼铁厂扩大为工业发展的基石。"
+ POR_national_research_b:0"在里斯本大学投资"
+ POR_national_research_b_desc:0"你需要的是对研究所的投资。这将使葡萄牙的技术发展具有竞争力。"
+ POR_upgrade_home:0"加强本国"
+ POR_upgrade_home_desc:0"将我们的政治焦点带到祖国将会产生更好的效果。"
+ POR_home_fleet:0"防御舰队"
+ POR_home_fleet_desc:0"我们需要的不仅仅是装满大炮的大型铁块，而是许多可以灵巧使用的小型船只。"
+ POR_fleet_upgrade:0"现代化改造"
+ POR_fleet_upgrade_desc:0"海军技术的进展很快，但其实际更新成本很高。如何准备一个专门的组织来进一步升级现有的船只？"
+ POR_fascism_estado_novo:0"确定政策"
+ POR_fascism_estado_novo_desc:0"从现在开始，国际社会将采取何种政策，这是一项重要的任务。我们将联合起来控制萨拉查总理领导下的整个国家的法西斯思想。"
+ POR_people_for_country:0"义务兵制"
+ POR_people_for_country_desc:0"加强征兵并加强军备。兵役是全国的责任。"
+ POR_nationalist_dip:0"国家社会主义者"
+ POR_nationalist_dip_desc:0"我们仍然没有什么力量可以与世隔绝。与近乎意识形态的国家保持密切的外交也不错。"
+ POR_controlled_economy:0"控制经济"
+ POR_controlled_economy_desc:0"我们的政府非常稳定。现在我们应该进一步控制国家，促进经济统一。"
+ POR_neutral_law:0"中立法"
+ POR_neutral_law_desc:0"保持中立可能是愚蠢的，但人们参与不必要的战斗是非常不幸的。"
+ POR_democratic_estado_nove:0"政策变更"
+ POR_democratic_estado_nove_desc:0"目前的政府体制稳定，但可能距离共和主义理想还有一步之遥。现在是改革政府并宣布更好的Estado Novo的时候了。"
+ POR_free_trade:0"自由经济"
+ POR_free_trade_desc:0"通过赋予人民的经济活动更多的自由裁量权，可以为国内发展做出贡献。"
+ POR_national_control:0"国家控制"
+ POR_national_control_desc:0"最近的政策使我们的政府更加稳定。我们现在应该更深入地考虑与其他国家的关系。"
+ POR_democratic_government:0"制造混乱"
+ POR_democratic_government_desc:0"萨拉查总理的暗杀使葡萄牙陷入了极大的动荡。我们应该尽快在卡莫纳总统的领导下实现稳定的政府。"
+ POR_economic_partnership_brazil:0"与巴西的经济伙伴关系"
+ POR_economic_partnership_brazil_desc:0"巴西是我们国家的一部分，我们与我们国家建立了友好关系。我们将促进与该国的进一步伙伴关系。"
+ POR_interference:0"新民主政府"
+ POR_interference_desc:0"在一个新组织的政府领导下，卡莫纳总统实现了一个比前者更民主的政府。对总统的公众支持很厚，很可能很快就会解决混乱局面。"
+ POR_loyalist_government:0"忠诚统一"
+ POR_loyalist_government_desc:0"在萨拉查总理被暗杀之后，全国各地开展小规模活动的保皇派团结起来，并反对现任政府。"
+ POR_king_return:0"国王之王"
+ POR_king_return_desc:0"正在崛起的皇室政党尚未接待国王。我们有团结请求者Duarte Nuno de Braganca，我们将获得更多团结。我们将举起国旗！"
+ POR_communist_government:0"共产党的复活"
+ POR_communist_government_desc:0"葡萄牙共产党受到了挪威公国的严厉镇压。但那个时代已经结束。我们和共产党员一起，将在这个国家带来一场新的革命！"
+ POR_overturn_estado_novo:0"崛起！"
+ POR_overturn_estado_novo_desc:0"共产党终于在这个国家与本托·贡萨尔维斯秘书长联合起来了。现在革命已经准备好了！"
+ POR_national_research_system:0"知识类的推广"
+ POR_national_research_system_desc:0"我们的政府克服了动荡，并且已经稳定下来。首先让我们带来关于这个国家的知识和辩论。"
+ POR_refuse_england:0"拒绝英国"
+ POR_refuse_england_desc:0"半个世纪前的柏林会议，英国不仅相信自己的利益，也不信任！永久联盟是光荣的历史遗产，但与此一致的是我们的国家利益的获得不能指望。"
+ POR_1386_ally:0"永久联盟的确认"
+ POR_1386_ally_desc:0"自650年以来，英国一直处于盟友关系中。此外，他的国家建立了一个庞大的世界帝国。我们与他们在一起很有实力。"
+ POR_rose_color:0"蔷薇地图计划"
+ POR_rose_color_desc:0"半个世纪前，在柏林会议上，我国的目标是实现一个目标。但它被我们国家的盟友，联合王国的暴力所阻挡。我们在非洲大陆上没有大敌，现在我们也许能够实现我们的目标。"
+ POR_demand_zimbabwe:0"非洲内陆要求"
+ POR_demand_zimbabwe_desc:0"国际局势非常令人不安。我们将对津巴布韦，赞比亚和马拉维提出强烈反对英国的要求，现在就是这样。"
+ POR_request_zimbabwe:0"非洲内陆代表团"
+ POR_request_zimbabwe_desc:0"向津巴布韦，赞比亚和马拉维提出反对联合王国的请求。让我们声称我们可以代表辩护。"
+ POR_threaty_england:0"永久联盟的更新"
+ POR_threaty_england_desc:0"我们与英国之间的旧联盟也将在世界动乱中实现。我们将为英国提供军事通道。"
+ POR_communist_dip:0"与社会主义者合作"
+ POR_communist_dip_desc:0"我们需要得到其他共产主义国家的合作，以实现真正的共产主义。首先，让我们从与国际的伙伴关系开始吧。"
+ POR_galiza_invasion:0"加利西亚占领"
+ POR_galiza_invasion_desc:0"西班牙厌倦了内战，他的人民希望和平。现在它可以占领加利西亚地区。"
+ POR_war_uplifting:0"战争宣传"
+ POR_war_uplifting_desc:0"我们赢得了一些西班牙的占领政策。这对促进人民有用。"
+ POR_war_infntry:0"武器增强"
+ POR_war_infntry_desc:0"不知道什么时候会采取任何政策。我们需要加强我们的军备，为即将到来做好准备。"
+ POR_unity_iberia:0"整合伊比利亚半岛"
+ POR_unity_iberia_desc:0"西班牙政府处于这样一种情况，我们不知道它到目前为止会对这项政策进行战争。如果我们向我们发起战争，它就不会改变。"
+ POR_pact_iberico:0"伊比利亚协议"
+ POR_pact_iberico_desc:0"向西班牙提出一项中立条约提案，该组织已经厌倦了内战。这包括阻止伊比利亚半岛两国加入另一个国家阵营的内容。"
+ POR_stablity_uplifting:0"和平的承诺"
+ POR_stablity_uplifting_desc:0"我们应该向西班牙提出一项不侵略条约的提案。通过向人民作出和平承诺，我们可以稳定国家。"
+ POR_stablity_industrial:0"和平的工业促进"
+ POR_stablity_industrial_desc:0"能够在和平中扩大稳定的产业。让我们把重点放在这个国家，增加国家力量。"
+ POR_saopaulo_conference:0"圣保罗会谈"
+ POR_saopaulo_conference_desc:0"巴西 - 葡萄牙关系良好，人民情绪良好。在圣保罗，我们将直接与巴尔加斯总统就双边关系举行会谈。"
+ POR_lendlease_acts:0"无边的方法"
+ POR_lendlease_acts_desc:0"在保持中立的同时对武器进行勒索，将为你带来战后的经济优势。"
+ POR_brazil_integration:0"整合巴西"
+ POR_brazil_integration_desc:0"最后在巴西，与葡萄牙的合资企业获得批准。现在是时候让我们的国家在100年前分裂为一次了！"
+ POR_demand_cape:0"我们的荣耀"
+ POR_demand_cape_desc:0"希望之角​​曾经是我们荣耀的基石。这是我们应该拥有的领土。"
+ POR_colony_upgrade:0"持续发展"
+ POR_colony_upgrade_desc:0"殖民地有更多的工业扩张。让我们进一步投资，以更好地利用多余的土地。"
+ POR_industrial_upgrade:0"工业促进法"
+ POR_industrial_upgrade_desc:0"通过在战争中出口武器，我们拥有巨大的经济机会。让我们进一步加强和改善国内产业。"
+ POR_brazil_uplift:0"巴西经济发展"
+ POR_brazil_uplift_desc:0"巴西尚未进入经济发展阶段，让我们继续以葡萄牙大陆的首都为基础进行发展。"
+ POR_station_uruguay:0"驻扎乌拉圭"
+ POR_station_uruguay_desc:0"乌拉圭是一个富裕的国家，但它的规模很小，军队也很合适。如果这个计划成功，乌拉圭可能会得到保护而不受国际社会的任何干预。"
+ POR_south_america:0"南美需求"
+ POR_south_america_desc:0"每个国家都在争夺它在欧亚大陆的利益。现在我们和巴西一起走，我们的目的地是南美洲！"
+ POR_gain_liberia:0"征服利比里亚"
+ POR_gain_liberia_desc:0"我们的殖民统治体系越来越稳固。为了大西洋的安全，西非海岸绝对应该在我们的统治之下。"
+ POR_core_for_island:0"岛屿领土核心化"
+ POR_core_for_island_desc:0"早在500年前，佛得角和圣多美就成为了我们的领土。作为殖民政策的一部分，我们应该加强在海外岛屿的存在。"
+ POR_stability_government:0"稳定的政府"
+ POR_stability_government_desc:0"我们的政府在世界大战期间非常稳定。让我们再次回顾一下这个国家的团结。"
+ POR_spanish_africa:0"占领西班牙非洲领土"
+ POR_spanish_africa_desc:0"邻近的西班牙处于内战状态，其实力不足以维持非洲殖民地。我们为保护西班牙非洲领土做出了名义上的努力。这需要迅速完成。 "
+ POR_motorization:0"机动化研究"
+ POR_motorization_desc:0"移动和防御是安全地将步兵送到战场并使其远离安全的最重要的事情。这些改进将允许快速的操作行动。"
+ POR_small_mobilization:0"优秀军官"
+ POR_small_mobilization_desc:0"军事技能和装备的发展需要最优秀的人才。我们需要优秀的军官加入我们的队伍。"
+ POR_commonwealth_trade:0"英国贸易"
+ POR_commonwealth_trade_desc:0"葡萄牙与英联邦国家缔结贸易协定将是有利的"
+ POR_inter_ocean_trade:0"海洋间贸易"
+ POR_inter_ocean_trade_desc:0"葡萄牙拥有足够的国家力量而不依赖英国。我国的首都将再次与大西洋达到黄金时代。"
+ POR_gold_standard:0"恢复黄金标准"
+ POR_gold_standard_desc:0"虽然由于英国的影响，它曾经被废弃，但我们现在拥有英国影响区的强大国力。重返黄金标准将带来稳定的国家生产力它会得到加强。"
+ POR_air_ready:0"维持空军"
+ POR_air_ready_desc:0"空军的重要性比以前的战争要大得多，但我们的空军仍在发展。我们需要关注这一点。"
+ POR_colony_empire_economy:0"殖民经济的增长"
+ POR_colony_empire_economy_desc:0"最近的政策在我们的殖民经济中非常丰富。投资于家庭经济增长的进一步发展。"
+ POR_manpower:0"人口普查调查"
+ POR_manpower_desc:0"预计人口将与该国的经济发展保持一致。让我们对每个地区进行人口普查。"
+ POR_export_weapon:0"武器出口经济"
+ POR_export_weapon_desc:0"随着战争对武器的需求，我们的经济将得到进一步发展。我们应该投资战争工厂作为国家政策。"
+ POR_home_industrial:0"促进工业扩张"
+ POR_home_industrial_desc:0"关注本国使我们的资本更有用。让我们的目标是进一步的经济发展。"
+ POR_carrier:0"航母舰载机"
+ POR_carrier_desc:0"对海上空军的需求一直受到呼吁，但在大西洋海战中，陆基飞机可能无法到达。如果航空母舰发展成功，它将是一股强大的力量"。
+ POR_navy_ready:0"重建组建蓝水海军"
+ POR_navy_ready_desc:0"蓝水海军（英语：Blue-water navy），是指能将海上力量扩展到远洋及深海地区、具备远征作战能力的海军型态，最早萌芽于英国皇家海军的“海上远征能力”。"
+ POR_bomber:0"轰炸机发展"
+ POR_bomber_desc:0"飞机作为军用是从侦察开始的，空中侦察的作用是无可置疑的，在侦察飞行中顺便甩几颗手榴弹或迫击炮弹就成了“轰炸机”的开端。"
+ POR_air_doctrine:0"空军学说"
+ POR_air_doctrine_desc:0"空军是以航空兵为主体，进行空中斗争、空对地斗争和地对空斗争的军种。一般包括航空兵、地面防空兵、雷达兵、空降兵等兵种。空军具有远程作战、高速机动和猛烈突击的能力，既能协同陆军、海军作战，又能独立作战。"
+ POR_england_courage:0"与英国的合作"
+ POR_england_courage_desc:0"我们正在结盟。我们应该在军事方面与英国合作。"
+ POR_neutral_diplo:0"维持中立"
+ POR_neutral_diplo_desc:0"我们相信保持中立将导致国家利益。为此，我们将支付任何外交努力。"
+ POR_political_power:0"政治努力"
+ POR_political_power_desc:0"政府政策的突然变化已经引起了一些国家的不安。我们需要加强我们的政治立场。"
+ POR_navy_foundation:0"海军重建"
+ POR_navy_foundation_desc:0"我们的海军太不足以保卫大西洋。让我们从巡洋舰的发展开始吧。"
+ POR_navy_funding_effect:0"相同类型的3艘轻型巡洋舰将被添加到生产线上几乎完成。"
+ POR_saopaulo_conference_diplo:0"在会谈中取得进一步进展。"
+ POR_saopaulo_conference_diplo_comp:0"我们做到了最好"
+ POR_saopaulo_conference_success:0"会议成功。"
+ POR_success_conference:0"会议成功。"
+ POR_returned_our_territory:0"葡萄牙已归还我国领土"
+ POR_alliance:0"英国联盟"
+ POR_noalliance:0"永久联盟默认"
+ POR_rose_color_rel:0"蔷薇地图计划"
+ POR_nationalist_diplo:0"获得国家社会主义者"
+ POR_communist_diplo:0"参与国际"
+ POR_legend_of_the_voyager:0"旅行者的传说"
+ POR_legend_of_the_voyager_desc:0"我们的政策终于实现了，最后我们与过去的海洋帝国有了光荣的荣耀。我们的国家将再次成为一个黄金时代。"
+ POR_national_army:0"国防军"
+ POR_national_army_desc:0"只有我们的人民才能保护他们的尊严。为了我们的和平，人民必须履行自己的责任。"
+ POR_political_uplift:0"加强政府"
+ POR_political_uplift_desc:0"我们的政府稳固，公众信心很高。这个机会可以进一步加强政府的权威。"
+ POR_catholic_church:0"天主教会安全"
+ POR_catholic_church_desc:0"我们大多数国家都是天主教徒，支持教会将导致人民团结。"
+ POR_concordat:0"总统条约"
+ POR_concordat_desc:0"条约公约（Concordato）与教皇将加深人民对政府的信任。"
+ POR_national_guard:0"国防国际警察"
+ POR_national_guard_desc:0"为响应德国和意大利的一项研究而成立的国防警察（PIDE）对反对派施加了强大的压力，我们应该扩大这种压力。"
+ POR_special_force:0"特种部队规划"
+ POR_special_force_desc:0"谈到战争，我们需要的是大西洋的登陆作战。我们应该扩大我们的海军陆战队。"
+ POR_national_research_c:0"大学扩展"
+ POR_national_research_c_desc:0"扩大高等教育机构，使技术发展取得更多进展。"
+ POR_reconfirmation_berlin_conference:0"重新确认柏林会议"
+ POR_reconfirmation_berlin_conference_desc:0"在前柏林会议上，比利时刚果国王被决定拥有。但是，我们的国家继续从最古老的刚果经济活动，我们拥有刚果盆地的所有权。鉴于比利时政府的疲软，这应该是一个强烈的需求。"
+ POR_pact_iberico_op:0"伊比利亚条约"
+ POR_PIDE_tt:0"将组织八个完全填满的防御警察。"
+ POR_economic_partnership_brazil:0"巴西=葡萄牙经济伙伴关系"
+ POR_loyalist:0"皇室成员将团结起来反对现政府※将发生内战"
+ POR_station_uruguay_tt:0"准备与乌拉圭开启边境冲突"
+ POR_commonwealth_trade_opinion:0"英国贸易"
+ POR_saopaulo_conference_tt:0"推动谈判的决定如果你继续与英国结盟，政治成本会增加"
+ POR_deconization_tt:0"如果葡萄牙是共产主义，将恢复稳定。"
+ POR_with_axis:0"与德国结盟"
+ POR_with_axis_desc:0"一个国家的军事力量对于其他各种国家的阵营来说都太小了。与德国建立的大陆霸权伙伴关系对我们来说也将带来战略利益。"
+ POR_guarantee_usa:0"海洋之间的保证"
+ POR_guarantee_usa_desc:0"当我们的国家处于战争状态时，我们应该警惕大西洋的登陆行动。我们可以依靠美国海军力量消除这种恐惧。"
+ POR_national_industrial:0"国家工业"
+ POR_national_industrial_desc:0"一个国家的力量在国际社会中是次要的。但是，如果不能期待外交强化，我们必须充分利用它。"
+ POR_national_industrial_b:0"加强国有工业"
+ POR_national_industrial_b_desc:0"如果发生危机，你只能依靠自己的国家权力。你必须通过加强国有工业来扩大这一范围。"
+ POR_oil_upgrade:0"储备燃料资源"
+ POR_oil_upgrade_desc:0"军事行动伴随着燃料资源问题。如果难以向盟国提供石油，除了在国内解决之外别无他法。"
+ POR_licence_a:0"许可证请求"
+ POR_licence_a_desc:0"最好使用技术开发先进的联合产品，而不是开发葡萄牙独有的新产品。"
+ POR_licence_b:0"许可证生产工厂"
+ POR_licence_b_desc:0"建立专门的工厂生产许可产品可以提高生产效率。"
+ POR_volunteer:0"陆军计划"
+ POR_volunteer_desc:0"即使你没有积极参与营地，也有办法告诉我们我们的立场。在保持中立的同时，我们可以通过合作民兵来维持我们在战后国际社会中的主导地位。 "
+ POR_ally_with_soviet:0"参与共产国际"
+ POR_ally_with_soviet_desc:0"现在共产党政权已经建立，与苏联的联盟对我们来说是理所当然的。"
+ POR_ally_with_france_com:0"与法国公社结盟"
+ POR_ally_with_france_com_desc:0"需要与法国在地理上比苏联更紧密联盟。与巴黎公社一起创造工人！"
+ POR_AI_BEHAVIOR:0"@ POR Portugal"
+ POR_ESTADONOVO_HISTORICAL:0"由Estad Novo-History控制"
+ POR_ESTADONOVO_HISTORICAL_DESC:0"萨拉查政权下的葡萄牙保持中立，通过武器出口实现经济繁荣。"
+ POR_ESTADONOVO_FASCISM:0"政策变为法西斯主义"
+ POR_ESTADONOVO_FASCISM_DESC:0"葡萄牙制定萨拉查政权下的法西斯主义政策"
+ POR_ESTADONOVO_DEMOCRATIC:0"民主方向"
+ POR_ESTADONOVO_DEMOCRATIC_DESC:0"葡萄牙在萨拉查政权统治下走向民主"
+ POR_NEW_DEMOCRATIC:0"Carmona的民主政府"
+ POR_NEW_DEMOCRATIC_DESC:0"去卡莫纳总统领导的和平民主政府"
+ POR_ROYALIST:0"王国的复活"
+ POR_ROYALIST_DESC:0"殖民地复兴后，推进殖民政策，重新获得前海洋帝国的荣耀"
+ POR_COMMUNIST:0"共产党人的崛起"
+ POR_COMMUNIST_DESC:0"在与其他共产主义国家建立伙伴关系的同时建立一个强大的国家"
+ POR_OPTION_RANDOM:0"随机"
+ POR_with_england:0"加入盟国"
+ POR_with_england_desc:0"葡萄牙和英国是老盟友，最近的政策也与英国建立了军事联盟。我们应该明确这个立场。"
+ POR_clear_confusion_tt:0"持续一段时间的政治动荡终将停止"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

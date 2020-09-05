@@ -1,0 +1,656 @@
+﻿l_english:
+ 
+ ###潜伏###
+ wang_prc_dixiagongzuo:0 "潜伏"
+ wang_prc_dixiagongzuo_desc:0 "你的名字无人知晓，你的功绩与世长存！"
+ 
+ nanjing_guomingzhefu:0 "曲线救国"
+ nanjing_guomingzhefu_desc:0 "自三十年代开始，中国开始慢慢上轨道了。自辛亥革命之后，中国爆发了大约二十年左右的战乱。二十年过后，整个社会筋疲力尽，有识之士也开始反思这二十年的历程。汪精卫三十年代的国内政策“以建设求统一，以均权求共治”，就是这种反思的结果。如果没有大规模战争的爆发，真是该慢慢上轨道了。"
+ 
+ new_cnj_focus:0 "改组南京国民政府"
+ new_cnj_focus_1_tt:0 "§R请注意！决议完成后将更换一套全新国策，请确认消除所有DEBUFF!§"
+ 
+ chengli_qishuliuhao:0 "特工总部76号"
+ chengli_qishuliuhao_desc:0 "全称为“国民党中央执行委员会特务委员会特工总部”，位于上海的极斯菲尔路76号（现在的万航渡路435号），俗称“极斯菲尔路76号”。"
+ 
+ hepingjianguo_shidazhengang:0 "《和平建国十大政纲》"
+ hepingjianguo_shidazhengang_desc:0 ""
+ 
+ daoqu_kejiwenjian:0 "盗取科技文件"
+ daoqu_kejiwenjian_desc:0 ""
+ 
+ daruneibu_gongchang:0 "打入敌人的工厂"
+ daruneibu_gongchang_desc:0 "我们的同志需要打进敌人的工厂，为了今后的工作埋下伏笔。"
+ 
+ daruneibu_jungong:0 "打入敌人的军工厂"
+ daruneibu_jungong_desc:0 "我们的同志需要打进敌人的军用工厂，为了今后的工作埋下伏笔。"
+ 
+ daruneibu_keyan:0 "打入敌人的科研院所"
+ daruneibu_keyan_desc:0 "我们的同志需要打进敌人的科研院所，为了今后的工作埋下伏笔。"
+ 
+ daruneibu_tielu:0 "打入敌人的城市交通系统"
+ daruneibu_tielu_desc:0 "我们的同志需要打进敌人的城市交通系统，为了今后的工作埋下伏笔。"
+ 
+ daruneibu_zhengfu:0 "打入敌人的政府机关"
+ daruneibu_zhengfu_desc:0 "我们的同志需要打进敌人的政府机关，为了今后的工作埋下伏笔。"
+ 
+ daruneibu_jundui:0 "打入敌人的军队"
+ daruneibu_jundui_desc:0 "我们的同志需要打进敌人的军队，为了今后的工作埋下伏笔。"
+ 
+ pohuai_gongchang_CHI:0 "破坏蒋介石的工厂"
+ pohuai_gongchang_CHI_desc:0 "来吧同志们，发挥你们作用的时候到了，为中国革命献出自己的时刻，到了！"
+ 
+ pohuai_gongchang_MAN:0 "破坏满洲国的工厂"
+ pohuai_gongchang_MAN_desc:0 "来吧同志们，发挥你们作用的时候到了，为中国革命献出自己的时刻，到了！"
+ 
+ pohuai_gongchang_JAP:0 "破坏日本鬼子的工厂"
+ pohuai_gongchang_JAP_desc:0 "来吧同志们，发挥你们作用的时候到了，为中国革命献出自己的时刻，到了！"
+ 
+ pohuai_jungong_CHI:0 "破坏蒋介石的军工厂"
+ pohuai_jungong_CHI_desc:0 "来吧同志们，发挥你们作用的时候到了，为中国革命献出自己的时刻，到了！"
+ 
+ pohuai_jungong_MAN:0 "破坏满洲国的军工厂"
+ pohuai_jungong_MAN_desc:0 "来吧同志们，发挥你们作用的时候到了，为中国革命献出自己的时刻，到了！"
+ 
+ pohuai_jungong_JAP:0 "破坏日本鬼子的军工厂"
+ pohuai_jungong_JAP_desc:0 "来吧同志们，发挥你们作用的时候到了，为中国革命献出自己的时刻，到了！"
+ 
+ pohuai_tielu_CHI:0 "铁道游击队"
+ pohuai_tielu_CHI_desc:0 "铁道游击队最早发端于1938年夏，是在洪振海、王志胜建立的抗日情报站基础上发展起来的，始称枣庄铁道队，正式建队称鲁南铁道队，后与临城南北两支铁道队合编称鲁西铁道大队，受八路军苏鲁支队领导成立时称“鲁南军区铁道大队”，别称“飞虎队”。"
+ 
+ pohuai_zhengfu_CHI:0 "破坏敌人政府机关"
+ pohuai_zhengfu_CHI_desc:0 "国军的命令都是由天才制定的，却往往由蠢材来执行。而那位“蠢材”，很可能姓余。"
+ 
+ cefan_jundui_CHI:0 "策反敌军，要求思想钢印点数：§B60§!"
+ cefan_jundui_CHI_desc:0 "无论国军还是伪军，他们中很大一部分都是朴实的人民群众，为了吃一口饱饭才跟着敌人为虎作伥，本质上没有那么罪大恶极，要尽力的争取他们，把他们策反过来，壮大革命的力量。"
+ 
+ ###前面带数字的，都是永续决议
+ dongyuan1_jundui_PRC:0 "动员农民武装，要求思想钢印点数：§B30§!"
+ dongyuan1_jundui_PRC_desc:0 "广大的农民虽然缺少教育，身体素质很差，但他们是我们最大的倚靠，军民鱼水情，没有水，鱼怎么能够生存呢？"
+ 
+ dongyuan2_jundui_PRC:0 "组织县大队区小队，要求思想钢印点数：§B45§!"
+ dongyuan2_jundui_PRC_desc:0 "继续动员县大队和区小队，扩大我们的武装力量。"
+ 
+ dihou_kangri1_PRC:0 "组建淞沪抗日游击支队，要求思想钢印点数：§B60§!"
+ dihou_kangri1_PRC_desc:0 "1941年5月到1942年8月间，根据中共中央关于开辟浙东抗日根据地的指示，同时也为了在日伪军即将展开的“清乡”中保存有生力量,中国共产党领导下的浦东区开展游击战争，创立抗日根据地。"
+ 
+ dihou_kangri2_PRC:0 "组建津南抗日游击支队，要求思想钢印点数：§B60§!"
+ dihou_kangri2_PRC_desc:0 "津南抗日游击支队，是我党迅速调整，将军队化整为零，变为无数个武工队向敌后进军之一。他们广泛活跃在天津市区以南，为天津的抗战故事写下了辉煌的一笔。"
+ 
+ dihou_kangri3_PRC:0 "组建琼崖纵队，要求思想钢印点数：§B60§!"
+ dihou_kangri3_PRC_desc:0 "琼崖纵队是中国共产党在海南岛领导的一支人民武装，是以1927年9月海南岛农民起义队伍为基础组建的。这支人民武装在土地革命战争、抗日战争和解放战争中经历了长期艰苦卓绝的斗争考验，创立了以五指山为中心的革命根据地。"
+ 
+ dihou_kangri4_PRC:0 "组建南满抗日游击队，要求思想钢印点数：§B80§!"
+ dihou_kangri4_PRC_desc:0 "抗战时期,东北地区和全国一样，涌现出众多抗日游击队。其中,“南满游击队”是成立较早,影响也较大的一支游击队。"
+ 
+ dihou_kangri5_PRC:0 "重建东北抗日联军，要求思想钢印点数：§B100§!"
+ dihou_kangri5_PRC_desc:0 "东北抗日联军，简称东北抗联，是中国东北人民抗日武装。其前身是1933年5月成立的东北人民革命军，后改称东北抗日联军，东北抗日联军是在中国共产党领导下的一支英雄部队，也是中国人民解放军的前身之一。"
+ 
+ dihou_kangri6_PRC:0 "重建松江抗日义勇军，要求思想钢印点数：§B80§!"
+ dihou_kangri6_PRC_desc:0 "松江抗日义勇军，又称松江纵队，是活跃在东北的一支重要抗日敌后武装，他们主要在松花江，牡丹江，佳木斯一带活动，对日本关东军造成极大的影响。"
+ 
+ dihou_kangri7_PRC:0 "组建察哈尔抗日同盟军，要求思想钢印点数：§B60§!"
+ dihou_kangri7_PRC_desc:0 "察哈尔民众抗日同盟军是在中国共产党的推动、帮助下，由冯玉祥、吉鸿昌、方振武等爱国将领于1933年在华北北部察哈尔组织部队进行抗日斗争，是中国爱国将领冲破政府当局错误的对日妥协政策而进行一次抗日壮举。"
+ 
+ dihou_kangri8_PRC:0 "组建飞虎队，要求思想钢印点数：§B70§!"
+ dihou_kangri8_PRC_desc:0 "铁道游击队，又称飞虎队，是抗日战争时期活跃在现山东鲁南地区（临城，峄县，滕县）的一支抗日武装。"
+ 
+ dihou_kangri9_PRC:0 "组建金萧支队，要求思想钢印点数：§B70§!"
+ dihou_kangri9_PRC_desc:0 "金萧支队，是中共浙东区党委为牵制日军兵力，发展浙江本地抗日武装，其主要活跃在金华、义乌、浦江、东阳等地区，后正式定名为“新四军浙东游击纵队金萧线人民抗日自卫支队”。"
+ 
+ dihou_kangri10_PRC:0 "组建八路军冀南军区独立抗日游击纵队，要求思想钢印点数：§B100§!"
+ dihou_kangri10_PRC_desc:0 "八路军冀南军区独立抗日游击纵队，是活跃在冀南的一支抗日武装力量。"
+ 
+ dihou_kangri11_PRC:0 "组建韩江纵队，要求思想钢印点数：§B60§!"
+ dihou_kangri11_PRC_desc:0 "广东人民抗日游击队韩江纵队（简称韩江纵队）是抗日战争时期中国共产党在广东潮汕地区领导创建的一支人民抗日游击队。"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+###改造战犯###
+ wang_gaizaozhanfan:0 "改造战犯"
+ wang_gaizaozhanfan_desc:0 "我们对战犯予以改造，而不是屠戮，这就是我们的国民党反动派的本质区别。"
+ 
+ PRC_gaizaozhanfan_chengqian:0 "改造战犯——程潜，要求思想钢印点数：§B60§!"
+ PRC_gaizaozhanfan_chengqian_tip:0 "§Y程潜§将军将会加入我们"
+ PRC_gaizaozhanfan_fengyuxiang:0 "改造战犯——冯玉祥，要求思想钢印点数：§B40§!"
+ PRC_gaizaozhanfan_fengyuxiang_tip:0 "§Y冯玉祥§将军将会加入我们"
+ PRC_gaizaozhanfan_wangyaowu:0 "改造战犯——王耀武，要求思想钢印点数：§B100§!"
+ PRC_gaizaozhanfan_wyw_tip:0 "§Y王耀武§将军将会加入我们"
+ PRC_gaizaozhanfan_huangwei:0 "改造战犯——黄维，要求思想钢印点数：§B160§!"
+ PRC_gaizaozhanfan_hw_tip:0 "§Y黄维§将军将会加入我们"
+ PRC_gaizaozhanfan_weilihuang:0 "改造战犯——卫立煌，要求思想钢印点数：§B200§!"
+ PRC_gaizaozhanfan_wlh_tip:0 "§Y卫立煌§将军将会加入我们"
+ PRC_gaizaozhanfan_songxilian:0 "改造战犯——宋希濂，要求思想钢印点数：§B90§!"
+ PRC_gaizaozhanfan_sxl_tip:0 "§Y宋希濂§将军将会加入我们"
+ PRC_gaizaozhanfan_duyuming:0 "改造战犯——杜聿明，要求思想钢印点数：§B180§!"
+ PRC_gaizaozhanfan_dym_tip:0 "§Y杜聿明§将军将会加入我们"
+ PRC_gaizaozhanfan_qiuxingxiang:0 "改造战犯——邱行湘，要求思想钢印点数：§B70§!"
+ PRC_gaizaozhanfan_qxx_tip:0 "§Y邱行湘§将军将会加入我们"
+ PRC_gaizaozhanfan_liaoyaoxiang:0 "改造战犯——廖耀湘，要求思想钢印点数：§B170§!"
+ PRC_gaizaozhanfan_lyx_tip:0 "§Y廖耀湘§将军将会加入我们"
+ PRC_gaizaozhanfan_lixianzhou:0 "改造战犯——李仙洲，要求思想钢印点数：§B120§!"
+ PRC_gaizaozhanfan_lxz_tip:0 "§Y李仙洲§将军将会加入我们"
+ PRC_gaizaozhanfan_fanhanjie:0 "改造战犯——范汉杰，要求思想钢印点数：§B95§!"	
+ PRC_gaizaozhanfan_fhj_tip:0 "§Y范汉杰§将军将会加入我们"
+ PRC_jianligongdelin2_tip:0 "§G那些投诚、起义、国民党左派、打入国民党内部的同志们将会回到队伍§"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ keyan_daoqu_CHI:0 "盗取科技文件"
+ keyan_daoqu_CHI_desc:0 "我们的同志已经成功地打进了敌人的科研单位，现在该是他们大展身手的时候了。"
+ 
+ wang_prc_baituandazhan:0 "百团大战"
+ 
+ kaishi_baituandazhan:0 "开始百团大战！"
+ 
+ wang_xiandaihualujunjihua:0 "现代化陆军计划"
+ 
+ meiqiangmeipao_direnzao:0 "“老子不会别的，就他娘的会抢，凭什么鬼子汉奸就喝酒吃肉，我们就喝西北风啊？”\n——八路军某团长亲言"
+ 
+ wang_jianshegenjudi:0 "建设根据地"
+ 
+ jianshe_beifuchang:0 "建设被服厂"
+ PRC_jianshedaxue_yanan:0 "建设延安大学"
+ wang_miechuwenyi:0 "灭除瘟疫"
+ 
+ PRC_quanmianqingchuwenyi:0 "全面清除瘟疫"
+ PRC_quanmianqingchuwenyi_desc:0 "有了医学顶尖专家的帮助，我们将全部的力量都投入到了与瘟疫的战斗中，此战必胜！"
+ PRC_zhubuqingchuwenyi1:0 "逐步清除瘟疫1"
+ PRC_zhubuqingchuwenyi1_desc:0 "我们没有那么多的资金和精力应对瘟疫侵扰，不过我们可以选择细水长流，慢慢来。"
+ PRC_zhubuqingchuwenyi2:0 "逐步清除瘟疫2"
+ PRC_zhubuqingchuwenyi2_desc:0 "瘟疫已经得到了初步的遏制，情况好多了，我们得再接再厉。"
+ PRC_zhubuqingchuwenyi3:0 "逐步清除瘟疫3"
+ PRC_zhubuqingchuwenyi3_desc:0 "就剩下几个重点区域了，我们将全面围剿，送走瘟神！"
+ 
+  ###炮兵###
+  TITLE_LIGHT_ARTILLERY:0 "轻型步兵炮"
+ 
+  prc_artillery_folder:0 "火炮"
+  prc_artillery_folder_desc:0 "中共火炮"
+   
+  prc_light_artillery_equipment_1:0 "沪式82毫米迫击炮"
+  prc_light_artillery_equipment_1_desc:0 "沪式82毫米迫击炮，又称20式迫击炮，是中国于1932年仿制的英国斯托克斯81毫米迫击炮，由南京金陵兵工厂生产，广泛装备于中央军以及各军阀。"
+   
+  prc_artillery_upgrade_1:0 "炮口制动器"
+  prc_artillery_upgrade_1_desc:0 "炮口制动器"
+  
+  prc_light_artillery_equipment_2:0 "日本九七式90mm迫击炮"
+  prc_light_artillery_equipment_2_desc:0 "日本九七式90mm迫击炮，有一个极具名气的“诨名”——“小钢炮”。因为其弹道弯曲、死界很小、射速快、威力大、重量轻、体积小、便于机动、结构简单、易于操作、造价低廉而闻名。"
+  
+  prc_artillery_upgrade_2:0 "平衡器"
+  prc_artillery_upgrade_2_desc:0 "平衡器"
+  
+  prc_light_artillery_equipment_3:0 "中国31式迫击炮"
+  prc_light_artillery_equipment_3_desc:0 "此炮为斯托克爵士在为布兰德研究机构工作的日子里，研制出的一种准备装备到排级的60mm迫击炮，即布兰德1935年式60mm迫击炮。此后进口到了中国，大量装备中央军和各地军阀部队。"
+  
+  prc_artillery_upgrade_3:0 "改进后膛环"
+  prc_artillery_upgrade_3_desc:0 "改进后膛环"
+  
+  prc_light_artillery_equipment_4:0 "中国33式120毫米迫击炮"
+  prc_light_artillery_equipment_4_desc:0 "此炮是中国于1944年制，炮口径120毫米，该炮特别适合山地作战，第二次世界大战时期，中国军队大量装备该种迫击炮。"
+  
+  prc_artillery_upgrade_4:0 "增强炮夯"
+  prc_artillery_upgrade_4_desc:0 "增强炮夯"
+  
+  prc_light_artillery_equipment_5:0 "苏联M1943式120mm迫击炮"
+  prc_light_artillery_equipment_5_desc:0 "M1943式120毫米迫击炮是苏联二战后期研制定型的120毫米重型迫击炮，1943年装备部队。M43式120毫米迫击炮是根据苏联M38式迫击炮改进而成，1948年左右被中共军队大范围使用。"
+  
+  prc_artillery_upgrade_5:0 "改进火炮瞄具"
+  prc_artillery_upgrade_5_desc:0 "改进火炮瞄具"
+  
+  prc_light_artillery_equipment_6:0 "55式120毫米迫击炮"
+  prc_light_artillery_equipment_6_desc:0 "55式120毫米迫击炮，是1955年设计定型并投入批量生产，该炮是一种团属火炮。用于发射榴弹、发烟弹、照明弹。"
+  
+ TITLE_MEILIANGXINPAO:0 "自制土炮"
+  
+  prc_indigenous_artillery_equipment_1:0 "飞雷炮"
+  prc_indigenous_artillery_equipment_1_desc:0 "是一种解放军创造的自制武器。他还有一个更加闻名遐迩的名字——没良心炮。解放战争时期，解放军的火炮很少，在武器装备处于劣势的情况下，官兵们创造了一种令人丧胆的武器——用汽油桶做炮管的炸药包发射器。"
+  
+  prc_artillery_upgrade_6:0 "炮口制动器"
+  prc_artillery_upgrade_6_desc:0 "炮口制动器"
+  
+  prc_indigenous_artillery_equipment_2:0 "改良型飞雷炮"
+  prc_indigenous_artillery_equipment_2_desc:0 "改良型飞雷炮"
+  
+  prc_artillery_upgrade_7:0 "平衡器"
+  prc_artillery_upgrade_7_desc:0 "平衡器"
+  
+  prc_indigenous_artillery_equipment_3:0 "精良型飞雷炮"
+  prc_indigenous_artillery_equipment_3_desc:0 "精良型飞雷炮"
+  
+  prc_artillery_upgrade_8:0 "改进后膛环"
+  prc_artillery_upgrade_8_desc:0 "改进后膛环"
+  
+  prc_indigenous_artillery_equipment_4:0 "飞雷炮·死神"
+  prc_indigenous_artillery_equipment_4_desc:0 "飞雷炮·死神"
+  
+  prc_artillery_upgrade_9:0 "改进火炮瞄具"
+  prc_artillery_upgrade_9_desc:0 "改进火炮瞄具"
+  
+  prc_indigenous_artillery_equipment_5:0 "飞雷炮·天女散花"
+  prc_indigenous_artillery_equipment_5_desc:0 "飞雷炮·天女散花"
+  
+ ###坦克###
+  
+  prc_modern_tank_equipment_1:0 "天启坦克（笑）"
+  prc_modern_tank_equipment_1_desc:0 "天启坦克，玩过红警的都认识。"
+  
+ ###火炮###
+ 
+  prc_artillery_upgrade_10:0 "改进火炮瞄具"
+  prc_artillery_upgrade_10_desc:0 "改进火炮瞄具"
+  
+  prc_artillery_upgrade_11:0 "炮口制动器"
+  prc_artillery_upgrade_11_desc:0 "炮口制动器"
+  
+  prc_artillery_upgrade_12:0 "平衡器"
+  prc_artillery_upgrade_12_desc:0 "平衡器"
+  
+  prc_artillery_upgrade_13:0 "改进后膛环"
+  prc_artillery_upgrade_13_desc:0 "改进后膛环"
+  
+  prc_artillery_upgrade_14:0 "增强炮夯"
+  prc_artillery_upgrade_14_desc:0"增强炮夯"
+  
+  prc_artillery_equipment_1:0 "92式步兵炮"
+  prc_artillery_equipment_1_desc:0 "92式步兵炮，是日军在华北战场使用最广泛的火炮类武器，虽然威力小射程短，但其精简的结构和很轻的重量，成为了战场统治者的存在。被中国军队大量缴获，并且仿造。"
+    
+  prc_artillery_equipment_3_sov:0 "苏制30式122毫米榴弹炮"
+  prc_artillery_equipment_3_sov_desc:0 "1910/1930年式122毫米榴弹炮是红军早期使用的较为广泛的中型火炮，在30年代初期，红军前线部队中曾大量装备该型火炮，德军入侵苏联早期缴获的这些火炮数量相当可观，经修复后分配编号LeFH 388，有部分火炮还流落到芬兰陆军手中。"
+  
+  prc_artillery_equipment_4_sov:0 "苏制ZIS-3型加农炮"
+  prc_artillery_equipment_4_sov_desc:0 "因为射速很快，总是在听到发射时“咻”的一声之后，紧接着就听到命中目标的“碰”的一声，如果第一发没能命中，马上就会又第二发、第三发接踵而至，所以德国士兵习惯地叫它“咻碰炮”，这种声音几乎成了二战时德国士兵的梦魇。"
+  
+  prc_artillery_equipment_5_sov:0 "苏制ML-20 152毫米榴弹炮"
+  prc_artillery_equipment_5_sov_desc:0 "该炮本是苏联人作为攻城炮研发的，但和其他款攻城炮一样，在苏德战争期间都未发挥什么用处，但不可否认的是，这是一门威力巨大，杀伤力惊人的大杀器。"
+  
+  prc_artillery_equipment_2:0 "94式山炮"
+  prc_artillery_equipment_2_desc:0 "九四式山炮是二战时期日军装备的山炮，属于陆军步兵师团的制式步兵支援火炮，重量较轻，便于分解驮运，而且射程不低，设计的非常成功，主要装备野战旅团，野战师团的山炮兵部队与独立山炮兵联队，在山地或其他复杂地形作战时表现尚佳。"
+  
+  prc_artillery_equipment_4_jap:0 "九九式150毫米山炮"
+  prc_artillery_equipment_4_jap_desc:0 "九九式150毫米山炮是二战日军的重型火炮之一。它射程较远，威力大，轻便，容易分解组合，主要装备野战师团的山炮联队或队里山炮联队，用于山地复杂地形作战。"
+  
+  prc_artillery_equipment_3_jap:0 "41式75毫米山炮"
+  prc_artillery_equipment_3_jap_desc:0 "日军一个联队配属一个41式山炮中队，每个中队配属四门41式75毫米山炮。"
+  
+  prc_artillery_equipment_5_jap:0 "大正四年式150毫米野炮"
+  prc_artillery_equipment_5_jap_desc:0 "大正四年式150毫米野炮（大正四年式150毫米野战榴弹炮）是为步兵师团野炮兵部队与独立野战重炮兵旅团配备的野战榴弹炮，性能比38式150毫米野炮好，主要用于压制射击。开战时已接近停产，但一直用到了战争结束，这种火炮重量很轻，精度较高，在战场上威力还是很大的。"
+  
+  prc_artillery_equipment_4_eur:0 "英国25磅炮"
+  prc_artillery_equipment_4_eur_desc:0 "它与美军M7型105毫米“牧师”自行火炮结构类似。为适应英国人的习惯，驾驶员的位置在右边，火炮的位置偏左。2种炮机动性和防护水平相当，25磅炮比美制的105毫米榴弹炮威力小。"
+  
+  prc_artillery_equipment_3_eur:0 "法国75小姐"
+  prc_artillery_equipment_3_eur_desc:0 "法国施奈德公司生产的一种口径75毫米的牵引式野炮。又称75ABS1897式野炮。1897年研制成功，是世界上最早的弹性炮架火炮。其射速、射击精度和机动性能，比刚性炮架结构的同口径火炮有明显提高"
+  
+  prc_artillery_equipment_5_eur:0 "德国LEFH18榴弹炮"
+  prc_artillery_equipment_5_eur_desc:0 "该炮性能优秀，可以进行远距离曲射压制射击，还能灵活调整火炮弹道，在近距离具有反坦克炮的直射弹道特性，能进行的直瞄射击，深受德军官兵喜爱。"
+  
+  prc_artillery_equipment_4:0 "54式122mm榴弹炮"
+  prc_artillery_equipment_4_desc:0 "中国制造，50年代初期研制定型的122毫米牵引火炮，50年代中后期装备部队，用以取代各种旧杂式榴/山炮。本炮系由苏式M－1938式改进而成，使用汽车牵引。是步兵师、军（集团军）属炮兵团基本火炮。每团2-3营（炮24-36门）。"
+  
+  prc_artillery_equipment_5:0 "60式122毫米加农炮"
+  prc_artillery_equipment_5_desc:0 "60式122毫米加农炮是根据前苏联D-74式122毫米加农炮仿制而成，1960年生产定型，现仍有装备部队。"
+  
+  prc_rocket_artillery_equipment_1:0 "基础火箭炮"
+  prc_rocket_artillery_equipment_1_desc:0 "基础火箭炮"
+  
+  prc_rocket_artillery2:0 "改进的接收器"
+  prc_rocket_artillery2_desc:0 "改进的接收器"
+  
+  prc_rocket_artillery_equipment_2:0 "改进火箭炮"
+  prc_rocket_artillery_equipment_2_desc:0 "改进火箭炮"
+  
+  prc_rocket_artillery3:0 "改进火箭炮炮管"
+  prc_rocket_artillery3_desc:0 "改进火箭炮炮管"
+  
+  prc_rocket_artillery4:0 "改进火箭炮"
+  prc_rocket_artillery4_desc:0 "改进火箭炮"
+  
+  prc_rocket_artillery5:0 "改进火炮压制"
+  prc_rocket_artillery5_desc:0 "改进火炮压制"
+  
+  prc_rocket_artillery_equipment_3:0 "先进火箭炮"
+  prc_rocket_artillery_equipment_3_desc:0 "先进火箭炮"
+  
+  prc_rocket_artillery7:0 "水冷却器"
+  prc_rocket_artillery7_desc:0 "水冷却器"
+  
+  prc_rocket_artillery_equipment_4:0 "精良火箭炮"
+  prc_rocket_artillery_equipment_4_desc:0 "精良火箭炮"
+  
+  prc_anti_air_equipment_1:0 "基础防空炮"
+  prc_anti_air_equipment_1_desc:0 "基础防空炮"
+  
+  prc_antiair1:0 "增强炮夯"
+  prc_antiair1_desc:0 "增强炮夯"
+  
+  prc_anti_air_equipment_2:0 "改进防空炮"
+  prc_anti_air_equipment_2_desc:0 "改进防空炮"
+  
+  prc_antiair3:0 "改进的压力系统"
+  prc_antiair3_desc:0 "改进的压力系统"
+  
+  prc_antiair4:0 "水冷却器"
+  prc_antiair4_desc:0 "水冷却器"
+  
+  prc_anti_air_equipment_3:0 "先进防空炮"
+  prc_anti_air_equipment_3_desc:0 "先进防空炮"
+  
+  prc_antiair6_desc:0 "改进火炮压制"
+  prc_antiair6:0 "改进火炮压制"
+  
+  prc_anti_air_equipment_4_desc:0 "精良防空炮"
+  prc_anti_air_equipment_4:0 "精良防空炮"
+  
+  prc_antiair8:0 "高射炮塔"
+  prc_antiair8_desc:0 "高射炮塔"
+  
+  prc_anti_air_equipment_5:0 "现代化高射炮"
+  prc_anti_air_equipment_5_desc:0 "现代化高射炮"
+  
+  prc_anti_tank_equipment_1:0 "基础反坦克炮"
+  prc_anti_tank_equipment_1_desc:0 "基础反坦克炮"
+  
+  prc_antitank1:0 "防御工事"
+  prc_antitank1_desc:0 "防御工事"
+  
+  prc_anti_tank_equipment_2:0 "改进反坦克炮"
+  prc_anti_tank_equipment_2_desc:0 "改进反坦克炮"
+  
+  prc_antitank3:0 "增强炮夯"
+  prc_antitank3_desc:0 "增强炮夯"
+  
+  prc_antitank4:0 "改进火炮瞄具"
+  prc_antitank4_desc:0 "改进火炮瞄具"
+  
+  prc_anti_tank_equipment_3:0 "精良反坦克炮"
+  prc_anti_tank_equipment_3_desc:0 "精良反坦克炮"
+  
+  prc_antitank6:0 "改进压力系统"
+  prc_antitank6_desc:0 "改进压力系统"
+  
+  prc_anti_tank_equipment_4:0 "先进反坦克炮"
+  prc_anti_tank_equipment_4_desc:0 "先进反坦克炮"
+  
+  prc_antitank8:0 "改进发射药"
+  prc_antitank8_desc:0 "改进发射药"
+  
+  prc_anti_tank_equipment_5:0 "现代化反坦克炮"
+  prc_anti_tank_equipment_5_desc:0 "现代化反坦克炮"
+###步枪###
+ prc_infantry_folder:0 "步兵武器"
+ prc_infantry_folder_desc:0 "太祖步兵武器"
+ indigenous_infantry_weapons:0 "土造武器"
+ indigenous_infantry_weapons_research:0 "土造武器研究速度"
+ 
+ TITLE_INDIGENOUS_INFANTRY_WEAPONS:0 "土造武器"
+  prc_indigenous_infantry_equipment_0:0 "土造猎枪"
+  prc_indigenous_infantry_equipment_0_desc:0 "在抗战之初，中国共产党一穷二白，没有兵工厂生产制式武器，于是猎人手中的猎枪开始派上战场，虽然叫枪，但更类似于火铳，非常简陋原始，杀伤力很小，有时二十米之内打不死一个人，但我们的事业，就是从此开始的。"
+  prc_indigenous_infantry_weapons_1:0 "土地雷"
+  prc_indigenous_infantry_weapons_1_desc:0 "抗战时期，广大的敌后群众发挥了聪明才智，制造了一大批的土地雷土炸弹，尽管爆炸威力有限，杀伤力很小，但它低廉的造价和卓越的性能，成为敌人的梦魇。"
+  prc_indigenous_infantry_equipment_1:0 "无名氏马步枪"
+  prc_indigenous_infantry_equipment_1_desc:0 "2013年，美国一位名叫徐林的枪械收藏家带着一支老式步枪，请教中国军事博物馆，这是否是八路军制造的第一支步枪？枪械专家几经鉴定，认定这就是1939年的“无名式马步枪”，产地是延安。"
+  prc_indigenous_infantry_weapons_3:0 "三棱军刺"
+  prc_indigenous_infantry_weapons_3_desc:0 "三棱军刺是我军的一款著名近战武器，三面带有血槽，被其刺伤后，伤口呈现不规则洞状，极难缝合，流血不止。"
+  prc_indigenous_infantry_equipment_2:0 "五五式步枪"
+  prc_indigenous_infantry_equipment_2_desc:0 "中共生产的第一把步枪为55式步枪，因为生产的时候正是朱德司令的55岁生日，为了给他生日礼物,就把中共军队生产的第一把步枪叫五五步枪。使用的钢材是轨道钢，所以寿命很短，但这是我们制式武器制造的第一步。"
+
+###海军
+  ship_hull_super_heavy_new1:0 "无畏级战舰"
+  ship_hull_super_heavy_new1_desc:0 "无畏级战舰"
+  ship_hull_super_heavy_2:0 "无畏级战舰"
+  ship_armor_shbb_2:0 "无畏级装甲"
+  
+###决议
+ wang_tiaoxinjunfa:0 "挑衅军阀"
+ wang_tiaoxinjunfa_desc:0 "我们不能主动和军阀宣战，那样的话蒋介石就会介入，必须让他主动来打我们，我们才好防守反击！"
+ PRC_tiaoxin_mahongkui:0 "挑衅马鸿逵"
+ PRC_tiaoxin_mahongkui_tip:0 "马鸿逵已经意识到了我们对他的渗透，正在气头上呢，只要让人吹吹风，相信他就会怒而对我们宣战，但这样的话我们的继续渗透也就失去了意义。"
+ PRC_bangzhu_mahongkui:0 "帮助马鸿逵，背刺阎锡山！"
+ 
+ 
+###国策
+ PRC_zhizaochang_modern:0 "现代坦克工业"
+ PRC_zhizaochang_modern_desc:0 "经过大规模的恢复建设，我们国家已经形成了一套完整的坦克工业体系，它标志着无论设计、制造、创新，还是使用，我们的国产坦克都将拥有一席之地。"
+ PRC_xiandaitankegongye:0 "现代坦克工业"
+ PRC_xiandaitankegongye_desc:0 "经过大规模的恢复建设，我们国家已经形成了一套完整的坦克工业体系，它标志着无论设计、制造、创新，还是使用，我们的国产坦克都将拥有一席之地。"
+ PRC_jianlijicengdangzuzhi:0 "建立基层党组织"
+ PRC_jianlijicengdangzuzhi_desc:0 "党组织要像红树林，扎根群众，绝不能像浮萍一样漂在水面上。"
+ PRC_guojigongchanzhuyizhedeyuanzhu:0 "国际共产主义者的援助"
+ PRC_guojigongchanzhuyizhedeyuanzhu_desc:0 "天下无产阶级是一家，我们得到了国际共产主义者的援助，将大大有助于我们的革命事业。"
+ PRC_guojigongchanzhuyizhedeyuanzhu_tip:0 "共产国际不仅为我们带来了武器装备的援助，还有一些国际友人。"
+ PRC_zhidaoyuan:0 "指导员"
+ PRC_zhidaoyuan_desc:0 "中国军队的政治指导员制度始于北伐战争时期的国民革命军，原来叫“党代表”和“政治委员”，大多由共产党员（跨党兼有国民党员身份）担任 ，当时只是在团级部队设政治指导员，连级部队还没有，解放军实行的是“党指挥枪”原则，才逐步建立，为团结群众打下了坚实的基础。"
+ PRC_xiangguangdaqunzhongxuanjiangmaliezhuyi:0 "向广大群众宣讲马列主义"
+ PRC_xiangguangdaqunzhongxuanjiangmaliezhuyi_desc:0 "马列主义不是空中楼阁，要扎根在每一个基层群众的心坎里，让他们切实的明白，扎实的实践，勇敢地创造，艰苦的奋斗，最终带领全国各族人民，取得革命的胜利！"
+ PRC_xiangdizhanqushentou:0 "向敌占区渗透"
+ PRC_xiangdizhanqushentou_desc:0 "马列主义在群众心中开花后，我们的抗日救亡思想逐步影响了敌占区的广大群众，将他们从败亡论的阴影中解救出来，逐渐成为革命的中坚力量。"
+ PRC_minxinsuoxiang:0 "民心所向"
+ PRC_minxinsuoxiang_desc:0 "历史上诸多改朝换代，不是因为前朝的领导人无能，将军不会打仗，而是因为他们失去了人民的拥戴，民心所向，就是政治所向，人民的利益高于一切！"
+ PRC_gerenchongbai:0 "个人崇拜"
+ PRC_gerenchongbai_desc:0 "产生个人崇拜的原因是十分复杂的。小农经济和小生产习惯势力，是产生个人崇拜的主要社会经济根源。马克思说：小生产者“他们不能代表自己，一定要别人来代表他们。他们的代表一定要同时是他们的主宰，是高高站在他们上面的权威，是不受限制的政府权力，这种权力保护他们不受其他阶级侵犯，并从上面赐给他们雨水和阳光”（《马克思恩格斯选集》第1卷，第693页）。"
+ PRC_shishiqiushi:0 "实事求是"
+ PRC_shishiqiushi_desc:0 "实事求是，是马克思主义的根本观点，是中国共产党人认识世界、改造世界的根本要求，是我们党的基本思想方法、工作方法、领导方法。"
+ PRC_jianligongdelin:0 "建立功德林"
+ PRC_jianligongdelin_desc:0 "新中国成立后，为了改造蒋介石集团的诸多被俘将领和重要官员，建立了北京功德林战犯管理所。旨在改造战犯，让他们摒弃反动思想，和蒋介石政府彻底划清界限，站在人民和新政府的一边来，重新为人民贡献力量。"
+ PRC_jianligongdelin_tip:0 "建立功德林战犯管理所，开启§Y改造战犯§!决议。"
+ PRC_gerenchongbai_tip:0 "§R塑造一个圣人，的确可以最大程度的团结群众，但会带来一些难料的负面作用。§!"
+ wang_prc_chenglizhonggongzhongyangshehuibu:0 "成立中共中央社会部"
+ wang_prc_chenglizhonggongzhongyangshehuibu_desc:0 "1939年2月，中共中央书记处做出《关于成立社会部的决定》。指出:目前（1939年）日寇汉奸及顽固分子用一切方法派遣奸细企图混入我们的内部进行阴谋破坏工作，为了保障党的组织的巩固，中央决定在党的高级组织内成立社会部，即中央社会部，简称中社部。"
+ prc_dixiagongzuo_dangyuan_tip2:0 "启用特工§Y余则成§!"
+ wang_prc_qianfu:0 "潜伏"
+ wang_prc_qianfu_desc:0 "我的信仰是无底深海，\n澎湃着心中火焰，\n燃烧无尽的力量，\n那是忠诚永在!"
+ PRC_kuozhangkaishi:0 "扩张开始！"
+ PRC_kuozhangkaishi_desc:0 "革命需要地盘、工厂、和新鲜的血液，那些军阀，是时候付出代价了！"
+ PRC_kuozhangkaishi_tip:0 "我们已经开始准备和军阀作战了，这需要做非常多的工作，比如§R组建西路军§!，如果我们不进行这个国策，就会§R缺少很多和军阀作战的部队§!。"
+ PRC_ningmaqibingqiyi:0 "策动宁马骑兵起义"
+ PRC_ningmaqibingqiyi_desc:0 "马鸿逵的手下也有不少和我们一样的爱国者，他们痛恨日本人的铁蹄肆意践踏我们祖国的山河，更痛恨国民党的不抵抗政策和军阀的横征暴敛，我们策动了其中一大部分人的起义，就在马鸿逵主动宣战的时刻！"
+ PRC_ningmaqibingqiyi_tip:0 "当马鸿逵§R主动宣战§!时，我们将获得一支隐藏的武装力量！"
+ PRC_shoubianningmacanyujunli:0 "收编宁马残余军力"
+ PRC_shoubianningmacanyujunli_desc:0 "马鸿逵已经被彻底击败了，他手下还有很多能征善战的部队，只要将这些人的思想观念加以转变，就会成为人民的武装力量！"
+ PRC_shoubianningmacanyujunli_tip:0 "获得整编宁马部队。" 
+ PRC_jimou_quhutunlang:0 "计策：驱虎吞狼！"
+ PRC_jimou_quhutunlang_desc:0 "蒋介石和阎锡山彼此积怨已深，阎害怕蒋借此机会染指山西绥远，这也是为什么，蒋数次催促阎剿共，后者却迟迟不肯行动的原因，我们正好可以利用这一点，挑动双方血拼，从而坐收渔利。"
+ PRC_jimou_quhutunlang_tip:0 "此计谋将导致晋绥军§R进攻陕北苏区§!，当然我们相信只要扛过一段困难时期，让阎锡山吃到苦头，他自然会向蒋介石求救的。"
+ PRC_jimou_anzhongcefanjinsuijun:0 "暗中策反晋绥军"
+ PRC_jimou_anzhongcefanjinsuijun_desc:0 "晋绥军中也有不少有志的爱国人士，他们一向反对阎锡山和日本媾和的丑事，借着他大举反共的机会，我们正好可以让他们加入我们，只需一个时机，就能给敌人倒戈一击！"
+ PRC_jimou_anzhongcefanjinsuijun_tip:0 "我们需要坚持，等§R局势发生变化§!时，就是起义时刻！\n本国策需要消耗思想钢印点数：§B20§!"
+ PRC_jimou_erhujingshi:0 "计策：二虎竞食！"
+ PRC_jimou_erhujingshi_desc:0 "马鸿逵和阎锡山，这两个人都是贪狠如狼的军阀，两个军阀平时相安无事，但只要有利益争端，必然会刀兵相向，我们或许可以利用这一点，出一点儿血，挑动双方发生冲突。"
+ PRC_jimou_erhujingshi_tip:0 "此计谋会将省份§R陕北卖给阎锡山§!我们会失去一半赖以生存的土地，获得一部分军火，还有双方的交恶。"
+ PRC_zujiandihouchongfengjun:0 "组建敌后冲锋队"
+ PRC_zujiandihouchongfengjun_desc:0 "我们并非平白无故的将陕北土地卖给了阎锡山，那里有我们的人民和建立起来的党组织，还有潜伏下来的民兵组织，如果敌后交通线得以建立，我们就能迅速组建出一支战无不胜的敌后冲锋队。"
+ PRC_zujiandihouchongfengjun_tip:0 "当我们加入战争时，敌后冲锋队就会揭竿而起！"
+ PRC_daxibeijun_tip:0 "我们同东北军的将士们对话，势必会引起内部反共派的强烈抵抗，他们甚至可能§R和其他势力暗通款曲§!，务必小心。"
+ PRC_heyanghuchengjiangjunjiechu:0 "和杨虎城将军接触"
+ PRC_heyanghuchengjiangjunjiechu_desc:0 "杨虎城将军是著名的爱国将领，他的十七路军更是一支劲旅，加之张学良和杨虎城的私交不错，我们和杨虎城将军的接触，有利于侧面做通张学良的思想工作。但目前张学良仍对我们有所误解，贸然接近杨虎城，可能弄巧成拙。"
+ PRC_heyanghuchengjiangjunjiechu_tip:0 "注意：和杨虎城走得太近，可能令张学良误会我们要联合杨暗中干掉他，如此，张学良肯定会做出§R冲动的抉择§!。"
+ PRC_xiangzhangxueliangtanpai:0 "向张学良摊牌"
+ PRC_xiangzhangxueliangtanpai_desc:0 "时机差不多了，我们已经取得了很大一部分东北军的支持，在软硬兼施的政策之下，张学良距离彻底放弃反共剿共的思想已经不远了。"
+ PRC_xiangzhangxueliangtanpai_tip:0 "我们和张学良的主动接触，势必引起蒋介石的注意，西安事变之后，蒋介石已经成为惊弓之鸟，他肯定会§R尽其所能破坏我们的联合§!，务必小心！"
+ PRC_shoubiandongbeijun:0 "收编东北军"
+ PRC_shoubiandongbeijun_desc:0 "张学良已经和我们联合在一起了，很多爱国的东北军将领都有意加入我们的队伍。"
+ PRC_shoubiandongbeijun_tip:0 "将获得一些抗日将领和东北军。"
+ 
+ 
+ 
+###事件
+ dbj.13.t:0 "剿共！"
+ dbj.13.d:0 "张学良旅欧后深感，各国民众皆能热烈拥护其领袖，俾得放手做事，返顾国内争做领袖者太多，猜忌争斗，阻人成功，宁受外侮，而不许自己兄弟来统治。全国人民若不愿为亡国奴，必大彻大悟，容许一个领袖，有试验机会，发展效能。遂投靠蒋介石，愿为中正先生排忧解难！蒋介石说，我现在最难之事莫过剿共，张学良该如何抉择呢？"
+ dbj.13.a:0 "攘外必先安内"
+ dbj.13.b:0 "还是抗日为先"
+ 
+ dbj.14.t:0 "与中共密谈"
+ dbj.14.d:0 "张学良在执行了蒋介石积极进剿红军指令的两个月内连遭惨败，残酷的现实使张学良开始怀疑蒋介石“攘外必先安内”的政策了。照这样打来打去，军队打光了，如何去“攘外”？终于，张学良在杨虎城将军的影响下，决定转变思想，是时候抛出橄榄枝了。"
+ dbj.14.a:0 "和李克农见面"
+ 
+ dbj.15.t:0 "张学良抛来橄榄枝"
+ dbj.15.d:0 "在杨虎城将军的影响下，张学良日益对蒋介石攘外必先安内的国策感到怀疑，他一心想打回东北老家去，于是一个谈判的契机形成了，我们该如何回复呢？"
+ dbj.15.a:0 "一切以抗日大局为重"
+ dbj.15.b:0 "去他娘的，接着干！"
+ 
+ dbj.16.t:0 "张学良悍然进攻陕北苏区！"
+ dbj.16.d:0 "朋友来了有好酒，敌人来了有猎枪！幸亏我们早就准备，让群众帮忙建设了许多的防御工事。"
+ dbj.16.a:0 "想想办法干他一炮"
+ 
+ eastasia.20000.t:0 "特工科技升级完成"
+ eastasia.20000.d:0 "欧耶！"
+ eastasia.20000.a:0 "知道了。"
+ 
+ dbj.17.t:0 "剿共吗？"
+ dbj.17.d:0 "共产党最近的活动实在是太频繁了，蒋委员长又屡次三番的命令我们出兵剿共，如果再逡巡拖延，对我们并没好处，是时候给那些赤匪一点儿颜色看看了！"
+ dbj.17.a:0 "发兵，剿共！"
+ dbj.17.b:0 "算了吧，和为贵。"
+ 
+ dbj.18.t:0 "驱虎吞狼，计划成功！"
+ dbj.18.d:0 "我们的计策成功了，现在阎锡山已经开始大举进攻我们，只要抗住，最后的胜利一定属于人民！"
+ dbj.18.a:0 "顶住！"
+ 
+ dbj.19.t:0 "向中央军求援"
+ dbj.19.d:0 "老蒋，来帮帮我们"
+ dbj.19.a:0 "发送求援信"
+ dbj.19.b:0 "算了吧，无异于引狼入室。"
+ 
+ dbj.20.t:0 "蒋介石进攻山西！"
+ dbj.20.d:0 "背信弃义的东西，果然引狼入室了！"
+ dbj.20.a:0 "我们完了……"
+ 
+ dbj.21.t:0 "蒋介石趁机入侵山西！"
+ dbj.21.d:0 "驱虎吞狼计划成功，现在是肢解晋绥军的时候了！"
+ dbj.21.a:0 "干吧！"
+ 
+ dbj.22.t:0 "与马鸿逵交恶"
+ dbj.22.d:0 "马鸿逵居然大言不惭的说，陕北是我们从它们那里抢去的。"
+ dbj.22.a:0 "干他！"
+ 
+ dbj.23.t:0 "二虎竞食：计划成功"
+ dbj.23.d:0 "在我们的精心谋划下，马鸿逵和阎锡山真的打起来了，从现在开始，我们必须时刻留意二者的战争动向，在最恰当的时机，介入战争！"
+ dbj.23.a:0 "等待时机。"
+ 
+ eastasia.20001.t:0 "不再是困兽了"
+ eastasia.20001.d:0 "我们已经成功的一扫长征以来连续失败的阴霾，现在，我们的军旗飘扬在陕甘宁的每一个角落，是时候迎接更强的挑战了！"
+ eastasia.20001.a:0 "我们已经准备好。"
+ 
+###精神
+ PRC_guoqingkuaile:0 "国庆快乐！"
+ PRC_yaodonglidegemingzhe:0 "窑洞里的革命者"
+ PRC_yaodonglidegemingzhe_desc:0 "我们的同志住在陕北的窑洞里，条件极其艰苦，革命根据地维持着摇摇欲坠的小农经济，而且还要应付国民党的封锁和日本的侵略，在这种情况下，研究船坞、坦克、还有飞机，是极不现实的。\n注：因为P社的问题，被锁的科技会显示“1日”，而这个“1日”，基本等于一辈子。"
+ para_tech_research:0 "伞兵研究速度"
+ hospital_tech_research:0 "野战医院研究速度"
+ PRC_queyishaoyaowenyihengxing1:0 "缺医少药，瘟疫横行"
+ PRC_queyishaoyaowenyihengxing1_desc:0 "我们几乎没有任何现代医疗条件，受伤基本等于死亡，恰巧赶上一场瘟疫的来临，现在我们的士气极其低落，每天都有人离开，这种情况急待改变！"
+ PRC_queyishaoyaowenyihengxing2:0 "被初步控制的瘟疫"
+ PRC_queyishaoyaowenyihengxing2_desc:0 "经过我们的初步努力，瘟疫已经得到控制，爆发趋势停止了。"
+ PRC_queyishaoyaowenyihengxing3:0 "即将被消灭的瘟疫"
+ PRC_queyishaoyaowenyihengxing3_desc:0 "现在只有重病号出现死亡情况，很多病人已经康复。"
+ meiqiangmeipao_direnzao_tip:0 "我们必须对我们的广大指战员进行培训，在战场上，要紧盯任何可以重复再利用的资源，就算是一颗锈蚀的螺丝钉，说不定也会成为重要机械上的零件！"
+ PRC_gangbiziyong:0 "刚愎自用"
+ PRC_shishiqiushi_idea:0 "实事求是"
+ PRC_taizu_buff1:0 "敌军围困万千重，我自岿然不动"
+ PRC_taizu_buff2:0 "雄关漫道真如铁，而今迈步从头越"
+ PRC_taizu_buff3:0 "地主重重压迫，农民个个同仇"
+ PRC_taizu_buff4:0 "要扫除一切害人虫，全无敌"
+ PRC_taizu_buff5:0 "俱往矣，数风流人物，还看今朝"
+ PRC_taizu_buff6:0 "五岭逶迤腾细浪，乌蒙磅礴走泥丸"
+ PRC_taizu_buff7:0 "天连五岭银锄落，地动三河铁臂摇"
+ wang_idea_PRC_sishoushanbei:0 "死守陕北"
+###精神CHI
+ CHI_AI_modifier_defense:0 "AI专属：校长AI修正"
+###内阁
+ PRC_xuhaidong:0 "徐海东"
+ PRC_liuhuaqing:0 "刘华清"
+ PRC_liuyalou:0 "刘亚楼"
+ PRC_xiaohua:0 "萧华"
+ PRC_maning:0 "马宁"
+ PRC_yefei:0 "叶飞"
+ PRC_dengzhaoxiang:0 "邓兆祥"
+ PRC_wufaxian:0 "吴法宪"
+ PRC_pengdehuai:0 "彭德怀"
+ PRC_baiqiuen:0 "诺尔曼·白求恩"
+ wushangdeyizhe:0 "无上的医者"
+ PRC_mahaide:0 "马海德"
+ jingzhandeyizhe:0 "精湛的医者"
+ PRC_liuguifu:0 "刘贵福"
+ bingqitiancai:0 "兵器天才"
+ qingdangzhaoya:0 "儒雅的恶魔"
+ 
+###flag
+ PRC_baiqiuenxisheng_flag:0 "白求恩牺牲"
+ PRC_gangbiziyong_flag:0 "刚愎自用的毛泽东"
+ xianshibian_fasheng:0 "西安事变发生"
+###变量
+ taizu_var_tes:0 "思想钢印点数：§Y[?taizu_var]§! \n思想钢印发展速度：§Y[?taizu_var_change]§! \n思想钢印消耗：§Y[?taizu_var_cost]§!"
+ taizu_var_change_tes:0 "思想钢印点数以及发展速度，是太祖独占的属性，可用于§Y策反敌军§!、§Y敌后抗日武装§!、§Y国民党将领倒戈§!之类的决议。想要快速增加点数，请点击§Y建立基层党组织§!国策线。"
+ PRC_taizu_var1_tip:0 "思想钢印点数: §G+20§!。"
+ PRC_taizu_var_change1_tip:0 "思想钢印发展速度: §G+0.2§!。"
+ PRC_taizu_var2_tip:0 "思想钢印点数: §G+35§!。"
+ PRC_taizu_var_change2_tip:0 "思想钢印发展速度: §G+0.4§!。"
+ PRC_taizu_var3_tip:0 "思想钢印点数: §G+50§!。"
+ PRC_taizu_var4_tip:0 "思想钢印点数: §G+100§!。"
+ PRC_taizu_var_change3_tip:0 "思想钢印发展速度: §G×2§!。"
+ PRC_taizu_var5_tip:0 "思想钢印点数: §G+500§!。"
+ PRC_taizu_var_change4_tip:0 "思想钢印发展速度: §R-0.3§!。"
+ 
+###脚本
+ taizu_var_cost1_test:0 "敌军围困万千重，我自岿然不动"
+ taizu_var_cost1_change_test:0 " 堑壕速度§G+10%§! \n 单位防御§G+10%§! \n 核心领土防御§G+10%§! \n 堑壕上限§G+3§!"
+ taizu_var_cost2_test:0 "雄关漫道真如铁，而今迈步从头越"
+ taizu_var_cost2_change_test:0 " 陆军师速度§G+30%§! \n 每日指挥官点数§G+0.5§!"
+ taizu_var_cost3_test:0 "地主重重压迫，农民个个同仇"
+ taizu_var_cost3_change_test:0 " 每周人力§G+800§! \n 训练时间§G-10%§! \n 增员率§G+5%§!"
+ taizu_var_cost4_test:0 "要扫除一切害人虫，全无敌"
+ taizu_var_cost4_change_test:0 " 陆军组织度§G+10%§! \n 陆军组织度恢复§G+10%§! \n 陆军组织度上限§G+10%§! \n 单位攻击§G+10%§! \n 核心领土单位攻击§G+20%§!"
+ taizu_var_cost5_test:0 "俱往矣，数风流人物，还看今朝"
+ taizu_var_cost5_change_test:0 " 每日获得的整治点数§G+1§! \n 科研速度§G+10%§! "
+ taizu_var_cost6_test:0 "五岭逶迤腾细浪，乌蒙磅礴走泥丸"
+ taizu_var_cost6_change_test:0 " 寒冷适应度增长§G+20%§! \n 炎热适应度增长§G+10%§! \n 地形惩罚减少§G+50%§! "
+ taizu_var_cost7_test:0 "连天五岭银锄落，地动三河铁臂摇"
+ taizu_var_cost7_change_test:0 " 生产效率增长§G+10%§! \n 生产效率上限§G+10%§! \n 基础生产效率§G+10%§! \n 工厂产出§G+15%§!"
+
+###间谍系统
+ prc_upgrade_economy_civilian:0 "打入敌人内部"
+ prc_upgrade_economy_civilian_desc:0 "打入敌人内部，您也可以通过花费思想钢印点数来升级此项。" 
+ prc_upgrade_passive_defense:0 "反间谍"
+ prc_upgrade_passive_defense_desc:0 "防范敌人的破坏，是我们必须做到的工作。"
+ prc_upgrade_anti_partisan:0 "反颠覆"
+ prc_upgrade_anti_partisan_desc:0 "总有境外敌对势力妄图对我国的领土进行分裂活动，我们必须严厉打击，加强防范！"
+ prc_upgrade_army_department:0 "陆军渗透"
+ prc_upgrade_army_department_desc:0 "渗透敌人的陆军，您也可以通过花费思想钢印点数来升级此项。"
+ taizu_var_jiandie_upgrade1_tes:0 "使用思想钢印点数升级该科技，要求点数：§B15§!"
+ taizu_var_jiandie_upgrade1_more_tes:0 "点击该按钮，然后等待30天，之后科技就升级了，瞧，多容易。"
+ taizu_var_jiandie_upgrade2_tes:0 "使用思想钢印点数升级该科技，要求点数：§B17§!"
+ taizu_var_jiandie_upgrade3_tes:0 "使用思想钢印点数升级该科技，要求点数：§B25§!"
+ taizu_var_jiandie_upgrade4_tes:0 "使用思想钢印点数升级该科技，要求点数：§B23§!"
+ prc_upgrade_naval_department:0 "渗透海军"
+ prc_upgrade_naval_department_desc:0 "海上战斗是获取胜利的关键一环，而随着海军科技的进步，海军情报部的设立不可或缺。您也可以通过花费思想钢印点数来升级此项。"
+ prc_upgrade_airforce_department:0 "渗透空军"
+ prc_upgrade_airforce_department_desc:0 "空军情报部将成为我国情报局的一个有益分支，负责渗透敌方空军并搜集有关敌军飞机动向的情报。您也可以通过花费思想钢印点数来升级此项。"
+ taizu_var_jiandie_upgrade5_tes:0 "使用思想钢印点数升级该科技，要求点数：§B15§!"
+ taizu_var_jiandie_upgrade6_tes:0 "使用思想钢印点数升级该科技，要求点数：§B20§!"
+ 
+ PRC_dihouhenjudi:0 "开辟敌后根据地"
+ 
+ PRC_format_Northeast_basic:0"在东北开辟敌后根据地"
+ PRC_format_Lunan_basic:0 "在鲁南开辟敌后根据地"
+ PRC_format_rehe_basic:0 "在热河开辟敌后根据地"
+ PRC_format_jinchaji_basic:0 "在晋察冀开辟敌后根据地"
+ PRC_format_jidong_basic:0 "在冀东开辟敌后根据地"
+ PRC_format_Suiyan_basic:0 "在绥远开辟敌后根据地"
+ PRC_format_Yudong_basic:0 "在河北开辟敌后根据地"
+ PRC_format_huaiyin_basic:0 "在淮阴开辟敌后根据地"
+ 
+ SHX_army_jion_in_us:0"山西新军已投奔我们"
+ 
+ 
+ 

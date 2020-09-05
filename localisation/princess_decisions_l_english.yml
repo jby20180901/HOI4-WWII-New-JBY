@@ -1,0 +1,69 @@
+﻿l_english:
+ 
+ ### 买船 ###
+ 
+ Buy_Ships:0 "订购战舰"
+ Buy_Ships_desc:0 "以我们现在的工业水平是造不出大型战舰的，我们必须向外国列强购买他们的战舰，哪怕是老旧型号的。"
+ 
+ goumai_zhanliejian:0 "购买战列舰"
+ goumai_zhanliejian_desc:0 "没有哪个国家会出售他们的现役舰艇，所以我们只能斥巨资从列强那里订购。我们一次可以订购2艘，称为'姊妹舰'，这两艘舰是同一级别的主力舰。"
+ 
+ goumai_xunyangjian:0 "购买巡洋舰"
+ goumai_xunyangjian_desc:0 "我们要购买装备速射炮的巡洋舰，以此来为我们的主力舰护航。我们一次可以订购3艘，这三艘舰是同一级别的巡洋舰。"
+ 
+ institute_press_censorship_fascist_state:0 "规制新闻审查"
+ institute_press_censorship_fascist_state_desc:0 "现在正是危难之际，我们绝不能让异见邪说分裂国家。有必要以限制出版自由的手段，来保证真理的声音清明嘹亮。"
+ institute_press_censorship_democratic_state:0 "规制新闻审查"
+ institute_press_censorship_democratic_state_desc:0 "现在正是危难之际，我们绝不能让异见邪说分裂国家。有必要以限制出版自由的手段，来保证真理的声音清明嘹亮。"
+ institute_press_censorship_communist_state:0 "规制新闻审查"
+ institute_press_censorship_communist_state_desc:0 "现在正是危难之际，我们绝不能让异见邪说分裂国家。有必要以限制出版自由的手段，来保证真理的声音清明嘹亮。"
+ institute_press_censorship_neutrality:0 "规制新闻审查"
+ institute_press_censorship_neutrality_state_desc:0 "现在正是危难之际，我们绝不能让异见邪说分裂国家。有必要以限制出版自由的手段，来保证真理的声音清明嘹亮。"
+ 
+ 
+ ### 中华帝国 ###
+ 
+ princess_China_Empire:0 "中华帝国"
+ princess_China_Empire_desc:0 "中国再次进入了战国时代，军阀们都有着一个共同的目标：宣称'天命'。"
+ 
+ 
+ 
+ xuancheng_tianming:0 "宣称天命"
+ xuancheng_tianming_desc:0 "我们统一了华夏！四分五裂的中华民族再一次被团结在了一起，中国，这个古老的帝国将以一个崭新的面貌屹立在世界的东方！我们最终证明了天命是站在我们这一边的，但是自古都是打江山易坐江山难，也许我们要对中国几千年的封建制度进行改革？不过那都是后话了，登基大典已经在筹备了，中华民族的复兴大业就要实现了！"
+ xuancheng_tianming_1_tt:0 "添加§G中国§!所有地区的核心。\n"
+ 
+ kongzhi_jing_jin_ji_states_tt:0 "控制§Y京津晋冀§!地区。"
+ kongzhi_zhongyuan_states_tt:0 "控制整个§Y中原§!。"
+ kongzhi_xibei_states_tt:0 "控制§Y陕西§!，§Y甘肃§!，§Y宁夏§!和§Y西安§!地区。"
+ kongzhi_xinan_states_tt:0 "控制§Y中国西南§!部地区。"
+ kongzhi_sichuan_states_tt:0 "控制整个§Y四川§!地区。"
+ kongzhi_liangguang_states_tt:0 "控制§Y两广§!地区。"
+ kongzhi_dunnasi_states_tt:0 "控制§Y顿巴斯§!工业区"
+ 
+ new_focus:0 "翻开新的篇章"
+ new_focus_desc:0 "登基大典已经结束，是时候为我们的帝国制定新的规划了。"
+ new_focus_1_tt:0 "将国策树换成'§Y中华帝国§!'专属国策树。\n\n§R警告！你将会失去你现在的国策树！请在消除掉所有debuff后再执行！三思啊，陛下！§!"
+ 
+ 
+ 
+ ### 重庆谈判 ###
+ 
+ princess_Chongqing_Negotiation:0 "重庆谈判"
+ princess_Chongqing_Negotiation_desc:0 "重庆谈判是中国共产党和中国国民党两党在重庆进行的一次历史性的会谈。"
+ 
+ yaoqing_Mao_zedong:0 "邀请毛泽东"
+ yaoqing_Mao_zedong_desc:0 "我们要让毛泽东背上破坏和平的骂名，向他发送邀请，如果他拒绝，那发动内战，破坏和平的骂名将落到中共的头上。"
+ 
+ suobiandao_24_geshi:0 "缩编军队"
+ suobiandao_24_geshi_desc:0 "国民党要求我们将军队缩编到24个师。"
+ 
+ suobiandao_20_geshi:0 "缩编军队"
+ suobiandao_20_geshi_desc:0 "国民党要求我们将军队缩编到20个师。"
+ 
+ yingjiu_maozhuxi:0 "营救毛主席"
+ yingjiu_maozhuxi_desc:0 "毛主席被蒋介石扣押了，我们必须在最短的时间内攻入重庆，否则蒋介石将有可能将毛主席处死。"
+ 
+ 
+ 
+ 
+ 
