@@ -1,0 +1,54 @@
+spriteTypes = {	
+
+	### categories
+	
+	spriteType = {
+		name = "GFX_decision_cat_generic_iberia"
+		texturefile = "gfx/interface/decisions/decision_cat_generic_iberia.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_generic_greater_bulgaria"
+		texturefile = "gfx/interface/decisions/decision_cat_generic_greater_bulgaria.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_generic_mexican_empire"
+		texturefile = "gfx/interface/decisions/decision_cat_generic_mexican_empire.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_cat_generic_australasia"
+		texturefile = "gfx/interface/decisions/decision_cat_generic_australasia.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_generic_greater_finland"
+		texturefile = "gfx/interface/decisions/decision_cat_generic_greater_finland.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_generic_italian_empire"
+		texturefile = "gfx/interface/decisions/decision_cat_generic_italian_empire.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_generic_zapadoslavia"
+		texturefile = "gfx/interface/decisions/decision_cat_generic_zapadoslavia.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_generic_infrastructure"
+		texturefile = "gfx/interface/decisions/decision_generic_infrastructure.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_generic_la_plata"
+		texturefile = "gfx/interface/decisions/decision_cat_generic_la_plata.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_generic_macedonia"
+		texturefile = "gfx/interface/decisions/decision_cat_generic_macedonia.dds"
+	}
+}

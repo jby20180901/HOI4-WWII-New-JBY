@@ -1,0 +1,14 @@
+spriteTypes = {
+	spriteType = { name = "GFX_idea_po_default" texturefile = "gfx/interface/ideas/idea_generic_neutrality_drift_bonus.dds" }
+	spriteType = { name = "GFX_idea_po_examination_1" texturefile = "gfx/interface/ideas/idea_generic_political_support.dds" }
+	spriteType = { name = "GFX_idea_po_examination_2" texturefile = "gfx/interface/ideas/idea_generic_political_support.dds" }
+	spriteType = { name = "GFX_idea_po_examination_3" texturefile = "gfx/interface/ideas/idea_generic_political_support.dds" }
+	spriteType = { name = "GFX_idea_po_freedom_1" texturefile = "gfx/interface/ideas/idea_generic_deal_with_the_devil2.dds" }
+	spriteType = { name = "GFX_idea_po_freedom_2" texturefile = "gfx/interface/ideas/idea_generic_deal_with_the_devil2.dds" }
+	spriteType = { name = "GFX_idea_po_freedom_3" texturefile = "gfx/interface/ideas/idea_generic_deal_with_the_devil2.dds" }
+
+	spriteType = { name = "GFX_idea_military_talents" texturefile = "gfx/interface/ideas/idea_general_staff.dds" }
+	spriteType = { name = "GFX_idea_research_talents" texturefile = "gfx/interface/ideas/idea_generic_constitutional_guarantee.dds" }
+	spriteType = { name = "GFX_idea_consolidating_ideology" texturefile = "gfx/interface/ideas/idea_danieli.dds" }
+	spriteType = { name = "GFX_idea_universal_education" texturefile = "gfx/interface/ideas/idea_generic_army_war_college.dds" }
+}

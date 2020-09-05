@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_national_spirit_bg"
+		texturefile = "gfx/interface/national_spirit_bg.dds"
+	}
+}

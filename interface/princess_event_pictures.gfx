@@ -1,0 +1,144 @@
+spriteTypes = {
+	
+	### news_events_pictures ###
+	
+	spriteType = {
+		name = "GFX_princess_news_1"
+		texturefile = "gfx/news_event_pictures/princess_news_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_princess_news_2"
+		texturefile = "gfx/news_event_pictures/princess_news_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_princess_news_3"
+		texturefile = "gfx/news_event_pictures/princess_news_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_princess_news_4"
+		texturefile = "gfx/news_event_pictures/princess_news_4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_princess_news_5"
+		texturefile = "gfx/news_event_pictures/princess_news_5.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_princess_news_6"
+		texturefile = "gfx/news_event_pictures/princess_news_6.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_princess_news_7"
+		texturefile = "gfx/news_event_pictures/princess_news_7.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_princess_xinwen_fabuhui_news_1"
+		texturefile = "gfx/news_event_pictures/princess_xinwen_fabuhui_news_1.dds"
+	}
+	
+	
+	
+	# 重庆谈判 #
+	
+	spriteType = {
+		name = "GFX_princess_Chongqing_Negotiation_news_1"
+		texturefile = "gfx/news_event_pictures/princess_Chongqing_Negotiation_news_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_princess_Chongqing_Negotiation_news_2"
+		texturefile = "gfx/news_event_pictures/princess_Chongqing_Negotiation_news_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_princess_Chongqing_Negotiation_news_3"
+		texturefile = "gfx/news_event_pictures/princess_Chongqing_Negotiation_news_3.dds"
+	}
+	
+	
+	
+	
+	
+	### events_pictures ###
+	
+	# 买船 #
+	
+	spriteType = {
+		name = "GFX_princess_Buy_Ship_1"
+		texturefile = "gfx/event_pictures/princess_Buy_Ship_1.dds"
+	}
+	
+	
+	# 通用 #
+	
+	spriteType = {
+		name = "GFX_princess_long_yi_1"
+		texturefile = "gfx/event_pictures/princess_long_yi_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_princess_kangri_jiangshi_zhenwangshu"
+		texturefile = "gfx/event_pictures/princess_kangri_jiangshi_zhenwangshu.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_princess_changdu_zhanyi_1"
+		texturefile = "gfx/event_pictures/princess_changdu_zhanyi_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_princess_wei_manzhouguo_1"
+		texturefile = "gfx/event_pictures/princess_wei_manzhouguo_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_princess_huo_jian_1"
+		texturefile = "gfx/event_pictures/princess_huo_jian_1.dds"
+	}
+	
+	
+	
+	# 重庆谈判 #
+	
+	spriteType = {
+		name = "GFX_princess_xinwen_fabuhui_1"
+		texturefile = "gfx/event_pictures/princess_xinwen_fabuhui_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_princess_heerli_laiyanan_1"
+		texturefile = "gfx/event_pictures/princess_heerli_laiyanan_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_princess_shangdang_zhanyi"
+		texturefile = "gfx/event_pictures/princess_shangdang_zhanyi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_princess_chongqing_tanpan_1"
+		texturefile = "gfx/event_pictures/princess_chongqing_tanpan_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_princess_youxing_dahui_1"
+		texturefile = "gfx/event_pictures/princess_youxing_dahui_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_princess_shuangshi_xieding_1"
+		texturefile = "gfx/event_pictures/princess_shuangshi_xieding_1.dds"
+	}
+	
+}
+	
+	
+	
+	
+	

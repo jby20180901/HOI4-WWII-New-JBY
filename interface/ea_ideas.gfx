@@ -1,0 +1,124 @@
+spriteTypes = {	
+	
+	###P_ideas
+	
+	spriteType = {
+		name = "GFX_idea_raj_indian_gentlemen_officers"
+		texturefile = "gfx/interface/ideas/idea_raj_indian_gentlemen_officers.dds"
+	}
+	
+	
+	###EastAsia_ideas_leader
+	
+	spriteType = {
+		name = "GFX_idea_MZG_chuandaofangzi"
+		texturefile = "gfx/interface/ideas/MZG_chuandaofangzi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_Japan_Hirohito"
+		texturefile = "gfx/interface/ideas/Japan_Hirohito.dds"
+	}
+	
+	
+	###EastAsia_ideas
+	
+	
+	spriteType = {
+		name = "GFX_idea_US_EU_lock"
+		texturefile = "gfx/interface/ideas/red_china_map.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_red_china_map"
+		texturefile = "gfx/interface/ideas/red_china_map.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_deguodwj"
+		texturefile = "gfx/interface/ideas/deguodwj.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_cbqxf-tqql4"
+		texturefile = "gfx/interface/ideas/cbqxf-tqql4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_deguopgfj"
+		texturefile = "gfx/interface/ideas/deguopgfj.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_GXC_biaohanminfeng"
+		texturefile = "gfx/interface/ideas/GXC_biaohanminfeng.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_CHI_guoshang"
+		texturefile = "gfx/interface/ideas/CHI_guoshang.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_CXC_shisikangri"
+		texturefile = "gfx/interface/ideas/CXC_shisikangri.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_Refreash_KMT"
+		texturefile = "gfx/interface/ideas/CHI_guoshang.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CHI_dishonor_peace"
+		texturefile = "gfx/interface/ideas/GXC_biaohanminfeng.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_CHI_niuqusanminzhuyi"
+		texturefile = "gfx/interface/ideas/CHI_niuqusanminzhuyi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_CHI_kmtwansui"
+		texturefile = "gfx/interface/ideas/CHI_kmtwansui.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_CHI_qinaijingcheng"
+		texturefile = "gfx/interface/ideas/CHI_qinaijingcheng.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PRC_quefazhishi"
+		texturefile = "gfx/interface/ideas/PRC_quefazhishi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_DBJ_guohenjiachou"
+		texturefile = "gfx/interface/ideas/DBJ_guohenjiachou.dds"
+	}
+	
+	
+	
+	spriteType = {
+		name = "GFX_idea_MZG_daqingwangchao"
+		texturefile = "gfx/interface/ideas/MZG_daqingwangchao.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_JAP_weianfu"
+		texturefile = "gfx/interface/ideas/JAP_weianfu.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_FIN_cuntuburang"
+		texturefile = "gfx/interface/ideas/idea_can_send_in_the_zombies.dds"
+	}
+	
+	
+	spriteType = {
+		name = "GFX_idea_FIN_kuodazhengbing"
+		texturefile = "gfx/interface/ideas/idea_cze_planning_bonus.dds"
+	}
+	
+	
+}

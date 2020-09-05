@@ -1,0 +1,34 @@
+spriteTypes = {	
+
+	### 通用的 ###
+	
+	spriteType = {
+		name = "GFX_idea_china_empire"
+		texturefile = "gfx/interface/ideas/idea_china_empire.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_china_sa_zhenbing"
+		texturefile = "gfx/interface/ideas/idea_china_sa_zhenbing.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_Buy_Ships_1"
+		texturefile = "gfx/interface/ideas/idea_generic_Buy_Ships_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_Buy_Ships_2"
+		texturefile = "gfx/interface/ideas/idea_generic_Buy_Ships_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_weixing_1"
+		texturefile = "gfx/interface/ideas/idea_weixing_1.dds"
+	}
+	
+}
+
+
+
+

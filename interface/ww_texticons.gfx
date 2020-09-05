@@ -1,0 +1,144 @@
+spriteTypes = {	
+
+spriteType = {
+		name = "GFX_unit_dangweijun_icon_small" #党卫军
+		texturefile = "gfx/texticons/custom_template_033.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+spriteType = {
+		name = "GFX_unit_chiusa_army_icon_small" #美械步兵营
+		texturefile = "gfx/texticons/custom_template_ss_handschar.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+	
+spriteType = {
+		name = "GFX_unit_chizyj_army_icon_small" #精锐中央军
+		texturefile = "gfx/texticons/custom_template_ss_hitlerjugend.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+spriteType = {
+		name = "GFX_unit_light_panzer_icon_small"  #轻型坦克连
+		texturefile = "gfx/texticons/custom_template_ss_berlichingen.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+spriteType = {
+		name = "GFX_unit_penhuo_gongbing_icon_small" #喷火工兵排
+		texturefile = "gfx/texticons/custom_template_ss_galizien.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+spriteType = {
+		name = "GFX_unit_kongjiang_panzer_icon_small" #空降坦克营
+		texturefile = "gfx/texticons/custom_template_026.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+spriteType = {
+		name = "GFX_unit_su_heavy_panzer_icon_small" #主战坦克连
+		texturefile = "gfx/texticons/custom_template_ss_estnische.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+spriteType = {
+		name = "GFX_unit_main_panzer_icon_small" #超重型坦克连
+		texturefile = "gfx/texticons/custom_template_ss_florian_geyer.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+spriteType = {
+		name = "GFX_unit_medium_panzer_icon_small" #中型坦克连
+		texturefile = "gfx/texticons/custom_template_ss_dirlewanger.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+spriteType = {
+		name = "GFX_unit_heavy_panzer_icon_small" #重型坦克连
+		texturefile = "gfx/texticons/custom_template_ss_charlemagne.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+spriteType = {
+		name = "GFX_unit_sniper_icon_small" #狙击手
+		texturefile = "gfx/texticons/custom_template_030.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+spriteType = {
+		name = "GFX_unit_red_unit_icon_small"  #红队
+		texturefile = "gfx/texticons/custom_template_008.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}	
+spriteType = {
+		name = "GFX_unit_Panzergrenadier_icon_small"  #装甲掷弹兵团
+		texturefile = "gfx/texticons/custom_template_032.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}	
+spriteType = {
+		name = "GFX_unit_teaching_unit_icon_small"  #国府德械师
+		texturefile = "gfx/texticons/custom_template_001.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}	
+spriteType = {
+		name = "GFX_unit_kanto_army_icon_small"  #日本甲种师团
+		texturefile = "gfx/texticons/custom_template_021.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}	
+spriteType = {
+		name = "GFX_unit_faxie_army_icon_small"  #法械师步兵营
+		texturefile = "gfx/texticons/custom_template_006.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}	
+spriteType = {
+		name = "GFX_unit_liberation_army_icon_small"  #中国人民解放军
+		texturefile = "gfx/texticons/custom_template_000.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}	
+spriteType = {
+		name = "GFX_unit_firepower_unit_icon_small"  #机枪连
+		texturefile = "gfx/texticons/custom_template_024.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}	
+spriteType = {
+		name = "GFX_unit_tezhong_recon_icon_small"  #特种侦查大队
+		texturefile = "gfx/texticons/custom_template_038.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

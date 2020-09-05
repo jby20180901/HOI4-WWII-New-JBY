@@ -1,0 +1,41 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_cash"
+		texturefile = "gfx/cash.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_walfare_icon"
+		texturefile = "gfx/walfare_icon.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_surplus"
+		texturefile = "gfx/surplus.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_budget"
+		texturefile = "gfx/budget.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_coals_icon"
+		texturefile = "gfx/coals_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_crops_icon"
+		texturefile = "gfx/crops_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "cover_bg"
+		texturefile = "gfx/cover.dds"
+		legacy_lazy_load = no
+	}
+	
+}
