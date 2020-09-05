@@ -1,0 +1,39 @@
+PHI_Political_settlement = {
+	icon = generic_propaganda
+	picture = 
+	allowed = {
+		original_tag = PHI
+	}
+	visible = {
+		OR = {
+			has_idea = PHI_Turbulent
+			has_idea = PHI_Turbulent_2
+			has_idea = PHI_Turbulent_3
+			has_idea = PHI_Turbulent_4
+			has_idea = PHI_Turbulent_5
+		}
+		NOT = {
+			has_completed_focus = PHI_Military_solution
+		}
+	}
+}
+
+PHI_Military_solution = {
+	icon = generic_crisis
+	picture = 
+	allowed = {
+		original_tag = PHI
+	}
+	visible = {
+		OR = {
+			has_idea = PHI_Turbulent
+			has_idea = PHI_Turbulent_2
+			has_idea = PHI_Turbulent_3
+			has_idea = PHI_Turbulent_4
+			has_idea = PHI_Turbulent_5
+		}
+		NOT = {
+			has_completed_focus = PHI_Political_settlement
+		}
+	}
+}

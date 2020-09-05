@@ -1,0 +1,7982 @@
+focus_tree = {  
+	id = china_communist_focus
+	  
+	country = {     
+		factor = 0       
+		modifier = { 
+			add = 10 
+			tag = PRC
+			has_dlc = "Waking the Tiger"
+		}     
+	}
+	continuous_focus_position =  { x = 10 y = 1350 }
+
+	default = no 
+	
+	#长征结束
+	focus = { 
+		id = EastAsia_PRC_changzhengjieshu
+		icon = GFX_focus_eng_liberate_the_home_of_marx
+		x = 24
+		y = 0
+		cost = 4
+		ai_will_do = {
+			factor = 100
+		} 
+		completion_reward = { 
+			add_political_power = 150
+			army_experience = 150
+			remove_ideas = eastasia_idea_PRC_changzheng1
+			add_ideas = eastasia_idea_PRC_changzheng2
+			custom_effect_tooltip = EastAsia_PRC_changzhengjieshu_tip
+			
+		}
+	}
+	#确立政治路线，细分三条道路
+	focus = {
+		id = EastAsia_PRC_sandazhulihuishi
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = { focus = EastAsia_PRC_changzhengjieshu }
+		available = {
+			is_puppet = no
+		}
+		x = -18
+		y = 1
+		relative_position_id = EastAsia_PRC_changzhengjieshu
+		cost = 4
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			remove_ideas = PRC_power_struggles 
+			add_ideas = eastasia_idea_PRC_power_struggles_2
+			
+		}
+	}
+	#路线一：左倾冒进主义
+	focus = {
+		id = EastAsia_PRC_zuoqingmaojin
+		icon = GFX_goal_prc_zuoqingmaojin
+		prerequisite = { focus = EastAsia_PRC_sandazhulihuishi }
+		mutually_exclusive = { focus = EastAsia_PRC_maliezhuyibentuhua   focus = EastAsia_PRC_youqingfenlie }
+		ai_will_do = {
+			factor = 0
+			
+		}
+		available = {
+			is_puppet = no
+			NOT = { has_country_flag = neizhanbaofa }
+		}
+		bypass ={
+			
+		}
+		x = -6
+		y = 1
+		relative_position_id = EastAsia_PRC_sandazhulihuishi
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		select_effect = {
+			set_country_flag = taizuneizhan
+		}
+		completion_reward = {
+			add_stability = 0.1
+			remove_ideas = eastasia_idea_PRC_power_struggles_2
+			add_ideas = eastasia_idea_PRC_power_struggles_3
+		}
+	}
+	#路线一：《两条路线》
+	focus = {
+		id = EastAsia_PRC_liangtiaoluxian
+		icon = GFX_goal_prc_liangtiaoluxian
+		prerequisite = { focus = EastAsia_PRC_zuoqingmaojin }
+		x = 0
+		y = 1
+		relative_position_id = EastAsia_PRC_zuoqingmaojin
+		
+		
+		available = {
+
+		}
+		
+		
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PRC_liangtiaoluxian
+			
+		}
+	}
+	#路线一：正统的布尔什维克
+	focus = {
+		id = EastAsia_PRC_zhengtongdebuershiweike
+		icon = GFX_goal_prc_zhengtongdebuershiweike
+		prerequisite = { focus = EastAsia_PRC_liangtiaoluxian }
+		x = 0
+		y = 1
+		relative_position_id = EastAsia_PRC_liangtiaoluxian
+		
+		available = {
+			NOT = { has_war_with = SOV }
+			SOV = {
+				exists = yes
+				has_capitulated = no
+				has_opinion = { target = ROOT value > 10 }
+			}
+		}
+		
+		
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = eastasia_idea_PRC_power_struggles_3
+			add_ideas = eastasia_idea_PRC_power_struggles_4
+			SOV = { 
+				add_opinion_modifier = { target = PRC modifier = Relationship_improvement } 
+				diplomatic_relation = { country = PRC relation = non_aggression_pact }
+			}
+			
+		}
+	}
+	#路线一：二次“赣南会议”
+	focus = {
+		id = EastAsia_PRC_gannanhuiyi
+		icon = GFX_goal_prc_gannanhuiyi
+		prerequisite = { focus = EastAsia_PRC_zhengtongdebuershiweike }
+		x = 0
+		y = 1
+		relative_position_id = EastAsia_PRC_zhengtongdebuershiweike
+		
+		available = {
+		}
+		
+		
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = eastasia_idea_PRC_power_struggles_4
+			add_ideas = eastasia_idea_PRC_power_struggles_5
+			PRC = { country_event = { id = eastasia.1007 } }
+		}
+	}
+	#路线一，另立中央
+	focus = {
+		id = EastAsia_PRC_linglizhongyang1
+		icon = GFX_goal_prc_linglizhongyang1
+		prerequisite = { focus = EastAsia_PRC_gannanhuiyi }
+		x = 0
+		y = 1
+		relative_position_id = EastAsia_PRC_gannanhuiyi
+		
+		available = {
+			is_puppet = no
+		}
+		
+		
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+			remove_ideas = eastasia_idea_PRC_power_struggles_5
+			add_ideas = eastasia_idea_PRC_power_struggles_6
+			
+		}
+			
+		
+	}
+	#路线一：共产国际领导一切
+	focus = {
+		id = EastAsia_PRC_gongchanguojilingdaoyiqie
+		icon = GFX_goal_prc_gongchanguojilingdaoyiqie
+		prerequisite = { focus = EastAsia_PRC_linglizhongyang1 }
+		x = 0
+		y = 1
+		relative_position_id = EastAsia_PRC_linglizhongyang1
+		
+		available = {
+			is_puppet = no
+			NOT = { has_war_with = SOV }
+			SOV = {
+				exists = yes
+				has_capitulated = no
+			}
+		}
+		
+		
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			SOV = {
+				puppet = PRC
+				set_autonomy = { target = PRC autonomy_state = autonomy_dominion }
+				if = {
+					limit = {
+						is_in_faction = yes
+					}
+					random_country = {
+						limit = { 
+							is_in_faction_with = SOV 
+							is_faction_leader = yes
+						}
+						add_to_faction = PRC
+					}
+				}
+			}
+			
+		}
+	}
+	#路线二：马列主义本土化
+	focus = {
+		id = EastAsia_PRC_maliezhuyibentuhua
+		icon = GFX_goal_prc_maliezhuyibentuhua
+		prerequisite = { focus = EastAsia_PRC_sandazhulihuishi }
+		mutually_exclusive = { focus = EastAsia_PRC_zuoqingmaojin   focus = EastAsia_PRC_youqingfenlie }
+		ai_will_do = {
+			factor = 100
+			
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass ={
+			
+		}
+		x = 0
+		y = 1
+		relative_position_id = EastAsia_PRC_sandazhulihuishi
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		select_effect = {
+			set_country_flag = taizuneizhan
+		}
+		completion_reward = {
+			add_stability = 0.1
+			remove_ideas = eastasia_idea_PRC_power_struggles_2
+			add_ideas = eastasia_idea_PRC_power_struggles_3		
+		}
+	}
+	#路线二：《论反对日本帝国主义的策略》
+	focus = { 
+		id = EastAsia_PRC_lunfanduiribendiguozhuyidecelve
+		icon = GFX_goal_prc_lunfanduiribendiguozhuyidecelve
+		prerequisite = { focus = EastAsia_PRC_maliezhuyibentuhua }
+		x = 0
+		y = 1
+		relative_position_id = EastAsia_PRC_maliezhuyibentuhua
+		available = {
+			is_puppet = no
+		}
+		
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PRC_maobeishangkangri
+		}
+	}
+	#路线二：《中国革命战争的战略问题》
+	focus = {
+		id = EastAsia_PRC_zhongguogemingdezhanlvewenti
+		icon = GFX_goal_prc_zhengtongdebuershiweike
+		prerequisite = { focus = EastAsia_PRC_lunfanduiribendiguozhuyidecelve }
+		x = 0
+		y = 1
+		relative_position_id = EastAsia_PRC_lunfanduiribendiguozhuyidecelve
+		available = {
+			is_puppet = no
+		}
+		
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = eastasia_idea_PRC_power_struggles_3
+			add_ideas = eastasia_idea_PRC_power_struggles_4
+		}
+	}
+	#路线二：《矛盾论》与《实践论》
+	focus = {
+		id = EastAsia_PRC_maodunlun
+		icon = GFX_goal_prc_chenglixinanju
+		prerequisite = { focus = EastAsia_PRC_zhongguogemingdezhanlvewenti }
+		x = 0
+		y = 1
+		relative_position_id = EastAsia_PRC_zhongguogemingdezhanlvewenti
+		available = {
+			is_puppet = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+		}
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = eastasia_idea_PRC_power_struggles_4
+			add_ideas = eastasia_idea_PRC_power_struggles_5
+			PRC = { country_event = { id = eastasia.1008 } }
+		}
+	}
+	#路线二：党指挥枪
+	focus = { 
+		id = EastAsia_PRC_dangzhihuiqiang
+		icon = GFX_goal_prc_dangzhihuiqiang
+		prerequisite = { focus = EastAsia_PRC_maodunlun }
+		x = 0
+		y = 1
+		relative_position_id = EastAsia_PRC_maodunlun
+		available = {
+			is_puppet = no
+		}
+		
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PRC_dangzhihuiqiang
+			remove_ideas = eastasia_idea_PRC_power_struggles_5
+			add_ideas = eastasia_idea_PRC_power_struggles_6
+		}
+	}
+	#路线二：陕甘宁边区（已有）
+	focus = {
+		id = EastAsia_PRC_shanganningbianqu
+		icon = GFX_goal_prc_maozedong1
+		prerequisite = { focus = EastAsia_PRC_dangzhihuiqiang }
+		x = 0
+		y = 1
+		relative_position_id = EastAsia_PRC_dangzhihuiqiang
+		available = {
+			622 = { is_owned_by = PRC }
+			is_puppet = no
+			NOT = { has_war_with = XNM }
+			country_exists = XNM 
+		}
+		bypass = {
+			PRC = {is_in_faction = yes}
+			NOT = { country_exists = XNM }
+		}
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = PRC_SGN 
+			
+			if = {
+				limit = { country_exists = XNM  }
+				XNM = { country_event = { id = eastasia.121 days = 1 } }
+			}
+		   
+			if = {
+				limit = { 
+					CHI = {is_in_faction = no}				
+				}
+				
+				CHI = {
+					set_rule = { can_create_factions = yes }
+					create_faction = chinese_united_front
+				}
+				if = {  limit = { country_exists = PRC 	}  CHI = { add_to_faction = PRC }  }
+				if = {  limit = { country_exists = DBJ 	}  CHI = { add_to_faction = DBJ }  }
+				if = {  limit = { country_exists = XXC 	}  CHI = { add_to_faction = XXC }  }
+				if = {  limit = { country_exists = SLJ 	}  CHI = { add_to_faction = SLJ }  } 
+				if = {  limit = { country_exists = YUN 	}  CHI = { add_to_faction = YUN }  }
+				if = {  limit = { country_exists = CXC 	}  CHI = { add_to_faction = CXC }  } 
+				if = {  limit = { country_exists = XSM 	}  CHI = { add_to_faction = XSM }  }
+				if = {  limit = { country_exists = SIK 	}  CHI = { add_to_faction = SIK }  }
+				if = {  limit = { country_exists = GXC 	}  CHI = { add_to_faction = GXC }  }
+				if = {  limit = { country_exists = XNM 	}  CHI = { add_to_faction = XNM }  }
+				if = {  limit = { country_exists = SHX 	}  CHI = { add_to_faction = SHX }  }
+				if = {  limit = { country_exists = YXC 	}  CHI = { add_to_faction = YXC }  }
+				if = {  limit = { country_exists = XJM	}  CHI = { add_to_faction = XJM }  }
+				
+				
+			}
+			else_if = {
+				limit = { 
+					CHI = {is_in_faction = yes}
+					PRC = { NOT = { has_war_with = CHI } }
+				}
+				if = {  limit = { country_exists = PRC 	}  CHI = { add_to_faction = PRC }  }
+				if = {  limit = { country_exists = DBJ 	}  CHI = { add_to_faction = DBJ }  }
+				if = {  limit = { country_exists = XXC 	}  CHI = { add_to_faction = XXC }  }
+				if = {  limit = { country_exists = SLJ 	}  CHI = { add_to_faction = SLJ }  } 
+				if = {  limit = { country_exists = YUN 	}  CHI = { add_to_faction = YUN }  }
+				if = {  limit = { country_exists = CXC 	}  CHI = { add_to_faction = CXC }  } 
+				if = {  limit = { country_exists = XSM 	}  CHI = { add_to_faction = XSM }  }
+				if = {  limit = { country_exists = SIK 	}  CHI = { add_to_faction = SIK }  }
+				if = {  limit = { country_exists = GXC 	}  CHI = { add_to_faction = GXC }  }
+				if = {  limit = { country_exists = XNM 	}  CHI = { add_to_faction = XNM }  }
+				if = {  limit = { country_exists = SHX 	}  CHI = { add_to_faction = SHX }  }
+				if = {  limit = { country_exists = YXC 	}  CHI = { add_to_faction = YXC }  }
+				if = {  limit = { country_exists = XJM	}  CHI = { add_to_faction = XJM }  }
+			}	 
+			
+		}
+	}
+	#12同：成立中共中央社会部
+	focus = {
+		id = wang_prc_chenglizhonggongzhongyangshehuibu
+		icon = GFX_focus_wang_prc_chenglizhonggongzhongyangshehuibu
+		prerequisite = { focus = EastAsia_PRC_sandazhulihuishi }
+		x = 3
+		y = 3
+		
+		cost = 4
+		
+		available = {
+			is_puppet = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			has_intelligence_agency = yes
+		}
+		completion_reward = {
+			create_intelligence_agency = yes
+		}
+	}
+	#12同：潜伏
+	focus = {
+		id = wang_prc_qianfu
+		icon = GFX_goal_prc_peiyangdixiadangyuan
+		prerequisite = { focus = wang_prc_chenglizhonggongzhongyangshehuibu }
+		x = 0
+		y = 1
+		relative_position_id = wang_prc_chenglizhonggongzhongyangshehuibu
+		
+		available = {
+			is_puppet = no
+		}
+		
+		
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_country_flag = prc_dixiagongzuo_dangyuan
+			custom_effect_tooltip = prc_dixiagongzuo_dangyuan_tip
+			custom_effect_tooltip = prc_dixiagongzuo_dangyuan_tip2
+			hidden_effect = {
+				create_operative_leader = {
+					name = "余则成"
+					GFX = GFX_yuzecheng
+					traits = { operative_infiltrator operative_tough  operative_safe_cracker   }
+					bypass_recruitment = yes
+					available_to_spy_master = yes
+					nationalities = { PRC CHI }
+				}
+			}
+			
+		}
+	}
+	#12同：建立地下交通线
+	focus = {
+		id = EastAsia_PRC_jianlidixiajiaotongxian
+		icon = GFX_goal_prc_jianlidixiajiaotongxian
+		prerequisite = { focus = wang_prc_qianfu }
+		x = 0
+		y = 1
+		relative_position_id = wang_prc_qianfu
+		
+		available = {
+			is_puppet = no
+		}
+		
+		
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_country_flag = prc_dixiagongzuo_jiaotongxian
+			custom_effect_tooltip = prc_dixiagongzuo_jiaotongxian_tip
+		}
+	}
+	#12同：政治保卫局
+	focus = {
+		id = PRC_guojiazhengzhibaoweiju
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = EastAsia_PRC_jianlidixiajiaotongxian }
+		x = 0
+		y = 1
+		relative_position_id = EastAsia_PRC_jianlidixiajiaotongxian
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+			add_ideas = PRC_zhengzhibaoweiju
+		}
+	}
+	#12同：赤水
+	focus = {
+		id = PRC_zhongongzhongyangshehuibu
+		icon = GFX_PRC_zhongongzhongyangshehuibu_icon
+		prerequisite = { focus = PRC_guojiazhengzhibaoweiju }
+		mutually_exclusive = { focus = PRC_zhonggongzhongyangdiaochabu }
+		x = -1
+		y = 1
+		relative_position_id = PRC_guojiazhengzhibaoweiju
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = PRC_kang_sheng
+			add_ideas = PRC_shehuibu
+		}
+	}
+	#12同：农夫
+	focus = {
+		id = PRC_zhonggongzhongyangdiaochabu
+		icon = GFX_PRC_zhonggongzhongyangdiaochabu_icon
+		prerequisite = { focus = PRC_guojiazhengzhibaoweiju }
+		mutually_exclusive = { focus = PRC_zhongongzhongyangshehuibu }
+		x = 1
+		y = 1
+		relative_position_id = PRC_guojiazhengzhibaoweiju
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = PRC_likenong_tip
+			show_ideas_tooltip = PRC_likenong
+			add_ideas = PRC_diaochabu
+			
+		}
+	}
+	#12总：重建“红队”
+	focus = {
+		id = PRC_chongjianhongdui
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = PRC_zhonggongzhongyangdiaochabu  focus = PRC_zhongongzhongyangshehuibu }
+		x = 1
+		y = 1
+		relative_position_id = PRC_zhongongzhongyangshehuibu
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			
+			hidden_effect = {
+				load_oob = "PRC_hongdui"
+			}
+			
+			set_technology ={ red_unit_0 = 1 }
+			
+			custom_effect_tooltip = PRC_chongjianhongdui_tip
+		}
+	}
+	#23同：延安整风开始
+	focus = {
+		id = EastAsia_PRC_yananzhengfeng
+		icon = GFX_goal_prc_yananzhengfeng
+		prerequisite = { focus = EastAsia_PRC_sandazhulihuishi }
+		available = {
+		
+			OR = {
+				has_completed_focus = EastAsia_PRC_zuoqingmaojin
+				has_completed_focus = EastAsia_PRC_maliezhuyibentuhua
+				has_completed_focus = EastAsia_PRC_youqingfenlie
+			}
+			
+		}
+		x = 9
+		y = 3
+		cost = 4 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		bypass = {
+			has_country_flag = neizhanbaofa
+		}
+		completion_reward = {
+			add_ideas  = PRC_yananzhengfeng
+				
+			}
+		
+		
+	}
+	#23同：反对教条主义
+	focus = {
+		id = PRC_fanjiaotiao
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = EastAsia_PRC_yananzhengfeng }
+		x = 0
+		y = 1
+		relative_position_id = EastAsia_PRC_yananzhengfeng
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+		bypass = {
+		 OR = {
+			has_country_flag = neizhanbaofa
+			has_country_flag = prc_zhengfengwanbi
+			has_completed_focus = EastAsia_PRC_zhengtongdebuershiweike
+			}
+		}
+		completion_reward = {
+			
+			remove_ideas = PRC_gongchanguoji
+			
+		}
+	}
+	#23同：反对宗派主义
+	focus = {
+		id = PRC_fanzongpai
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = PRC_fanjiaotiao }
+		x = 0
+		y = 1
+		relative_position_id = PRC_fanjiaotiao
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+			OR = {
+				has_country_flag = neizhanbaofa
+				has_country_flag = prc_zhengfengwanbi
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			remove_ideas = PRC_shantouzhuyi
+		}
+	}
+	#23同：反对党八股
+	focus = {
+		id = PRC_fandangbagu
+		icon = GFX_focus_rom_abdicate
+		prerequisite = { focus = PRC_fanzongpai }
+		x = 0
+		y = 1
+		relative_position_id = PRC_fanzongpai
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+			OR = {
+				has_country_flag = neizhanbaofa
+				has_country_flag = prc_zhengfengwanbi
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			remove_ideas = PRC_dangbagu
+		} 
+	} 
+	#23同：惩前毖后，治病救人
+	focus = {
+		id = EastAsia_PRC_chengqianbihou
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		prerequisite = { focus = PRC_fandangbagu }
+		mutually_exclusive = { focus = EastAsia_PRC_zhancaochugen }
+		x = -1
+		y = 1
+		relative_position_id = PRC_fandangbagu
+		
+		available = {
+			OR = {  
+				NOT = { has_country_flag = neizhanbaofa }
+				AND = { has_country_flag = neizhanbaofa   has_civil_war = no }
+			}
+		}
+		bypass = {
+			has_completed_focus = EastAsia_PRC_youqingfenlie
+		}
+		
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PRC_zhibingjiuren
+			
+			if ={
+				limit ={ NOT = { has_country_flag = neizhanbaofa } }
+				country_event = eastasia.2030
+			}
+			else_if = {
+				limit ={ 
+					has_country_flag = neizhanbaofa
+					has_civil_war = no
+				}
+				country_event = eastasia.2034
+			}
+		}
+	}
+	#23同：斩草除根，以绝后患
+	focus = {
+		id = EastAsia_PRC_zhancaochugen
+		icon = GFX_goal_prc_zhancaochugen
+		prerequisite = { focus = PRC_fandangbagu }
+		mutually_exclusive = { focus = EastAsia_PRC_chengqianbihou  }
+		x = 1
+		y = 1
+		relative_position_id = PRC_fandangbagu
+		
+		available = {
+			 
+			 
+		}
+		bypass = {
+		OR = {
+			has_completed_focus = EastAsia_PRC_youqingfenlie
+			has_country_flag = neizhanbaofa
+			}
+		}
+		
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}    
+		completion_reward = { 
+		
+	immediate = {
+		set_global_flag = zhancaochuge_yijuhouhuan
+	}
+		
+		add_ideas = PRC_zhancaochugen
+		hidden_effect = {
+            country_event = { id = china.432 days = 30 } 		
+			remove_unit_leader = 9902
+			remove_unit_leader = 9401
+			remove_unit_leader = 9402
+			remove_unit_leader = 9403
+			remove_unit_leader = 9404 
+			remove_unit_leader = 9405
+			remove_unit_leader = 9406
+			remove_unit_leader = 9407
+			remove_unit_leader = 9408
+			remove_unit_leader = 9409
+			remove_unit_leader = 9410
+			remove_unit_leader = 9411
+			remove_unit_leader = 9412
+			remove_unit_leader = 9413
+			remove_unit_leader = 9414
+			remove_unit_leader = 9415
+			remove_unit_leader = 9416
+			remove_unit_leader = 9417
+		}
+      custom_effect_tooltip = WW_PRC_zhancaochugen_tip		
+			
+		}
+	}
+	#23总：关于若干历史问题的决议
+	focus = {
+		id = PRC_lishijueyi
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { 
+			focus = EastAsia_PRC_chengqianbihou
+			focus = EastAsia_PRC_zhancaochugen
+		}
+		x = 1
+		y = 1
+		relative_position_id = EastAsia_PRC_chengqianbihou
+		  
+		available = {
+			
+		}
+		 
+		
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		    remove_ideas = PRC_yananzhengfeng
+			add_ideas = PRC_guanyuruoganlishiwentidejueyi		
+		}
+	}
+	
+	#路线三：右倾分裂主义
+	focus = {
+		id = EastAsia_PRC_youqingfenlie
+		icon = GFX_goal_prc_youqingfenlie
+		prerequisite = { focus = EastAsia_PRC_sandazhulihuishi }
+		mutually_exclusive = { focus = EastAsia_PRC_maliezhuyibentuhua    focus = EastAsia_PRC_zuoqingmaojin }
+		ai_will_do = {
+			factor = 0
+			
+		}
+		available = {
+			is_puppet = no
+			NOT = { has_country_flag = neizhanbaofa }
+		}
+		bypass ={
+			#has_country_flag = taizuneizhan
+		}
+		x = 6
+		y = 1
+		relative_position_id = EastAsia_PRC_sandazhulihuishi
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		select_effect = {
+			set_country_flag = taizuneizhan
+		}
+		completion_reward = {
+			add_stability = 0.1
+			remove_ideas = eastasia_idea_PRC_power_struggles_2
+			add_ideas = eastasia_idea_PRC_power_struggles_3		
+		}
+	}
+	#路线三：成立西南局
+	focus = {
+		id = EastAsia_PRC_chenglixinanju
+		icon = GFX_goal_prc_chenglixinanju
+		prerequisite = { focus = EastAsia_PRC_youqingfenlie }
+		x = 0
+		y = 1
+		relative_position_id = EastAsia_PRC_youqingfenlie
+		
+		available = {
+			is_puppet = no
+		}
+		
+		
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PRC_chenglixinanju
+			
+		}
+	}
+	#路线三：将不离军！（事件：彭德怀死亡）
+	focus = {
+		id = EastAsia_PRC_jiangbulijun
+		icon = GFX_goal_prc_jiangbulijun
+		prerequisite = { focus = EastAsia_PRC_chenglixinanju }
+		x = 0
+		y = 1
+		relative_position_id = EastAsia_PRC_chenglixinanju
+		
+		available = {
+			is_puppet = no
+		}
+		
+		
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = eastasia_idea_PRC_power_struggles_3
+			add_ideas = eastasia_idea_PRC_power_struggles_4
+			custom_effect_tooltip = PRC_jiangbulijun_tip
+			hidden_effect = { remove_unit_leader = 9901 }
+		}
+	}
+	#路线三：取得西方支持
+	focus = {
+		id = EastAsia_PRC_qudexifangzhichi
+		icon = GFX_goal_prc_qudexifangzhichi
+		prerequisite = { focus = EastAsia_PRC_jiangbulijun }
+		x = 0
+		y = 1
+		relative_position_id = EastAsia_PRC_jiangbulijun
+		
+		available = {
+			is_puppet = no
+		}
+		
+		
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			USA = { 
+				add_opinion_modifier = { target = PRC modifier = Relationship_improvement } 
+				diplomatic_relation = { country = PRC relation = non_aggression_pact }
+			}
+			ENG= { 
+				add_opinion_modifier = { target = PRC modifier = Relationship_improvement } 
+				diplomatic_relation = { country = PRC relation = non_aggression_pact }
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 1500
+				producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 500
+				producer = ENG
+			}
+			
+		}
+	}
+	
+	#路线三：另立中央
+	focus = {
+		id = EastAsia_PRC_linglizhongyang2
+		icon = GFX_goal_prc_linglizhongyang2
+		prerequisite = { focus = EastAsia_PRC_qudexifangzhichi }
+		x = 0
+		y = 1
+		relative_position_id = EastAsia_PRC_qudexifangzhichi
+		available = {
+			is_puppet = no
+		}
+		
+		
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = eastasia_idea_PRC_power_struggles_5
+			add_ideas = eastasia_idea_PRC_power_struggles_6
+		}
+	}
+	
+	#路线三：南下！
+	focus = {
+		id = EastAsia_PRC_nanxia
+		icon = GFX_goal_prc_nanxia
+		prerequisite = { focus = EastAsia_PRC_linglizhongyang2 }
+		mutually_exclusive = { focus = EastAsia_PRC_kangrixianfengjun }
+		x = 0
+		y = 1
+		relative_position_id = EastAsia_PRC_linglizhongyang2
+		available = {
+			is_puppet = no
+			CHI = { has_war_with = JAP }
+		}
+		
+		
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		if = {
+				limit = {
+					PRC = { is_in_faction_with = CHI }
+				}
+		 CHI = { remove_from_faction = ROOT }
+				}
+			
+			if = {
+				limit = {
+					CHI = { can_ROOT_get_wargoal_on_THIS = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = CHI
+				}
+			}
+			
+		}
+	}
+	#总：团结一心，共御仇寇
+	focus = {  
+		id = EastAsia_PRC_tuanjieyixin
+		icon = GFX_goal_prc_tuanjieyixin
+		prerequisite = {
+			focus = EastAsia_PRC_nanxia
+			focus = EastAsia_PRC_shanganningbianqu
+			focus = EastAsia_PRC_gongchanguojilingdaoyiqie
+		
+		}
+		x = 6 
+		y = 8
+		cost = 4
+		ai_will_do = {
+			factor = 1
+			
+		}
+		available = {
+			
+		}
+		
+		completion_reward = {
+			add_ideas = PRC_tuanjieyixin
+			
+		}
+	} 
+	
+	
+	#重整红军（军事线，分为：一，纪律。二，战略战术。三，战斗目标。四，军队建设）
+	focus = { 
+		id = PRC_chongzhenghongjun
+		icon = GFX_goal_prc_chongzhenghongjun
+		prerequisite = { focus = EastAsia_PRC_changzhengjieshu }
+		available = {
+			
+		}
+		x = -6
+		y = 1
+		relative_position_id = EastAsia_PRC_changzhengjieshu
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_the_long_march_1
+			add_ideas = PRC_the_long_march_2
+			
+		}
+	}
+	#路线一：会宁会师
+	focus = {
+		id = EastAsia_PRC_hongsifangmianjun
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = PRC_chongzhenghongjun }
+		x = -4
+		y = 1
+		relative_position_id = PRC_chongzhenghongjun
+		available = {
+			date > 1936.8.1
+		}
+		bypass = {
+				has_country_flag = neizhanbaofa
+		}
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			hidden_effect = { load_oob = "PRC_hongjun24fangmianjun" }
+			create_field_marshal= {
+				name = "朱德"
+				gfx = "GFX_portrait_prc_zhu_de"
+				traits = { infantry_officer organizer  brilliant_strategist }
+				skill = 5
+				attack_skill = 4
+				defense_skill = 4
+				planning_skill = 5
+			logistics_skill = 5
+			}
+			create_corps_commander = {
+				name = "刘伯承"
+				portrait_path = "gfx/leaders/PRC/liubocheng.dds"
+				traits = { infantry_officer  jungle_rat urban_assault_specialist}
+				skill = 5
+				attack_skill = 5
+				defense_skill = 5
+				planning_skill = 5
+				logistics_skill = 5
+			}
+			create_corps_commander = {
+				name = "贺龙"
+				portrait_path = "gfx/leaders/PRC/he_long.dds"
+				traits = { infantry_officer trait_mountaineer commando  }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 4
+				planning_skill = 2
+				logistics_skill = 3
+			}
+			create_corps_commander = {
+				name = "徐向前"
+				portrait_path = "gfx/leaders/PRC/xuxiangqian.dds"
+				traits = { infantry_officer trait_mountaineer commando}
+				skill = 4
+				attack_skill = 5
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 4
+			}
+			custom_effect_tooltip = hongjun24fangmianjun_tip
+		}
+	}
+	#路线一：成立前敌委员会
+	focus = {
+		id = PRC_qiandiweiyuanhui
+		icon = GFX_goal_prc_qiandiweiyuanhui
+		prerequisite = { focus = EastAsia_PRC_hongsifangmianjun }
+		x = 0
+		y = 1
+		relative_position_id = EastAsia_PRC_hongsifangmianjun
+		available = {
+			is_puppet = no
+		}
+		
+		
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			has_country_flag = prc_zhengfengwanbi
+		}
+		completion_reward = {
+			add_ideas = PRC_qiandiweiyuanhui
+		}
+	}
+	#路线一，三大纪律八项注意
+	focus = {
+		id = PRC_sandajilv
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = PRC_qiandiweiyuanhui }
+		x = 0
+		y = 1
+		relative_position_id = PRC_qiandiweiyuanhui
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+			NOT = { PRC_has_low_popular_support = yes }
+			PRC = { has_war_support = 1  has_stability = 2 }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			PRC_low_popular_support_level_down = yes
+			add_ideas = PRC_sandajilvbaxiangzhuyi
+		}
+	}
+	#路线一，陕西铁壁
+	focus = {
+		id = EastAsia_PRC_shanbeitiebi
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = PRC_sandajilv }
+		x = 0
+		y = 1
+		relative_position_id = PRC_sandajilv
+		available = {
+			622 = { is_owned_by = PRC }
+			date > 1936.1.1
+		}
+		
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			622 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 7208
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 5007
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 12156
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 10733
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 517
+					instant_build = yes
+				}
+			}
+			798 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 1458
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 4939
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 12356
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#路线一，进军榆林
+	focus = {
+		id = EastAsia_PRC_jinjunyulin
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = EastAsia_PRC_shanbeitiebi }
+		x = 0
+		y = 1
+		
+		relative_position_id = EastAsia_PRC_shanbeitiebi
+		available = {
+		   
+			NOT = { 
+				has_war_with = SHX 
+			}
+			746 = { is_owned_by = SHX }
+			date > 1936.2.1
+			
+		}
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			OR = { 
+				SHX = { exists = no }
+				PRC = { owns_state = 746 }
+			}
+		
+		}
+		completion_reward = {
+			PRC = { transfer_state = 746 }
+			
+			SHX = {  
+			
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 1500
+				producer = SOV
+			}
+			
+			SHX = { add_political_power = 25 }
+			
+			}
+			
+		}
+	}
+	#路线一，抗日先锋军
+	focus = {
+		id = EastAsia_PRC_kangrixianfengjun
+		icon = GFX_goal_difangbudui
+		prerequisite = { focus = EastAsia_PRC_jinjunyulin }
+		mutually_exclusive = { focus = EastAsia_PRC_nanxia }
+		x = 0
+		y = 1
+		relative_position_id = EastAsia_PRC_jinjunyulin
+		available = {
+			
+		}
+		
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			has_country_flag = prc_zhengfengwanbi
+		}
+		completion_reward = {
+			hidden_effect = { load_oob = "PRC_kangrixianfengjun" }
+			custom_effect_tooltip = kangrixianfengjun_tip
+			set_technology = { tech_Broadsword_team = 1 }
+		}
+	}
+	#同张国焘：加强纪律性，革命无不胜
+	focus = {
+		id = PRC_jiaqiangjilv
+		icon = GFX_goal_prc_jiaqiangjilv
+		prerequisite = {
+			focus = EastAsia_PRC_kangrixianfengjun
+			focus = EastAsia_PRC_nanxia
+		}
+		x = -1
+		y = 1
+		relative_position_id = EastAsia_PRC_kangrixianfengjun
+		available = {
+			
+		}
+		
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			has_country_flag = has_completed_PRC_jiaqiangjilv
+		}
+		completion_reward = {
+			remove_ideas = PRC_red_army_weakened
+		}
+	}
+	#路线二：小米加步枪
+	focus = {
+		id = EastAsia_PRC_renmindejundui
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = PRC_chongzhenghongjun }
+		x = 0
+		y = 1
+		relative_position_id = PRC_chongzhenghongjun
+		available = {
+		
+			
+		}
+		
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = eastasia_idea_PRC_xiaomijiabuqiang
+			set_technology = { 
+				maose_hezipao_1 = 1 
+			}
+		}
+	}
+	#路线二：发动群众
+	focus = {
+		id = PRC_fadongqunzhong
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = EastAsia_PRC_renmindejundui }
+		relative_position_id = EastAsia_PRC_renmindejundui
+		available = {
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			
+		}
+		completion_reward = {
+			PRC_low_popular_support_level_down = yes
+			add_manpower = 100000
+		}
+	}
+	#路线二：县大队，区小队
+	focus = {
+		id = PRC_xiandadui
+		icon = GFX_goal_prc_changzhengjieshu
+		prerequisite = { focus = PRC_fadongqunzhong }
+		relative_position_id = PRC_fadongqunzhong
+		available = {
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			
+		}
+		completion_reward = {
+			remove_ideas = eastasia_idea_PRC_changzheng2
+			add_ideas = eastasia_idea_PRC_changzheng3
+			
+			custom_effect_tooltip = PRC_xiandadui_tip
+			hidden_effect = { 
+				load_oob = "PRC_xiandadui_quxiaodui"
+				add_manpower = -50000
+			}
+		}
+	}
+	#路线二：妇女救国会
+	focus = {
+		id = PRC_funvjiuguohui
+		icon = GFX_goal_prc_funvjiuguohui
+		prerequisite = { focus = PRC_xiandadui }
+		relative_position_id = PRC_xiandadui
+		available = {
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			
+		}
+		completion_reward = {
+			custom_effect_tooltip = PRC_funvjiuguohui_tip
+			hidden_effect = { 
+				load_oob = "PRC_hongseniangzijun"
+				add_manpower = -50000
+			}
+		}
+	}
+	#路线二：儿童团
+	focus = {
+		id = PRC_ertongtuan
+		icon = GFX_goal_prc_ertongtuan
+		prerequisite = { focus = PRC_funvjiuguohui }
+		relative_position_id = PRC_funvjiuguohui
+		available = {
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			
+		}
+		completion_reward = {
+			add_ideas = PRC_wangerxiao_fangniu
+		}
+	}
+	#路线二：人民战争
+	focus = {
+		id = PRC_renminzhanzheng2
+		icon = GFX_goal_prc_renminzhanzheng2
+		prerequisite = { focus = PRC_ertongtuan }
+		relative_position_id = PRC_ertongtuan
+		available = {
+		 
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			
+		}
+		completion_reward = {
+			JAP = {
+				add_ideas = JAP_renminzhanzheng
+			}
+			add_ideas = eastasia_idea_PRC_renmindeliliang
+		}
+	}
+	
+	#路线二：申领物资
+	focus = {
+		id = EastAsia_PRC_shenlingwuzi
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = EastAsia_PRC_renmindejundui }
+		relative_position_id = EastAsia_PRC_renmindejundui
+		available = {
+		    has_war_with = JAP
+			NOT = { has_war_with = CHI }
+			PRC = { is_in_faction_with = CHI }
+		}
+		x = -2
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			has_war_with = CHI
+		}
+		completion_reward = {
+			CHI = { country_event = eastasia.124 }
+		}
+	}
+	#路线二：《论持久战》
+	focus = {
+		id = EastAsia_PRC_lunchijiuzhan
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = EastAsia_PRC_shenlingwuzi }
+		relative_position_id = EastAsia_PRC_shenlingwuzi
+		available = {
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = eastasia_idea_PRC_lunchijiuzhan
+		}
+	}
+	
+	
+	#路线二：游击战术
+	focus = {
+		id = EastAsia_PRC_youjizhanshu
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = EastAsia_PRC_lunchijiuzhan }
+		relative_position_id = EastAsia_PRC_lunchijiuzhan
+		available = {
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = eastasia_idea_PRC_youjizhanshu
+		}
+	}
+	#路线二：敌后渗透
+	focus = {
+		id = EastAsia_PRC_dihoushentou
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { focus = EastAsia_PRC_youjizhanshu }
+		relative_position_id = EastAsia_PRC_youjizhanshu
+		available = {
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = eastasia_idea_PRC_dihoushentou
+		}
+	}
+	#路线二：地道战
+	focus = {
+		id = PRC_didaozhan
+		icon = GFX_goal_prc_didaozhan
+		prerequisite = { focus = EastAsia_PRC_dihoushentou }
+		relative_position_id = EastAsia_PRC_dihoushentou
+		available = {
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_technology = { tunnel_warfare = 1 }
+			add_ideas = PRC_didaozhan_maifushenbing
+		}
+	}
+	
+	#路线二：红军改编
+	focus = {
+		id = EastAsia_PRC_hongjungaibian
+		icon = GFX_goal_molotov_ribbentrop_pact
+		prerequisite = { focus = EastAsia_PRC_renmindejundui }
+		relative_position_id = EastAsia_PRC_renmindejundui
+		available = {
+		    has_war_with = JAP
+			NOT = { has_war_with = CHI }
+			PRC = { is_in_faction_with = CHI }
+		}
+		x = 2
+		y = 1
+		cost = 4
+		bypass = {  
+			 has_completed_focus = PRC_jiefangquanzhongugo
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+		completion_reward = {
+			PRC = { 
+				add_opinion_modifier = { target = CHI modifier = Relationship_improvement } 
+				add_political_power = 50
+				remove_ideas = PRC_the_long_march_2
+				add_ideas = PRC_the_long_march_3
+			}
+			CHI = {
+				add_political_power = 50
+				add_opinion_modifier = { target = PRC modifier = Relationship_improvement }
+			}
+		}
+	}
+	#路线二：番号：八路军
+	focus = {
+		id = EastAsia_PRC_balijun
+		icon = GFX_goal_difangbudui
+		prerequisite = { focus = EastAsia_PRC_hongjungaibian }
+		relative_position_id = EastAsia_PRC_hongjungaibian
+		available = {
+			has_war_with = JAP
+			NOT = { has_war_with = CHI }
+			PRC = { is_in_faction_with = CHI }
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			 has_completed_focus = PRC_jiefangquanzhongugo
+		}
+		completion_reward = {
+			army_experience = 50
+			custom_effect_tooltip = balujun_tip
+			hidden_effect = { load_oob = "PRC_balujun" }
+			CHI = {
+				add_political_power = 25
+			}
+		}
+	}
+	#路线二，番号：新四军
+	focus = {
+		id = EastAsia_PRC_xinsijun
+		icon = GFX_goal_difangbudui
+		prerequisite = { focus = EastAsia_PRC_balijun }
+		relative_position_id = EastAsia_PRC_balijun
+		available = {
+			has_war_with = JAP
+			NOT = { has_war_with = CHI }
+			PRC = { is_in_faction_with = CHI }
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			 has_completed_focus = PRC_jiefangquanzhongugo
+		}
+		completion_reward = {
+			army_experience = 50
+			custom_effect_tooltip = xinsijun_tip
+			hidden_effect = { load_oob = "PRC_xinsijun" }
+			CHI = {
+				add_political_power = 25
+			}
+		}
+	}
+	
+	#路线二：平型关大捷·1
+	focus = {
+		id = EastAsia_PRC_pingxingguanzhanyi
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = EastAsia_PRC_xinsijun }
+		prerequisite = { focus = PRC_funvjiuguohui }
+		relative_position_id = EastAsia_PRC_xinsijun
+		available = {
+		
+		OR = {
+		
+			615 = { is_controlled_by = PRC }
+			615 = { is_controlled_by = SHX }
+			615 = { is_controlled_by = CHI }
+			
+			
+			}
+			
+		  has_war_with = JAP
+		  PRC = { is_in_faction_with = CHI }
+			
+			
+		}
+		
+		bypass = {
+	
+	OR = {
+			has_global_flag = ribentoyxiang
+			JAP = {  exists = no  }
+			JAP = {	 has_capitulated = yes}
+			 has_completed_focus = PRC_jiefangquanzhongugo
+			
+			}
+
+		}
+		
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 2000
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 1000
+				producer = JAP
+			}
+			PRC = {
+				remove_ideas = eastasia_idea_PRC_changzheng3
+				add_ideas = eastasia_idea_PRC_changzheng4
+			}
+		}
+	}
+	#路线二：百团大战
+	focus = {
+		id = PRC_baituandazhan2
+		icon = GFX_goal_prc_baituandazhan
+		prerequisite = { focus = EastAsia_PRC_pingxingguanzhanyi }
+		relative_position_id = EastAsia_PRC_pingxingguanzhanyi
+		available = {
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+	
+	OR = {
+			has_global_flag = ribentoyxiang
+			JAP = {  exists = no  }
+			JAP = {	 has_capitulated = yes}
+			 has_completed_focus = PRC_jiefangquanzhongugo
+			} 
+
+		}
+		completion_reward = {
+			set_country_flag = PRC_baituandazhankaishi
+			custom_effect_tooltip = PRC_baituandazhan2_tip
+		}
+	}
+	#路线二：金戈铁马，气吞万里如虎
+	focus = {
+		id = EastAsia_PRC_tianbingtianjaing
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = PRC_baituandazhan2 }
+		prerequisite = { focus = PRC_didaozhan }
+		prerequisite = { focus = PRC_renminzhanzheng2 }
+		relative_position_id = PRC_renminzhanzheng2
+		available = {
+		 has_tech = improved_infantry_weapons_2
+		 has_completed_focus = PRC_sandajilv
+		 has_completed_focus = PRC_sansanzhi
+					
+		} 
+		x = 0 
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = eastasia_idea_PRC_changzheng4
+			remove_ideas = eastasia_idea_PRC_xiaomijiabuqiang
+			add_ideas = eastasia_idea_PRC_tianbing
+			if = {
+				limit = { has_idea = PRC_the_long_march_1 }
+				remove_ideas = PRC_the_long_march_1
+			}
+			if = {
+				limit = { has_idea = PRC_the_long_march_2 }
+				remove_ideas = PRC_the_long_march_2 
+			}
+			if = {
+				limit = { has_idea = PRC_the_long_march_3 }
+				remove_ideas = PRC_the_long_march_3 
+			}
+			if = {
+				limit = { has_idea = eastasia_idea_PRC_changzheng3 }
+				remove_ideas = eastasia_idea_PRC_changzheng3 
+			}
+		}
+	}
+	
+	#以战养战I
+	focus = {
+		id = EastAsia_PRC_yizhanyangzhan1
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = PRC_chongzhenghongjun }
+		relative_position_id = PRC_chongzhenghongjun
+		available = {
+			
+			has_war = yes
+			num_of_controlled_states > 2
+		}
+		x = 4
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 2000
+				producer = PRC
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 500
+				producer = PRC
+			}
+			set_technology = { tech_recon = 1 }
+		}
+	}
+	
+	#以战养战II
+	focus = {
+		id = EastAsia_PRC_yizhanyangzhan2
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = EastAsia_PRC_yizhanyangzhan1 }
+		relative_position_id = EastAsia_PRC_yizhanyangzhan1
+		available = {
+			
+			has_war = yes
+			num_of_controlled_states > 5
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 3000
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 700
+				producer = MAN
+			}
+			set_technology = { tech_logistics_company = 1 }
+		}
+	}
+	
+	#以战养战III
+	focus = {
+		id = EastAsia_PRC_yizhanyangzhan3
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = EastAsia_PRC_yizhanyangzhan2 }
+		relative_position_id =EastAsia_PRC_yizhanyangzhan2
+		available = {
+			
+			has_war = yes
+			num_of_controlled_states > 7
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 5000
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 1000
+				producer = MAN
+			}
+			set_technology = { tech_signal_company = 1 }
+		}
+	}
+	
+	#以战养战IV
+	focus = {
+		id = EastAsia_PRC_yizhanyangzhan4
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = EastAsia_PRC_yizhanyangzhan3 }
+		relative_position_id = EastAsia_PRC_yizhanyangzhan3
+		available = {
+			
+			has_war = yes
+			num_of_controlled_states > 10
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 8000
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 1250
+				producer = MAN
+			}
+			set_technology = { tech_maintenance_company = 1 }
+		}
+	}
+	
+	#以战养战V
+	focus = {
+		id = EastAsia_PRC_yizhanyangzhan5
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = EastAsia_PRC_yizhanyangzhan4 }
+		relative_position_id = EastAsia_PRC_yizhanyangzhan4
+		available = {
+			
+			has_war = yes
+			num_of_controlled_states > 12
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 10000
+				producer = MAN
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 1000
+				producer = MAN
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 500
+				producer = MAN
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment_1
+				amount = 500
+				producer = JAP
+			}
+			set_technology = { 
+				tech_engineers = 1 
+				tech_recon = 1
+				tech_field_hospital = 1
+			}
+		}
+	}
+	
+	#以战养战VI
+	focus = {
+		id = EastAsia_PRC_yizhanyangzhan6
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = EastAsia_PRC_yizhanyangzhan5 }
+		relative_position_id = EastAsia_PRC_yizhanyangzhan5 
+		available = {
+			 
+			has_war = yes
+			num_of_controlled_states > 15
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 15000
+				producer = MAN
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 1000
+				producer = MAN
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 1000
+				producer = MAN
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment_1
+				amount = 1000
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment_1
+				amount = 100
+				producer = JAP
+			}
+			set_technology = { 
+				tech_engineers = 1 
+				tech_recon = 1
+				tech_field_hospital = 1
+			}
+		}
+	}
+	
+	#以战养战VII
+	focus = {
+		id = EastAsia_PRC_yizhanyangzhan7
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = EastAsia_PRC_yizhanyangzhan6 }
+		relative_position_id =EastAsia_PRC_yizhanyangzhan6
+		available = {
+			
+			has_war = yes
+			num_of_controlled_states > 20
+		} 
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 20000
+				producer = MAN
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 1500
+				producer = MAN
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 1500
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment_1
+				amount = 2000
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment_1
+				amount = 250
+				producer = JAP
+			}
+			set_technology = { 
+				tech_logistics_company = 1 
+				tech_military_police = 1
+				tech_signal_company = 1
+				tech_maintenance_company = 1
+			}
+		}
+	}
+	
+	#以战养战VIII
+	focus = {
+		id = EastAsia_PRC_yizhanyangzhan8
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = EastAsia_PRC_yizhanyangzhan7 }
+		relative_position_id = EastAsia_PRC_yizhanyangzhan7
+		available = {
+			
+			has_war = yes
+			num_of_controlled_states > 25
+		}
+		x = 0
+		y = 1
+		cost = 12
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 30000
+				producer = MAN
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 2000
+				producer = MAN
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 2000
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment_1
+				amount = 3000
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment_1
+				amount = 500
+				producer = JAP
+			}
+			set_technology = { tech_engineers = 1 }
+			set_technology = { tech_recon = 1 }
+			set_technology = { tech_field_hospital = 1 }
+		}
+	}
+	
+	
+	#路线三：扩张开始
+	focus = {
+		id = PRC_kuozhangkaishi
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		prerequisite = { focus = PRC_chongzhenghongjun }
+		x = 10
+		y = 1
+		relative_position_id = PRC_chongzhenghongjun
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			OR = {
+				AND = {
+					is_in_faction = yes
+					not = { is_in_faction_with = CHI } #in any other faction that doesn't include CHI
+				}
+				AND = {
+					YUN = {
+						OR = {
+							exists = no
+							is_in_faction_with = ROOT
+						}
+					}
+					GXC = {
+						OR = {
+							exists = no
+							is_in_faction_with = ROOT
+						}
+					}
+					SHX = {
+						OR = {
+							exists = no
+							is_in_faction_with = ROOT
+						}
+					}
+					XSM = {
+						OR = {
+							exists = no
+							is_in_faction_with = ROOT
+						}
+					}
+					SIK = {
+						OR = {
+							exists = no
+							is_in_faction_with = ROOT
+						}
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			
+			every_country = {
+				limit = {
+					is_literally_china = yes
+					is_in_faction = no
+					NOT = {
+						tag = ROOT
+					}
+				}
+				add_timed_idea = {
+					idea = PRC_yaogaoshiqing
+					days = 100
+				}
+			}
+			custom_effect_tooltip = PRC_kuozhangkaishi_tip
+			
+		}
+	}
+	#路线三：准备太原战役
+	focus = {
+		id = PRC_dayanxishan
+		icon = GFX_goal_prc_dayanxishan
+		prerequisite = { focus = PRC_kuozhangkaishi }
+		mutually_exclusive = { focus = PRC_damahongkui   focus = PRC_daxibeijun }
+		relative_position_id = PRC_kuozhangkaishi
+		available = {
+			SHX = {
+				exists = yes
+				NOT = { has_war_with = PRC   is_in_faction_with = PRC   is_puppet_of = PRC }
+			}
+			date < 1937.7.7
+		} 
+		x = -3
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 0
+		}
+		bypass = {
+			SHX = { exists = no }
+		}
+		completion_reward = {
+			custom_effect_tooltip = WW_PRC_dayanxishan_tip	
+		}
+	}
+	#计谋：驱虎吞狼！
+	focus = {
+		id = PRC_jimou_quhutunlang
+		icon = GFX_PRC_jimou_quhutunlang_icon
+		prerequisite = { focus = PRC_dayanxishan }
+		relative_position_id = PRC_dayanxishan
+		mutually_exclusive = { focus = PRC_jimou_erhujingshi }
+		available = {
+			SHX = {
+				exists = yes
+				NOT = { has_war_with = PRC   is_in_faction_with = PRC   is_puppet_of = PRC }
+			}	
+			
+			ROOT = {
+				intel_level_over = {
+					target = SHX
+					army_intel > 0.3
+				}
+				has_war = no
+			}
+			date < 1937.7.7
+		} 
+		x = -1
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 0
+		}
+		bypass = {
+			SHX = { exists = no }
+		}
+		completion_reward = {
+			custom_effect_tooltip = PRC_jimou_quhutunlang_tip
+			hidden_effect = { SHX = { country_event = { id = dbj.17 } } }
+		}
+	}
+	#计谋：二虎竞食
+	focus = {
+		id = PRC_jimou_erhujingshi
+		icon = GFX_PRC_jimou_erhujingshi
+		prerequisite = { focus = PRC_dayanxishan }
+		mutually_exclusive = { focus = PRC_jimou_quhutunlang }
+		relative_position_id = PRC_dayanxishan
+		available = {
+			SHX = {
+				exists = yes
+				NOT = { has_war_with = PRC   is_in_faction_with = PRC   is_puppet_of = PRC }
+			}	
+			XNM = {
+				exists = yes
+				NOT = { has_war_with = PRC  has_war_with = SHX   is_in_faction_with = PRC   is_puppet_of = PRC }
+			}
+			ROOT = {
+				intel_level_over = {
+					target = SHX
+					army_intel > 0.3
+				}
+				has_war = no
+			}
+			date < 1937.7.7
+		} 
+		x = 1
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 0
+		}
+		bypass = {
+			SHX = { exists = no }
+		}
+		completion_reward = {
+			custom_effect_tooltip = PRC_jimou_erhujingshi_tip
+			SHX = {
+				transfer_state = 798
+			}
+			hidden_effect = { 
+				SHX = { country_event = { id = dbj.22 } }
+			}
+			PRC = {
+				add_opinion_modifier = { target = SHX   modifier = On_good_terms }
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 2500
+					producer = SHX
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 200
+					producer = JAP
+				}
+			}	
+		}
+	}
+	
+	#暗中策反晋绥军
+	focus = {
+		id = PRC_jimou_anzhongcefanjinsuijun
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = PRC_jimou_quhutunlang }
+		relative_position_id = PRC_jimou_quhutunlang
+		available = {
+			SHX = {
+				exists = yes
+				has_war_with = PRC
+			}	
+			PRC = {
+				exists = yes
+				controls_state = 798
+				has_equipment = { infantry_equipment > 2000 }
+				intel_level_over = {
+					target = SHX
+					army_intel > 0.4
+				}
+			}
+		} 
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 0
+		}
+		bypass = {
+			SHX = { exists = no }
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = PRC_jimou_anzhongcefanjinsuijun_tip
+		}
+	}
+	#组建敌后冲锋军
+	focus = {
+		id = PRC_zujiandihouchongfengjun
+		icon = GFX_focus_prc_infiltration
+		prerequisite = { focus = PRC_jimou_erhujingshi }
+		relative_position_id = PRC_jimou_erhujingshi
+		available = {
+			SHX = {
+				exists = yes
+				has_war_with = XNM
+			}	
+			
+			PRC = {
+				exists = yes
+				has_completed_focus = EastAsia_PRC_jianlidixiajiaotongxian
+				intel_level_over = {
+					target = SHX
+					army_intel > 0.4
+				}
+			}
+		} 
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 0
+		}
+		bypass = {
+			SHX = { exists = no }
+		}
+		select_effect = {
+			PRC = {
+				send_equipment = {
+					equipment = infantry_equipment
+					amount = 2000
+					target = XNM
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = PRC_zujiandihouchongfengjun_tip
+		}
+	}
+	#路线三：整顿晋绥军
+	focus = {
+		id = PRC_zhengdunjinsuijun
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = PRC_zujiandihouchongfengjun   focus = PRC_jimou_anzhongcefanjinsuijun }
+		relative_position_id = PRC_zujiandihouchongfengjun
+		available = {
+		    OR = {
+			PRC = {
+				owns_state = 621
+				owns_state = 746
+			}
+			PRC = {
+				owns_state = 615
+				owns_state = 746
+			}
+			PRC = {
+				owns_state = 615
+				owns_state = 621
+			}
+			PRC = { has_war_with = JAP }
+			}
+		}
+		bypass = { has_country_flag = SHX_army_jion_in_us }
+		x = -1
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = PRC_zhengdunjinsuijun_tip
+			hidden_effect = { load_oob = "PRC_chongzhengjinsuijun" }
+		}
+	}
+	#路线三：恢复大同矿厂生产
+	focus = {
+		id = PRC_chongqidatongkuangchang
+		icon = GFX_goal_prc_chongqidatongkuangchang
+		prerequisite = { focus = PRC_zhengdunjinsuijun }
+		relative_position_id = PRC_zhengdunjinsuijun
+		available = {
+			PRC = {
+				owns_state = 615
+				owns_state = 621
+				owns_state = 746
+			}
+		}
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_resource = { type = steel amount = 20 state = 615 }
+		}
+	}
+	
+	#路线三：准备宁夏战役
+	focus = {
+		id = PRC_damahongkui
+		icon = GFX_goal_prc_damahongkui
+		prerequisite = { focus = PRC_kuozhangkaishi }
+		mutually_exclusive = { focus = PRC_dayanxishan   focus = PRC_daxibeijun }
+		relative_position_id = PRC_kuozhangkaishi
+		available = {
+			XNM = {
+				exists = yes
+				NOT = { has_war_with = PRC   is_in_faction_with = PRC   is_puppet_of = PRC }
+			}	
+			
+			ROOT = {
+				intel_level_over = {
+					target = XNM
+					civilian_intel > 0.3
+				}
+			}
+			date < 1937.7.7
+		}
+		x = 0
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = { 
+			XNM = { exists = no }
+		}
+		completion_reward = {
+			custom_effect_tooltip = WW_PRC_damahongkui_tip		
+		}
+	}
+	#路线三：策反马宏斌
+	focus = {
+		id = PRC_zhengdunningmaqibing
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = PRC_damahongkui }
+		relative_position_id = PRC_damahongkui
+		available = {
+			PRC = {
+				NOT = { 
+					has_war_with = XNM
+					is_in_faction_with = XNM
+				}
+			}
+			XNM ={
+				exists = yes
+				NOT = { is_puppet_of = CHI }
+			}
+			ROOT = {
+				intel_level_over = {
+					target = XNM
+					civilian_intel > 0.4
+				}
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 0
+		}
+		bypass = {
+			XNM = { exists = no }
+		}
+		completion_reward = {
+			custom_effect_tooltip = PRC_zhengdunningmaqibing_tip
+			hidden_effect = {
+			}
+		}
+	}
+	#路线三：策动宁马骑兵起义
+	focus = {
+		id = PRC_ningmaqibingqiyi
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = PRC_zhengdunningmaqibing }
+		relative_position_id = PRC_zhengdunningmaqibing
+		available = {
+			PRC = {
+				NOT = { 
+					has_war_with = XNM
+					is_in_faction_with = XNM
+				}
+			}
+			XNM ={
+				exists = yes
+				NOT = { is_puppet_of = CHI }
+			}
+			ROOT = {
+				intel_level_over = {
+					target = XNM
+					civilian_intel > 0.4
+				}
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 0
+		}
+		bypass = {
+			XNM = { exists = no }
+		}
+		completion_reward = {
+			custom_effect_tooltip = PRC_ningmaqibingqiyi_tip
+		}
+	}
+	#路线三：收编宁马残余军力
+	focus = {
+		id = PRC_shoubianningmacanyujunli
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = PRC_ningmaqibingqiyi }
+		relative_position_id = PRC_ningmaqibingqiyi
+		available = {
+			PRC = {
+				
+				owns_state = 616
+			}
+			XNM ={
+				exists = no
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 0
+		}
+		bypass = {
+			
+		}
+		completion_reward = {
+			custom_effect_tooltip = PRC_shoubianningmacanyujunli_tip
+			hidden_effect = {
+				load_oob = "PRC_ningmashoubianbudui"
+			}
+		}
+	}
+	
+	#路线三：同东北军和谈
+	focus = {
+		id = PRC_daxibeijun
+		icon = GFX_goal_prc_daxibeijun
+		prerequisite = { focus = PRC_kuozhangkaishi }
+		mutually_exclusive = { focus = PRC_dayanxishan   focus = PRC_damahongkui }
+		relative_position_id = PRC_kuozhangkaishi
+		available = {
+			DBJ = {
+				exists = yes
+				NOT = { has_war_with = PRC   is_in_faction_with = PRC   is_puppet_of = PRC }
+			}
+			date < 1937.7.7
+			NOT = { has_global_flag = xianshibian_fasheng }
+			PRC = {
+				NOT = { is_in_faction_with = DBJ }
+			}
+		}
+		x = 2
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			DBJ = { exists = no }
+		}
+		completion_reward = {
+			custom_effect_tooltip = PRC_daxibeijun_tip
+		}
+	}
+	#和杨虎城将军接触
+	focus = {
+		id = PRC_heyanghuchengjiangjunjiechu
+		icon = GFX_PRC_heyanghuchengjiangjunjiechu_icon
+		prerequisite = { focus = PRC_daxibeijun }
+		relative_position_id = PRC_daxibeijun
+		available = {
+			DBJ = {
+				exists = yes
+				NOT = { has_war_with = PRC   is_in_faction_with = PRC   is_in_faction_with = CHI }
+				#communism > 0.2
+			}
+			ROOT = {
+				intel_level_over = {
+					target = DBJ
+					civilian_intel > 0.3
+				}
+			}
+			NOT = { has_global_flag = xianshibian_fasheng }
+			PRC = {
+				NOT = { is_in_faction_with = DBJ }
+			}
+		}
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			
+		}
+		completion_reward = {
+			custom_effect_tooltip = PRC_heyanghuchengjiangjunjiechu_tip
+			hidden_effect = {
+				PRC = { country_event = { id = dbj.24 } }
+			}
+		}
+	}
+	#向张学良摊牌
+	focus = {
+		id = PRC_xiangzhangxueliangtanpai
+		icon = GFX_goal_generic_occypy_states_ongoing_war
+		prerequisite = { focus = PRC_heyanghuchengjiangjunjiechu }
+		relative_position_id = PRC_heyanghuchengjiangjunjiechu
+		available = {
+			DBJ = {
+				exists = yes
+				NOT = { has_war_with = PRC   is_in_faction_with = PRC   is_in_faction_with = CHI }
+				#communism > 0.2
+			}
+			ROOT = {
+				intel_level_over = {
+					target = DBJ
+					civilian_intel > 0.4
+				}
+			}
+			#NOT = { has_global_flag = xianshibian_fasheng }
+			PRC = {
+				NOT = { is_in_faction_with = DBJ }
+			}
+		}
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			
+		}
+		completion_reward = {
+			custom_effect_tooltip = PRC_xiangzhangxueliangtanpai_tip
+			hidden_effect = {
+				country_event = { id = dbj.26   days = 10 }
+			}
+		}
+	}
+	
+	#收编东北军
+	focus = {
+		id = PRC_shoubiandongbeijun
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = PRC_xiangzhangxueliangtanpai }
+		relative_position_id = PRC_xiangzhangxueliangtanpai
+		available = {
+			DBJ = {
+				exists = no
+			}
+			has_global_flag = xianshibian_fasheng
+			PRC = {
+				owns_state = 744
+			}
+		}
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			
+		}
+		completion_reward = {
+			custom_effect_tooltip = PRC_shoubiandongbeijun_tip
+			hidden_effect = {
+				PRC = {
+				load_oob = "DBJ_1936"
+			}
+			}
+		}
+	}
+	#聚焦国内
+	focus = {
+		id = PRC_jujiaoguonei
+		icon = GFX_goal_generic_major_war
+		prerequisite = { }
+		x = 8
+		y = 2
+		relative_position_id = EastAsia_PRC_changzhengjieshu
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			not = {
+				is_subject_of = event_target:WTT_current_china_leader
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = PRC_focus_on_china
+		}
+	}
+	
+	  #解放全中国
+	focus = {
+		id = PRC_jiefangquanzhongugo
+		icon = GFX_focus_chi_one_china_policy
+		prerequisite = { focus = PRC_jujiaoguonei }
+		
+		x = 0
+		y = 1
+		relative_position_id = PRC_jujiaoguonei
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+		
+				CHI = { can_ROOT_get_wargoal_on_THIS = yes }
+				has_army_manpower = { size > 949999 }
+			
+		}
+
+		bypass = {
+			has_war_with = CHI
+			CHI = { can_ROOT_get_wargoal_on_THIS = no }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					CHI = { can_ROOT_get_wargoal_on_THIS = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = CHI
+				}
+			}
+			
+		}
+	}
+	
+	#路线四：鸟枪换炮
+	focus = {
+		id = PRC_niaoqianghuanpao
+		icon = GFX_goal_prc_niaoqianghuanpao
+		prerequisite = { focus = PRC_chongzhenghongjun }
+		relative_position_id = PRC_chongzhenghongjun
+		available = {
+			
+		}
+		x = 21
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = PRC_niaoqianghuanpao_tip
+			set_country_flag = PRC_meiqiangmeipaodirengeiwomenzao_flag
+		}
+	}
+	#路线四（1）：改善步兵装备
+	focus = {
+		id = PRC_gaishanbubingzhuangbei
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = PRC_niaoqianghuanpao }
+		relative_position_id = PRC_niaoqianghuanpao
+		available = {
+			
+		}
+		x = -3
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_luohoude_bubing1
+			add_ideas = PRC_luohoude_bubing2
+			add_tech_bonus = {    
+				#name = infantry_weapons
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	#路线四（1）：建设被服厂
+	focus = {
+		id = PRC_jianshebeifuchang
+		icon = GFX_goal_prc_jianshebeifuchang
+		prerequisite = { focus = PRC_gaishanbubingzhuangbei }
+		relative_position_id = PRC_gaishanbubingzhuangbei
+		available = {
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = PRC_jianshebeifuchang_tip
+			set_country_flag = jianshegenjudi_jianshebeifuchang
+		}
+	} 
+	#路线四（1）：让某团长当被服厂厂长
+	focus = {
+		id = PRC_beifuchangchangzhang
+		icon = GFX_goal_prc_beifuchangchangzhang
+		prerequisite = { focus = PRC_jianshebeifuchang }
+		relative_position_id = PRC_jianshebeifuchang
+		available = {
+			has_country_flag = beifuchangjianshewanbi_flag
+			NOT = {
+		  has_completed_focus = EastAsia_PRC_zhancaochugen
+	       }
+		}
+		x = -2
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		} 
+		completion_reward = {
+			add_ideas = PRC_beifuchang
+			
+		}
+	}
+	
+	#路线四（1）：攫取轨道钢
+	focus = {
+		id = PRC_juequguidaogang
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = PRC_jianshebeifuchang }
+		relative_position_id = PRC_jianshebeifuchang
+		available = {
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_resource = { type = steel amount = 8 state = 622 }
+		}
+	}
+	#线路四（1）：革新机床
+	focus = {
+		id = PRC_gexinjichuang
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = PRC_juequguidaogang }
+		relative_position_id = PRC_juequguidaogang
+		available = {
+		PRC = {
+				num_of_military_factories > 25
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_luohoude_bubing2
+			add_ideas = PRC_luohoude_bubing3
+		}
+	}  
+	#线路四（1）：现代步枪设计
+	focus = {
+		id = PRC_xiandaibuqiangsheji
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = PRC_gexinjichuang }
+		relative_position_id = PRC_gexinjichuang
+		available = {
+		 has_tech = improved_infantry_weapons
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_luohoude_bubing3
+		}
+	}
+	#线路四（1）：大力生产手榴弹
+	focus = {
+		id = PRC_dalishengchanshouliudan
+		icon = GFX_focus_generic_provoke_border_clashes
+		prerequisite = { focus = PRC_xiandaibuqiangsheji }
+		relative_position_id = PRC_xiandaibuqiangsheji
+		available = {
+			PRC = {
+				num_of_military_factories > 40
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PRC_xiandaihua_bubing1
+		}
+	}
+	#路线四（1）:高爆弹药
+	focus = {
+		id = PRC_gaobaodanyao
+		icon = GFX_goal_prc_gaobaodanyao
+		prerequisite = { focus = PRC_dalishengchanshouliudan }
+		relative_position_id = PRC_dalishengchanshouliudan
+		available = {
+			PRC = {
+				num_of_military_factories > 15
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_xiandaihua_bubing1
+			add_ideas = PRC_xiandaihua_bubing2
+		}
+	}
+	#路线四（1）：雄赳赳，气昂昂
+	focus = {
+		id = PRC_xiongjiujiuqiangang
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = PRC_gaobaodanyao }
+		relative_position_id = PRC_gaobaodanyao
+		available = {
+			PRC = {
+				num_of_military_factories > 20
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_xiandaihua_bubing2
+			add_ideas = PRC_xiandaihua_bubing3
+		}
+	}
+	#路线四（2）：改善炮兵装备
+	focus = {
+		id = PRC_gaishanpaobingzhuangbei
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = PRC_niaoqianghuanpao }
+		relative_position_id = PRC_niaoqianghuanpao
+		available = {
+			
+		}
+		x = -1
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_luohoude_paobing1
+			add_ideas = PRC_luohoude_paobing2
+			add_tech_bonus = {
+				#name = arty_bonus			
+				bonus = 1
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	#路线四（2）：捡垃圾，造炮弹
+	focus = {
+		id = PRC_jianlajizaopaodan
+		icon = GFX_focus_generic_tungsten
+		prerequisite = { focus = PRC_gaishanpaobingzhuangbei }
+		relative_position_id = PRC_gaishanpaobingzhuangbei
+		available = {
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_resource = { type = tungsten  amount = 8 state = 622 }
+		}
+	}
+	#路线四（2）：缴获的意大利炮
+	focus = {
+		id = PRC_jiaohuodeyidalipao
+		icon = GFX_goal_prc_jiaohuodeyidalipao
+		prerequisite = { focus = PRC_jianlajizaopaodan }
+		relative_position_id = PRC_jianlajizaopaodan
+		available = {
+		NOT = {
+		  has_completed_focus = EastAsia_PRC_zhancaochugen
+	       }
+			
+		}
+		x = 0 
+		y = 1 
+		cost = 4
+		bypass = {
+	OR = {
+		has_completed_focus = EastAsia_PRC_zhancaochugen 
+		 }	
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 100
+				producer = FRA
+			}
+		}
+	}
+	#线路四（2）：革新机床
+	focus = {
+		id = PRC_gexinjichuang2
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = PRC_jiaohuodeyidalipao }
+		relative_position_id = PRC_jiaohuodeyidalipao
+		available = {
+		 
+		PRC = {
+				num_of_military_factories > 35
+			}
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_luohoude_paobing2
+		}
+	}
+	#线路四（2）：钨芯穿甲弹
+	focus = {
+		id = PRC_wuxinchuanjiadan
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = PRC_gexinjichuang2 }
+		relative_position_id = PRC_gexinjichuang2
+		available = {
+			PRC = {
+				num_of_military_factories > 15
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PRC_xiandaihua_paobing1
+			add_tech_bonus = {		
+				bonus = 1
+				uses = 1
+				category = cat_anti_tank
+				category = artillery
+			}
+		}
+	}
+	#线路四（2）：开炮！！！
+	focus = {
+		id = PRC_kaipao
+		icon = GFX_goal_prc_kaipao
+		prerequisite = { focus = PRC_wuxinchuanjiadan }
+		relative_position_id = PRC_wuxinchuanjiadan
+		available = {
+			PRC = {
+				num_of_military_factories > 20
+			}
+		NOT = {
+		  has_completed_focus = EastAsia_PRC_zhancaochugen
+	       }
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PRC_xiandaihua_paobing2
+			remove_ideas = PRC_xiandaihua_paobing1
+		}
+	}
+	#路线四（3）：中共的第一批坦克
+	focus = {
+		id = PRC_zhonggongdediyipitanke
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = PRC_niaoqianghuanpao }
+		relative_position_id = PRC_niaoqianghuanpao
+		available = {
+			has_equipment = { infantry_equipment > 2000 }
+		}
+		x = 3
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			PRC = {
+				send_equipment = { 
+					target = SOV
+					type = infantry_equipment
+					amount = 2000
+				}
+				add_equipment_to_stockpile = {
+					type = gw_tank_equipment
+					amount = 100
+					producer = SOV
+				}
+			}
+		}
+	}   
+	#路线四（3）：坦克研究
+	focus = {
+		id = PRC_tankeyanjiu
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = PRC_zhonggongdediyipitanke }
+		relative_position_id = PRC_zhonggongdediyipitanke
+		available = {
+			PRC = {
+				num_of_military_factories > 10
+			}
+			OR = {
+				has_idea = PRC_chinatankchang2
+				has_idea = PRC_chinatankchang3
+				has_idea = PRC_KMDB
+				has_idea = PRC_neimengjixie
+				
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {		
+				bonus = 1
+				uses = 1
+				category = armor
+			}
+		}
+	}
+	#路线四（3）：研究路线：轻量化
+	focus = {
+		id = PRC_qinglianghuatanke
+		icon = GFX_focus_NZL_bob_semple_tank
+		mutually_exclusive = { focus = PRC_zhongxinghuatanke   focus = PRC_zhongliangjitanke }
+		prerequisite = { focus = PRC_tankeyanjiu }
+		relative_position_id = PRC_tankeyanjiu
+		available = {
+			PRC = {
+				has_equipment = { gw_tank_equipment > 200 }
+			}
+		}
+		x = -2
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {		
+				bonus = 1
+				uses = 1
+				technology = basic_light_tank
+			}
+		}
+	}
+	#路线四（3）：研究路线：中型化
+	focus = {
+		id = PRC_zhongxinghuatanke
+		icon = GFX_goal_generic_army_tanks
+		mutually_exclusive = { focus = PRC_qinglianghuatanke   focus = PRC_zhongliangjitanke }
+		prerequisite = { focus = PRC_tankeyanjiu }
+		relative_position_id = PRC_tankeyanjiu
+		available = {
+			PRC = {
+				has_equipment = { gw_tank_equipment > 200 }
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {		
+				bonus = 1
+				uses = 1
+				technology = basic_medium_tank
+			}
+		}
+	}
+	#路线四（3）：研究路线：重型化
+	focus = {
+		id = PRC_zhongliangjitanke
+		icon = GFX_focus_generic_army_tanks2
+		mutually_exclusive = { focus = PRC_zhongxinghuatanke   focus = PRC_qinglianghuatanke }
+		prerequisite = { focus = PRC_tankeyanjiu }
+		relative_position_id = PRC_tankeyanjiu
+		available = {
+			PRC = {
+				has_equipment = { gw_tank_equipment > 200 }
+			}
+		}
+		x = 2
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {		
+				bonus = 1
+				uses = 1
+				technology = basic_heavy_tank
+			}
+		}
+	}
+	#路线四（3）：改善坦克履带（轻）
+	focus = {
+		id = PRC_tankelvdai_qing
+		icon = GFX_goal_prc_tankelvdai
+		prerequisite = { 
+			focus = PRC_qinglianghuatanke
+			#focus = PRC_zhongxinghuatanke
+			#focus = PRC_zhongliangjitanke
+		}
+		relative_position_id = PRC_qinglianghuatanke
+		available = {
+			PRC = {
+				num_of_military_factories > 20
+				has_tech = basic_light_tank
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PRC_xiandaihua_tanke1
+		}
+	}
+	#路线四（3）：改善坦克履带（中）
+	focus = {
+		id = PRC_tankelvdai_zhong
+		icon = GFX_goal_prc_tankelvdai
+		prerequisite = { 
+			#focus = PRC_qinglianghuatanke
+			focus = PRC_zhongxinghuatanke
+			#focus = PRC_zhongliangjitanke
+		}
+		relative_position_id = PRC_zhongxinghuatanke
+		available = {
+			PRC = {
+				num_of_military_factories > 20
+				has_tech = basic_medium_tank
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PRC_xiandaihua_tanke1
+		}
+	}
+	#路线四（3）：改善坦克履带（重）
+	focus = {
+		id = PRC_tankelvdai_heavy
+		icon = GFX_goal_prc_tankelvdai
+		prerequisite = { 
+			#focus = PRC_qinglianghuatanke
+			#focus = PRC_zhongxinghuatanke
+			focus = PRC_zhongliangjitanke
+		}
+		relative_position_id = PRC_zhongliangjitanke
+		available = {
+			PRC = {
+				num_of_military_factories > 20
+				has_tech = basic_heavy_tank
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PRC_xiandaihua_tanke1
+		}
+	}
+	#路线四（3）：钨芯穿甲弹（轻）
+	focus = {
+		id = PRC_wuxinchuanjiadan_tanke_qing
+		icon = GFX_goal_prc_gaobaodanyao
+		prerequisite = { 
+			focus = PRC_tankelvdai_qing
+		}
+		relative_position_id = PRC_tankelvdai_qing
+		available = {
+			PRC = {
+				num_of_military_factories > 25
+				has_completed_focus = PRC_wuxinchuanjiadan
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_xiandaihua_tanke1
+			add_ideas = PRC_xiandaihua_tanke2_light
+		}
+	}
+	#路线四（3）：钨芯穿甲弹（中）
+	focus = {
+		id = PRC_wuxinchuanjiadan_tanke_zhong
+		icon = GFX_goal_prc_gaobaodanyao
+		prerequisite = { 
+			focus = PRC_tankelvdai_zhong
+		}
+		relative_position_id = PRC_tankelvdai_zhong
+		available = {
+			PRC = {
+				num_of_military_factories > 25
+				has_completed_focus = PRC_wuxinchuanjiadan
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_xiandaihua_tanke1
+			add_ideas = PRC_xiandaihua_tanke2_medium
+		}
+	}
+	#路线四（3）：钨芯穿甲弹（重）
+	focus = {
+		id = PRC_wuxinchuanjiadan_tanke_heavy
+		icon = GFX_goal_prc_gaobaodanyao
+		prerequisite = { 
+			focus = PRC_tankelvdai_heavy
+		}
+		relative_position_id = PRC_tankelvdai_heavy
+		available = {
+			PRC = {
+				num_of_military_factories > 25
+				has_completed_focus = PRC_wuxinchuanjiadan
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_xiandaihua_tanke1
+			add_ideas = PRC_xiandaihua_tanke2_heavy
+		}
+	}
+	#路线四（3）：先进发动机（轻）
+	focus = {
+		id = PRC_xianjinfadongji_tanke_qing
+		icon = GFX_goal_prc_fadongji
+		prerequisite = { 
+			focus = PRC_wuxinchuanjiadan_tanke_qing
+		}
+		relative_position_id = PRC_wuxinchuanjiadan_tanke_qing
+		available = {
+			PRC = {
+				num_of_military_factories > 30
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_xiandaihua_tanke2_light
+			add_ideas = PRC_xiandaihua_tanke3_light
+		}
+	}
+	#路线四（3）：先进发动机（中）
+	focus = {
+		id = PRC_xianjinfadongji_tanke_zhong
+		icon = GFX_goal_prc_fadongji
+		prerequisite = { 
+			focus = PRC_wuxinchuanjiadan_tanke_zhong
+		}
+		relative_position_id = PRC_wuxinchuanjiadan_tanke_zhong
+		available = {
+			PRC = {
+				num_of_military_factories > 30
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_xiandaihua_tanke2_medium
+			add_ideas = PRC_xiandaihua_tanke3_medium
+		}
+	}
+	#路线四（3）：先进发动机（重）
+	focus = {
+		id = PRC_xianjinfadongji_tanke_heavy
+		icon = GFX_goal_prc_fadongji
+		prerequisite = { 
+			focus = PRC_wuxinchuanjiadan_tanke_heavy
+		}
+		relative_position_id = PRC_wuxinchuanjiadan_tanke_heavy
+		available = {
+			PRC = {
+				num_of_military_factories > 30
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_xiandaihua_tanke2_heavy
+			add_ideas = PRC_xiandaihua_tanke3_heavy
+		}
+	}
+	#路线四（3）：钢铁战驹
+	focus = {
+		id = PRC_gangtiezhanju_tanke_qing
+		icon = GFX_goal_prc_gangtiezhanju
+		prerequisite = { 
+			focus = PRC_xianjinfadongji_tanke_qing
+		}
+		relative_position_id = PRC_xianjinfadongji_tanke_qing
+		available = {
+			PRC = {
+				num_of_military_factories > 40
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_xiandaihua_tanke3_light
+			add_ideas = PRC_xiandaihua_tanke4_light
+		}
+	}
+	#路线四（3）：平衡化发展
+	focus = {
+		id = PRC_pinghenghuafazhan_tanke_zhong
+		icon = GFX_goal_prc_pinghenghuafazhan
+		prerequisite = { 
+			focus = PRC_xianjinfadongji_tanke_zhong
+		}
+		relative_position_id = PRC_xianjinfadongji_tanke_zhong
+		available = {
+			PRC = {
+				num_of_military_factories > 40
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_xiandaihua_tanke3_medium
+			add_ideas = PRC_xiandaihua_tanke4_medium
+		}
+	}	
+	#路线四（3）：重甲巨炮
+	focus = {
+		id = PRC_zhongjiajupao_tanke_heavy
+		icon = GFX_goal_prc_zhongjiajupao
+		prerequisite = { 
+			focus = PRC_xianjinfadongji_tanke_heavy
+		}
+		relative_position_id = PRC_xianjinfadongji_tanke_heavy
+		available = {
+			PRC = {
+				num_of_military_factories > 40
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_xiandaihua_tanke3_heavy
+			add_ideas = PRC_xiandaihua_tanke4_heavy
+		}
+	}
+	#路线四：钢铁雄心！
+	focus = {
+		id = PRC_gangtiexiongxin_tanke
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { 
+			focus = PRC_gangtiezhanju_tanke_qing
+			focus = PRC_pinghenghuafazhan_tanke_zhong
+			focus = PRC_zhongjiajupao_tanke_heavy
+		}
+		relative_position_id = PRC_pinghenghuafazhan_tanke_zhong
+		available = {
+			PRC = {
+				num_of_military_factories > 50
+				
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PRC_gangtiexiongxin_tank
+		}
+	}
+	#路线四（4）：兵制改革
+	focus = {
+		id = PRC_bingzhigaige
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = PRC_niaoqianghuanpao }
+		relative_position_id = PRC_niaoqianghuanpao
+		available = {
+			
+		}
+		x = 8
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {		
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	#路线四（4）：三三制
+	focus = {
+		id = PRC_sansanzhi
+		icon = GFX_focus_RAJ_indian_gurkhas
+		prerequisite = { focus = PRC_bingzhigaige }
+		relative_position_id = PRC_bingzhigaige
+		available = {
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PRC_sansanzhi_idea
+		}
+	}
+	#路线四（4）：购买支援装备
+	focus = {
+		id = PRC_goumaiziyuanzhuangbei
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = PRC_sansanzhi }
+		relative_position_id = PRC_sansanzhi
+		available = {
+			has_equipment = { infantry_equipment > 2000 }
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			PRC = {
+				send_equipment = { 
+					target = SOV
+					type = infantry_equipment
+					amount = 2000
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 400
+					producer = SOV
+				}
+				random_list = {
+					33 = {
+						set_technology = { tech_support = 1 }
+					}
+					33= {
+						add_tech_bonus = {
+							bonus = 0.5
+							uses = 1
+							category = support_tech
+						}
+					}
+					34 = {}
+				}
+			}
+		}
+	}
+	#路线四（4）：进击，工兵连！
+	focus = {
+		id = PRC_jinjigongbinglian
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = PRC_goumaiziyuanzhuangbei }
+		relative_position_id = PRC_goumaiziyuanzhuangbei
+		available = {
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				technology = tech_engineers
+			}
+		}
+	}
+	#路线四（4）：壮哉，侦察连！
+	focus = {
+		id = PRC_zhuangzaizhenchalian
+		icon = GFX_focus_prc_infiltration
+		prerequisite = { focus = PRC_jinjigongbinglian }
+		relative_position_id = PRC_jinjigongbinglian
+		available = {
+		has_war_with = JAP 
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = support_tech
+			}
+		}
+	}
+	
+	#路线四（4）：娃叫魏和尚
+	focus = {
+		id = PRC_wajiaoweiheshang
+		icon = GFX_goal_prc_wajiaoweiheshang
+		prerequisite = { focus = PRC_zhuangzaizhenchalian }
+		relative_position_id = PRC_zhuangzaizhenchalian
+		available = {
+		NOT = {
+		  has_completed_focus = EastAsia_PRC_zhancaochugen
+	       } 
+			
+		}
+		x = -1
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				technology = tech_special_forces
+			}
+		}
+	}
+	#路线四（4）：骑兵连，进攻！！！
+	focus = {
+		id = PRC_qibinglianjingong
+		icon = GFX_goal_prc_qibinglianjingong
+		prerequisite = { focus = PRC_zhuangzaizhenchalian }
+		relative_position_id = PRC_zhuangzaizhenchalian
+		available = {
+		NOT = {
+		  has_completed_focus = EastAsia_PRC_zhancaochugen
+	       } 
+			
+		}
+		x = 1
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PRC_qibinglian_idea
+		}
+	}
+	#路线四（4）：亮剑
+	focus = {
+		id = PRC_liangjianjingshen
+		icon = GFX_goal_prc_liangjianjingshen
+		prerequisite = { focus = PRC_wajiaoweiheshang }
+		prerequisite = { focus = PRC_qibinglianjingong }
+		relative_position_id = PRC_wajiaoweiheshang
+		available = {
+		NOT = {
+		  has_completed_focus = EastAsia_PRC_zhancaochugen
+	       }
+			
+		}
+		x = 1
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PRC_liangjianjingshen_idea
+		}
+	}
+	#路线四（5）：中共的第一批飞机
+	focus = {
+		id = PRC_zhonggongdediyipifeiji
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = PRC_niaoqianghuanpao }
+		relative_position_id = PRC_niaoqianghuanpao
+		available = {
+			has_equipment = { infantry_equipment > 2000 }
+		}
+		x = 13
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			PRC = {
+				send_equipment = { 
+					target = SOV
+					type = infantry_equipment
+					amount = 2000
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_0
+					amount = 100
+					producer = SOV
+				}
+			}
+		}
+	}
+	#路线四（4）：飞机研究
+	focus = {
+		id = PRC_feijiyanjiu
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = PRC_zhonggongdediyipifeiji }
+		relative_position_id = PRC_zhonggongdediyipifeiji
+		available = {
+			PRC = {
+				num_of_military_factories > 10
+			}
+			OR = {
+				has_idea = PRC_shenyangfeijichang
+				has_idea = PRC_chendufeijizhizaochang
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {		
+				bonus = 1
+				uses = 1
+				category = air_equipment
+			}
+		}
+	}
+	#路线四（4）：日本思路
+	focus = {
+		id = PRC_ribensilu
+		icon = GFX_goal_prc_ribensilu
+		mutually_exclusive = { focus = PRC_meiguosilu   focus = PRC_suliansilu }
+		prerequisite = { focus = PRC_feijiyanjiu }
+		relative_position_id = PRC_feijiyanjiu
+		available = {
+			PRC = {
+				has_equipment = { fighter_equipment_0 > 200 }
+			}
+		}
+		x = -2
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {		
+				bonus = 1
+				uses = 1
+				category = light_air
+			}
+		}
+	}
+	#路线四（4）：苏联思路
+	focus = {
+		id = PRC_suliansilu
+		icon = GFX_goal_generic_build_airforce
+		mutually_exclusive = { focus = PRC_meiguosilu   focus = PRC_ribensilu }
+		prerequisite = { focus = PRC_feijiyanjiu }
+		relative_position_id = PRC_feijiyanjiu
+		available = {
+			PRC = {
+				has_equipment = { fighter_equipment_0 > 200 }
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {		
+				bonus = 1
+				uses = 1
+				category = medium_air
+			}
+		}
+	}
+	#路线四（3）：美国思路
+	focus = {
+		id = PRC_meiguosilu
+		icon = GFX_goal_generic_CAS
+		mutually_exclusive = { focus = PRC_ribensilu   focus = PRC_suliansilu }
+		prerequisite = { focus = PRC_feijiyanjiu }
+		relative_position_id = PRC_feijiyanjiu
+		available = {
+			PRC = {
+				has_equipment = { fighter_equipment_0 > 200 }
+			}
+		}
+		x = 2
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {		
+				bonus = 1
+				uses = 1
+				category = heavy_air
+			}
+		}
+	}
+	#路线四（4）：改进气动设计（日）
+	focus = {
+		id = PRC_gaijinqidongsheji_light
+		icon = GFX_goal_prc_gaijinqidongsheji
+		prerequisite = { 
+			focus = PRC_ribensilu
+		}
+		relative_position_id = PRC_ribensilu
+		available = {
+			PRC = {
+				num_of_military_factories > 20
+				has_tech = fighter1
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PRC_xiandaihua_feiji1_light
+		}
+	}
+	#路线四（4）：改进气动设计（苏）
+	focus = {
+		id = PRC_gaijinqidongsheji_medium
+		icon = GFX_goal_prc_gaijinqidongsheji
+		prerequisite = { 
+			focus = PRC_suliansilu
+		}
+		relative_position_id = PRC_suliansilu
+		available = {
+			PRC = {
+				num_of_military_factories > 20
+				has_tech = heavy_fighter1
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PRC_xiandaihua_feiji1_medium
+		}
+	}
+	#路线四（4）：改进气动设计（美）
+	focus = {
+		id = PRC_gaijinqidongsheji_heavy
+		icon = GFX_goal_prc_gaijinqidongsheji
+		prerequisite = { 
+			focus = PRC_meiguosilu
+		}
+		relative_position_id = PRC_meiguosilu
+		available = {
+			PRC = {
+				num_of_military_factories > 20
+				has_tech = strategic_bomber1 
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PRC_xiandaihua_feiji1_heavy
+		}
+	}
+	#路线四（4）：改进机炮（日）
+	focus = {
+		id = PRC_gaijinjipao_feiji_light
+		icon = GFX_goal_prc_gaijinjipao
+		prerequisite = { 
+			focus = PRC_gaijinqidongsheji_light
+		}
+		relative_position_id = PRC_gaijinqidongsheji_light
+		available = {
+			PRC = {
+				num_of_military_factories > 25
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_xiandaihua_feiji1_light
+			add_ideas = PRC_xiandaihua_feiji2_light
+		}
+	}
+	#路线四（3）：改进机炮（苏）
+	focus = {
+		id = PRC_gaijinjipao_feiji_medium
+		icon = GFX_goal_prc_gaijinjipao
+		prerequisite = { 
+			focus = PRC_gaijinqidongsheji_medium
+		}
+		relative_position_id = PRC_gaijinqidongsheji_medium
+		available = {
+			PRC = {
+				num_of_military_factories > 25
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_xiandaihua_feiji1_medium
+			add_ideas = PRC_xiandaihua_feiji2_medium
+		}
+	}
+	#路线四（3）：改进机炮（美）
+	focus = {
+		id = PRC_gaijinjipao_feiji_heavy
+		icon = GFX_goal_prc_gaijinjipao
+		prerequisite = { 
+			focus = PRC_gaijinqidongsheji_heavy
+		}
+		relative_position_id = PRC_gaijinqidongsheji_heavy
+		available = {
+			PRC = {
+				num_of_military_factories > 25
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_xiandaihua_feiji1_heavy
+			add_ideas = PRC_xiandaihua_feiji2_heavy
+		}
+	}
+	#路线四（4）：樱花炸弹（日）
+	focus = {
+		id = PRC_gaijinzhadan_feiji_light
+		icon = GFX_goal_generic_occypy_start_war
+		prerequisite = { 
+			focus = PRC_gaijinjipao_feiji_light
+		}
+		relative_position_id = PRC_gaijinjipao_feiji_light
+		available = {
+			PRC = {
+				num_of_military_factories > 30
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_xiandaihua_feiji2_light
+			add_ideas = PRC_xiandaihua_feiji3_light
+		}
+	}
+	#路线四（4）：乌里扬诺夫（苏）
+	focus = {
+		id = PRC_gaijinzhadan_feiji_medium
+		icon = GFX_focus_yug_rogozarski
+		prerequisite = { 
+			focus = PRC_gaijinjipao_feiji_medium
+		}
+		relative_position_id = PRC_gaijinjipao_feiji_medium
+		available = {
+			PRC = {
+				num_of_military_factories > 30
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_xiandaihua_feiji2_medium
+			add_ideas = PRC_xiandaihua_feiji3_medium
+		}
+	}
+	#路线四（4）：蝎尾狮（美）
+	focus = {
+		id = PRC_gaijinzhadan_feiji_heavy
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { 
+			focus = PRC_gaijinjipao_feiji_heavy
+		}
+		relative_position_id = PRC_gaijinjipao_feiji_heavy
+		available = {
+			PRC = {
+				num_of_military_factories > 30
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_xiandaihua_feiji2_heavy
+			add_ideas = PRC_xiandaihua_feiji3_heavy
+		}
+	}
+	#路线四（4）：永远の零（日）
+	focus = {
+		id = PRC_gaijinxiandai_feiji_light
+		icon = GFX_goal_prc_yongyuandeling
+		prerequisite = { 
+			focus = PRC_gaijinzhadan_feiji_light
+		}
+		relative_position_id = PRC_gaijinzhadan_feiji_light
+		available = {
+			PRC = {
+				num_of_military_factories > 40
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_xiandaihua_feiji3_light
+			add_ideas = PRC_xiandaihua_feiji4_light
+			custom_effect_tooltip = kamikaze_focus_tooltip
+			hidden_effect = {
+				set_rule = {
+					can_use_kamikaze_pilots = yes
+				}
+			}
+		}
+	}
+	#路线四（4）：乌拉！（苏）
+	focus = {
+		id = PRC_gaijinxiandai_feiji_medium
+		icon = GFX_goal_prc_wula
+		prerequisite = { 
+			focus = PRC_gaijinzhadan_feiji_medium
+		}
+		relative_position_id = PRC_gaijinzhadan_feiji_medium
+		available = {
+			PRC = {
+				num_of_military_factories > 40
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_xiandaihua_feiji3_medium
+			add_ideas = PRC_xiandaihua_feiji4_medium
+		}
+	}
+	#路线四（4）：空中死神（美）
+	focus = {
+		id = PRC_gaijinxiandai_feiji_heavy
+		icon = GFX_goal_prc_kongzhongsishen
+		prerequisite = { 
+			focus = PRC_gaijinzhadan_feiji_heavy
+		}
+		relative_position_id = PRC_gaijinzhadan_feiji_heavy
+		available = {
+			PRC = {
+				num_of_military_factories > 40
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_xiandaihua_feiji3_heavy
+			add_ideas = PRC_xiandaihua_feiji4_heavy
+		}
+	}
+	
+	#路线四：飞虎神鹰！
+	focus = {
+		id = PRC_feihushenying_feiji
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { 
+			focus = PRC_gaijinxiandai_feiji_light
+			focus = PRC_gaijinxiandai_feiji_medium
+			focus = PRC_gaijinxiandai_feiji_heavy
+		}
+		relative_position_id = PRC_gaijinxiandai_feiji_medium
+		available = {
+			PRC = {
+				num_of_military_factories > 50
+				
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PRC_feihushenying_idea
+		}
+	}
+	
+	#重新制定政策（政策线，分为：土改，建设）
+	focus = {
+		id = PRC_chongxinzhidingzhengce
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = EastAsia_PRC_changzhengjieshu }
+		available = {
+			
+		}
+		x = 36
+		y = 1
+		relative_position_id = EastAsia_PRC_changzhengjieshu
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			PRC = { has_war_support = 1  has_stability = 2 }
+		}
+		completion_reward = {
+			PRC_low_popular_support_level_down = yes	
+		}
+	}
+	##土地改革
+	focus = {
+		id = PRC_tudigaige
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = PRC_chongxinzhidingzhengce }
+		x = -4
+		y = 1
+		relative_position_id =  PRC_chongxinzhidingzhengce
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+			NOT = { PRC_has_low_popular_support = yes }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			PRC_low_popular_support_level_down = yes
+		}
+	}
+	#斗地主
+	focus = {
+		id = EastAsia_PRC_tudigaige
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = PRC_tudigaige }
+		relative_position_id = PRC_tudigaige
+		available = {
+		}
+		x = 0
+		y = 1
+		cost = 4
+		
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = eastasia_idea_PRC_tudigaige
+				days = 730
+			}
+			add_ideas = PRC_tugaizhongdezuoqingcuowu
+		}
+	}
+	#纠正左倾错误
+	focus = {
+		id = PRC_jiuzhengzuoqingcuowu
+		icon = GFX_focus_SAF_colonialist_crusade
+		prerequisite = { focus = EastAsia_PRC_tudigaige }
+		relative_position_id = EastAsia_PRC_tudigaige
+		available = {
+			OR = {
+				has_idea = PRC_renbishi
+				has_idea = PRC_xizhongxun
+			} 
+		}
+		x = 0
+		y = 1
+		cost = 4
+		
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = PRC_tugaizhongdezuoqingcuowu
+		}
+	}
+	#减租减税
+	focus = {
+		id = EastAsia_PRC_jianzujianshui
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = PRC_jiuzhengzuoqingcuowu }
+		relative_position_id = PRC_jiuzhengzuoqingcuowu
+		available = {
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = EastAsia_PRC_jianzujianshui_tip
+			add_manpower = 200000
+			add_ideas = PRC_shengchanjijixing
+		}
+	}
+	#《保障人权财权条例》
+	focus = {
+		id = EastAsia_PRC_baozhangrenquantiaoli
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = EastAsia_PRC_jianzujianshui }
+		relative_position_id = EastAsia_PRC_jianzujianshui
+		available = {
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = eastasia_idea_PRC_quefagongyedeshanqu1
+			add_ideas = eastasia_idea_PRC_quefagongyedeshanqu2
+		}
+	}
+	
+	#陕甘宁边区施政纲领
+	focus = {
+		id = EastAsia_PRC_sglbq_shizhenggangling
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = EastAsia_PRC_baozhangrenquantiaoli }
+		relative_position_id = EastAsia_PRC_baozhangrenquantiaoli
+		available = {
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = eastasia_idea_PRC_quefagongyedeshanqu2
+			add_ideas = eastasia_idea_PRC_quefagongyedeshanqu3
+		}
+	}
+	##废除地租
+	focus = {
+		id = PRC_feichudizu
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = EastAsia_PRC_sglbq_shizhenggangling }
+		x = 0
+		y = 1
+		relative_position_id = EastAsia_PRC_sglbq_shizhenggangling
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			if = {
+				limit = {
+					has_idea = PRC_low_popular_support_1
+				}
+				has_idea = PRC_low_popular_support_1
+			}
+			if = {
+				limit = {
+					has_idea = PRC_low_popular_support_2
+				}
+				has_idea = PRC_low_popular_support_2
+			}
+			if = {
+				limit = {
+					has_idea = PRC_low_popular_support_3
+				}
+				has_idea = PRC_low_popular_support_3
+			}
+			if = {
+				limit = {
+					has_idea = PRC_low_popular_support_4
+				}
+				has_idea = PRC_low_popular_support_4
+			}
+			if = {
+				limit = {
+					has_idea = PRC_low_popular_support_5
+				}
+				has_idea = PRC_low_popular_support_5
+			}
+		}
+
+		bypass = {
+			NOT = { PRC_has_low_popular_support = yes }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = { limit = { has_idea = PRC_low_popular_support_1 } remove_ideas = PRC_low_popular_support_1 }
+			else_if = { limit = { has_idea = PRC_low_popular_support_2 } remove_ideas = PRC_low_popular_support_2 }
+			else_if = { limit = { has_idea = PRC_low_popular_support_3 } remove_ideas = PRC_low_popular_support_3 }
+			else_if = { limit = { has_idea = PRC_low_popular_support_4 } remove_ideas = PRC_low_popular_support_4 }
+			else = { remove_ideas = PRC_low_popular_support_5 }
+		}
+	}
+	#延安生产运动
+	focus = {
+		id = EastAsia_PRC_shengchanyundong
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = PRC_chongxinzhidingzhengce }
+		relative_position_id = PRC_chongxinzhidingzhengce
+		available = {
+			622 = { is_controlled_by = PRC }
+		}
+		x = -2
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = eastasia_idea_PRC_yananshengchanyundong
+				days = 730
+			}
+		}
+	}
+	
+	#南泥湾垦荒
+	focus = {
+		id = EastAsia_PRC_nanniwan
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = EastAsia_PRC_shengchanyundong }
+		relative_position_id = EastAsia_PRC_shengchanyundong
+		available = {
+			622 = { is_controlled_by = PRC }
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			622 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	#黄崖洞兵工厂
+	focus = {
+		id = EastAsia_PRC_hunagyadongbinggongchang
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = EastAsia_PRC_nanniwan }
+		relative_position_id = EastAsia_PRC_nanniwan
+		available = {
+			622 = { is_controlled_by = PRC }
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			622 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	#中央研究院
+	focus = {
+		id = EastAsia_PRC_zhongyangyanjiuyuan
+		icon = GFX_focus_generic_socialist_science
+		prerequisite = { focus = EastAsia_PRC_hunagyadongbinggongchang }
+		relative_position_id = EastAsia_PRC_hunagyadongbinggongchang
+		available = {
+			622 = { is_controlled_by = PRC }
+			has_completed_focus = PRC_jianshedaxue_yanan
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	#中央医院
+	focus = {
+		id = EastAsia_PRC_diyiyezhanyiyuan
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		prerequisite = { focus = EastAsia_PRC_zhongyangyanjiuyuan }
+		relative_position_id = EastAsia_PRC_zhongyangyanjiuyuan
+		available = {
+			622 = { is_controlled_by = PRC }
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {     
+				bonus = 1         
+				uses = 1            
+				category = hospital_tech
+			}
+			add_ideas = eastasia_idea_PRC_tianjiang1
+			set_technology = { tech_field_hospital = 1 }
+		}
+	}
+	
+	#八路军军事学院
+	focus = {
+		id = EastAsia_PRC_balujunjunshixueyuan
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = EastAsia_PRC_diyiyezhanyiyuan }
+		relative_position_id = EastAsia_PRC_diyiyezhanyiyuan
+		available = {
+			 has_completed_focus = EastAsia_PRC_balijun
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = eastasia_idea_PRC_tianjiang1
+			add_ideas = eastasia_idea_PRC_tianjiang2
+			set_technology = { tech_military_police = 1 }
+		}
+	}
+	
+	#土地改革
+	focus = {
+		id = EastAsia_PRC_yananhuaqiao
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = EastAsia_PRC_balujunjunshixueyuan }
+		relative_position_id = EastAsia_PRC_balujunjunshixueyuan
+		available = {
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = eastasia_idea_PRC_tianjiang2
+			add_ideas = eastasia_idea_PRC_tianjiang3
+		}
+	}
+	
+	#江山代有人才出
+	focus = {
+		id = EastAsia_PRC_jiefangquanguo
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = EastAsia_PRC_yananhuaqiao }
+		prerequisite = { focus = PRC_feichudizu }
+		relative_position_id = EastAsia_PRC_yananhuaqiao
+		available = {
+			
+		}
+		x = -1
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = eastasia_idea_PRC_tianjiang3
+			add_ideas = eastasia_idea_PRC_tianjiang
+			remove_ideas = eastasia_idea_PRC_quefagongyedeshanqu3
+		}
+	}
+	#建设延安根据地
+	focus = {
+		id = PRC_jianshegenjudi_yanan
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = PRC_chongxinzhidingzhengce }
+		relative_position_id = PRC_chongxinzhidingzhengce
+		available = {
+			622 = { is_controlled_by = PRC }
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			622 = { add_extra_state_shared_building_slots = 5 }
+		}
+	}
+	#延安铁路铺设
+	focus = {
+		id = PRC_tielupushe_yanan
+		icon = GFX_goal_generic_construct_infrastructure
+		
+		relative_position_id = PRC_jianshegenjudi_yanan
+		available = {
+			622 = { is_controlled_by = PRC }
+		}
+		x = 2
+		y = -1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			622 = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#延安民生计划
+	focus = {
+		id = PRC_minshengjihua_yanan
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = PRC_tielupushe_yanan }
+		relative_position_id = PRC_tielupushe_yanan
+		available = {
+			622 = { 
+				is_controlled_by = PRC 
+				free_building_slots = {
+					building = industrial_complex
+					size > 2
+					include_locked = yes
+				}
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			622 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#延安军工计划
+	focus = {
+		id = PRC_jungongjihua_yanan
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = PRC_jianshegenjudi_yanan }
+		relative_position_id = PRC_jianshegenjudi_yanan
+		available = {
+			622 = {
+				is_controlled_by = PRC
+				free_building_slots = {
+					building = arms_factory
+					size > 2
+					include_locked = yes
+				}
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			622 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#延安铁壁
+	focus = {
+		id = PRC_tiebi_yanan
+		icon = GFX_goal_generic_construct_military
+		prerequisite = {
+			focus = PRC_tielupushe_yanan
+			
+		}
+		relative_position_id = PRC_minshengjihua_yanan
+		available = {
+			622 = { is_controlled_by = PRC }
+			798 = { is_controlled_by = PRC }
+		}
+		x = 2
+		y = 0
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			622 = {
+				add_building_construction = {
+					type = bunker
+					province = 5007
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 7208
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}	
+			}
+			798 = {
+				add_building_construction = {
+					type = bunker
+					province = 1458
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 7659
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}	
+			}
+		}
+	}
+	#延安边区大开发
+	focus = {
+		id = PRC_bianqudakaifa_yanan
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = PRC_tiebi_yanan focus = PRC_minshengjihua_yanan }
+		relative_position_id = PRC_tiebi_yanan
+		available = {
+			622 = {
+				is_controlled_by = PRC
+				free_building_slots = {
+					building = industrial_complex
+					size > 2
+					include_locked = yes
+				}
+				free_building_slots = {
+					building = arms_factory
+					size > 2
+					include_locked = yes
+				}
+			}
+			798 = {
+				is_controlled_by = PRC
+				free_building_slots = {
+					building = industrial_complex
+					size > 2
+					include_locked = yes
+				}
+				free_building_slots = {
+					building = arms_factory
+					size > 2
+					include_locked = yes
+				}
+			}
+		}
+		x = -1
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			622 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 4
+			}
+			798 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 4
+			}
+		}
+	}
+	#建设延安大学
+	focus = {
+		id = PRC_jianshedaxue_yanan
+		icon = GFX_focus_research
+		prerequisite = { focus = PRC_bianqudakaifa_yanan }
+		relative_position_id = PRC_bianqudakaifa_yanan
+		available = {
+			622 = { is_controlled_by = PRC }
+			798 = { is_controlled_by = PRC }
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	#建设绥晋根据地
+	focus = {
+		id = PRC_jianshegenjudi_suijin
+		icon = GFX_goal_generic_production
+	    prerequisite = { focus = PRC_tielupushe_suijin }
+		relative_position_id = PRC_chongxinzhidingzhengce
+		available = {
+			621 = { is_controlled_by = PRC }
+			615 = { is_controlled_by = PRC }
+		}
+		x = 0
+		y = 5
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			621 = { add_extra_state_shared_building_slots = 3 }
+			615 = { add_extra_state_shared_building_slots = 3 }
+		}
+	}
+	#绥晋铁路铺设
+	focus = {
+		id = PRC_tielupushe_suijin
+		icon = GFX_goal_generic_construct_infrastructure
+		
+		relative_position_id = PRC_jianshegenjudi_suijin
+		available = {
+			621 = { is_controlled_by = PRC }
+			615 = { is_controlled_by = PRC }
+		}
+		x = 2
+		y = -1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			621 = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			615 = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#绥晋民生计划
+	focus = {
+		id = PRC_minshengjihua_suijin
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = PRC_tielupushe_suijin }
+		relative_position_id = PRC_tielupushe_suijin
+		available = {
+			621 = { 
+				is_controlled_by = PRC 
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			615 = { 
+				is_controlled_by = PRC 
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			621 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			615 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#绥晋军工计划
+	focus = {
+		id = PRC_jungongjihua_suijin
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = PRC_jianshegenjudi_suijin }
+		relative_position_id = PRC_jianshegenjudi_suijin
+		available = {
+			621 = {
+				is_controlled_by = PRC
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			615 = {
+				is_controlled_by = PRC
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			621 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			615 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#绥晋铁壁
+	focus = {
+		id = PRC_tiebi_suijin
+		icon = GFX_goal_generic_construct_military
+		prerequisite = {
+			focus = PRC_tielupushe_suijin
+			
+		}
+		relative_position_id = PRC_minshengjihua_suijin
+		available = {
+			621 = { is_controlled_by = PRC }
+			615 = { is_controlled_by = PRC }
+		}
+		x = 2
+		y = 0
+		cost = 12
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			621 = {
+				add_building_construction = {
+					type = bunker
+					province = 7158
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 12403
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 7048
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 12331
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}	
+			}
+			615 = {
+				add_building_construction = {
+					type = bunker
+					province = 12078
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 1203
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 1438
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 1027
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 10480
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}	
+			}
+		}
+	}
+	#绥晋边区大开发
+	focus = {
+		id = PRC_bianqudakaifa_suijin
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = PRC_minshengjihua_suijin }
+		relative_position_id = PRC_minshengjihua_suijin
+		available = {
+			621 = {
+				is_controlled_by = PRC
+				free_building_slots = {
+					building = industrial_complex
+					size > 2
+					include_locked = yes
+				}
+				free_building_slots = {
+					building = arms_factory
+					size > 2
+					include_locked = yes
+				}
+			}
+			615 = {
+				is_controlled_by = PRC
+				free_building_slots = {
+					building = industrial_complex
+					size > 2
+					include_locked = yes
+				}
+				free_building_slots = {
+					building = arms_factory
+					size > 2
+					include_locked = yes
+				}
+			}
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			621 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 4
+			}
+			615 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 4
+			}
+		}
+	}
+	#建设山西大学
+	focus = {
+		id = PRC_jianshedaxue_suijin
+		icon = GFX_focus_research
+		prerequisite = { focus = PRC_tiebi_suijin }
+		relative_position_id = PRC_tiebi_suijin
+		available = {
+			621 = { is_controlled_by = PRC }
+			615 = { is_controlled_by = PRC }
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = PRC_jianshedaxue_suijin_tip
+		}
+	}
+	#建设陕甘宁根据地
+	focus = {
+		id = PRC_jianshegenjudi_shanganning
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = PRC_tielupushe_shanganning }
+		relative_position_id = PRC_chongxinzhidingzhengce
+		available = {
+			616 = { is_controlled_by = PRC }
+			283 = { is_controlled_by = PRC }
+			
+		}
+		x = 0
+		y = 8
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			616 = { add_extra_state_shared_building_slots = 3 }
+			283 = { add_extra_state_shared_building_slots = 3 }
+			
+		}
+	}
+	#陕甘宁铁路铺设
+	focus = {
+		id = PRC_tielupushe_shanganning
+		icon = GFX_goal_generic_construct_infrastructure
+		
+		relative_position_id = PRC_jianshegenjudi_shanganning
+		available = {
+			616 = { is_controlled_by = PRC }
+			283 = { is_controlled_by = PRC }
+			
+		}
+		x = 2
+		y = -1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			616 = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			283 = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+		}
+	}
+	#陕甘宁民生计划
+	focus = {
+		id = PRC_minshengjihua_shanganning
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = PRC_tielupushe_shanganning }
+		relative_position_id = PRC_tielupushe_shanganning
+		available = {
+			616 = { 
+				is_controlled_by = PRC 
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			283 = { 
+				is_controlled_by = PRC 
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			616 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			283 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+		}
+	}
+	#陕甘宁军工计划
+	focus = {
+		id = PRC_jungongjihua_shanganning
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = PRC_minshengjihua_shanganning }
+		relative_position_id = PRC_minshengjihua_shanganning
+		available = {
+			616 = {
+				is_controlled_by = PRC
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			283 = {
+				is_controlled_by = PRC
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			
+		}
+		x = 0
+		y = 1
+		cost = 9
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			616 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			283 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+		}
+	}
+	#陕甘宁铁壁
+	focus = {
+		id = PRC_tiebi_shanganning
+		icon = GFX_goal_generic_construct_military
+		prerequisite = {
+			focus = PRC_tielupushe_shanganning
+			
+		}
+		relative_position_id = PRC_minshengjihua_shanganning
+		available = {
+			616 = { is_controlled_by = PRC }
+			283 = { is_controlled_by = PRC }
+			
+		}
+		x = 2
+		y = 0
+		cost = 16
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			616 = {
+				add_building_construction = {
+					type = bunker
+					province = 5031
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 5011
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 5057
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 12327
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}	
+			}
+			283 = {
+				add_building_construction = {
+					type = bunker
+					province = 1630
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 2022
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 12797
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 4313
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}	
+			}
+		
+		}
+	}
+	#陕甘宁边区大开发
+	focus = {
+		id = PRC_bianqudakaifa_shanganning
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = PRC_jianshegenjudi_shanganning }
+		relative_position_id = PRC_jianshegenjudi_shanganning
+		available = {
+			616 = {
+				is_controlled_by = PRC
+				free_building_slots = {
+					building = industrial_complex
+					size > 2
+					include_locked = yes
+				}
+				free_building_slots = {
+					building = arms_factory
+					size > 2
+					include_locked = yes
+				}
+			}
+			283 = {
+				is_controlled_by = PRC
+				free_building_slots = {
+					building = industrial_complex
+					size > 2
+					include_locked = yes
+				}
+				free_building_slots = {
+					building = arms_factory
+					size > 2
+					include_locked = yes
+				}
+			}
+			
+		}
+		x = 0
+		y = 1
+		cost = 15
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			616 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 4
+			}
+			283 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 4
+			}
+			
+		}
+	}
+	#延安的飞机场
+	focus = {
+		id = PRC_feijichang_shanganning
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = PRC_tiebi_shanganning }
+		relative_position_id = PRC_tiebi_shanganning
+		available = {
+			622 = { is_controlled_by = PRC }
+			798 = { is_controlled_by = PRC }
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			622 = {
+				add_building_construction = {
+					type = air_base
+					level = 4
+					instant_build = yes
+				}
+			}
+			798 = {
+				add_building_construction = {
+					type = air_base
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#八九点钟的太阳
+	focus = {
+		id = PRC_bajiudianzhongdetaiyang
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = PRC_chongxinzhidingzhengce }
+		relative_position_id = PRC_chongxinzhidingzhengce
+		available = {
+			
+		}
+		x = 10
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 50000
+		}
+	}
+	#青年救国会
+	focus = { 
+		id = EastAsia_PRC_qingnianjuguohui
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = PRC_bajiudianzhongdetaiyang }
+		relative_position_id = PRC_bajiudianzhongdetaiyang
+		available = {
+			
+		} 
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = qingnianjiuguohui_tip
+			hidden_effect = { load_oob = "PRC_qingnianjun" }
+		}
+	}
+	
+	#发行边区币
+	focus = {
+		id = EastAsia_PRC_faxingbianqubi
+		icon = GFX_goal_prc_bianqubi
+		prerequisite = { focus = EastAsia_PRC_qingnianjuguohui }
+		prerequisite = { focus = PRC_political_commissars }
+		relative_position_id = PRC_political_commissars
+		available = {
+		has_completed_focus = PRC_minshengjihua_yanan
+	    has_completed_focus = PRC_tudigaige
+		has_completed_focus = EastAsia_PRC_shengchanyundong
+			
+		}
+		x = 1
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = eastasia_idea_PRC_quefawenhuazhishidebaixing1
+			add_ideas = eastasia_idea_PRC_quefawenhuazhishidebaixing2
+		}
+	}
+	
+	#解放日报
+	focus = {
+		id = EastAsia_PRC_jiefangribao
+		icon = GFX_goal_news_baohzhi
+		prerequisite = { focus = EastAsia_PRC_faxingbianqubi }
+		relative_position_id = EastAsia_PRC_faxingbianqubi
+		available = {
+			has_completed_focus = PRC_daguimosaomang
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = eastasia_idea_PRC_quefawenhuazhishidebaixing2
+			add_ideas = eastasia_idea_PRC_quefawenhuazhishidebaixing3
+		}
+	}
+	
+	#拥政爱民运动
+	focus = {
+		id = EastAsia_PRC_yongzhengaimin
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = EastAsia_PRC_jiefangribao }
+		relative_position_id = EastAsia_PRC_jiefangribao
+		available = {
+			has_completed_focus = PRC_jianlijicengdangzuzhi
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = eastasia_idea_PRC_quefawenhuazhishidebaixing3
+			add_ideas = eastasia_idea_PRC_quefawenhuazhishidebaixing4
+		}
+	}
+	#大规模扫盲
+	focus = {
+		id = PRC_daguimosaomang
+		icon = GFX_focus_generic_socialist_science
+		prerequisite = { focus = PRC_tielupushe_yanan }
+		x = 4
+		y = 1
+		relative_position_id = PRC_tielupushe_yanan
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+		num_of_factories > 20
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	#工农会军军医
+	focus = {
+		id = PRC_gongnonghuijunjunyi
+		icon = GFX_focus_research
+		prerequisite = { focus = PRC_daguimosaomang }
+		x = 0
+		y = 1
+		relative_position_id = PRC_daguimosaomang
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = hospital_tech
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = motorized_equipment
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = support_tech
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = logistics_tech
+			}
+		}
+	}
+
+	#抗日军政大学
+	focus = {
+		id = PRC_kangrijunzhengdaxue
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = PRC_gongnonghuijunjunyi }
+		x = 0
+		y = 1
+		relative_position_id = PRC_gongnonghuijunjunyi
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = PRC_kangri_junzhengdaxue
+		}
+	}
+	#抗日救国
+	focus = {
+		id = PRC_kangrijunguo
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = PRC_tielupushe_yanan }
+		x = 6
+		y = 1
+		
+		relative_position_id = PRC_tielupushe_yanan
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = PRC_kangrijiuguoshadagangling
+		}
+	}
+	#政委
+	focus = {
+		id = PRC_political_commissars
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = PRC_kangrijunguo }
+		relative_position_id = PRC_kangrijunguo
+		available = {
+		}
+		x = 0
+		y = 1
+
+		cost = 4
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = eastasia_idea_PRC_zhengwei
+			
+			add_political_power = 200
+		}
+	}
+	#自给自足的根据地
+	focus = {
+		id = EastAsia_PRC_jilvyanming
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = { focus = EastAsia_PRC_yongzhengaimin }
+		relative_position_id = EastAsia_PRC_yongzhengaimin
+		available = {
+		  has_completed_focus = EastAsia_PRC_tianbingtianjaing
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = eastasia_idea_PRC_renmindeliliang
+			remove_ideas = eastasia_idea_PRC_quefawenhuazhishidebaixing4
+			add_ideas = autarky_zijizizu
+		}
+	}
+	#建立基层党组织
+	focus = {
+		id = PRC_jianlijicengdangzuzhi
+		icon = GFX_focus_eng_crush_the_dream
+		prerequisite = { focus = PRC_chongxinzhidingzhengce }
+		relative_position_id = PRC_chongxinzhidingzhengce
+		available = {
+			has_government = communism
+		}
+		x = 12
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 150
+			add_to_variable = { taizu_var = 20 }
+			custom_effect_tooltip = PRC_taizu_var1_tip
+			
+		}
+	}
+	#指导员
+	focus = {
+		id = PRC_zhidaoyuan
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = PRC_jianlijicengdangzuzhi }
+		relative_position_id = PRC_jianlijicengdangzuzhi
+		available = {
+			has_government = communism
+			has_completed_focus = EastAsia_PRC_dangzhihuiqiang
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_to_variable = { taizu_var = 35 }
+			custom_effect_tooltip = PRC_taizu_var2_tip
+			add_to_variable = { taizu_var_change = 0.2 }
+			custom_effect_tooltip = PRC_taizu_var_change1_tip
+		}
+	}
+	#向广大群众宣讲马列主义
+	focus = {
+		id = PRC_xiangguangdaqunzhongxuanjiangmaliezhuyi
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = PRC_zhidaoyuan }
+		relative_position_id = PRC_zhidaoyuan
+		available = {
+			has_government = communism
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_to_variable = { taizu_var = 50 }
+			custom_effect_tooltip = PRC_taizu_var3_tip
+			add_to_variable = { taizu_var_change = 0.2 }
+			custom_effect_tooltip = PRC_taizu_var_change1_tip
+		}
+	}
+	#向敌占区渗透
+	focus = {
+		id = PRC_xiangdizhanqushentou
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		prerequisite = { focus = PRC_xiangguangdaqunzhongxuanjiangmaliezhuyi }
+		relative_position_id = PRC_xiangguangdaqunzhongxuanjiangmaliezhuyi
+		available = {
+			has_government = communism
+			NOT = { has_completed_focus = EastAsia_PRC_kaiguodadian }
+		}
+		x = 0
+		y = 1
+		cost = 4
+		bypass = {
+            has_completed_focus = EastAsia_PRC_kaiguodadian
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_to_variable = { taizu_var = 50 }
+			custom_effect_tooltip = PRC_taizu_var3_tip
+			add_to_variable = { taizu_var_change = 0.4 }
+			custom_effect_tooltip = PRC_taizu_var_change2_tip
+		}
+	}
+	#民心所向
+	focus = {
+		id = PRC_minxinsuoxiang
+		icon = GFX_focus_prc_maoism
+		prerequisite = { focus = PRC_xiangdizhanqushentou }
+		relative_position_id = PRC_xiangdizhanqushentou
+		available = {
+			has_government = communism
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_to_variable = { taizu_var = 100 }
+			custom_effect_tooltip = PRC_taizu_var4_tip
+			add_to_variable = { taizu_var_change = 0.4 }
+			custom_effect_tooltip = PRC_taizu_var_change2_tip
+		}
+	}
+	#个人崇拜
+	focus = {     
+		id = PRC_gerenchongbai
+		icon = GFX_goal_prc_gerenchongbai
+		prerequisite = { focus = PRC_minxinsuoxiang }
+		relative_position_id = PRC_minxinsuoxiang
+		mutually_exclusive = { focus = PRC_shishiqiushi }
+		available = {
+			has_government = communism
+			has_completed_focus = EastAsia_PRC_kaiguodadian
+		} 
+		x = -1
+		y = 1 
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		    add_ideas = PRC_gerenchongbai
+			add_to_variable = { taizu_var = 500 }
+			custom_effect_tooltip = PRC_taizu_var5_tip
+			multiply_variable = { taizu_var_change = 2 }
+			custom_effect_tooltip = PRC_taizu_var_change3_tip
+			custom_effect_tooltip = PRC_gerenchongbai_tip
+			hidden_effect = { set_country_flag = PRC_gerenchongbai_flag }
+		}
+	}
+	#实事求是
+	focus = {
+		id = PRC_shishiqiushi
+		icon = GFX_goal_prc_shishiqiushi
+		prerequisite = { focus = PRC_minxinsuoxiang }
+		relative_position_id = PRC_minxinsuoxiang
+		mutually_exclusive = { focus = PRC_gerenchongbai }
+		available = {
+			has_government = communism
+			has_completed_focus = EastAsia_PRC_kaiguodadian
+		}
+		x = 1
+		y = 1  
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_to_variable = { taizu_var = 100 }
+			custom_effect_tooltip = PRC_taizu_var4_tip
+			subtract_from_variable = { taizu_var_change = 0.3 }
+			custom_effect_tooltip = PRC_taizu_var_change4_tip
+			add_country_leader_trait = PRC_shishiqiushi_idea
+		}
+	}
+	#成立新中国
+	focus = {
+		id = EastAsia_PRC_kaiguodadian
+		icon = GFX_goal_china_prc_guohui
+		available = {
+		
+		OR = {
+			has_global_flag = ribentoyxiang
+			date > 1938.1.1
+			
+			}
+				
+			is_puppet = no
+			
+	# 京津晋冀
+			custom_trigger_tooltip = {
+				
+				tooltip = kongzhi_jing_jin_ji_states_tt
+				
+				controls_state = 608
+				controls_state = 614
+				controls_state = 615
+				
+			}	
+     #西北
+			custom_trigger_tooltip = {
+				
+				tooltip = kongzhi_xibei_states_tt
+				
+				controls_state = 616
+				controls_state = 622
+				controls_state = 283
+				controls_state = 744
+				
+			} 
+    #东北
+			custom_trigger_tooltip = {
+				
+				tooltip = kongzhi_dongbei_states_tt
+				
+				controls_state = 761
+				controls_state = 714
+				controls_state = 717
+				controls_state = 328
+				controls_state = 715
+				controls_state = 716
+				controls_state = 610
+				controls_state = 745
+				
+			}			
+				
+	}
+		
+		x = 88
+		y = 0
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = PRC_china	
+			country_event = eastasia.128
+			effect_tooltip = { set_capital = 608 }
+			hidden_effect = {		
+				load_oob = "PRC_jiefangjun" 
+				set_technology = { liberation_army_0 = 1 }
+			}
+			remove_ideas = PRC_yaodonglidegemingzhe
+			custom_effect_tooltip = PRC_jiefangjun_tip
+			
+			if = {
+				limit = {
+					has_idea = PRC_tuanjieyixin
+				}
+			remove_ideas = PRC_tuanjieyixin 
+			}
+			if = {
+				limit = {
+					has_idea = eastasia_idea_PRC_lunchijiuzhan
+				}
+				remove_ideas = eastasia_idea_PRC_lunchijiuzhan 
+			}
+			if = {
+				limit = {
+					has_idea = PRC_guanyuruoganlishiwentidejueyi
+				}
+			remove_ideas = PRC_guanyuruoganlishiwentidejueyi 
+			}
+			if = {
+				limit = {
+					has_idea = PRC_kangrijiuguoshadagangling
+				}
+			remove_ideas = PRC_kangrijiuguoshadagangling 
+			}
+			if = {
+				limit = {
+					has_idea = PRC_maobeishangkangri
+				}
+			remove_ideas = PRC_maobeishangkangri 
+			}
+			if = {
+				limit = {
+					has_idea = PRC_wangerxiao_fangniu
+				}
+			remove_ideas = PRC_wangerxiao_fangniu 
+			}
+		}
+	}
+	
+	
+	#路线三：西藏和平解放
+	focus = {
+		id = EastAsia_PRC_xiangganghuigui
+		icon = GFX_goal_tfv_smiling_buddha
+		prerequisite = { 
+			focus = EastAsia_PRC_kaiguodadian
+			
+		}
+		relative_position_id = EastAsia_PRC_kaiguodadian
+		available = {
+			
+		}
+		x = 6
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		bypass={
+			OR = {
+				322 = { is_controlled_by = PRC }
+				757 = { is_controlled_by = PRC }
+				758 = { is_controlled_by = PRC }
+			}
+		}
+		completion_reward = {
+			TIB = { country_event = eastasia.6 }
+			add_state_core = 322
+			add_state_core = 758
+			add_state_core = 757
+		}
+	}
+
+	#中国人民解放军
+	focus = {
+		id = PRC_zhongguormjfj
+		icon = GFX_goal_prc_jiefangjun
+		
+		prerequisite = { focus = EastAsia_PRC_kaiguodadian }
+		
+		x = 2
+		y = 1
+		
+		relative_position_id = EastAsia_PRC_kaiguodadian
+		
+		cost = 15
+
+		ai_will_do = {
+			factor = 1
+		}
+	    available = {
+	
+		} 
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = PRC_zhongguormjfj
+			add_ideas = SOV_daguimozhanzhengdongyuan
+			add_ideas = SOV_qibingxiandaihua
+			
+		}
+	}
+	#警察部队
+	focus = {
+		id = EastAsia_PRC_jingcha
+		icon = GFX_goal_prc_gonganju
+		prerequisite = { focus = EastAsia_PRC_kaiguodadian }
+		relative_position_id = EastAsia_PRC_kaiguodadian
+		available = {
+		}
+		x = -2
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PRC_jingcha
+			custom_effect_tooltip = EastAsia_PRC_jingcha_tip
+		}
+	}
+	
+	#建立功德林
+	focus = {
+		id = PRC_jianligongdelin
+		icon = GFX_goal_continuous_boost_freedom
+		prerequisite = { focus = EastAsia_PRC_kaiguodadian }
+		relative_position_id = EastAsia_PRC_kaiguodadian
+		available = {
+			CHI = {
+				exists = no
+			}
+		}
+		x = -4
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			#set_country_flag = PRC_gongdelinjianli_flag
+			custom_effect_tooltip = PRC_jianligongdelin_tip
+			custom_effect_tooltip = PRC_jianligongdelin2_tip	
+		}
+	}
+	#全国人民代表大会
+	focus = {
+		id = EastAsia_PRC_renmindaibiaodahui
+		icon = GFX_goal_quanguorenda
+		prerequisite = { focus = EastAsia_PRC_kaiguodadian }
+		relative_position_id = EastAsia_PRC_kaiguodadian
+		available = {
+			
+		}
+		x = -6
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 500
+		}
+	}
+	#“一五”计划
+	focus = {
+		id = EastAsia_PRC_yiwujihua
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = EastAsia_PRC_renmindaibiaodahui }
+		relative_position_id = EastAsia_PRC_renmindaibiaodahui
+		available = {
+			
+		}
+		x = -2
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = eastasia_idea_PRC_xiaomijiabuqiang
+			add_timed_idea = {
+				idea = eastasia_idea_PRC_yiwujihua
+				days = 730
+			}
+		}
+	}
+	#鞍山钢铁公司
+	focus = {
+		id = EastAsia_PRC_anshangangtie
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = EastAsia_PRC_yiwujihua }
+		relative_position_id = EastAsia_PRC_yiwujihua
+		available = {
+			716 = { is_controlled_by = PRC }
+		}
+		x = -2
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 100
+				state = 716
+			}
+		}
+	}
+	#炼铁炉
+	focus = {
+		id = EastAsia_PRC_liantielu
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = EastAsia_PRC_anshangangtie }
+		relative_position_id = EastAsia_PRC_anshangangtie
+		available = {
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_owned_by = PRC
+					is_core_of = PRC
+				}
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+			}
+			custom_effect_tooltip  = zhanlingqujianshecao_tip
+		}
+	}
+	#沈飞
+	focus = {
+		id = EastAsia_PRC_shenfei
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = EastAsia_PRC_diyifeijichang }
+		relative_position_id = EastAsia_PRC_liantielu
+		available = {
+			716 = { is_controlled_by = PRC }
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_offsite_building = {type = arms_factory level = 1}
+			custom_effect_tooltip = EastAsia_PRC_shenfei_tip
+		}
+	}
+	#成飞
+	focus = {
+		id = EastAsia_PRC_chengfei
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = EastAsia_PRC_diyifeijichang }
+		relative_position_id = EastAsia_PRC_shenfei
+		available = {
+			605 = { is_controlled_by = PRC }
+		}
+		x = 2
+		y = 0
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_offsite_building = {type = arms_factory level = 1}
+			custom_effect_tooltip = EastAsia_PRC_chengfei_tip
+		}
+	}
+	#游子吟
+	focus = {
+		id = EastAsia_PRC_youziyin
+		icon = GFX_goal_prc_youziyin
+		prerequisite = { 
+			focus = EastAsia_PRC_yiwujihua
+		}
+		relative_position_id = EastAsia_PRC_shenfei
+		available = {
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = EastAsia_PRC_youziyin_tip
+		}
+	}
+	#导弹研究
+	focus = {
+		id = EastAsia_PRC_daodanyanjiu
+		icon = GFX_focus_rocketry
+		prerequisite = { 
+			focus = EastAsia_PRC_youziyin
+		}
+		relative_position_id = EastAsia_PRC_youziyin
+		available = {
+			
+		}
+		x = -2
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = rocketry
+			}
+		}
+	}
+	#电子计算机
+	focus = {
+		id = EastAsia_PRC_dianzijisuanji
+		icon = GFX_goal_generic_production2
+		prerequisite = { 
+			focus = EastAsia_PRC_youziyin
+		}
+		relative_position_id = EastAsia_PRC_youziyin
+		available = {
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = computing_tech
+			}
+		}
+	}
+	#一起来种苹果树
+	focus = {
+		id = EastAsia_PRC_pingguoshu
+		icon = GFX_focus_wonderweapons
+		prerequisite = { 
+			focus = EastAsia_PRC_youziyin
+		}
+		relative_position_id = EastAsia_PRC_youziyin
+		available = {
+			
+		}
+		x = 2
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = nuclear
+			}
+		}
+	}
+	
+	#富拉尔基重工业基地
+	focus = {
+		id = EastAsia_PRC_fulaerji
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = EastAsia_PRC_yiwujihua }
+		relative_position_id = EastAsia_PRC_yiwujihua
+		available = {
+			714 = { is_controlled_by = PRC }
+		}
+		x = 2
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			714 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#中国第一个飞机制造厂
+	focus = {
+		id = EastAsia_PRC_diyifeijichang
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = EastAsia_PRC_fulaerji }
+		relative_position_id = EastAsia_PRC_fulaerji
+		available = {
+			608 = { is_controlled_by = PRC }
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			608 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	
+	#青藏公路
+	focus = {
+		id = EastAsia_PRC_qingzanggonglu
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = EastAsia_PRC_yiwujihua }
+		relative_position_id = EastAsia_PRC_yiwujihua
+		available = {
+			322 = { is_controlled_by = PRC }
+			604 = { is_controlled_by = PRC }
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			322 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			604 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	#中国第一条国际铁路
+	focus = {
+		id = EastAsia_PRC_guojitielu
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = EastAsia_PRC_qingzanggonglu }
+		relative_position_id = EastAsia_PRC_qingzanggonglu
+		available = {
+			325 = { is_controlled_by = PRC }
+			640 = { is_controlled_by = BUR }
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			325 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			640 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#整合民国坦克工业
+	focus = {
+		id = PRC_zhengheminguotanke
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = EastAsia_PRC_yiwujihua }
+		relative_position_id = EastAsia_PRC_yiwujihua
+		available = {
+		}
+		x = 4
+		y = 2
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 2 }
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 3
+				category = armor
+			}
+		}
+	}
+	#轻型坦克制造厂
+	focus = {
+		id = PRC_zhizaochang_light
+		icon = GFX_focus_NZL_bob_semple_tank
+		prerequisite = { focus = PRC_zhengheminguotanke }
+		relative_position_id = PRC_zhengheminguotanke
+		available = {
+		}
+		x = -2
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }
+			custom_effect_tooltip = PRC_zhizaochang_light_tip
+		}
+	}
+	#中型坦克制造厂
+	focus = {
+		id = PRC_zhizaochang_medium
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = PRC_zhengheminguotanke }
+		relative_position_id = PRC_zhengheminguotanke
+		available = {
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }
+			custom_effect_tooltip = PRC_zhizaochang_medium_tip
+		}
+	}
+	#重型坦克制造厂
+	focus = {
+		id = PRC_zhizaochang_heavy
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = PRC_zhengheminguotanke }
+		relative_position_id = PRC_zhengheminguotanke
+		available = {
+		}
+		x = 2
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }
+			custom_effect_tooltip = PRC_zhizaochang_heavy_tip
+		}
+	}
+	#现代坦克工业
+	focus = {
+		id = PRC_zhizaochang_modern
+		icon = GFX_focus_generic_tank_production
+		prerequisite = { focus = PRC_zhizaochang_light }
+		prerequisite = { focus = PRC_zhizaochang_medium }
+		prerequisite = { focus = PRC_zhizaochang_heavy }
+		relative_position_id = PRC_zhizaochang_medium
+		available = {
+			has_idea = PRC_gangtiexiongxin_tank
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_ideas = PRC_xiandaitankegongye
+		}
+	}
+	#首都钢铁厂
+	focus = {
+		id = EastAsia_PRC_shoudugangtiechang
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = EastAsia_PRC_yiwujihua }
+		relative_position_id = EastAsia_PRC_yiwujihua
+		available = {
+			608 = { is_controlled_by = PRC }
+		}
+		x = -4
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 100
+				state = 608
+			}
+		}
+	}
+	#南方稀土集团
+	focus = {
+		id = EastAsia_PRC_nanfangxitujituan
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = EastAsia_PRC_shoudugangtiechang }
+		relative_position_id = EastAsia_PRC_shoudugangtiechang
+		available = {
+			620 = { is_controlled_by = PRC }
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_resource = {
+				type = chromium
+				amount = 50
+				state = 620
+			}
+			add_resource = {
+				type = aluminium
+				amount = 50
+				state = 620
+			}
+		}
+	}
+	#上海宝山钢铁厂
+	focus = {
+		id = EastAsia_PRC_shanghaibaoshangangtiechang
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = EastAsia_PRC_nanfangxitujituan }
+		relative_position_id = EastAsia_PRC_nanfangxitujituan
+		available = {
+			613 = { is_controlled_by = PRC }
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 100
+				state = 613
+			}
+		}
+	} 
+	
+	#重启大沽造船厂
+	focus = {
+		id = EastAsia_PRC_chongqidaguchuanchang
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = EastAsia_PRC_yiwujihua }
+		relative_position_id = EastAsia_PRC_yiwujihua
+		available = {
+			608 = { is_controlled_by = PRC }
+		}
+		x = -6
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_offsite_building = { type = dockyard level = 1 }
+			custom_effect_tooltip = EastAsia_PRC_chongqidaguchuanchang_tip
+		}
+	}
+	#重启上海外高桥船厂
+	focus = {
+		id = EastAsia_PRC_chongqishanghaiwaigaoqiaochuanchang
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = EastAsia_PRC_chongqidaguchuanchang }
+		relative_position_id = EastAsia_PRC_chongqidaguchuanchang
+		available = {
+			613 = { is_controlled_by = PRC }
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_offsite_building = { type = dockyard  level = 1 }
+			custom_effect_tooltip = EastAsia_PRC_chongqishanghaiwaigaoqiaochuanchang_tip
+		}
+	}
+	#重启大连船舶
+	focus = {
+		id = EastAsia_PRC_chongqidalianchuanbo
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = EastAsia_PRC_chongqishanghaiwaigaoqiaochuanchang }
+		relative_position_id = EastAsia_PRC_chongqishanghaiwaigaoqiaochuanchang
+		available = {
+			745 = { is_controlled_by = PRC }
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_offsite_building = { type = dockyard  level = 1 }
+			custom_effect_tooltip = EastAsia_PRC_chongqidalianchuanbo_tip
+		}
+	}
+	#重启广船国际
+	focus = {
+		id = EastAsia_PRC_chongqiguangchuanguopji
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = EastAsia_PRC_chongqidalianchuanbo }
+		relative_position_id = EastAsia_PRC_chongqidalianchuanbo
+		available = {
+			592 = { is_controlled_by = PRC }
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_offsite_building = { type = dockyard  level = 1 }
+			custom_effect_tooltip = EastAsia_PRC_chongqiguangchuanguopji_tip
+		}
+	}
+	#“以人为本”
+	focus = {
+		id = EastAsia_PRC_yirenweiben
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = EastAsia_PRC_kaiguodadian }
+		relative_position_id = EastAsia_PRC_kaiguodadian
+		available = {
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 200
+			air_experience = 200
+			navy_experience = 200
+		}
+	}
+	#邓小平理论
+	focus = {
+		id = EastAsia_PRC_dengxiaopinglilun
+		icon = GFX_goal_dengxiaoping
+		prerequisite = { focus = EastAsia_PRC_yirenweiben }
+		relative_position_id = EastAsia_PRC_yirenweiben
+		available = {
+			has_completed_focus = PRC_shishiqiushi
+		}
+		x = -1
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_country_leader_trait = PRC_dengxiaopinglilun
+		}
+	}
+	
+	#毛泽东思想
+	focus = {
+		id = EastAsia_PRC_maozedongsixiang
+		icon = GFX_goal_prc_maozedong2
+		prerequisite = { focus = EastAsia_PRC_yirenweiben }
+		relative_position_id = EastAsia_PRC_yirenweiben
+		available = {
+			
+		}
+		x = 1
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_country_leader_trait = PRC_maozedongsixiang
+			add_stability = 0.1
+			add_ideas = PRC_maoism
+		}
+	}
+	#“三大改造”
+	focus = {
+		id = EastAsia_PRC_sandagaizao
+		icon = GFX_focus_generic_socialist_science
+		prerequisite = { focus = EastAsia_PRC_dengxiaopinglilun}
+		prerequisite = { focus = EastAsia_PRC_maozedongsixiang}
+		relative_position_id = EastAsia_PRC_maozedongsixiang
+		available = {
+			
+		}
+		x = -1
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	#国务院
+	focus = {
+		id = EastAsia_PRC_guowuyuan
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = { focus = EastAsia_PRC_kaiguodadian }
+		relative_position_id = EastAsia_PRC_kaiguodadian
+		available = {
+			
+		}
+		x = 4
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+		}
+	}
+	#抗美援朝
+	focus = {
+		id = EastAsia_PRC_kangmeiyuanchao
+		icon = GFX_focus_generic_paratrooper
+		prerequisite = { focus = EastAsia_PRC_guowuyuan }
+		relative_position_id = EastAsia_PRC_guowuyuan
+		available = {
+			
+			country_exists = PRK
+			country_exists = KOR
+			328 = { is_controlled_by = PRC }
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = { 
+			factor = 1
+		}
+		bypass={
+			NOT = { country_exists = PRK }
+		}
+		completion_reward = {
+			set_rule = { can_send_volunteers = yes }
+			
+		PRK = {
+			country_event = { id = prc.2 }
+			}
+			
+			add_ideas = PRC_peoples_volunteer_army
+			
+		}
+	}
+	
+	#“一边倒”
+	focus = {
+		id = EastAsia_PRC_yibiandao
+		icon = GFX_goal_support_fourth_int
+		prerequisite = { focus = EastAsia_PRC_kangmeiyuanchao }
+		relative_position_id = EastAsia_PRC_kangmeiyuanchao
+		available = {
+			
+		}
+		x = -1
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			drop_cosmetic_tag = yes
+            set_cosmetic_tag = PRC_china	
+			
+			add_opinion_modifier = { target = SOV modifier = Brotherhood }
+			give_military_access = SOV
+			SOV = { 
+				add_opinion_modifier = { target = PRC modifier = Brotherhood } 
+				diplomatic_relation = { country = PRC relation = non_aggression_pact }
+				give_military_access = PRC
+			}
+		}
+	}
+	
+	#镇压反革命运动
+	focus = {
+		id = EastAsia_PRC_zhengyafangeming
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = EastAsia_PRC_kangmeiyuanchao }
+		relative_position_id = EastAsia_PRC_kangmeiyuanchao
+		available = {
+			
+		}
+		x = 1 
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_timed_idea = {	idea = eastasia_idea_PRC_zhenyafangemingyundong		days = 365	}
+		}
+	}
+	
+	#感化日本
+	focus = {
+		id = EastAsia_PRC_zhiminriben
+		icon = GFX_focus_AST_war_japan
+		prerequisite = {focus = EastAsia_PRC_yibiandao} 
+	    prerequisite = { focus = EastAsia_PRC_zhengyafangeming } 
+		relative_position_id = EastAsia_PRC_yibiandao 
+		available = {
+			
+		}
+		x = 1
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			every_state = { 
+				limit = {
+					is_core_of = JAP 
+				}
+				PREV = { 
+					ADD_STATE_CORE = PREV 
+				}
+			}
+		}
+	}
+	#中印边界争议
+	focus = {
+		id = EastAsia_PRC_zhongyinbianjiezhengyi
+		icon = GFX_focus_RAJ_two_nation_theory
+		prerequisite = { focus = EastAsia_PRC_zhiminriben }
+		relative_position_id = EastAsia_PRC_zhiminriben
+		available = {
+			AND = {
+				country_exists = RAJ
+				601 = { is_controlled_by = PRC }
+				NOT = {434 = { is_controlled_by = PRC }}
+			}				
+		}
+		x = -1
+		y = 1
+		cost = 1
+		ai_will_do = { 
+			factor = 0
+		}
+		completion_reward = { 
+			RAJ = {
+				country_event = {id = prc.3 }
+			}
+			434 = { add_core_of = PRC }
+		}
+	}
+	
+	#收回租界
+	focus = {
+		id = EastAsia_PRC_shouhuizujie
+		icon = GFX_focus_RAJ_clamp_down_on_corruption
+		prerequisite = { 
+			focus = EastAsia_PRC_zhiminriben 
+		}
+		relative_position_id = EastAsia_PRC_zhiminriben 
+		available = {
+		  OR = {
+			NOT = {	728 =  { is_controlled_by = PRC }  }
+			NOT = {	729 =  { is_controlled_by = PRC }  }
+			NOT = {	326 =  { is_controlled_by = PRC }  }
+			}
+		}
+		x = 1
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		bypass={
+			AND = {
+				728 = { is_controlled_by = PRC }
+				729 = { is_controlled_by = PRC }
+				326 = { is_controlled_by = PRC }
+			}
+		}
+		completion_reward = {
+			PRC = {
+				country_event = { days = 3 id = eastasia.137 }
+			}
+		}
+	}
+	
+	
+	
+	#中苏领土纷争
+	focus = {
+		id = EastAsia_PRC_zhongsulingtufenzheng
+		icon = GFX_focus_AST_rats_tobruk
+		prerequisite = {
+			focus = EastAsia_PRC_zhongyinbianjiezhengyi 
+			focus = EastAsia_PRC_shouhuizujie 
+		}
+		relative_position_id = EastAsia_PRC_zhongyinbianjiezhengyi
+		available = {
+			SOV = { exists = yes }
+			330 = { is_owned_by = MON }
+			408 = { is_owned_by = SOV }
+			409 = { is_owned_by = SOV }
+			560 = { is_owned_by = SOV }
+			561 = { is_owned_by = SOV }
+			655 = { is_owned_by = SOV }
+			657 = { is_owned_by = SOV }
+			OR = {
+				329 = { is_owned_by = TAN }
+				329 = { is_owned_by = SOV }
+			}
+		}
+		x = 1
+		y = 1    
+		 
+		cost = 1  
+		ai_will_do = {
+			factor = 0 
+		}     
+		completion_reward = {   
+		
+			SOV = { country_event = { id = prc.11} }
+			
+           add_state_core = 329
+		   add_state_core = 408
+		   add_state_core = 655
+		   add_state_core = 409
+		   add_state_core = 560
+		   add_state_core = 561
+		   add_state_core = 657
+		   add_state_core = 537
+		   add_state_core = 330
+			
+		} 
+	}
+	 
+	#加入亚太经合组织
+	focus = {
+		id = EastAsia_PRC_yataijinhe
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = EastAsia_PRC_guowuyuan }
+		relative_position_id = EastAsia_PRC_guowuyuan
+		available = {
+			is_puppet = no
+		}
+		x = 3
+		y = 1
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			AST = { 
+				add_opinion_modifier = { target = PRC modifier = Relationship_improvement } 
+				diplomatic_relation = { country = PRC relation = non_aggression_pact }
+			}
+			JAP = { 
+				add_opinion_modifier = { target = PRC modifier = Relationship_improvement } 
+				diplomatic_relation = { country = PRC relation = non_aggression_pact }
+			}
+			CAN = { 
+				add_opinion_modifier = { target = PRC modifier = Relationship_improvement } 
+				diplomatic_relation = { country = PRC relation = non_aggression_pact }
+			}
+			CHL = { 
+				add_opinion_modifier = { target = PRC modifier = Relationship_improvement } 
+				diplomatic_relation = { country = PRC relation = non_aggression_pact }
+			}
+			#PHI = { add_opinion_modifier = { target = PRC modifier = Relationship_improvement } }
+			PRU = { 
+				add_opinion_modifier = { target = PRC modifier = Relationship_improvement } 
+				diplomatic_relation = { country = PRC relation = non_aggression_pact }
+			}
+			TUR = { 
+				add_opinion_modifier = { target = PRC modifier = Relationship_improvement } 
+				diplomatic_relation = { country = PRC relation = non_aggression_pact }
+			}
+			NEP = { 
+				add_opinion_modifier = { target = PRC modifier = Relationship_improvement } 
+				diplomatic_relation = { country = PRC relation = non_aggression_pact }
+			}
+			ETH = { 
+				add_opinion_modifier = { target = PRC modifier = Relationship_improvement } 
+				diplomatic_relation = { country = PRC relation = non_aggression_pact }
+			}
+			LIB = { 
+				add_opinion_modifier = { target = PRC modifier = Relationship_improvement } 
+				diplomatic_relation = { country = PRC relation = non_aggression_pact }
+			}
+			
+		}
+	}
+	
+	#万隆会议
+	focus = {
+		id = EastAsia_PRC_wanlonghuiyi
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = EastAsia_PRC_yataijinhe }
+		relative_position_id = EastAsia_PRC_yataijinhe
+		available = {
+		}
+		x = 0
+		y = 1
+		cost = 6
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			RAJ = { 
+				add_opinion_modifier = { target = PRC modifier = Relationship_improvement } 
+				give_military_access = PRC
+			}
+			#PHI = { add_opinion_modifier = { target = PRC modifier = Relationship_improvement } }
+			#PER = { add_opinion_modifier = { target = PRC modifier = Relationship_improvement } }
+			IRQ = { 
+				add_opinion_modifier = { target = PRC modifier = Relationship_improvement } 
+				give_military_access = PRC
+			}
+			YEM = { 
+				add_opinion_modifier = { target = PRC modifier = Relationship_improvement } 
+				give_military_access = PRC
+			}
+			SIA = {
+				add_opinion_modifier = { target = PRC modifier = Relationship_improvement } 
+				give_military_access = PRC
+			}
+			TUR = { 
+				add_opinion_modifier = { target = PRC modifier = Relationship_improvement } 
+				give_military_access = PRC
+			}
+			NEP = { 
+				add_opinion_modifier = { target = PRC modifier = Relationship_improvement } 
+				give_military_access = PRC
+			}
+		}
+	}
+	
+	#重返联合国
+	focus = {
+		id = EastAsia_PRC_jiarulianheguo
+		icon = GFX_focus_AST_rats_tobruk
+		prerequisite = { focus = EastAsia_PRC_wanlonghuiyi }
+		relative_position_id = EastAsia_PRC_wanlonghuiyi
+		available = {
+			
+		}
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 500
+		}
+	}
+	
+	#“国九条”
+	focus = {
+		id = EastAsia_PRC_guojiutiao
+		icon = GFX_goal_bayihongxing
+		prerequisite = { focus = EastAsia_PRC_jiarulianheguo }
+		relative_position_id = EastAsia_PRC_jiarulianheguo
+		available = {
+			is_puppet = no
+		}
+		x = 0
+		y = 1
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = eastasia_idea_PRC_guojiutiao
+		}
+	
+	}
+	
+	
+	
+	#和苏联接触
+	focus = {
+		id = EastAsia_PRC_hesulianjiechu
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		prerequisite = {focus = PRC_guojigongchanzhuyizhedeyuanzhu }
+		relative_position_id = PRC_guojigongchanzhuyizhedeyuanzhu
+		x = 0
+		y = 1
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				has_war_with = SOV
+				factor = 0
+			}
+		}
+
+		available = {
+			has_government = communism
+			NOT = { has_war_with = SOV }
+			OR = {
+				is_subject = no
+				is_subject_of = SOV
+			}
+		}
+
+		bypass = {
+		OR = {
+			has_non_aggression_pact_with = SOV
+			is_in_faction_with = SOV
+		}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SOV = { 
+				add_opinion_modifier = { target = PRC modifier = Relationship_improvement } 
+				diplomatic_relation = { country = PRC relation = non_aggression_pact }
+			}
+			
+		}
+	}
+	
+	#慈父的给予
+	focus = {
+		id = EastAsia_PRC_cifudejiyu
+		icon = GFX_goal_prc_cifudejiyu
+		prerequisite = { focus = EastAsia_PRC_hesulianjiechu }
+		x = 0
+		y = 1
+		relative_position_id = EastAsia_PRC_hesulianjiechu
+		
+		cost = 4
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				has_war_with = SOV
+				factor = 0
+			}
+		}
+		
+		available = {
+			is_puppet = no
+			NOT = { has_war_with = SOV }
+			OR = {
+				is_subject = no
+				is_subject_of = SOV
+			}
+			SOV = {
+				exists = yes
+				has_capitulated = no
+				has_opinion = { target = ROOT value > 39 }
+			}
+		}
+
+		completion_reward = {
+			
+			if = {
+				limit = {
+					AND = {
+						SOV = { has_opinion = { target = ROOT value < 39 } }	
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 500
+					producer = SOV
+				}
+			}
+			else_if = {
+				limit = {
+					AND = {
+						SOV = { has_opinion = { target = ROOT value > 39 } }	
+						SOV = { has_opinion = { target = ROOT value < 50 } }
+					}	
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 1000
+					producer = SOV
+				}
+			}
+			else_if = {
+				limit = {
+					AND = {
+						SOV = { has_opinion = { target = ROOT value > 50 } }	
+						SOV = { has_opinion = { target = ROOT value < 70 } }
+					}	
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 2000
+					producer = SOV
+				}
+			}
+			else_if = {
+				limit = {
+					AND = {
+						SOV = { has_opinion = { target = ROOT value > 70 } }	
+						SOV = { has_opinion = { target = ROOT value < 90 } }
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 2000
+					producer = SOV
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 500
+					producer = SOV
+				}
+			}
+			else = {
+				
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 2000
+					producer = SOV
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 500
+					producer = SOV
+				}
+				set_technology = { tech_support = 1 }
+				add_popularity = { ideology = communism popularity = 0.05 }
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 500
+					producer = SOV
+				}
+				add_tech_bonus = {
+					name = arty_bonus
+					bonus = 1
+					uses = 1
+					category = artillery
+				}
+				SOV = { add_political_power = 200 }
+			}
+		}
+	}
+	#苏联工业援助
+	focus = {
+		id = EastAsia_PRC_sovgongyeyuanzhu
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = EastAsia_PRC_cifudejiyu }
+		x = 0
+		y = 1
+		relative_position_id = EastAsia_PRC_cifudejiyu
+		available = {
+			NOT = { has_war_with = SOV }
+			is_puppet = no
+			SOV = {
+				exists = yes
+				has_capitulated = no
+				has_opinion = { target = ROOT value > 79 }
+			}
+		}
+		
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			add_timed_idea = {	idea = eastasia_idea_PRC_suliangongyeyuanzhu		days = 500	}
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_offsite_building = { type = arms_factory level = 2 }
+			SOV = { add_timed_idea = {	idea = eastasia_idea_PRC_yuanzhuzhonghuaminguogongye		days = 500	} }
+			SOV = { add_political_power = 25 }
+		}
+	}
+	#苏联援华专家
+	focus = {
+		id = EastAsia_PRC_sulianyuanhuazhuanjia
+		icon = GFX_focus_eng_crush_the_dream
+		prerequisite = { focus = EastAsia_PRC_sovgongyeyuanzhu }
+		x = 0
+		y = 1
+		relative_position_id = EastAsia_PRC_sovgongyeyuanzhu
+		available = {
+			NOT = { has_war_with = SOV }
+			SOV = {
+				exists = yes
+				has_opinion = { target = ROOT value > 90 }
+			}
+		}
+		
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			SOV = { add_political_power = 100 }
+			add_timed_idea = {	idea = eastasia_idea_PRC_sulianyuanhuazhuanjia		days = 730	}
+		}
+	}
+	#苏系坦克制造商
+	focus = {
+		id = PRC_suxitankezhizaoshang
+		icon = GFX_goal_continuous_armor_production
+		prerequisite = { focus = EastAsia_PRC_sulianyuanhuazhuanjia }
+		x = 0
+		y = 1
+		relative_position_id = EastAsia_PRC_sulianyuanhuazhuanjia
+		available = {
+			NOT = { has_war_with = SOV }
+			SOV = {
+				exists = yes
+				has_opinion = { target = ROOT value > 90 }
+			}
+		}
+		
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			SOV = { add_political_power = 100 }
+			custom_effect_tooltip = PRC_suxitankezhizaoshang_tip
+		}
+	}
+	
+	#新疆回归
+	focus = {
+		id = EastAsia_PRC_aomenhuigui
+		icon = GFX_focus_generic_japanese_imperial_glory
+		prerequisite = { focus = EastAsia_PRC_kaiguodadian }
+		available = {
+			
+		}
+		x = -3
+		y = 2
+		cost = 4
+		relative_position_id = EastAsia_PRC_kaiguodadian
+		ai_will_do = {
+			factor = 1
+		}
+		bypass={
+			617 = { is_controlled_by = PRC }
+		}
+		completion_reward = {
+			SIK = { country_event = eastasia.9 }
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	#国际共产主义者的援助
+	focus = {
+		id = PRC_guojigongchanzhuyizhedeyuanzhu
+		icon = GFX_focus_prc_agrarian_socialism
+		x = 97
+		y = 0
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_war_with = SOV
+				factor = 0
+			}
+		}
+
+		available = {
+			has_government = communism
+			NOT = { has_war_with = SOV }
+			OR = {
+				is_subject = no
+				is_subject_of = SOV
+			}
+		}
+
+		bypass = {
+				
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }
+			custom_effect_tooltip = PRC_guojigongchanzhuyizhedeyuanzhu_tip
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = PRC_baiqiuenxisheng_flag
+					}
+					country_event = eastasia.1011
+				}
+				else_if = {
+					limit = {
+						NOT = { has_country_flag = PRC_baiqiuenxisheng_flag }
+					}
+					country_event = eastasia.1010
+				}
+			}
+		}
+	}
+	
+}

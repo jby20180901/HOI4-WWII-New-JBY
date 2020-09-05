@@ -1,0 +1,63 @@
+sub_units = {
+  penhuo_gongbing = { #火焰喷射器排
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		active = no
+		affects_speed = no
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_army
+		}
+	
+		combat_width = 0.
+		maximum_speed = 1.8
+		#Size Definitions
+		max_strength = 1
+		max_organisation = -5
+		default_morale = 0.1
+		manpower = 250
+		training_time = 180
+	
+		#Misc Abilities
+		weight = 0.1
+		supply_consumption = 0.05
+	
+		
+		soft_attack = -0.5
+		defense = -0.5
+	
+		need = {
+			infantry_equipment = 25
+			support_equipment = 30
+		}
+	
+		can_be_parachuted = no
+	
+		forest = {
+			attack = 0.1
+		}
+		jungle = {
+			attack = 0.1
+		}
+		fort = {
+			attack = 0.15
+		}
+		urban = {
+			attack = 0.15
+		}
+		capital = {
+			attack = 0.15
+		}
+		
+	}
+
+}

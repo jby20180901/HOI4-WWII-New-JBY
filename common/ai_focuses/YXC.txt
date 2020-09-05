@@ -1,0 +1,23 @@
+ai_historical_focus_list_YXC = {
+	ai_national_focuses = {
+		YXC_136
+		YXC_173
+		YXC_137
+		YXC_138
+		YXC_111
+		YXC_112
+		YXC_113
+		YXC_114
+		YXC_110
+		YXC_100
+		YXC_104
+		YXC_115
+		YXC_117
+		YXC_118
+		YXC_168
+		YXC_126
+		YXC_130
+		YXC_119
+		YXC_120
+	}
+}

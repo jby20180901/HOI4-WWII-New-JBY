@@ -1,0 +1,95 @@
+upgrades = {
+	inf_reliability_upgrade = {
+		max_level = 5
+
+		cost = land
+		reliability = 0.10
+	}
+	
+	inf_SA_upgrade = {
+		max_level = 5
+
+		cost = land
+		soft_attack = 0.05
+		reliability = -0.05
+	}
+	
+	inf_HA_upgrade = {
+		max_level = 5
+
+		cost = land
+		hard_attack = 0.10
+		ap_attack = 0.10
+		reliability = -0.05
+	}
+	
+	inf_defence_upgrade = {
+		max_level = 5
+
+		cost = land
+		defense = 0.05
+		breakthrough = 0.05
+	}
+
+	mot_reliability_upgrade = {
+		max_level = 5
+
+		cost = land
+		reliability = 0.10
+	}
+	
+	mot_speed_upgrade = {
+		max_level = 5
+
+		cost = land
+		maximum_speed = 0.05
+		reliability = -0.05
+	}
+	
+	mot_hardness_upgrade = {
+		max_level = 5
+
+		cost = land
+		hardness = 0.05
+		reliability = -0.05
+        
+	}
+
+	mech_reliability_upgrade = {
+		max_level = 5
+
+		cost = land
+		reliability = 0.10
+	}
+	
+	mech_speed_upgrade = {
+		max_level = 5
+
+		cost = land
+		maximum_speed = 0.05
+		reliability = -0.05
+	}
+	
+	mech_armor_upgrade = {
+		max_level = 5
+
+		cost = land
+		hardness = 0.05
+		reliability = -0.05
+	}
+	
+	mech_attack_upgrade = {
+		max_level = 5
+
+		cost = land	
+		ap_attack = 0.5
+		reliability = -0.05
+	}
+
+	support_reliability_upgrade = {
+		max_level = 5
+
+		cost = land
+		reliability = 0.1
+	}
+}

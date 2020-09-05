@@ -1,0 +1,140 @@
+taizu_buff1_start = {
+	PRC = {
+		add_ideas = PRC_taizu_buff1
+	}
+	add_to_variable = { 
+		var = taizu_var_cost
+		value = taizu_var_cost1
+	}
+	add_to_variable = { show_taizu_menu1 = 1}
+}
+taizu_buff1_end = {
+	PRC = {
+		remove_ideas = PRC_taizu_buff1
+	}
+	subtract_from_variable= { 
+		var = taizu_var_cost
+		value = taizu_var_cost1
+	}
+	subtract_from_variable = { show_taizu_menu1 = 1}
+}
+taizu_buff2_start = {
+	PRC = {
+		add_ideas = PRC_taizu_buff2
+	}
+	add_to_variable = { 
+		var = taizu_var_cost
+		value = taizu_var_cost2
+	}
+	add_to_variable = { show_taizu_menu2 = 1}
+}
+taizu_buff2_end = {
+	PRC = {
+		remove_ideas = PRC_taizu_buff2
+	}
+	subtract_from_variable= { 
+		var = taizu_var_cost
+		value = taizu_var_cost2
+	}
+	subtract_from_variable = { show_taizu_menu2 = 1}
+}
+taizu_buff3_start = {
+	PRC = {
+		add_ideas = PRC_taizu_buff3
+	}
+	add_to_variable = { 
+		var = taizu_var_cost
+		value = taizu_var_cost3
+	}
+	add_to_variable = { show_taizu_menu3 = 1}
+}
+taizu_buff3_end = {
+	PRC = {
+		remove_ideas = PRC_taizu_buff3
+	}
+	subtract_from_variable= { 
+		var = taizu_var_cost
+		value = taizu_var_cost3
+	}
+	subtract_from_variable = { show_taizu_menu3 = 1}
+}
+taizu_buff4_start = {
+	PRC = {
+		add_ideas = PRC_taizu_buff4
+	}
+	add_to_variable = { 
+		var = taizu_var_cost
+		value = taizu_var_cost4
+	}
+	add_to_variable = { show_taizu_menu4 = 1}
+}
+taizu_buff4_end = {
+	PRC = {
+		remove_ideas = PRC_taizu_buff4
+	}
+	subtract_from_variable= { 
+		var = taizu_var_cost
+		value = taizu_var_cost4
+	}
+	subtract_from_variable = { show_taizu_menu4 = 1}
+}
+taizu_buff5_start = {
+	PRC = {
+		add_ideas = PRC_taizu_buff5
+	}
+	add_to_variable = { 
+		var = taizu_var_cost
+		value = taizu_var_cost5
+	}
+	add_to_variable = { show_taizu_menu5 = 1}
+}
+taizu_buff5_end = {
+	PRC = {
+		remove_ideas = PRC_taizu_buff5
+	}
+	subtract_from_variable= { 
+		var = taizu_var_cost
+		value = taizu_var_cost5
+	}
+	subtract_from_variable = { show_taizu_menu5 = 1}
+}
+taizu_buff6_start = {
+	PRC = {
+		add_ideas = PRC_taizu_buff6
+	}
+	add_to_variable = { 
+		var = taizu_var_cost
+		value = taizu_var_cost6
+	}
+	add_to_variable = { show_taizu_menu6 = 1}
+}
+taizu_buff6_end = {
+	PRC = {
+		remove_ideas = PRC_taizu_buff6
+	}
+	subtract_from_variable= { 
+		var = taizu_var_cost
+		value = taizu_var_cost6
+	}
+	subtract_from_variable = { show_taizu_menu6 = 1}
+}
+taizu_buff7_start = {
+	PRC = {
+		add_ideas = PRC_taizu_buff7
+	}
+	add_to_variable = { 
+		var = taizu_var_cost
+		value = taizu_var_cost7
+	}
+	add_to_variable = { show_taizu_menu7 = 1}
+}
+taizu_buff7_end = {
+	PRC = {
+		remove_ideas = PRC_taizu_buff7
+	}
+	subtract_from_variable= { 
+		var = taizu_var_cost
+		value = taizu_var_cost7
+	}
+	subtract_from_variable = { show_taizu_menu7 = 1}
+}

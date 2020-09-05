@@ -1,0 +1,8 @@
+opinion_modifiers = {
+
+	German_Trade = { 
+		trade = yes
+		value = 50
+	}
+
+}

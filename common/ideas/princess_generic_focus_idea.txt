@@ -1,0 +1,61 @@
+ideas = {
+	
+	country = {
+		
+		### 女兵入伍 ###
+		princess_nvbing_ruwu_idea = {
+		
+			picture = generic_girl_1
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.15
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			
+		}
+		
+		### 建设海军 ###
+		princess_jianshe_haijun_idea = {
+		
+			picture = newport_news_shipbuilding
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_dockyard = 0.2
+			}
+			
+		}
+		
+		### 情报战争 ###
+		princess_qingbao_zhanzheng_idea = {
+		
+			picture = generic_suo_1
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				encryption = 1
+				decryption = 1
+			}
+			
+		}
+		
+	}
+	
+}

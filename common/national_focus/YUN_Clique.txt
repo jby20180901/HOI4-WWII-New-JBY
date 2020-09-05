@@ -1,0 +1,2146 @@
+focus_tree = {
+	id = YUN_Clique
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = YUN
+		}
+	}
+	default = no
+	focus = {
+		id = YUN_Develop_yunnan
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		x = 9
+		y = 0
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = industrial_complex
+									level = 3
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Autarky
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		x = 2
+		y = 0
+			completion_reward = {
+					add_ideas = YUN_Autarky
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = arms_factory
+									level = 3
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = Yunnan_Army
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		x = 18
+		y = 0
+			ai_will_do = {
+					factor = 5
+				}
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Not_follow_up_polcy
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10.00
+		mutually_exclusive = {
+			focus = YUN_Shelter_the_red_army
+		}
+		x = 24
+		y = 0
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_political_power = 120
+				}
+			available = {
+					is_subject = no
+				}
+
+	}
+	focus = {
+		id = YUN_The_crisis_is_approaching
+		icon = GFX_goal_generic_fortify_city
+		cost = 10.00
+		x = 12
+		y = 0
+			ai_will_do = {
+					factor = 5
+				}
+			completion_reward = {
+					add_ideas = YUN_A_sense_of_crisis
+					unity_factor = 0.05
+				}
+			available = {
+					OR = {
+							threat > 0.1
+							has_war = yes
+						}
+				}
+			cancel_if_invalid = yes
+
+	}
+	focus = {
+		id = YUN_Enemy_in_the_distance
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		x = 14
+		y = 0
+			ai_will_do = {
+					factor = 5
+				}
+			completion_reward = {
+					add_ideas = YUN_Save_the_country
+					unity_factor = 0.05
+				}
+			available = {
+					OR = {
+							threat > 0.5
+							has_defensive_war = yes
+						}
+				}
+			cancel_if_invalid = yes
+
+	}
+	focus = {
+		id = YUN_Shelter_the_red_army
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10.00
+		mutually_exclusive = {
+			focus = YUN_Not_follow_up_polcy
+		}
+		x = 31
+		y = 0
+			ai_will_do = {
+					factor = 5
+					modifier = {
+							factor = 0
+							is_historical_focus_on = yes
+						}
+				}
+			completion_reward = {
+					add_political_power = 75
+					add_ideas = communist_influence
+					add_popularity = {
+							ideology = communism
+							popularity = 0.05
+						}
+					PRC = {
+							country_event = {
+									id = EFM_Yunnan.1
+									days = 1
+								}
+						}
+				}
+			available = {
+					is_subject = no
+					date < 1936.5.1
+				}
+
+	}
+	focus = {
+		id = YUN_hire_air_instructor
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		x = 36
+		y = 0
+			completion_reward = {
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Our_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		x = 40
+		y = 0
+			completion_reward = {
+					navy_experience = 25
+					add_tech_bonus = {
+							name = naval_bonus
+							bonus = 0.5
+							uses = 1
+							category = naval_doctrine
+						}
+				}
+			available = {
+					any_state = {
+							is_controlled_by = ROOT
+							is_coastal = yes
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Worn_vehicles
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Autarky
+		}
+		x = 1
+		y = 1
+			completion_reward = {
+					add_tech_bonus = {
+							name = motorized_bonus
+							bonus = 0.5
+							technology = motorised_infantry
+						}
+				}
+			bypass = {
+					bypass = {
+							has_tech = motorised_infantry
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Mechanize_vehicles
+		icon = GFX_goal_generic_cavalry
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Worn_vehicles
+		}
+		x = 0
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = YUN_Mechanize_vehicles
+							bonus = 0.5
+							category = cat_mechanized_equipment
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Old_tank
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Worn_vehicles
+		}
+		x = 1
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = support_tech_bonus
+							bonus = 0.5
+							uses = 1
+							category = armor
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Expand_arsenal
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Autarky
+		}
+		x = 2
+		y = 2
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = arms_factory
+									level = 3
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Full_production
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Expand_arsenal
+		}
+		mutually_exclusive = {
+			focus = YUN_Invest_equipment_development
+		}
+		x = 2
+		y = 4
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = arms_factory
+									level = 3
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Outdated_weapons
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Autarky
+		}
+		x = 3
+		y = 1
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Field_gun
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Outdated_weapons
+		}
+		x = 3
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = artillery_bonus
+							bonus = 0.5
+							uses = 1
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Medical_equipment
+		icon = GFX_goal_generic_build_airforce
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Outdated_weapons
+		}
+		x = 4
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = support_tech_bonus
+							bonus = 0.5
+							uses = 1
+							category = support_tech
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Invest_equipment_development
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Medical_equipment
+		}
+		mutually_exclusive = {
+			focus = YUN_Full_production
+		}
+		x = 4
+		y = 4
+			completion_reward = {
+					add_tech_bonus = {
+							name = YUN_Invest_equipment_development
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+						}
+					add_tech_bonus = {
+							name = YUN_Invest_equipment_development
+							bonus = 0.5
+							uses = 1
+							category = support_tech
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Investment_Science
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Develop_yunnan
+		}
+		x = 8
+		y = 1
+			completion_reward = {
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = YUN_New_technology
+		icon = GFX_goal_generic_production2
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Investment_Science
+		}
+		x = 6
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = computing_tech_bonus
+							bonus = 0.5
+							uses = 1
+							category = computing_tech
+							category = encryption_tech
+							category = decryption_tech
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Radar_station
+		icon = GFX_goal_generic_radar
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_New_technology
+		}
+		x = 6
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = radar_tech_bonus
+							bonus = 0.5
+							uses = 1
+							category = radar_tech
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Engineering_technology
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Investment_Science
+		}
+		x = 8
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = YUN_Engineering_technology
+							bonus = 0.5
+							uses = 1
+							category = engineers_tech
+						}
+					add_tech_bonus = {
+							name = YUN_Engineering_technology
+							bonus = 0.5
+							uses = 1
+							category = construction_tech
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Road_expansion
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Develop_yunnan
+		}
+		x = 10
+		y = 1
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Developing_business
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Road_expansion
+		}
+		x = 10
+		y = 2
+			completion_reward = {
+					add_ideas = YUN_Economic
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Expand_kunming
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Engineering_technology
+		}
+		prerequisite = {
+			focus = YUN_Developing_business
+		}
+		x = 9
+		y = 3
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_The_expedition_begins
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_The_crisis_is_approaching
+			focus = YUN_Enemy_in_the_distance
+		}
+		x = 13
+		y = 1
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_ideas = YUN_The_expedition_begins
+					add_war_support = 0.1
+				}
+			available = {
+					OR = {
+							threat > 0.5
+							has_war = yes
+							CHI = {
+									has_war_with = JAP
+								}
+						}
+				}
+			cancel_if_invalid = yes
+
+	}
+	focus = {
+		id = YUN_Burma_Road
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Road_expansion
+		}
+		prerequisite = {
+			focus = YUN_The_expedition_begins
+		}
+		x = 12
+		y = 2
+			completion_reward = {
+					add_ideas = YUN_Burma_Road
+					325 = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 3
+									instant_build = yes
+								}
+						}
+				}
+			available = {
+					is_subject = no
+					ENG = {
+							has_completed_focus = uk_burma_focus
+						}
+				}
+
+	}
+	focus = {
+		id = National_Southwestern_Associated_University
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_The_expedition_begins
+		}
+		x = 14
+		y = 2
+			completion_reward = {
+					add_timed_idea = {
+							idea = National_Southwestern_Associated_University
+							days = 365
+						}
+					add_research_slot = 1
+				}
+			available = {
+					OR = {
+							CHI = {
+									has_war = yes
+								}
+							CHI = {
+									is_subject = yes
+								}
+							num_of_factories > 10
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Home_front
+		icon = GFX_focus_generic_coastal_fort
+		cost = 10.00
+		prerequisite = {
+			focus = National_Southwestern_Associated_University
+		}
+		x = 14
+		y = 3
+			completion_reward = {
+					add_ideas = YUN_Home_front
+				}
+			available = {
+					OR = {
+							JAP = {
+									has_war_with = CHI
+									has_war_with = ROOT
+								}
+							CHI = {
+									is_subject = yes
+								}
+							CHI = {
+									exists = no
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Fighting_Will
+		icon = GFX_goal_demand_sudetenland
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Enemy_in_the_distance
+		}
+		x = 15
+		y = 1
+			completion_reward = {
+					add_ideas = YUN_Fighting_Will
+					add_war_support = 0.05
+				}
+
+	}
+	focus = {
+		id = YUN_Improved_tactics
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = Yunnan_Army
+		}
+		x = 17
+		y = 1
+			completion_reward = {
+					add_tech_bonus = {
+							name = YUN_Improved_tactics
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Foreign_adviser
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Improved_tactics
+		}
+		x = 17
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = YUN_Foreign_adviser
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Unity_against_enemy
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Fighting_Will
+			focus = YUN_Foreign_adviser
+		}
+		x = 16
+		y = 3
+			completion_reward = {
+					add_ideas = YUN_Yunnan_local_army
+					unity_factor = 0.05
+				}
+
+	}
+	focus = {
+		id = YUN_Mountain_troops
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = Yunnan_Army
+		}
+		x = 19
+		y = 1
+			completion_reward = {
+					add_tech_bonus = {
+							name = motorized_bonus
+							bonus = 0.5
+							technology = tech_mountaineers
+						}
+					add_tech_bonus = {
+							name = motorized_bonus
+							bonus = 0.5
+							technology = tech_mountaineers2
+						}
+					add_tech_bonus = {
+							name = motorized_bonus
+							bonus = 0.5
+							technology = tech_mountaineers3
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Mountain_training
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Mountain_troops
+		}
+		x = 19
+		y = 2
+			completion_reward = {
+					army_experience = 20
+				}
+
+	}
+	focus = {
+		id = YUN_Support_nanking
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Not_follow_up_polcy
+		}
+		mutually_exclusive = {
+			focus = YUN_The_glory_of_the_past
+		}
+		x = 22
+		y = 1
+			ai_will_do = {
+					factor = 5
+				}
+			completion_reward = {
+					CHI = {
+							country_event = {
+									id = EFM_Yunnan.11
+									days = 1
+								}
+						}
+					set_rule = {
+							can_send_volunteers = yes
+						}
+					add_ideas = volunteer_corps_focus
+				}
+			available = {
+					NOT = {
+							has_war_with = CHI
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Protection_the_democracy
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Support_nanking
+		}
+		x = 21
+		y = 2
+			completion_reward = {
+					add_timed_idea = {
+							idea = democratic_influence
+							days = 90
+						}
+					add_popularity = {
+							ideology = democratic
+							popularity = 0.1
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Republican_government
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Support_nanking
+		}
+		x = 23
+		y = 2
+			completion_reward = {
+					add_ideas = YUN_Republican_government
+				}
+			available = {
+					OR = {
+							is_subject = no
+							is_subject_of = CHI
+						}
+					NOT = {
+							has_war_with = CHI
+						}
+				}
+			bypass = {
+					OR = {
+							has_war_with = CHI
+							CHI = {
+									is_subject = yes
+								}
+							CHI = {
+									exists = no
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Gained_the_advantage
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Republican_government
+		}
+		prerequisite = {
+			focus = YUN_Protection_the_democracy
+		}
+		x = 22
+		y = 3
+			completion_reward = {
+					add_ideas = YUN_The_government_right_of_speech
+					
+				}
+			available = {
+					OR = {
+							is_subject = no
+							is_subject_of = CHI
+						}
+					NOT = {
+							has_war_with = CHI
+						}
+				}
+			bypass = {
+					OR = {
+							has_war_with = CHI
+							CHI = {
+									is_subject = yes
+								}
+							CHI = {
+									exists = no
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Rise_of_democrats
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Gained_the_advantage
+		}
+		mutually_exclusive = {
+			focus = YUN_Maintain_the_state
+		}
+		x = 21
+		y = 4
+			ai_will_do = {
+					factor = 5
+					modifier = {
+							factor = 0
+							is_historical_focus_on = yes
+							democratic < 0.3
+						}
+				}
+			completion_reward = {
+					set_politics = {
+							ruling_party = democratic
+							elections_allowed = yes
+						}
+				}
+			available = {
+					democratic > 0.3
+					OR = {
+							is_subject = no
+							is_subject_of = CHI
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Maintain_the_state
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Gained_the_advantage
+		}
+		mutually_exclusive = {
+			focus = YUN_Rise_of_democrats
+		}
+		x = 23
+		y = 4
+			ai_will_do = {
+					factor = 5
+				}
+			completion_reward = {
+					set_politics = {
+							ruling_party = neutrality
+							elections_allowed = no
+						}
+				}
+			available = {
+					democratic < 0.3
+					OR = {
+							is_subject = no
+							is_subject_of = CHI
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Open_election
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Maintain_the_state
+		}
+		x = 23
+		y = 5
+			completion_reward = {
+					set_politics = {
+							ruling_party = neutrality
+							elections_allowed = yes
+						}
+					add_ideas = YUN_Yunnan_parliament
+				}
+			available = {
+					has_government = neutrality
+					has_war = no
+					OR = {
+							is_subject = no
+							is_subject_of = CHI
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_The_glory_of_the_past
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Not_follow_up_polcy
+		}
+		mutually_exclusive = {
+			focus = YUN_Support_nanking
+		}
+		x = 26
+		y = 1
+			ai_will_do = {
+					factor = 5
+					modifier = {
+							factor = 0
+							is_historical_focus_on = yes
+						}
+				}
+			completion_reward = {
+					set_rule = {
+							can_send_volunteers = yes
+						}
+					add_ideas = YUN_Revive_dian_force
+					if = {
+							limit = {
+									has_dlc = "Waking the Tiger"
+								}
+							custom_effect_tooltip = CHI_institute_cross_border_raids_effect_tooltip
+							set_country_flag = CHI_institute_cross_border_raids
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Reconstruct_the_force
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_The_glory_of_the_past
+		}
+		x = 25
+		y = 2
+			completion_reward = {
+					add_ideas = YUN_Rebuild_the_army
+				}
+
+	}
+	focus = {
+		id = YUN_Out_of_control
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Republican_government
+			focus = YUN_Reconstruct_the_force
+		}
+		x = 24
+		y = 3
+			completion_reward = {
+					set_autonomy = {
+							target = ROOT
+							autonomy_state = autonomy_free
+						}
+				}
+			available = {
+					is_subject = yes
+					has_army_manpower = {
+							size > 69999
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Increase_taxes
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_The_glory_of_the_past
+		}
+		x = 27
+		y = 2
+			completion_reward = {
+					add_ideas = YUN_War_tax
+				}
+
+	}
+	focus = {
+		id = YUN_War_threat_theory
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Reconstruct_the_force
+		}
+		prerequisite = {
+			focus = YUN_Increase_taxes
+		}
+		x = 26
+		y = 3
+			ai_will_do = {
+					factor = 5
+				}
+			completion_reward = {
+					add_ideas = YUN_Propaganda_threat
+				}
+
+	}
+	focus = {
+		id = YUN_Seek_japanese_help
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Increase_taxes
+		}
+		x = 28
+		y = 3
+			completion_reward = {
+					add_ideas = YUN_Japanese_consultant
+					if = {
+							limit = {
+									has_dlc = "Waking the Tiger"
+								}
+							unlock_decision_category_tooltip = CHI_seek_japanese_support
+						}
+				}
+			available = {
+					NOT = {
+							has_war_with = JAP
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Help_develop
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Shelter_the_red_army
+		}
+		x = 30
+		y = 1
+			completion_reward = {
+					add_popularity = {
+							ideology = communism
+							popularity = 0.1
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_SouthWest_Peoples_government
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Help_develop
+		}
+		mutually_exclusive = {
+			focus = YUN_Admit_yanan
+		}
+		x = 30
+		y = 2
+			completion_reward = {
+					PRC = {
+							country_event = {
+									id = EFM_Yunnan.3
+									days = 1
+								}
+						}
+					add_popularity = {
+							ideology = communism
+							popularity = 0.1
+						}
+					add_opinion_modifier = {
+							target = PRC
+							modifier = Nations_estrangement
+						}
+				}
+			available = {
+					is_subject = no
+					has_government = communism
+				}
+
+	}
+	focus = {
+		id = YUN_Befriend_CPC
+		icon = GFX_focus_chi_cooperation_with_the_communists
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Shelter_the_red_army
+		}
+		x = 32
+		y = 1
+			completion_reward = {
+					PRC = {
+							country_event = {
+									id = EFM_Yunnan.2
+									days = 1
+								}
+						}
+					add_opinion_modifier = {
+							target = PRC
+							modifier = Nations_friendly
+						}
+				}
+			bypass = {
+					OR = {
+							has_war_with = PRC
+							PRC = {
+									exists = no
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Admit_yanan
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Befriend_CPC
+		}
+		mutually_exclusive = {
+			focus = YUN_SouthWest_Peoples_government
+		}
+		x = 32
+		y = 2
+			completion_reward = {
+					PRC = {
+							country_event = {
+									id = EFM_Yunnan.6
+									days = 1
+								}
+						}
+				}
+			available = {
+					has_government = communism
+					OR = {
+							is_subject = no
+							is_subject_of = PRC
+						}
+					PRC = {
+							exists = yes
+							is_subject = no
+							has_government = communism
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Red_army_policy
+		icon = GFX_goal_generic_trade
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_SouthWest_Peoples_government
+			focus = YUN_Admit_yanan
+		}
+		x = 31
+		y = 3
+			completion_reward = {
+					set_rule = {
+							can_send_volunteers = yes
+						}
+					add_ideas = YUN_Red_army_tactics
+				}
+			available = {
+					has_government = communism
+					OR = {
+							is_subject_of = PRC
+							is_subject = no
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Strike_sichuan
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Gained_the_advantage
+			focus = YUN_War_threat_theory
+			focus = YUN_Red_army_policy
+		}
+		x = 25
+		y = 4
+			ai_will_do = {
+					modifier = {
+							factor = 0
+							date < 1938.1.1
+						}
+					modifier = {
+							factor = 0
+							has_war = yes
+						}
+				}
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = XXC
+						}
+				}
+			available = {
+					is_subject = no
+					has_army_manpower = {
+							size > 199999
+						}
+					NOT = {
+							is_in_faction_with = XXC
+						}
+				}
+			bypass = {
+					XXC = {
+							OR = {
+									is_subject_of = ROOT
+									exists = no
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Strike_guangxi
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Gained_the_advantage
+			focus = YUN_War_threat_theory
+			focus = YUN_Red_army_policy
+		}
+		x = 29
+		y = 4
+			ai_will_do = {
+					modifier = {
+							factor = 0
+							date < 1938.1.1
+						}
+					modifier = {
+	 						factor = 0
+							has_war = yes
+						}
+				}
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = GXC
+						}
+				}
+			available = {
+					is_subject = no
+					has_army_manpower = {
+							size > 299999
+						}
+					NOT = {
+							is_in_faction_with = GXC
+						}
+				}
+			bypass = {
+					GXC = {
+							OR = {
+									is_subject_of = ROOT
+									exists = no
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Attack_Nanking
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Strike_sichuan
+			focus = YUN_Strike_guangxi
+		}
+		x = 27
+		y = 5
+			ai_will_do = {
+					modifier = {
+							factor = 0
+							has_war = yes
+						}
+				}
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = CHI
+						}
+					if = {
+							limit = {
+									has_dlc = "Waking the Tiger"
+								}
+							custom_effect_tooltip = CHI_provoke_border_clashes_effect_tooltip
+							set_country_flag = CHI_provoke_border_clashes
+						}
+				}
+			available = {
+					is_subject = no
+					has_army_manpower = {
+							size > 99999
+						}
+					NOT = {
+							is_in_faction_with = CHI
+						}
+				}
+			bypass = {
+					CHI = {
+							exists = no
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Revolutionary_war
+		icon = GFX_focus_YUG_pan_slavic_congress
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Red_army_policy
+		}
+		x = 31
+		y = 4
+			completion_reward = {
+					add_ideas = YUN_Local_supply
+				}
+			available = {
+					OR = {
+							is_subject = no
+							is_subject_of = PRC
+						}
+					has_war = yes
+				}
+
+	}
+	focus = {
+		id = YUN_Yunnan_autonomous_region
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Revolutionary_war
+		}
+		mutually_exclusive = {
+			focus = YUN_South_central
+		}
+		x = 32
+		y = 5
+			completion_reward = {
+					set_country_flag = establish_ethnic_autonomous_region
+					PRC = {
+							country_event = {
+									id = EFM_Yunnan.10
+									days = 1
+								}
+						}
+				}
+			available = {
+					has_government = communism
+					is_subject_of = PRC
+				}
+
+	}
+	focus = {
+		id = YUN_South_central
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Revolutionary_war
+		}
+		mutually_exclusive = {
+			focus = YUN_Yunnan_autonomous_region
+		}
+		x = 30
+		y = 5
+			completion_reward = {
+					PRC = {
+							country_event = {
+									id = EFM_Yunnan.7
+									days = 1
+								}
+						}
+				}
+			available = {
+					is_subject = no
+					has_government = communism
+				}
+
+	}
+	focus = {
+		id = YUN_Retired_aircraft
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_hire_air_instructor
+		}
+		x = 35
+		y = 1
+			completion_reward = {
+					add_tech_bonus = {
+							name = light_air_bonus
+							bonus = 0.5
+							uses = 1
+							category = light_air
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_focus_CAS
+		icon = GFX_goal_poland_goal
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Retired_aircraft
+		}
+		x = 34
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = cas_bomber
+							bonus = 0.5
+							uses = 1
+							category = cas_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_advanced_fighter
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Retired_aircraft
+		}
+		mutually_exclusive = {
+			focus = YUN_focus_strategic_bombing
+		}
+		x = 35
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = light_fighter
+							bonus = 0.5
+							uses = 1
+							category = light_fighter
+						}
+					add_tech_bonus = {
+							name = cat_heavy_fighter
+							bonus = 0.5
+							uses = 1
+							category = cat_heavy_fighter
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_medium_bomber
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Retired_aircraft
+		}
+		x = 36
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = tactical_bomber
+							bonus = 0.5
+							uses = 1
+							category = tactical_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Building_air_bases
+		icon = GFX_goal_generic_air_production
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_hire_air_instructor
+		}
+		x = 37
+		y = 1
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = air_base
+											size > 1
+										}
+								}
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+							ROOT = {
+									set_country_flag = aviation_effort_AB
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_focus_strategic_bombing
+		icon = GFX_goal_generic_occupy_start_war
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_medium_bomber
+		}
+		mutually_exclusive = {
+			focus = YUN_advanced_fighter
+		}
+		x = 37
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = cat_strategic_bomber
+							bonus = 0.5
+							uses = 1
+							category = cat_strategic_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Naval_base
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Our_navy
+		}
+		x = 40
+		y = 1
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									is_coastal = yes
+									free_building_slots = {
+											building = dockyard
+											size > 1
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = dockyard
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Coast_guard
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Naval_base
+		}
+		x = 39
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = YUN_Coast_guard
+							bonus = 0.5
+							uses = 1
+							category = dd_tech
+						}
+					add_tech_bonus = {
+							name = YUN_Coast_guard
+							bonus = 0.5
+							uses = 1
+							category = marine_tech
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Promote_the_ocean
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Coast_guard
+		}
+		x = 39
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = YUN_Promote_the_ocean
+							bonus = 0.5
+							uses = 1
+							category = ca_tech
+						}
+					add_tech_bonus = {
+							name = YUN_Promote_the_ocean
+							bonus = 0.5
+							uses = 1
+							category = cl_tech
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Large_vessel_research
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Promote_the_ocean
+		}
+		mutually_exclusive = {
+			focus = YUN_Sea_airport
+		}
+		x = 38
+		y = 4
+			completion_reward = {
+					add_tech_bonus = {
+							name = YUN_Large_vessel_research
+							bonus = 0.5
+							uses = 1
+							category = bb_tech
+						}
+					add_tech_bonus = {
+							name = YUN_Large_vessel_research
+							bonus = 0.5
+							uses = 1
+							category = bc_tech
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Sea_airport
+		icon = GFX_goal_generic_navy_carrier
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Promote_the_ocean
+		}
+		mutually_exclusive = {
+			focus = YUN_Large_vessel_research
+		}
+		x = 40
+		y = 4
+			completion_reward = {
+					add_tech_bonus = {
+							name = YUN_Sea_airport
+							bonus = 0.5
+							uses = 1
+							category = ca_tech
+						}
+					add_tech_bonus = {
+							name = YUN_Large_vessel_research
+							bonus = 0.5
+							uses = 1
+							category = cv_tech
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Democratic_reform
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Rise_of_democrats
+		}
+		x = 21
+		y = 5
+			completion_reward = {
+					add_ideas = YUN_Yunnan_democracy
+					CHI = {
+							add_timed_idea = {
+									idea = democratic_influence
+									days = 180
+								}
+						}
+					PRC = {
+							add_timed_idea = {
+									idea = democratic_influence
+									days = 180
+								}
+						}
+				}
+			available = {
+					has_government = democratic
+					has_war = no
+					OR = {
+							is_subject = no
+							is_subject_of = CHI
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Transport_reinforcement
+		icon = GFX_goal_generic_cavalry
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Unity_against_enemy
+		}
+		x = 16
+		y = 4
+			completion_reward = {
+					add_ideas = YUN_Front_reinforcements
+				}
+
+	}
+	focus = {
+		id = YUN_Support_higher_education
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Expand_kunming
+		}
+		x = 9
+		y = 4
+			completion_reward = {
+					add_research_slot = 1
+					remove_ideas = Chinese_Warlord
+				}
+			available = {
+					num_of_factories > 30
+					amount_research_slots < 5
+				}
+
+	}
+	focus = {
+		id = YUN_Join_the_cmintern
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_South_central
+		}
+		x = 30
+		y = 6
+			completion_reward = {
+					SOV = {
+							country_event = EFM_independent.1
+						}
+				}
+			available = {
+					is_subject = no
+					is_in_faction = no
+					PRC = {
+							OR = {
+									is_subject_of = ROOT
+									exists = no
+								}
+						}
+					NOT = {
+							has_war_with = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_elimination_warlords
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Attack_Nanking
+		}
+		x = 27
+		y = 6
+			completion_reward = {
+					custom_effect_tooltip = YUN_elimination_warlords_tt
+					hidden_effect = {
+							every_other_country = {
+									limit = {
+											is_literally_china = yes
+											NOT = {
+													tag = ROOT
+												}
+											NOT = {
+													has_war_with = ROOT
+												}
+											NOT = {
+													is_subject_of = ROOT
+												}
+											NOT = {
+													ROOT = {
+															has_wargoal_against = PREV
+														}
+												}
+										}
+									ROOT = {
+											create_wargoal = {
+													type = annex_everything
+													target = PREV
+												}
+										}
+								}
+						}
+				}
+			available = {
+					is_subject = no
+					owns_state = 613
+				}
+			bypass = {
+					SHX = {
+							OR = {
+									is_subject_of = ROOT
+									exists = no
+								}
+						}
+					XSM = {
+							OR = {
+									is_subject_of = ROOT
+									exists = no
+								}
+						}
+					GXC = {
+							OR = {
+									is_subject_of = ROOT
+									exists = no
+								}
+						}
+					SLJ = {
+							OR = {
+									is_subject_of = ROOT
+									exists = no
+								}
+						}
+					XXC = {
+							OR = {
+									is_subject_of = ROOT
+									exists = no
+								}
+						}
+					YXC = {
+							OR = {
+									is_subject_of = ROOT
+									exists = no
+								}
+						}
+					XBJ = {
+							OR = {
+									is_subject_of = ROOT
+									exists = no
+								}
+						}
+					PRC = {
+							OR = {
+									is_subject_of = ROOT
+									exists = no
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Liberate_manchuria
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 10.00
+		prerequisite = {
+			focus = King_of_Yunnan
+		}
+		mutually_exclusive = {
+			focus = YUN_Befriend_Japan
+		}
+		x = 28
+		y = 8
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = MAN
+						}
+					add_war_support = 0.05
+				}
+			available = {
+					is_subject = no
+				}
+			bypass = {
+					OR = {
+							has_war_with = JAP
+							has_war_with = MAN
+							MAN = {
+									exists = no
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = King_of_Yunnan
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_elimination_warlords
+		}
+		x = 27
+		y = 7
+			completion_reward = {
+					if = {
+							limit = {
+									NOT = {
+											has_government = communism
+										}
+								}
+							set_cosmetic_tag = New_ROC
+							custom_effect_tooltip = Clique_new_china_tt
+						}
+					if = {
+							limit = {
+									has_government = communism
+								}
+							set_cosmetic_tag = PLA
+							custom_effect_tooltip = Clique_new_china_tt
+						}
+					set_rule = {
+							can_create_factions = yes
+						}
+					hidden_effect = {
+							every_state = {
+									limit = {
+											is_core_of = PRC
+										}
+									add_core_of = YUN
+								}
+						}
+				}
+			available = {
+					is_subject = no
+					SHX = {
+							OR = {
+									is_subject_of = ROOT
+									exists = no
+								}
+						}
+					XSM = {
+							OR = {
+									is_subject_of = ROOT
+									exists = no
+								}
+						}
+					GXC = {
+							OR = {
+									is_subject_of = ROOT
+									exists = no
+								}
+						}
+					SLJ = {
+							OR = {
+									is_subject_of = ROOT
+									exists = no
+								}
+						}
+					XXC = {
+							OR = {
+									is_subject_of = ROOT
+									exists = no
+								}
+						}
+					YXC = {
+							OR = {
+									is_subject_of = ROOT
+									exists = no
+								}
+						}
+					XBJ = {
+							OR = {
+									is_subject_of = ROOT
+									exists = no
+								}
+						}
+					PRC = {
+							OR = {
+									is_subject_of = ROOT
+									exists = no
+									is_in_faction_with = ROOT
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_Befriend_Japan
+		icon = GFX_focus_generic_japanese_imperial_glory
+		cost = 10.00
+		prerequisite = {
+			focus = King_of_Yunnan
+		}
+		mutually_exclusive = {
+			focus = YUN_Liberate_manchuria
+		}
+		x = 26
+		y = 8
+			completion_reward = {
+					add_opinion_modifier = {
+							target = JAP
+							modifier = Nations_friendly
+						}
+					JAP = {
+							add_opinion_modifier = {
+									target = YUN
+									modifier = Nations_friendly
+								}
+						}
+				}
+			available = {
+					NOT = {
+							has_war_with = JAP
+							is_subject_of = JAP
+						}
+				}
+
+	}
+	focus = {
+		id = YUN_War_with_Japan
+		icon = GFX_focus_AST_war_japan
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Liberate_manchuria
+		}
+		x = 28
+		y = 9
+			completion_reward = {
+					create_wargoal = {
+							type = puppet_wargoal_focus
+							target = JAP
+						}
+				}
+			available = {
+					is_subject = no
+				}
+			bypass = {
+					has_war_with = JAP
+				}
+
+	}
+	focus = {
+		id = YUN_Order_transport_ship
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = YUN_Naval_base
+		}
+		x = 41
+		y = 2
+			completion_reward = {
+
+}
+
+	}
+}

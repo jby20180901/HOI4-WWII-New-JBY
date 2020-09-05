@@ -1,0 +1,465 @@
+ideas = {
+	country = {
+		
+		INU_Indochinese_communist_party = {
+
+			picture = FRA_scw_intervention_republicans_focus
+		
+			available = {
+				communism > 0.15
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_growth = -0.1
+				war_support_factor = 0.2
+				stability_factor = 0.2
+			}
+
+		}
+		INU_Vietnamese_nationalist_party = {
+
+			picture = FRA_matignon_agreements
+		
+			available = {
+				neutrality > 0.15
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				local_factory_sabotage = 0.05
+				war_support_factor = -0.05
+				stability_factor = -0.05
+			}
+
+		}
+		
+		
+		INU_Western_situation = {
+
+			picture = ast_abandon_the_westminster_system
+		
+			available = {
+				is_subject_of = FRA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				mic_to_overlord_factor = -0.25
+			}
+
+		}
+		
+		INU_Proclaim_mobilization = {
+
+			picture = FRA_national_mobilization_focus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.1
+				non_core_manpower = 0.05
+				stability_factor = -0.1
+			}
+
+		}
+		
+		INU_Commissariat_system = {
+
+			picture = generic_agrarian_reform
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+
+		}
+		INU_The_future = {
+
+			picture = generic_democratic_drift_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				autonomy_gain = 0.4
+			}
+
+		}
+		
+		INU_Support_the_VNP = {
+
+			picture = generic_volunteer_expedition_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				neutrality_drift = 0.04
+			}
+
+		}
+		
+		INU_The_people_army = {
+
+			picture = generic_manpower_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.03
+			}
+
+		}
+		INU_North_base = {
+
+			picture = generic_production_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+			}
+
+		}
+		INU_The_vietnam_guerrillas = {
+
+			picture = generic_morale_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.2
+			}
+
+		}
+
+	}
+
+
+	political_advisor = {
+
+		INU_taktra_rinpoche = {
+
+			picture = generic_political_advisor_asia_3
+			
+			allowed = {
+				original_tag = INU
+			}
+			
+			traits = { backroom_backstabber }
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		INU_jigme_taring = {
+
+			picture = generic_political_advisor_asia_1
+				
+			allowed = {
+				original_tag = INU
+			}
+			
+			traits = { war_industrialist }
+		}
+
+		INU_reting_rimpoche = {
+
+			picture = generic_political_advisor_asia_2
+			
+			allowed = {
+				original_tag = INU
+			}
+			
+			traits = { compassionate_gentleman }
+		}
+	}
+
+	theorist = {
+		INU_gyato_wangdu = {
+
+			picture = generic_army_asia_2
+			
+			allowed = {
+				original_tag = INU
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		INU_sampo_tsewang_rigzin = { 
+
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = INU
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+
+		INU_chama_samphe = {
+					
+					
+			allowed = {
+				original_tag = INU
+			}
+			
+			picture = generic_political_advisor_asia_3
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			
+			traits = { naval_theorist }
+		}
+	}
+
+	high_command = {
+
+		INU_khemey_sonam_wangdi = {
+
+			picture = generic_army_asia_2
+			
+			allowed = {
+				original_tag = INU
+			}
+			
+			traits = { army_regrouping_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		INU_chaghoe_namgyal_dorje = {
+
+			picture = generic_army_asia_1
+			
+			allowed = {
+				original_tag = INU
+			}
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		INU_tenpa_jamyang = {
+
+			picture = generic_army_asia_4
+			
+			allowed = {
+				original_tag = INU
+			}
+			
+			traits = { army_cavalry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		INU_jamyang_rabten = {
+
+			picture = generic_navy_asia_2
+			
+			allowed = {
+				original_tag = INU
+			}
+			
+			traits = { navy_anti_submarine_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	army_chief = {
+		
+		INU_lobsang_tenzin = {
+
+			picture = generic_army_asia_3
+			
+			allowed = {
+				original_tag = INU
+			}
+			
+			traits = { army_chief_organizational_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		INU_jampal_rabgye_rinpoche = {
+
+			picture = generic_army_asia_5
+			
+			allowed = {
+				original_tag = INU
+			}
+			
+			traits = { army_chief_morale_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+		
+		INU_bapa_yeshe = {
+			
+			picture = generic_air_asia_1
+			
+			allowed = {
+				original_tag = INU
+			}
+			
+
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		INU_chodak_karma = {
+			
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = INU
+			}
+			
+
+			
+			traits = { air_chief_safety_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	navy_chief = {
+
+		INU_lhalu_tsewang_dorje = {
+			
+			picture = generic_navy_asia_3
+
+			allowed = {
+				original_tag = INU
+			}
+					
+			traits = { navy_chief_naval_aviation_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		INU_sogyal_rinpoche = {
+			
+			picture = generic_navy_asia_2
+
+			allowed = {
+				original_tag = INU
+			}
+					
+			traits = { navy_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

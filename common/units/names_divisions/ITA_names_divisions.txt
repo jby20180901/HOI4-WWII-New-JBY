@@ -1,0 +1,532 @@
+﻿# Division template historical names system. Is a new method of naming the divisions based on the names-group assigned to its template.
+# If we run out of all historical names, the names will be assigned in the old way.
+#
+# Each group has a made up tag. Use it if you want to append more, or replace existing names with the extra txt files (modding).
+#
+# for_countries - lists all countries that can use it. If empty, or entire tag is missing, all countries in the world can use it.
+#
+# can_use - is a trigger that locks/unlocks the group under specific circumstances. The trigger is in a country scope.
+#
+# division_types - is a list of tokens to corresponding unit types. A player can in fact use any group of names for a div.template 
+#                  however this tag is a helper for an automated choice (for AI, or if the group must switch on its own, because 
+#                  for example the current one is no longer available due to the can_use trigger saying so).
+#                  In automated choice, the division template must have at least 1 of the following types for it to be chosen.
+#
+# fallback_name - Is going to be used if we run out of the scripted historical names. If you want to use the old division naming 
+#                 mechanics to be used for fallbacks, then just skip this option.
+#
+# unordered - Its a list of historical division names that did not have a number. Regardless if such names happened in history or not 
+#             this option is available here mainly for a mods.
+#
+# ordered - Is a list of all historical names.
+#           Numbers must start from 1 and up.
+#           Numbers cant repeat in one scope.
+#           If you script the name for this group, at the same number (for example in a mod in another file), the name will be override.
+#           All arguments between the brackets must be separated by spaces. Each argument is wrapped in "quotas".
+#           1st argument = The name. It must contain either: 
+#                          %d (for decimal number placement)
+#                          %s (for string number placement - ROMAN numbers like XIV).
+#           2nd argument is optional = A localizable text describing this historical division. The text will be visible in the tooltip 
+#                                      where you choose the historical division name.
+#           3rd argument is optional = An URL preferably pointing to the WIKI. Its a future feature that is not currently working in 
+#                                      the current game version.
+ITA_INF_01 = { 
+	name = "意大利步兵师" 
+
+	for_countries = { ITA } 
+
+	can_use = { always = yes } 
+
+	division_types = { "infantry" } 
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ITA_INF_01 } 
+
+	fallback_name = "意大利第%d步兵师" 
+
+	# Names with numbers (only one number per entry).
+	# Its okay to have gaps in numbering.
+	ordered = { 
+		23 = { "意大利第%d费拉拉步兵师" } 								# Created in26 asMurge, renamed in38
+		3 = { "意大利第%d拉文纳步兵师" } 								# Created in34 asMonferrato, renamed in39
+		4 = { "意大利第%d利沃诺步兵师" } 								# Created in34 asMonviso, renamed in39
+		5 = { "意大利第%d科塞里亚步兵师" } 								# Created in34
+		6 = { "意大利第%d库尼奥步兵师" } 								# Created in34
+		7 = { "意大利卢皮迪托斯卡纳步兵师" } 						# Created in34 asLeonessa, renamed in38
+		11 = { "意大利第%d布伦纳步兵师" } 							# Created in34
+		12 = { "意大利第%d萨萨里步兵师" } 								# Created in34 asTimavo, renamed in39
+		13 = { "意大利第%d重新步兵师" } 									# Created in34 asMontenero, renamed in39
+		14 = { "意大利第%d索卡步兵师" } 								# Created in34
+		15 = { "意大利第%d贝加莫步兵师" } 								# Created in34 asCarnaro, renamed in39
+		16 = { "意大利第%d皮斯托亚步兵师" } 								# Created in34 asFossalta, renamed in39
+		18 = { "意大利第%d墨西拿步兵师" } 								# Created in34 asMetauro, renamed in39
+		19 = { "意大利第%d威尼斯步兵师" } 								# Created in34 asGavinana, renamed in39
+		20 = { "意大利第%d弗留利步兵师" } 								# Created in34 asCurtatone e Montanara, renamed in39
+		21 = { "意大利第%d撒丁岛掷弹兵师" } 				# Created in34
+		24 = { "意大利第%d皮内罗洛步兵师" } 							# Created in34 asGran Sasso, renamed in39
+		28 = { "意大利第%d奥斯塔步兵师" } 								# Created in34 asVespri, renamed in39
+		29 = { "意大利第%d皮埃蒙特步兵师" } 							# Created in34 asPeloritana, renamed in39
+		31 = { "意大利第%d卡拉布里亚步兵师" } 							# Created in34 asCaprera, renamed in39
+		58 = { "意大利第%d莱尼亚诺步兵师" } 								# Created in34
+		26 = { "意大利第%d阿西塔步兵师" } 							# Created in35
+		30 = { "意大利第%d萨沃伊步兵师" } 								# Created in35
+		65 = { "意大利第%d萨沃伊掷弹兵师" } 				# Created in36
+		1 = { "意大利第%d苏佩加步兵师" } 								# Created in39
+		2 = { "意大利斯弗泽斯卡步兵师" } 							# Created in39
+		22 = { "意大利阿尔卑斯山地猎兵师" } 				# Created in39
+		32 = { "意大利第%d马尔凯步兵师" } 								# Created in39
+		33 = { "意大利第%d阿奎步兵师" } 								# Created in39
+		36 = { "意大利第%d弗利步兵师" } 								# Created in39
+		37 = { "意大利第%d摩德纳步兵师" } 								# Created in39
+		38 = { "意大利第%d普利亚步兵师" } 								# Created in39
+		41 = { "意大利第%d佛罗伦萨步兵师" } 								# Created in39
+		44 = { "意大利第%d克雷莫纳步兵师" } 								# Created in39
+		47 = { "意大利第%d巴里步兵师" } 								# Created in39
+		48 = { "意大利第%d芋头步兵师" } 								# Created in39
+		49 = { "意大利第%d帕尔马步兵师" } 								# Created in39
+		50 = { "意大利第%d女王步兵师" } 								# Created in39
+		51 = { "意大利第%d锡耶纳步兵师" } 								# Created in39
+		53 = { "意大利第%d阿雷佐步兵师" } 								# Created in39
+		54 = { "意大利第%d那不勒斯步兵师" } 								# Created in39
+		56 = { "意大利第%d卡萨莱步兵师" } 								# Created in39
+		57 = { "意大利第%d伦巴第步兵师" } 							# Created in39
+		59 = { "意大利第%d卡利亚里步兵师" } 							# Created in39
+		40 = { "意大利第%d非洲猎人师" } 					# Created in40
+		151 = { "意大利第%d佩鲁贾步兵师" } 							# Created in41
+		153 = { "意大利第%d马切拉塔步兵师" } 							# Created in41
+		154 = { "意大利第%d穆歌步兵师" } 								# Created in41
+		155 = { "意大利第%d艾米利亚步兵师" } 								# Created in41
+		152 = { "意大利第%d切诺步兵师" } 								# Created in42
+		159 = { "意大利第%d威尼托步兵师" } 								# Created in42
+		156 = { "意大利第%d维琴察步兵师" } 							# Created in42
+		157 = { "意大利第%d诺瓦拉步兵师" } 								# Created in42
+		158 = { "意大利第%d扎拉步兵师" } 								# Created in42
+		66 = { "意大利第%d蒙法拉托步兵师" }							# Fictional divisions start here (14 renamed between 1936 and 1939)
+		67 = { "意大利第%d维索步兵师" } 
+		68 = { "意大利第%d母狮步兵师" } 
+		69 = { "意大利第%d蒂马沃步兵师" } 
+		70 = { "意大利第%d蒙特内罗步兵师" } 
+		71 = { "意大利第%d卡纳罗步兵师" } 
+		72 = { "意大利第%d萨尔塔步兵师" } 
+		73 = { "意大利第%d梅陶罗河步兵师" } 
+		74 = { "意大利第%d加维纳纳步兵师" } 
+		75 = { "意大利库尔塔托与蒙塔纳拉混合师" } 
+		76 = { "意大利第%d格兰萨索步兵师" } 
+		77 = { "意大利第%d晚祷步兵师" } 
+		78 = { "意大利第%d盆景步兵师" } 
+		79 = { "意大利卡普雷拉岛步兵师" } 
+		34 = { "意大利第%d太阳神步兵师" }										# Filler divisions (34, 35, 39, 42, 43, 45, 46) start here
+		35 = { "意大利第%d农神步兵师" } 
+		39 = { "意大利第%d战神步兵师" } 
+		42 = { "意大利第%d美神步兵师" } 
+		43 = { "意大利第%d爱神步兵师" } 
+		45 = { "意大利第%d梦神步兵师" } 
+		46 = { "意大利第%d神王步兵师" } 
+	} 
+} 
+
+ITA_INF_02 = { 
+	name = "意大利黑衫军" 
+
+	for_countries = { ITA } 
+
+	can_use = { always = yes } 
+
+	division_types = { "infantry" } 
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ITA_INF_02 } 
+
+	fallback_name = "意大利黑衫军第%d师" 
+
+	# Names with numbers (only one number per entry).
+	# Its okay to have gaps in numbering.
+	ordered = { 
+		1 = { "意大利黑衫军第23马尔佐师" } 									# Created in35
+		2 = { "意大利黑衫军第28十月师" } 								# Created in35
+		3 = { "意大利黑衫军第2四月师" } 									# Created in35
+		4 = { "意大利黑衫军第3一月师" } 									# Created in35
+		5 = { "意大利黑衫军第1二月师" } 								# Created in35
+		6 = { "意大利黑衫军特韦雷河师" } 									# Created in35
+		7 = { "意大利黑衫军昔兰尼师" } 									# Created in36
+		8 = { "意大利黑衫军迪奥洛沃尔步兵师" }								# Fictional divisions start here (3 volunteers divisions in SCW, 3 battalions in Greece / Balkan, 1 planned CC.NN. armored division)
+		9 = { "意大利黑衫军黑火焰步兵师" } 
+		10 = { "意大利黑衫军黑钢笔师" } 
+		11 = { "意大利黑衫军加尔维亚蒂师" } 
+		12 = { "意大利黑衫军钻石师" } 
+		13 = { "意大利黑衫军比斯卡西蒂师" } 
+		14 = { "意大利黑衫军第%dM师" } 
+	} 
+} 
+
+ITA_COL_01 = { 
+	name = "意大利海外师" 
+
+	for_countries = { ITA } 
+
+	can_use = { always = yes } 
+
+	division_types = { "infantry" } 
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ITA_COL_01 } 
+
+	fallback_name = "意大利第%d海外师" 
+
+	# Names with numbers (only one number per entry).
+	# Its okay to have gaps in numbering.
+	ordered = { 
+		1 = { "意大利利比亚海外一师" } 									# Created in35
+		31 = { "意大利厄立特里亚海外一师" } 								# Created in35
+		32 = { "意大利厄立特里亚海外二师" } 								# Created in35
+		2 = { "意大利利比亚海外二师" } 									# Created in36
+		101 = { "意大利索马里海外一师" } 								# Created in36
+		102 = { "意大利索马里海外二师" } 								# Created in36
+		3 = { "意大利第%d海外师" } 											# Created in39
+		4 = { "意大利第%d海外师" } 											# Created in39
+		21 = { "意大利第%d海外师" } 											# Created in40
+		22 = { "意大利第%d海外师" } 											# Created in40
+		23 = { "意大利第%d海外师" } 											# Created in40
+		24 = { "意大利第%d海外师" } 											# Created in40
+		25 = { "意大利第%d海外师" } 											# Created in40
+		26 = { "意大利第%d海外师" } 											# Created in40
+		5 = { "意大利第%d海外师" }											# Filler divisions (5 - 20, 27 - 30) start here
+		6 = { "意大利第%d海外师" } 
+		7 = { "意大利第%d海外师" } 
+		8 = { "意大利第%d海外师" } 
+		9 = { "意大利第%d海外师" } 
+		10 = { "意大利第%d海外师" } 
+		11 = { "意大利第%d海外师" } 
+		12 = { "意大利第%d海外师" } 
+		13 = { "意大利第%d海外师" } 
+		14 = { "意大利第%d海外师" } 
+		15 = { "意大利第%d海外师" } 
+		16 = { "意大利第%d海外师" } 
+		17 = { "意大利第%d海外师" } 
+		18 = { "意大利第%d海外师" } 
+		19 = { "意大利第%d海外师" } 
+		20 = { "意大利第%d海外师" } 
+		27 = { "意大利第%d海外师" } 
+		28 = { "意大利第%d海外师" } 
+		29 = { "意大利第%d海外师" } 
+		30 = { "意大利第%d海外师" } 
+	} 
+} 
+
+ITA_CAV_01 = { 
+	name = "意大利骑兵团" 
+
+	for_countries = { ITA } 
+
+	can_use = { always = yes } 
+
+	division_types = { "cavalry" } 
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ITA_CAV_01 } 
+
+	fallback_name = "意大利第%d骑兵团" 
+
+	# Names with numbers (only one number per entry).
+	# Its okay to have gaps in numbering.
+	ordered = { 
+		1 = { "意大利第%d尼斯骑兵团" } 
+		2 = { "意大利第%d皮埃蒙特骑兵团" } 
+		3 = { "意大利第%d萨沃亚骑兵团" } 
+		4 = { "意大利第%d热那亚骑兵团" } 
+		5 = { "意大利第%d诺瓦拉枪骑团" } 
+		6 = { "意大利第%d奥斯塔枪骑团" } 
+		8 = { "意大利第%d蒙特贝尔枪骑团" } 
+		13 = { "意大利第%d蒙费拉托骑兵团" } 
+		15 = { "意大利第%d洛迪骑兵团" } 
+		19 = { "意大利第%d指南骑兵团" } 
+		7 = { "意大利第%d丰收女神骑兵团" } 										# Filler divisions (7, 9 - 12, 14, 16- 18, 20) start here
+		9 = { "意大利第%d智慧骑兵团" } 
+		10 = { "意大利第%d战术女神骑兵团" } 
+		11 = { "意大利第%d闪电之神骑兵团" } 
+		12 = { "意大利第%d骑兵团" } 
+		14 = { "意大利第%d骑兵团" } 
+		16 = { "意大利第%d骑兵团" } 
+		17 = { "意大利第%d骑兵团" } 
+		18 = { "意大利第%d骑兵团" } 
+		20 = { "意大利第%d骑兵团" } 
+	} 
+} 
+
+ITA_CAV_02 = { 
+	name = "意大利骑兵师" 
+
+	for_countries = { ITA } 
+
+	can_use = { always = yes } 
+
+	division_types = { "cavalry" } 
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ITA_CAV_02 } 
+
+	fallback_name = "意大利第%d高速机动师" 
+
+	# Names with numbers (only one number per entry).
+	# Its okay to have gaps in numbering.
+	ordered = { 
+		1 = { "意大利尤维尼奥迪萨沃亚高速机动师" } 							# Created in34
+		2 = { "意大利埃马努埃莱·菲利贝托高速机动师" } 						# Created in34
+		3 = { "意大利陆普林西比阿米代高速机动师" } 							# Created in34
+	} 
+} 
+
+ITA_MOT_01 = { 
+	name = "意大利摩托化步兵师" 
+
+	for_countries = { ITA } 
+
+	can_use = { always = yes } 
+
+	division_types = { "motorized" } 
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { ITA_INF_01 } 
+
+	fallback_name = "意大利第%d摩步师" 
+
+	# Names with numbers (only one number per entry).
+	# Its okay to have gaps in numbering.
+	ordered = { 
+		9 = { "意大利第%d帕苏比奥摩步师" } 						# Created in34
+		10 = { "意大利第%d皮亚韦摩步一师" } 							# Created in34
+		17 = { "意大利第%d皮亚韦摩步二师" } 							# Created in34 asRubicone, renamed in39
+		25 = { "意大利第%d博洛尼亚摩步师" } 						# Created in34 asVolturno, renamed in39
+		27 = { "意大利第%d布雷西亚摩步师" } 						# Created in35 asSila, renamed in39
+		8 = { "意大利第%d波河摩步师" } 									# Created in36
+		60 = { "意大利第%d塞卜拉泰摩步师" } 						# Created in37
+		61 = { "意大利第%d锡尔特摩步师" } 							# Created in37
+		62 = { "意大利第%d迈尔迈里卡摩步师" } 						# Created in37
+		63 = { "意大利第%d奇雷内摩步师" } 						# Created in37
+		55 = { "意大利第%d萨伏纳摩步师" } 						# Created in39
+		102 = { "意大利第%d特伦托摩步师" } 								# Created in39
+		101 = { "意大利第%d的里雅斯特摩步师" } 							# Created in39
+		52 = { "意大利第%d都灵摩步师" } 						# Created in40
+		64 = { "意大利第%d卡坦扎罗摩步师" } 						# Created in40
+		103 = { "意大利第%d皮亚琴察摩步师" } 							# Created in42
+		104 = { "意大利第%d曼托瓦摩步师" } 							# Created in42
+		105 = { "意大利第%d罗维戈摩步师" } 								# Created in42
+		106 = { "意大利第%d红宝石摩步师" }							# Fictional divisions start here (3 renamed between 1936 and 1939)
+		107 = { "意大利第%d沃尔图诺摩步师" } 
+		108 = { "意大利第%d西拉摩步师" } 
+		109 = { "意大利第%d雅努斯摩步师" } 										# Filler divisions (109 - 115) start here
+		110 = { "意大利第%d朱比特摩步师" } 
+		111 = { "意大利第%d摩步师" } 
+		112 = { "意大利第%d摩步师" } 
+		113 = { "意大利第%d摩步师" } 
+		114 = { "意大利第%d摩步师" } 
+		115 = { "意大利第%d摩步师" } 
+	} 
+} 
+
+ITA_MEC_01 = { 
+	name = "机械化步兵师" 
+
+	for_countries = { ITA } 
+
+	can_use = { always = yes } 
+
+	division_types = { "mechanized" } 
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { ITA_INF_01 } 
+
+	fallback_name = "意大利第%d机步师" 
+
+	# Names with numbers (only one number per entry).
+	# Its okay to have gaps in numbering.
+	ordered = { 
+		116 = { "意大利第%d茱诺机步师" }										# Filler divisions (116 - 130) start here
+		117 = { "意大利第%d墨丘利机步师" } 
+		118 = { "意大利第%d维纳斯机步师" } 
+		119 = { "意大利第%d玛尔斯机步师" } 
+		120 = { "意大利第%d萨图尔努斯机步师" } 
+		121 = { "意大利第%d戴安娜机步师" } 
+		122 = { "意大利第%d阿波罗机步师" } 
+		123 = { "意大利第%d密涅瓦机步师" } 
+		124 = { "意大利第%d刻瑞斯机步师" } 
+		125 = { "意大利第%d武尔坎努斯机步师" } 
+		126 = { "意大利第%d涅普顿机步师" } 
+		127 = { "意大利第%d普鲁托机步师" } 
+		128 = { "意大利第%d赫斯提机步师" } 
+		129 = { "意大利第%d维斯塔机步师" } 
+		130 = { "意大利第%d邱比特机步师" } 
+	} 
+} 
+
+ITA_ARM_01 = { 
+	name = "意大利装甲师" 
+
+	for_countries = { ITA } 
+
+	can_use = { always = yes } 
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" } 
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { ITA_INF_01 } 
+
+	fallback_name = "意大利第%d装甲师" 
+
+	# Names with numbers (only one number per entry).
+	# Its okay to have gaps in numbering.
+	ordered = { 
+		132 = { "意大利第%d阿里特装甲师" } 								# Created in39
+		131 = { "意大利第%d琴陶罗装甲师" } 								# Created in39
+		133 = { "意大利第%d利多里奥装甲师" } 								# Created in39
+		134 = { "意大利第%d弗雷恰装甲师" } 								# Created in42
+		136 = { "意大利第%d法瓦西装甲师" } 						# Created in42
+		135 = { "意大利第%d阿里泰特二世装甲师" } 							# Created in43
+		137 = { "意大利代号M装甲师" }										# Fictional divisions start here (1 planned CC.NN. armored division, 1 renamed planned CC.NN. armored division, 1 post WWII division)
+		138 = { "意大利第%d半人马装甲师" } 
+		139 = { "意大利第%d波佐罗德弗里利装甲师" } 
+		140 = { "意大利第%d罗马装甲师" }											# Filler divisions (140 - 150) start here
+		141 = { "意大利第%d意大利面装甲师" } 
+		142 = { "意大利第%d比萨饼装甲师" } 
+		143 = { "意大利第%d意大利米饭装甲师" } 
+		144 = { "意大利第%d意大利肠装甲师" } 
+		145 = { "意大利第%d意大利饮料装甲师" } 
+		146 = { "意大利第%d葡萄酒装甲师" } 
+		147 = { "意大利第%d红酒装甲师" } 
+		148 = { "意大利第%d白酒装甲师" } 
+		149 = { "意大利第%d沙利托装甲师" } 
+		150 = { "意大利第%d莎乐美装甲师" } 
+	} 
+} 
+
+ITA_MAR_01 = { 
+	name = "意大利陆战团" 
+
+	for_countries = { ITA } 
+
+	can_use = { always = yes } 
+
+	division_types = { "marine" } 
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ITA_MAR_01 } 
+
+	fallback_name = "意大利第%d登陆团" 
+
+	# Names with numbers (only one number per entry).
+	# Its okay to have gaps in numbering.
+	ordered = { 
+		1 = { "意大利第%d圣马可登陆团" } 
+		2 = { "意大利第%d小蜥蜴登陆团" }							# Fictional divisions start here (1 post WW2 divisions)
+	} 
+} 
+
+ITA_MNT_01 = { 
+	name = "意大利山地师" 
+
+	for_countries = { ITA } 
+
+	can_use = { always = yes } 
+
+	division_types = { "mountaineers" } 
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ITA_MNT_01 } 
+
+	fallback_name = "意大利第%d山地师" 
+
+	# Names with numbers (only one number per entry).
+	# Its okay to have gaps in numbering.
+	ordered = { 
+		1 = { "意大利牛羚山地师" } 								# Created in35
+		2 = { "意大利特里丁蒂娜山地师" } 								# Created in35
+		3 = { "意大利朱莉娅山地师" } 										# Created in35
+		4 = { "意大利库恩塞山地师" } 									# Created in35
+		5 = { "意大利普斯特山地师" } 									# Created in35
+		6 = { "意大利格拉鲁斯山地师" } 								# Created in41
+		7 = { "意大利奥罗贝卡山地师" }									# Fictional divisions start here (2 post WW2 divisions)
+		8 = { "意大利卡多雷山地师" } 
+	} 
+} 
+
+ITA_PAR_01 = 
+{ 
+	name = "伞兵师" 
+
+	for_countries = { ITA } 
+
+	can_use = { always = yes } 
+
+	division_types = { "paratrooper" } 
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ITA_INF_01 } 
+
+	fallback_name = "意大利第%d伞兵师" 
+
+	# Names with numbers (only one number per entry).
+	# Its okay to have gaps in numbering.
+	ordered = { 
+		80 = { "意大利第%d拉斯佩齐亚空降师" } 						# Created in41
+		185 = { "意大利第%d福尔戈雷伞兵师" } 							# Created in42
+		184 = { "意大利第%d雨云伞兵师" } 							# Created in42
+		183 = { "意大利第%d西克隆伞兵师" } 							# Created in43
+		181 = { "意大利第%d欧若拉伞兵师" }										# Filler divisions start here
+		182 = { "意大利第%d黎明女神伞兵师" } 
+		186 = { "意大利第%d冥神伞兵师" } 
+		187 = { "意大利第%d海神伞兵师" } 
+		188 = { "意大利第%d驯马之神伞兵师" } 
+		189 = { "意大利第%d锻造之神伞兵师" } 
+	} 
+} 
+
+ITA_GAR_01 = { 
+	name = "意大利警备师" 
+
+	for_countries = { ITA } 
+
+	can_use = { always = yes } 
+
+	division_types = { "infantry" } 
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { ITA_INF_01 } 
+
+	fallback_name = "意大利第%d海岸警卫师" 
+
+	# Names with numbers (only one number per entry).
+	# Its okay to have gaps in numbering.
+	ordered = { 
+		201 = { "意大利第%d海岸警卫师" } 											# Created in41
+		202 = { "意大利第%d海岸警卫师" } 											# Created in41
+		204 = { "意大利第%d海岸警卫师" } 											# Created in41
+		205 = { "意大利第%d海岸警卫师" } 											# Created in41
+		206 = { "意大利第%d海岸警卫师" } 											# Created in41
+		207 = { "意大利第%d海岸警卫师" } 											# Created in41
+		208 = { "意大利第%d海岸警卫师" } 											# Created in41
+		211 = { "意大利第%d海岸警卫师" } 											# Created in41
+		212 = { "意大利第%d海岸警卫师" } 											# Created in41
+		213 = { "意大利第%d海岸警卫师" } 											# Created in41
+		214 = { "意大利第%d海岸警卫师" } 											# Created in42
+		216 = { "意大利第%d海岸警卫师" } 											# Created in42
+		220 = { "意大利第%d海岸警卫师" } 											# Created in42
+		221 = { "意大利第%d海岸警卫师" } 											# Created in42
+		222 = { "意大利第%d海岸警卫师" } 											# Created in42
+		203 = { "意大利第%d海岸警卫师" } 											# Created in43
+		209 = { "意大利第%d海岸警卫师" } 											# Created in43
+		210 = { "意大利第%d海岸警卫师" } 											# Created in43
+		215 = { "意大利第%d海岸警卫师" } 											# Created in43
+		223 = { "意大利第%d海岸警卫师" } 											# Created in43
+		224 = { "意大利第%d海岸警卫师" } 											# Created in43
+		225 = { "意大利第%d海岸警卫师" } 											# Created in43
+		226 = { "意大利第%d海岸警卫师" } 											# Created in43
+		227 = { "意大利第%d海岸警卫师" } 											# Created in43
+		228 = { "意大利第%d海岸警卫师" } 											# Created in43
+		230 = { "意大利第%d海岸警卫师" } 											# Created in43
+		231 = { "意大利第%d海岸警卫师" } 											# Created in43
+		217 = { "意大利第%d海岸警卫师" } 											# Filler divisions (217 - 219, 229) start here
+		218 = { "意大利第%d海岸警卫师" } 
+		219 = { "意大利第%d海岸警卫师" } 
+		229 = { "意大利第%d海岸警卫师" } 
+	} 
+} 

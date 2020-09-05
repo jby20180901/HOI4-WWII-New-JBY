@@ -1,0 +1,543 @@
+ideas = {
+	
+	country = {
+		
+		#“黄河两岸的表面动作”
+		eastasia_idea_xiaojijiaogong = {
+			picture = trotskyite_plot
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 5
+				army_org_Factor = 5
+				army_attack_factor = -5
+				army_defence_factor = 5
+			}
+		}
+		
+		#家仇国恨
+		eastasia_idea_DBJ_jiachouguohen = {
+			picture = DBJ_guohenjiachou
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.10
+				army_attack_factor = 0.05
+				
+			}
+		}
+		
+		#休养生息
+		eastasia_idea_DBJ_xiuyangshengxi = {
+			picture = generic_volunteer_expedition_bonus
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.001
+				production_speed_bunker_factor = 0.10
+				line_change_production_efficiency_factor = 0.10
+				production_speed_buildings_factor = 0.10
+				
+			}
+		}
+		
+		#资源开发
+		eastasia_idea_DBJ_ziyuankaifa = {
+			picture = FRA_factory_strikes
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = 0.10
+			}
+		}
+		
+		#兴办《西京民报》
+		eastasia_idea_DBJ_xijingminbao = {
+			picture = generic_disjointed_gov
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = -0.10
+				stability_weekly = 0.001
+			}
+		}
+		
+		#统一号令
+		eastasia_idea_DBJ_tongyihaoling = {
+			picture = FRA_national_mobilization_focus
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_org_Factor = 0.10
+			}
+		}
+		
+		#军官训练团
+		eastasia_idea_DBJ_junguanxunliantuan = {
+			picture = can_send_in_the_zombies
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				training_time_army_factor = -0.10
+				army_defence_factor = 0.05
+			}
+		}
+		
+		#陆军改造
+		eastasia_idea_DBJ_lujungaizao = {
+			picture = tfv_can_conscription_crisis
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.10
+				army_defence_factor = 0.05
+			}
+		}
+		
+		#义勇军起义MZG
+		eastasia_idea_DBJ_yiyongjunqiyi = {
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.10
+				stability_factor = -0.05
+				local_resources_factor = -0.05
+				production_speed_buildings_factor = -0.05
+			}
+		}
+		
+		#美国顾问
+		eastasia_idea_DBJ_usa_guwen = {
+			picture = generic_research_bonus
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.10
+			}
+		}
+		
+		#工商业的恢复
+		eastasia_idea_DBJ_gongshangyehuifu = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				line_change_production_efficiency_factor = 0.10
+			}
+		}
+		
+		#东北军扩编
+		eastasia_idea_DBJ_dongbeijunkuobian = {
+			picture = generic_manpower_bonus
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.10
+			}
+		}
+		
+		#骑兵强化特训
+		eastasia_idea_DBJ_qibingqianghuatexun = {
+			picture = generic_intel_bonus
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				cavalry_attack_factor = 0.10
+				cavalry_defence_factor = 0.10
+			}
+		}
+		
+		#虎豹骑
+		eastasia_idea_DBJ_hubaoqi = {
+			picture = FRA_army_of_aggression_focus
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				cavalry_attack_factor = 0.30
+				cavalry_defence_factor = 0.30
+			}
+		}
+		
+		#战术化陆军
+		eastasia_idea_DBJ_zhanshuhua_lujun = {
+			picture = generic_infantry_bonus
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_org_Factor = 0.10
+				army_speed_factor = 0.05
+			}
+		}
+		
+		#军需调控
+		eastasia_idea_DBJ_junxutiaokong = {
+			picture = generic_goods_red_bonus
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				supply_consumption_factor = -0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		#步炮协同
+		eastasia_idea_DBJ_bupaoxietong = {
+			picture = combined_bomber_offensive
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_artillery_defence_factor = 0.10
+				army_artillery_attack_factor = 0.10
+			}
+		}
+		
+		#王牌飞行团
+		eastasia_idea_DBJ_wangpaifeixingtuan = {
+			picture = office_of_strategic_services
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				air_ace_generation_chance_factor = 0.5
+			}
+		}
+		
+		#空军科学操练
+		eastasia_idea_DBJ_kongjuncaolian = {
+			picture = air_support_focus
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				air_agility_factor = 0.05
+				air_escort_efficiency = 0.15
+			}
+		}
+		
+		#高安全性航空
+		eastasia_idea_DBJ_gaoanquanxinghangkong = {
+			picture = generic_air_bonus
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				air_agility_factor = 0.05
+				air_accidents_factor = -0.50
+				air_escort_efficiency = 0.25
+			}
+		}
+		
+		#科研骨干
+		eastasia_idea_DBJ_keyangugan = { 
+			picture = generic_research_bonus
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			equipment_bonus = {
+
+				infantry = {
+					build_cost_ic = -0.10 instant = yes
+				}
+
+				motorized = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				
+				mechanized = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+		}
+		
+	}
+	
+	
+	#################### cabinet ####################
+	
+	
+	
+	#政治顾问
+	political_advisor = {
+
+		DBJ_wangyizhe = {
+
+			picture = boris_shaposhnikov
+			
+			allowed = {
+				original_tag = DBJ
+			}
+			
+			available = {
+				NOT = { has_global_flag = DBJ_erershijian_shaozhuangpai }
+			}
+			
+			traits = { silent_workhorse }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		DBJ_jiangbin = {
+
+			picture = john_vereker
+			
+			allowed = {
+				original_tag = DBJ
+			}
+			
+			available = {
+				NOT = { has_global_flag = DBJ_erershijian_shaozhuangpai }
+			}
+			
+			traits = { captain_of_industry }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		DBJ_xufang = {
+
+			picture = semyon_timoshenko
+			
+			allowed = {
+				original_tag = DBJ
+			}
+			
+			available = {
+				NOT = { has_global_flag = DBJ_erershijian_shaozhuangpai }
+			}
+			
+			traits = { fortification_engineer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+	}	
+
+	#陆军司令
+	army_chief = {
+		
+		DBJ_zhangxueliang = {
+
+			picture = generic_navy_asia_1
+			
+			allowed = {
+				original_tag = DBJ
+			}
+			
+			traits = { army_chief_organizational_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+	}
+
+	#空军司令
+	air_chief = {
+
+		DBJ_songxueli = {
+			
+			picture = generic_navy_asia_2
+
+			allowed = {
+				original_tag = DBJ
+			}
+			
+			available = {
+				NOT = { has_global_flag = DBJ_erershijian_shaozhuangpai }
+			}
+					
+			traits = { air_close_air_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	#海军司令
+	navy_chief = {
+	
+		CHI_xiaojinguang = {
+
+			picture = generic_army_asia_1
+			
+			allowed = {
+				original_tag = DBJ
+			}
+					
+			traits = { navy_amphibious_assault_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	#理论家
+	theorist = {
+	
+		DBJ_yanghucheng = {
+
+			picture = vladimir_tributs
+			
+			allowed = {
+				original_tag = DBJ
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.05
+			}
+			
+			traits = { military_theorist }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+	
+	#军方高层
+	high_command = {
+		
+		DBJ_lvzhengcao = {
+
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = DBJ
+			}
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		DBJ_liuzhengdong = {
+
+			picture = generic_air_asia_1
+			
+			allowed = {
+				original_tag = DBJ
+			}
+			
+			traits = { army_cavalry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		DBJ_huangxiansheng = {
+
+			picture = generic_air_asia_3
+			
+			allowed = {
+				original_tag = DBJ
+			}
+			
+			traits = { army_artillery_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+	}
+
+}

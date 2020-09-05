@@ -1,0 +1,44 @@
+POR_ai_behavior = {
+	name = "POR_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = ESTADONOVO_HISTORICAL
+		text = "POR_ESTADONOVO_HISTORICAL"
+		desc = "POR_ESTADONOVO_HISTORICAL_DESC"
+	}
+	option = {
+		name = ESTADONOVO_FASCISM
+		text = "POR_ESTADONOVO_FASCISM"
+		desc = "POR_ESTADONOVO_FASCISM_DESC"
+	}
+	option = {
+		name = ESTADONOVO_DEMOCRATIC
+		text = "POR_ESTADONOVO_DEMOCRATIC"
+		desc = "POR_ESTADONOVO_DEMOCRATIC_DESC"
+	}
+	option = {
+		name = NEW_DEMOCRATIC
+		text = "POR_NEW_DEMOCRATIC"
+		desc = "POR_NEW_DEMOCRATIC_DESC"
+	}
+	option = {
+		name = ROYALIST
+		text = "POR_ROYALIST"
+		desc = "POR_ROYALIST_DESC"
+	}
+	option = {
+		name = COMMUNIST
+		text = "POR_COMMUNIST"
+		desc = "POR_COMMUNIST_DESC"
+	}
+	option = {
+		name = RANDOM
+		text = "POR_OPTION_RANDOM"
+		desc = "POR_OPTION_RANDOM_AI_DESC"
+	}
+}

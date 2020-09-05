@@ -1,0 +1,632 @@
+focus_tree = {
+	id = MAL_Focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MAL
+		}
+	}
+	
+	shared_focus = SEA_Colonial_economy
+	shared_focus = SEA_Colonial_army
+	
+	default = no
+	focus = {
+		id = MAL_British_malaya
+		icon = GFX_focus_chi_british_cooperation
+		cost = 10.00
+		x = 20
+		y = 0
+			ai_will_do = {
+					factor = 2
+				}
+			completion_reward = {
+					add_political_power = 120
+				}
+
+	}
+	focus = {
+		id = MAL_Singapore_strategy
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = MAL_British_malaya
+		}
+		x = 17
+		y = 1
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					336 = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = dockyard
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+			available = {
+					OR = {
+							threat > 0.25
+							has_war = yes
+						}
+				}
+
+	}
+	focus = {
+		id = MAN_Focus_on_the_strategy
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = MAL_Singapore_strategy
+		}
+		mutually_exclusive = {
+			focus = MAL_Focus_on_the_army_size
+		}
+		x = 14
+		y = 2
+			ai_will_do = {
+					modifier = {
+							factor = 0
+							is_historical_focus_on = yes
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = MAN_Focus_on_the_strategy
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = MAL_Focus_on_the_army_size
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		prerequisite = {
+			focus = MAL_Singapore_strategy
+		}
+		mutually_exclusive = {
+			focus = MAN_Focus_on_the_strategy
+		}
+		x = 16
+		y = 2
+			completion_reward = {
+					add_ideas = MAL_Focus_on_the_army_size
+				}
+
+	}
+	focus = {
+		id = MAL_War_propaganda
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = MAN_Focus_on_the_strategy
+			focus = MAL_Focus_on_the_army_size
+		}
+		x = 15
+		y = 3
+			completion_reward = {
+					add_war_support = 0.05
+				}
+
+	}
+	focus = {
+		id = MAL_Focus_on_the_air_base
+		icon = GFX_goal_generic_air_production
+		cost = 10.00
+		prerequisite = {
+			focus = MAL_Singapore_strategy
+		}
+		mutually_exclusive = {
+			focus = MAL_Focus_on_the_supply
+		}
+		x = 18
+		y = 2
+			completion_reward = {
+					336 = {
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = MAL_Focus_on_the_supply
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = MAL_Singapore_strategy
+		}
+		mutually_exclusive = {
+			focus = MAL_Focus_on_the_air_base
+		}
+		x = 20
+		y = 2
+			ai_will_do = {
+					modifier = {
+							factor = 0
+							is_historical_focus_on = yes
+						}
+				}
+			completion_reward = {
+					336 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = MAL_Stable_factions
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = MAL_Focus_on_the_air_base
+			focus = MAL_Focus_on_the_supply
+		}
+		x = 19
+		y = 3
+			completion_reward = {
+					add_stability = 0.05
+				}
+
+	}
+	focus = {
+		id = MAL_Federated_malay_states
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = MAL_British_malaya
+		}
+		x = 23
+		y = 1
+			ai_will_do = {
+					factor = 2
+				}
+			completion_reward = {
+					add_autonomy_ratio = {
+							value = 0.05
+							localization = MAL_Federated_malay_states
+						}
+				}
+
+	}
+	focus = {
+		id = MAL_Unfederated_malay_states
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = MAL_Federated_malay_states
+		}
+		x = 22
+		y = 2
+			ai_will_do = {
+					factor = 2
+				}
+			completion_reward = {
+					add_autonomy_ratio = {
+							value = 0.1
+							localization = MAL_Federated_malay_states
+						}
+					add_ideas = MAL_Unfederated_malay_states
+				}
+
+	}
+	focus = {
+		id = MAL_Melayu
+		icon = GFX_goal_demand_sudetenland
+		cost = 10.00
+		prerequisite = {
+			focus = MAL_Unfederated_malay_states
+		}
+		x = 21
+		y = 4
+			completion_reward = {
+					add_political_power = 75
+					add_stability = 0.05
+				}
+
+	}
+	focus = {
+		id = MAL_Straits_settlements
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = MAL_Federated_malay_states
+		}
+		x = 24
+		y = 2
+			ai_will_do = {
+					factor = 2
+				}
+			completion_reward = {
+					add_political_power = 100
+					add_ideas = MAL_Straits_settlements
+					336 = {
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = MAL_Unite_malay
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = MAL_Unfederated_malay_states
+		}
+		prerequisite = {
+			focus = MAL_Straits_settlements
+		}
+		x = 23
+		y = 3
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_stability = 0.05
+				}
+			available = {
+					OR = {
+							AND = {
+									has_autonomy_state = autonomy_integrated_puppet
+									compare_autonomy_progress_ratio > 0.75
+								}
+							NOT = {
+									has_autonomy_state = autonomy_integrated_puppet
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = MAL_Federation_of_malaya
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = MAL_Melayu
+		}
+		prerequisite = {
+			focus = MAL_Unite_malay
+		}
+		mutually_exclusive = {
+			focus = MAL_Malayan_union
+		}
+		x = 22
+		y = 5
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_stability = 0.05
+					swap_ideas = {
+							remove_idea = MAL_Malay_ruling_class
+							add_idea = MAL_Malay_ruling_class_2
+						}
+				}
+			available = {
+					NOT = {
+							has_autonomy_state = autonomy_integrated_puppet
+							has_autonomy_state = autonomy_reichskommissariat
+						}
+				}
+
+	}
+	focus = {
+		id = MAL_Other_peoples
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = MAL_Straits_settlements
+		}
+		x = 25
+		y = 4
+			completion_reward = {
+					add_war_support = 0.1
+				}
+
+	}
+	focus = {
+		id = MAL_Malayan_union
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10.00
+		prerequisite = {
+			focus = MAL_Unite_malay
+		}
+		prerequisite = {
+			focus = MAL_Other_peoples
+		}
+		mutually_exclusive = {
+			focus = MAL_Federation_of_malaya
+		}
+		x = 24
+		y = 5
+			ai_will_do = {
+					factor = 10
+					modifier = {
+							factor = 0
+							is_historical_focus_on = yes
+							NOT = {
+									has_government = communism
+								}
+						}
+				}
+			completion_reward = {
+					add_stability = -0.1
+					add_war_support = -0.1
+					remove_ideas = MAL_Malay_ruling_class
+				}
+			available = {
+					NOT = {
+							has_autonomy_state = autonomy_integrated_puppet
+							has_autonomy_state = autonomy_reichskommissariat
+						}
+				}
+
+	}
+	focus = {
+		id = MAL_Form_malaysia
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = MAL_Federation_of_malaya
+			focus = MAL_Malayan_union
+		}
+		x = 23
+		y = 6
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					custom_effect_tooltip = MAL_Form_malaysia_tt
+					drop_cosmetic_tag = yes
+					if = {
+							limit = {
+									ROOT = {
+											owns_state = 333
+											is_subject = yes
+										}
+								}
+							OVERLORD = {
+									transfer_state = 333
+								}
+						}
+					if = {
+							limit = {
+									is_subject_of = ENG
+									ENG = {
+											has_government = democratic
+										}
+								}
+							set_autonomy = {
+									target = ROOT
+									autonomy_state = autonomy_free
+								}
+						}
+					if = {
+						limit = {
+							has_country_leader = {
+									name = "Shenton Thomas"
+								}
+						}
+						retire_country_leader = yes 
+					}
+				}
+			available = {
+					OR = {
+							has_autonomy_state = autonomy_colony
+							has_autonomy_state = autonomy_reichsprotectorate
+							has_autonomy_state = autonomy_wtt_imperial_protectorate
+							is_subject = no
+						}
+				}
+
+	}
+	focus = {
+		id = MAL_Step_over_malacca
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10.00
+		prerequisite = {
+			focus = MAL_Form_malaysia
+		}
+		mutually_exclusive = {
+			focus = MAL_Regional_awareness
+		}
+		x = 24
+		y = 7
+			ai_will_do = {
+					modifier = {
+							factor = 0
+							is_historical_focus_on = yes
+							has_government = democratic
+						}
+				}
+			completion_reward = {
+					ROOT = {
+							add_opinion_modifier = {
+								target = INS
+								modifier = hostile_status
+							}
+							add_ai_strategy = {
+									type = conquer
+									id = "INS"
+									value = 200
+								}
+							add_ai_strategy = {
+									type = antagonize
+									id = "INS"
+									value = 200
+								}
+						}
+					INS = {
+							add_opinion_modifier = {
+								target = ROOT
+								modifier = hostile_status
+							}
+						}
+				}
+			available = {
+					is_subject = no
+					NOT = { has_government = democratic }
+					INS = {
+							exists = yes
+							NOT = {
+								has_war_with = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+								has_war_together_with = ROOT
+							}
+						}
+				}
+			bypass = {
+					INS = {
+							OR = {
+									has_war_with = ROOT
+									is_subject_of = ROOT
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = MAL_Regional_awareness
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = MAL_Form_malaysia
+		}
+		mutually_exclusive = {
+			focus = MAL_Step_over_malacca
+		}
+		x = 22
+		y = 7
+			completion_reward = {
+					every_other_country = {
+							limit = {
+									OR = {
+											tag = SIA
+											tag = INU
+											tag = INS
+											tag = VIN
+											tag = CAM
+											tag = LAO
+										}
+									NOT = {
+											has_war_with = ROOT
+										}
+								}
+							add_opinion_modifier = {
+								target = ROOT
+								modifier = Nations_friendly
+							}
+							ROOT = {
+								add_opinion_modifier = {
+									target = PREV
+									modifier = Nations_friendly
+								}
+							}
+						}
+				}
+
+	}
+	focus = {
+		id = MAL_Form_the_ASA
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = MAL_Regional_awareness
+		}
+		x = 22
+		y = 8
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					set_rule = {
+							can_create_factions = yes
+						}
+					create_faction = "Association_of_southeast_asia" 
+					every_other_country = {
+							limit = {
+									OR = {
+											tag = SIA
+											tag = MAL
+											tag = INU
+											tag = VIN
+											tag = CAM
+											tag = LAO
+											tag = PHI
+											tag = INU
+										}
+									exists = yes
+									is_subject = no
+									is_in_faction = no
+									NOT = {
+											has_war_with = ROOT
+										}
+								}
+							country_event = generic.5
+						}
+					set_global_flag = SEA_Already_formed_the_ASA
+				}
+			available = {
+					is_subject = no
+					is_in_faction = no
+					NOT = { has_government = communism }
+					NOT = { has_global_flag = SEA_Already_formed_the_ASA }
+				}
+
+	}
+	focus = {
+		id = MAL_Target_indonesia
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = MAL_Step_over_malacca
+		}
+		x = 24
+		y = 8
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = INS
+						}
+				}
+			available = {
+					is_subject = no
+					has_army_manpower = {
+							size > 49999
+						}
+					INS = {
+							exists = yes
+							NOT = {
+								has_war_with = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+								has_war_together_with = ROOT
+							}
+						}
+				}
+
+	}
+}

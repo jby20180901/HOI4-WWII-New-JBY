@@ -1,0 +1,813 @@
+form_iberian_union_category = {
+	
+	form_iberian_union = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = SPR
+				original_tag = POR
+			}
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+			is_subject = no
+			# Portugal
+			custom_trigger_tooltip = {
+				tooltip = form_country_portugal_required_states_tt
+				controls_state = 180
+				controls_state = 181
+				controls_state = 112
+				controls_state = 179
+			}
+			# Spain
+			custom_trigger_tooltip = {
+				tooltip = form_country_spain_required_states_tt
+				controls_state = 171
+				controls_state = 174
+				controls_state = 170
+				controls_state = 169
+				controls_state = 173
+				controls_state = 168
+				controls_state = 175
+				controls_state = 41
+				controls_state = 176
+				controls_state = 172
+				controls_state = 166
+				controls_state = 168
+				controls_state = 167
+				controls_state = 165
+				controls_state = 177
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = SPR
+				original_tag = POR
+			}
+			NOT = { has_global_flag = form_iberia_flag }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = IBA_IBERIAN_UNION
+			# Portugal
+			custom_effect_tooltip = form_country_portugal_coring_states_tt
+			hidden_effect = {
+				180 = { add_core_of = ROOT }
+				181 = { add_core_of = ROOT }
+				112 = { add_core_of = ROOT }
+				179 = { add_core_of = ROOT }
+			}
+			# Spain
+			custom_effect_tooltip = form_country_spain_coring_states_tt
+			hidden_effect = {
+				171 = { add_core_of = ROOT }
+				174 = { add_core_of = ROOT }
+				170 = { add_core_of = ROOT }
+				169 = { add_core_of = ROOT }
+				173 = { add_core_of = ROOT }
+				168 = { add_core_of = ROOT }
+				175 = { add_core_of = ROOT }
+				41 = { add_core_of = ROOT }
+				176 = { add_core_of = ROOT }
+				172 = { add_core_of = ROOT }
+				166 = { add_core_of = ROOT }
+				168 = { add_core_of = ROOT }
+				167 = { add_core_of = ROOT }
+				165 = { add_core_of = ROOT }
+				177 = { add_core_of = ROOT }
+			}
+			hidden_effect = {
+				news_event = { id = md_news.1 hours = 6 }
+				set_global_flag = form_iberia_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+form_greater_bulgaria_category = {
+
+	form_greater_bulgaria = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = BUL
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+			is_subject = no
+			controls_state = 77
+			controls_state = 106
+			controls_state = 184
+			controls_state = 731
+			all_owned_state = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		visible = {
+			AND = {
+				original_tag = BUL
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+			NOT = { has_global_flag = form_greater_bulgaria_flag }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = BUL_GREATER_BULGARIA
+			custom_effect_tooltip = form_country_bulgaria_coring_states_tt
+			77 = { add_core_of = ROOT }
+			106 = { add_core_of = ROOT }
+			184 = { add_core_of = ROOT }
+			731 = { add_core_of = ROOT }
+			hidden_effect = {
+				set_global_flag = form_greater_bulgaria_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+form_mexican_empire_category = {
+
+	form_mexican_empire = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = MEX
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+			is_subject = no
+			controls_state = 375
+			controls_state = 376
+			controls_state = 377
+			controls_state = 378
+			controls_state = 379
+			controls_state = 380
+			controls_state = 313
+			controls_state = 311
+			controls_state = 314
+			controls_state = 312
+			controls_state = 317
+			controls_state = 316
+			all_owned_state = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		visible = {
+			AND = {
+				original_tag = MEX
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+			NOT = { has_global_flag = form_mexican_empire_flag }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = MEX_MEXICAN_EMPIRE
+			custom_effect_tooltip = form_country_guatemala_coring_states_tt
+			custom_effect_tooltip = form_country_honduras_coring_states_tt
+			custom_effect_tooltip = form_country_el_salvador_coring_states_tt
+			custom_effect_tooltip = form_country_nicaragua_coring_states_tt
+			custom_effect_tooltip = form_country_costa_rica_coring_states_tt
+			custom_effect_tooltip = form_country_some_usa_coring_states_tt
+			custom_effect_tooltip = form_country_some_united_kingdom_coring_states_tt
+			hidden_effect = {
+				375 = { add_core_of = ROOT }
+				376 = { add_core_of = ROOT }
+				377 = { add_core_of = ROOT }
+				378 = { add_core_of = ROOT }
+				379 = { add_core_of = ROOT }
+				380 = { add_core_of = ROOT }
+				313 = { add_core_of = ROOT }
+				311 = { add_core_of = ROOT }
+				314 = { add_core_of = ROOT }
+				312 = { add_core_of = ROOT }
+				317 = { add_core_of = ROOT }
+				316 = { add_core_of = ROOT }
+				set_global_flag = form_mexican_empire_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+form_australasia_category = {
+
+	form_australasia = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = AST
+				original_tag = NZL
+			}
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+			is_subject = no
+			controls_state = 636
+			controls_state = 635
+			controls_state = 734
+			controls_state = 669
+			controls_state = 738
+			controls_state = 643
+			controls_state = 639
+			controls_state = 642
+			custom_trigger_tooltip = {
+				tooltip = form_country_new_zealand_required_states_tt
+				controls_state = 723
+				controls_state = 284
+			}
+			custom_trigger_tooltip = {
+				tooltip = form_country_australia_required_states_tt
+				controls_state = 518
+				controls_state = 519
+				controls_state = 521
+				controls_state = 674
+				controls_state = 520
+				controls_state = 522
+				controls_state = 523
+				controls_state = 737
+				controls_state = 634
+				controls_state = 285
+				controls_state = 517
+			}
+			all_owned_state = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = AST
+				original_tag = NZL
+			}
+			NOT = { has_global_flag = form_australasia_flag }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = AST_AUSTRALASIA
+			custom_effect_tooltip = form_country_australia_coring_states_tt
+			custom_effect_tooltip = form_country_new_zealand_coring_states_tt
+			custom_effect_tooltip = form_country_some_dutch_east_indies_coring_states_tt
+			custom_effect_tooltip = form_country_some_france_coring_states_tt
+			custom_effect_tooltip = form_country_some_united_kingdom_coring_states_tt
+			hidden_effect = {
+				723 = { add_core_of = ROOT }
+				284 = { add_core_of = ROOT }
+				636 = { add_core_of = ROOT }
+				635 = { add_core_of = ROOT }
+				734 = { add_core_of = ROOT }
+				669 = { add_core_of = ROOT }
+				738 = { add_core_of = ROOT }
+				643 = { add_core_of = ROOT }
+				639 = { add_core_of = ROOT }
+				642 = { add_core_of = ROOT }
+				285 = { add_core_of = ROOT }
+				517 = { add_core_of = ROOT }
+				518 = { add_core_of = ROOT }
+				519 = { add_core_of = ROOT }
+				521 = { add_core_of = ROOT }
+				674 = { add_core_of = ROOT }
+				520 = { add_core_of = ROOT }
+				522 = { add_core_of = ROOT }
+				523 = { add_core_of = ROOT }
+				737 = { add_core_of = ROOT }
+				634 = { add_core_of = ROOT }
+				set_global_flag = form_australasia_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+form_greater_finland_category = {
+
+	form_greater_finland = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = FIN
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+			is_subject = no
+			controls_state = 213
+			controls_state = 215
+			controls_state = 216
+			controls_state = 146
+			controls_state = 147
+			all_owned_state = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		visible = {
+			original_tag = FIN
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+			NOT = { has_global_flag = form_greater_finland_flag }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = FIN_GREATER_FINLAND
+			custom_effect_tooltip = form_country_some_soviet_union_coring_states_tt
+			hidden_effect = {
+				213 = { add_core_of = ROOT }
+				215 = { add_core_of = ROOT }
+				216 = { add_core_of = ROOT }
+				146 = { add_core_of = ROOT }
+				147 = { add_core_of = ROOT }
+				set_global_flag = form_greater_finland_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+form_italian_empire_category = {
+
+	form_italian_empire = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = ITA
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = form_country_yugoslav_coast_required_states_tt
+				controls_state = 103
+				controls_state = 105
+			}
+			custom_trigger_tooltip = {
+				tooltip = form_country_western_greek_coast_required_states_tt
+				controls_state = 185
+				controls_state = 186
+			}
+			is_subject = no
+			controls_state = 735
+			controls_state = 102
+			controls_state = 44
+			custom_trigger_tooltip = {
+				tooltip = form_country_tunisia_region_required_states_tt
+				controls_state = 665
+				controls_state = 458
+			}
+			controls_state = 452
+			controls_state = 182
+			controls_state = 269
+			controls_state = 1
+			all_owned_state = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		visible = {
+			AND = {
+				original_tag = ITA
+				has_government = fascism
+			}
+			NOT = { has_global_flag = form_italian_empire_flag }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = ITA_ITALIAN_EMPIRE
+			custom_effect_tooltip = form_country_some_yugoslavia_coring_states_tt
+			custom_effect_tooltip = form_country_some_greece_coring_states_tt
+			custom_effect_tooltip = form_country_some_france_coring_states_tt
+			custom_effect_tooltip = form_country_some_united_kingdom_coring_states_tt
+			hidden_effect = {
+				103 = { add_core_of = ROOT }
+				105 = { add_core_of = ROOT }
+				102 = { add_core_of = ROOT }
+				185 = { add_core_of = ROOT }
+				186 = { add_core_of = ROOT }
+				182 = { add_core_of = ROOT }
+				735 = { add_core_of = ROOT }
+				665 = { add_core_of = ROOT }
+				458 = { add_core_of = ROOT }
+				452 = { add_core_of = ROOT }
+				182 = { add_core_of = ROOT }
+				269 = { add_core_of = ROOT }
+			}
+			44 = { add_core_of = ROOT }
+			
+			hidden_effect = {
+				set_global_flag = form_italian_empire_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+form_zapadoslavia_category = {
+	
+	form_zapadoslavia = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = CZE
+				original_tag = POL
+			}
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+			is_subject = no
+			# Czechoslovakia
+			custom_trigger_tooltip = {
+				tooltip = form_country_czechoslovakia_required_states_tt
+				controls_state = 69
+				controls_state = 9
+				controls_state = 75
+				controls_state = 74
+				controls_state = 72
+				controls_state = 70
+				controls_state = 664
+				controls_state = 71
+				controls_state = 73
+			}
+			# Poland
+			custom_trigger_tooltip = {
+				tooltip = form_country_poland_required_states_tt
+				controls_state = 85
+				controls_state = 86
+				controls_state = 87
+				controls_state = 88
+				controls_state = 90
+				controls_state = 98
+				controls_state = 10
+				controls_state = 97
+				controls_state = 92
+				controls_state = 91
+				controls_state = 89
+				controls_state = 93
+				controls_state = 94
+				controls_state = 95
+				controls_state = 96
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = CZE
+				original_tag = POL
+			}
+			NOT = { has_global_flag = form_zapadoslavia_flag }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = ZAP_ZAPADOSLAVIA
+			# Czechoslovakia
+			custom_effect_tooltip = form_country_czechoslovakia_coring_states_tt
+			hidden_effect = {
+				69 = { add_core_of = ROOT }
+				9 = { add_core_of = ROOT }
+				75 = { add_core_of = ROOT }
+				74 = { add_core_of = ROOT }
+				72 = { add_core_of = ROOT }
+				70 = { add_core_of = ROOT }
+				664 = { add_core_of = ROOT }
+				71 = { add_core_of = ROOT }
+				73 = { add_core_of = ROOT }
+			}
+			# Poland
+			custom_effect_tooltip = form_country_poland_coring_states_tt
+			hidden_effect = {
+				85 = { add_core_of = ROOT }
+				86 = { add_core_of = ROOT }
+				87 = { add_core_of = ROOT }
+				88 = { add_core_of = ROOT }
+				90 = { add_core_of = ROOT }
+				98 = { add_core_of = ROOT }
+				10 = { add_core_of = ROOT }
+				97 = { add_core_of = ROOT }
+				92 = { add_core_of = ROOT }
+				91 = { add_core_of = ROOT }
+				89 = { add_core_of = ROOT }
+				93 = { add_core_of = ROOT }
+				94 = { add_core_of = ROOT }
+				95 = { add_core_of = ROOT }
+				96 = { add_core_of = ROOT }
+			}
+			hidden_effect = {
+				news_event = { id = md_news.2 hours = 6 }
+				set_global_flag = form_zapadoslavia_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+form_la_plata_category = {
+
+	form_la_plata = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = ARG
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+			is_subject = no
+			controls_state = 506
+			controls_state = 487
+			controls_state = 302
+			controls_state = 688
+			controls_state = 301
+			controls_state = 300
+			controls_state = 299
+			all_owned_state = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		visible = {
+			original_tag = ARG
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+				has_government = communism
+			}
+			NOT = { has_global_flag = form_la_plata_flag }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = ARG_LA_PLATA
+			custom_effect_tooltip = form_country_all_paraguay_states_tt
+			custom_effect_tooltip = form_country_all_uruguay_states_tt
+			custom_effect_tooltip = form_country_all_bolivia_states_tt
+			custom_effect_tooltip = form_country_some_chile_states_tt
+			custom_effect_tooltip = form_country_some_united_kingdom_coring_states_tt
+			hidden_effect = {
+				506 = { add_core_of = ROOT }
+				487 = { add_core_of = ROOT }
+				302 = { add_core_of = ROOT }
+				688 = { add_core_of = ROOT }
+				301 = { add_core_of = ROOT }
+				300 = { add_core_of = ROOT }
+				299 = { add_core_of = ROOT }
+				set_global_flag = form_la_plata_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+form_macedonia_category = {
+
+	form_macedonia = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = GRE
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+			is_subject = no
+			# Bulgaria
+			custom_trigger_tooltip = {
+				tooltip = form_country_bulgaria_required_states_tt
+				controls_state = 211
+				controls_state = 48
+				controls_state = 212
+			}
+			# Iran
+			custom_trigger_tooltip = {
+				tooltip = form_country_iran_required_states_tt
+				controls_state = 419
+				controls_state = 420
+				controls_state = 421
+				controls_state = 413
+				controls_state = 411
+				controls_state = 417
+				controls_state = 266
+				controls_state = 418
+				controls_state = 416
+				controls_state = 412
+			}
+			# Afghanistan
+			custom_trigger_tooltip = {
+				tooltip = form_country_afghanistan_required_states_tt
+				controls_state = 415
+				controls_state = 267
+			}
+			# Iraq
+			custom_trigger_tooltip = {
+				tooltip = form_country_iraq_required_states_tt
+				controls_state = 291
+				controls_state = 675
+				controls_state = 676
+			}
+			# French Middle East
+			custom_trigger_tooltip = {
+				tooltip = form_country_france_middle_east_required_states_tt
+				controls_state = 680
+				controls_state = 677
+				controls_state = 554
+				controls_state = 553
+			}
+			# British Middle East
+			custom_trigger_tooltip = {
+				tooltip = form_country_uk_middle_east_required_states_tt
+				controls_state = 455
+				controls_state = 454
+			}
+			controls_state = 444
+			controls_state = 353
+			controls_state = 352
+			controls_state = 350
+			controls_state = 349
+			controls_state = 344
+			controls_state = 348
+			controls_state = 356
+			controls_state = 345
+			controls_state = 346
+			controls_state = 49
+			controls_state = 343
+			controls_state = 342
+			controls_state = 339
+			controls_state = 341
+			controls_state = 106
+			controls_state = 656
+			controls_state = 453
+			controls_state = 446
+			controls_state = 452
+			controls_state = 456
+			controls_state = 663
+			controls_state = 451
+			controls_state = 450
+			controls_state = 77
+			all_owned_state = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		visible = {
+			original_tag = GRE
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+				has_government = communism
+			}
+			NOT = { has_global_flag = form_macedonia_flag }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = GRE_MACEDONIA
+			custom_effect_tooltip = form_country_all_bulgaria_states_tt
+			custom_effect_tooltip = form_country_all_iran_states_tt
+			custom_effect_tooltip = form_country_all_afghanistan_states_tt
+			custom_effect_tooltip = form_country_all_iraqi_states_tt
+			custom_effect_tooltip = form_country_middle_east_french_states_tt
+			custom_effect_tooltip = form_country_middle_east_british_states_tt
+			77 = { add_core_of = ROOT }
+			hidden_effect = {
+				211 = { add_core_of = ROOT }
+				48 = { add_core_of = ROOT }
+				212 = { add_core_of = ROOT }
+				419 = { add_core_of = ROOT }
+				420 = { add_core_of = ROOT }
+				421 = { add_core_of = ROOT }
+				413 = { add_core_of = ROOT }
+				411 = { add_core_of = ROOT }
+				417 = { add_core_of = ROOT }
+				266 = { add_core_of = ROOT }
+				418 = { add_core_of = ROOT }
+				416 = { add_core_of = ROOT }
+				412 = { add_core_of = ROOT }
+				415 = { add_core_of = ROOT }
+				267 = { add_core_of = ROOT }
+				291 = { add_core_of = ROOT }
+				675 = { add_core_of = ROOT }
+				676 = { add_core_of = ROOT }
+				680 = { add_core_of = ROOT }
+				677 = { add_core_of = ROOT }
+				554 = { add_core_of = ROOT }
+				553 = { add_core_of = ROOT }
+				455 = { add_core_of = ROOT }
+				454 = { add_core_of = ROOT }
+				444 = { add_core_of = ROOT }
+				353 = { add_core_of = ROOT }
+				352 = { add_core_of = ROOT }
+				350 = { add_core_of = ROOT }
+				349 = { add_core_of = ROOT }
+				344 = { add_core_of = ROOT }
+				448 = { add_core_of = ROOT }
+				356 = { add_core_of = ROOT }
+				345 = { add_core_of = ROOT }
+				346 = { add_core_of = ROOT }
+				49 = { add_core_of = ROOT }
+				343 = { add_core_of = ROOT }
+				342 = { add_core_of = ROOT }
+				339 = { add_core_of = ROOT }
+				341 = { add_core_of = ROOT }
+				106 = { add_core_of = ROOT }
+				656 = { add_core_of = ROOT }
+				453 = { add_core_of = ROOT }
+				446 = { add_core_of = ROOT }
+				452 = { add_core_of = ROOT }
+				456 = { add_core_of = ROOT }
+				663 = { add_core_of = ROOT }
+				451 = { add_core_of = ROOT }
+				450 = { add_core_of = ROOT }
+				set_global_flag = form_macedonia_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

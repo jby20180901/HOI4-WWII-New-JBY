@@ -1,0 +1,1582 @@
+focus_tree = {
+	id = DBJ_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = DBJ
+		}
+	}
+	
+continuous_focus_position =  { x = 10 y = 1300 }
+	
+	default = no
+	 
+
+	#卷土重来
+	focus = {
+		id = DBJ_juantuchonglai
+		icon = GFX_goal_CHI_junqi
+		x = 3
+		y = 0
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power  = 100
+		}
+	}
+	
+		
+	#整顿西安工商业
+	focus = {
+		id = DBJ_zhengdunxiangongshangye
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = DBJ_juantuchonglai }
+		available = {
+        	
+		}
+		x = -3
+		y = 1
+		relative_position_id = DBJ_juantuchonglai
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = eastasia_idea_DBJ_gongshangyehuifu
+				days = 365
+			}
+		}
+	}
+	
+	
+	#安抚民心
+	focus = {
+		id = DBJ_anfuminxin
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = DBJ_juantuchonglai }
+		available = {
+        	
+		}
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = DBJ_juantuchonglai
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 100000
+		}
+	}
+	
+	#休养生息
+	focus = {
+		id = DBJ_xiuyangshenxi
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = DBJ_zhengdunxiangongshangye }
+		prerequisite = { focus = DBJ_anfuminxin }
+		available = {
+        	
+		}
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = DBJ_zhengdunxiangongshangye
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+			add_timed_idea = {
+				idea = eastasia_idea_DBJ_xiuyangshengxi
+				days = 365
+			}
+		}
+	}
+	
+	#西安兵工厂
+	focus = {
+		id = DBJ_xianbinggongchang
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = DBJ_xiuyangshenxi }
+		available = {
+        	744 = { is_controlled_by = DBJ }
+		}
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = DBJ_xiuyangshenxi
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			744 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	#投资民办工业
+	focus = {
+		id = DBJ_touziminbangongchang
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = DBJ_xiuyangshenxi }
+		available = {
+        	744 = { is_controlled_by = DBJ }
+		}
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = DBJ_xiuyangshenxi
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			744 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	#资源开发
+	focus = {
+		id = DBJ_ziyuankaifa
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = DBJ_xianbinggongchang }
+		prerequisite = { focus = DBJ_touziminbangongchang }
+		available = {
+        	
+		}
+		x = 1
+		y = 1
+		relative_position_id = DBJ_xianbinggongchang
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = eastasia_idea_DBJ_ziyuankaifa
+				days = 365
+			}
+		}
+	}
+	
+	#西安机场
+	focus = {
+		id = DBJ_xianjichang
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = DBJ_ziyuankaifa }
+		available = {
+        	744 = { is_controlled_by = DBJ }
+		}
+		x = -1
+		y = 1
+		relative_position_id =DBJ_ziyuankaifa
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			744 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	#西安公路
+	focus = {
+		id = DBJ_xiangonglu
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = DBJ_ziyuankaifa }
+		available = {
+        	744 = { is_controlled_by = DBJ }
+		}
+		x = 1
+		y = 1
+			relative_position_id = DBJ_ziyuankaifa
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			744 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	#西京民报
+	focus = {
+		id = DBJ_xijingminbao
+		icon = GFX_goal_news_baohzhi
+		prerequisite = { focus = DBJ_xianjichang }
+		prerequisite = { focus = DBJ_xiangonglu }
+		available = {
+        	744 = { is_controlled_by = DBJ }
+		}
+		x = 1
+		y = 1
+		relative_position_id =  DBJ_xianjichang
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = eastasia_idea_DBJ_xijingminbao
+				days = 365
+			}
+			set_rule = { can_create_factions = yes }
+		}
+	}
+	
+	#重整东北军
+	focus = {
+		id = DBJ_chongzhengdongbeijun
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = DBJ_juantuchonglai }
+		available = {
+        	
+		}
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id =  DBJ_juantuchonglai
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = eastasia_idea_DBJ_tongyihaoling
+		}
+	}
+	
+	
+	#构筑西安防线
+	focus = {
+		id = DBJ_gouzhuxianfangxian
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = DBJ_juantuchonglai }
+		available = {
+			744 = { is_controlled_by = DBJ }
+		}
+		x = 3
+		y = 1
+		cost = 5
+		relative_position_id =  DBJ_juantuchonglai
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			744 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 2006
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 1976
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 7301
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 12713
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	#兵谏西安
+	focus = {
+		id = DBJ_bingjian_xian
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { focus = DBJ_chongzhengdongbeijun }
+		prerequisite = { focus = DBJ_gouzhuxianfangxian }
+		mutually_exclusive = { focus = DBJ_kangrifanjianglianmeng }
+	available = {
+	   NOT = {
+				has_global_flag = CHI_xian_fired
+			}
+			CHI = {
+				NOT = {
+					is_in_faction_with = PRC
+				}
+				NOT = {
+					has_war_with = JAP
+				}
+				NOT = {
+					has_war_with = PRC
+				}
+				NOT = {
+						has_completed_focus = CHI_guogonghezuo	
+					
+				}
+			}
+		
+		OR = {
+        	744 = { is_controlled_by = DBJ }
+			country_exists = PRC
+			 }
+			 
+		OR = {
+		     is_ai = no 
+			 date > 1936.12.12
+		}	 	
+	}
+ bypass={
+       CHI = {is_in_faction_with = PRC }
+		   OR = {
+		    has_global_flag = CHI_xian_fired
+		    date > 1937.7.7
+			NOT = { country_exists = PRC }
+			CHI = { has_war_with = JAP }
+			    }
+		}
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id =  DBJ_chongzhengdongbeijun
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			set_rule = { can_send_volunteers = yes }
+			CHI = { country_event = { id = dbj.1 days = 1 } }
+		}
+	}
+	
+	#抗日反蒋联盟
+	focus = {
+		id = DBJ_kangrifanjianglianmeng
+		icon = GFX_goal_generic_attack_allies
+		mutually_exclusive = { focus = DBJ_bingjian_xian }
+		prerequisite = { focus = DBJ_chongzhengdongbeijun }
+		prerequisite = { focus = DBJ_gouzhuxianfangxian }
+		available = {
+        	744 = { is_controlled_by = DBJ }
+			is_ai = no 
+			NOT = {
+				has_global_flag = CHI_xian_fired
+			}
+			CHI = {
+				NOT = {
+					is_in_faction_with = PRC
+				}
+				NOT = {
+					has_war_with = JAP
+				}
+				NOT = {
+					has_war_with = PRC
+				}
+				NOT = {
+						has_completed_focus = CHI_guogonghezuo	
+					
+				}
+			}
+			
+		}
+		bypass={
+		   OR = {
+		    has_global_flag = CHI_xian_fired
+		    date > 1937.7.7
+			NOT = { country_exists = PRC }
+			CHI = { has_war_with = JAP }
+			    }
+		}
+		x = 0
+		y = 1
+		relative_position_id = DBJ_gouzhuxianfangxian
+		cost = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+			set_rule = { can_send_volunteers = yes }
+			news_event = eastasia.81
+			
+		}
+	}
+	
+	#抗日：誓死卫国
+	focus = {
+		id = DBJ_kangri_shisiweiguo
+		icon = GFX_goal_china_liliang_II
+		prerequisite = { focus = DBJ_bingjian_xian focus = DBJ_kangrifanjianglianmeng }
+		available = {
+		    date > 1937.7.7
+			NOT = { has_war_with = PRC }
+			NOT = { has_war_with = SHX }
+		}
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = DBJ_bingjian_xian
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+			declare_war_on = { target = MAN type = annex_everything }
+		}
+	}
+	
+  #长安军官训练团
+	focus = {
+		id = DBJ_changanjunguanxunliantuan
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		prerequisite = { focus = DBJ_kangri_shisiweiguo }
+		available = {
+        	744 = { is_controlled_by = DBJ }
+		}
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = DBJ_kangri_shisiweiguo
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = eastasia_idea_DBJ_junguanxunliantuan
+		}
+	}
+	
+	#采购枪支弹药
+	focus = {
+		id = DBJ_caigouqiangzhidanyao
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = DBJ_kangri_shisiweiguo }
+		available = {
+        	
+		}
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = DBJ_kangri_shisiweiguo
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 2000
+				producer = DBJ
+			}
+		}
+	}
+	
+	#一寸山河一寸血
+	focus = {
+		id = DBJ_yicunshanheyicunxue
+		icon = GFX_goal_yicunshanheyicunxue
+		prerequisite = { focus = DBJ_changanjunguanxunliantuan }
+		prerequisite = { focus = DBJ_caigouqiangzhidanyao }
+		available = {
+			has_war = yes
+			is_puppet = no
+		}
+		x = -1
+		y = 1
+		cost = 15
+		relative_position_id = DBJ_caigouqiangzhidanyao
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+			add_timed_idea = {
+				idea = EastAsia_CHI_yicunshanheyicunxue
+				days = 720
+			}
+		}
+	}
+	
+	#自主抗战，进军保定
+	focus = {
+		id = DBJ_dongbeiyiyongjunxiangying
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = DBJ_yicunshanheyicunxue }
+		available = {
+        	country_exists = XBJ
+			XBJ = { is_ai = yes }
+		}
+		x = 0
+		y = 1
+		cost = 1
+		relative_position_id = DBJ_yicunshanheyicunxue
+		ai_will_do = {
+			factor = 1
+		}
+		bypass={
+			OR = {
+				NOT = { country_exists = XBJ }
+				XBJ = { is_ai = no }
+			}
+		}
+		completion_reward = {
+			annex_country = { target = XBJ transfer_troops = yes }
+		}
+	}
+	
+	
+	
+	#学兵队
+	focus = {
+		id = DBJ_xuebingdui
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = DBJ_xiangonglu }
+		prerequisite = { focus = DBJ_yicunshanheyicunxue }
+		available = {
+        	744 = { is_controlled_by = DBJ }
+		}
+		x = -2
+		y = 1
+		cost = 10
+		relative_position_id = DBJ_yicunshanheyicunxue
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = xuebingdui_tip
+			hidden_effect  = {
+				DBJ = { load_oob = "DBJ_xuebingdui" }
+			}
+		}
+	}
+	
+	
+	#讲武堂
+	focus = {
+		id = EastAsia_DBJ_jiangwutang
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = DBJ_juantuchonglai }
+		available = {
+        	
+		}
+		x = 15
+		y = 1
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	#陆军操练
+	focus = {
+		id = EastAsia_DBJ_lujuncaolian
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = EastAsia_DBJ_jiangwutang }
+		available = {
+        	
+		}
+		x = 11
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 100
+		}
+	}
+	
+	#东北军扩编
+	focus = {
+		id = EastAsia_DBJ_junxiaokuozhao
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = EastAsia_DBJ_lujuncaolian }
+		available = {
+        	
+		}
+		x = 9
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = eastasia_idea_DBJ_dongbeijunkuobian
+				days = 720
+			}
+		}
+	}
+	
+	#骑兵强化特训
+	focus = {
+		id = EastAsia_DBJ_qibingqianghuatexun
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = EastAsia_DBJ_junxiaokuozhao }
+		available = {
+        	
+		}
+		x = 8
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = eastasia_idea_DBJ_qibingqianghuatexun
+		}
+	}
+	
+	#虎豹骑
+	focus = {
+		id = EastAsia_DBJ_hubaoqi
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = EastAsia_DBJ_qibingqianghuatexun }
+		available = {
+        	
+		}
+		x = 8
+		y = 5
+		cost = 20
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = eastasia_idea_DBJ_qibingqianghuatexun
+			add_ideas = eastasia_idea_DBJ_hubaoqi
+		}
+	}
+	
+	#战术化
+	focus = {
+		id = EastAsia_DBJ_zhanshuhua
+		icon = GFX_goal_molotov_ribbentrop_pact
+		prerequisite = { focus = EastAsia_DBJ_junxiaokuozhao }
+		available = {
+        	
+		}
+		x = 10
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = eastasia_idea_DBJ_zhanshuhua_lujun
+		}
+	}
+	
+	#大刀队
+	focus = {
+		id = EastAsia_DBJ_dadaodui
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = EastAsia_DBJ_zhanshuhua }
+		available = {
+        	
+		}
+		x = 10
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		bypass={
+			has_tech = tech_recon
+		}
+		completion_reward = {
+			set_technology = { tech_recon  = 1 }
+		}
+	}
+	
+	#军需库：合理化分配
+	focus = {
+		id = EastAsia_DBJ_tiaozhengjunxu
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = EastAsia_DBJ_hubaoqi }
+		prerequisite = { focus = EastAsia_DBJ_dadaodui }
+		available = {
+        	
+		}
+		x = 9
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = eastasia_idea_DBJ_junxutiaokong
+		}
+	}
+	
+	#中正式步枪
+	focus = {
+		id = EastAsia_DBJ_zhongzhengshibuqiang
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = EastAsia_DBJ_lujuncaolian }
+		x = 13
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		bypass={
+			has_tech = infantry_weapons1
+		}
+		completion_reward = {
+			army_experience = 150
+		}
+	}
+	
+	#陆军改造
+	focus = {
+		id = EastAsia_DBJ_yanjiumeixie
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = EastAsia_DBJ_zhongzhengshibuqiang }
+		available = {
+        	
+		}
+		x = 12
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = eastasia_idea_DBJ_lujungaizao
+		}
+	}
+	
+	#单兵装备改良
+	focus = {
+		id = EastAsia_DBJ_yanjiudexie
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = EastAsia_DBJ_zhongzhengshibuqiang }
+		available = {
+        	
+		}
+		x = 14
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		bypass={
+			has_tech = infantry_weapons2
+		}
+		completion_reward = {
+			set_technology = { infantry_weapons2 = 1 }
+		}
+	}
+	
+	#野战炮兵
+	focus = {
+		id = EastAsia_DBJ_yezhanpaobing
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = EastAsia_DBJ_yanjiudexie	focus = EastAsia_DBJ_yanjiumeixie }
+		available = {
+        	
+		}
+		x = 13
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {   
+				name = infantry_artillery_bonus    
+				bonus = 1
+				uses = 1            
+				category = artillery 
+			}
+		}
+	}
+	
+	#步炮协同
+	focus = {
+		id = EastAsia_DBJ_bupaoxietong
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = EastAsia_DBJ_yezhanpaobing }
+		prerequisite = { focus = EastAsia_DBJ_dadaodui }
+		available = {
+        	
+		}
+		x = 11
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = eastasia_idea_DBJ_bupaoxietong
+		}
+	}
+	
+	#机动化步兵
+	focus = {
+		id = EastAsia_DBJ_jidonghuabubing
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = EastAsia_DBJ_bupaoxietong }
+		prerequisite = { focus = EastAsia_DBJ_yezhanpaobing }
+		available = {
+        	
+		}
+		x = 13
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {   
+				name = motorized_bonus    
+				bonus = 1
+				uses = 1
+				category = motorized_equipment 
+			}
+		}
+	}
+	
+	#装甲师
+	focus = {
+		id = EastAsia_DBJ_zhuangjiabudui
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = EastAsia_DBJ_jidonghuabubing }
+		prerequisite = { focus = EastAsia_DBJ_tiaozhengjunxu }
+		prerequisite = { focus = EastAsia_DBJ_bupaoxietong }
+		available = {
+        	
+		}
+		x = 11
+		y = 8
+		cost = 12
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {   
+				name = armor_bonus    
+				bonus = 1
+				uses = 1
+				category = armor 
+			}
+		}
+	}
+	
+	#重振东北空军
+	focus = {
+		id = EastAsia_DBJ_chongzhengdongbeikongjun
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = EastAsia_DBJ_jiangwutang }
+		available = {
+        	716 = { is_controlled_by = DBJ }
+			date > 1937.1.1
+		}
+		x = 16
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			air_experience = 100
+		}
+	}
+	
+	#空降师
+	focus = {
+		id = EastAsia_DBJ_kongjiangshi
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = EastAsia_DBJ_chongzhengdongbeikongjun }
+		available = {
+        	
+		}
+		x = 15
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1
+				uses = 1
+				technology = paratroopers
+			}
+		}
+	}
+	
+	#王牌飞行团
+	focus = {
+		id = EastAsia_DBJ_wangpaifeixingtuan
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = EastAsia_DBJ_chongzhengdongbeikongjun }
+		available = {
+        	
+		}
+		x = 17
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = eastasia_idea_DBJ_wangpaifeixingtuan
+				days = 120
+			}
+		}
+	}
+	
+	#哈尔滨机场
+	focus = {
+		id = EastAsia_DBJ_haerbingjichang
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = EastAsia_DBJ_kongjiangshi }
+		prerequisite = { focus = EastAsia_DBJ_wangpaifeixingtuan }
+		available = {
+        	328 = { is_controlled_by = DBJ }
+		}
+		x = 16
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			328 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	#法国飞机
+	focus = {
+		id = EastAsia_DBJ_faguofeiji
+		icon = GFX_goal_goal_chi_feihudui
+		prerequisite = { focus = EastAsia_DBJ_haerbingjichang }
+		available = {
+        	NOT = { has_war_with = FRA }
+		}
+		x = 15
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = dbj_frafeiji_tip
+			hidden_effect = { load_oob = "DBJ_FRA_feiji" }
+			FRA = {
+				add_political_power = 50
+			}
+		}
+	}
+	
+	#英国飞机
+	focus = {
+		id = EastAsia_DBJ_yingguofeiji
+		icon = GFX_goal_goal_chi_feihudui
+		prerequisite = { focus = EastAsia_DBJ_faguofeiji }
+		available = {
+        	ENG = { has_war_with = FRA }
+		}
+		x = 15
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = dbj_engfeiji_tip
+			hidden_effect = { load_oob = "DBJ_ENG_feiji" }
+			ENG = {
+				add_political_power = 50
+			}
+		}
+	}
+	
+	#空军科学操练
+	focus = {
+		id = EastAsia_DBJ_kongjuncaolian
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = EastAsia_DBJ_haerbingjichang }
+		available = {
+        	
+		}
+		x = 17
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = eastasia_idea_DBJ_kongjuncaolian
+		}
+	}
+	
+	#高安全性航空
+	focus = {
+		id = EastAsia_DBJ_anquanfeixing
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = EastAsia_DBJ_kongjuncaolian }
+		available = {
+        	
+		}
+		x = 17
+		y = 6
+		cost = 15
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = eastasia_idea_DBJ_kongjuncaolian
+			add_ideas = eastasia_idea_DBJ_gaoanquanxinghangkong
+		}
+	}
+	
+	#重振东北海军
+	focus = {
+		id = EastAsia_DBJ_chonghzengdongbeihaijun
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = EastAsia_DBJ_jiangwutang }
+		available = {
+			716 = { is_controlled_by = DBJ }
+			date > 1937.1.1
+		}
+		x = 19
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 100
+		}
+	}
+	
+	#东北亚海军学院
+	focus = {
+		id = EastAsia_DBJ_dongbeiyahaijunxueyuan
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = EastAsia_DBJ_chonghzengdongbeihaijun }
+		available = {
+        	
+		}
+		x = 19
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {   
+				name = naval_doctrine_bonus    
+				bonus = 1
+				uses = 1          
+				category = naval_doctrine
+			}
+		}
+	}
+	
+	#巡洋舰队
+	focus = {
+		id = EastAsia_DBJ_xunyangjiandui
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = EastAsia_DBJ_dongbeiyahaijunxueyuan }
+		available = {
+        	
+		}
+		x = 18
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {   
+				name = naval_doctrine_bonus    
+				bonus = 1
+				uses = 1          
+				category = naval_doctrine
+			}
+		}
+	}
+	
+	#驱逐舰队
+	focus = {
+		id = EastAsia_DBJ_quzhujiandui
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = EastAsia_DBJ_dongbeiyahaijunxueyuan }
+		available = {
+        	
+		}
+		x = 20
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {   
+				name = naval_doctrine_bonus    
+				bonus = 1
+				uses = 1          
+				category = naval_doctrine
+			}
+		}
+	}
+	
+	#新北洋舰队
+	focus = {
+		id = EastAsia_DBJ_hangkongmujian
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = EastAsia_DBJ_quzhujiandui }
+		prerequisite = { focus = EastAsia_DBJ_xunyangjiandui }
+		available = {
+        	744 = { is_controlled_by = DBJ }
+		}
+		x = 19
+		y = 5
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+		}
+	}
+	
+	#东北科技研究院
+	focus = {
+		id = EastAsia_DBJ_dongbeiyanjiuyuan
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = EastAsia_DBJ_jiangwutang }
+		available = {
+        	date > 1937.1.1
+		}
+		x = 22
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	#重兴东北大学
+	focus = {
+		id = EastAsia_DBJ_chongxindongbeidaxue
+		icon = GFX_focus_research
+		prerequisite = { focus = EastAsia_DBJ_dongbeiyanjiuyuan }
+		available = {
+        	
+		}
+		x = 21
+		y = 3
+		cost = 12
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {   
+				name = infantry_weapons_bonus    
+				bonus = 1         
+				uses = 2             
+				category = infantry_weapons 
+			}
+		}
+	}
+	
+	#大学附厂
+	focus = {
+		id = EastAsia_DBJ_daxuefuchang
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = EastAsia_DBJ_dongbeiyanjiuyuan }
+		available = {
+        	
+		}
+		x = 23
+		y = 3
+		cost = 12
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {   
+				name = industrial_bonus    
+				bonus = 1         
+				uses = 2             
+				category = industry 
+			}
+		}
+	}
+	
+	#高薪招聘研究生
+	focus = {
+		id = EastAsia_DBJ_zhaopinyanjiusheng
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = EastAsia_DBJ_chongxindongbeidaxue }
+		prerequisite = { focus = EastAsia_DBJ_daxuefuchang }
+		available = {
+        	
+		}
+		x = 22
+		y = 4
+		cost = 12
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = eastasia_idea_DBJ_keyangugan
+		}
+	}
+	
+	#雷达站
+	focus = {
+		id = EastAsia_DBJ_leidazhan
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = EastAsia_DBJ_zhaopinyanjiusheng }
+		available = {
+        	328 = { is_controlled_by = DBJ }
+		}
+		x = 21
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			328 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = radar_station
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	
+	#电子研究
+	focus = {
+		id = EastAsia_DBJ_dianziyanjiu
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = EastAsia_DBJ_zhaopinyanjiusheng }
+		available = {
+        	
+		}
+		x = 23
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {   
+				name = radar_focus    
+				bonus = 1         
+				uses = 1            
+				category = radar_tech 
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = electronics	
+				
+			}
+		}
+	}
+	
+	#秘密实验室
+	focus = {
+		id = EastAsia_DBJ_mimishiyanshi
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = EastAsia_DBJ_dianziyanjiu }
+		prerequisite = { focus = EastAsia_DBJ_leidazhan }
+		available = {
+        	716 = { is_controlled_by = DBJ }
+		}
+		x = 22
+		y = 6
+		cost = 15
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	#核武器
+	focus = {
+		id = EastAsia_DBJ_hewuqi
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = EastAsia_DBJ_mimishiyanshi }
+		available = {
+        	
+		}
+		x = 21
+		y = 7
+		cost = 15
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {   
+				name = nuclear    
+				bonus = 1         
+				uses = 2             
+				category = nuclear 
+			}
+		}
+	}
+	
+	
+	#导弹实验
+	focus = {
+		id = EastAsia_DBJ_daodanshiyan
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = EastAsia_DBJ_mimishiyanshi }
+		available = {
+        	
+		}
+		x = 23
+		y = 7
+		cost = 15
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {   
+				name = jet_rocket_bonus    
+				bonus = 1         
+				uses = 2             
+				category = rocketry 
+			}
+		}
+	}
+	
+	#军事演习
+	focus = {
+		id = EastAsia_DBJ_junshiyanxi
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = EastAsia_DBJ_zhuangjiabudui }
+		prerequisite = { focus = EastAsia_DBJ_hangkongmujian }
+		prerequisite = { focus = EastAsia_DBJ_anquanfeixing }
+		available = {
+        	
+		}
+		x = 15
+		y = 9
+		cost = 20
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 300
+			air_experience = 200
+			navy_experience = 200
+		}
+	
+	
+}
+
+
+#东北王
+	focus = {
+		id = EastAsia_DBJ_dongbeiwang
+		icon = GFX_goal_DBJ_zhangzuolin
+		prerequisite = { focus = DBJ_xijingminbao }
+		prerequisite = { focus = DBJ_dongbeiyiyongjunxiangying }
+		available = {
+        	716 = { is_controlled_by = DBJ }
+		}
+		x = 0
+		y = 1
+		cost = 15
+		relative_position_id = DBJ_xuebingdui
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = DBJ_fengxi 
+			set_party_name = { ideology = neutrality long_name = DBJ_fengxi_neutrality_party_long name = DBJ_fengxi_neutrality_party }
+			set_politics = { ruling_party = neutrality elections_allowed = no }
+			add_popularity = { ideology = neutrality popularity = 1 }
+			remove_ideas = eastasia_idea_DBJ_jiachouguohen
+			set_capital = 716
+			add_political_power = 200
+			every_state = {
+				limit = {
+					is_owned_by = DBJ
+					is_core_of = DBJ
+				}
+				add_extra_state_shared_building_slots = 3
+			}
+			custom_effect_tooltip  = zhanlingqujianshecao_tip
+		}
+	}
+
+#中国：新秩序
+	focus = {
+		id = EastAsia_DBJ_xinzhongguo
+		icon = GFX_goal_xinzhixu_prc
+		mutually_exclusive = { focus = EastAsia_DBJ_xinminguo }
+		prerequisite = { focus = EastAsia_DBJ_dongbeiwang }
+		available = {
+        	is_ai = no
+		}
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = EastAsia_DBJ_dongbeiwang
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = DBJ_PRC
+			set_party_name = { ideology = neutrality long_name = DBJ_china_neutrality_party_long name = DBJ_china_neutrality_party }
+			add_popularity = { ideology = neutrality popularity = 1 }
+			set_politics = { ruling_party = neutrality elections_allowed = no }
+			news_event = eastasia.103
+			declare_war_on = { target = PRC type = annex_everything }
+			custom_effect_tooltip  = zhongguohexin_tip
+			hidden_effect = { 
+				every_state = { 
+					limit = {
+						or = {
+							is_core_of = PRC 
+						}
+					}
+					PREV = { 
+						ADD_STATE_CORE = PREV 
+					}
+				}
+				create_country_leader = {
+					name = "张学良"
+					desc = "EA_POLITICS_ZHANGXUELIANG_DESC"
+					picture = "DBJ_zhangxueliang.dds"
+					expire = "9999.1.1"
+					ideology = marxism
+					traits = {
+						#
+					}
+				}
+			}
+		}
+	}
+	
+	#民国：新秩序
+	focus = {
+		id = EastAsia_DBJ_xinminguo
+		icon = GFX_goal_xinzhixu_chi
+		mutually_exclusive = { focus = EastAsia_DBJ_xinzhongguo }
+		prerequisite = { focus = EastAsia_DBJ_dongbeiwang }
+		available = {
+        	is_ai = no
+		}
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = EastAsia_DBJ_dongbeiwang
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = DBJ_CHI
+			set_party_name = { ideology = neutrality long_name = DBJ_china_neutrality_party_long name = DBJ_china_neutrality_party }
+			add_popularity = { ideology = neutrality popularity = 1 }
+			set_politics = { ruling_party = neutrality elections_allowed = no }
+			news_event = eastasia.104
+			declare_war_on = { target = CHI type = annex_everything }
+			custom_effect_tooltip  = zhonghuaminguohexin_tip
+			hidden_effect = { 
+				every_state = { 
+					limit = {
+						or = {
+							is_core_of = CHI 
+						}
+					}
+					PREV = { 
+						ADD_STATE_CORE = PREV 
+					}
+				}
+				create_country_leader = {
+					name = "张学良"
+					desc = "EA_POLITICS_ZHANGXUELIANG_DESC"
+					picture = "DBJ_zhangxueliang.dds"
+					expire = "9999.1.1"
+					ideology = liberalism
+					traits = {
+						#
+					}
+				}
+			}
+		}
+	}
+
+
+
+
+
+
+}

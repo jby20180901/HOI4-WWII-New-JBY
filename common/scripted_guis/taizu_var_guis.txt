@@ -1,0 +1,390 @@
+scripted_gui = {
+    taizu_var = {
+	
+        window_name = "taizu_var_container"
+ 
+        context_type = player_context
+ 
+        visible = {
+			tag = PRC
+			PRC = {
+				has_government = communism
+			}
+		}
+		effects = {
+            taizu_var_bg_click = {
+                add_to_variable { show_taizu_menu = 1 }
+            }
+        }
+        triggers = {
+            taizu_var_bg_click_enabled = {
+				check_variable = { show_taizu_menu = 0 }
+			}
+        }
+    }
+	taizu_var_menu = {
+	
+        window_name = "taizu_var_beijing"
+ 
+        context_type = player_context
+ 
+        visible = {
+			tag = PRC
+			PRC = {
+				has_government = communism
+			}
+			check_variable = { show_taizu_menu = 1 }
+		}
+		effects = {
+            taizu_var_beijing_close_click = {
+                subtract_from_variable = { show_taizu_menu = 1}
+            }
+			
+			taizu_var_gridbox_entry1_bg_click = {
+				taizu_buff1_start = yes
+            }
+			taizu_var_gridbox_entry1_off_bg_click = {
+				taizu_buff1_end = yes
+            }
+			taizu_var_gridbox_entry2_bg_click = {
+                taizu_buff2_start = yes
+            }
+			taizu_var_gridbox_entry2_off_bg_click = {
+                taizu_buff2_end = yes
+            }
+			taizu_var_gridbox_entry3_bg_click = {
+                taizu_buff3_start = yes
+            }
+			taizu_var_gridbox_entry3_off_bg_click = {
+                taizu_buff3_end = yes
+            }
+			taizu_var_gridbox_entry4_bg_click = {
+                taizu_buff4_start = yes
+            }
+			taizu_var_gridbox_entry4_off_bg_click = {
+                taizu_buff4_end = yes
+            }
+			taizu_var_gridbox_entry5_bg_click = {
+                taizu_buff5_start = yes
+            }
+			taizu_var_gridbox_entry5_off_bg_click = {
+                taizu_buff5_end = yes
+            }
+			taizu_var_gridbox_entry6_bg_click = {
+                taizu_buff6_start = yes
+            }
+			taizu_var_gridbox_entry6_off_bg_click = {
+                taizu_buff6_end = yes
+            }
+			taizu_var_gridbox_entry7_bg_click = {
+                taizu_buff7_start = yes
+            }
+			taizu_var_gridbox_entry7_off_bg_click = {
+                taizu_buff7_end = yes
+            }
+			
+			
+			
+			
+			
+        }
+        triggers = {
+            taizu_var_gridbox_entry1_bg_click_enabled = {
+				check_variable = { show_taizu_menu1 = 0 }
+				check_variable = { taizu_var > taizu_var_cost1 }
+			}
+			taizu_var_gridbox_entry1_off_bg_click_enabled = {
+				check_variable = { show_taizu_menu1 = 1 }
+			}
+			taizu_var_gridbox_entry2_bg_click_enabled = {
+				check_variable = { show_taizu_menu2 = 0 }
+				check_variable = { taizu_var > taizu_var_cost2 }
+			}
+			taizu_var_gridbox_entry2_off_bg_click_enabled = {
+				check_variable = { show_taizu_menu2 = 1 }
+			}
+			taizu_var_gridbox_entry3_bg_click_enabled = {
+				check_variable = { show_taizu_menu3 = 0 }
+				check_variable = { taizu_var > taizu_var_cost3 }
+			}
+			taizu_var_gridbox_entry3_off_bg_click_enabled = {
+				check_variable = { show_taizu_menu3 = 1 }
+			}
+			taizu_var_gridbox_entry4_bg_click_enabled = {
+				check_variable = { show_taizu_menu4 = 0 }
+				check_variable = { taizu_var > taizu_var_cost4 }
+			}
+			taizu_var_gridbox_entry4_off_bg_click_enabled = {
+				check_variable = { show_taizu_menu4 = 1 }
+			}
+			taizu_var_gridbox_entry5_bg_click_enabled = {
+				check_variable = { show_taizu_menu5 = 0 }
+				check_variable = { taizu_var > taizu_var_cost5 }
+			}
+			taizu_var_gridbox_entry5_off_bg_click_enabled = {
+				check_variable = { show_taizu_menu5 = 1 }
+			}
+			taizu_var_gridbox_entry6_bg_click_enabled = {
+				check_variable = { show_taizu_menu6 = 0 }
+				check_variable = { taizu_var > taizu_var_cost6 }
+			}
+			taizu_var_gridbox_entry6_off_bg_click_enabled = {
+				check_variable = { show_taizu_menu6 = 1 }
+			}
+			taizu_var_gridbox_entry7_bg_click_enabled = {
+				check_variable = { show_taizu_menu7 = 0 }
+				check_variable = { taizu_var > taizu_var_cost7 }
+			}
+			taizu_var_gridbox_entry7_off_bg_click_enabled = {
+				check_variable = { show_taizu_menu7 = 1 }
+			}
+			
+			
+			
+			
+			
+        }
+    }
+	
+	taizu_var_upgrade1 = {
+		context_type = player_context
+		window_name = "taizu_var_jiandie_upgrade1"
+		parent_window_name = "intelligence_agency_upgrades_window"
+		visible = {
+			tag = PRC
+		}
+		effects = {
+			taizu_var_jiandie_upgrade1_bt_click = {
+				subtract_from_variable = {
+					var = taizu_var
+					value = taizu_var_jiandie_upgrade_cost1
+				}
+				subtract_from_variable = {
+					var = taizu_var_jiandie_upgrade1_frequency
+					value = 1
+				}
+				PRC = { 
+					clr_country_flag = taizu_var_jiandie_upgrade_end
+					set_country_flag = upgrade1_pro_hajimaru
+				}
+			}
+		}
+		triggers = {
+			taizu_var_jiandie_upgrade1_bt_click_enabled = {
+				check_variable = {
+					var = taizu_var
+					value = taizu_var_jiandie_upgrade_cost1
+					compare = greater_than_or_equals
+				}
+				check_variable = {
+					var = taizu_var_jiandie_upgrade1_frequency
+					value = 0
+					compare = greater_than
+				}
+				PRC = { has_country_flag = taizu_var_jiandie_upgrade_end }
+			}
+		}
+	}
+	
+	taizu_var_upgrade2 = {
+		context_type = player_context
+		window_name = "taizu_var_jiandie_upgrade2"
+		parent_window_name = "intelligence_agency_upgrades_window"
+		visible = {
+			tag = PRC
+		}
+		effects = {
+			taizu_var_jiandie_upgrade2_bt_click = {
+				subtract_from_variable = {
+					var = taizu_var
+					value = taizu_var_jiandie_upgrade_cost2
+				}
+				subtract_from_variable = {
+					var = taizu_var_jiandie_upgrade2_frequency
+					value = 1
+				}
+				PRC = { 
+					clr_country_flag = taizu_var_jiandie_upgrade_end
+					set_country_flag = upgrade2_pro_hajimaru
+				}
+			}
+		}
+		triggers = {
+			taizu_var_jiandie_upgrade2_bt_click_enabled = {
+				check_variable = {
+					var = taizu_var
+					value = taizu_var_jiandie_upgrade_cost2
+					compare = greater_than_or_equals
+				}
+				check_variable = {
+					var = taizu_var_jiandie_upgrade2_frequency
+					value = 0
+					compare = greater_than
+				}
+				PRC = { has_country_flag = taizu_var_jiandie_upgrade_end }
+			}
+		}
+	}
+	
+	taizu_var_upgrade3 = {
+		context_type = player_context
+		window_name = "taizu_var_jiandie_upgrade3"
+		parent_window_name = "intelligence_agency_upgrades_window"
+		visible = {
+			tag = PRC
+		}
+		effects = {
+			taizu_var_jiandie_upgrade3_bt_click = {
+				subtract_from_variable = {
+					var = taizu_var
+					value = taizu_var_jiandie_upgrade_cost3
+				}
+				subtract_from_variable = {
+					var = taizu_var_jiandie_upgrade3_frequency
+					value = 1
+				}
+				PRC = { 
+					clr_country_flag = taizu_var_jiandie_upgrade_end
+					set_country_flag = upgrade3_pro_hajimaru
+				}
+			}
+		}
+		triggers = {
+			taizu_var_jiandie_upgrade3_bt_click_enabled = {
+				check_variable = {
+					var = taizu_var
+					value = taizu_var_jiandie_upgrade_cost3
+					compare = greater_than_or_equals
+				}
+				check_variable = {
+					var = taizu_var_jiandie_upgrade3_frequency
+					value = 0
+					compare = greater_than
+				}
+				PRC = { has_country_flag = taizu_var_jiandie_upgrade_end }
+			}
+		}
+	}
+	taizu_var_upgrade4 = {
+		context_type = player_context
+		window_name = "taizu_var_jiandie_upgrade4"
+		parent_window_name = "intelligence_agency_upgrades_window"
+		visible = {
+			tag = PRC
+		}
+		effects = {
+			taizu_var_jiandie_upgrade4_bt_click = {
+				subtract_from_variable = {
+					var = taizu_var
+					value = taizu_var_jiandie_upgrade_cost4
+				}
+				subtract_from_variable = {
+					var = taizu_var_jiandie_upgrade4_frequency
+					value = 1
+				}
+				PRC = { 
+					clr_country_flag = taizu_var_jiandie_upgrade_end
+					set_country_flag = upgrade4_pro_hajimaru
+				}
+			}
+		}
+		triggers = {
+			taizu_var_jiandie_upgrade4_bt_click_enabled = {
+				check_variable = {
+					var = taizu_var
+					value = taizu_var_jiandie_upgrade_cost4
+					compare = greater_than_or_equals
+				}
+				check_variable = {
+					var = taizu_var_jiandie_upgrade4_frequency
+					value = 0
+					compare = greater_than
+				}
+				PRC = { has_country_flag = taizu_var_jiandie_upgrade_end }
+			}
+		}
+	}
+	taizu_var_upgrade5 = {
+		context_type = player_context
+		window_name = "taizu_var_jiandie_upgrade5"
+		parent_window_name = "intelligence_agency_upgrades_window"
+		visible = {
+			tag = PRC
+		}
+		effects = {
+			taizu_var_jiandie_upgrade5_bt_click = {
+				subtract_from_variable = {
+					var = taizu_var
+					value = taizu_var_jiandie_upgrade_cost5
+				}
+				subtract_from_variable = {
+					var = taizu_var_jiandie_upgrade5_frequency
+					value = 1
+				}
+				PRC = { 
+					clr_country_flag = taizu_var_jiandie_upgrade_end
+					set_country_flag = upgrade5_pro_hajimaru
+				}
+			}
+		}
+		triggers = {
+			taizu_var_jiandie_upgrade5_bt_click_enabled = {
+				check_variable = {
+					var = taizu_var
+					value = taizu_var_jiandie_upgrade_cost5
+					compare = greater_than_or_equals
+				}
+				check_variable = {
+					var = taizu_var_jiandie_upgrade5_frequency
+					value = 0
+					compare = greater_than
+				}
+				PRC = { has_country_flag = taizu_var_jiandie_upgrade_end }
+			}
+		}
+	}
+	taizu_var_upgrade6 = {
+		context_type = player_context
+		window_name = "taizu_var_jiandie_upgrade6"
+		parent_window_name = "intelligence_agency_upgrades_window"
+		visible = {
+			tag = PRC
+		}
+		effects = {
+			taizu_var_jiandie_upgrade6_bt_click = {
+				subtract_from_variable = {
+					var = taizu_var
+					value = taizu_var_jiandie_upgrade_cost6
+				}
+				subtract_from_variable = {
+					var = taizu_var_jiandie_upgrade6_frequency
+					value = 1
+				}
+				PRC = { 
+					clr_country_flag = taizu_var_jiandie_upgrade_end
+					set_country_flag = upgrade6_pro_hajimaru
+				}
+			}
+		}
+		triggers = {
+			taizu_var_jiandie_upgrade6_bt_click_enabled = {
+				check_variable = {
+					var = taizu_var
+					value = taizu_var_jiandie_upgrade_cost6
+					compare = greater_than_or_equals
+				}
+				check_variable = {
+					var = taizu_var_jiandie_upgrade6_frequency
+					value = 0
+					compare = greater_than
+				}
+				PRC = { has_country_flag = taizu_var_jiandie_upgrade_end }
+			}
+		}
+	}
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,158 @@
+﻿CHL_DD_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_DESTROYERS
+  for_countries = {
+    CHL
+  }
+  type = ship
+  ship_types = {
+    ship_hull_light
+    destroyer
+  }
+  prefix = "BACH "
+  fallback_name = "智利海军第%d号驱逐舰"
+  unique = {
+    "林奇海军上将"
+    "康德尔海军上将"
+    "阿尔代亚"
+    "凯悦"
+    "奥雷拉"
+    "里克尔梅"
+    "魏地拉"
+    "里维罗斯海军上将"
+    "威廉姆斯海军上将"
+    "布兰科·恩卡拉达"
+    "科克伦"
+    "赞特诺大臣"
+    "波塔莱斯大臣"
+  }
+}
+CHL_CL_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CL
+  for_countries = {
+    CHL
+  }
+  type = ship
+  ship_types = {
+    ship_hull_cruiser
+    light_cruiser
+  }
+  prefix = "BACH "
+  fallback_name = 智利海军第"%d号轻巡洋舰"
+  unique = {
+    "查卡布科"
+    "阿劳坎"
+    "圣地亚哥智利"
+    "瓦尔帕莱索"
+    "巴尔迪维亚"
+    "奥索尔诺"
+    "彭塔·阿雷纳斯"
+    "奇廉"
+    "塔尔卡瓦诺"
+    "兰卡瓜"
+    "科金博"
+  }
+}
+CHL_CA_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CA
+  for_countries = {
+    CHL
+  }
+  type = ship
+  ship_types = {
+    ship_hull_cruiser
+    heavy_cruiser
+  }
+  prefix = "BACH "
+  fallback_name = "智利海军第%d号重巡洋舰"
+  unique = {
+    "奥希金斯"
+    "阿劳坎"
+    "圣地亚哥智利"
+    "瓦尔帕莱索"
+    "巴尔迪维亚"
+    "奥索尔诺"
+    "彭塔·阿雷纳斯"
+    "奇廉"
+    "塔尔卡瓦诺"
+    "兰卡瓜"
+    "科金博"
+  }
+}
+CHL_BB_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_BB
+  for_countries = {
+    CHL
+  }
+  type = ship
+  ship_types = {
+    ship_hull_heavy
+    battleship
+  }
+  prefix = "BACH "
+  fallback_name = "智利海军第%d号战列舰"
+  unique = {
+    "拉托瑞海军上将"
+    "智利共和国"
+    "利马"
+  }
+}
+CHL_BC_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_BC
+  for_countries = {
+    CHL
+  }
+  type = ship
+  ship_types = {
+    ship_hull_heavy
+    battle_cruiser
+  }
+  prefix = "BACH "
+  fallback_name = "智利海军第%d号战列巡洋舰"
+  unique = {
+    "智利共和国"
+    "利马"
+  }
+}
+CHL_CV_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CARRIERS
+  for_countries = {
+    CHL
+  }
+  type = ship
+  ship_types = {
+    ship_hull_carrier
+    carrier
+  }
+  prefix = "BACH "
+  fallback_name = "智利海军第%d号航空母舰"
+  unique = {
+    "智利安第斯"
+    "太平洋"
+  }
+}
+CHL_SS_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_SUBMARINES
+  for_countries = {
+    CHL
+  }
+  type = ship
+  ship_types = {
+    ship_hull_submarine
+    submarine
+  }
+  prefix = "BACH "
+  fallback_name = "智利海军第%d号潜艇"
+  unique = {
+    "瓜尔科尔达"
+    "特瓜尔达"
+    "鲁库米拉"
+    "基多拉"
+    "弗雷西亚"
+    "加仑"
+    "奥布莱恩上尉"
+    "辛普森海军上将"
+    "汤普森上尉"
+    "希金斯"
+    "卡雷拉"
+  }
+}

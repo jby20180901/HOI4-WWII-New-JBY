@@ -1,0 +1,33 @@
+on_actions = {
+	on_startup = {
+		
+		effect = {
+		every_country = {
+		
+			set_variable = { AI_money_check = money }
+			divide_variable = { AI_money_check = 3 }
+			
+			set_variable = { AI_remainder_check = remainder }
+			subtract_from_variable = { AI_remainder_check = 460 }
+		
+		}
+			
+		}
+		
+	}
+	
+	on_daily ={
+	
+		effect = {
+		
+			set_variable = { AI_money_check = money }
+			divide_variable = { AI_money_check = 3 }
+			
+			set_variable = { AI_remainder_check = remainder }
+			subtract_from_variable = { AI_remainder_check = 460 }
+			
+		}
+		
+	}
+	
+}

@@ -1,0 +1,2615 @@
+focus_tree = {
+	id = GXC_Clique
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GXC
+		}
+	}
+	default = no
+	focus = {
+		id = New_Guangxi_clique
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		x = 13
+		y = 0
+			ai_will_do = {
+					factor = 2
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_San_Zi
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		x = 1
+		y = 0
+			ai_will_do = {
+					factor = 2
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 0.5
+							uses = 1
+							category = industry
+						}
+					599 = {
+							add_extra_state_shared_building_slots = 2
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_San_Yu
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		x = 6
+		y = 0
+			ai_will_do = {
+					factor = 2
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = arms_factory
+									level = 3
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Guangxi_ai_force
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		x = 35
+		y = 0
+			completion_reward = {
+					air_experience = 25
+					add_tech_bonus = {
+							name = GXC_Guangxi_ai_force
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Guangxi_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		x = 41
+		y = 0
+			completion_reward = {
+					add_tech_bonus = {
+							name = GXC_Guangxi_navy
+							bonus = 0.5
+							uses = 1
+							category = naval_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Declare_support_the_nationalist_government
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
+		cost = 10.00
+		mutually_exclusive = {
+			focus = GXC_Southwest_coalition
+		}
+		x = 20
+		y = 0
+			ai_will_do = {
+					factor = 5
+					modifier = {
+							factor = 10
+							is_historical_focus_on = yes
+						}
+					modifier = {
+							factor = 0
+							date < 1936.9.4
+							YXC = {
+									exists = yes
+									is_subject = no
+								}
+						}
+					modifier = {
+							factor = 0
+							has_global_flag = The_liangguang_incident_broke_out
+						}
+				}
+			completion_reward = {
+					CHI = {
+							country_event = {
+									id = EFM_New_Guangxi.2
+									days = 1
+								}
+						}
+					set_rule = {
+							can_send_volunteers = yes
+						}
+					add_ideas = volunteer_corps_focus
+				}
+			available = {
+					OR = {
+							is_subject = no
+							is_subject_of = CHI
+						}
+					NOT = {
+							has_war_with = CHI
+							has_government = communism
+							has_global_flag = The_liangguang_incident_broke_out
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Southwest_coalition
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		mutually_exclusive = {
+			focus = GXC_Declare_support_the_nationalist_government
+		}
+		x = 28
+		y = 0
+			ai_will_do = {
+					factor = 5
+					modifier = {
+							factor = 0
+							is_historical_focus_on = yes
+						}
+					modifier = {
+							factor = 0.1
+							date < 1936.9.4
+							YXC = {
+									exists = yes
+									is_subject = no
+								}
+						}
+				}
+			completion_reward = {
+					add_political_power = 150
+					create_faction = "Southwest_military_commission"
+					set_rule = {
+							can_create_factions = yes
+						}
+					every_other_country = {
+							limit = {
+									OR = {
+											tag = YUN
+											tag = YXC
+											tag = XXC
+										}
+									NOT = {
+											has_war_with = GXC
+										}
+									is_in_faction = no
+									is_subject = no
+								}
+							country_event = {
+									id = EFM_New_Guangxi.14
+								}
+						}
+					hidden_effect = {
+							if = {
+									limit = {
+											JAP = {
+													has_government = fascism
+												}
+											NOT = {
+													has_war_with = JAP
+													has_government = communism
+												}
+										}
+									JAP = {
+											country_event = {
+													id = EFM_New_Guangxi.15
+													days = 5
+												}
+										}
+								}
+						}
+				}
+			available = {
+					NOT = {
+							is_in_faction_with = CHI
+							has_global_flag = The_liangguang_incident_broke_out
+							has_global_flag = The_liangguang_incident_guangxi_part_end
+						}
+					is_subject = no
+				}
+			bypass = {
+					has_war_with = CHI
+				}
+
+	}
+	focus = {
+		id = GXC_Promote_guangxi_business
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_San_Zi
+		}
+		x = 0
+		y = 1
+			completion_reward = {
+					599 = {
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = industrial_complex
+									level = 3
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Expand_research
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Promote_guangxi_business
+		}
+		x = 0
+		y = 2
+			completion_reward = {
+					add_research_slot = 1
+					add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 0.5
+							uses = 1
+							category = industry
+							category = construction_tech
+						}
+				}
+
+	}
+	focus = {
+		id = GCX_Road_expansion
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_San_Zi
+		}
+		x = 2
+		y = 1
+			completion_reward = {
+					599 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+						}
+					594 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Grow_guangxi
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = GCX_Road_expansion
+		}
+		x = 2
+		y = 2
+			completion_reward = {
+					599 = {
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Focus_on_economy
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Grow_guangxi
+		}
+		x = 1
+		y = 3
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					594 = {
+							add_extra_state_shared_building_slots = 1
+						}
+					599 = {
+							add_extra_state_shared_building_slots = 1
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Military_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_San_Yu
+		}
+		x = 4
+		y = 1
+			completion_reward = {
+					594 = {
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = arms_factory
+									level = 3
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Expand_military_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Military_industry
+		}
+		x = 4
+		y = 2
+			completion_reward = {
+					599 = {
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GCX_Expand_guangxi_university
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Grow_guangxi
+		}
+		prerequisite = {
+			focus = GXC_Expand_military_industry
+		}
+		x = 3
+		y = 3
+			completion_reward = {
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = GXC_Engineering_technology
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = GCX_Expand_guangxi_university
+		}
+		x = 2
+		y = 4
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = construction_tech
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Electronic_equipment
+		icon = GFX_goal_generic_production2
+		cost = 10.00
+		prerequisite = {
+			focus = GCX_Expand_guangxi_university
+		}
+		x = 4
+		y = 4
+			completion_reward = {
+					add_tech_bonus = {
+							name = computer
+							bonus = 0.5
+							uses = 1
+							category = computing_tech
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Improved_weapons
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_San_Yu
+		}
+		x = 6
+		y = 1
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+						}
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = support_tech
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Battlefield_support_equipment
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_San_Yu
+		}
+		x = 8
+		y = 1
+			completion_reward = {
+					add_tech_bonus = {
+							name = GXC_Battlefield_support_equipment
+							bonus = 0.5
+							uses = 1
+							category = support_tech
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Artillery_reform
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Improved_weapons
+			focus = GXC_Battlefield_support_equipment
+		}
+		x = 6
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = GXC_Artillery_reform
+							bonus = 0.5
+							uses = 1
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Further_research
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Improved_weapons
+			focus = GXC_Battlefield_support_equipment
+		}
+		x = 8
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = GXC_Further_research
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+							category = support_tech
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Motorized_forces
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Artillery_reform
+			focus = GXC_Further_research
+		}
+		x = 7
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = GXC_Motorized_forces
+							bonus = 0.5
+							uses = 1
+							technology = motorised_infantry
+						}
+				}
+			bypass = {
+					bypass = {
+							has_tech = motorised_infantry
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Mechanization
+		icon = GFX_goal_generic_cavalry
+		cost = 10.00
+		prerequisite = {
+			focus = GCX_Expand_guangxi_university
+		}
+		prerequisite = {
+			focus = GXC_Motorized_forces
+		}
+		x = 7
+		y = 4
+			completion_reward = {
+					add_tech_bonus = {
+							name = GXC_Mechanization
+							bonus = 0.5
+							uses = 1
+							category = cat_mechanized_equipment
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Foreign_Tank_Technology
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Mechanization
+		}
+		x = 7
+		y = 5
+			completion_reward = {
+					add_tech_bonus = {
+							name = GXC_Foreign_Tank_Technology
+							bonus = 0.5
+							uses = 1
+							category = armor
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Wearing_the_hu_attire_and_shooting_from_horseback
+		icon = GFX_focus_generic_japanese_imperial_glory
+		cost = 10.00
+		prerequisite = {
+			focus = New_Guangxi_clique
+		}
+		x = 10
+		y = 1
+			completion_reward = {
+					army_experience = 30
+				}
+			available = {
+					has_idea = GXC_Japanese_consultant
+				}
+
+	}
+	focus = {
+		id = GXC_Order_equipment
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Wearing_the_hu_attire_and_shooting_from_horseback
+		}
+		x = 10
+		y = 2
+			completion_reward = {
+					add_relation_modifier = {
+							target = JAP
+							modifier = ROM_military_modernization
+						}
+				}
+			available = {
+					has_idea = GXC_Japanese_consultant
+				}
+
+	}
+	focus = {
+		id = GXC_Increase_japanese_consultants
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Order_equipment
+		}
+		x = 10
+		y = 3
+			completion_reward = {
+					swap_ideas = {
+							remove_idea = GXC_Japanese_consultant
+							add_idea = GXC_Japanese_consultant_2
+						}
+				}
+			available = {
+					has_idea = GXC_Japanese_consultant
+				}
+
+	}
+	focus = {
+		id = GXC_Study_japanese_tactics
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = New_Guangxi_clique
+		}
+		mutually_exclusive = {
+			focus = GXC_Mass_mobilization
+		}
+		x = 12
+		y = 1
+			ai_will_do = {
+					modifier = {
+							factor = 0
+							is_historical_focus_on = yes
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = cat_grand_battle_plan
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Follow_the_japanese_army
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Study_japanese_tactics
+		}
+		x = 12
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = cat_grand_battle_plan
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Strategic_plan
+		icon = GFX_goal_generic_build_airforce
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Follow_the_japanese_army
+		}
+		x = 12
+		y = 3
+			completion_reward = {
+					add_ideas = GXC_Military_decision_making
+				}
+
+	}
+	focus = {
+		id = GXC_Mass_mobilization
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = New_Guangxi_clique
+		}
+		mutually_exclusive = {
+			focus = GXC_Study_japanese_tactics
+		}
+		x = 14
+		y = 1
+			completion_reward = {
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = cat_mass_assault
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Grand_corps_operations
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Mass_mobilization
+		}
+		x = 14
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = cat_mass_assault
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Army_reform
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Grand_corps_operations
+		}
+		x = 14
+		y = 3
+			completion_reward = {
+					add_ideas = GXC_Guangxi_military_reform
+				}
+
+	}
+	focus = {
+		id = GXC_Defend_guangxi
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Strategic_plan
+			focus = GXC_Army_reform
+		}
+		x = 13
+		y = 4
+			completion_reward = {
+					swap_ideas = {
+							remove_idea = GXC_Iron_will
+							add_idea = GXC_Iron_will_2
+						}
+					add_stability = 0.05
+				}
+
+	}
+	focus = {
+		id = GXC_Tense_situation
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = New_Guangxi_clique
+		}
+		x = 16
+		y = 1
+			completion_reward = {
+					add_ideas = GXC_Volunteer_recruitment
+					if = {
+							limit = {
+									has_idea = volunteer_only
+								}
+							add_ideas = limited_conscription
+						}
+					if = {
+							limit = {
+									has_idea = civilian_economy
+								}
+							add_ideas = partial_economic_mobilisation
+						}
+				}
+			available = {
+					OR = {
+							threat > 0.05
+							has_defensive_war = yes
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Urgent_threats
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Tense_situation
+		}
+		x = 16
+		y = 2
+			completion_reward = {
+					swap_ideas = {
+							remove_idea = GXC_Volunteer_recruitment
+							add_idea = GXC_Mobilization_order
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_idea = war_economy
+										}
+								}
+							add_ideas = war_economy
+						}
+					add_war_support = 0.05
+				}
+			available = {
+					OR = {
+							threat > 0.1
+							has_defensive_war = yes
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Enemy_at_the_gates
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Urgent_threats
+		}
+		x = 16
+		y = 3
+			completion_reward = {
+					add_ideas = GXC_Vow_before_one_troops
+					add_war_support = 0.05
+				}
+			available = {
+					OR = {
+							threat > 0.3
+							has_defensive_war = yes
+							CHI = {
+									has_defensive_war = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Expand_studies
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Enemy_at_the_gates
+		}
+		x = 16
+		y = 4
+			completion_reward = {
+					add_research_slot = 1
+					remove_ideas = Chinese_Warlord
+				}
+			available = {
+					num_of_factories > 10
+				}
+
+	}
+	focus = {
+		id = GXC_Fourth_theater
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Declare_support_the_nationalist_government
+		}
+		x = 18
+		y = 1
+			ai_will_do = {
+					factor = 5
+				}
+			completion_reward = {
+					add_ideas = GXC_Fourth_theater
+					add_war_support = 0.05
+				}
+			available = {
+					OR = {
+							is_subject = no
+							is_subject_of = CHI
+						}
+					CHI = {
+							is_subject = no
+						}
+					AND = {
+							CHI = {
+									has_defensive_war = yes
+								}
+							has_war_together_with = CHI
+						}
+					NOT = {
+							has_war_with = CHI
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Gain_control_of_guangdong
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Fourth_theater
+		}
+		x = 19
+		y = 2
+			ai_will_do = {
+					factor = 5
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									YXC = {
+											exists = no
+										}
+								}
+							every_state = {
+									limit = {
+											is_core_of = YXC
+										}
+									ROOT = {
+											transfer_state = PREV
+										}
+								}
+						}
+					if = {
+							limit = {
+									YXC = {
+											has_capitulated = yes
+										}
+								}
+							YXC = {
+									country_event = {
+											id = EFM_New_Guangxi.1
+											days = 1
+										}
+								}
+						}
+				}
+			available = {
+					OR = {
+							is_subject = no
+							is_subject_of = CHI
+						}
+					CHI = {
+							is_subject = no
+						}
+					YXC = {
+							OR = {
+									AND = {
+											exists = no
+										}
+									AND = {
+											has_capitulated = yes
+											has_war_together_with = CHI
+										}
+								}
+						}
+					AND = {
+							CHI = {
+									has_defensive_war = yes
+								}
+							has_war_together_with = CHI
+						}
+					NOT = {
+							has_war_with = CHI
+							has_war_with = YXC
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Guangxi_faction
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Declare_support_the_nationalist_government
+		}
+		x = 20
+		y = 1
+			ai_will_do = {
+					factor = 5
+				}
+			completion_reward = {
+					add_political_power = 120
+				}
+			available = {
+					OR = {
+							is_subject = no
+							is_subject_of = CHI
+						}
+					CHI = {
+							is_subject = no
+						}
+					NOT = {
+							has_war_with = CHI
+						}
+				}
+			bypass = {
+					CHI = {
+							OR = {
+									exists = no
+									is_subject = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Strengthen_political_level
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Guangxi_faction
+		}
+		x = 20
+		y = 3
+			ai_will_do = {
+					factor = 5
+					modifier = {
+							factor = 0
+							is_historical_focus_on = yes
+							date < 1938.1.1
+						}
+				}
+			completion_reward = {
+					add_ideas = GXC_New_guangxi_clique
+				}
+			bypass = {
+					CHI = {
+							OR = {
+									exists = no
+									is_subject = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Befriend_the_nanking
+		icon = GFX_goal_generic_improve_relations
+		cost = 1
+		prerequisite = {
+			focus = GXC_Strengthen_political_level
+		}
+		mutually_exclusive = {
+			focus = GXC_Oppose_the_nanking
+		}
+		x = 19
+		y = 4
+			ai_will_do = {
+					modifier = {
+							factor = 0
+							is_historical_focus_on = yes
+						}
+				}
+			completion_reward = {
+					add_opinion_modifier = {
+							target = CHI
+							modifier = Nations_friendly
+						}
+					
+					
+				}
+			available = {
+					OR = {
+							is_subject = no
+							is_subject_of = CHI
+						}
+					NOT = {
+							has_government = communism
+						}
+					CHI = {
+							NOT = {
+									exists = no
+									is_subject = yes
+									has_government = communism
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Increase_border_pressure
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Declare_support_the_nationalist_government
+		}
+		x = 22
+		y = 1
+			completion_reward = {
+					YXC = {
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = Nations_estrangement
+								}
+						}
+					YUN = {
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = Nations_estrangement
+								}
+						}
+					if = {
+							limit = {
+									has_dlc = "Waking the Tiger"
+								}
+							custom_effect_tooltip = CHI_institute_cross_border_raids_effect_tooltip
+							set_country_flag = CHI_institute_cross_border_raids
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Pressure_the_yunnan
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Increase_border_pressure
+		}
+		x = 21
+		y = 2
+			ai_will_do = {
+					modifier = {
+							factor = 0
+							is_historical_focus_on = yes
+							is_subject_of = CHI
+						}
+				}
+			completion_reward = {
+					YUN = {
+							country_event = {
+									id = EFM_New_Guangxi.11
+								}
+						}
+				}
+			available = {
+					YUN = {
+							exists = yes
+							is_subject = no
+						}
+					NOT = {
+							is_in_faction_with = YUN
+						}
+				}
+			bypass = {
+					YUN = {
+							exists = no
+							is_subject_of = ROOT
+							has_war_with = ROOT
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Oppose_the_nanking
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 1
+		prerequisite = {
+			focus = GXC_Strengthen_political_level
+		}
+		mutually_exclusive = {
+			focus = GXC_Befriend_the_nanking
+		}
+		x = 21
+		y = 4
+			completion_reward = {
+					add_opinion_modifier = {
+							target = CHI
+							modifier = Nations_estrangement
+						}
+					
+					
+				}
+			available = {
+					OR = {
+							is_subject = no
+							is_subject_of = CHI
+						}
+				}
+			bypass = {
+					CHI = {
+							OR = {
+									exists = no
+									is_subject = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Look_for_political_ally
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Oppose_the_nanking
+		}
+		x = 21
+		y = 5
+			completion_reward = {
+					add_popularity = {
+							ideology = democratic
+							popularity = 0.1
+						}
+					swap_ideas = {
+							remove_idea = GXC_New_guangxi_clique
+							add_idea = GXC_Political_union
+						}
+					CHI = {
+							country_event = {
+									id = EFM_New_Guangxi.4
+									days = 1
+								}
+						}
+				}
+			available = {
+					OR = {
+							is_subject_of = CHI
+							is_subject = no
+						}
+				}
+			bypass = {
+					CHI = {
+							OR = {
+									exists = no
+									is_subject = yes
+								}
+						}
+				}
+
+	}
+	 #击败蒋介石
+	focus = {
+		id = GXC_Defeat_Chiang
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Look_for_political_ally
+		}
+		x = 21
+		y = 6
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					CHI = {
+							country_event = {
+									id = EFM_New_Guangxi.5
+									days = 1
+								}
+						}
+				}
+			available = {
+					OR = {
+							is_subject_of = CHI
+							is_subject = no
+						}
+					
+					OR = {
+					    JAP = {
+							exists = no
+						}
+						JAP = {
+							is_subject = yes
+						}
+					   has_global_flag = ribentoyxiang
+						
+						}
+				}
+			bypass = {
+					CHI = {
+							exists = no
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Pressure_the_guangdong
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Increase_border_pressure
+		}
+		x = 23
+		y = 2
+			ai_will_do = {
+					modifier = {
+							factor = 0
+							is_historical_focus_on = yes
+							is_subject_of = CHI
+						}
+				}
+			completion_reward = {
+					YXC = {
+							country_event = {
+									id = EFM_New_Guangxi.11
+								}
+						}
+				}
+			available = {
+					YXC = {
+							exists = yes
+							is_subject = no
+						}
+					NOT = {
+							is_in_faction_with = YXC
+						}
+				}
+			bypass = {
+					YXC = {
+							exists = no
+							is_subject_of = ROOT
+							has_war_with = ROOT
+						}
+				}
+
+	}
+	 #广西起义
+	focus = {
+		id = GXC_Guangxi_uprising
+		icon = GFX_focus_chi_proclaim_rival_government
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Pressure_the_yunnan
+			focus = GXC_Pressure_the_guangdong
+		}
+		x = 22
+		y = 3
+			ai_will_do = {
+					factor = 10
+					modifier = {
+							factor = 0
+							is_historical_focus_on = yes
+							CHI = {
+									owns_state = 598
+								}
+							strength_ratio = {
+									tag = CHI
+									ratio > 0.5
+								}
+						}
+				}
+			completion_reward = {
+					create_wargoal = {
+					type = annex_everything
+					target = CHI
+				    }
+				}
+			available = {
+					OR = {
+							is_subject_of = CHI
+							is_subject = no
+							any_other_country = {
+									owns_state = 598
+									NOT = {
+											has_war_with = ROOT
+										}
+								}
+						}
+					has_army_manpower = {
+							size > 799999
+						}
+					NOT = {
+							has_idea = GXC_Political_ally_of_the_chiang
+						}
+				}
+			bypass = {
+			    OR = {
+					owns_state = 598
+					CHI = {has_war_with = JAP }
+					}
+				}
+
+	}
+	focus = {
+		id = GXC_Ultimatum_to_yanan
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Guangxi_uprising
+		}
+		x = 24
+		y = 4
+			ai_will_do = {
+					factor = 5
+				}
+			completion_reward = {
+					PRC = {
+							country_event = {
+									id = EFM_New_Guangxi.11
+								}
+						}
+				}
+			available = {
+					NOT = {
+							is_in_faction_with = PRC
+						}
+					is_subject = no
+					owns_state = 598
+				}
+			bypass = {
+					PRC = {
+							exists = no
+						}
+				}
+
+	}
+	 #挑战南京
+	focus = {
+		id = GXC_Challenge_nanking
+		icon = GFX_goal_generic_attack_allies
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Southwest_coalition
+		}
+		x = 27
+		y = 1
+			ai_will_do = {
+					factor = 2
+				}
+			completion_reward = {
+					create_wargoal = {
+					type = annex_everything
+					target = CHI
+				   }
+				}
+			available = {
+					is_subject = no
+					has_army_manpower = {
+							size > 799999
+						}
+					NOT = {
+							is_in_faction_with = CHI
+						}
+				}
+			bypass = {
+					OR = {
+							CHI = {exists = no}
+							has_war_with = CHI
+							CHI = {has_war_with = JAP}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Worshipism
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Challenge_nanking
+		}
+		mutually_exclusive = {
+			focus = GXC_Into_the_democratic_era
+			focus = GXC_Establish_guangxi_base
+		}
+		x = 26
+		y = 2
+			completion_reward = {
+					add_ideas = GXC_Personal_worship
+					add_war_support = 0.05
+				}
+
+	}
+	focus = {
+		id = GXC_Oppose_communism
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Worshipism
+		}
+		x = 26
+		y = 3
+			completion_reward = {
+					every_country = {
+							limit = {
+									has_government = fascism
+								}
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = Nations_friendly
+								}
+						}
+					every_country = {
+							limit = {
+									has_government = communism
+								}
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = Nations_estrangement
+								}
+						}
+					add_country_leader_trait = anti_communist
+					set_rule = {
+							can_send_volunteers = yes
+						}
+				}
+			available = {
+					NOT = {
+							has_government = communism
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Deepen_cooperation_with_JAP
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Oppose_communism
+		}
+		x = 26
+		y = 4
+			completion_reward = {
+					JAP = {
+							country_event = {
+									id = EFM_New_Guangxi.18
+									days = 1
+								}
+						}
+					if = {
+							limit = {
+									has_dlc = "Waking the Tiger"
+								}
+							unlock_decision_category_tooltip = CHI_seek_japanese_support
+						}
+				}
+			available = {
+					NOT = {
+							has_war_with = JAP
+						}
+				}
+			bypass = {
+					JAP = {
+							OR = {
+									is_subject = yes
+									exists = no
+									has_war_with = ROOT
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Into_the_democratic_era
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Challenge_nanking
+		}
+		mutually_exclusive = {
+			focus = GXC_Worshipism
+			focus = GXC_Establish_guangxi_base
+		}
+		x = 28
+		y = 2
+			completion_reward = {
+					add_ideas = democratic_influence
+				}
+
+	}
+	focus = {
+		id = GXC_Democratic_corps
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Into_the_democratic_era
+		}
+		x = 28
+		y = 3
+			completion_reward = {
+					set_rule = {
+							can_send_volunteers = yes
+						}
+					add_ideas = GXC_Democratic_revolutionary_army
+				}
+			available = {
+					NOT = {
+							has_government = fascism
+							has_government = communism
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Contact_with_the_UK
+		icon = GFX_focus_chi_british_cooperation
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Democratic_corps
+		}
+		x = 28
+		y = 4
+			completion_reward = {
+					ENG = {
+							country_event = {
+									id = EFM_New_Guangxi.20
+									days = 1
+								}
+						}
+				}
+			available = {
+					NOT = {
+							has_war_with = ENG
+						}
+				}
+			bypass = {
+					ENG = {
+							OR = {
+									is_subject = yes
+									exists = no
+									has_war_with = ROOT
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Invite_the_yanan
+		icon = GFX_focus_chi_cooperation_with_the_communists
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Southwest_coalition
+		}
+		x = 30
+		y = 1
+			completion_reward = {
+					PRC = {
+							country_event = {
+									id = EFM_New_Guangxi.22
+								}
+						}
+				}
+			available = {
+					is_subject = no
+					PRC = {
+							exists = yes
+							is_subject = no
+						}
+					NOT = {
+							has_war_with = PRC
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Establish_guangxi_base
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Invite_the_yanan
+		}
+		mutually_exclusive = {
+			focus = GXC_Worshipism
+			focus = GXC_Into_the_democratic_era
+		}
+		x = 30
+		y = 2
+			completion_reward = {
+					add_ideas = communist_influence
+				}
+			available = {
+					is_in_faction_with = PRC
+					NOT = {
+							has_government = fascism
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Guangxi_front
+		icon = GFX_focus_YUG_pan_slavic_congress
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Establish_guangxi_base
+		}
+		x = 30
+		y = 3
+			completion_reward = {
+					add_ideas = GXC_Guangxi_front
+					set_rule = {
+							can_send_volunteers = yes
+						}
+				}
+			available = {
+					has_government = communism
+				}
+
+	}
+	focus = {
+		id = GXC_Join_the_comintern
+		icon = GFX_focus_generic_socialist_science
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Guangxi_front
+		}
+		x = 30
+		y = 4
+			completion_reward = {
+					SOV = {
+							country_event = {
+									id = EFM_New_Guangxi.23
+									days = 1
+								}
+						}
+				}
+			available = {
+					has_government = communism
+					NOT = {
+							has_war_with = SOV
+						}
+				}
+			bypass = {
+					SOV = {
+							has_government = communism
+							OR = {
+									is_subject = yes
+									exists = no
+									has_war_with = ROOT
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Unite_china
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Deepen_cooperation_with_JAP
+			focus = GXC_Contact_with_the_UK
+			focus = GXC_Join_the_comintern
+		}
+		mutually_exclusive = {
+			focus = GXC_Federal_system
+		}
+		x = 27
+		y = 5
+			completion_reward = {
+					if = {
+							limit = {
+									is_faction_leader = yes
+								}
+							dismantle_faction = yes
+						}
+					custom_effect_tooltip = GXC_Unite_china_tt
+					hidden_effect = {
+							every_other_country = {
+									limit = {
+											is_literally_china = yes
+											NOT = {
+													tag = ROOT
+												}
+											NOT = {
+													has_war_with = ROOT
+												}
+											NOT = {
+													is_subject_of = ROOT
+												}
+											NOT = {
+													ROOT = {
+															has_wargoal_against = PREV
+														}
+												}
+										}
+									ROOT = {
+											create_wargoal = {
+													type = annex_everything
+													target = PREV
+												}
+										}
+								}
+						}
+					set_rule = {
+							can_create_factions = yes
+						}
+				}
+			available = {
+					is_subject = no
+					CHI = {
+							OR = {
+									exists = no
+									is_subject_of = ROOT
+								}
+						}
+					OR = {
+							country_exists = YUN
+							country_exists = SHX
+							country_exists = XSM
+							country_exists = SLJ
+							country_exists = XXC
+							country_exists = YXC
+							country_exists = XBJ
+							country_exists = PRC
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Federal_system
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Contact_with_the_UK
+			focus = GXC_Join_the_comintern
+		}
+		mutually_exclusive = {
+			focus = GXC_Unite_china
+		}
+		x = 29
+		y = 5
+			completion_reward = {
+					every_state = {
+							limit = {
+									is_owned_by = GXC
+								}
+							add_core_of = GXC
+						}
+					every_other_country = {
+							if = {
+									limit = {
+											YUN = {
+													is_in_faction_with = GXC
+												}
+										}
+									every_state = {
+											limit = {
+													is_controlled_by = YUN
+												}
+											add_core_of = YUN
+										}
+								}
+							if = {
+									limit = {
+											SHX = {
+													is_in_faction_with = GXC
+												}
+										}
+									every_state = {
+											limit = {
+													is_controlled_by = SHX
+												}
+											add_core_of = SHX
+										}
+								}
+							if = {
+									limit = {
+											XSM = {
+													is_in_faction_with = GXC
+												}
+										}
+									every_state = {
+											limit = {
+													is_controlled_by = XSM
+												}
+											add_core_of = XSM
+										}
+								}
+							if = {
+									limit = {
+											XXC = {
+													is_in_faction_with = GXC
+												}
+										}
+									every_state = {
+											limit = {
+													is_controlled_by = XXC
+												}
+											add_core_of = XXC
+										}
+								}
+							if = {
+									limit = {
+											YXC = {
+													is_in_faction_with = GXC
+												}
+										}
+									every_state = {
+											limit = {
+													is_controlled_by = YXC
+												}
+											add_core_of = YXC
+										}
+								}
+							if = {
+									limit = {
+											PRC = {
+													is_in_faction_with = GXC
+												}
+										}
+									every_state = {
+											limit = {
+													is_controlled_by = PRC
+												}
+											add_core_of = PRC
+										}
+								}
+						}
+					set_rule = {
+							can_create_factions = yes
+						}
+				}
+			available = {
+					is_subject = no
+					CHI = {
+							OR = {
+									exists = no
+									is_subject_of = ROOT
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_China_of_new_guangxi
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Unite_china
+			focus = GXC_Federal_system
+			focus = GXC_Ultimatum_to_yanan
+		}
+		x = 25
+		y = 6
+			completion_reward = {
+					custom_effect_tooltip = Clique_new_china_tt
+					if = {
+							limit = {
+									NOT = {
+											has_government = communism
+										}
+								}
+							set_cosmetic_tag = New_ROC
+						}
+					if = {
+							limit = {
+									has_government = communism
+								}
+							set_cosmetic_tag = PLA
+						}
+					hidden_effect = {
+							every_state = {
+									limit = {
+											OR = {
+													region = 143
+													region = 144
+													region = 145
+													region = 155
+													region = 164
+													region = 165
+													region = 200
+												}
+										}
+									add_core_of = ROOT
+								}
+							every_other_country = {
+									limit = {
+											OR = {
+													tag = SHX
+													tag = XSM
+													tag = GXC
+													tag = YXC
+													tag = XBJ
+													tag = XXC
+													tag = SLJ
+													tag = PRC
+												}
+											exists = yes
+											NOT = {
+													has_war_with = ROOT
+													is_subject_of = ROOT
+													is_in_faction_with = ROOT
+												}
+										}
+									country_event = {
+											id = EFM_New_Guangxi.11
+											days = 1
+										}
+								}
+						}
+				}
+			available = {
+					owns_state = 598
+					is_subject = no
+				}
+
+	}
+	focus = {
+		id = GXC_Order_japanese_aircraft
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Guangxi_ai_force
+		}
+		x = 33
+		y = 1
+			completion_reward = {
+					JAP = {
+							country_event = {
+									id = EFM_New_Guangxi.25
+									days = 1
+								}
+						}
+					add_political_power = -75
+				}
+			available = {
+					has_idea = GXC_Japanese_consultant
+					JAP = {
+							exists = yes
+						}
+					NOT = {
+							has_war_with = JAP
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Aircraft_parts_factory
+		icon = GFX_goal_generic_air_production
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Guangxi_ai_force
+		}
+		x = 35
+		y = 1
+			completion_reward = {
+					add_ideas = GXC_Aircraft_parts_factory
+					599 = {
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = arms_factory
+									level = 3
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Fighter_Focus
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Aircraft_parts_factory
+		}
+		x = 33
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = GXC_Fighter_Focus
+							bonus = 0.5
+							uses = 1
+							category = light_fighter
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Advanced_aircraft_design
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Fighter_Focus
+		}
+		mutually_exclusive = {
+			focus = GXC_CAS_Focus
+		}
+		x = 32
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = light_fighter_bonus
+							bonus = 0.5
+							uses = 1
+							category = light_fighter
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_CAS_Focus
+		icon = GFX_goal_generic_CAS
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Fighter_Focus
+		}
+		mutually_exclusive = {
+			focus = GXC_Advanced_aircraft_design
+		}
+		x = 34
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = light_fighter_bonus
+							bonus = 0.5
+							uses = 1
+							category = cas_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Medium_sized_aircraft
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Advanced_aircraft_design
+			focus = GXC_CAS_Focus
+		}
+		mutually_exclusive = {
+			focus = GXC_Strategic_attack
+		}
+		x = 33
+		y = 4
+			completion_reward = {
+					add_tech_bonus = {
+							name = GXC_Medium_sized_aircraft
+							bonus = 0.5
+							uses = 1
+							category = tactical_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Air_base
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Aircraft_parts_factory
+		}
+		x = 35
+		y = 2
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Strategic_attack
+		icon = GFX_goal_generic_occupy_start_war
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Air_base
+		}
+		mutually_exclusive = {
+			focus = GXC_Medium_sized_aircraft
+		}
+		x = 35
+		y = 4
+			completion_reward = {
+					add_tech_bonus = {
+							name = GXC_Strategic_attack
+							bonus = 0.5
+							uses = 1
+							category = cat_strategic_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Order_british_aircraft
+		icon = GFX_focus_YUG_rogozarski
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Guangxi_ai_force
+		}
+		x = 37
+		y = 1
+			completion_reward = {
+					ENG = {
+							country_event = {
+									id = EFM_New_Guangxi.27
+									days = 1
+								}
+						}
+					add_political_power = -75
+				}
+			available = {
+					is_subject = no
+					ENG = {
+							exists = yes
+						}
+					NOT = {
+							has_war_with = ENG
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Expand_guangxi_aviation_and_military_school
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Aircraft_parts_factory
+		}
+		x = 37
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = air_doctrine
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Air_Force_Theory
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Expand_guangxi_aviation_and_military_school
+		}
+		x = 37
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = air_doctrine
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Maritime_development
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Guangxi_navy
+		}
+		x = 40
+		y = 1
+			completion_reward = {
+					navy_experience = 25
+					if = {
+							limit = {
+									NOT = {
+											any_owned_state = {
+													dockyard > 0
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+									any_owned_state = {
+											is_coastal = yes
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											is_coastal = yes
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Submarine_tactics
+		icon = GFX_goal_generic_navy_submarine
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Maritime_development
+		}
+		x = 39
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = GXC_Submarine_tactics
+							bonus = 0.5
+							uses = 1
+							category = ss_tech
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Nearshore_fleet
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Guangxi_navy
+		}
+		x = 42
+		y = 1
+			completion_reward = {
+					add_tech_bonus = {
+							name = GXC_Nearshore_fleet
+							bonus = 0.5
+							uses = 1
+							category = dd_tech
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Expand_the_cordon
+		icon = GFX_goal_generic_navy_anti_submarine
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Maritime_development
+		}
+		prerequisite = {
+			focus = GXC_Nearshore_fleet
+		}
+		x = 41
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = GXC_Expand_the_cordon
+							bonus = 0.5
+							uses = 1
+							category = cl_tech
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Brown_water_navy_Focus
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Expand_the_cordon
+		}
+		x = 41
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = GXC_Brown_water_navy_Focus
+							bonus = 0.5
+							uses = 1
+							category = bc_tech
+						}
+					add_tech_bonus = {
+							name = GXC_Brown_water_navy_Focus
+							bonus = 0.5
+							uses = 1
+							category = ca_tech
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_CV
+		icon = GFX_goal_generic_navy_carrier
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Brown_water_navy_Focus
+		}
+		mutually_exclusive = {
+			focus = GXC_Go_to_ocean
+		}
+		x = 40
+		y = 4
+			completion_reward = {
+					add_tech_bonus = {
+							name = GXC_CV
+							bonus = 0.5
+							uses = 1
+							category = cl_tech
+						}
+					add_tech_bonus = {
+							name = GXC_CV
+							bonus = 0.5
+							uses = 1
+							category = cv_tech
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Go_to_ocean
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Brown_water_navy_Focus
+		}
+		mutually_exclusive = {
+			focus = GXC_CV
+		}
+		x = 42
+		y = 4
+			completion_reward = {
+					add_tech_bonus = {
+							name = GXC_Go_to_ocean
+							bonus = 0.5
+							uses = 1
+							category = ca_tech
+						}
+					add_tech_bonus = {
+							name = GXC_Go_to_ocean
+							bonus = 0.5
+							uses = 1
+							category = bb_tech
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Marine
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Guangxi_navy
+		}
+		x = 44
+		y = 1
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = marine_tech
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Support_the_Chiang
+		icon = GFX_focus_CZE_german_puppet
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Befriend_the_nanking
+		}
+		x = 19
+		y = 5
+			completion_reward = {
+					swap_ideas = {
+							remove_idea = GXC_New_guangxi_clique
+							add_idea = GXC_Political_ally_of_the_chiang
+						}
+					CHI = {
+							country_event = {
+									id = EFM_New_Guangxi.3
+								}
+						}
+					custom_effect_tooltip = GXC_Support_the_Chiang_tt
+				}
+			available = {
+					OR = {
+							is_subject = no
+							is_subject_of = CHI
+						}
+					NOT = {
+							has_government = communism
+						}
+				}
+			bypass = {
+					CHI = {
+							OR = {
+									exists = no
+									is_subject = yes
+									has_government = communism
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Reorganize_southwest_committee
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Support_the_Chiang
+		}
+		x = 19
+		y = 6
+			ai_will_do = {
+					factor = 5
+				}
+			completion_reward = {
+					add_ideas = GXC_Southwest_committee
+				}
+			available = {
+					OR = {
+							is_subject = no
+							is_subject_of = CHI
+						}
+					NOT = {
+							has_government = communism
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_United_guangxi
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Reorganize_southwest_committee
+			focus = GXC_Defeat_Chiang
+		}
+		x = 20
+		y = 7
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					swap_ideas = {
+							remove_idea = GXC_Baojia_system
+							add_idea = GXC_United_guangxi
+						}
+					add_political_power = 200
+				}
+			available = {
+					OR = {
+							is_subject = no
+							is_subject_of = CHI
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Radar_technology
+		icon = GFX_goal_generic_radar
+		cost = 10.00
+		prerequisite = {
+			focus = GCX_Expand_guangxi_university
+		}
+		x = 3
+		y = 5
+			completion_reward = {
+					add_tech_bonus = {
+							name = radar_tech_bonus
+							bonus = 0.5
+							uses = 1
+							category = radar_tech
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_Improve_economic
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Focus_on_economy
+		}
+		x = 1
+		y = 5
+			completion_reward = {
+					swap_ideas = {
+							remove_idea = GXC_Guangxi_economy
+							add_idea = GXC_The_economy_improves
+						}
+				}
+			available = {
+					num_of_civilian_factories > 10
+				}
+
+	}
+}

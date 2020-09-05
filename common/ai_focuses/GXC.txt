@@ -1,0 +1,21 @@
+ai_historical_focus_list_GXC = {
+	ai_national_focuses = {
+		GXC_39
+		GXC_57
+		GXC_58
+		GXC_60
+		GXC_61
+		GXC_62
+		GXC_0
+		GXC_1
+		GXC_20
+		GXC_4
+		GXC_3
+		GXC_8
+		GXC_9
+		GXC_10
+		GXC_11
+		GXC_16
+		GXC_22
+	}
+}

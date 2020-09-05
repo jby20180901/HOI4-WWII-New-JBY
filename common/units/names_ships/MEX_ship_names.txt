@@ -1,0 +1,472 @@
+﻿MEX_DD_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_DESTROYERS
+  for_countries = {
+    MEX
+  }
+  type = ship
+  ship_types = {
+    ship_hull_light
+    destroyer
+  }
+  prefix = "ARM "
+  fallback_name = "墨西哥海军第%d号驱逐舰"  # Destructor No.%d
+  unique = {
+    "瓜特穆斯"  # Cuauhtémoc
+    "骨依拿阿"  # Cuitláhuac
+    "羽蛇神"  # Quetzalcóatl
+    "内撒霍科若提"  # Netzahualcóyotl
+    "利维卡米纳"  # Ilhuicamina
+    "乌苏马辛塔河"  # Usumacinta
+    "特万特佩克"  # Tehuantepec
+    "加利福尼亚"  # California
+    "巴帕洛阿潘"  # Papaloapan
+    "科阿韦拉"  # Coahuila
+    "奇瓦瓦"  # Chihuahua
+    "杜兰戈"  # Durango
+    "萨卡特卡斯"  # Zacatacas
+    "瓜纳华托"  # Guanajuato
+    "克雷塔罗"  # Querétaro
+    "波托西"  # Potosi
+    "佩德罗·塞恩兹·德·巴兰达"  # Pedro Sainz de Baranda
+    "大卫·波特"  # David Porter
+    "维尔吉利奥·乌里韦"  # Virgilio Uribe
+    "布拉斯·古德奈兹"  # Blas Godínez
+    "托马斯·马丁"  # Tomás Marín
+    "波西亚诺·阿瑞加"  # Ponciano Arriaga
+    "马里亚诺·马塔莫罗斯"  # Mariano Matamoros
+    "腓力·希科滕卡特"  # Felipe Xicotencatl
+    "伊格纳西奥·阿尔塔米拉诺"  # Ignacio Altamirano
+    "伊格纳西奥·德·拉·莱夫"  # Ignacio de la Llave
+    "胡安·阿尔达马"  # Juan Aldama
+    "莱昂德罗·巴列"  # Leandro Valle
+    "塞巴斯蒂安·莱勒多·德·特哈达"  # Sebastian Lerdo de Tejada
+    "华雷斯"  # Juarez
+    "内撒霍科若提"  # Netzahualcóyotl
+    "曼努埃尔·阿苏塔"  # Manuel Azueta
+    "尼科劳斯·布拉沃"  # Nicolás Bravo
+    "埃尔梅内希尔多·加莱阿纳"  # Hermenegildo Galeana
+    "伊格纳西奥·阿连德"  # Ignacio Allende
+    "马里亚诺·阿瓦索洛"  # Mariano Abasolo
+    "瓜达卢佩·维多利亚"  # Guadalupe Victoria
+    "弗朗西斯科·哈维尔·米纳"  # Francisco Javier Mina
+    "飓风"  # Huracan
+    "暴风雨"  # Tormenta
+  }
+}
+MEX_CL_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CL
+  for_countries = {
+    MEX
+  }
+  type = ship
+  ship_types = {
+    ship_hull_cruiser
+    light_cruiser
+  }
+  prefix = "ARM "
+  fallback_name = "墨西哥海军第%d号轻巡洋舰"  # Crucero Ligero No.%d
+  unique = {
+    "萨拉戈萨"  # Zaragoza
+    "瓜达拉哈拉"  # Guadalajara
+    "普罗格雷索"  # Progreso
+    "波费里奥·迪亚兹"  # Porfirio Díaz
+    "基维辛迪·格雷罗"  # Vincente Guerrero
+    "何塞·马里亚·莫雷洛斯"  # José María Morelos
+    "米格尔·伊达尔戈"  # Miguel Hidalgo
+    "潘乔·比利亚"  # Pancho Villa
+    "洛博河"  # Rio Lobo
+    "梅里达"  # Merida
+    "蒙特雷"  # Monterrey
+    "格兰德河"  # Rio Grande
+    "蒂华纳"  # Tijuana
+    "北河"  # Rio del Norte
+    "恰帕斯"  # Chiapas
+    "小斧"  # Chuela
+  }
+}
+MEX_CA_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CA
+  for_countries = {
+    MEX
+  }
+  type = ship
+  ship_types = {
+    ship_hull_cruiser
+    heavy_cruiser
+  }
+  prefix = "ARM "
+  fallback_name = "墨西哥海军第%d号重巡洋舰"  # Crucero Pesado No.%d
+  unique = {
+    "萨拉戈萨"  # Zaragoza
+    "瓜达拉哈拉"  # Guadalajara
+    "普罗格雷索"  # Progreso
+    "波费里奥·迪亚兹"  # Porfirio Díaz
+    "基维辛迪·格雷罗"  # Vincente Guerrero
+    "何塞·马里亚·莫雷洛斯"  # José María Morelos
+    "米格尔·伊达尔戈"  # Miguel Hidalgo
+    "潘乔·比利亚"  # Pancho Villa
+    "洛博河"  # Rio Lobo
+    "梅里达"  # Merida
+    "蒙特雷"  # Monterrey
+    "格兰德河"  # Rio Grande
+    "蒂华纳"  # Tijuana
+    "北河"  # Rio del Norte
+    "恰帕斯"  # Chiapas
+    "小斧"  # Chuela
+  }
+}
+MEX_BB_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_BB
+  for_countries = {
+    MEX
+  }
+  type = ship
+  ship_types = {
+    ship_hull_heavy
+    battleship
+  }
+  prefix = "ARM "
+  fallback_name = "墨西哥海军第%d号战列舰"  # Acorazado No.%d
+  unique = {
+    "阿纳瓦克"  # Anáhuac
+    "华雷斯"  # Juarez
+    "墨西哥城"  # Ciudad de Mexico
+    "蒙提祖马"  # Moctezuma
+    "克奇沙帕尔"  # Xochichapal
+    "瓜特穆斯"  # Cuauhtémoc
+    "骨依拿阿"  # Cuitláhuac
+    "内萨瓦尔科约特尔"  # Nezahualcoyotl
+  }
+}
+MEX_BC_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_BC
+  for_countries = {
+    MEX
+  }
+  type = ship
+  ship_types = {
+    ship_hull_heavy
+    battle_cruiser
+  }
+  prefix = "ARM "
+  fallback_name = "墨西哥海军第%d号战列巡洋舰"  # Crucero de Batalla No.%d
+  unique = {
+    "阿纳瓦克"  # Anáhuac
+    "华雷斯"  # Juarez
+    "墨西哥城"  # Ciudad de Mexico
+    "蒙提祖马"  # Moctezuma
+    "克奇沙帕尔"  # Xochichapal
+    "瓜特穆斯"  # Cuauhtémoc
+    "骨依拿阿"  # Cuitláhuac
+    "内萨瓦尔科约特尔"  # Nezahualcoyotl
+  }
+}
+MEX_CV_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CARRIERS
+  for_countries = {
+    MEX
+  }
+  type = ship
+  ship_types = {
+    ship_hull_carrier
+    carrier
+  }
+  prefix = "ARM "
+  fallback_name = "墨西哥海军第%d号航空母舰"  # Portaaviones No.%d
+  unique = {
+    "墨西哥共和国"  # Republica de Mexico
+    "独立"  # Independencia
+    "自由"  # Libertad
+    "民主"  # Democrata
+    "五月十八日"  # 18 de Mayo
+    "克奇沙帕尔"  # Xochichapal
+    "瓜特穆斯"  # Cuauhtémoc
+    "蒙提祖马"  # Moctezuma
+    "骨依拿阿"  # Cuitláhuac
+    "内萨瓦尔科约特尔"  # Nezahualcoyotl
+  }
+}
+MEX_SS_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_SUBMARINES
+  for_countries = {
+    MEX
+  }
+  type = ship
+  ship_types = {
+    ship_hull_submarine
+    submarine
+  }
+  prefix = "ARM "
+  fallback_name = "墨西哥海军第%d号潜艇"  # Submarino No.%d
+  unique = {
+    "佩德罗·塞恩兹·德·巴兰达"  # Pedro Sainz de Baranda
+    "大卫·波特"  # David Porter
+    "维尔吉利奥·乌里韦"  # Virgilio Uribe
+    "布拉斯·古德奈兹"  # Blas Godínez
+    "托马斯·马丁"  # Tomás Marín
+    "波西亚诺·阿瑞加"  # Ponciano Arriaga
+    "马里亚诺·马塔莫罗斯"  # Mariano Matamoros
+    "腓力·希科滕卡特"  # Felipe Xicotencatl
+    "伊格纳西奥·阿尔塔米拉诺"  # Ignacio Altamirano
+    "伊格纳西奥·德·拉·莱夫"  # Ignacio de la Llave
+    "胡安·阿尔达马"  # Juan Aldama
+    "莱昂德罗·巴列"  # Leandro Valle
+    "塞巴斯蒂安·莱勒多·德·特哈达"  # SebastiAn Lerdo de Tejada
+    "贝尼托华雷斯"  # Benito Juárez
+    "内撒霍科若提"  # Netzahualcóyotl
+    "曼努埃尔·阿苏塔"  # Manuel Azueta
+    "尼科劳斯·布拉沃"  # Nicolás Bravo
+    "埃尔梅内希尔多·加莱阿纳"  # Hermenegildo Galeana
+    "伊格纳西奥·阿连德"  # Ignacio Allende
+    "马里亚诺·阿瓦索洛"  # Mariano Abasolo
+    "瓜达卢佩·维多利亚"  # Guadalupe Victoria
+    "弗朗西斯科·哈维尔·米纳"  # Francisco Javier Mina
+  }
+}
+MEX_STATES = {
+  name = NAME_THEME_STATES
+  for_countries = {
+    MEX
+  }
+  type = ship
+  prefix = "ARM "
+  unique = {
+    "墨西哥"  # México
+    "联邦区"  # Distrito Federal
+    "哈利斯科"  # Jalisco
+    "普埃布拉"  # Puebla
+    "瓜纳华托"  # Guanajuato
+    "恰帕斯"  # Chiapas
+    "新莱昂"  # Nuevo León
+    "米却肯"  # Michoacán
+    "瓦哈卡"  # Oaxaca
+    "奇瓦瓦"  # Chihuahua
+    "格雷罗"  # Guerrero
+    "塔毛利帕斯"  # Tamaulipas
+    "下加利福尼亚"  # Baja California
+    "锡那罗亚"  # Sinaloa
+    "科阿韦拉"  # Coahuila
+    "伊达尔戈"  # Hidalgo
+    "索诺拉"  # Sonora
+    "圣路易波托西"  # San Luis Potosí
+    "塔巴斯科"  # Tabasco
+    "尤卡坦"  # Yucatán
+    "克雷塔罗"  # Querétaro
+    "莫雷洛斯"  # Morelos
+    "杜兰戈"  # Durango
+    "萨卡特卡斯"  # Zacatecas
+    "昆塔纳罗州"  # Quintana Roo
+    "阿瓜斯卡连特斯"  # Aguascalientes
+    "特拉斯卡拉"  # Tlaxcala
+    "纳亚里特"  # Nayarit
+    "坎佩切"  # Campeche
+    "科利马"  # Colima
+    "下加利福尼亚"  # Baja California Sur
+  }
+}
+MEX_CITIES = {
+  name = NAME_THEME_CITIES
+  for_countries = {
+    MEX
+  }
+  type = ship
+  prefix = "ARM "
+  unique = {
+    "墨西哥城"  # Ciudad de Mexico
+    "埃卡特佩克"  # Ecatepec
+    "瓜达拉哈拉"  # Guadalajara
+    "普埃布拉"  # Puebla
+    "华雷斯"  # Juárez
+    "蒂华纳"  # Tijuana
+    "莱昂"  # León
+    "萨波潘"  # Zapopan
+    "蒙特雷"  # Monterrey
+    "内萨瓦尔科约特尔"  # Nezahualcóyotl
+    "库利亚坎"  # Culiacán
+    "奇瓦瓦"  # Chihuahua
+    "瑙卡尔潘"  # Naucalpan
+    "梅里达"  # Mérida
+    "圣路易波托西"  # San Luis Potosí
+    "阿瓜斯卡连特斯"  # Aguascalientes
+    "埃莫西约"  # Hermosillo
+    "萨尔蒂约"  # Saltillo
+    "墨西卡利"  # Mexicali
+    "瓜达卢佩"  # Guadalupe
+    "阿卡普尔科"  # Acapulco
+    "特拉尔内潘特拉"  # Tlalnepantla
+    "坎昆"  # Cancún
+    "克雷塔罗"  # Querétaro
+    "基玛华坎"  # Chimalhuacán
+    "托雷翁"  # Torreón
+    "莫雷利亚"  # Morelia
+    "蒙特雷"  # Reynosa
+    "特拉克帕克"  # Tlaquepaque
+    "图斯特拉古铁雷斯"  # Tuxtla Gutiérrez
+    "杜兰戈"  # Durango
+    "托卢卡"  # Toluca
+    "马特奥斯城"  # Ciudad López Mateos
+    "库奥蒂特兰伊斯卡伊"  # Cuautitlán Izcalli
+    "阿波达卡城"  # Ciudad Apodaca
+    "马塔莫罗斯"  # Matamoros
+    "圣尼科尔"  # San Nicolás
+    "韦拉克鲁斯"  # Veracruz
+    "贾拉普"  # Xalapa
+    "托纳拉"  # Tonalá
+    "马萨特兰"  # Mazatlán
+    "伊拉普阿托"  # Irapuato
+    "新拉莱多"  # Nuevo Laredo
+    "济科"  # Xico
+    "比亚埃尔莫萨"  # Villahermosa
+    "埃斯科韦多将军"  # General Escobedo
+    "塞拉亚"  # Celaya
+    "库埃纳瓦卡"  # Cuernavaca
+    "特皮克"  # Tepic
+    "伊斯塔帕卢卡"  # Ixtapaluca
+    "维多利亚城"  # Ciudad Victoria
+    "奥夫雷贡"  # Ciudad Obregón
+    "坦皮科"  # Tampico
+    "尼古拉斯·罗梅洛城"  # Ciudad Nicolás Romero
+    "恩塞纳达"  # Ensenada
+    "科亚卡科"  # Coacalco de Berriozábal
+    "圣卡塔琳娜"  # Santa Catarina
+    "乌鲁阿潘"  # Uruapan
+    "戈麦斯"  # Gómez Palacio
+    "洛斯莫奇斯"  # Los Mochis
+    "帕丘卡"  # Pachuca
+    "瓦哈卡"  # Oaxaca
+    "特华坎"  # Tehuacán
+    "坎佩切"  # Campeche
+    "拉巴斯"  # La Paz
+    "诺加莱斯"  # Nogales
+    "布埃纳维斯塔"  # Buenavista
+    "巴亚尔塔港"  # Puerto Vallarta
+  }
+}
+MEX_AZTECS = {
+  name = NAME_THEME_AZTECS
+  for_countries = {
+    MEX
+  }
+  type = ship
+  prefix = "ARM "
+  unique = {
+    "羽蛇神"  # Quetzalcoatl
+    "战神"  # Huitzilopochtli
+    "雨神"  # Tlaloc
+    "太阳神"  # Tonatiuh
+    "黑暗神"  # Tezcatlipoca
+    "水神"  # Chalchiuhtlicue
+    "森特奥特尔"  # Centeotl
+    "西佩托堤克"  # Xipe Totec
+    "玛雅修尔"  # Mayahuel
+    "特拉尔泰库特利"  # Tlaltechutli
+    "阿特拉华"  # Atlahua
+    "奥索莫科"  # Oxomoco
+    "伊西特里顿"  # Ixtlilton
+    "埃卡塔托塔利"  # Ehecatotontli
+    "米特兰帕切卡特"  # Mictlanpachecatl
+    "奇瓦特卡耶特尔"  # Cihuatecayotl
+    "塔拉科约特"  # Tlalocayotl
+    "惠特兰帕伊卡特"  # Huitztlampaehecatl
+    "米克特兰堤库特里"  # Mictlantecuhtli
+    "火神"  # Xiuhtecuhtli
+    "米西克亚特尔"  # Mixcoatl
+    "欧梅特欧特尔"  # Ometeotl
+    "托纳卡特库特利"  # Tonacatecuhtli
+    "修洛特尔"  # Xolotl
+    "塔拉胡伊兹卡彭泰赫特"  # Tlahuizcalpantecuhtli
+    "欧波齐特里"  # Opochtli
+    "瓜特穆斯"  # Cuauhtémoc
+    "骨依拿阿"  # Cuitláhuac
+    "内萨瓦尔科约特尔"  # Nezahualcoyotl
+    "蒙提祖马"  # Moctezuma
+    "克奇沙帕尔"  # Xochichapal
+  }
+}
+MEX_LEADERS = {
+  name = NAME_THEME_LEADERS
+  for_countries = {
+    MEX
+  }
+  type = ship
+  prefix = "ARM "
+  unique = {
+    "佩德罗·塞恩兹·德·巴兰达"  # Pedro Sainz de Baranda
+    "大卫·波特"  # David Porter
+    "维尔吉利奥·乌里韦"  # Virgilio Uribe
+    "布拉斯·古德奈兹"  # Blas Godínez
+    "托马斯·马丁"  # Tomás Marín
+    "波西亚诺·阿瑞加"  # Ponciano Arriaga
+    "马里亚诺·马塔莫罗斯"  # Mariano Matamoros
+    "腓力·希科田卡特"  # Felipe Xicoténcatl
+    "伊格纳西奥·阿尔塔米拉诺"  # Ignacio Altamirano
+    "伊格纳西奥·德·拉·莱夫"  # Ignacio de la Llave
+    "胡安·阿尔达马"  # Juan Aldama
+    "莱昂德罗·巴列"  # Leandro Valle
+    "塞巴斯蒂安·莱勒多·德·特哈达"  # Sebastián Lerdo de Tejada
+    "贝尼托华雷斯"  # Benito Juárez
+    "内撒霍科若提"  # Netzahualcóyotl
+    "曼努埃尔·阿苏塔"  # Manuel Azueta
+    "尼科劳斯·布拉沃"  # Nicolás Bravo
+    "埃尔梅内希尔多·加莱阿纳"  # Hermenegildo Galeana
+    "伊格纳西奥·阿连德"  # Ignacio Allende
+    "马里亚诺·阿瓦索洛"  # Mariano Abasolo
+    "瓜达卢佩·维多利亚"  # Guadalupe Victoria
+    "弗朗西斯科·哈维尔·米纳"  # Francisco Javier Mina
+    "瓦伦泰·法里亚斯"  # Valentín Farías
+    "潘乔·比利亚"  # Pancho Villa
+    "胡安·阿尔瓦雷斯"  # Juan Álvarez
+    "米盖尔·拉莫斯·阿里兹佩"  # Miguel Ramos Arizpe
+    "马蒂亚斯·德·科尔多瓦"  # Matías de Córdova
+    "何塞·玛丽亚·伊萨加"  # José María Izazaga
+    "伊格纳西奥·洛佩兹·拉扬"  # Ignacio López Rayón
+    "比森特·格雷罗"  # Vicente Guerrero
+    "何塞·马里亚·莫雷洛斯"  # José María Morelos
+    "米格尔·伊达尔戈"  # Miguel Hidalgo
+    "塞巴斯蒂安·何塞·霍尔津格"  # Sebastián José Holzinger
+    "布拉斯·古德奈兹·布里吞"  # Blas Godínez Brito
+    "马里亚诺·埃斯科韦多"  # Mariano Escobedo
+    "古铁雷斯·萨莫拉"  # Gutiérrez Zamora
+    "伊格纳西奥·萨拉戈萨"  # Ignacio Zaragoza
+    "桑托斯·德格拉"  # Santos Degollado
+  }
+}
+MEX_RIVERS = {
+  name = NAME_THEME_RIVERS
+  for_countries = {
+    MEX
+  }
+  type = ship
+  prefix = "ARM "
+  unique = {
+    "格兰德河"  # Rio Grande
+    "北河"  # Rio del Norte
+    "布拉沃河"  # Rio Bravo
+    "阿瓜普列塔"  # Agua Prieta
+    "格里哈巴河"  # Rio Grijalva
+    "科罗拉多河"  # Rio Colorado
+    "乌苏马辛塔河"  # Rio Usumacinta
+    "纳萨斯河"  # Rio Nazas
+    "阿瓜纳瓦尔河"  # Rio Aguanaval
+    "库利亚坎河"  # Rio Culiacán
+    "巴尔萨斯河"  # Rio Balsas
+    "莱马河"  # Rio Lerma
+    "富埃尔特河"  # Rio Fuerte
+    "巴纽科河"  # Rio Pánuco
+    "康求河"  # Rio Conchos
+    "索托拉马雷纳河"  # Rio Soto La Marina
+    "亚基河"  # Rio Yaqui
+    "圣费尔南多河"  # Rio San Fernando
+    "马约河"  # Rio Mayo
+    "特科卢特拉河"  # Rio Tecolutla
+    "哈马帕河"  # Rio Jamapa
+    "巴帕洛阿潘河"  # Rio Papaloapan
+    "锡那罗亚河"  # Rio Sinaloa
+    "韦尔迪河"  # Rio Verde
+    "康塞普西翁河"  # Rio Concepción
+    "夸察夸尔科斯河"  # Rio Coatzacoalcos
+    "圣洛伦佐河"  # Rio San Lorenzo
+    "索诺伊塔河"  # Rio Sonoyta
+    "圣佩德罗梅奇塔尔河"  # Rio San Pedro Mezquital
+  }
+}

@@ -1,0 +1,26 @@
+### 是华夏文化 ###
+princess_is_Chinese_culture = {
+	OR = {
+		original_tag = CHI
+		original_tag = MAN
+		original_tag = XBJ
+		original_tag = SLJ
+		original_tag = HNJ
+		original_tag = YXC
+		original_tag = GXC
+		original_tag = QXC
+		original_tag = YUN
+		original_tag = XXC
+		original_tag = DBJ
+		original_tag = SHX
+		original_tag = CXC
+		original_tag = XNM
+		original_tag = XSM
+		original_tag = SIK
+		original_tag = XJM
+	}
+}
+
+
+
+

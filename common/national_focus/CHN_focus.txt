@@ -1,0 +1,968 @@
+focus_tree = {
+	id = CHN_focus
+	
+	country = {
+		factor = 0
+	}
+	
+	default = no
+
+	### 不做李自成 ###
+	focus = {
+		id = CHN_buzuo_lizicheng_focus
+		icon = GFX_goal_DBJ_zhangzuolin
+		x = 1
+		y = 0
+		cost = 5
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.10
+		}
+	}
+	
+	### 将部队打散重编 ###
+	focus = {
+		id = CHN_jiangbudui_dasanchongbian_focus
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = CHN_buzuo_lizicheng_focus }
+		mutually_exclusive = { focus = CHN_tongyi_junduisixiang_focus }
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = princess_dasanchongbiande_jundui_idea
+		}
+	}
+	
+	### 统一军队思想 ###
+	focus = {
+		id = CHN_tongyi_junduisixiang_focus
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = CHN_buzuo_lizicheng_focus }
+		mutually_exclusive = { focus = CHN_jiangbudui_dasanchongbian_focus }
+		x = 2
+		y = 1
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = princess_xinren_jundui_idea
+		}
+	}
+	
+	### 政治委员 ###
+	focus = {
+		id = CHN_zhengzhi_weiyuan_focus
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = {
+			focus = CHN_jiangbudui_dasanchongbian_focus
+			focus = CHN_tongyi_junduisixiang_focus
+		}
+		x = 0
+		y = 2
+		cost = 10
+		
+		bypass = {
+			has_idea = political_commissars_focus
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = political_commissars_focus
+		}
+	}
+	
+	### 中央军事委员会 ###
+	focus = {
+		id = CHN_zhongyang_junshiweiyuanhui_focus
+		icon = GFX_focus_generic_home_defense
+		prerequisite = {
+			focus = CHN_jiangbudui_dasanchongbian_focus
+			focus = CHN_tongyi_junduisixiang_focus
+		}
+		x = 2
+		y = 2
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_ideas = princess_zhongyang_junshiweiyuanhui_idea
+		}
+	}
+	
+	### 训练有素的军队 ###
+	focus = {
+		id = CHN_xunlianyousude_jundui_focus
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = CHN_zhengzhi_weiyuan_focus }
+		prerequisite = { focus = CHN_zhongyang_junshiweiyuanhui_focus }
+		x = 1
+		y = 3
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_ideas = princess_xunlianyousude_jundui_idea
+		}
+	}
+	
+	### 团结华夏民族 ###
+	focus = {
+		id = CHN_tuanjie_huaxiaminzu_focus
+		icon = GFX_goal_chi_jinxinkmt
+		x = 10
+		y = 0
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.2
+		}
+	}
+	
+	### 政治协商会议 ###
+	focus = {
+		id = CHN_zhengzhixieshang_huiyi_focus
+		icon = GFX_focus_chi_legislative_yuan
+		prerequisite = { focus = CHN_tuanjie_huaxiaminzu_focus }
+		mutually_exclusive = { focus = CHN_jiaqiang_zhongyangjiquan_focus }
+		x = 7
+		y = 1
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = CHI_inter_party_coordination_council
+		}
+	}
+	
+	### 加强中央集权 ###
+	focus = {
+		id = CHN_jiaqiang_zhongyangjiquan_focus
+		icon = GFX_goal_chi_jiangshitongzhi
+		prerequisite = { focus = CHN_tuanjie_huaxiaminzu_focus }
+		mutually_exclusive = { focus = CHN_zhengzhixieshang_huiyi_focus }
+		x = 13
+		y = 1
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = princess_jiaqiang_zhongyangjiquan_idea
+		}
+	}
+	
+	### 人民民主专政 ###
+	focus = {
+		id = CHN_renmin_minzhuzhuanzheng_focus
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = { focus = CHN_zhengzhixieshang_huiyi_focus }
+		mutually_exclusive = { focus = CHN_minzhu_gonghezhi_focus }
+		x = 6
+		y = 2
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_timed_idea = { idea = princess_renmin_minzhuzhuanzheng_idea days = 730 }
+		}
+	}
+	
+	### 民主共和制 ###
+	focus = {
+		id = CHN_minzhu_gonghezhi_focus
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = CHN_zhengzhixieshang_huiyi_focus }
+		mutually_exclusive = { focus = CHN_renmin_minzhuzhuanzheng_focus }
+		x = 8
+		y = 2
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_timed_idea = { idea = princess_zouxiang_gonghe_idea days = 730 }
+		}
+	}
+	
+	### 呼吁统一 ###
+	focus = {
+		id = CHN_huyu_tongyi_focus
+		icon = GFX_focus_chi_one_china_policy
+		prerequisite = {
+			focus = CHN_renmin_minzhuzhuanzheng_focus
+			focus = CHN_minzhu_gonghezhi_focus
+		}
+		x = 7
+		y = 3
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_state_core = 609
+			add_state_core = 610
+			add_state_core = 716
+			add_state_core = 745
+			add_state_core = 715
+			add_state_core = 328
+			add_state_core = 717
+			add_state_core = 761
+			add_state_core = 714
+			add_state_core = 611
+			add_state_core = 612
+			add_state_core = 621
+			add_state_core = 746
+			add_state_core = 756
+			add_state_core = 753
+			add_state_core = 752
+			add_state_core = 751
+			add_state_core = 604
+			add_state_core = 755
+			add_state_core = 754
+			add_state_core = 760
+			add_state_core = 617
+			add_state_core = 618
+			add_state_core = 287
+			add_state_core = 619
+			add_state_core = 759
+			add_state_core = 524
+			
+			add_state_core = 654
+			add_state_core = 788
+			add_state_core = 789
+			add_state_core = 790
+			add_state_core = 791
+			add_state_core = 329
+			add_state_core = 330
+			add_state_core = 560
+			add_state_core = 408
+			add_state_core = 409
+			add_state_core = 657
+			add_state_core = 792
+			add_state_core = 561
+			add_state_core = 563
+			add_state_core = 564
+			add_state_core = 565
+			add_state_core = 537
+			add_state_core = 655
+			
+			news_event = { hours = 12 id = princess_news.4 }
+		}
+	}
+	
+	### 西藏问题 ###
+	focus = {
+		id = CHN_xizang_wenti_focus
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = CHN_huyu_tongyi_focus }
+		x = 6
+		y = 4
+		cost = 10
+
+		available_if_capitulated = no
+		
+		bypass = {
+			TIB = { is_subject_of = ROOT }
+			NOT = { country_exists = TIB }
+		}
+
+		completion_reward = {
+			add_state_core = 758
+			add_state_core = 322
+			add_state_core = 601
+			add_state_core = 757
+			
+			TIB = {
+				country_event = { id = princess_china_empire.2 }
+			}
+		}
+	}
+	
+	### 满洲问题 ###
+	focus = {
+		id = CHN_manzhou_wenti_focus
+		icon = GFX_focus_jap_manchurian_project
+		prerequisite = { focus = CHN_huyu_tongyi_focus }
+		x = 8
+		y = 4
+		cost = 10
+
+		available_if_capitulated = no
+		
+		bypass = {
+			NOT = { country_exists = MAN }
+		}
+
+		completion_reward = {
+			MAN = {
+				country_event = { id = princess_china_empire.5 }
+			}
+		}
+	}
+	
+	### 废除不平等条约 ###
+	focus = {
+		id = CHN_feichu_bupingdengtiaoyue_focus
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = {
+			focus = CHN_xizang_wenti_focus
+			focus = CHN_manzhou_wenti_focus
+		}
+		x = 7
+		y = 5
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_state_core = 326
+			add_state_core = 729
+			add_state_core = 728
+			add_state_core = 434
+			
+			news_event = { hours = 12 id = princess_news.5 }
+		}
+	}
+	
+	### 强制收回租借地 ###
+	focus = {
+		id = CHN_qiangzhi_shouhuizujiedi_focus
+		icon = GFX_focus_RAJ_clamp_down_on_corruption
+		prerequisite = { focus = CHN_feichu_bupingdengtiaoyue_focus }
+		x = 6
+		y = 6
+		cost = 10
+
+		available_if_capitulated = no
+		
+		bypass = {
+			owns_state = 326
+			owns_state = 729
+			owns_state = 728
+			owns_state = 434
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					326 = {
+						controller = {
+							NOT = { is_in_faction_with = ROOT }
+						}
+					}
+				}
+				326 = {
+					controller = {
+						ROOT = {
+							create_wargoal = {
+								type = take_state_focus
+								target = PREV
+								generator = { 326 }
+							}
+						}
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					729 = {
+						controller = {
+							NOT = { is_in_faction_with = ROOT }
+						}
+					}
+				}
+				729 = {
+					controller = {
+						ROOT = {
+							create_wargoal = {
+								type = take_state_focus
+								target = PREV
+								generator = { 729 }
+							}
+						}
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					728 = {
+						controller = {
+							NOT = { is_in_faction_with = ROOT }
+						}
+					}
+				}
+				728 = {
+					controller = {
+						ROOT = {
+							create_wargoal = {
+								type = take_state_focus
+								target = PREV
+								generator = { 728 }
+							}
+						}
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					434 = {
+						controller = {
+							NOT = { is_in_faction_with = ROOT }
+						}
+					}
+				}
+				434 = {
+					controller = {
+						ROOT = {
+							create_wargoal = {
+								type = take_state_focus
+								target = PREV
+								generator = { 434 }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	### 武统台湾 ###
+	focus = {
+		id = CHN_wutong_taiwan_focus
+		icon = GFX_goal_taiwan
+		prerequisite = { focus = CHN_feichu_bupingdengtiaoyue_focus }
+		x = 8
+		y = 6
+		cost = 10
+
+		available_if_capitulated = no
+
+		bypass = {
+			owns_state = 524
+		}
+		
+		completion_reward = {
+			if = {
+				limit = {
+					524 = {
+						controller = {
+							NOT = { is_in_faction_with = ROOT }
+						}
+					}
+				}
+				524 = {
+					controller = {
+						ROOT = {
+							create_wargoal = {
+								type = take_state_focus
+								target = PREV
+								generator = { 524 }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	### 恢复华夏帝国的荣光 ###
+	focus = {
+		id = CHN_huifuhuaxiadiguode_rongguang_focus
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = CHN_jiaqiang_zhongyangjiquan_focus }
+		mutually_exclusive = { focus = CHN_tianming_yougui_focus }
+		x = 12
+		y = 2
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_timed_idea = { idea = princess_huaxiade_rongguang_idea days = 730 }
+		}
+	}
+	
+	### 天命攸归 ###
+	focus = {
+		id = CHN_tianming_yougui_focus
+		icon = GFX_focus_man_claim_the_mandate_of_heaven
+		prerequisite = { focus = CHN_jiaqiang_zhongyangjiquan_focus }
+		mutually_exclusive = { focus = CHN_huifuhuaxiadiguode_rongguang_focus }
+		x = 14
+		y = 2
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_timed_idea = { idea = princess_tianchao_idea days = 730 }
+		}
+	}
+	
+	### 统一大陆 ###
+	focus = {
+		id = CHN_tongyi_dalu_focus
+		icon = GFX_focus_generic_provoke_border_clashes
+		prerequisite = {
+			focus = CHN_huifuhuaxiadiguode_rongguang_focus
+			focus = CHN_tianming_yougui_focus
+		}
+		x = 13
+		y = 3
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_state_core = 609
+			add_state_core = 610
+			add_state_core = 716
+			add_state_core = 745
+			add_state_core = 715
+			add_state_core = 328
+			add_state_core = 717
+			add_state_core = 761
+			add_state_core = 714
+			add_state_core = 611
+			add_state_core = 612
+			add_state_core = 621
+			add_state_core = 746
+			add_state_core = 756
+			add_state_core = 753
+			add_state_core = 752
+			add_state_core = 751
+			add_state_core = 604
+			add_state_core = 755
+			add_state_core = 754
+			add_state_core = 760
+			add_state_core = 617
+			add_state_core = 618
+			add_state_core = 287
+			add_state_core = 619
+			add_state_core = 759
+			
+			add_state_core = 654
+			add_state_core = 788
+			add_state_core = 789
+			add_state_core = 790
+			add_state_core = 791
+			add_state_core = 329
+			add_state_core = 330
+			add_state_core = 560
+			add_state_core = 408
+			add_state_core = 409
+			add_state_core = 657
+			add_state_core = 792
+			add_state_core = 561
+			add_state_core = 563
+			add_state_core = 564
+			add_state_core = 565
+			
+			news_event = { hours = 12 id = princess_news.6 }
+		}
+	}
+	
+	### 收回附属岛屿 ###
+	focus = {
+		id = CHN_shouhui_fushudaoyu_focus
+		icon = GFX_goal_taiwan
+		prerequisite = { focus = CHN_tongyi_dalu_focus }
+		x = 13
+		y = 4
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_state_core = 524
+			add_state_core = 526
+			
+			add_state_core = 537
+			add_state_core = 655
+		}
+	}
+	
+	### 八国联军的耻辱 ###
+	focus = {
+		id = CHN_baguolianjunde_chiru_focus
+		icon = GFX_focus_AST_rats_tobruk
+		prerequisite = { focus = CHN_shouhui_fushudaoyu_focus }
+		x = 13
+		y = 5
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ENG
+			}
+			
+			create_wargoal = {
+				type = annex_everything
+				target = FRA
+			}
+			
+			create_wargoal = {
+				type = annex_everything
+				target = JAP
+			}
+			
+			create_wargoal = {
+				type = annex_everything
+				target = GER
+			}
+			
+			create_wargoal = {
+				type = annex_everything
+				target = SOV
+			}
+			
+			create_wargoal = {
+				type = annex_everything
+				target = ITA
+			}
+			
+			create_wargoal = {
+				type = annex_everything
+				target = AUS
+			}
+			
+			create_wargoal = {
+				type = annex_everything
+				target = RAJ
+			}
+			
+			create_wargoal = {
+				type = annex_everything
+				target = BEL
+			}
+			
+			create_wargoal = {
+				type = annex_everything
+				target = HOL
+			}
+			
+			create_wargoal = {
+				type = annex_everything
+				target = USA
+			}
+			
+			news_event = { hours = 12 id = princess_news.7 }
+		}
+	}
+	
+	### 土地改革 ###
+	focus = {
+		id = CHN_tudi_gaige_focus
+		icon = GFX_goal_generic_propaganda
+		x = 22
+		y = 0
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	### 发展尖端国防 ###
+	focus = {
+		id = CHN_fazhan_jianduanguofang_focus
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = CHN_tudi_gaige_focus }
+		x = 19
+		y = 1
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	### 邀请留学生回国 ###
+	focus = {
+		id = CHN_yaoqingliuxuesheng_huiguo_focus
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = CHN_fazhan_jianduanguofang_focus }
+		x = 19
+		y = 2
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	### 排除万难 ###
+	focus = {
+		id = CHN_paichu_wannan_focus
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = CHN_yaoqingliuxuesheng_huiguo_focus }
+		x = 19
+		y = 3
+		cost = 20
+
+		available_if_capitulated = no
+		
+		bypass = {
+			has_tech = nuclear_reactor
+		}
+
+		completion_reward = {
+			set_technology = {
+				nuclear_reactor = 1
+			}
+		}
+	}
+	
+	### 研发第二代核武器 ###
+	focus = {
+		id = CHN_yanfa_dierdaihewuqi_focus
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = CHN_paichu_wannan_focus }
+		x = 18
+		y = 4
+		cost = 15
+
+		available_if_capitulated = no
+		
+		bypass = {
+			has_tech = nukes
+		}
+
+		completion_reward = {
+			set_technology = {
+				nukes = 1
+			}
+		}
+	}
+	
+	### 研发第三代核武器 ###
+	focus = {
+		id = CHN_yanfa_disandaihewuqi_focus
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = CHN_yanfa_dierdaihewuqi_focus }
+		x = 18
+		y = 5
+		cost = 15
+
+		available_if_capitulated = no
+		
+		bypass = {
+			has_tech = nuclear_reactor2
+		}
+
+		completion_reward = {
+			set_technology = {
+				nuclear_reactor2 = 1
+			}
+		}
+	}
+	
+	### 研发第四代核武器 ###
+	focus = {
+		id = CHN_yanfa_disidaihewuqi_focus
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = CHN_yanfa_disandaihewuqi_focus }
+		x = 18
+		y = 6
+		cost = 15
+
+		available_if_capitulated = no
+		
+		bypass = {
+			has_tech = nuclear_reactor3
+		}
+
+		completion_reward = {
+			set_technology = {
+				nuclear_reactor3 = 1
+			}
+		}
+	}
+	
+	### 研发更先进的导弹 ###
+	focus = {
+		id = CHN_yanfagengxianjinde_daodan_focus
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = CHN_paichu_wannan_focus }
+		x = 20
+		y = 4
+		cost = 15
+
+		available_if_capitulated = no
+		
+		bypass = {
+			has_tech = advanced_rocket_engines
+		}
+
+		completion_reward = {
+			add_ideas = princess_yanfagengxianjinde_daodan_idea
+		}
+	}
+	
+	### 第一颗人造卫星 ###
+	focus = {
+		id = CHN_diyike_renzaoweixing_focus
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = CHN_yanfagengxianjinde_daodan_focus }
+		x = 20
+		y = 5
+		cost = 15
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = princess_china_empire.8 }
+		}
+	}
+	
+	### 将宇航员送上太空 ###
+	focus = {
+		id = CHN_jiangyuhangyuan_songshangtaikong_focus
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = CHN_diyike_renzaoweixing_focus }
+		x = 20
+		y = 6
+		cost = 20
+		
+		available = {
+			num_of_factories > 250
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					date > 1961.1.1
+				}
+				
+				news_event = { hours = 12 id = princess_news.10 }
+			}
+			
+			if = {
+				limit = {
+					date < 1961.1.1
+				}
+				
+				country_event = { id = princess_china_empire.9 }
+			}
+		}
+	}
+	
+	### 社会改革 ###
+	focus = {
+		id = CHN_shehui_gaige_focus
+		icon = GFX_goal_tfv_smiling_buddha
+		prerequisite = { focus = CHN_tudi_gaige_focus }
+		x = 25
+		y = 1
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	### 取缔娼妓 ###
+	focus = {
+		id = CHN_qudi_changji_focus
+		icon = GFX_goal_changge_01
+		prerequisite = { focus = CHN_shehui_gaige_focus }
+		x = 24
+		y = 2
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.3
+			add_timed_idea = { idea = princess_qudiquanguode_changji_idea days = 42 }
+		}
+	}
+	
+	### 反腐倡廉 ###
+	focus = {
+		id = CHN_fanfu_changlian_focus
+		icon = GFX_goal_baoxiang
+		prerequisite = { focus = CHN_shehui_gaige_focus }
+		x = 26
+		y = 2
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = princess_fanfu_changlian_idea
+		}
+	}
+	
+	### 发行新币 ###
+	focus = {
+		id = CHN_faxing_xinbi_focus
+		icon = GFX_goal_prc_bianqubi
+		prerequisite = { focus = CHN_qudi_changji_focus }
+		prerequisite = { focus = CHN_fanfu_changlian_focus }
+		x = 25
+		y = 3
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = -0.3
+			add_timed_idea = { idea = princess_zhujianbeijienade_xinqianbi_idea days = 365 }
+		}
+	}
+	
+	### 邓小平经济理论 ###
+	focus = {
+		id = CHN_huaxiatese_jingji_focus
+		icon = GFX_goal_dengxiaoping
+		prerequisite = { focus = CHN_faxing_xinbi_focus }
+		x = 25
+		y = 4
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = princess_huaxiatese_jingji_idea
+		}
+	}
+	
+}
+
+
+
+

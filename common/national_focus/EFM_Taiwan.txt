@@ -1,0 +1,2435 @@
+focus_tree = {
+	id = EFM_Taiwan
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = TWN
+		}
+	}
+	default = no
+	focus = {
+		id = TWN_Spiritual_mobilization
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		x = 21
+		y = 0
+			ai_will_do = {
+					factor = 5
+				}
+			completion_reward = {
+					add_war_support = 0.05
+					add_ideas = spiritual_mobilization_idea
+				}
+			available = {
+					OR = {
+							threat > 0.15
+							JAP = {
+									has_war = yes
+								}
+						}
+				}
+			bypass = {
+					is_subject = no
+				}
+
+	}
+	focus = {
+		id = TWN_Development_agriculture
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		x = 4
+		y = 0
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Revival_of_social_movement
+		icon = GFX_focus_generic_home_defense
+		cost = 10.00
+		x = 30
+		y = 0
+			ai_will_do = {
+					factor = 2
+				}
+			completion_reward = {
+					add_political_power = 120
+				}
+			available = {
+					OR = {
+						custom_trigger_tooltip = {
+							tooltip = JAP_Dissolve_the_sotoku_fu
+							AND = {
+								is_subject = no
+								NOT = { has_country_flag = JAP_sotoku_fu }
+							}
+						}
+						compare_autonomy_progress_ratio > 0.75
+					}
+				}
+
+	}
+	focus = {
+		id = TWN_Build_the_road
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		x = 2
+		y = 0
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Naichi_encho_shugi_of_maintenance
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		x = 10
+		y = 0
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_political_power = 120
+				}
+			available = {
+					is_subject_of = JAP
+				}
+
+	}
+	focus = {
+		id = TWN_Military_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		x = 15
+		y = 0
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Light_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Build_the_road
+		}
+		prerequisite = {
+			focus = TWN_Development_agriculture
+		}
+		x = 3
+		y = 1
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Strengthen_vocational_education
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Light_industry
+		}
+		x = 0
+		y = 2
+			completion_reward = {
+					add_research_slot = 1
+				}
+			available = {
+					num_of_factories > 5
+				}
+
+	}
+	focus = {
+		id = TWN_Advanced_instrument
+		icon = GFX_goal_generic_production2
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Strengthen_vocational_education
+		}
+		x = 0
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = computer
+							bonus = 0.5
+							uses = 1
+							category = computing_tech
+						}
+					add_tech_bonus = {
+							name = computer
+							bonus = 0.5
+							uses = 1
+							category = encryption_tech
+							category = decryption_tech
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Build_the_road_2
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Light_industry
+		}
+		x = 2
+		y = 2
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Industrial_consolidation
+		icon = GFX_focus_generic_industry_2
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Build_the_road_2
+		}
+		x = 2
+		y = 3
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					add_ideas = TWN_Raise_efficiency
+				}
+
+	}
+	focus = {
+		id = TWN_Increase_work_efficiency
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Industrial_consolidation
+		}
+		mutually_exclusive = {
+			focus = TWN_Reform_system
+		}
+		x = 1
+		y = 4
+			completion_reward = {
+					swap_ideas = {
+							remove_idea = TWN_Raise_efficiency
+							add_idea = TWN_Raise_efficiency_3
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Reform_system
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Industrial_consolidation
+		}
+		mutually_exclusive = {
+			focus = TWN_Increase_work_efficiency
+		}
+		x = 3
+		y = 4
+			completion_reward = {
+					swap_ideas = {
+							remove_idea = TWN_Raise_efficiency
+							add_idea = TWN_Raise_efficiency_2
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Hondo_zaibatsu
+		icon = GFX_focus_jap_zaibatsu
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Increase_work_efficiency
+			focus = TWN_Reform_system
+		}
+		x = 2
+		y = 5
+			completion_reward = {
+					add_ideas = JAP_zaibatsus
+					random_owned_controlled_state = {
+							limit = {
+									ROOT = {
+											has_full_control_of_state = PREV
+										}
+									is_core_of = ROOT
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+			available = {
+					is_subject_of = JAP
+					NOT = { has_idea = JAP_zaibatsus }
+				}
+
+	}
+	focus = {
+		id = TWN_Governor_general_of_civil_official
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Naichi_encho_shugi_of_maintenance
+		}
+		mutually_exclusive = {
+			focus = TWN_Dispatch_military_officer
+		}
+		x = 8
+		y = 1
+			ai_will_do = {
+					modifier = {
+							factor = 0
+							is_historical_focus_on = yes
+						}
+					modifier = {
+							factor = 10
+							date > 1936.9.1
+							is_historical_focus_on = no
+						}
+				}
+			completion_reward = {
+					add_political_power = 120
+				}
+			available = {
+					is_subject_of = JAP
+				}
+
+	}
+	focus = {
+		id = TWN_Industrial_reform
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Light_industry
+			focus = TWN_Governor_general_of_civil_official
+		}
+		x = 4
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = TWN_Industrial_reform
+							bonus = 0.5
+							uses = 1
+							category = engineers_tech
+							category = construction_tech
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Light_industry_2
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Light_industry
+			focus = TWN_Governor_general_of_civil_official
+		}
+		x = 6
+		y = 2
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Light_industry_3
+		icon = GFX_focus_generic_industry_3
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Light_industry_2
+		}
+		prerequisite = {
+			focus = TWN_Industrial_reform
+		}
+		x = 5
+		y = 3
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = industrial_complex
+									level = 3
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Policy_transformation
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Governor_general_of_civil_official
+		}
+		x = 8
+		y = 2
+			completion_reward = {
+					add_stability = 0.05
+					swap_ideas = {
+							remove_idea = TWN_Agricultural_taiwan
+							add_idea = TWN_Formal_economic_policy
+						}
+				}
+			available = {
+					is_subject = yes
+				}
+
+	}
+	focus = {
+		id = TWN_Education_of_liberalize
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Policy_transformation
+		}
+		x = 7
+		y = 3
+			completion_reward = {
+					add_ideas = TWN_Education_system_reform
+				}
+			available = {
+					has_country_leader = {
+							name = "中川贤三"
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Religious_freedom
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Policy_transformation
+		}
+		x = 9
+		y = 3
+			completion_reward = {
+					add_ideas = TWN_Allow_religious_freedom
+				}
+
+	}
+	focus = {
+		id = TWN_Expand_suffrage
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Education_of_liberalize
+		}
+		prerequisite = {
+			focus = TWN_Religious_freedom
+		}
+		x = 8
+		y = 4
+			completion_reward = {
+					add_stability = 0.05
+					swap_ideas = {
+							remove_idea = TWN_The_law_no3
+							add_idea = TWN_The_law_no3_2
+						}
+				}
+			available = {
+					is_subject = yes
+				}
+
+	}
+	focus = {
+		id = TWN_Restart_the_petition_movement_for_the_establishment_of_a_taiwanese_parliament
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Expand_suffrage
+		}
+		x = 8
+		y = 5
+			completion_reward = {
+					add_stability = 0.05
+					add_war_support = 0.1
+					swap_ideas = {
+							remove_idea = TWN_The_law_no3_2
+							add_idea = TWN_The_law_no3_3
+						}
+				}
+			available = {
+					is_subject = yes
+				}
+
+	}
+	focus = {
+		id = TWN_Set_Parliament
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Restart_the_petition_movement_for_the_establishment_of_a_taiwanese_parliament
+		}
+		x = 8
+		y = 6
+			completion_reward = {
+					add_stability = 0.1
+					swap_ideas = {
+							remove_idea = TWN_The_law_no3_3
+							add_idea = TWN_Taiwanese_parliament
+						}
+				}
+			available = {
+					is_subject = yes
+				}
+
+	}
+	focus = {
+		id = TWN_Dispatch_military_officer
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Naichi_encho_shugi_of_maintenance
+		}
+		mutually_exclusive = {
+			focus = TWN_Governor_general_of_civil_official
+		}
+		x = 12
+		y = 1
+			ai_will_do = {
+					modifier = {
+							factor = 10
+							date > 1936.9.1
+						}
+				}
+			completion_reward = {
+					add_war_support = 0.05
+					set_politics = {
+							ruling_party = fascism
+							elections_allowed = no
+						}
+					add_popularity = {
+							ideology = fascism
+							popularity = 0.3
+						}
+					create_country_leader = {
+							name = "李振鹏"
+							desc = ""
+							picture = "gfx/leaders/TWN/Portrait_Liau_Chin_Peng.dds"
+							expire = "1965.1.1"
+							ideology = centrism
+							traits = {
+
+}
+						}
+					set_party_name = {
+							ideology = neutrality
+							long_name = Taiwanese_peoples_party
+							name = Taiwanese_peoples_party
+						}
+				}
+			available = {
+					is_subject_of = JAP
+				}
+
+	}
+	focus = {
+		id = TWN_General_education
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Governor_general_of_civil_official
+			focus = TWN_Dispatch_military_officer
+		}
+		x = 10
+		y = 2
+			completion_reward = {
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = TWN_Education_reform
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_General_education
+		}
+		x = 10
+		y = 4
+			completion_reward = {
+					add_research_slot = 1
+				}
+			available = {
+					num_of_factories > 15
+				}
+
+	}
+	focus = {
+		id = TWN_Industrialization
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Dispatch_military_officer
+		}
+		x = 12
+		y = 2
+			completion_reward = {
+					swap_ideas = {
+							remove_idea = TWN_Agricultural_taiwan
+							add_idea = TWN_Accelerate_industrialization
+						}
+				}
+			available = {
+					is_subject_of = JAP
+				}
+
+	}
+	focus = {
+		id = TWN_Expansion_Port_of_Keelung
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Industrialization
+		}
+		x = 11
+		y = 3
+			completion_reward = {
+					796 = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = dockyard
+									level = 1
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = naval_base
+									province = 7186
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_State_shinto
+		icon = GFX_focus_jap_spiritual_mobilization
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Industrialization
+		}
+		x = 13
+		y = 3
+			completion_reward = {
+					add_ideas = state_shintoism
+				}
+			available = {
+					has_country_leader = {
+							name = "小林跻造"
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Base_of_southern_expansion
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Expansion_Port_of_Keelung
+		}
+		prerequisite = {
+			focus = TWN_State_shinto
+		}
+		x = 12
+		y = 4
+			completion_reward = {
+					add_war_support = 0.05
+					524 = {
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = dockyard
+									level = 2
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = naval_base
+									province = 12068
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Kominka_undo
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Base_of_southern_expansion
+		}
+		x = 12
+		y = 5
+			completion_reward = {
+					add_ideas = TWN_Kominka_undo
+				}
+			available = {
+					has_country_leader = {
+							name = "小林跻造"
+						}
+					threat > 0.3
+				}
+
+	}
+	focus = {
+		id = TWN_Into_south_asia
+		icon = GFX_focus_jap_strike_south
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Restart_the_petition_movement_for_the_establishment_of_a_taiwanese_parliament
+			focus = TWN_Kominka_undo
+		}
+		x = 10
+		y = 6
+			ai_will_do = {
+					modifier = {
+							factor = 0
+							is_historical_focus_on = yes
+						}
+				}
+			completion_reward = {
+					add_war_support = 0.05
+					JAP = {
+							country_event = {
+									id = EFM_Taiwan.1
+									days = 1
+								}
+						}
+				}
+			available = {
+					is_subject_of = JAP
+					JAP = {
+							OR = {
+									has_war_with = USA
+									has_war_with = ENG
+									has_war_with = FRA
+									has_war_with = VIN
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Kominhoko_undo
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Kominka_undo
+		}
+		x = 12
+		y = 6
+			completion_reward = {
+					add_war_support = 0.05
+					swap_ideas = {
+							remove_idea = TWN_Kominka_undo
+							add_idea = TWN_Kominhoko_undo
+						}
+				}
+			available = {
+					has_country_leader = {
+							name = "小林跻造"
+						}
+					threat > 0.75
+				}
+
+	}
+	focus = {
+		id = TWN_Military_industry_2
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Military_industry
+		}
+		x = 15
+		y = 2
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Military_industry_3
+		icon = GFX_focus_generic_tank_production
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Military_industry_2
+		}
+		prerequisite = {
+			focus = TWN_Industrialization
+		}
+		x = 15
+		y = 4
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Military_law
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Spiritual_mobilization
+		}
+		x = 19
+		y = 1
+			completion_reward = {
+					if = {
+							limit = {
+									NOT = {
+											has_idea = limited_conscription
+										}
+								}
+							add_ideas = limited_conscription
+						}
+					add_ideas = TWN_Military_law
+				}
+
+	}
+	focus = {
+		id = TWN_Japan_design_diagram
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Military_law
+		}
+		x = 18
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+						}
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = support_tech
+						}
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Basic_improvement
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Japan_design_diagram
+		}
+		x = 17
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+						}
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = support_tech
+						}
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Aircraft
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Japan_design_diagram
+		}
+		x = 19
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = light_fighter_bonus
+							bonus = 0.5
+							uses = 1
+							category = light_fighter
+						}
+					add_tech_bonus = {
+							name = cas_bomber
+							bonus = 0.5
+							uses = 1
+							category = cas_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Inland_Instructors
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Basic_improvement
+			focus = TWN_Aircraft
+		}
+		x = 18
+		y = 4
+			completion_reward = {
+					air_experience = 25
+					navy_experience = 25
+					add_tech_bonus = {
+							name = airforce_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+					add_tech_bonus = {
+							name = naval_bonus
+							bonus = 0.5
+							uses = 1
+							category = naval_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Expand_taiwan_army_of_japan
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Military_law
+		}
+		x = 20
+		y = 2
+			completion_reward = {
+					army_experience = 25
+					add_war_support = 0.05
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+					custom_effect_tooltip = TWN_Expand_taiwan_army_of_japan_tt
+					hidden_effect = {
+							division_template = {
+									name = "台湾军"
+									priority = 2
+									regiments = {
+											infantry = {
+													x = 0
+													y = 0
+												}
+											infantry = {
+													x = 0
+													y = 1
+												}
+											infantry = {
+													x = 0
+													y = 2
+												}
+											infantry = {
+													x = 1
+													y = 0
+												}
+											infantry = {
+													x = 1
+													y = 1
+												}
+											infantry = {
+													x = 1
+													y = 2
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									prioritize = { 12068 }
+									create_unit = {
+											division = "name = \"台湾军整编第一军\" division_template = \"台湾军\" start_experience_factor = 0.4"
+											owner = TWN
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Japanese_taiwan_area_army
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Expand_taiwan_army_of_japan
+		}
+		x = 20
+		y = 4
+			completion_reward = {
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+					add_ideas = TWN_Taiwan_area_army
+				}
+			available = {
+					num_divisions > 10
+				}
+
+	}
+	focus = {
+		id = TWN_Takasago_volunteers
+		icon = GFX_focus_RAJ_indian_gurkhas
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Expand_taiwan_army_of_japan
+		}
+		x = 21
+		y = 3
+			completion_reward = {
+					custom_effect_tooltip = TWN_Takasago_volunteers_tt
+					add_ideas = TWN_Takasago_volunteers
+					hidden_effect = {
+							division_template = {
+									name = "高砂义勇队"
+									priority = 3
+									regiments = {
+											mountaineers = {
+													x = 0
+													y = 0
+												}
+											mountaineers = {
+													x = 0
+													y = 1
+												}
+											mountaineers = {
+													x = 1
+													y = 0
+												}
+											mountaineers = {
+													x = 1
+													y = 1
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									prioritize = { 12068 }
+									create_unit = {
+											division = "name = \"高砂义勇队\" division_template = \"高砂义勇队\" start_experience_factor = 1.0"
+											owner = TWN
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Coastal_barriers
+		icon = GFX_goal_generic_fortify_city
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Spiritual_mobilization
+		}
+		x = 23
+		y = 1
+			completion_reward = {
+					796 = {
+							add_building_construction = {
+									type = coastal_bunker
+									level = 2
+									province = 7186
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = coastal_bunker
+									level = 2
+									province = 7214
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = coastal_bunker
+									level = 2
+									province = 9955
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = coastal_bunker
+									level = 2
+									province = 11959
+									instant_build = yes
+								}
+						}
+					524 = {
+							add_building_construction = {
+									type = coastal_bunker
+									level = 2
+									province = 12068
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = coastal_bunker
+									level = 2
+									province = 1091
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = coastal_bunker
+									level = 2
+									province = 11914
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Expand_naval_base
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Coastal_barriers
+		}
+		x = 22
+		y = 2
+			completion_reward = {
+					524 = {
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = dockyard
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Expand_air_base
+		icon = GFX_goal_generic_air_production
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Coastal_barriers
+		}
+		x = 24
+		y = 2
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Hondo_kessen
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Expand_naval_base
+			focus = TWN_Expand_air_base
+		}
+		x = 23
+		y = 3
+			completion_reward = {
+					add_war_support = 0.1
+					add_ideas = TWN_Taiwan_hondo_kessen
+				}
+			available = {
+					threat > 0.9
+				}
+
+	}
+	focus = {
+		id = TWN_Revival_of_armed_struggle
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Revival_of_social_movement
+		}
+		mutually_exclusive = {
+			focus = TWN_Subjectivity_of_taiwan
+		}
+		x = 26
+		y = 1
+			ai_will_do = {
+					modifier = {
+							factor = 0
+							is_historical_focus_on = yes
+							communism < 10
+						}
+				}
+			completion_reward = {
+					add_ideas = communist_influence
+					create_corps_commander = {
+							name = "谢雪红"
+							picture = "Portrait_Xie_Xuehong.dds"
+							traits = { }
+							skill = 1
+							attack_skill = 2
+							defense_skill = 2
+							planning_skill = 3
+							logistics_skill = 2
+						}
+				}
+			bypass = {
+					is_subject = no
+					has_government = communism
+				}
+
+	}
+	focus = {
+		id = TWN_Revolution
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Revival_of_armed_struggle
+		}
+		x = 26
+		y = 2
+			completion_reward = {
+					drop_cosmetic_tag = yes
+					clr_country_flag = JAP_sotoku_fu
+					if = {
+							limit = {
+									has_government = neutrality
+								}
+							start_civil_war = {
+									ruling_party = communism
+									ideology = neutrality
+									size = 0.4
+								}
+							hidden_effect = {
+									random_other_country = {
+											limit = {
+													original_tag = TWN
+													has_government = neutrality
+												}
+											set_cosmetic_tag = GVT
+										}
+								}
+						}
+					if = {
+							limit = {
+									has_government = fascism
+								}
+							start_civil_war = {
+									ruling_party = communism
+									ideology = fascism
+									size = 0.4
+								}
+							hidden_effect = {
+									random_other_country = {
+											limit = {
+													original_tag = TWN
+													has_government = fascism
+												}
+											set_cosmetic_tag = GVT
+										}
+								}
+						}
+					if = {
+							limit = {
+									has_government = democratic
+								}
+							start_civil_war = {
+									ruling_party = communism
+									ideology = democratic
+									size = 0.4
+								}
+							hidden_effect = {
+									random_other_country = {
+											limit = {
+													original_tag = TWN
+													has_government = democratic
+												}
+											set_cosmetic_tag = GVT
+										}
+								}
+						}
+				}
+			available = {
+					communism > 0.4
+				}
+			bypass = {
+					is_subject = no
+					has_government = communism
+				}
+
+	}
+	focus = {
+		id = TWN_Taipei_declaration
+		icon = GFX_goal_generic_radar
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Revolution
+		}
+		x = 26
+		y = 3
+			completion_reward = {
+					add_ideas = TWN_Taiwan_workers_declaration
+					set_party_name = {
+							ideology = neutrality
+							long_name = Taiwanese_peoples_party
+							name = Taiwanese_peoples_party
+						}
+				}
+			available = {
+					is_subject = no
+					has_government = communism
+				}
+
+	}
+	focus = {
+		id = TWN_Isolationism_on_the_island
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Taipei_declaration
+		}
+		mutually_exclusive = {
+			focus = TWN_Communist_family
+		}
+		x = 25
+		y = 4
+			completion_reward = {
+					add_stability = 0.1
+					add_ideas = TWN_Isolationism_taiwan
+				}
+			available = {
+					is_subject = no
+					has_government = communism
+				}
+
+	}
+	focus = {
+		id = TWN_Communist_family
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Taipei_declaration
+		}
+		mutually_exclusive = {
+			focus = TWN_Isolationism_on_the_island
+		}
+		x = 27
+		y = 4
+			completion_reward = {
+					every_other_country = {
+							limit = {
+									has_government = communism
+								}
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = Nations_friendly
+								}
+						}
+				}
+			available = {
+					is_subject = no
+					has_government = communism
+				}
+
+	}
+	focus = {
+		id = TWN_Contact_with_Comchina
+		icon = GFX_focus_chi_cooperation_with_the_communists
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Communist_family
+		}
+		mutually_exclusive = {
+			focus = TWN_Contact_with_USSR
+		}
+		x = 26
+		y = 6
+			completion_reward = {
+					if = {
+							limit = {
+									PRC = {
+											is_faction_leader = yes
+										}
+								}
+							PRC = {
+									country_event = {
+											id = EFM_independent.1
+											days = 1
+										}
+								}
+							else = {
+									PRC = {
+											country_event = {
+													id = EFM_Taiwan.7
+													days = 1
+												}
+										}
+								}
+						}
+				}
+			available = {
+					is_subject = no
+					has_government = communism
+					NOT = {
+							has_war_with = PRC
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Subjectivity_of_taiwan
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Revival_of_social_movement
+		}
+		mutually_exclusive = {
+			focus = TWN_Revival_of_armed_struggle
+		}
+		x = 30
+		y = 1
+			completion_reward = {
+					add_ideas = TWN_Taiwan_culture
+				}
+
+	}
+	focus = {
+		id = TWN_Strive_for_autonomy
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Subjectivity_of_taiwan
+		}
+		x = 29
+		y = 2
+			completion_reward = {
+					JAP = {
+							country_event = {
+									id = EFM_Taiwan.8
+									days = 1
+								}
+						}
+				}
+			available = {
+					democratic > 0.6
+					compare_autonomy_progress_ratio > 0.5
+					is_subject_of = JAP
+				}
+			bypass = {
+					NOT = {
+							is_subject_of = JAP
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Dominate_the_economy
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Strive_for_autonomy
+		}
+		x = 28
+		y = 3
+			completion_reward = {
+					add_ideas = TWN_Leading_economic_policy
+				}
+			available = {
+					compare_autonomy_progress_ratio > 0.5
+					is_subject_of = JAP
+				}
+			bypass = {
+					NOT = {
+							is_subject_of = JAP
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Special_historic
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Subjectivity_of_taiwan
+		}
+		x = 31
+		y = 2
+			completion_reward = {
+					add_ideas = TWN_Special_history_background_of_taiwan
+				}
+
+	}
+	focus = {
+		id = TWN_Deepen_democracy
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Strive_for_autonomy
+		}
+		prerequisite = {
+			focus = TWN_Special_historic
+		}
+		x = 30
+		y = 3
+			completion_reward = {
+					add_stability = 0.05
+					add_ideas = democratic_influence
+				}
+
+	}
+	focus = {
+		id = TWN_Redraw_the_border
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Deepen_democracy
+		}
+		x = 30
+		y = 4
+			completion_reward = {
+					drop_cosmetic_tag = yes
+					clr_country_flag = JAP_sotoku_fu
+					set_party_name = {
+							ideology = neutrality
+							long_name = Taiwanese_peoples_party
+							name = Taiwanese_peoples_party
+						}
+					custom_effect_tooltip = TWN_Redraw_the_border_tt
+					hidden_effect = {
+							every_other_country = {
+									limit = {
+											is_major = yes
+											is_puppet = no
+											NOT = {
+													has_war_with = ROOT
+												}
+										}
+									country_event = {
+											id = EFM_Taiwan.9
+											days = 1
+										}
+								}
+							every_other_country = {
+									limit = {
+											OR = {
+													tag = CHI
+													tag = PRC
+													tag = GXC
+													tag = SHX
+													tag = YUN
+													tag = XSM
+													tag = XBJ
+													tag = YXC
+													tag = XXC
+													tag = SLJ
+													tag = SIK
+												}
+											is_major = no
+											owns_state = 598
+											is_subject = no
+											NOT = {
+													has_war_with = TWN
+												}
+										}
+									country_event = {
+											id = EFM_Taiwan.12
+											days = 1
+										}
+								}
+						}
+				}
+			available = {
+					is_subject = no
+				}
+
+	}
+	focus = {
+		id = TWN_Contact_with_japan
+		icon = GFX_focus_jap_pacific_guardian
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Redraw_the_border
+		}
+		x = 29
+		y = 5
+			completion_reward = {
+					if = {
+							limit = {
+									JAP = {
+											is_faction_leader = yes
+										}
+								}
+							JAP = {
+									country_event = {
+											id = EFM_independent.1
+											days = 1
+										}
+								}
+							else = {
+									JAP = {
+											country_event = {
+													id = EFM_Taiwan.13
+													days = 1
+												}
+										}
+								}
+						}
+				}
+			available = {
+					is_subject = no
+					NOT = {
+							has_war_with = JAP
+							has_government = communism
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Trade_treaty
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Redraw_the_border
+		}
+		x = 30
+		y = 6
+			completion_reward = {
+					add_ideas = TWN_Free_trade
+				}
+			available = {
+					is_subject = yes
+				}
+
+	}
+	focus = {
+		id = TWN_Contact_with_the_US
+		icon = GFX_focus_chi_mission_to_the_us
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Redraw_the_border
+		}
+		x = 31
+		y = 5
+			completion_reward = {
+					if = {
+							limit = {
+									USA = {
+											is_faction_leader = yes
+										}
+								}
+							USA = {
+									country_event = {
+											id = EFM_independent.1
+											days = 1
+										}
+								}
+							else = {
+									USA = {
+											country_event = {
+													id = EFM_Taiwan.14
+													days = 1
+												}
+										}
+								}
+						}
+				}
+			available = {
+					is_subject = no
+					NOT = {
+							has_war_with = USA
+							has_government = communism
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Motherland_dream
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Revival_of_social_movement
+		}
+		x = 34
+		y = 1
+			completion_reward = {
+					add_popularity = {
+							ideology = neutrality
+							popularity = 0.1
+						}
+				}
+			available = {
+					any_other_country = {
+							OR = {
+													tag = CHI
+													tag = PRC
+													tag = GXC
+													tag = SHX
+													tag = YUN
+													tag = XSM
+													tag = XBJ
+													tag = YXC
+													tag = XXC
+													tag = SLJ
+													tag = SIK
+												}
+							owns_state = 598
+							NOT = {
+									has_war_with = TWN
+								}
+						}
+					NOT = {
+							has_country_flag = TWN_Dream_broken
+							has_government = communism
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Contact_with_nanking
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Motherland_dream
+		}
+		x = 34
+		y = 2
+			completion_reward = {
+					set_party_name = {
+							ideology = neutrality
+							long_name = Taiwanese_peoples_party
+							name = Taiwanese_peoples_party
+						}
+					create_country_leader = {
+							name = "李振鹏"
+							desc = ""
+							picture = "gfx/leaders/TWN/Portrait_Liau_Chin_Peng.dds"
+							expire = "1965.1.1"
+							ideology = centrism
+							traits = {
+
+}
+						}
+					every_other_country = {
+							limit = {
+									OR = {
+													tag = CHI
+													tag = PRC
+													tag = GXC
+													tag = SHX
+													tag = YUN
+													tag = XSM
+													tag = XBJ
+													tag = YXC
+													tag = XXC
+													tag = SLJ
+													tag = SIK
+												}
+									is_major = no
+									owns_state = 598
+									is_subject = no
+									NOT = {
+											has_war_with = TWN
+										}
+								}
+							country_event = {
+									id = EFM_Taiwan.17
+									days = 1
+								}
+						}
+				}
+			available = {
+					custom_trigger_tooltip = {
+							tooltip = JAP_Dissolve_the_sotoku_fu
+							AND = {
+								is_subject = no
+								NOT = { has_country_flag = JAP_sotoku_fu }
+							}
+						}
+					NOT = {
+							has_country_flag = TWN_Dream_broken
+							has_government = communism
+						}
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = TWN_Join_china_tt
+							any_other_country = {
+									OR = {
+													tag = CHI
+													tag = PRC
+													tag = GXC
+													tag = SHX
+													tag = YUN
+													tag = XSM
+													tag = XBJ
+													tag = YXC
+													tag = XXC
+													tag = SLJ
+													tag = SIK
+												}
+									owns_state = 598
+									NOT = {
+											has_war_with = TWN
+										}
+									TWN = {
+											is_subject_of = PREV
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Make_a_negotiation
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Contact_with_nanking
+		}
+		x = 33
+		y = 3
+			completion_reward = {
+					TWN = {
+							OVERLORD = {
+									country_event = {
+											id = EFM_Taiwan.20
+										}
+								}
+						}
+				}
+			available = {
+					custom_trigger_tooltip = {
+							tooltip = TWN_Join_china_tt
+							any_other_country = {
+									OR = {
+													tag = CHI
+													tag = PRC
+													tag = GXC
+													tag = SHX
+													tag = YUN
+													tag = XSM
+													tag = XBJ
+													tag = YXC
+													tag = XXC
+													tag = SLJ
+													tag = SIK
+												}
+									owns_state = 598
+									NOT = {
+											has_war_with = TWN
+										}
+									TWN = {
+											is_subject_of = PREV
+										}
+								}
+						}
+					NOT = {
+							has_country_flag = TWN_Dream_broken
+							has_government = communism
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Restructuring_the_economy
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Contact_with_nanking
+		}
+		x = 35
+		y = 3
+			completion_reward = {
+					add_stability = 0.05
+					add_political_power = 100
+				}
+			available = {
+					custom_trigger_tooltip = {
+							tooltip = TWN_Join_china_tt
+							any_other_country = {
+									OR = {
+											tag = CHI
+											tag = PRC
+											tag = GXC
+											tag = SHX
+											tag = YUN
+											tag = XSM
+											tag = XBJ
+											tag = YXC
+											tag = XXC
+											tag = SLJ
+											tag = SIK
+										}
+									owns_state = 598
+									NOT = {
+											has_war_with = TWN
+										}
+									TWN = {
+											is_subject_of = PREV
+										}
+								}
+						}
+					NOT = {
+							has_country_flag = TWN_Dream_broken
+							has_government = communism
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Provincial_government
+		icon = GFX_goal_generic_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Make_a_negotiation
+		}
+		prerequisite = {
+			focus = TWN_Restructuring_the_economy
+		}
+		mutually_exclusive = {
+			focus = TWN_Autonomous_government
+		}
+		x = 34
+		y = 4
+			completion_reward = {
+					drop_cosmetic_tag = yes
+					custom_effect_tooltip = TWN_Provincial_government_tt
+					hidden_effect = {
+							ROOT = {
+									OVERLORD = {
+											country_event = {
+													id = EFM_Taiwan.22
+													days = 1
+												}
+											set_autonomy = {
+													target = ROOT
+													autonomy_state = autonomy_integrated_puppet
+												}
+										}
+								}
+						}
+				}
+			available = {
+					custom_trigger_tooltip = {
+							tooltip = TWN_Join_china_tt
+							any_other_country = {
+									OR = {
+											tag = CHI
+											tag = PRC
+											tag = GXC
+											tag = SHX
+											tag = YUN
+											tag = XSM
+											tag = XBJ
+											tag = YXC
+											tag = XXC
+											tag = SLJ
+											tag = SIK
+										}
+									owns_state = 598
+									NOT = {
+											has_war_with = TWN
+										}
+									TWN = {
+											is_subject_of = PREV
+										}
+								}
+						}
+					NOT = {
+							has_country_flag = TWN_Dream_broken
+							has_government = communism
+							has_country_flag = TWN_Allow_the_establishment_of_an_autonomous_government
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Autonomous_government
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Special_historic
+		}
+		prerequisite = {
+			focus = TWN_Make_a_negotiation
+		}
+		prerequisite = {
+			focus = TWN_Restructuring_the_economy
+		}
+		mutually_exclusive = {
+			focus = TWN_Provincial_government
+		}
+		x = 32
+		y = 4
+			completion_reward = {
+					drop_cosmetic_tag = yes
+					custom_effect_tooltip = TWN_Autonomous_government_tt
+					hidden_effect = {
+							ROOT = {
+									OVERLORD = {
+											country_event = {
+													id = EFM_Taiwan.21
+													days = 1
+												}
+											set_autonomy = {
+													target = ROOT
+													autonomy_state = autonomy_colony
+												}
+										}
+								}
+						}
+				}
+			available = {
+					has_country_flag = TWN_Allow_the_establishment_of_an_autonomous_government
+					custom_trigger_tooltip = {
+							tooltip = TWN_Join_china_tt
+							any_other_country = {
+									OR = {
+											tag = CHI
+											tag = PRC
+											tag = GXC
+											tag = SHX
+											tag = YUN
+											tag = XSM
+											tag = XBJ
+											tag = YXC
+											tag = XXC
+											tag = SLJ
+											tag = SIK
+										}
+									owns_state = 598
+									NOT = {
+											has_war_with = TWN
+										}
+									TWN = {
+											is_subject_of = PREV
+										}
+								}
+						}
+					NOT = {
+							has_country_flag = TWN_Dream_broken
+							has_government = communism
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Downfall_corruption
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Restructuring_the_economy
+		}
+		x = 36
+		y = 4
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_stability = 0.05
+					remove_ideas = TWN_Ethnic_conflict_2
+					remove_ideas = TWN_Economic_issues_2
+					remove_ideas = TWN_Corrupt_officials_and_army_2
+				}
+			available = {
+					has_country_flag = TWN_Agree_to_reform
+					custom_trigger_tooltip = {
+							tooltip = TWN_Join_china_tt
+							any_other_country = {
+									OR = {
+											tag = CHI
+											tag = PRC
+											tag = GXC
+											tag = SHX
+											tag = YUN
+											tag = XSM
+											tag = XBJ
+											tag = YXC
+											tag = XXC
+											tag = SLJ
+											tag = SIK
+										}
+									owns_state = 598
+									NOT = {
+											has_war_with = TWN
+										}
+									TWN = {
+											is_subject_of = PREV
+										}
+								}
+						}
+					NOT = {
+							has_country_flag = TWN_Dream_broken
+							has_government = communism
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Join_china
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Provincial_government
+		}
+		prerequisite = {
+			focus = TWN_Downfall_corruption
+		}
+		x = 35
+		y = 5
+			completion_reward = {
+					TWN = {
+							OVERLORD = {
+									country_event = {
+											id = EFM_independent.3
+										}
+								}
+						}
+				}
+			available = {
+					custom_trigger_tooltip = {
+							tooltip = TWN_Join_china_tt
+							any_other_country = {
+									OR = {
+											tag = CHI
+											tag = PRC
+											tag = GXC
+											tag = SHX
+											tag = YUN
+											tag = XSM
+											tag = XBJ
+											tag = YXC
+											tag = XXC
+											tag = SLJ
+											tag = SIK
+										}
+									owns_state = 598
+									NOT = {
+											has_war_with = TWN
+										}
+									TWN = {
+											is_subject_of = PREV
+										}
+								}
+						}
+					NOT = {
+							has_country_flag = TWN_Dream_broken
+							has_government = communism
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Free_imperial_dominion
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Set_Parliament
+		}
+		x = 8
+		y = 7
+			completion_reward = {
+					set_politics = {
+							ruling_party = democratic
+							elections_allowed = yes
+						}
+					swap_ideas = {
+							remove_idea = TWN_Taiwanese_parliament
+							add_idea = TWN_Japanese_free_imperial_dominion
+						}
+					add_political_power = 150
+				}
+			available = {
+					is_subject_of = JAP
+					compare_autonomy_progress_ratio > 0.5
+				}
+
+	}
+	focus = {
+		id = TWN_Immigration_policy
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Kominhoko_undo
+		}
+		x = 12
+		y = 7
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_stability = -0.3
+					swap_ideas = {
+							remove_idea = TWN_Kominhoko_undo
+							add_idea = TWN_Kominhoko_undo_2
+						}
+				}
+			available = {
+					is_subject_of = JAP
+				}
+
+	}
+	focus = {
+		id = TWN_South_asia_dai_sotoku_fu
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Into_south_asia
+		}
+		x = 10
+		y = 7
+			completion_reward = {
+					add_ideas = TWN_Go_forward_south
+				}
+			available = {
+					has_country_flag = TWN_Allowed_set_dai_sotoku
+				}
+
+	}
+	focus = {
+		id = TWN_Contact_with_USSR
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Communist_family
+		}
+		mutually_exclusive = {
+			focus = TWN_Contact_with_Comchina
+		}
+		x = 28
+		y = 6
+			completion_reward = {
+					if = {
+							limit = {
+									SOV = {
+											is_faction_leader = yes
+										}
+								}
+							SOV = {
+									country_event = {
+											id = EFM_independent.1
+											days = 1
+										}
+								}
+							else = {
+									SOV = {
+											country_event = {
+													id = EFM_Taiwan.7
+													days = 1
+												}
+										}
+								}
+						}
+				}
+			available = {
+					is_subject = no
+					has_government = communism
+					NOT = {
+							has_war_with = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_War_communism
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Isolationism_on_the_island
+		}
+		x = 25
+		y = 5
+			completion_reward = {
+					add_ideas = TWN_War_communism_of_taiwan
+					add_stability = -0.1
+				}
+			available = {
+					is_subject = no
+					has_government = communism
+				}
+
+	}
+	focus = {
+		id = TWN_Build_taiwan
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Autonomous_government
+		}
+		x = 32
+		y = 6
+			completion_reward = {
+					add_ideas = TWN_Invest_in_taiwan
+				}
+			available = {
+					custom_trigger_tooltip = {
+							tooltip = TWN_Join_china_tt
+							any_other_country = {
+									OR = {
+											tag = CHI
+											tag = PRC
+											tag = GXC
+											tag = SHX
+											tag = YUN
+											tag = XSM
+											tag = XBJ
+											tag = YXC
+											tag = XXC
+											tag = SLJ
+											tag = SIK
+										}
+									owns_state = 598
+									NOT = {
+											has_war_with = TWN
+										}
+									TWN = {
+											is_subject_of = PREV
+										}
+								}
+						}
+					NOT = {
+							has_country_flag = TWN_Dream_broken
+							has_government = communism
+						}
+				}
+
+	}
+	focus = {
+		id = TWN_Autonomous_region_force
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		prerequisite = {
+			focus = TWN_Autonomous_government
+		}
+		x = 33
+		y = 5
+			completion_reward = {
+					add_ideas = TWN_Autonomous_community_force
+				}
+			available = {
+					custom_trigger_tooltip = {
+							tooltip = TWN_Join_china_tt
+							any_other_country = {
+									OR = {
+											tag = CHI
+											tag = PRC
+											tag = GXC
+											tag = SHX
+											tag = YUN
+											tag = XSM
+											tag = XBJ
+											tag = YXC
+											tag = XXC
+											tag = SLJ
+											tag = SIK
+										}
+									owns_state = 598
+									NOT = {
+											has_war_with = TWN
+										}
+									TWN = {
+											is_subject_of = PREV
+										}
+								}
+						}
+					NOT = {
+							has_country_flag = TWN_Dream_broken
+							has_government = communism
+						}
+				}
+
+	}
+}

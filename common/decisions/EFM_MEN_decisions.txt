@@ -1,0 +1,38 @@
+
+operations = {
+
+	MEN_Attack_suiyuan = {
+	
+		icon = generic_operation
+		fire_only_once = yes
+		
+		days_mission_timeout = 90
+		
+		cost = 0
+		
+		is_good = yes
+		
+		highlight_states = {
+			state = 621
+		}
+		allowed = {
+			tag = MEN
+		}
+		available = {
+			always = no
+		}
+		activation = {
+			has_country_flag = MEN_Attack_suiyuan
+		}
+		timeout_effect = {
+			country_event = {
+					id = EFM_Mengkukuo.28
+				}
+			clr_country_flag = MEN_Attack_suiyuan
+		}
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+}

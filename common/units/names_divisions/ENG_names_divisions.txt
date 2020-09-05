@@ -1,0 +1,1279 @@
+﻿# Division template historical names system. Is a new method of naming the divisions based on the names-group assigned to it's template.
+# If we run out of all historical names, the names will be assigned in the old way.
+#
+# Each group has a made up tag. Use it if you want to append more, or replace existing names with the extra txt files (modding).
+#
+# for_countries - lists all countries that can use it. If empty, or entire tag is missing, all countries in the world can use it.
+#
+# can_use - is a trigger that locks/unlocks the group under specific circumstances. The trigger is in a country scope.
+#
+# division_types - is a list of tokens to corresponding unit types. A player can in fact use any group of names for a div.template
+#                  however this tag is a helper for an automated choice (for AI, or if the group must switch on it's own, because
+#                  for example the current one is no longer available due to the can_use trigger saying so).
+#                  In automated choice, the division template must have at least 1 of the following types for it to be chosen.
+#
+# fallback_name - Is going to be used if we run out of the scripted historical names. If you want to use the old division naming
+#                 mechanics to be used for fallbacks, then just skip this option.
+#
+# unordered - It's a list of historical division names that did not have a number. Regardless if such names happened in history or not
+#             this option is available here mainly for a mods.
+#
+# ordered - Is a list of all historical names. 
+#           Numbers must start from 1 and up. 
+#           Numbers can't repeat in one scope.
+#           If you script the name for this group, at the same number (for example in a mod in another file), the name will be override.
+#           All arguments between the brackets must be separated by spaces. Each argument is wrapped in "quotas".
+#           1st argument = The name. It must contain either: 
+#                          %d (for decimal number placement)
+#                          %s (for string number placement - ROMAN numbers like XIV).
+#           2nd argument is optional = A localizable text describing this historical division. The text will be visible in the tooltip
+#                                      where you choose the historical division name.
+#           3rd argument is optional = An URL preferably pointing to the WIKI. It's a future feature that is not currently working in
+#                                      the current game version.
+ENG_INF_01 = {
+	name = "英国陆军步兵师"
+
+	for_countries = { ENG }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ENG_INF_01 }
+
+	fallback_name = "英国陆军第%d步兵师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "英国陆军第%d步兵师" }
+		2 = { "英国陆军第%d步兵师" }
+		3 = { "英国陆军第%d步兵师" }
+		4 = { "英国陆军第%d步兵师" }
+		5 = { "英国陆军第%d步兵师" }
+		42 = { "英国陆军东兰开夏郡步兵师" }
+		43 = { "英国陆军韦塞克斯步兵师" }
+		44 = { "英国陆军家乡县步兵师" }
+		48 = { "英国陆军南米德兰步兵师" }
+		49 = { "英国陆军西莱丁步兵师" }
+		50 = { "英国陆军诺森伯兰步兵师" }
+		51 = { "英国陆军高原步兵师" }
+		52 = { "英国陆军低地步兵师" }
+		53 = { "英国陆军威尔士步兵师" }
+		54 = { "英国陆军东英吉利亚步兵师" }
+		55 = { "英国陆军西兰开夏郡步兵师" }
+		7 = { "英国陆军第%d步兵师" }
+		8 = { "英国陆军第%d步兵师" }
+		9 = { "英国陆军高原第二步兵师" }
+		15 = { "英国陆军第二苏格兰步兵师" }
+		18 = { "英国陆军第%d步兵师" }
+		38 = { "英国陆威尔士第二步兵师" }
+		45 = { "英国陆军第%d步兵师" }
+		59 = { "英国陆军斯塔福德郡步兵师" }
+		61 = { "英国陆军第%d步兵师" }
+		66 = { "英国陆军第%d步兵师" }
+		12 = { "英国陆军第%d东方步兵师" }
+		23 = { "英国陆军第%d诺森伯兰步兵师" }
+		46 = { "英国陆军第%d北米德兰步兵师" }
+		6 = { "英国陆军第%d步兵师" }
+		11 = { "英国陆军第%d东非步兵师" }
+		812 = { "英国陆军第%d西非步兵师" }
+		47 = { "英国陆军伦敦步兵师" }
+		56 = { "英国陆军伦敦第二步兵师" }
+		70 = { "英国陆军第%d步兵师" }
+		76 = { "英国陆军第%d步兵师" }
+		77 = { "英国陆军第%d步兵师" }
+		78 = { "英国陆军第%d步兵师" }
+		80 = { "英国陆军第%d步兵师" }
+		81 = { "英国陆军西非第三步兵师" }
+		82 = { "英国陆军西非第四步兵师" }
+		36 = { "英国陆军第%d步兵师" }
+		801 = { "英国陆军警卫步兵师" }
+		40 = { "英国陆军第%d幽灵步兵师" }				# phantom division organizations
+		57 = { "英国陆军西兰开夏郡2号步兵师" }
+		58 = { "英国陆军伦敦第三步兵师" }
+		28 = { "英国陆军第%d步兵师" }				# inactive and fictional units
+		33 = { "英国陆军第%d步兵师" }
+		34 = { "英国陆军第%d步兵师" }
+		37 = { "英国陆军第%d步兵师" }
+		41 = { "英国陆军第%d步兵师" }
+		60 = { "英国陆军第%d步兵师" }
+		62 = { "英国陆军第%d步兵师" }
+		63 = { "英国陆军第%d步兵师" }
+		67 = { "英国陆军第%d步兵师" }
+		68 = { "英国陆军第%d步兵师" }
+		69 = { "英国陆军第%d步兵师" }
+		71 = { "英国陆军第%d步兵师" }
+		72 = { "英国陆军第%d步兵师" }
+		73 = { "英国陆军第%d步兵师" }
+		74 = { "英国陆军第%d步兵师" }
+		75 = { "英国陆军第%d步兵师" }
+		97 = { "英国陆军第%d步兵师" }
+		98 = { "英国陆军第%d步兵师" }
+		99 = { "英国陆军第%d步兵师" }
+		100 = { "英国陆军第%d步兵师" }
+		101 = { "英国陆军第%d步兵师" }
+		102 = { "英国陆军第%d步兵师" }
+		103 = { "英国陆军第%d步兵师" }
+		104 = { "英国陆军第%d步兵师" }
+		105 = { "英国陆军第%d步兵师" }
+		106 = { "英国陆军第%d步兵师" }
+		107 = { "英国陆军第%d步兵师" }
+		108 = { "英国陆军第%d步兵师" }
+		109 = { "英国陆军第%d步兵师" }
+		110 = { "英国陆军第%d步兵师" }
+		111 = { "英国陆军第%d步兵师" }
+		112 = { "英国陆军第%d步兵师" }
+		113 = { "英国陆军第%d步兵师" }
+		114 = { "英国陆军第%d步兵师" }
+		115 = { "英国陆军第%d步兵师" }
+		116 = { "英国陆军第%d步兵师" }
+		117 = { "英国陆军第%d步兵师" }
+		118 = { "英国陆军第%d步兵师" }
+		119 = { "英国陆军第%d步兵师" }
+		120 = { "英国陆军第%d步兵师" }
+		121 = { "英国陆军第%d步兵师" }
+		122 = { "英国陆军第%d步兵师" }
+		123 = { "英国陆军第%d步兵师" }
+		124 = { "英国陆军第%d步兵师" }
+		125 = { "英国陆军第%d步兵师" }
+		126 = { "英国陆军第%d步兵师" }
+		127 = { "英国陆军第%d步兵师" }
+		128 = { "英国陆军第%d步兵师" }
+		129 = { "英国陆军第%d步兵师" }
+		130 = { "英国陆军第%d步兵师" }
+		131 = { "英国陆军第%d步兵师" }
+		132 = { "英国陆军第%d步兵师" }
+		133 = { "英国陆军第%d步兵师" }
+		134 = { "英国陆军第%d步兵师" }
+		135 = { "英国陆军第%d步兵师" }
+		136 = { "英国陆军第%d步兵师" }
+		137 = { "英国陆军第%d步兵师" }
+		138 = { "英国陆军第%d步兵师" }
+		139 = { "英国陆军第%d步兵师" }
+		140 = { "英国陆军第%d步兵师" }
+		141 = { "英国陆军第%d步兵师" }
+		142 = { "英国陆军第%d步兵师" }
+		143 = { "英国陆军第%d步兵师" }
+		144 = { "英国陆军第%d步兵师" }
+		145 = { "英国陆军第%d步兵师" }
+		146 = { "英国陆军第%d步兵师" }
+		147 = { "英国陆军第%d步兵师" }
+		148 = { "英国陆军第%d步兵师" }
+		149 = { "英国陆军第%d步兵师" }
+		150 = { "英国陆军第%d步兵师" }
+	}
+}
+
+ENG_INF_02 = {
+	name = "英国陆军步兵旅"
+
+	for_countries = { ENG }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ENG_INF_02 }
+
+	fallback_name = "英国陆军第%d步兵旅"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "英国陆军第%dst步兵旅" }
+		2 = { "英国陆军第%dnd步兵旅" }
+		3 = { "英国陆军第%drd步兵旅" }
+		4 = { "英国陆军第%dth步兵旅" }
+		5 = { "英国陆军第%dth步兵旅" }
+		6 = { "英国陆军第%dth步兵旅" }
+		7 = { "英国陆军第%dth步兵旅" }
+		8 = { "英国陆军第%dth步兵旅" }
+		9 = { "英国陆军第%dth步兵旅" }
+		10 = { "英国陆军第%dth步兵旅" }
+		11 = { "英国陆军第%dth步兵旅" }
+		12 = { "英国陆军第%dth步兵旅" }
+		13 = { "英国陆军第%dth步兵旅" }
+		14 = { "英国陆军第%dth步兵旅" }
+		15 = { "英国陆军第%dth步兵旅" }
+		16 = { "英国陆军第%dth步兵旅" }
+		17 = { "英国陆军第%dth步兵旅" }
+		18 = { "英国陆军第%dth步兵旅" }
+		19 = { "英国陆军第%dth步兵旅" }
+		20 = { "英国陆军第%dth步兵旅" }
+		21 = { "英国陆军第%dst步兵旅" }
+		22 = { "英国陆军第%dnd步兵旅" }
+		23 = { "英国陆军第%drd步兵旅" }
+		24 = { "英国陆军第%dth步兵旅" }
+		25 = { "英国陆军第%dth步兵旅" }
+		26 = { "英国陆军第%dth步兵旅" }
+		27 = { "英国陆军第%dth步兵旅" }
+		28 = { "英国陆军第%dth步兵旅" }
+		29 = { "英国陆军第%dth步兵旅" }
+		30 = { "英国陆军第%dth步兵旅" }
+	}
+}
+
+ENG_INF_03 = { 
+	name = "英国陆军轻装师" 
+
+	for_countries = { ENG } 
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" "mechanized" } 
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ENG_INF_03 } 
+
+	fallback_name = "英国陆军第%d轻装师" 
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = { 
+		14 = { "英国陆军第%dth轻装师" } # raised in 1914 for Kitchener's Army
+		20 = { "英国陆军第%dth轻装师" } # raised in 1914 for Kitchener's Army
+		1 = { "英国陆军第%dst轻装师" }
+		2 = { "英国陆军第%dnd轻装师" }
+		3 = { "英国陆军第%drd轻装师" }
+		4 = { "英国陆军第%dth轻装师" }
+		5 = { "英国陆军第%dth轻装师" }
+		6 = { "英国陆军第%dth轻装师" }
+		7 = { "英国陆军第%dth轻装师" }
+		8 = { "英国陆军第%dth轻装师" }
+		9 = { "英国陆军第%dth轻装师" }
+		10 = { "英国陆军第%dth轻装师" }
+		11 = { "英国陆军第%dth轻装师" }
+		12 = { "英国陆军第%dth轻装师" }
+		13 = { "英国陆军第%dth轻装师" }
+		15 = { "英国陆军第%dth轻装师" }
+		16 = { "英国陆军第%dth轻装师" }
+		17 = { "英国陆军第%dth轻装师" }
+		18 = { "英国陆军第%dth轻装师" }
+		19 = { "英国陆军第%dth轻装师" }
+		21 = { "英国陆军第%dst轻装师" }
+		22 = { "英国陆军第%dnd轻装师" }
+		23 = { "英国陆军第%drd轻装师" }
+		24 = { "英国陆军第%dth轻装师" }
+		25 = { "英国陆军第%dth轻装师" }
+		26 = { "英国陆军第%dth轻装师" }
+		27 = { "英国陆军第%dth轻装师" }
+		28 = { "英国陆军第%dth轻装师" }
+		29 = { "英国陆军第%dth轻装师" }
+		30 = { "英国陆军第%dth轻装师" }
+	} 
+}
+
+ENG_MOT_01 = {
+	name = "英国陆军摩托化师"
+
+	for_countries = { ENG }
+
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { ENG_INF_01 }
+
+	fallback_name = "英国陆军第%d摩托化师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		2 = { "英国陆军第%d摩步师" }
+		13 = { "英国陆军第%d摩步师" }
+		20 = { "英国陆军第%d摩步师" }
+		29 = { "英国陆军加的夫摩步师" }
+		16 = { "英国陆军第%d摩步师" }
+		60 = { "英国陆军第%d摩步师)" }
+		14 = { "英国陆军第%d摩步师" }
+		3 = { "英国陆军爱丁堡摩步师" }
+		18 = { "英国陆军第%d摩步师" }
+		36 = { "英国陆军第%d摩步师" }
+		10 = { "英国陆军第%d摩步师" }
+		25 = { "英国陆军贝尔法斯特摩步师" }
+		90 = { "英国陆军第%d摩步师" }
+		164 = { "英国陆军第%d摩步师" }
+	}
+}
+
+ENG_CAV_01 = {
+	name = "英国陆军骑兵师"
+
+	for_countries = { ENG }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ENG_INF_01 }
+
+	fallback_name = "英国陆军第%d骑兵师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		18 = { "英国陆军第%dth轻骑兵师" }
+		1 = { "英国陆军国王直属骑兵师" }
+		2 = { "英国陆军第%dnd骑兵师" }
+		3 = { "英国陆军第%drd骑兵师" }
+		4 = { "英国陆军女王直属骑兵师" }
+		5 = { "英国陆军第%dth骑兵师" }
+		6 = { "英国陆军第%dth骑兵师" }
+		7 = { "英国陆军第%dth骑兵师" }
+		8 = { "英国陆军第%dth骑兵师" }
+		9 = { "英国陆军第%dth骑兵师" }
+		10 = { "英国陆军第%dth骑兵师" }
+		11 = { "英国陆军第%dth骑兵师" }
+		12 = { "英国陆军第%dth骑兵师" }
+		13 = { "英国陆军第%dth骑兵师" }
+		14 = { "英国陆军第%dth骑兵师" }
+		15 = { "英国陆军第%dth骑兵师" }
+		16 = { "英国陆军第%dth骑兵师" }
+		17 = { "英国陆军第%dth骑兵师" }
+		19 = { "英国陆军第%dth骑兵师" }
+		20 = { "英国陆军第%dth骑兵师" }
+		21 = { "英国陆军第%dst骑兵师" }
+		22 = { "英国陆军第%dnd骑兵师" }
+		23 = { "英国陆军第%drd骑兵师" }
+		24 = { "英国陆军第%dth骑兵师" }
+		25 = { "英国陆军第%dth骑兵师" }
+		26 = { "英国陆军第%dth骑兵师" }
+		27 = { "英国陆军第%dth骑兵师" }
+		28 = { "英国陆军第%dth骑兵师" }
+		29 = { "英国陆军第%dth骑兵师" }
+		30 = { "英国陆军第%dth骑兵师" }
+	}
+}
+
+ENG_CAV_02 = {
+	name = "英国陆军骑兵旅"
+
+	for_countries = { ENG }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ENG_INF_01 }
+
+	fallback_name = "英国陆军第%d骑兵旅"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "英国陆军第%dst骑兵旅" }
+		2 = { "英国陆军第%dnd骑兵旅" }
+		3 = { "英国陆军第%drd骑兵旅" }
+		4 = { "英国陆军第%dth骑兵旅" }
+		5 = { "英国陆军第%dth骑兵旅" }
+		6 = { "英国陆军第%dth骑兵旅" }
+		7 = { "英国陆军第%dth骑兵旅" }
+		8 = { "英国陆军第%dth骑兵旅" }
+		9 = { "英国陆军第%dth骑兵旅" }
+		10 = { "英国陆军第%dth骑兵旅" }
+		11 = { "英国陆军第%dth骑兵旅" }
+		12 = { "英国陆军第%dth骑兵旅" }
+		13 = { "英国陆军第%dth骑兵旅" }
+		14 = { "英国陆军第%dth骑兵旅" }
+		15 = { "英国陆军第%dth骑兵旅" }
+		16 = { "英国陆军第%dth骑兵旅" }
+		17 = { "英国陆军第%dth骑兵旅" }
+		19 = { "英国陆军第%dth骑兵旅" }
+		20 = { "英国陆军第%dth骑兵旅" }
+		21 = { "英国陆军第%dst骑兵旅" }
+		22 = { "英国陆军第%dnd骑兵旅" }
+		23 = { "英国陆军第%drd骑兵旅" }
+		24 = { "英国陆军第%dth骑兵旅" }
+		25 = { "英国陆军第%dth骑兵旅" }
+		26 = { "英国陆军第%dth骑兵旅" }
+		27 = { "英国陆军第%dth骑兵旅" }
+		28 = { "英国陆军第%dth骑兵旅" }
+		29 = { "英国陆军第%dth骑兵旅" }
+		30 = { "英国陆军第%dth骑兵旅" }
+	}
+}
+
+ENG_MOT_02 = {
+	name = "英国陆军半摩托化师"
+
+	for_countries = { ENG }
+
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ENG_MOT_01 }
+
+	fallback_name = "英国陆军第%d半摩托化师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "英国陆军第%dst半摩托化师" }
+		2 = { "英国陆军第%dnd半摩托化师" }
+		3 = { "英国陆军第%drd半摩托化师" }
+		4 = { "英国陆军第%dth半摩托化师" }
+		5 = { "英国陆军第%dth半摩托化师" }
+		6 = { "英国陆军第%dth半摩托化师" }
+		7 = { "英国陆军第%dth半摩托化师" }
+		8 = { "英国陆军第%dth半摩托化师" }
+		9 = { "英国陆军第%dth半摩托化师" }
+		10 = { "英国陆军第%dth半摩托化师" }
+		11 = { "英国陆军第%dth半摩托化师" }
+		12 = { "英国陆军第%dth半摩托化师" }
+		13 = { "英国陆军第%dth半摩托化师" }
+		14 = { "英国陆军第%dth半摩托化师" }
+		15 = { "英国陆军第%dth半摩托化师" }
+		16 = { "英国陆军第%dth半摩托化师" }
+		17 = { "英国陆军第%dth半摩托化师" }
+		18 = { "英国陆军第%dth半摩托化师" }
+		19 = { "英国陆军第%dth半摩托化师" }
+		20 = { "英国陆军第%dth半摩托化师" }
+		21 = { "英国陆军第%dst半摩托化师" }
+		22 = { "英国陆军第%dnd半摩托化师" }
+		23 = { "英国陆军第%drd半摩托化师" }
+		24 = { "英国陆军第%dth半摩托化师" }
+		25 = { "英国陆军第%dth半摩托化师" }
+		26 = { "英国陆军第%dth半摩托化师" }
+		27 = { "英国陆军第%dth半摩托化师" }
+		28 = { "英国陆军第%dth半摩托化师" }
+		29 = { "英国陆军第%dth半摩托化师" }
+		30 = { "英国陆军第%dth半摩托化师" }
+	}
+}
+
+ENG_MEC_01 = {
+	name = "英国陆军机步师"
+
+	for_countries = { ENG }
+
+	can_use = { always = yes }
+
+	division_types = { "mechanized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { ENG_INF_01 }
+
+	fallback_name = "英国陆军第%d机步师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		5 = { "英国陆军第%d机步师" }				# fictional names for mechanized corps
+		1 = { "英国陆军第%d机步师" }						
+		2 = { "英国陆军第%d机步师" }
+		3 = { "英国陆军第%d机步师" }
+		4 = { "英国陆军第%d机步师" }
+		9 = { "英国陆军第%d机步师" }
+		12 = { "英国陆军第%d机步师" }
+		13 = { "英国陆军第%d机步师" }
+		14 = { "英国陆军第%d机步师" }
+		17 = { "英国陆军第%d机步师" }
+		18 = { "英国陆军第%d机步师" }
+		6 = { "英国陆军第%d机步师" }
+		7 = { "英国陆军第%d机步师" }
+		8 = { "英国陆军第%d机步师" }
+		10 = { "英国陆军第%d机步师" }
+		15 = { "英国陆军第%d机步师" }
+		16 = { "英国陆军第%d机步师" }
+		19 = { "英国陆军第%d机步师" }
+		20 = { "英国陆军第%d机步师" }
+		11 = { "英国陆军第%d机步师" }
+		28 = { "英国陆军第%dth机步师" }
+		33 = { "英国陆军第%drd机步师" }
+		100 = { "英国陆军第%dth机步师" }
+		101 = { "英国陆军第%dst机步师" }
+		102 = { "英国陆军第%dnd机步师" }
+		103 = { "英国陆军第%drd机步师" }
+		104 = { "英国陆军第%dth机步师" }
+		105 = { "英国陆军第%dth机步师" }
+		106 = { "英国陆军第%dth机步师" }
+		107 = { "英国陆军第%dth机步师" }
+		108 = { "英国陆军第%dth机步师" }
+		109 = { "英国陆军第%dth机步师" }
+		110 = { "英国陆军第%dth机步师" }
+		111 = { "英国陆军第%dth机步师" }
+		112 = { "英国陆军第%dth机步师" }
+		113 = { "英国陆军第%dth机步师" }
+		114 = { "英国陆军第%dth机步师" }
+		115 = { "英国陆军第%dth机步师" }
+		116 = { "英国陆军第%dth机步师" }
+		117 = { "英国陆军第%dth机步师" }
+		118 = { "英国陆军第%dth机步师" }
+		119 = { "英国陆军第%dth机步师" }
+		120 = { "英国陆军第%dth机步师" }
+		121 = { "英国陆军第%dst机步师" }
+		122 = { "英国陆军第%dnd机步师" }
+		123 = { "英国陆军第%drd机步师" }
+		124 = { "英国陆军第%dth机步师" }
+		125 = { "英国陆军第%dth机步师" }
+		126 = { "英国陆军第%dth机步师" }
+		127 = { "英国陆军第%dth机步师" }
+		128 = { "英国陆军第%dth机步师" }
+		129 = { "英国陆军第%dth机步师" }
+		130 = { "英国陆军第%dth机步师" }
+		131 = { "英国陆军第%dst机步师" }
+		132 = { "英国陆军第%dnd机步师" }
+		133 = { "英国陆军第%drd机步师" }
+		134 = { "英国陆军第%dth机步师" }
+		135 = { "英国陆军第%dth机步师" }
+		136 = { "英国陆军第%dth机步师" }
+		137 = { "英国陆军第%dth机步师" }
+		138 = { "英国陆军第%dth机步师" }
+		139 = { "英国陆军第%dth机步师" }
+		140 = { "英国陆军第%dth机步师" }
+		141 = { "英国陆军第%dst机步师" }
+		142 = { "英国陆军第%dnd机步师" }
+		143 = { "英国陆军第%drd机步师" }
+		144 = { "英国陆军第%dth机步师" }
+		145 = { "英国陆军第%dth机步师" }
+		146 = { "英国陆军第%dth机步师" }
+		147 = { "英国陆军第%dth机步师" }
+		148 = { "英国陆军第%dth机步师" }
+		149 = { "英国陆军第%dth机步师" }
+		150 = { "英国陆军第%dth机步师" }
+	}
+}
+
+ENG_ARM_01 = {
+	name = "英国陆军装甲师"
+
+	for_countries = { ENG }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ENG_INF_01 }
+
+	fallback_name = "英国陆军第%d装甲师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "英国皇家骑兵装甲师" }
+		7 = { "英国陆军沙漠之鼠装甲师" }
+		2 = { "英国陆军第%dnd装甲师" }
+		6 = { "英国陆军第%dth装甲师" }
+		8 = { "英国陆军第%dth装甲师" }
+		9 = { "英国陆军第%dth装甲师" }
+		31 = { "英国陆军第%dth装甲师" }
+		10 = { "英国陆军第%dth装甲师" }
+		11 = { "英国陆军第%dth装甲师" }
+		42 = { "英国陆军第%dnd装甲师" }
+		79 = { "英国陆军第%dth装甲师" }
+		5 = { "英国陆军第%dth装甲师" }		# phantom division	
+		3 = { "英国陆军第%drd装甲师" }		# fictional divisions
+		4 = { "英国陆军第%dth装甲师" }
+		12 = { "英国陆军第%dth装甲师" }
+		13 = { "英国陆军第%dth装甲师" }
+		14 = { "英国陆军第%dth装甲师" }
+		15 = { "英国陆军第%dth装甲师" }
+		16 = { "英国陆军第%dth装甲师" }
+		17 = { "英国陆军第%dth装甲师" }
+		18 = { "英国陆军第%dth装甲师" }
+		19 = { "英国陆军第%dth装甲师" }
+		20 = { "英国陆军第%dth装甲师" }
+		21 = { "英国陆军第%dst装甲师" }
+		22 = { "英国陆军第%dnd装甲师" }
+		23 = { "英国陆军第%drd装甲师" }
+		24 = { "英国陆军第%dth装甲师" }
+		25 = { "英国陆军第%dth装甲师" }
+		26 = { "英国陆军第%dth装甲师" }
+		27 = { "英国陆军第%dth装甲师" }
+		28 = { "英国陆军第%dth装甲师" }
+		29 = { "英国陆军第%dth装甲师" }
+		30 = { "英国陆军第%dth装甲师" }
+	}
+}
+
+ENG_ARM_02 = {
+	name = "英国陆军装甲旅"
+
+	for_countries = { ENG }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ENG_INF_01 }
+
+	fallback_name = "英国陆军第%d装甲旅"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "英国陆军第%dst装甲旅" }
+		21 = { "英国陆军第%dst装甲旅" }
+		22 = { "英国陆军第%dnd装甲旅" }
+		23 = { "英国陆军第%drd装甲旅" }
+		24 = { "英国陆军第%dth装甲旅" }
+		25 = { "英国陆军第%dth装甲旅" }
+		3 = { "英国陆军第%drd装甲旅" }
+		6 = { "英国陆军第%dth装甲旅" }
+		8 = { "英国陆军第%dth装甲旅" }
+		9 = { "英国陆军第%dth装甲旅" }
+		10 = { "英国陆军第%dth装甲旅" }
+		11 = { "英国陆军第%dth装甲旅" }
+		32 = { "英国陆军第%dnd装甲旅" }
+		31 = { "英国陆军第%dst装甲旅" }
+		5 = { "英国陆军第%dth装甲旅" }		
+		7 = { "英国陆军第%dth装甲旅" }		
+		4 = { "英国陆军第%dth装甲旅" }
+		12 = { "英国陆军第%dth装甲旅" }
+		13 = { "英国陆军第%dth装甲旅" }
+		14 = { "英国陆军第%dth装甲旅" }
+		15 = { "英国陆军第%dth装甲旅" }
+		16 = { "英国陆军第%dth装甲旅" }
+		17 = { "英国陆军第%dth装甲旅" }
+		18 = { "英国陆军第%dth装甲旅" }
+		19 = { "英国陆军第%dth装甲旅" }
+		20 = { "英国陆军第%dth装甲旅" }
+		26 = { "英国陆军第%dth装甲旅" }
+		27 = { "英国陆军第%dth装甲旅" }
+		28 = { "英国陆军第%dth装甲旅" }
+		29 = { "英国陆军第%dth装甲旅" }
+		30 = { "英国陆军第%dth装甲旅" }
+	}
+}
+
+ENG_ARM_03 = {
+	name = "英国陆军重装甲旅"
+
+	for_countries = { ENG }
+
+	can_use = { always = yes }
+
+	division_types = { "heavy_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ENG_ARM_03 }
+
+	fallback_name = "英国陆军第%d重装甲旅"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "英国陆军第%dst重装甲旅" }
+		2 = { "英国陆军第%dnd重装甲旅" }
+		3 = { "英国陆军第%drd重装甲旅" }
+		4 = { "英国陆军第%dth重装甲旅" }
+		5 = { "英国陆军第%dth重装甲旅" }
+		6 = { "英国陆军第%dth重装甲旅" }
+		7 = { "英国陆军第%dth重装甲旅" }
+		8 = { "英国陆军第%dth重装甲旅" }
+		9 = { "英国陆军第%dth重装甲旅" }
+		10 = { "英国陆军第%dth重装甲旅" }
+		11 = { "英国陆军第%dth重装甲旅" }
+		12 = { "英国陆军第%dth重装甲旅" }
+		13 = { "英国陆军第%dth重装甲旅" }
+		14 = { "英国陆军第%dth重装甲旅" }
+		15 = { "英国陆军第%dth重装甲旅" }
+		16 = { "英国陆军第%dth重装甲旅" }
+		17 = { "英国陆军第%dth重装甲旅" }
+		18 = { "英国陆军第%dth重装甲旅" }
+		19 = { "英国陆军第%dth重装甲旅" }
+		20 = { "英国陆军第%dth重装甲旅" }
+		21 = { "英国陆军第%dst重装甲旅" }
+		22 = { "英国陆军第%dnd重装甲旅" }
+		23 = { "英国陆军第%drd重装甲旅" }
+		24 = { "英国陆军第%dth重装甲旅" }
+		25 = { "英国陆军第%dth重装甲旅" }
+		26 = { "英国陆军第%dth重装甲旅" }
+		27 = { "英国陆军第%dth重装甲旅" }
+		28 = { "英国陆军第%dth重装甲旅" }
+		29 = { "英国陆军第%dth重装甲旅" }
+		30 = { "英国陆军第%dth重装甲旅" }
+	}
+}
+
+ENG_PAR_01 = {
+	name = "英国空降师"
+
+	for_countries = { ENG }
+
+	can_use = { always = yes }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ENG_INF_01 }
+
+	fallback_name = "英国皇家空军第%d伞兵师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "英国皇家空军第%dst伞兵师" }
+		6 = { "英国皇家空军第%dth伞兵师" }
+		2 = { "英国皇家空军第%dnd伞兵师" }		# phantom divisions
+		4 = { "英国皇家空军第%dth伞兵师" }
+		5 = { "英国皇家空军第%dth伞兵师" }
+		7 = { "英国皇家空军第%dth伞兵师" }		# fictional divisions
+		8 = { "英国皇家空军第%dth伞兵师" }
+		3 = { "英国皇家空军第%drd伞兵师" }
+		9 = { "英国皇家空军第%dth伞兵师" }
+		10 = { "英国皇家空军第%dth伞兵师" }
+		11 = { "英国皇家空军第%dth伞兵师" }
+		12 = { "英国皇家空军第%dth伞兵师" }
+		13 = { "英国皇家空军第%dth伞兵师" }
+		14 = { "英国皇家空军第%dth伞兵师" }
+		15 = { "英国皇家空军第%dth伞兵师" }
+		16 = { "英国皇家空军第%dth伞兵师" }
+		17 = { "英国皇家空军第%dth伞兵师" }
+		18 = { "英国皇家空军第%dth伞兵师" }
+		19 = { "英国皇家空军第%dth伞兵师" }
+		20 = { "英国皇家空军第%dth伞兵师" }
+		21 = { "英国皇家空军第%dst伞兵师" }
+		22 = { "英国皇家空军第%dnd伞兵师" }
+		23 = { "英国皇家空军第%drd伞兵师" }
+		24 = { "英国皇家空军第%dth伞兵师" }
+		25 = { "英国皇家空军第%dth伞兵师" }
+		26 = { "英国皇家空军第%dth伞兵师" }
+		27 = { "英国皇家空军第%dth伞兵师" }
+		28 = { "英国皇家空军第%dth伞兵师" }
+		29 = { "英国皇家空军第%dth伞兵师" }
+		30 = { "英国皇家空军第%dth伞兵师" }
+	}
+}
+
+ENG_PAR_02 = {
+	name = "英国皇家空军伞降团"
+
+	for_countries = { ENG }
+
+	can_use = { always = yes }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ENG_PAR_02 }
+
+	fallback_name = "英国皇家空军第%d伞兵团"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "英国皇家空军第%dst伞兵团" }
+		2 = { "英国皇家空军第%dnd伞兵团" }
+		3 = { "英国皇家空军第%drd伞兵团" }
+		4 = { "英国皇家空军第%dth伞兵团" }
+		5 = { "英国皇家空军第%dth伞兵团" }
+		6 = { "英国皇家空军第%dth伞兵团" }
+		7 = { "英国皇家空军第%dth伞兵团" }
+		8 = { "英国皇家空军第%dth伞兵团" }
+		9 = { "英国皇家空军第%dth伞兵团" }
+		10 = { "英国皇家空军第%dth伞兵团" }
+		11 = { "英国皇家空军第%dth伞兵团" }
+		12 = { "英国皇家空军第%dth伞兵团" }
+		13 = { "英国皇家空军第%dth伞兵团" }
+		14 = { "英国皇家空军第%dth伞兵团" }
+		15 = { "英国皇家空军第%dth伞兵团" }
+		16 = { "英国皇家空军第%dth伞兵团" }
+		17 = { "英国皇家空军第%dth伞兵团" }
+		18 = { "英国皇家空军第%dth伞兵团" }
+		19 = { "英国皇家空军第%dth伞兵团" }
+		20 = { "英国皇家空军第%dth伞兵团" }
+		21 = { "英国皇家空军第%dst伞兵团" }
+		22 = { "英国皇家空军第%dnd伞兵团" }
+		23 = { "英国皇家空军第%drd伞兵团" }
+		24 = { "英国皇家空军第%dth伞兵团" }
+		25 = { "英国皇家空军第%dth伞兵团" }
+		26 = { "英国皇家空军第%dth伞兵团" }
+		27 = { "英国皇家空军第%dth伞兵团" }
+		28 = { "英国皇家空军第%dth伞兵团" }
+		29 = { "英国皇家空军第%dth伞兵团" }
+		30 = { "英国皇家空军第%dth伞兵团" }
+	}
+}
+
+ENG_MAR_01 = {
+	name = "皇家海军陆战队"
+
+	for_countries = { ENG }
+
+	can_use = { always = yes }
+
+	division_types = { "marine" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ENG_INF_01 }
+
+	fallback_name = "英国第%d皇家海军陆战师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "英国第%dst皇家海军陆战师" }
+		2 = { "英国第%dnd皇家海军陆战师" }
+		3 = { "英国第%drd皇家海军陆战师" }
+		4 = { "英国第%dth皇家海军陆战师" }
+		5 = { "英国第%dth皇家海军陆战师" }
+		6 = { "英国第%dth皇家海军陆战师" }
+		7 = { "英国第%dth皇家海军陆战师" }
+		8 = { "英国第%dth皇家海军陆战师" }
+		9 = { "英国第%dth皇家海军陆战师" }
+		10 = { "英国第%dth皇家海军陆战师" }
+		11 = { "英国第%dth皇家海军陆战师" }
+		12 = { "英国第%dth皇家海军陆战师" }
+		13 = { "英国第%dth皇家海军陆战师" }
+		14 = { "英国第%dth皇家海军陆战师" }
+		15 = { "英国第%dth皇家海军陆战师" }
+		16 = { "英国第%dth皇家海军陆战师" }
+		17 = { "英国第%dth皇家海军陆战师" }
+		18 = { "英国第%dth皇家海军陆战师" }
+		19 = { "英国第%dth皇家海军陆战师" }
+		20 = { "英国第%dth皇家海军陆战师" }
+		21 = { "英国第%dst皇家海军陆战师" }
+		22 = { "英国第%dnd皇家海军陆战师" }
+		23 = { "英国第%drd皇家海军陆战师" }
+		24 = { "英国第%dth皇家海军陆战师" }
+		25 = { "英国第%dth皇家海军陆战师" }
+		26 = { "英国第%dth皇家海军陆战师" }
+		27 = { "英国第%dth皇家海军陆战师" }
+		28 = { "英国第%dth皇家海军陆战师" }
+		29 = { "英国第%dth皇家海军陆战师" }
+		30 = { "英国第%dth皇家海军陆战师" }
+	}
+}
+
+ENG_MNT_01 = {
+	name = "英国陆军山地师"
+
+	for_countries = { ENG }
+
+	can_use = { always = yes }
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { ENG_INF_01 }
+
+	fallback_name = "英国陆军第%d山地师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		
+		128 = { "英国陆军第%dth山地师" }
+		129 = { "英国陆军第%dth山地师" }
+		130 = { "英国陆军第%dth山地师" }
+		131 = { "英国陆军第%dst山地师" }
+		132 = { "英国陆军第%dnd山地师" }
+		133 = { "英国陆军第%drd山地师" }
+		134 = { "英国陆军第%dth山地师" }
+		135 = { "英国陆军第%dth山地师" }
+		136 = { "英国陆军第%dth山地师" }
+		137 = { "英国陆军第%dth山地师" }
+		138 = { "英国陆军第%dth山地师" }
+		139 = { "英国陆军第%dth山地师" }
+		140 = { "英国陆军第%dth山地师" }
+		141 = { "英国陆军第%dst山地师" }
+		142 = { "英国陆军第%dnd山地师" }
+	}
+}
+
+ENG_MNT_02 = { 
+	name = "廓尔喀师" 
+
+	for_countries = { ENG RAJ } 
+
+	can_use = {
+		OR = {
+			tag = ENG
+			AND = {
+				tag = RAJ
+				has_completed_focus = RAJ_indian_gurkhas
+			}
+		}
+	}
+
+	division_types = { "mountaineers" } 
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ENG_MNT_02 } 
+
+	fallback_name = "英国陆军第%d廓尔喀师" 
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = { 
+		17 = { "英国陆军第%dth廓尔喀师" } # raised in 1952 for the Malayan Emergency
+		1 = { "英国陆军第%dst廓尔喀师" }
+		2 = { "英国陆军第%dnd廓尔喀师" }
+		3 = { "英国陆军第%drd廓尔喀师" }
+		4 = { "英国陆军第%dth廓尔喀师" }
+		5 = { "英国陆军第%dth廓尔喀师" }
+		6 = { "英国陆军第%dth廓尔喀师" }
+		7 = { "英国陆军第%dth廓尔喀师" }
+		8 = { "英国陆军第%dth廓尔喀师" }
+		9 = { "英国陆军第%dth廓尔喀师" }
+		10 = { "英国陆军第%dth廓尔喀师" }
+		11 = { "英国陆军第%dth廓尔喀师" }
+		12 = { "英国陆军第%dth廓尔喀师" }
+		13 = { "英国陆军第%dth廓尔喀师" }
+		14 = { "英国陆军第%dth廓尔喀师" }
+		15 = { "英国陆军第%dth廓尔喀师" }
+		16 = { "英国陆军第%dth廓尔喀师" }
+		18 = { "英国陆军第%dth廓尔喀师" }
+		19 = { "英国陆军第%dth廓尔喀师" }
+		20 = { "英国陆军第%dth廓尔喀师" }
+		21 = { "英国陆军第%dst廓尔喀师" }
+		22 = { "英国陆军第%dnd廓尔喀师" }
+		23 = { "英国陆军第%drd廓尔喀师" }
+		24 = { "英国陆军第%dth廓尔喀师" }
+		25 = { "英国陆军第%dth廓尔喀师" }
+		26 = { "英国陆军第%dth廓尔喀师" }
+		27 = { "英国陆军第%dth廓尔喀师" }
+		28 = { "英国陆军第%dth廓尔喀师" }
+		29 = { "英国陆军第%dth廓尔喀师" }
+		30 = { "英国陆军第%dth廓尔喀师" }
+	} 
+}
+
+ENG_GAR_01 = {
+	name = "英国陆军守备师"
+
+	for_countries = { ENG }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ENG_INF_01 }
+
+	fallback_name = "英国陆军第%d守备师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		201 = { "英国陆军德文郡和康沃尔郡守备师" }			# Home Counties Divisions (1940-41)
+		202 = { "英国陆军多塞特郡守备师" }
+		203 = { "英国陆军达勒姆和北骑马郡守备师" }
+		204 = { "英国陆军西萨塞克斯郡守备师" }
+		205 = { "英国陆军汉普郡守备师" }
+		206 = { "英国陆军林肯郡守备师" }
+		207 = { "英国陆军诺福克郡守备师" }
+		208 = { "英国陆军诺森伯兰郡守备师" }
+		209 = { "英国陆军约克郡守备师" }
+		210 = { "英国陆军埃塞克斯守备师" }
+		100 = { "英国陆军第%dth守备师" }					# fictional divisions
+		101 = { "英国陆军第%dst守备师" }
+		102 = { "英国陆军第%dnd守备师" }
+		103 = { "英国陆军第%drd守备师" }
+		104 = { "英国陆军第%dth守备师" }
+		105 = { "英国陆军第%dth守备师" }
+		106 = { "英国陆军第%dth守备师" }
+		107 = { "英国陆军第%dth守备师" }
+		108 = { "英国陆军第%dth守备师" }
+		109 = { "英国陆军第%dth守备师" }
+		110 = { "英国陆军第%dth守备师" }
+		111 = { "英国陆军第%dth守备师" }
+		112 = { "英国陆军第%dth守备师" }
+		113 = { "英国陆军第%dth守备师" }
+		114 = { "英国陆军第%dth守备师" }
+		115 = { "英国陆军第%dth守备师" }
+		116 = { "英国陆军第%dth守备师" }
+		117 = { "英国陆军第%dth守备师" }
+		118 = { "英国陆军第%dth守备师" }
+		119 = { "英国陆军第%dth守备师" }
+		120 = { "英国陆军第%dth守备师" }
+		121 = { "英国陆军第%dst守备师" }
+		122 = { "英国陆军第%dnd守备师" }
+		123 = { "英国陆军第%drd守备师" }
+		124 = { "英国陆军第%dth守备师" }
+		125 = { "英国陆军第%dth守备师" }
+		126 = { "英国陆军第%dth守备师" }
+		127 = { "英国陆军第%dth守备师" }
+		128 = { "英国陆军第%dth守备师" }
+		129 = { "英国陆军第%dth守备师" }
+		130 = { "英国陆军第%dth守备师" }
+		131 = { "英国陆军第%dst守备师" }
+		132 = { "英国陆军第%dnd守备师" }
+		133 = { "英国陆军第%drd守备师" }
+		134 = { "英国陆军第%dth守备师" }
+		135 = { "英国陆军第%dth守备师" }
+		136 = { "英国陆军第%dth守备师" }
+		137 = { "英国陆军第%dth守备师" }
+		138 = { "英国陆军第%dth守备师" }
+		139 = { "英国陆军第%dth守备师" }
+		140 = { "英国陆军第%dth守备师" }
+		141 = { "英国陆军第%dst守备师" }
+		142 = { "英国陆军第%dnd守备师" }
+		143 = { "英国陆军第%drd守备师" }
+		144 = { "英国陆军第%dth守备师" }
+		145 = { "英国陆军第%dth守备师" }
+		146 = { "英国陆军第%dth守备师" }
+		147 = { "英国陆军第%dth守备师" }
+		148 = { "英国陆军第%dth守备师" }
+		149 = { "英国陆军第%dth守备师" }
+		150 = { "英国陆军第%dth守备师" }
+	}
+}
+
+ENG_COL_01 = {
+	name = "殖民地师"
+
+	for_countries = { ENG }
+
+	can_use = {
+		NOT = {
+			has_completed_focus = ENG_decolonization
+		}
+	}
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { ENG_INF_01 }
+
+	fallback_name = "英国陆军第%d非洲师"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		11 = { "英国陆军第%dth非洲师" }				# Actual African divisions
+		812 = { "英国陆军第12th非洲师" }
+		81 = { "英国陆军第%dst非洲师" }
+		82 = { "英国陆军第%dnd非洲师" }
+		501 = { "英国陆军第1st苏丹殖民地师" }					# Ad hoc African forces from regiment to near-division size
+		502 = { "英国陆军第2nd苏丹殖民地师" }
+		503 = { "英国陆军第3rd苏丹殖民地师" }
+		521 = { "英国陆军第1st乌干达殖民地师" }
+		522 = { "英国陆军第2nd乌干达殖民地师" }
+		541 = { "英国陆军第1st肯尼亚殖民地师" }
+		542 = { "英国陆军第2nd肯尼亚殖民地师" }
+		561 = { "英国陆军第1st坦桑尼亚殖民地师" }
+		562 = { "英国陆军第2nd坦桑尼亚殖民地师" }
+		581 = { "英国陆军第1st国王非洲步枪队" }
+		582 = { "英国陆军第2nd国王非洲步枪队" }
+		583 = { "英国陆军第3rd国王非洲步枪队" }
+		584 = { "英国陆军第4th国王非洲步枪队" }
+		585 = { "英国陆军第5th国王非洲步枪队" }
+		586 = { "英国陆军第6th国王非洲步枪队" }
+		587 = { "英国陆军第7th国王非洲步枪队" }
+		588 = { "英国陆军第8th国王非洲步枪队" }
+		589 = { "英国陆军第9th国王非洲步枪队" }
+		590 = { "英国陆军第10th国王非洲步枪队" }
+		83 = { "英国陆军第%drd非洲师" }					# fictional African divisions
+		84 = { "英国陆军第%dth非洲师" }
+		85 = { "英国陆军第%dth非洲师" }
+		86 = { "英国陆军第%dth非洲师" }
+		87 = { "英国陆军第%dth非洲师" }
+		88 = { "英国陆军第%dth非洲师" }
+		89 = { "英国陆军第%dth非洲师" }
+		543 = { "英国陆军第3rd肯尼亚殖民地师" }					# fictional ad hoc African forces
+		544 = { "英国陆军第4th肯尼亚殖民地师" }
+		545 = { "英国陆军第5th肯尼亚殖民地师" }
+		504 = { "英国陆军第3rd苏丹殖民地师" }
+		505 = { "英国陆军第4th苏丹殖民地师" }
+		506 = { "英国陆军第5th苏丹殖民地师" }
+		523 = { "英国陆军第3rd乌干达殖民地师" }
+		524 = { "英国陆军第4th乌干达殖民地师" }
+		563 = { "英国陆军第3rd坦桑尼亚殖民地师" }
+		564 = { "英国陆军第4th坦桑尼亚殖民地师" }
+		591 = { "英国陆军第11th国王非洲步枪队" }
+		592 = { "英国陆军第12th国王非洲步枪队" }
+		593 = { "英国陆军第13th国王非洲步枪队" }
+		594 = { "英国陆军第14th国王非洲步枪队" }
+		595 = { "英国陆军第15th国王非洲步枪队" }
+	}
+}
+
+ENG_AIR_01 = { 
+	name = "英国陆军防空师" 
+
+	for_countries = { ENG } 
+
+	can_use = { always = yes } 
+
+	division_types = { "infantry" } 
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ENG_AIR_01 } 
+
+	fallback_name = "英国陆军第%d防空师" 
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = { 
+		1 = { "英国陆军第%dst防空师" } # formed 1935
+		2 = { "英国陆军第%dnd防空师" } # formed 1935
+		3 = { "英国陆军第%drd防空师" } # formed 1938
+		4 = { "英国陆军第%dth防空师" } # formed 1938
+		5 = { "英国陆军第%dth防空师" } # formed 1938
+		6 = { "英国陆军第%dth防空师" } # formed 1939
+		7 = { "英国陆军第%dth防空师" } # formed 1939
+		8 = { "英国陆军第%dth防空师" } # formed 1940
+		9 = { "英国陆军第%dth防空师" } # formed 1940
+		10 = { "英国陆军第%dth防空师" } # formed 1940
+		11 = { "英国陆军第%dth防空师" } # formed 1940
+		12 = { "英国陆军第%dth防空师" } # formed 1940
+		13 = { "英国陆军第%dth防空师" } # fictional names start here
+		14 = { "英国陆军第%dth防空师" }
+		15 = { "英国陆军第%dth防空师" }
+		16 = { "英国陆军第%dth防空师" }
+		17 = { "英国陆军第%dth防空师" }
+		18 = { "英国陆军第%dth防空师" }
+		19 = { "英国陆军第%dth防空师" }
+		20 = { "英国陆军第%dth防空师" }
+		21 = { "英国陆军第%dst防空师" }
+		22 = { "英国陆军第%dnd防空师" }
+		23 = { "英国陆军第%drd防空师" }
+		24 = { "英国陆军第%dth防空师" }
+		25 = { "英国陆军第%dth防空师" }
+		26 = { "英国陆军第%dth防空师" }
+		27 = { "英国陆军第%dth防空师" }
+		28 = { "英国陆军第%dth防空师" }
+		29 = { "英国陆军第%dth防空师" }
+		30 = { "英国陆军第%dth防空师" }
+		31 = { "英国陆军第%dst防空师" }
+		32 = { "英国陆军第%dnd防空师" }
+		33 = { "英国陆军第%drd防空师" }
+		34 = { "英国陆军第%dth防空师" }
+		35 = { "英国陆军第%dth防空师" }
+		36 = { "英国陆军第%dth防空师" }
+		37 = { "英国陆军第%dth防空师" }
+		38 = { "英国陆军第%dth防空师" }
+		39 = { "英国陆军第%dth防空师" }
+		40 = { "英国陆军第%dth防空师" }
+		41 = { "英国陆军第%dst防空师" }
+		42 = { "英国陆军第%dnd防空师" }
+		43 = { "英国陆军第%drd防空师" }
+		44 = { "英国陆军第%dth防空师" }
+		45 = { "英国陆军第%dth防空师" }
+		46 = { "英国陆军第%dth防空师" }
+		47 = { "英国陆军第%dth防空师" }
+		48 = { "英国陆军第%dth防空师" }
+		49 = { "英国陆军第%dth防空师" }
+		50 = { "英国陆军第%dth防空师" }
+	} 
+}
+
+ENG_DEM_01 = {
+	name = "英国陆军忠诚旅"
+
+	for_countries = { ENG }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ENG_INF_01 }
+
+	fallback_name = "英国陆军第%d忠诚旅"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "英国陆军第%dst忠诚旅" }
+		2 = { "英国陆军第%dnd忠诚旅" }
+		3 = { "英国陆军第%drd忠诚旅" }
+		4 = { "英国陆军第%dth忠诚旅" }
+		5 = { "英国陆军第%dth忠诚旅" }
+		6 = { "英国陆军第%dst忠诚旅" }
+		7 = { "英国陆军第%dnd忠诚旅" }
+		8 = { "英国陆军第%drd忠诚旅" }
+		9 = { "英国陆军第%dth忠诚旅" }
+		10 = { "英国陆军第%dth忠诚旅" }
+		11 = { "英国陆军第%dst忠诚旅" }
+		12 = { "英国陆军第%dnd忠诚旅" }
+		13 = { "英国陆军第%drd忠诚旅" }
+		14 = { "英国陆军第%dth忠诚旅" }
+		15 = { "英国陆军第%dth忠诚旅" }
+		16 = { "英国陆军第%dst忠诚旅" }
+		17 = { "英国陆军第%dnd忠诚旅" }
+		18 = { "英国陆军第%drd忠诚旅" }
+		19 = { "英国陆军第%dth忠诚旅" }
+		20 = { "英国陆军第%dth忠诚旅" }
+		21 = { "英国陆军第%dst忠诚旅" }
+		22 = { "英国陆军第%dnd忠诚旅" }
+		23 = { "英国陆军第%drd忠诚旅" }
+		24 = { "英国陆军第%dth忠诚旅" }
+		25 = { "英国陆军第%dth忠诚旅" }
+		26 = { "英国陆军第%dst忠诚旅" }
+		27 = { "英国陆军第%dnd忠诚旅" }
+		28 = { "英国陆军第%drd忠诚旅" }
+		29 = { "英国陆军第%dth忠诚旅" }
+		30 = { "英国陆军第%dth忠诚旅" }
+	}
+}
+
+ENG_FAS_01 = {
+	name = "英国陆军黑衫旅"
+
+	for_countries = { ENG }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ENG_INF_01 }
+
+	fallback_name = "英国陆军第%d黑衫旅"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "英国陆军第%dst黑衫旅" }
+		2 = { "英国陆军第%dnd黑衫旅" }
+		3 = { "英国陆军第%drd黑衫旅" }
+		4 = { "英国陆军第%dth黑衫旅" }
+		5 = { "英国陆军第%dth黑衫旅" }
+		6 = { "英国陆军第%dst黑衫旅" }
+		7 = { "英国陆军第%dnd黑衫旅" }
+		8 = { "英国陆军第%drd黑衫旅" }
+		9 = { "英国陆军第%dth黑衫旅" }
+		10 = { "英国陆军第%dth黑衫旅" }
+		11 = { "英国陆军第%dst黑衫旅" }
+		12 = { "英国陆军第%dnd黑衫旅" }
+		13 = { "英国陆军第%drd黑衫旅" }
+		14 = { "英国陆军第%dth黑衫旅" }
+		15 = { "英国陆军第%dth黑衫旅" }
+		16 = { "英国陆军第%dst黑衫旅" }
+		17 = { "英国陆军第%dnd黑衫旅" }
+		18 = { "英国陆军第%drd黑衫旅" }
+		19 = { "英国陆军第%dth黑衫旅" }
+		20 = { "英国陆军第%dth黑衫旅" }
+		21 = { "英国陆军第%dst黑衫旅" }
+		22 = { "英国陆军第%dnd黑衫旅" }
+		23 = { "英国陆军第%drd黑衫旅" }
+		24 = { "英国陆军第%dth黑衫旅" }
+		25 = { "英国陆军第%dth黑衫旅" }
+		26 = { "英国陆军第%dst黑衫旅" }
+		27 = { "英国陆军第%dnd黑衫旅" }
+		28 = { "英国陆军第%drd黑衫旅" }
+		29 = { "英国陆军第%dth黑衫旅" }
+		30 = { "英国陆军第%dth黑衫旅" }
+	}
+}

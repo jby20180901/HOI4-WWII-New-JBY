@@ -1,0 +1,6 @@
+poverty_econ_plan ={
+	icon = generic_prospect_for_resources
+	available = {
+		always = yes 
+	}
+}

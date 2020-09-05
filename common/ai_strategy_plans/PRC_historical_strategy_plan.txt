@@ -1,0 +1,77 @@
+PRC_nationalist_historical_plan = {
+	name = " PRC historical plan"
+	desc = ""
+
+	enable = {
+		original_tag = PRC
+		is_historical_focus_on = yes
+				
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		PRC_queyishaoyaowenyihengxing1
+		EastAsia_PRC_sandazhulihuishi
+		EastAsia_PRC_maliezhuyibentuhua
+		EastAsia_PRC_lunfanduiribendiguozhuyidecelve
+		EastAsia_PRC_zhongguogemingdezhanlvewenti
+		EastAsia_PRC_maodunlun
+		EastAsia_PRC_dangzhihuiqiang
+		EastAsia_PRC_shanganningbianqu
+		EastAsia_PRC_tuanjieyixin
+		EastAsia_PRC_yananzhengfeng
+		PRC_fanjiaotiao
+		PRC_fanzongpai
+		PRC_fandangbagu
+		EastAsia_PRC_chengqianbihou
+		PRC_lishijueyi
+		PRC_chongzhenghongjun
+		EastAsia_PRC_hongsifangmianjun
+		PRC_qiandiweiyuanhui
+		PRC_sandajilv
+		EastAsia_PRC_renmindejundui
+		PRC_fadongqunzhong
+		PRC_xiandadui
+		PRC_funvjiuguohui
+		PRC_ertongtuan
+		PRC_renminzhanzheng2
+		EastAsia_PRC_shenlingwuzi
+		EastAsia_PRC_youjizhanshu
+		EastAsia_PRC_dihoushentou
+		EastAsia_PRC_lunchijiuzhan
+		PRC_didaozhan
+		EastAsia_PRC_hongjungaibian
+		EastAsia_PRC_balijun
+		EastAsia_PRC_xinsijun
+		EastAsia_PRC_pingxingguanzhanyi
+		PRC_baituandazhan2
+		PRC_niaoqianghuanpao
+		PRC_bingzhigaige
+		PRC_sansanzhi
+		EastAsia_PRC_tianbingtianjaing
+		PRC_gaishanbubingzhuangbei
+		PRC_gaishanpaobingzhuangbei
+		PRC_chongxinzhidingzhengce
+	}
+
+	research = {
+		improved_infantry_weapons_2 = 10
+		prc_light_artillery_3 = 10
+		
+	}
+
+	ideas = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

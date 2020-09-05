@@ -1,0 +1,328 @@
+﻿RAJ_DD_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_DESTROYERS
+  for_countries = {
+    RAJ
+  }
+  type = ship
+  ship_types = {
+    ship_hull_light
+    destroyer
+  }
+  prefix = "HMIS "
+  fallback_name = "印度海军%s号驱逐舰"  # Destroyer %s
+  unique = {
+    "萨特卢杰河"  # Sutlej
+    "朱木拿河"  # Jumna
+    "讷尔默达"  # Narbada
+    "哥达瓦里"  # Godavari
+    "吉斯特那河"  # Kistna
+    "高韦里河"  # Cauvery
+    "萨巴尔马提河"  # Sabarmati
+    "瓦特雷克"  # Vatrak
+    "聘礼"  # Mohar
+    "马伊"  # Mahi
+    "白朗"  # Panam
+    "阿纳斯"  # Anas
+    "莫兰"  # Moran
+    "巴纳斯"  # Banas
+    "鲁尼"  # Luni
+    "苏卡里"  # Sukari
+    "邦迪"  # Bandi
+    "坎贝尔"  # Chambel
+    "阿桑"  # Asan
+    "卡格拉河"  # Ghaghara
+    "萨尔达"  # Sarda
+    "甘达基"  # Gandak
+    "科西"  # Koshi
+    "默哈嫩达河"  # Mahananda
+    "布拉马普特拉河"  # Brahmaputra
+    "科皮里"  # Kopili
+    "迪迦鲁"  # Digaru
+    "帕蒂马里"  # Puthimari
+    "巴拉利亚"  # Baralia
+    "帕科拉迪亚"  # Pagaldiya
+    "卡拉迪亚"  # Kaladiya
+    "别乞"  # Beki
+    "马纳斯"  # Manas
+    "坎帕帕蒂"  # Champabati
+    "希尔·索萨"  # Shil Torsa
+    "蒂尔"  # Tir
+    "塔瓦尔"  # Talwar
+    "特里苏尔"  # Trishul
+  }
+}
+RAJ_CL_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CL
+  for_countries = {
+    RAJ
+  }
+  type = ship
+  ship_types = {
+    ship_hull_cruiser
+    light_cruiser
+  }
+  prefix = "HMIS "
+  fallback_name = "印度海军%s号轻巡洋舰"  # Light Cruiser %s
+  unique = {
+    "德里"  # Delhi
+    "孟买"  # Bombay
+    "迈索尔"  # Mysore
+    "卡拉奇"  # Karachi
+    "仰光"  # Rangoon
+    "海德拉巴"  # Hyderabad
+    "勒克瑙"  # Lucknow
+    "艾哈迈达巴德"  # Ahmadabad
+    "巴特那"  # Patna
+    "曼德勒"  # Mandalay
+    "达卡"  # Dacca
+    "加尔各答"  # Calcutta
+  }
+}
+RAJ_CA_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CA
+  for_countries = {
+    RAJ
+  }
+  type = ship
+  ship_types = {
+    ship_hull_cruiser
+    heavy_cruiser
+  }
+  prefix = "HMIS "
+  fallback_name = "印度海军%s号重巡洋舰"  # Heavy Cruiser %s
+  unique = {
+    "德里"  # Delhi
+    "孟买"  # Bombay
+    "迈索尔"  # Mysore
+    "卡拉奇"  # Karachi
+    "仰光"  # Rangoon
+    "海德拉巴"  # Hyderabad
+    "勒克瑙"  # Lucknow
+    "艾哈迈达巴德"  # Ahmadabad
+    "巴特那"  # Patna
+    "曼德勒"  # Mandalay
+    "达卡"  # Dacca
+    "加尔各答"  # Calcutta
+  }
+}
+RAJ_BB_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_BB
+  for_countries = {
+    RAJ
+  }
+  type = ship
+  ship_types = {
+    ship_hull_heavy
+    battleship
+  }
+  prefix = "HMIS "
+  fallback_name = "印度海军%s号战列舰"  # Battleship %s
+  unique = {
+    "印度"  # India
+    "罗奢"  # Raj
+    "女皇"  # Empress
+    "皇帝"  # Emperor
+    "印度斯坦"  # Hindustan
+    "复仇"  # Revenge
+    "报应"  # Retribution
+    "复仇"  # Vengeance
+    "涅墨西斯"  # Nemesis
+  }
+}
+RAJ_BC_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_BC
+  for_countries = {
+    RAJ
+  }
+  type = ship
+  ship_types = {
+    ship_hull_heavy
+    battle_cruiser
+  }
+  prefix = "HMIS "
+  fallback_name = "印度海军%s号战列巡洋舰"  # Battlecruiser %s
+  unique = {
+    "印度"  # India
+    "英属印度"  # Raj
+    "女皇"  # Empress
+    "皇帝"  # Emperor
+    "印度斯坦"  # Hindustan
+    "复仇"  # Revenge
+    "报应"  # Retribution
+    "复仇"  # Vengeance
+    "涅墨西斯"  # Nemesis
+  }
+}
+RAJ_CV_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CARRIERS
+  for_countries = {
+    RAJ
+  }
+  type = ship
+  ship_types = {
+    ship_hull_carrier
+    carrier
+  }
+  prefix = "HMIS "
+  fallback_name = "印度海军%s号航空母舰"  # Carrier %s
+  unique = {
+    "维克兰特"  # Vikrant
+    "毗湿奴"  # Vishnu
+    "毗加摩提底耶"  # Vikramaditya
+    "维拉特"  # Viraat
+    "维沙尔"  # Vishal
+  }
+}
+RAJ_SS_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_SUBMARINES
+  for_countries = {
+    RAJ
+  }
+  type = ship
+  ship_types = {
+    ship_hull_submarine
+    submarine
+  }
+  prefix = "HMIS "
+  fallback_name = "印度海军%s号潜艇"  # Submarine %s
+  unique = {
+    "猫鲨"  # Catshark
+    "弹涂鱼"  # Mudskipper
+    "锯鳐"  # Sawfish
+    "默里"  # Moray
+    "鹦嘴鱼"  # Parrotfish
+    "尖嘴鱼"  # Pipefish
+    "鲭鱼"  # Mackerel
+    "魟鱼"  # Manta
+    "遮目鱼"  # Milkfish
+    "鳗鱼"  # Eel
+    "喇叭鱼"  # Trumpetfish
+    "鳐鱼"  # Mud Skate
+  }
+}
+RAJ_PROVINCES = {
+  name = NAME_THEME_PROVINCES
+  for_countries = {
+    RAJ
+  }
+  type = ship
+  prefix = "HMIS "
+  unique = {
+    "马德拉斯"  # Madras
+    "孟买"  # Bombay
+    "旁遮普"  # Punjab
+    "阿萨姆"  # Assam
+    "孟加拉"  # Bengal
+    "联合省"  # United Provinces
+    "中央省"  # Central Provinces
+    "贝拉尔"  # Berar
+    "缅甸"  # Burma
+    "西北省"  # North-West Frontier
+    "俾路支"  # Baluchistan
+    "库格"  # Coorg
+    "阿米尔-默瓦拉"  # Amjer-Merwara
+    "安达曼群岛"  # Andaman Islands
+    "尼科巴群岛"  # Nicobar Islands
+    "比哈尔"  # Bihar
+    "奥里萨"  # Orissa
+    "潘特-皮普罗达"  # Panth-Piploda
+    "信德"  # Sind
+  }
+}
+RAJ_CITIES = {
+  name = NAME_THEME_CITIES
+  for_countries = {
+    RAJ
+  }
+  type = ship
+  prefix = "HMIS "
+  unique = {
+    "德里"  # Delhi
+    "孟买"  # Bombay
+    "迈索尔"  # Mysore
+    "卡拉奇"  # Karachi
+    "仰光"  # Rangoon
+    "海德拉巴"  # Hyderabad
+    "勒克瑙"  # Lucknow
+    "艾哈迈达巴德"  # Ahmadabad
+    "巴特那"  # Patna
+    "曼德勒"  # Mandalay
+    "达卡"  # Dacca
+    "加尔各答"  # Calcutta
+    "菩磐"  # Bhopal
+    "阿格拉"  # Agra
+    "马德拉斯"  # Madras
+    "科钦"  # Cochin
+    "特拉凡得琅"  # Trivandrum
+    "巴罗达"  # Baroda
+    "本地治里"  # Pondicherry
+    "奥朗加巴德"  # Aurangabad
+    "马哈布巴德"  # Mahabubabad
+    "马赫布布纳加尔"  # Mahbubnagar
+    "奥斯马纳巴德"  # Osmanabad
+    "拉合尔"  # Lahore
+    "费萨拉巴德"  # Faisalabad
+    "拉瓦尔品第"  # Rawalpindi
+    "古杰朗瓦拉"  #  Gujranwala
+    "白沙瓦"  # Peshawar
+    "木尔坦"  # Multan
+    "伊斯兰堡"  # Islamabad
+    "奎达"  # Quetta
+    "阿迈德那格尔"  # Ahmednagar
+    "西姆拉"  # Shimla
+    "艾哈迈达巴德"  # Ahmedabad
+    "苏尔坦普尔"  # Sultanpur
+    "穆扎法尔讷格尔"  # Muzaffarnagar
+    "阿克巴布尔"  # Akbarpur
+    "贾巴尔普尔"  # Jubbulpore
+    "贾斯莫夫"  # Jajesmow
+    "坎普尔"  # Cawnpore
+    "古德伯"  # Cuddapah
+    "贝尔高姆"  # Belgaum
+    "杜姆古尔"  # Tumkur
+    "胡布利"  # Hubli
+    "希莫加"  # Shimoga
+    "霍斯佩特"  # Hospet
+    "古尔伯加"  # Gulbarga
+    "契克马加卢"  # Chikmagalur
+    "比贾布尔"  # Bijapur
+    "贝拉里"  # Bellary
+    "芒格洛尔"  # Mangalore
+    "拉贾蒙德里"  # Rajahmundry
+    "古尔冈"  # Gurgaon
+    "阿拉哈巴德"  # Allahabad
+    "阿勒皮"  # Alleppey
+    "高哈蒂"  # Gauhati
+    "英德胡尔"  # Indhur
+    "康契普腊姆"  # Conjevaram
+    "坎纳诺尔"  # Cannanore
+    "奎隆"  # Quilon
+    "奎兰迪"  # Quilandi
+    "卡利卡特"  # Calicut
+    "库丹泰"  # Kudanthai
+    "马雅瓦蓝"  # Mayavaram
+    "纳尔不达"  # Nerbudda
+    "瑙贡"  # Nowgong
+    "帕尔加"  # Palghat
+    "帕纳吉"  # Panjim
+    "浦那"  # Poona
+    "兰纳德"  # Ramnad
+    "萨格尔"  # Saugor
+    "西姆拉"  # Simla
+    "代利杰里"  # Tellicherry
+    "坦焦尔"  # Tanjore
+    "杜蒂戈林"  # Tuticorin
+    "德里久尔"  # Trichur
+    "蒂特里瓦南"  # Tinthirivanam
+    "特里奇诺波利"  # Trichinopoly
+    "廷尼弗利"  # Tinnevelly
+    "特里陂里卡内"  # Triplicane
+    "乌塔卡蒙德"  # Ootacamund
+    "维苏巴拉耶"  # Vizhupparaiyar
+    "贝拿勒斯"  # Benares
+    "伯德格拉"  # Badagara
+    "弗里德哈拉姆"  # Vriddhachalam
+    "贝贾瓦达"  # Bejawada
+    "沃泰尔"  # Waltair
+  }
+}

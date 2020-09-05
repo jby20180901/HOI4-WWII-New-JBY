@@ -1,0 +1,284 @@
+
+operations = {
+
+	SHD_Save_strength = {
+	
+		icon = generic_civil_support
+		fire_only_once = yes
+		days_remove = 12
+		
+		cost = 0
+		
+		highlight_states = {
+			state = 597
+		}
+		visible = {
+			tag = SLJ
+			has_country_flag = SHD_Shandong_believes_that_the_central_government_has_conspiracy
+			NOT = { has_completed_focus = SHD_Full_support_national_government }
+		}
+		available = {
+			OR = {
+				is_subject_of = CHI
+				is_in_faction_with = CHI
+			}
+			any_other_country = {
+					num_of_factories > 50
+					has_war_with = CHI
+					has_war_with = SLJ
+				}
+			any_other_country = {
+					has_war_with = CHI
+					has_war_with = SLJ
+					controls_state = 614
+			}
+			NOT = { has_completed_focus = SHD_Full_support_national_government }
+		}
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			country_event = { id = Shandong.22 }
+		}
+		cancel_trigger = {
+			ROOT = {
+				OR = {
+					exists = no
+					has_capitulated = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 500
+		}
+	}
+	
+}
+
+political_actions = {
+
+	HPC_Emergency_meeting = {
+	
+		icon = generic_civil_support
+		fire_only_once = yes
+		days_remove = 6
+		
+		cost = 0
+		
+		highlight_states = {
+			state = 608
+		}
+		visible = {
+			tag = XBJ
+			is_subject = no
+		}
+		available = {
+			has_capitulated = no
+			OR = {
+				JAP = {
+						has_completed_focus = JAP_dongyagongrong
+					}
+				any_other_country = {
+						NOT = { is_literally_china = yes }
+						num_of_factories > 40
+						has_war_with = XBJ
+					}
+			}
+			OR = {
+				is_subject = no
+				is_subject = event_target:WTT_current_china_leader
+			}
+			NOT = { has_war_with = event_target:WTT_current_china_leader }
+			OR = {
+				is_in_faction = no
+				is_in_faction_with = event_target:WTT_current_china_leader
+			}
+			event_target:WTT_current_china_leader = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			country_event = { id = SubClique.1 }
+		}
+		cancel_trigger = {
+			ROOT = {
+				OR = {
+					exists = no
+					is_subject = yes
+					has_capitulated = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	
+	
+	SHD_Join_the_political_struggle = {
+	
+		icon = generic_civil_support
+		
+		fire_only_once = yes
+		
+		cost = 150
+		
+		days_remove = 70
+
+		visible = {
+			has_dlc = "Waking the Tiger"
+			tag = SLJ
+			is_subject = no
+			event_target:WTT_current_china_leader = {
+				exists = yes
+				is_subject = no
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		available = {
+			
+		}
+		complete_effect = {
+			subtract_from_variable = {
+					other_political_support = -9
+				}
+		}
+		remove_effect = {
+			WTT_setup_political_struggle = yes
+			WTT_add_ROOT_to_political_struggle = yes
+		}
+		cancel_trigger = {
+			ROOT = {
+				OR = {
+					exists = no
+					is_subject = yes
+					has_capitulated = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 500
+		}
+	}
+	
+
+
+	DGS_Establish_dunganistan = {
+
+		icon = generic_form_nation
+
+		fire_only_once = yes
+		
+		available = {
+			has_full_control_of_state = 617
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+
+		cost = 50
+
+		visible = {
+			tag = DGS
+		}
+		is_good = yes
+		
+		days_remove = 0
+
+		remove_effect = {
+			
+		}
+		complete_effect = {
+			drop_cosmetic_tag = yes
+			set_capital = 617
+			every_state = {
+					limit = {
+							is_core_of = SIK
+						}
+					add_core_of = ROOT
+				}
+		}
+		cancel_trigger = {
+			ROOT = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+	}
+	DGS_Enforce_conscription = {
+
+		icon = generic_prepare_civil_war
+		
+		available = {
+			has_idea = DGS_Recruitment
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 0
+
+		visible = {
+			tag = DGS
+			has_idea = DGS_Recruitment
+		}
+		is_good = yes
+		
+		days_remove = 10
+		days_re_enable = 15
+
+		remove_effect = {
+			add_manpower = 10000
+			add_political_power = 50
+			add_war_support = -0.01
+			add_stability = -0.05
+		}
+		complete_effect = {
+			
+		}
+	}
+	DGS_Stop_oppression = {
+
+		icon = generic_oppression
+		
+		available = {
+			has_idea = DGS_Recruitment
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+
+		cost = 50
+
+		visible = {
+			tag = DGS
+			has_idea = DGS_Recruitment
+		}
+		is_good = yes
+		
+		days_remove = 0
+
+		remove_effect = {
+			
+		}
+		complete_effect = {
+			add_war_support = 0.05
+			add_stability = 0.1
+			remove_ideas = DGS_Recruitment
+		}
+		cancel_trigger = {
+			NOT = { has_idea = DGS_Recruitment }
+		}
+	}
+
+}

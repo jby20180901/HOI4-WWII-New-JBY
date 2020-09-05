@@ -1,0 +1,153 @@
+﻿PER_DD_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_DESTROYERS
+  for_countries = {
+    PER
+  }
+  type = ship
+  ship_types = {
+    ship_hull_light
+    destroyer
+  }
+  prefix = "IIS "
+  fallback_name = "伊朗海军第%s号驱逐舰"
+  unique = {
+    "阿蒂米斯"
+    "达马范"
+    "豹"
+    "虎"
+    "萨汉德"
+    "萨姆"
+    "扎尔"
+    "鲁斯塔姆"
+    "阿尔万"
+    "厄尔布尔士"
+    "萨巴兰"
+    "贾马兰"
+  }
+}
+PER_CL_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CL
+  for_countries = {
+    PER
+  }
+  type = ship
+  ship_types = {
+    ship_hull_cruiser
+    light_cruiser
+  }
+  prefix = "IIS "
+  fallback_name = "伊朗海军第%s号轻巡洋舰"
+  unique = {
+    "豹"
+    "虎"
+    "希尔"
+    "帕坎"
+    "燕子"
+    "神鸟"
+  }
+}
+PER_CA_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CA
+  for_countries = {
+    PER
+  }
+  type = ship
+  ship_types = {
+    ship_hull_cruiser
+    heavy_cruiser
+  }
+  prefix = "IIS "
+  fallback_name = "伊朗海军第%s号重巡洋舰"
+  unique = {
+    "豹"
+    "虎"
+    "希尔"
+    "帕坎"
+    "燕子"
+    "神鸟"
+  }
+}
+PER_BB_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_BB
+  for_countries = {
+    PER
+  }
+  type = ship
+  ship_types = {
+    ship_hull_heavy
+    battleship
+  }
+  prefix = "IIS "
+  fallback_name = "伊朗海军第%s号战列舰"
+  unique = {
+    "豹"
+    "虎"
+    "希尔"
+    "帕坎"
+  }
+}
+PER_BC_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_BC
+  for_countries = {
+    PER
+  }
+  type = ship
+  ship_types = {
+    ship_hull_heavy
+    battle_cruiser
+  }
+  prefix = "IIS "
+  fallback_name = "伊朗海军第%s号战列巡洋舰"
+  unique = {
+    "豹"
+    "虎"
+    "希尔"
+    "帕坎"
+  }
+}
+PER_CV_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CARRIERS
+  for_countries = {
+    PER
+  }
+  type = ship
+  ship_types = {
+    ship_hull_carrier
+    carrier
+  }
+  prefix = "IIS "
+  fallback_name = "伊朗海军第%s号航空母舰"
+  unique = {
+    "豹"
+    "虎"
+    "希尔"
+    "帕坎"
+    "萨姆"
+    "扎尔"
+    "鲁斯塔姆"
+    "法拉马尔兹"
+  }
+}
+PER_SS_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_SUBMARINES
+  for_countries = {
+    PER
+  }
+  type = ship
+  ship_types = {
+    ship_hull_submarine
+    submarine
+  }
+  prefix = "IIS "
+  fallback_name = "伊朗海军第%s号潜艇"
+  unique = {
+    "塔里克"
+    "努哈"
+    "玉内斯"
+    "兽"
+    "法塔赫"
+    "鲸"
+    "加迪尔"
+    "尤格"
+  }
+}

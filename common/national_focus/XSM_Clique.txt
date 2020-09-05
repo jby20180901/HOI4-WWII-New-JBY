@@ -1,0 +1,2255 @@
+focus_tree = {
+	id = XSM_Clique
+	country = {
+		factor = 0 
+		modifier = {
+			add = 10
+			tag = XSM
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 20 y = 1000 }
+	focus = {
+		id = XSM_further_cooperation
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		x = 6
+		y = 0 
+			completion_reward = { 
+					add_political_power = 60
+				}
+ 
+	}
+	focus = {
+		id = XSM_Qinghai_construction_plan
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		x = 1
+		y = 0
+			completion_reward = {
+					604 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+					604 = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = infrastructure_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = infrastructure
+											size < 1
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = Ma_clique
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		x = 11
+		y = 0
+			completion_reward = {
+					army_experience = 15
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Submission_strategy
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		mutually_exclusive = {
+			focus = XSM_Restart_the_border_conflict
+			focus = XSM_improve_the_relationship
+		}
+		x = 18
+		y = 0
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 2
+							is_historical_focus_on = yes
+						}
+				}
+			completion_reward = {
+					set_rule = {
+							can_send_volunteers = yes
+						}
+					add_ideas = volunteer_corps_focus
+				}
+
+	}
+	focus = {
+		id = XSM_Restart_the_border_conflict
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 10.00
+		mutually_exclusive = {
+			focus = XSM_Submission_strategy
+			focus = XSM_improve_the_relationship
+		}
+		x = 22
+		y = 0
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							is_historical_focus_on = yes
+						}
+				}
+			completion_reward = {
+					add_war_support = 0.1
+					add_ideas = XSM_Restart_conflict
+					set_rule = {
+							can_send_volunteers = yes
+						}
+					if = {
+							limit = {
+									has_dlc = "Waking the Tiger"
+								}
+							custom_effect_tooltip = CHI_institute_cross_border_raids_effect_tooltip
+							set_country_flag = CHI_institute_cross_border_raids
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Ningxia_construction_plan
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		x = 3
+		y = 0
+			completion_reward = {
+					754 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 3
+									instant_build = yes
+								}
+						}
+					754 = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Building_air_bases
+		icon = GFX_goal_generic_air_production
+		cost = 10.00
+		x = 30
+		y = 0
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = air_base
+											size > 1
+										}
+								}
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+							ROOT = {
+									set_country_flag = aviation_effort_AB
+								}
+						}
+				}
+			available = {
+					num_of_factories > 10
+				}
+
+	}
+	focus = {
+		id = XSM_improve_the_relationship
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		mutually_exclusive = {
+			focus = XSM_Submission_strategy
+			focus = XSM_Restart_the_border_conflict
+		}
+		x = 26
+		y = 0
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							is_historical_focus_on = yes
+						}
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									NOT = {
+											SIK = {
+													OR = {
+															exists = no
+															has_war_with = XSM
+															is_puppet = yes
+														}
+												}
+										}
+								}
+							SIK = {
+									add_opinion_modifier = {
+											target = XSM
+											modifier = Nations_friendly
+										}
+								}
+						}
+					if = {
+							limit = {
+									NOT = {
+											TIB = {
+													OR = {
+															exists = no
+															has_war_with = XSM
+															is_puppet = yes
+														}
+												}
+										}
+								}
+							TIB = {
+									add_opinion_modifier = {
+											target = XSM
+											modifier = Nations_friendly
+										}
+								}
+						}
+				}
+			bypass = {
+					OR = {
+							AND = {
+									SIK = {
+											exists = no
+										}
+									TIB = {
+											exists = no
+										}
+								}
+							AND = {
+									SIK = {
+											has_war_with = XSM
+										}
+									TIB = {
+											has_war_with = XSM
+										}
+								}
+							AND = {
+									SIK = {
+											is_puppet = yes
+										}
+									TIB = {
+											is_puppet = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Industrial_improvement_plan
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Qinghai_construction_plan
+			focus = XSM_Ningxia_construction_plan
+		}
+		x = 2
+		y = 1
+			completion_reward = {
+					add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 0.5
+							uses = 1
+							category = industry
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Arsenal
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Industrial_improvement_plan
+		}
+		x = 1
+		y = 2
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = production_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = arms_factory
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Arsenal2
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Arsenal
+		}
+		x = 1
+		y = 3
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = production_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = arms_factory
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Livelihood_industry2
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Industrial_improvement_plan
+		}
+		x = 3
+		y = 2
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Livelihood_industry3
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Livelihood_industry2
+		}
+		x = 3
+		y = 3
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_extra_tech_slot_1
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Arsenal2
+			focus = XSM_Livelihood_industry3
+		}
+		x = 2
+		y = 4
+			completion_reward = {
+					add_research_slot = 1
+				}
+			available = {
+					num_of_factories > 20
+				}
+
+	}
+	focus = {
+		id = XSM_Strengthen_the_administration
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_further_cooperation
+		}
+		x = 6
+		y = 1
+			completion_reward = {
+					add_political_power = -75
+					add_stability = 0.05
+					
+				}
+
+	}
+	focus = {
+		id = XSM_Advocate_education
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Strengthen_the_administration
+		}
+		x = 5
+		y = 2
+			completion_reward = {
+					add_political_power = -75
+					add_stability = 0.05
+				}
+
+	}
+	focus = {
+		id = XSM_Secular_education
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Advocate_education
+		}
+		x = 5
+		y = 3
+			completion_reward = {
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = XSM_Strengthen_security
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Strengthen_the_administration
+		}
+		x = 7
+		y = 2
+			completion_reward = {
+					add_political_power = -75
+					add_ideas = XSM_stable_security
+				}
+
+	}
+	focus = {
+		id = XSM_Conservation_Concept
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Strengthen_security
+		}
+		x = 7
+		y = 3
+			completion_reward = {
+					add_stability = 0.05
+					add_ideas = XSM_environmental_awareness_rise
+				}
+
+	}
+	focus = {
+		id = XSM_United_People
+		icon = GFX_goal_generic_demand_territory
+		cost = 5.00
+		prerequisite = {
+			focus = XSM_Secular_education
+		}
+		prerequisite = {
+			focus = XSM_Conservation_Concept
+		}
+		x = 6
+		y = 4
+			completion_reward = {
+					add_ideas = XSM_unity_of_xibei
+				}
+
+	}
+	focus = {
+		id = XSM_Group_rule
+		icon = GFX_goal_continuous_increase_nu
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_United_People
+		}
+		mutually_exclusive = {
+			focus = XSM_Rule_of_Ma_clique
+		}
+		x = 5
+		y = 5
+			completion_reward = {
+					add_political_power = 150
+					swap_ideas = {
+							remove_idea = XSM_Rule_of_Ma
+							add_idea = XSM_Rule_of_Ma_3
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Rule_of_Ma_clique
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_United_People
+		}
+		mutually_exclusive = {
+			focus = XSM_Group_rule
+		}
+		x = 7
+		y = 5
+			completion_reward = {
+					add_political_power = 150
+					swap_ideas = {
+							remove_idea = XSM_Rule_of_Ma
+							add_idea = XSM_Rule_of_Ma_2
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Strengthen_cavalry
+		icon = GFX_goal_generic_cavalry
+		cost = 10.00
+		prerequisite = {
+			focus = Ma_clique
+		}
+		x = 11
+		y = 1
+			completion_reward = {
+					add_ideas = XSM_Strengthen_cavalry
+				}
+
+	}
+	focus = {
+		id = XSM_Hire_instructors
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Strengthen_cavalry
+		}
+		x = 10
+		y = 2
+			completion_reward = {
+					army_experience = 15
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_outland_talent
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Hire_instructors
+		}
+		mutually_exclusive = {
+			focus = XSM_local_talent
+		}
+		x = 9
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+					add_political_power = -75
+				}
+
+	}
+	focus = {
+		id = XSM_local_talent
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Hire_instructors
+		}
+		mutually_exclusive = {
+			focus = XSM_outland_talent
+		}
+		x = 11
+		y = 3
+			completion_reward = {
+					add_ideas = XSM_local_talent
+				}
+
+	}
+	focus = {
+		id = XSM_Rectify_the_army
+		icon = GFX_goal_demand_sudetenland
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_outland_talent
+			focus = XSM_local_talent
+		}
+		x = 10
+		y = 4
+			completion_reward = {
+					add_war_support = 0.05
+					army_experience = 25
+				}
+
+	}
+	focus = {
+		id = XSM_New_Army
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Rectify_the_army
+		}
+		x = 10
+		y = 5
+			completion_reward = {
+					add_ideas = XSM_New_Army
+				}
+
+	}
+	focus = {
+		id = XSM_crisis_awareness
+		icon = GFX_goal_generic_construct_military
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Strengthen_cavalry
+		}
+		x = 12
+		y = 2
+			completion_reward = {
+					add_war_support = 0.05
+					add_ideas = XSM_crisis_awareness
+				}
+
+	}
+	focus = {
+		id = XSM_Befriend_CPC
+		icon = GFX_focus_chi_cooperation_with_the_communists
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Submission_strategy
+		}
+		mutually_exclusive = {
+			focus = XSM_Befriend_KMT
+		}
+		x = 17
+		y = 1
+			ai_will_do = {
+					modifier = {
+							factor = 0
+							is_historical_focus_on = yes
+						}
+				}
+			completion_reward = {
+					add_opinion_modifier = {
+							target = PRC
+							modifier = NZL_strengthen_ties
+						}
+					PRC = {
+							add_opinion_modifier = {
+									target = XSM
+									modifier = NZL_strengthen_ties
+								}
+						}
+					add_popularity = {
+							ideology = communism
+							popularity = 0.15
+						}
+				}
+			bypass = {
+					OR = {
+							has_war_with = CHI
+							PRC = {
+									is_puppet = yes
+								}
+							PRC = {
+									exists = no
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Befriend_USSR
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Befriend_CPC
+		}
+		x = 15
+		y = 2
+			completion_reward = {
+					add_opinion_modifier = {
+							target = SOV
+							modifier = Nations_friendly
+						}
+					SOV = {
+							add_opinion_modifier = {
+									target = XSM
+									modifier = Nations_friendly
+								}
+						}
+					add_popularity = {
+							ideology = communism
+							popularity = 0.1
+						}
+				}
+			available = {
+					SOV = {
+							exists = yes
+							is_puppet = no
+						}
+					NOT = {
+							has_war_with = SOV
+							has_war_with = PRC
+						}
+					is_puppet = no
+				}
+
+	}
+	focus = {
+		id = XSM_Improved_munitions
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_crisis_awareness
+			focus = XSM_Befriend_USSR
+		}
+		x = 13
+		y = 3
+			completion_reward = {
+					if = {
+							limit = {
+									NOT = {
+											has_completed_focus = XSM_Befriend_USSR
+										}
+								}
+							add_tech_bonus = {
+									name = infantry_weapons_bonus
+									bonus = 0.5
+									uses = 1
+									category = infantry_weapons
+								}
+							add_tech_bonus = {
+									name = infantry_weapons_bonus
+									bonus = 0.5
+									uses = 1
+									category = artillery
+								}
+							add_tech_bonus = {
+									name = infantry_weapons_bonus
+									bonus = 0.5
+									uses = 1
+									category = support_tech
+								}
+						}
+					if = {
+							limit = {
+									has_completed_focus = XSM_Befriend_USSR
+								}
+							add_tech_bonus = {
+									name = infantry_weapons_bonus
+									bonus = 0.5
+									uses = 1
+									category = infantry_weapons
+								}
+							add_tech_bonus = {
+									name = infantry_weapons_bonus
+									bonus = 0.5
+									uses = 1
+									category = artillery
+								}
+							add_tech_bonus = {
+									name = infantry_weapons_bonus
+									bonus = 0.5
+									uses = 1
+									category = support_tech
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_mobile_infantry
+		icon = GFX_goal_generic_army_motorized
+		cost = 20.00
+		prerequisite = {
+			focus = XSM_Improved_munitions
+		}
+		x = 12
+		y = 4
+			completion_reward = {
+					add_tech_bonus = {
+							name = motorized_bonus
+							bonus = 0.5
+							technology = motorised_infantry
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Light_armor
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Improved_munitions
+			focus = XSM_Befriend_USSR
+		}
+		x = 14
+		y = 4
+			completion_reward = {
+					add_tech_bonus = {
+							name = cat_light_armor
+							bonus = 0.5
+							uses = 1
+							category = cat_light_armor
+						}
+				}
+			available = {
+					OR = {
+							num_of_factories > 20
+							has_completed_focus = XSM_Befriend_USSR
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Befriend_SIK
+		icon = GFX_goal_tripartite_pact
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Befriend_USSR
+		}
+		x = 15
+		y = 3
+			completion_reward = {
+					add_opinion_modifier = {
+							target = SIK
+							modifier = Nations_friendly
+						}
+					SIK = {
+							add_opinion_modifier = {
+									target = XSM
+									modifier = Nations_friendly
+								}
+						}
+				}
+			available = {
+					has_government = communism
+					is_puppet = no
+				}
+			bypass = {
+					has_government = communism
+					SIK = {
+							OR = {
+									exists = no
+									has_war_with = XSM
+									is_puppet = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_The_big_horse_flight
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Befriend_SIK
+		}
+		mutually_exclusive = {
+			focus = XSM_Faithful_horses
+		}
+		x = 15
+		y = 6
+			completion_reward = {
+					add_war_support = 0.1
+					hidden_effect = {
+							country_event = {
+									id = Xibei.6
+									days = 0
+								}
+						}
+					custom_effect_tooltip = XSM_The_big_horse_flight_tt
+				}
+			available = {
+					has_government = communism
+					NOT = {
+							has_country_flag = Go_westward_Rider
+						}
+				}
+ 
+	}
+	focus = {
+		id = GXC_Allowing_them_to_pass
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Befriend_CPC
+		}
+		x = 17
+		y = 2
+			completion_reward = {
+					diplomatic_relation = {
+							country = PRC
+							relation = non_aggression_pact
+						}
+					PRC = {
+							give_military_access = XSM
+						}
+				}
+			bypass = {
+					OR = {
+							has_war_with = CHI
+							PRC = {
+									is_puppet = yes
+								}
+							PRC = {
+									exists = no
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Workers_and_Peasants
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_Allowing_them_to_pass
+		}
+		x = 17
+		y = 3
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Revolutionary_columns
+		icon = GFX_goal_demand_sudetenland
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Workers_and_Peasants
+		}
+		x = 17
+		y = 4
+			completion_reward = {
+					add_ideas = XSM_Revolutionary_columns
+				}
+
+	}
+	focus = {
+		id = XSM_Befriend_KMT
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Submission_strategy
+		}
+		mutually_exclusive = {
+			focus = XSM_Befriend_CPC
+		}
+		x = 19
+		y = 1
+			completion_reward = {
+					add_opinion_modifier = {
+							target = CHI
+							modifier = NZL_strengthen_ties
+						}
+					CHI = {
+							add_opinion_modifier = {
+									target = XSM
+									modifier = NZL_strengthen_ties
+								}
+						}
+				}
+			bypass = {
+					OR = {
+							has_war_with = CHI
+							CHI = {
+									is_puppet = yes
+								}
+							CHI = {
+									exists = no
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Allow_stationed
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Befriend_KMT
+		}
+		x = 19
+		y = 2
+			completion_reward = {
+					diplomatic_relation = {
+							country = CHI
+							relation = non_aggression_pact
+						}
+					CHI = {
+							give_military_access = XSM
+						}
+				}
+			bypass = {
+					OR = {
+							has_war_with = CHI
+							CHI = {
+									is_puppet = yes
+								}
+							CHI = {
+									exists = no
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_National_government_support
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Allow_stationed
+		}
+		x = 19
+		y = 3
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Offensive_incentive
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_National_government_support
+		}
+		x = 19
+		y = 4
+			completion_reward = {
+					add_ideas = XSM_Offensive_incentive
+				}
+
+	}
+	focus = {
+		id = XSM_Closely_organized
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Revolutionary_columns
+			focus = XSM_Offensive_incentive
+		}
+		x = 18
+		y = 5
+			completion_reward = {
+					add_ideas = XSM_Closely_organized
+				}
+
+	}
+	focus = {
+		id = XSM_Strike_Tibet
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Restart_the_border_conflict
+		}
+		x = 21
+		y = 1
+			ai_will_do = {
+					modifier = {
+							factor = 0
+							has_war = yes
+						}
+				}
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = TIB
+						}
+				}
+			bypass = {
+					TIB = {
+							OR = {
+									has_war_with = XSM
+									exists = no
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Strike_Xinjiang
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Restart_the_border_conflict
+		}
+		x = 23
+		y = 1
+			ai_will_do = {
+					modifier = {
+							factor = 0
+							has_war = yes
+						}
+				}
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = SIK
+						}
+				}
+			bypass = {
+					SIK = {
+							OR = {
+									has_war_with = XSM
+									exists = no
+								}
+						}
+				}
+			available = {
+					NOT = {
+							has_country_flag = truce_with_sinkiang
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Xibei_alliance
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_improve_the_relationship
+		}
+		x = 26
+		y = 1
+			completion_reward = {
+					set_rule = {
+							can_create_factions = yes
+						}
+					create_faction = "Xibei_alliance"
+					if = {
+							limit = {
+									SIK = {
+											exists = yes
+											is_in_faction = no
+											is_subject = no
+											NOT = {
+													has_war_with = XSM
+												}
+										}
+								}
+							SIK = {
+									country_event = {
+											id = Xibei.2
+											days = 1
+										}
+								}
+						}
+					if = {
+							limit = {
+									TIB = {
+											exists = yes
+											is_in_faction = no
+											is_subject = no
+											NOT = {
+													has_war_with = XSM
+												}
+										}
+								}
+							TIB = {
+									country_event = {
+											id = Xibei.2
+											days = 1
+										}
+								}
+						}
+				}
+			available = {
+					is_in_faction = no
+					OR = {
+							SIK = {
+									exists = yes
+									is_puppet = no
+									is_in_faction = no
+								}
+							TIB = {
+									exists = yes
+									is_puppet = no
+									is_in_faction = no
+								}
+						}
+				}
+			bypass = {
+					OR = {
+							AND = {
+									XSM = {
+											is_in_faction = yes
+										}
+								}
+							AND = {
+									SIK = {
+											exists = no
+										}
+									TIB = {
+											exists = no
+										}
+								}
+							AND = {
+									SIK = {
+											has_war_with = XSM
+										}
+									TIB = {
+											has_war_with = XSM
+										}
+								}
+							AND = {
+									SIK = {
+											is_puppet = yes
+										}
+									TIB = {
+											is_puppet = yes
+										}
+								}
+							AND = {
+									SIK = {
+											is_in_faction = yes
+										}
+									TIB = {
+											is_in_faction = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Befriend_JAP
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Strike_Tibet
+			focus = XSM_Strike_Xinjiang
+			focus = XSM_Xibei_alliance
+		}
+		mutually_exclusive = {
+			focus = XSM_Opposition_japan
+		}
+		x = 22
+		y = 2
+			completion_reward = {
+					add_opinion_modifier = {
+							target = JAP
+							modifier = Nations_friendly
+						}
+					JAP = {
+							add_opinion_modifier = {
+									target = XSM
+									modifier = Nations_friendly
+								}
+						}
+					add_timed_idea = {
+							idea = fascist_influence
+							days = 365
+						}
+				}
+			bypass = {
+					JAP = {
+							OR = {
+									has_war_with = XSM
+									exists = no
+									is_puppet = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Japanese_equipment_support
+		icon = GFX_goal_generic_small_arms
+		cost = 5.00
+		prerequisite = {
+			focus = XSM_Befriend_JAP
+		}
+		mutually_exclusive = {
+			focus = XSM_Request_Support
+		}
+		x = 21
+		y = 3
+			completion_reward = {
+					JAP = {
+							country_event = {
+									id = Xibei.7
+									days = 1
+								}
+						}
+					if = {
+							limit = {
+									has_dlc = "Waking the Tiger"
+								}
+							unlock_decision_category_tooltip = CHI_seek_japanese_support
+						}
+				}
+			bypass = {
+					JAP = {
+							OR = {
+									has_war_with = XSM
+									exists = no
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Request_Support
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Befriend_JAP
+		}
+		mutually_exclusive = {
+			focus = XSM_Japanese_equipment_support
+		}
+		x = 23
+		y = 3
+			completion_reward = {
+					JAP = {
+							country_event = {
+									id = Xibei.10
+									days = 1
+								}
+						}
+					if = {
+							limit = {
+									has_dlc = "Waking the Tiger"
+								}
+							unlock_decision_category_tooltip = CHI_seek_japanese_support
+						}
+				}
+			bypass = {
+					JAP = {
+							OR = {
+									has_war_with = XSM
+									exists = no
+									is_puppet = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Opposition_japan
+		icon = GFX_focus_AST_war_japan
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Xibei_alliance
+			focus = XSM_Strike_Xinjiang
+			focus = XSM_Strike_Tibet
+		}
+		mutually_exclusive = {
+			focus = XSM_Befriend_JAP
+		}
+		x = 26
+		y = 2
+			completion_reward = {
+					add_opinion_modifier = {
+							target = JAP
+							modifier = Nations_estrangement
+						}
+					JAP = {
+							add_opinion_modifier = {
+									target = XSM
+									modifier = Nations_estrangement
+								}
+						}
+				}
+			bypass = {
+					JAP = {
+							OR = {
+									has_war_with = XSM
+									exists = no
+									is_puppet = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_estrangement_china
+		icon = GFX_goal_generic_trade
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Opposition_japan
+		}
+		mutually_exclusive = {
+			focus = XSM_Against_japan_with_china
+		}
+		x = 25
+		y = 3
+			completion_reward = {
+					add_opinion_modifier = {
+							target = CHI
+							modifier = Nations_estrangement
+						}
+					CHI = {
+							add_opinion_modifier = {
+									target = XSM
+									modifier = Nations_estrangement
+								}
+						}
+				}
+			bypass = {
+					CHI = {
+							OR = {
+									exists = no
+									is_puppet = yes
+									has_war_with = XSM
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Strike_Communist
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Japanese_equipment_support
+			focus = XSM_Request_Support
+			focus = XSM_estrangement_china
+		}
+		mutually_exclusive = {
+			focus = XSM_Invite_CPC
+		}
+		x = 22
+		y = 4
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = PRC
+						}
+				}
+			bypass = {
+					PRC = {
+							OR = {
+									has_war_with = XSM
+									exists = no
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Invite_CPC
+		icon = GFX_goal_tripartite_pact
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_estrangement_china
+		}
+		mutually_exclusive = {
+			focus = XSM_Strike_Communist
+		}
+		x = 24
+		y = 4
+			completion_reward = {
+					PRC = {
+							country_event = {
+									id = Xibei.2
+									days = 1
+								}
+						}
+				}
+			available = {
+					PRC = {
+							exists = yes
+							is_subject = no
+							is_in_faction = no
+							NOT = {
+									has_war_with = XSM
+								}
+						}
+				}
+			bypass = {
+					is_in_faction_with = PRC
+				}
+
+	}
+	focus = {
+		id = XSM_Attack_China
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Strike_Communist
+			focus = XSM_Invite_CPC
+		}
+		x = 23
+		y = 5
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = CHI
+						}
+				}
+			bypass = {
+					CHI = {
+							OR = {
+									has_war_with = XSM
+									exists = no
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Against_japan_with_china
+		icon = GFX_goal_generic_military_sphere
+		cost = 5.00
+		prerequisite = {
+			focus = XSM_Opposition_japan
+		}
+		mutually_exclusive = {
+			focus = XSM_estrangement_china
+		}
+		x = 27
+		y = 3
+			completion_reward = {
+					if = {
+							limit = {
+									XBJ = {
+											has_defensive_war_with = JAP
+										}
+								}
+							add_to_war = {
+									targeted_alliance = XBJ
+									enemy = JAP
+								}
+						}
+					if = {
+							limit = {
+									CHI = {
+											has_defensive_war_with = JAP
+										}
+								}
+							add_to_war = {
+									targeted_alliance = CHI
+									enemy = JAP
+								}
+						}
+					if = {
+							limit = {
+									NOT = {
+											XBJ = {
+													has_defensive_war_with = JAP
+												}
+										}
+								}
+							give_guarantee = XBJ
+						}
+					if = {
+							limit = {
+									NOT = {
+											CHI = {
+													has_defensive_war_with = JAP
+												}
+										}
+								}
+							give_guarantee = CHI
+						}
+				}
+			available = {
+					XSM = {
+							NOT = {
+									is_in_faction_with = JAP
+									is_subject_of = JAP
+								}
+						}
+					CHI = {
+							exists = yes
+							is_subject = no
+							NOT = {
+									is_in_faction_with = JAP
+								}
+						}
+					XBJ = {
+							exists = yes
+							NOT = {
+									is_in_faction_with = JAP
+									is_subject_of = JAP
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Xibei_trade_zone
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_estrangement_china
+			focus = XSM_Against_japan_with_china
+		}
+		x = 26
+		y = 4
+			completion_reward = {
+					add_political_power = 100
+					country_event = {
+							id = Xibei.12
+							days = 1
+						}
+					every_other_country = {
+							limit = {
+									is_in_faction_with = XSM
+								}
+							country_event = {
+									id = Xibei.12
+									days = 1
+								}
+						}
+				}
+			bypass = {
+					OR = {
+							is_subject = yes
+							AND = {
+									XSM = {
+											is_faction_leader = no
+											is_in_faction = yes
+										}
+									SIK = {
+											is_faction_leader = no
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Runaway_horse
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Closely_organized
+			focus = XSM_Xibei_trade_zone
+			focus = XSM_Attack_China
+		}
+		mutually_exclusive = {
+			focus = XSM_Faithful_horses
+		}
+		x = 26
+		y = 6
+			ai_will_do = {
+					modifier = {
+							factor = 0
+							is_historical_focus_on = yes
+							CHI = {
+									exists = yes
+									is_subject = no
+								}
+						}
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									XSM = {
+											is_subject = yes
+										}
+								}
+							set_autonomy = {
+									target = XSM
+									autonomy_state = autonomy_free
+								}
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_war_with = CHI
+										}
+								}
+							CHI = {
+									country_event = {
+											id = Xibei.14
+											hours = 6
+										}
+								}
+						}
+					hidden_effect = {
+							if = {
+									limit = {
+											NOT = {
+													has_war_with = PRC
+												}
+										}
+									PRC = {
+											country_event = {
+													id = Xibei.15
+													hours = 6
+												}
+										}
+								}
+						}
+					set_cosmetic_tag = SMK
+					custom_effect_tooltip = XSM_new_country_tt
+					if = {
+							limit = {
+									has_dlc = "Waking the Tiger"
+								}
+							custom_effect_tooltip = CHI_provoke_border_clashes_effect_tooltip
+							set_country_flag = CHI_provoke_border_clashes
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_fighter
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Building_air_bases
+		}
+		x = 29
+		y = 1
+			completion_reward = {
+					add_tech_bonus = {
+							name = light_fighter
+							bonus = 0.5
+							uses = 1
+							category = light_fighter
+						}
+					add_tech_bonus = {
+							name = cat_heavy_fighter
+							bonus = 0.5
+							uses = 1
+							category = cat_heavy_fighter
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_focus_CAS
+		icon = GFX_goal_poland_goal
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Building_air_bases
+		}
+		x = 31
+		y = 1
+			completion_reward = {
+					add_tech_bonus = {
+							name = cas_bomber
+							bonus = 0.5
+							uses = 1
+							category = cas_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_hire_air_instructor
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_focus_CAS
+		}
+		prerequisite = {
+			focus = XSM_fighter
+		}
+		x = 30
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_medium_bomber
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_hire_air_instructor
+		}
+		mutually_exclusive = {
+			focus = XSM_focus_strategic_bombing
+		}
+		x = 29
+		y = 4
+			completion_reward = {
+					add_tech_bonus = {
+							name = tactical_bomber
+							bonus = 0.5
+							uses = 1
+							category = tactical_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = XSM_Request_Support_Science
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Faithful_horses
+		}
+		x = 18
+		y = 7
+			completion_reward = {
+					add_research_slot = 1
+				}
+			available = {
+					amount_research_slots < 5
+				}
+
+	}
+	focus = {
+		id = XSM_extra_tech_slot_2
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_extra_tech_slot_1
+		} 
+		x = 2
+		y = 5
+			completion_reward = {
+					add_research_slot = 1
+					remove_ideas = Chinese_Warlord
+				}
+			available = {
+					num_of_factories > 30
+					amount_research_slots < 5
+				}
+
+	}
+	focus = {
+		id = XSM_Improve_production_efficiency
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_mobile_infantry
+		}
+		x = 12
+		y = 5
+			completion_reward = {
+					add_ideas = XSM_Improve_production_efficiency
+				}
+			available = {
+					num_of_factories > 20
+				}
+
+	}
+	focus = {
+		id = XSM_Faithful_horses
+		icon = GFX_focus_RAJ_indian_gurkhas
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_Closely_organized
+		}
+		mutually_exclusive = {
+			focus = XSM_The_big_horse_flight
+			focus = XSM_Runaway_horse
+		}
+		x = 18
+		y = 6
+			completion_reward = {
+					add_ideas = XSM_Faithful_horses
+					if = {
+							limit = {
+									has_completed_focus = XSM_Befriend_KMT
+									CHI = {
+											exists = yes
+											is_subject = no
+											NOT = {
+													has_war_with = XSM
+												}
+										}
+								}
+							CHI = {
+									set_autonomy = {
+											target = XSM
+											autonomy_state = autonomy_dominion
+										}
+								}
+						}
+					if = {
+							limit = {
+									has_completed_focus = XSM_Befriend_CPC
+									PRC = {
+											exists = yes
+											is_subject = no
+											NOT = {
+													has_war_with = XSM
+												}
+										}
+								}
+							PRC = {
+									set_autonomy = {
+											target = XSM
+											autonomy_state = autonomy_dominion
+										}
+								}
+						}
+					
+				}
+
+	}
+	focus = {
+		id = XSM_focus_strategic_bombing
+		icon = GFX_goal_generic_occupy_start_war
+		cost = 10.00
+		prerequisite = {
+			focus = XSM_hire_air_instructor
+		}
+		mutually_exclusive = {
+			focus = XSM_medium_bomber
+		}
+		x = 31
+		y = 4
+			completion_reward = {
+					add_tech_bonus = {
+							name = cat_strategic_bomber
+							bonus = 0.5
+							uses = 1
+							category = cat_strategic_bomber
+						}
+				}
+
+	}
+}

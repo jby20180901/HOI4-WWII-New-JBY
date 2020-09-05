@@ -1,0 +1,1152 @@
+
+JAP_intervene_in_china = {
+	
+	JAP_CHI_lead_china = {
+
+		icon = jap_conquer_china
+
+		available = {
+			
+		}
+
+		cost = 25
+		
+		ai_will_do = {
+			factor = 500
+			modifier = {
+				factor = 1000
+				CHI = { is_ai = no }
+			}
+		}
+		days_remove = 14
+
+		target_trigger = {
+			FROM = {
+				tag = CHI
+			}
+		}
+		visible = {
+			has_global_flag = Second_sino_japanese_war_has_happened
+			event_target:WTT_current_china_leader = {
+				is_subject_of = JAP
+			}
+			NOT = {
+				has_global_flag = EFM_Trautmann_mediation_success
+				has_global_flag = JAP_wins_second_sino_japanese_war
+				has_global_flag = JAP_Choose_chinese_puppet_leader
+			}
+		}
+		remove_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = JAP
+					is_core_of = PRC
+						NOT = { state = 524 }
+						NOT = { state = 796 }
+						# Imperial concession territory if own it
+						NOT = { state = 745 }
+						NOT = { state = 743 }
+						NOT = { state = 791 }
+						NOT = { state = 593 }
+						NOT = { state = 592 }
+						NOT = { state = 797 }
+						NOT = { state = 591 }
+					}
+					event_target:WTT_current_china_leader = { transfer_state = PREV }
+				}
+			event_target:WTT_current_china_leader = {
+				country_event = { id = EMF_japan.48 }
+				add_ideas = CHI_Controlled_central_government
+				if = {
+					limit = {
+						CPG = {
+							exists = yes
+							is_subject_of = JAP
+							is_ai = yes
+						}
+					}
+					annex_country = { target = CPG transfer_troops = yes }
+					every_state = {
+							limit = {
+									is_core_of = CPG
+								}
+							remove_core_of = CPG
+						}
+					every_state = {
+							limit = {
+									is_claimed_by = CPG
+								}
+							remove_claim_by = CPG
+						}
+				}
+				if = {
+					limit = {
+						CNJ = {
+							exists = yes
+							is_subject_of = JAP
+							is_ai = yes
+						}
+					}
+					annex_country = { target = CNJ transfer_troops = yes }
+					every_state = {
+							limit = {
+									is_core_of = CNJ
+								}
+							remove_core_of = CNJ
+						}
+					every_state = {
+							limit = {
+									is_claimed_by = CNJ
+								}
+							remove_claim_by = CNJ
+						}
+					}
+				if = {
+					limit = {
+						CHI = {
+							exists = yes
+							WTT_CHI_is_not_leader = yes
+							is_subject_of = JAP
+							is_ai = yes
+							}
+						}
+					annex_country = { target = CHI transfer_troops = yes }
+					}
+				if = {
+					limit = {
+							event_target:WTT_current_china_leader = {
+								NOT = {
+									is_subject_of = JAP
+								}
+							}
+						}
+					JAP = { puppet = event_target:WTT_current_china_leader }
+					}
+				set_politics = {
+						ruling_party = neutrality
+						elections_allowed = no
+					}
+				add_popularity = { ideology = neutrality popularity = 0.6 }
+				create_country_leader = {
+					name = "Wang Jingwei"
+					desc = "POLITICS_WANG_JINGWEI_DESC"
+					picture = "gfx/leaders/CHI/Portrait_China_Generic_Wang_Jingwei.dds"
+					expire = "1944.11.10"
+					ideology = despotism
+					}
+				}
+			country_event = { id = EMF_japan.47 days = 1 }
+		}
+		complete_effect = {
+			set_global_flag = JAP_Choose_chinese_puppet_leader
+			event_target:WTT_current_china_leader = {
+					save_global_event_target_as = EFM_current_japanese_china_puppet_leader
+				}
+			hidden_effect = {
+				if = {
+						limit = {
+							PRC = {
+								is_subject_of = JAP
+								NOT = { event_target:WTT_current_china_leader = { tag = PRC } }
+							}
+						}
+					PRC = {
+						JAP = { 
+							set_autonomy = { target = PRC autonomy_state = autonomy_free }
+							remove_from_faction = PRC
+						}
+						set_politics = {
+							ruling_party = communism
+							elections_allowed = no
+						}
+						add_popularity = { ideology = communism popularity = 0.6 }
+						add_ai_strategy = {
+							type = antagonize
+							id = "JAP"
+							value = 500
+							}
+						}
+					}
+				add_ai_strategy = {
+					type = antagonize
+					id = "PRC"
+					value = 500
+				}
+			}
+		}		
+	}
+	JAP_CNJ_lead_china = {
+
+		icon = jap_conquer_china
+
+		available = {
+			
+		}
+
+		cost = 25
+		
+		ai_will_do = {
+			factor = 500
+			modifier = {
+				factor = 1000
+				CNJ = { is_ai = no }
+			}
+		}
+		days_remove = 14
+
+		target_trigger = {
+			FROM = {
+				tag = CNJ
+			}
+		}
+		visible = {
+			has_global_flag = Second_sino_japanese_war_has_happened
+			CNJ = {
+				is_subject_of = JAP
+			}
+			event_target:WTT_current_china_leader = {
+				NOT = {
+					has_war_with = JAP
+				}
+			}
+			NOT = {
+				has_global_flag = EFM_Trautmann_mediation_success
+				has_global_flag = JAP_wins_second_sino_japanese_war
+				has_global_flag = JAP_Choose_chinese_puppet_leader
+			}
+		}
+		remove_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = JAP
+					is_core_of = PRC
+						NOT = { state = 524 }
+						NOT = { state = 796 }
+						# Imperial concession territory if own it
+						NOT = { state = 745 }
+						NOT = { state = 743 }
+						NOT = { state = 791 }
+						NOT = { state = 593 }
+						NOT = { state = 592 }
+						NOT = { state = 797 }
+						NOT = { state = 591 }
+					}
+					CNJ = { transfer_state = PREV }
+				}
+			CNJ = {
+				country_event = { id = EMF_japan.48 }
+				if = {
+					limit = {
+						CPG = {
+							exists = yes
+							is_subject_of = JAP
+							is_ai = yes
+						}
+					}
+					annex_country = { target = CPG transfer_troops = yes }
+					every_state = {
+							limit = {
+									is_core_of = CPG
+								}
+							remove_core_of = CPG
+						}
+					every_state = {
+							limit = {
+									is_claimed_by = CPG
+								}
+							remove_claim_by = CPG
+						}
+					}
+				if = {
+					limit = {
+						event_target:WTT_current_china_leader = {
+							exists = yes
+							is_subject_of = JAP
+							is_ai = yes
+							}
+						}
+						annex_country = { target = event_target:WTT_current_china_leader }
+					}
+				}
+			country_event = { id = EMF_japan.47 days = 1 }
+		}
+		complete_effect = {
+			set_global_flag = JAP_Choose_chinese_puppet_leader
+			CNJ = {
+					save_global_event_target_as = EFM_current_japanese_china_puppet_leader
+				}
+			hidden_effect = {
+				if = {
+						limit = {
+							PRC = {
+								is_subject_of = JAP
+								NOT = { event_target:WTT_current_china_leader = { tag = PRC } }
+							}
+						}
+					PRC = {
+						JAP = { 
+							set_autonomy = { target = PRC autonomy_state = autonomy_free }
+							remove_from_faction = PRC
+						}
+						set_politics = {
+							ruling_party = communism
+							elections_allowed = no
+						}
+						add_popularity = { ideology = communism popularity = 0.6 }
+						add_ai_strategy = {
+							type = antagonize
+							id = "JAP"
+							value = 500
+							}
+						}
+					}
+				add_ai_strategy = {
+					type = antagonize
+					id = "PRC"
+					value = 500
+				}
+				every_state = {
+						limit = {
+								is_claimed_by = CNJ
+							}
+						remove_claim_by = CNJ
+					}
+			}
+		}		
+	}
+	JAP_CPG_lead_china = {
+
+		icon = jap_conquer_china
+
+		available = {
+			
+		}
+
+		cost = 25
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1000
+				CPG = { is_ai = no }
+			}
+		}
+		days_remove = 14
+
+		target_trigger = {
+			FROM = {
+				tag = CPG
+			}
+		}
+		visible = {
+			has_global_flag = Second_sino_japanese_war_has_happened
+			CPG = {
+				is_subject_of = JAP
+			}
+			event_target:WTT_current_china_leader = {
+				NOT = {
+					has_war_with = JAP
+				}
+			}
+			NOT = {
+				has_global_flag = EFM_Trautmann_mediation_success
+				has_global_flag = JAP_wins_second_sino_japanese_war
+				has_global_flag = JAP_Choose_chinese_puppet_leader
+			}
+		}
+		remove_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = JAP
+					is_core_of = PRC
+						NOT = { state = 524 }
+						NOT = { state = 796 }
+						# Imperial concession territory if own it
+						NOT = { state = 745 }
+						NOT = { state = 743 }
+						NOT = { state = 791 }
+						NOT = { state = 593 }
+						NOT = { state = 592 }
+						NOT = { state = 797 }
+						NOT = { state = 591 }
+					}
+					CPG = { transfer_state = PREV }
+				}
+			CPG = {
+				country_event = { id = EMF_japan.48 }
+				if = {
+					limit = {
+						CNJ = {
+							exists = yes
+							is_subject_of = JAP
+							is_ai = yes
+						}
+					}
+					annex_country = { target = CNJ transfer_troops = yes }
+					every_state = {
+							limit = {
+									is_core_of = CNJ
+								}
+							remove_core_of = CNJ
+						}
+					every_state = {
+							limit = {
+									is_claimed_by = CNJ
+								}
+							remove_claim_by = CNJ
+						}
+					}
+				if = {
+					limit = {
+						event_target:WTT_current_china_leader = {
+							exists = yes
+							is_subject_of = JAP
+							is_ai = yes
+							}
+						}
+						annex_country = { target = event_target:WTT_current_china_leader }
+					}
+				}
+			country_event = { id = EMF_japan.47 days = 1 }
+		}
+		complete_effect = {
+			set_global_flag = JAP_Choose_chinese_puppet_leader
+			CPG = {
+					save_global_event_target_as = EFM_current_japanese_china_puppet_leader
+				}
+			hidden_effect = {
+				if = {
+						limit = {
+							PRC = {
+								is_subject_of = JAP
+								NOT = { event_target:WTT_current_china_leader = { tag = PRC } }
+							}
+						}
+					PRC = {
+						JAP = { 
+							set_autonomy = { target = PRC autonomy_state = autonomy_free }
+							remove_from_faction = PRC
+						}
+						set_politics = {
+							ruling_party = communism
+							elections_allowed = no
+						}
+						add_popularity = { ideology = communism popularity = 0.6 }
+						add_ai_strategy = {
+							type = antagonize
+							id = "JAP"
+							value = 500
+							}
+						}
+					}
+				add_ai_strategy = {
+					type = antagonize
+					id = "PRC"
+					value = 500
+				}
+				every_state = {
+						limit = {
+								is_claimed_by = CPG
+							}
+						remove_claim_by = CPG
+					}
+			}
+		}
+	}
+	
+	JAP_Create_the_north_china_puppet_government = {
+
+		icon = generic_nationalism
+		fire_only_once = yes
+		
+		available = {
+			has_government = fascism
+			JAP = {
+					has_war_with = event_target:WTT_current_china_leader
+					has_full_control_of_state = 609
+				}
+			OR = {
+				JAP = {
+						has_full_control_of_state = 608
+					}
+				any_country = {
+						is_in_faction_with = JAP
+						has_war_with = event_target:WTT_current_china_leader
+						has_war_together_with = JAP
+						has_full_control_of_state = 608
+					}
+				any_country = {
+						is_subject_of = JAP
+						has_war_with = event_target:WTT_current_china_leader
+						has_war_together_with = JAP
+						has_full_control_of_state = 608
+					}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 500
+		}
+		
+		visible = {
+			has_country_flag = use_chinese_puppet_against_chinese
+			has_war_with = event_target:WTT_current_china_leader
+		}
+		remove_effect = {
+		}
+		complete_effect = {
+			every_state = {
+					limit = {
+						is_core_of = PRC
+						OR = {
+							region = 143
+							region = 144
+						}
+						NOT = {
+							is_core_of = MEN
+							is_core_of = MAN
+						}
+						NOT = { state = 605 }
+					}
+					add_claim_by = CPG
+				}
+			CPG = {
+					transfer_state = 608
+					transfer_state = 609
+					604 = { add_claim_by = CPG }
+					add_ideas = JCG_Supported_chinese_government
+					add_ideas = JCG_Low_legality_government
+					add_ideas = JAP_Chinese_guerrilla
+				}
+			set_autonomy = { target = CPG autonomy_state = autonomy_wtt_imperial_protectorate }
+			event_target:WTT_current_china_leader = {
+					country_event = { id = EMF_japan.40 days = 1 }
+				}
+			custom_effect_tooltip = EMF_japan_37_tt
+		}
+	}
+	JAP_Create_the_nanking_puppet_government = {
+
+		icon = generic_nationalism
+		fire_only_once = yes
+		
+		available = {
+			has_government = fascism
+			JAP = {
+					has_war_with = event_target:WTT_current_china_leader
+				}
+			OR = {
+				JAP = {
+						has_full_control_of_state = 613
+					}
+				any_country = {
+						is_in_faction_with = JAP
+						has_war_with = event_target:WTT_current_china_leader
+						has_war_together_with = JAP
+						has_full_control_of_state = 613
+					}
+				any_country = {
+						is_subject_of = JAP
+						has_war_with = event_target:WTT_current_china_leader
+						has_war_together_with = JAP
+						has_full_control_of_state = 613
+					}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 500
+		}
+		
+		visible = {
+			has_war_with = event_target:WTT_current_china_leader
+			has_country_flag = use_chinese_puppet_against_chinese
+		}
+		remove_effect = {
+		}
+		complete_effect = {
+			every_state = {
+					limit = {
+						is_core_of = PRC
+						OR = {
+							region = 164
+							region = 165
+						}
+						NOT = {
+							is_core_of = MEN
+							is_core_of = MAN
+						}
+					}
+					add_claim_by = CNJ
+				}
+			CNJ = {
+					set_cosmetic_tag = CRG
+					transfer_state = 613
+					601 = { add_claim_by = CNJ }
+					605 = { add_claim_by = CNJ }
+					add_ideas = JCG_Supported_chinese_government
+					add_ideas = JCG_Low_legality_government
+					add_ideas = JAP_Chinese_guerrilla
+				}
+			set_autonomy = { target = CNJ autonomy_state = autonomy_wtt_imperial_protectorate }
+			event_target:WTT_current_china_leader = {
+				country_event = { id = EMF_japan.40 days = 1 }
+			}
+			custom_effect_tooltip = EMF_japan_37_tt
+		}
+	}
+	JAP_Big_east_asia_speech = {
+
+		icon = generic_political_actions
+		fire_only_once = yes
+		
+		available = {
+			has_government = fascism
+			has_war_with = event_target:WTT_current_china_leader
+			OR = {
+				JAP = {
+						has_full_control_of_state = 613
+					}
+				any_country = {
+						is_in_faction_with = JAP
+						has_war_with = event_target:WTT_current_china_leader
+						has_war_together_with = JAP
+						has_full_control_of_state = 613
+					}
+				any_country = {
+						is_subject_of = JAP
+						has_war_with = event_target:WTT_current_china_leader
+						has_war_together_with = JAP
+						has_full_control_of_state = 613
+					}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 250
+		}
+		
+		visible = {
+			has_government = fascism
+			has_war_with = event_target:WTT_current_china_leader
+		}
+		remove_effect = {
+		}
+		complete_effect = {
+			add_political_power = 150
+			add_stability = 0.05
+			add_war_support = 0.05
+			hidden_effect = {
+				country_event = { days = 2 id = news.1011 }
+			}
+		}
+	}
+	JAP_Transfer_our_control_state = {
+
+		icon = generic_political_actions
+
+		available = {
+			any_state = { 
+				is_fully_controlled_by = JAP
+				OR = {
+					is_claimed_by = CNJ
+					is_claimed_by = CPG
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+
+		cost = 25
+
+		visible = {
+			has_war_with = event_target:WTT_current_china_leader
+			has_country_flag = use_chinese_puppet_against_chinese
+			OR = {
+				CNJ = { is_subject_of = ROOT }
+				CPG = { is_subject_of = ROOT }
+			}
+		}
+		is_good = yes
+		
+		days_remove = 21
+
+		remove_effect = {
+			if = {
+				limit = {
+					CNJ = {
+						is_subject_of = ROOT
+					}
+				}
+				every_state = {
+					limit = {
+						is_controlled_by = JAP
+						is_claimed_by = CNJ
+					}
+					CNJ = { set_state_controller = PREV }
+					CNJ = { clr_country_flag = JAP_Japan_transfer_state_to_us }
+				}
+			}
+			if = {
+				limit = {
+					CPG = {
+						is_subject_of = ROOT
+					}
+				}
+				every_state = {
+					limit = {
+						is_controlled_by = JAP
+						is_claimed_by = CPG
+					}
+					CPG = { set_state_controller = PREV }
+					CPG = { clr_country_flag = JAP_Japan_transfer_state_to_us }
+				}
+			}
+		}
+		complete_effect = {
+			CNJ = { set_country_flag = JAP_Japan_transfer_state_to_us }
+			CPG = { set_country_flag = JAP_Japan_transfer_state_to_us }
+		}
+	}
+	
+	JAP_Demands_withdrawal_of_falkenhausen = {
+
+		icon = generic_prepare_civil_war
+		fire_only_once = yes
+		
+		available = {
+			CHI = { has_idea = german_advisors }
+			OR = {
+				FROM = {
+					has_opinion = { target = ROOT value > 49 }
+				}
+				FROM = {
+					has_opinion = { target = CHI value < 0 }
+				}
+				JAP = {
+					has_opinion_modifier = ger_jap_diplomacy_focus
+				}
+				CHI = {
+					has_opinion_modifier = withdrew_advisors
+				}
+			}
+		}
+		
+		target_trigger = {
+			FROM = {
+				tag = GER
+			}
+		}
+
+		cost = 50
+		
+		ai_will_do = {
+			factor = 500
+		}
+		
+		visible = {
+			has_war_with = CHI
+			GER = {
+				exists = yes
+				is_subject = no
+				has_government = fascism
+				NOT = { has_completed_focus = GER_zhongdeyouhao }
+				NOT = { is_in_faction_with = CHI }
+				NOT = { has_war_together_with = CHI }
+				NOT = { has_war_with = JAP }
+			}
+			CHI = { has_idea = german_advisors }
+		}
+		remove_effect = {
+		}
+		complete_effect = {
+			FROM = { country_event = { id = germany.24 } }
+		}
+	}
+	
+}
+
+operations = {
+	
+	
+	JAP_Recapture_japan = {
+
+		icon = generic_oppression
+		fire_only_once = yes
+		
+		available = {
+			is_subject = no
+			NOT = { is_in_faction_with = JAP }
+			has_army_manpower = {
+				size > 99999
+			}
+		}
+
+		cost = 100
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+					factor = 0
+					has_army_manpower = {
+							size < 200000
+						}
+				}
+			modifier = {
+					factor = 10
+					has_army_manpower = {
+							size > 199999
+						}
+					has_defensive_war = no
+				}
+		}
+		days_remove = 0
+
+		target_trigger = {
+			FROM = {
+				tag = JAP
+			}
+		}
+		visible = {
+			has_country_flag = JAP_New_japanese_empire_government
+		}
+		remove_effect = {
+		}
+		complete_effect = {
+			create_wargoal = { type = annex_everything target = JAP }
+			add_ai_strategy = {
+					type = antagonize
+					id = "JAP"
+					value = 500
+				}
+			add_ai_strategy = {
+					type = conquer
+					id = "JAP"
+					value = 500
+				}
+			set_country_flag = JAP_Recapture_japan
+		}
+	}
+	JAP_Restore_the_empire = {
+
+		icon = generic_oppression
+		fire_only_once = yes
+		
+		available = {
+			owns_state = 282
+		}
+
+		cost = 50
+		
+		ai_will_do = {
+			factor = 10
+		}
+		days_remove = 70
+		
+		visible = {
+			has_country_flag = JAP_Recapture_japan
+		}
+		remove_effect = {
+		}
+		complete_effect = {
+			every_state = {
+					limit = {
+							is_core_of = JAP
+						}
+					add_core_of = ROOT
+				}
+			set_capital = 282
+			clr_country_flag = JAP_Recapture_japan
+		}
+	}
+	
+}
+
+JAP_Building_manchuria = {
+
+	JAP_Kanji_ishiwara_sent_to_manchuria = {
+
+		icon = generic_prepare_civil_war
+		fire_only_once = yes
+		
+		available = {
+			MAN = {
+				is_subject_of = JAP
+			}
+		}
+		
+		target_trigger = {
+			FROM = {
+				original_tag = MAN
+			}
+		}
+
+		cost = 50
+		
+		ai_will_do = {
+			factor = 500
+		}
+		
+		visible = {
+			tag = JAP
+			MAN = {
+				is_subject_of = JAP
+			}
+		}
+		remove_effect = {
+		}
+		complete_effect = {
+			MAN = { country_event = { id = EMF_japan.125 days = 1 } }
+		}
+	}
+	JAP_Build_a_commercial_facilities_to_manchuria = {
+
+		icon = generic_prepare_civil_war
+		fire_only_once = yes
+		
+		available = {
+			MAN = {
+				OR = {
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
+			}
+		}
+		
+		target_trigger = {
+			FROM = {
+				original_tag = MAN
+			}
+		}
+
+		cost = 100
+		
+		ai_will_do = {
+			factor = 1
+		}
+		days_remove = 70
+		days_re_enable = 30
+		
+		visible = {
+			tag = JAP
+			MAN = {
+				OR = {
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
+			}
+		}
+		remove_effect = {
+			MAN = {
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+				}
+			}
+		}
+		complete_effect = {
+		}
+	}
+	JAP_Gift_equipment_to_manchuria = {
+
+		icon = generic_prepare_civil_war
+		fire_only_once = yes
+		
+		available = {
+			MAN = {
+				OR = {
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
+			}
+			has_equipment = {
+				infantry_equipment > 1999
+			}
+		}
+		
+		target_trigger = {
+			FROM = {
+				original_tag = MAN
+			}
+		}
+
+		cost = 75
+		
+		ai_will_do = {
+			factor = 1
+		}
+		days_remove = 70
+		days_re_enable = 30
+		
+		visible = {
+			tag = JAP
+			MAN = {
+				OR = {
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
+			}
+		}
+		remove_effect = {
+			send_equipment = {
+					target = MAN
+					equipment = infantry_equipment
+					amount = 2000
+					old_prioritised = yes
+				}
+			if = {
+					limit = {
+							has_equipment = {
+									support_equipment > 500
+								}
+						}
+					send_equipment = {
+							target = MAN
+							equipment = support_equipment
+							amount = 500
+							old_prioritised = yes
+						}
+				}
+			if = {
+					limit = {
+							has_equipment = {
+									artillery_equipment > 250
+								}
+						}
+					send_equipment = {
+							target = MAN
+							equipment = artillery_equipment
+							amount = 250
+							old_prioritised = yes
+						}
+				}
+			MAN = { country_event = { id = wtt_japan.41 days = 1 } }
+		}
+		complete_effect = {
+		}
+	}
+	JAP_Build_a_military_factory_to_manchuria = {
+
+		icon = generic_prepare_civil_war
+		fire_only_once = yes
+		
+		available = {
+			MAN = {
+				is_subject_of = ROOT
+			}
+		}
+		
+		target_trigger = {
+			FROM = {
+				original_tag = MAN
+			}
+		}
+
+		cost = 150
+		
+		ai_will_do = {
+			factor = 1
+		}
+		days_remove = 70
+		days_re_enable = 30
+		
+		visible = {
+			tag = JAP
+			MAN = {
+				is_subject_of = ROOT
+			}
+		}
+		remove_effect = {
+			MAN = {
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+				}
+			}
+		}
+		complete_effect = {
+		}
+	}
+	
+}
+
+JAP_Sakhalin_issue = {
+
+	JAP_Transfer_sakhalin_island = {
+
+		icon = generic_political_actions
+		fire_only_once = yes
+		
+		available = {
+			controls_state = 537
+			SOV = { controls_state = 655 }
+		}
+
+		cost = 50
+		
+		ai_will_do = {
+			factor = 1
+		}
+		days_remove = 70
+		
+		visible = {
+			owns_state = 537
+			SOV = {
+					is_subject = no
+					owns_state = 655
+					NOT = { has_war_with = ROOT }
+				}
+			NOT = { has_country_flag = JAP_Sakhalin_issue_decision }
+		}
+		remove_effect = {
+		}
+		complete_effect = {
+			set_country_flag = JAP_Sakhalin_issue_decision
+			SOV = { country_event = { id = EMF_japan.114 hours = 12 } }
+		}
+	}
+	JAP_Request_for_sakhalin_island = {
+
+		icon = generic_political_actions
+		fire_only_once = yes
+		
+		available = {
+			controls_state = 537
+			SOV = { controls_state = 655 }
+		}
+
+		cost = 50
+		
+		ai_will_do = {
+			factor = 1
+		}
+		days_remove = 70
+		
+		visible = {
+			owns_state = 537
+			SOV = {
+					is_subject = no
+					owns_state = 655
+					NOT = { has_war_with = ROOT }
+				}
+			NOT = { has_country_flag = JAP_Sakhalin_issue_decision }
+		}
+		remove_effect = {
+		}
+		complete_effect = {
+			set_country_flag = JAP_Sakhalin_issue_decision
+			SOV = { country_event = { id = EMF_japan.116 hours = 12 } }
+		}
+	}
+
+}

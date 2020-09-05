@@ -1,0 +1,649 @@
+ideas = {
+
+	country = {
+		YUN_Economic = {
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_goods_red_bonus
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				economy_cost_factor = -0.1
+			}
+		}
+		
+		YUN_Autarky = {
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_flexible_foreign_policy2
+			
+			modifier = {
+				out_of_supply_factor = -0.05
+				attrition = -0.05
+				supply_consumption_factor = -0.05
+				production_lack_of_resource_penalty_factor = -0.05
+			}
+		}
+
+		YUN_Fighting_Will = {
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				army_morale_factor = 0.15
+			}
+		}
+
+		YUN_A_sense_of_crisis = {
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_fortify_the_borders
+			
+			modifier = {
+				dig_in_speed_factor = 0.1
+				industry_air_damage_factor = -0.1
+			}
+		}
+
+		YUN_Save_the_country = {
+		
+			picture = generic_manpower_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.02
+				monthly_population = 0.2
+			}
+		}
+
+		YUN_Yunnan_local_army = {
+		
+			picture = generic_intel_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				land_reinforce_rate = 0.05
+			}
+		}
+
+		YUN_Front_reinforcements = {
+		
+			picture = generic_infantry_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				training_time_factor = -0.05
+				land_reinforce_rate = 0.03
+			}
+		}
+
+		National_Southwestern_Associated_University = {
+
+			picture = generic_research_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+		
+		YUN_Home_front = {
+
+			picture = YUG_federal_defense_council
+		
+			available = {
+				has_war_with = JAP
+				NOT = {
+					has_war_with = CHI
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		
+		YUN_The_expedition_begins = {
+
+			picture = generic_morale_bonus
+		
+			available = {
+				OR = {
+					CHI = { has_war_with = JAP }
+					YUN = { has_war = yes }
+				}
+				NOT = {
+					is_puppet_of = JAP
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				attrition = -0.1
+				pocket_penalty = -0.05
+			}
+		}
+		
+		YUN_Burma_Road = {
+		
+			picture = generic_goods_red_bonus
+
+			available = {
+				NOT = {
+					OR = {
+						has_war_with = ENG
+						has_war_with = RAJ
+					}
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		YUN_Republican_government = {
+		
+			removal_cost = -1
+
+			allowed_civil_war = {
+				OR = {
+						has_government = democratic
+						has_government = neutrality
+					}
+			}
+
+			picture = ROM_king_carol_ii_hedonist
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+		YUN_The_government_right_of_speech = {
+		
+			removal_cost = -1
+
+			allowed_civil_war = {
+				OR = {
+						has_government = democratic
+						has_government = neutrality
+					}
+			}
+
+			picture = generic_central_management
+			
+			modifier = {
+				political_power_gain = 0.15
+			}
+		}
+		YUN_Yunnan_democracy = {
+		
+			removal_cost = -1
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				political_power_gain = 0.05
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+			}
+		}
+		YUN_Yunnan_parliament = {
+		
+			removal_cost = -1
+
+			allowed_civil_war = {
+				OR = {
+						has_government = democratic
+						has_government = neutrality
+					}
+			}
+
+			picture = generic_local_self_management
+			
+			modifier = {
+				political_power_gain = 0.15
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		
+		YUN_Revive_dian_force = {
+		
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_war_preparation
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.2
+				conversion_cost_civ_to_mil_factor = -0.25
+			}
+		}
+		YUN_Rebuild_the_army = {
+		
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_reserve_divisions
+			
+			modifier = {
+				minimum_training_level = -0.25
+				training_time_factor = -0.05
+				production_lack_of_resource_penalty_factor = -0.05
+				military_leader_cost_factor = -0.25
+			}
+		}
+		YUN_War_tax = {
+		
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_foreign_capital
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				local_resources_factor = 0.2
+				resistance_growth = 0.25
+				local_factory_sabotage = 0.1
+			}
+		}
+		YUN_Propaganda_threat = {
+		
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = saf_ossewabrandwag_fascism
+			
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+		YUN_Japanese_consultant = {
+		
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = warrior_traditions_idea
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+		}
+		
+		YUN_Red_army_tactics = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_communist_army
+			
+			modifier = {
+				planning_speed = 0.1
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		YUN_Local_supply = {
+		
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_scientist_defect
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_lack_of_resource_penalty_factor = -0.1
+			}
+		}
+		
+
+	}
+
+	political_advisor = {
+
+		YUN_zhou_zhirou = {
+
+			picture = generic_political_advisor_asia_2
+			
+			allowed = {
+				original_tag = YUN
+			}
+			
+			traits = { compassionate_gentleman }
+		}
+
+		YUN_liu_wenhui = {
+
+			picture = generic_political_advisor_asia_3
+				
+			allowed = {
+				original_tag = YUN
+			}
+			
+			traits = { armaments_organizer }
+		}
+
+		YUN_ding_zhipan = {
+
+			picture = generic_political_advisor_asia_1
+			
+			allowed = {
+				original_tag = YUN
+			}
+			
+			traits = { prince_of_terror }
+		}
+	}
+
+	army_chief = {
+		
+		YUN_li_jiang = {
+			
+			picture = generic_army_asia_1
+
+			allowed = {
+				original_tag = YUN
+			}
+			
+			traits = { army_chief_drill_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		YUN_zhang_wu = {
+			
+			picture = generic_army_asia_1
+
+			allowed = {
+				original_tag = YUN
+			}
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}	
+
+	air_chief = {
+		
+
+		YUN_lu_han = {
+
+			picture = generic_air_asia_3
+			
+			allowed = {
+				original_tag = YUN
+			}
+			
+			traits = { air_chief_night_operations_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		YUN_liu_zhao = {
+
+			picture = generic_air_asia_3
+			
+			allowed = {
+				original_tag = YUN
+			}
+			
+			traits = { air_chief_safety_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	navy_chief = {
+		
+
+		YUN_chen_zhao = {
+			
+			picture = generic_navy_asia_1
+
+			allowed = {
+				original_tag = YUN
+			}
+					
+			traits = { navy_chief_commerce_raiding_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		YUN_huang_dong = {
+			
+			picture = generic_navy_asia_3
+
+			allowed = {
+				original_tag = YUN
+			}
+					
+			traits = { navy_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+
+	high_command = {
+
+		YUN_liang_peng = {
+
+			picture = generic_air_asia_1
+			
+			allowed = {
+				original_tag = YUN
+			}
+			
+			traits = { air_strategic_bombing_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		YUN_hu_wei = {
+
+			picture = generic_army_asia_2
+			
+			allowed = {
+				original_tag = YUN
+			}
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		YUN_luo_sun = {
+
+			picture = generic_army_asia_3
+			
+			allowed = {
+				original_tag = YUN
+			}
+			
+			traits = { army_artillery_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		YUN_wang_jiang = {
+
+			picture = generic_army_asia_2
+			
+			allowed = {
+				original_tag = YUN
+			}
+			
+			traits = { army_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+
+
+	theorist = {
+		YUN_pan_tian = {
+
+			picture = generic_army_asia_1
+			
+			allowed = {
+				original_tag = YUN
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		YUN_zhu_hu = { 
+
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = YUN
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+
+		YUN_liao_fang = {
+
+			picture = generic_navy_asia_1
+			
+			allowed = {
+				original_tag = YUN
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			
+			traits = { naval_theorist }
+		}
+
+	}
+
+
+
+	
+}

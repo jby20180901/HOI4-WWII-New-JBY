@@ -1,0 +1,90 @@
+starve_stop_train = {
+    
+    enable = {
+		check_variable = {
+			food_in_need < 1.2
+		}
+		check_variable = {
+			num_armies > 0
+		}
+		has_war = no
+		OR = { 
+			NOT = { check_variable = { threat > 75 } }
+			NOT = { threat > 75 } 
+		}
+    }
+    
+    abort = {
+        NOT = {
+			check_variable = {
+				food_in_need < 1.2
+			}
+		}
+		OR = {
+			check_variable = { threat > 75 } 
+			threat > 75
+		}
+    }
+    ai_strategy = {
+		type = role_ratio
+		id = paratroopers
+		value = -9999
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = -9999
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = marines
+		value = -9999
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = -9999
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -9999
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = motorized
+		value = -9999
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = mechanized
+		value = -9999
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = anti_air
+		value = -9999
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = artillery
+		value = -9999
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = anti_tank
+		value = -9999
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = cavalry
+		value = -9999
+	}
+	
+	
+	
+}

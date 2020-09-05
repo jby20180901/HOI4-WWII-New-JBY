@@ -1,0 +1,81 @@
+scripted_diplomatic_actions = {
+
+    request_buy_weapon = {
+
+        icon = 1
+	
+        allowed = { always = yes }
+
+        visible = {    PREV = {  is_subject_of = ROOT }  NOT = { ROOT = { is_in_array = { import_country = PREV.id } } }	    }
+
+        selectable = {    PREV = { num_of_civilian_factories > 30 } 
+                          ROOT = {  num_of_military_factories > 5  }     
+					 }
+		
+		requires_acceptance = no
+
+        complete_effect = {
+		
+			THIS = {  add_ideas = buy_master_weapon   }
+            ROOT = {   add_to_array = { import_country = PREV.id } 
+                       add_offsite_building = { type = arms_factory level = -5 }   }
+		
+		}
+
+
+		ai_desire = {
+					base = 0
+					modifier = { 
+						AND = {
+							check_variable = {  dominate_remainder <  500 }
+						}   
+						add = 100  
+					}
+					factor = 10
+		}
+		
+		
+		
+		
+	}
+	
+	
+	
+	 cancel_buy_weapon = {
+
+        icon = 2
+	
+        allowed = { always = yes }
+
+        visible = { ROOT = { is_in_array = { import_country = PREV.id } } }
+
+        selectable = {   }
+		
+		requires_acceptance = no
+
+        complete_effect = {
+			PREV = {    remove_ideas = buy_master_weapon         }
+            ROOT = {   remove_from_array = { import_country = PREV.id } 
+                       add_offsite_building = { type = arms_factory level = 5 }   
+					}
+		}
+
+        
+
+        ai_desire = {
+					base = 0
+					modifier = { 
+						AND = {
+							NOT = {  check_variable = {  dominate_remainder <  300 }  }
+						}   
+						add = 100  
+					}
+					factor = 10
+		}
+
+
+	}
+
+
+
+}

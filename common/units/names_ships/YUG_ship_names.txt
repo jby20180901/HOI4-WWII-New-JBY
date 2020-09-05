@@ -1,0 +1,318 @@
+﻿YUG_DD_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_DESTROYERS
+  for_countries = {
+    YUG
+  }
+  type = ship
+  ship_types = {
+    ship_hull_light
+    destroyer
+  }
+  prefix = "KB "
+  fallback_name = "南斯拉夫第%d号驱逐舰"  # Razarac %d
+  unique = {
+    "杜布罗夫尼克"  # Dubrovnik
+    "斯普利特"  # Split
+    "贝尔格莱德"  # Beograd
+    "萨格勒布"  # Zagreb
+    "卢布尔雅那"  # Ljubljana
+    "科托"  # Kotor
+    "普拉"  # Pula
+    "特里格拉夫"  # Triglav
+    "彼欧阔沃"  # Biokovo
+    "杜米托尔"  # Durmitor
+    "乌卡"  # Ucka
+    "科佩尔"  # Koper
+    "纳达"  # Nada
+    "格尔斯尼卡"  # Golesnica
+    "切尔"  # Cer
+  }
+}
+YUG_CL_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CL
+  for_countries = {
+    YUG
+  }
+  type = ship
+  ship_types = {
+    ship_hull_cruiser
+    light_cruiser
+  }
+  prefix = "KB "
+  fallback_name = "南斯拉夫第%d号轻巡洋舰"  # Svetlo Krstarica %d
+  unique = {
+    "达尔马提亚"  # Dalmacija
+    "萨拉热窝"  # Sarajevo
+    "布鲁斯"  # Brus
+    "尼什"  # Nis
+    "斯梅代雷沃"  # Smederovo
+    "马纳西亚"  # Manasija
+    "弗尔沙茨"  # Vrsac
+    "卢布尔雅那"  # Ljubljana
+    "贝尔格莱德"  # Belgrade
+    "萨格勒布"  # Zagreb
+    "诺维萨德"  # Novi Sad
+    "布德瓦"  # Budva
+    "策提涅"  # Cetinje
+    "杜布罗夫尼克"  # Dubrovnik
+    "佩奇"  # Pec
+    "普里兹伦"  # Pizren
+    "普里什蒂纳"  # Pristina
+    "斯普利特"  # Split
+    "巴尼亚卢卡"  # Banja Luka
+  }
+}
+YUG_CA_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CA
+  for_countries = {
+    YUG
+  }
+  type = ship
+  ship_types = {
+    ship_hull_cruiser
+    heavy_cruiser
+  }
+  prefix = "KB "
+  fallback_name = "南斯拉夫第%d号重巡洋舰"  # Teska Krstarica %d
+  unique = {
+    "贝尔格莱德"  # Belgrade
+    "萨格勒布"  # Zagreb
+    "诺维萨德"  # Novi Sad
+    "布德瓦"  # Budva
+    "策提涅"  # Cetinje
+    "杜布罗夫尼克"  # Dubrovnik
+    "佩奇"  # Pec
+    "普里兹伦"  # Pizren
+    "普里什蒂纳"  # Pristina
+    "萨拉热窝"  # Sarajevo
+    "斯普利特"  # Split
+    "斯科普里"  # Skopje
+    "尼什"  # Nis
+    "巴尼亚卢卡"  # Banja Luka
+  }
+}
+YUG_BB_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_BB
+  for_countries = {
+    YUG
+  }
+  type = ship
+  ship_types = {
+    ship_hull_heavy
+    battleship
+  }
+  prefix = "KB "
+  fallback_name = "南斯拉夫第%d号战列舰"  # Vojni Brod %d
+  unique = {
+    "贝尔格莱德"  # Belgrade
+    "萨格勒布"  # Zagreb
+    "诺维萨德"  # Novi Sad
+    "布德瓦"  # Budva
+    "策提涅"  # Cetinje
+    "杜布罗夫尼克"  # Dubrovnik
+    "佩奇"  # Pec
+    "普里兹伦"  # Pizren
+    "普里什蒂纳"  # Pristina
+    "萨拉热窝"  # Sarajevo
+    "塞尔维亚"  # Srbija
+    "克罗地亚"  # Hrvatska
+    "博斯纳"  # Bosna
+    "黑塞哥维那"  # Hercegovina
+    "马其顿"  # Makedonija
+    "斯洛文尼亚"  # Slovenija
+    "黑山"  # Crna Gora
+    "伏伊伏丁那"  # Vojvodina
+  }
+}
+YUG_BC_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_BC
+  for_countries = {
+    YUG
+  }
+  type = ship
+  ship_types = {
+    ship_hull_heavy
+    battle_cruiser
+  }
+  prefix = "KB "
+  fallback_name = "南斯拉夫第%d号战列巡洋舰"  # Bojna Krstarica %d
+  unique = {
+    "布鲁斯"  # Brus
+    "尼什"  # Nis
+    "塞尔维亚"  # Srbija
+    "克罗地亚"  # Hrvatska
+    "博斯纳"  # Bosna
+    "黑塞哥维那"  # Hercegovina
+    "马其顿"  # Makedonija
+    "斯洛文尼亚"  # Slovenija
+    "黑山"  # Crna Gora
+    "伏伊伏丁那"  # Vojvodina
+  }
+}
+YUG_CV_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_CARRIERS
+  for_countries = {
+    YUG
+  }
+  type = ship
+  ship_types = {
+    ship_hull_carrier
+    carrier
+  }
+  prefix = "KB "
+  fallback_name = "南斯拉夫第%d号航空母舰"  # Nosac Aviona %d
+  unique = {
+    "兹玛伊"  # Zmaj
+    "斯梅代雷沃"  # Smederovo
+    "马纳西亚"  # Manasija
+    "弗尔沙茨"  # Vrsac
+    "卢布尔雅那"  # Ljubljana
+    "布鲁斯"  # Brus
+    "贝尔格莱德"  # Belgrade
+    "萨格勒布"  # Zagreb
+    "诺维萨德"  # Novi Sad
+    "布德瓦"  # Budva
+  }
+}
+YUG_SS_HISTORICAL = {
+  name = NAME_THEME_HISTORICAL_SUBMARINES
+  for_countries = {
+    YUG
+  }
+  type = ship
+  ship_types = {
+    ship_hull_submarine
+    submarine
+  }
+  prefix = "KB "
+  fallback_name = "南斯拉夫第%d号潜艇"  # Podmornica %d
+  unique = {
+    "勇敢"  # Hrabri
+    "内博伊沙"  # Nebojsa
+    "大胆"  # Smeli
+    "复仇者"  # Osvetnik
+    "马里萨恩"  # Malisan
+    "塔拉"  # Tara
+    "萨瓦"  # Sava
+    "苏捷什卡"  # Sutjeska
+    "内雷特瓦"  # Neretva
+    "英雄"  # Heroj
+    "尤那克"  # Junak
+    "德拉"  # Drava
+    "蒂萨"  # Tisa
+    "乌娜"  # Una
+    "泽塔"  # Zeta
+    "索卡"  # Soca
+    "库帕"  # Kupa
+    "瓦尔达"  # Vardar
+    "斯洛伯德尼"  # Slobodni
+    "强大"  # Snazhni
+  }
+}
+YUG_REGIONS = {
+  name = NAME_THEME_REGIONS
+  for_countries = {
+    YUG
+  }
+  type = ship
+  prefix = "KB "
+  unique = {
+    "塞尔维亚"  # Srbija
+    "克罗地亚"  # Hrvatska
+    "博斯纳"  # Bosna
+    "黑塞哥维那"  # Hercegovina
+    "马其顿"  # Makedonija
+    "斯洛文尼亚"  # Slovenija
+    "黑山"  # Crna Gora
+    "伏伊伏丁那"  # Vojvodina
+    "达尔马提亚"  # Dalmacija
+    "斯拉沃尼亚"  # Slavonija
+    "巴纳特"  # Banat
+    "塞尔维亚"  # Bačka
+    "巴拉亚"  # Baranja
+    "多瑙河"  # Dunavska
+    "德拉瓦"  # Dravska
+    "德里纳"  # Drinska
+    "普里莫尔斯卡"  # Primorska
+    "摩拉维亚"  # Moravska
+    "萨瓦"  # Savska
+    "瓦达斯卡"  # Vardarska
+    "维巴斯卡"  # Vrbaska
+    "泽塔"  # Zetska
+    "比萨拉比亚"  # Basarabia
+    "布科维纳"  # Bukovina
+    "赫塔"  # Herta
+    "南比萨拉比亚"  # Budjak
+  }
+}
+YUG_CITIES = {
+  name = NAME_THEME_CITIES
+  for_countries = {
+    YUG
+  }
+  type = ship
+  prefix = "KB "
+  unique = {
+    "贝尔格莱德"  # Belgrade
+    "萨格勒布"  # Zagreb
+    "诺维萨德"  # Novi Sad
+    "布德瓦"  # Budva
+    "策提涅"  # Cetinje
+    "杜布罗夫尼克"  # Dubrovnik
+    "卢布尔雅那"  # Ljubljana
+    "佩奇"  # Pec
+    "普里兹伦"  # Pizren
+    "普里什蒂纳"  # Pristina
+    "萨拉热窝"  # Sarajevo
+    "斯普利特"  # Split
+    "斯科普里"  # Skopje
+    "尼什"  # Nis
+    "巴尼亚卢卡"  # Banja Luka
+    "科托"  # Kotor
+    "波德戈里察"  # Podgorica
+    "斯梅代雷沃"  # Smederevo
+    "武科瓦尔"  # Vukovar
+    "弗拉涅"  # Vranje
+    "比托拉"  # Bitola
+    "查查克"  # Čačak
+    "上米拉诺瓦茨"  # Gornji Milanovac
+    "卡瓦达尔齐"  # Kavadarci
+    "科拉欣"  # Kolasin
+    "巴尔"  # Bar
+    "贝拉内"  # Berane
+    "比哈奇"  # Bihać
+    "比耶洛波列"  # Bijelo Polje
+    "别洛瓦尔"  # Bjelovar
+    "丘普里亚"  # Ćuprija
+    "戈斯皮奇"  # Gospić
+    "科索夫斯卡-米特罗维察"  # Kosovska Mitrovica
+    "克拉古耶瓦茨"  # Kragujevac
+    "克鲁舍瓦茨"  # KruSevac
+    "库马诺沃"  # Kumanovo
+    "马里博尔"  # Maribor
+    "莫斯塔尔"  # Mostar
+    "内格廷"  # Negotin
+    "尼克希奇"  # NikSić
+    "新帕扎尔"  # Novi Pazar
+    "奥古林"  # Ogulin
+    "奥赫里德"  # Ohrid
+    "奥西耶克"  # Osijek
+    "皮罗特"  # Pirot
+    "普列夫利亚"  # Pljevlja
+    "波扎雷瓦茨"  # Požarevac
+    "波热加"  # Požega
+    "普里耶波列"  # Prijepolje
+    "普罗库普列"  # Prokuplje
+    "沙巴茨"  # Sabac
+    "希贝尼克"  # Sibenik
+    "什提普"  # Stip
+    "泰托沃"  # Tetovo
+    "特拉夫尼克"  # Travnik
+    "图兹拉"  # Tuzla
+    "乌日策"  # Užice
+    "瓦列沃"  # Valjevo
+    "瓦拉日丁"  # Varaždin
+    "大维也纳"  # Veliki Bečkerek
+    "扎耶查尔"  # Zaječar
+  }
+}

@@ -1,0 +1,580 @@
+ideas = {
+	country = {
+	
+		KOR_Nae_seon_il_che = {
+			picture = generic_deal_with_the_devil2
+
+			available = {
+				is_subject = yes
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				fascism_drift = 0.02
+				democratic_drift = 0.01
+				neutrality_drift = 0.01
+			}
+		}
+		KOR_Nae_seon_il_che_2 = {
+			picture = generic_deal_with_the_devil2
+
+			available = {
+				is_subject = yes
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				fascism_drift = 0.01
+				democratic_drift = 0.01
+				neutrality_drift = 0.01
+			}
+		}
+		KOR_Nae_seon_il_che_3 = {
+			picture = generic_deal_with_the_devil2
+
+			available = {
+				is_subject = yes
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				fascism_drift = 0.02
+			}
+		}
+		KOR_Korean_japanese_nationality = {
+			picture = generic_deal_with_the_devil2
+
+			available = {
+				is_subject = yes
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				political_power_gain = 0.25
+				fascism_drift = 0.01
+				democratic_drift = 0.01
+				neutrality_drift = 0.01
+			}
+		}
+		KOR_After_the_samil_undong = {
+			picture = FRA_matignon_agreements
+
+			available = {
+				is_subject = yes
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				political_power_cost = 0.1
+				conscription_factor = -0.5
+			}
+		}
+		KOR_After_the_samil_undong_2 = {
+			picture = FRA_matignon_agreements
+
+			available = {
+				is_subject = yes
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				political_power_cost = 0.1
+			}
+		}
+		KOR_Relax_the_media_restrictions = {
+			picture = HUN_treaty_of_triannon
+
+			available = {
+				is_subject = yes
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				conscription_factor = -0.4
+			}
+		}
+		KOR_Give_political_power = {
+			picture = HUN_treaty_of_triannon
+
+			available = {
+				is_subject = yes
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				conscription_factor = -0.3
+			}
+		}
+		KOR_Into_the_imperial_parliament = {
+			picture = HUN_treaty_of_triannon
+
+			available = {
+				is_subject = yes
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				conscription_factor = -0.25
+			}
+		}
+		KOR_Korean_parliament = {
+			picture = HUN_treaty_of_triannon
+
+			available = {
+				is_subject = yes
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				democratic_drift = 0.02
+				neutrality_drift = 0.02
+				conscription_factor = -0.2
+			}
+		}
+		KOR_Japanese_free_imperial_dominion = {
+			picture = generic_local_self_management
+
+			available = {
+				is_subject = yes
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				democratic_drift = 0.1
+				neutrality_drift = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		
+		KOR_Safeguard_korean_language = {
+			picture = generic_research_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				conscription = 0.01
+			}
+		}
+		
+		KOR_Soshi_kaimei = {
+			picture = ast_abandon_the_westminster_system_fascism
+
+			available = {
+				is_subject = yes
+			}
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				political_power_gain = 0.05
+			}
+		}
+		KOR_Kominka_undo = {
+			picture = imperial_glory_idea
+
+			available = {
+				is_subject = yes
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				fascism_drift = 0.02
+				conscription = 0.01
+			}
+		}
+		KOR_Japanese_immigrants = {
+			picture = imperial_glory_idea
+
+			available = {
+				is_subject = yes
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				monthly_population = 0.1
+			}
+		}
+		KOR_Annex_the_korean = {
+			picture = imperial_glory_idea
+
+			available = {
+				is_subject = yes
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				stability_weekly = 0.002
+			}
+		}
+		
+		KOR_Raise_efficiency = {
+			picture = generic_goods_red_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		KOR_Military_law = {
+			picture = ast_abandon_the_westminster_system
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				conscription_factor = 0.07
+			}
+		}
+		KOR_Korean_soldiers = {
+			picture = generic_infantry_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				conscription_factor = 0.05
+			}
+		}
+		KOR_Cooperation_with_the_kwantung_army = {
+			picture = generic_intel_bonus
+
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			research_bonus = {
+				land_doctrine = 0.05
+			}
+		}
+		KOR_Korea_area_army = {
+			picture = CZE_planning_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				max_planning = 0.1
+				planning_speed = 0.1
+			}
+		}
+		KOR_Korea_hondo_kessen = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				army_morale_factor = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				conscription = 0.1
+			}
+		}
+		
+		KOR_Military_cooperation_with_comchina = {
+			picture = generic_communist_army
+
+			available = {
+				NOT = { has_war_with = PRC }
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.03
+			}
+			
+			modifier = {
+				monthly_population = 0.25
+			}
+		}
+		KOR_Economic_cooperation_with_comchina = {
+			picture = generic_foreign_capital
+
+			available = {
+				NOT = { has_war_with = PRC }
+			}
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+		}
+		
+		KOR_Soviet_aid_us = {
+			picture = generic_exploit_mines
+
+			available = {
+				NOT = { has_war_with = SOV }
+			}
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.1
+			}
+		}
+		KOR_Soviet_technician = {
+			picture = socialist_science_focus
+
+			available = {
+				NOT = { has_war_with = SOV }
+			}
+			
+			modifier = {
+				research_speed_factor = 0.03
+			}
+		}
+		
+		KOR_Korean_monarchy = {
+			picture = HUN_hungarian_monarchy_habsburg
+		
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			
+			modifier = {
+				neutrality_drift = 0.1
+			}
+		}
+		
+		KOR_Constitutional_monarchy = {
+			picture = HUN_hungarian_monarchy_democratic
+
+			available = {
+				NOT = { has_government = communism }
+			}
+			
+			modifier = {
+				political_power_gain = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				democratic_acceptance = 85
+			}
+		}
+		KOR_Absolute_monarchy = {
+			picture = HUN_hungarian_monarchy
+
+			available = {
+				NOT = { has_government = communism }
+			}
+			
+			modifier = {
+				neutrality_drift = 0.02
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		
+		KOR_Revanchism = {
+			picture = FRA_matignon_agreements
+
+			available = {
+				NOT = { is_in_faction_with = JAP }
+			}
+			
+			modifier = {
+				army_morale_factor = 0.1
+			}
+		}
+		KOR_Rebuild_the_imperial_army = {
+			picture = air_support_focus
+			
+			available = {
+				has_army_manpower = { size < 100000 }
+			}
+			
+			modifier = {
+				training_time_factor = -0.1
+				minimum_training_level = -0.1
+				autonomy_manpower_share = -0.1
+			}
+		}
+		
+		KOR_Ban_the_communist = {
+		
+			picture = anti_soviet_pact
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_drift = -0.02
+			}
+		}
+		KOR_Settlement_agreement_with_japan = {
+		
+			picture = generic_foreign_capital
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		KOR_Settlement_agreement_with_korea = {
+		
+			picture = generic_foreign_capital
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+	}
+}

@@ -1,0 +1,947 @@
+ideas = {
+
+	country = {
+	
+		TUR_The_reforms_of_ataturk = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				research_speed_factor = -0.03
+				economy_cost_factor = -0.25
+				political_advisor_cost_factor = -0.25
+				industrial_concern_cost_factor = -0.25
+				drift_defence_factor = 0.3
+				stability_factor = -0.05
+			}
+		}
+		TUR_Kemalism = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = YUG_federal_defense_council
+			
+			modifier = {
+				stability_factor = 0.05
+				drift_defence_factor = 0.15
+			}
+		}
+		TUR_Grand_national_assembly = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = grand_national_assembly_of_turkey
+			
+			modifier = {
+				communism_drift = -0.02
+				fascism_drift = -0.02
+			}
+		}
+		TUR_Grand_national_assembly_2 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = grand_national_assembly_of_turkey
+			
+			modifier = {
+				communism_drift = -0.02
+				fascism_drift = -0.02
+				drift_defence_factor = 0.1
+			}
+		}
+		TUR_Grand_national_assembly_3 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = grand_national_assembly_of_turkey
+			
+			modifier = {
+				democratic_drift = 0.02
+				communism_drift = -0.02
+				fascism_drift = -0.02
+				drift_defence_factor = 0.1
+				political_advisor_cost_factor = -0.1
+			}
+		}
+		TUR_Grand_national_assembly_4 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = grand_national_assembly_of_turkey
+			
+			modifier = {
+				democratic_drift = 0.1
+				communism_drift = -0.02
+				fascism_drift = -0.02
+				drift_defence_factor = 0.1
+				political_advisor_cost_factor = -0.2
+			}
+		}
+		TUR_Grand_national_assembly_5 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = grand_national_assembly_of_turkey
+			
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				democratic_drift = 0.1
+				communism_drift = -0.02
+				fascism_drift = -0.02
+				drift_defence_factor = 0.5
+				political_advisor_cost_factor = -0.25
+			}
+		}
+		TUR_Grand_national_assembly_net = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = grand_national_assembly_of_turkey
+			
+			modifier = {
+				neutrality_drift = 0.02
+				communism_drift = -0.02
+				fascism_drift = -0.02
+				drift_defence_factor = 0.2
+				political_power_gain = 0.05
+				mobilization_speed = 0.05
+				trade_laws_cost_factor = -0.05
+				economy_cost_factor = -0.05
+			}
+		}
+		TUR_Grand_national_assembly_net2 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = grand_national_assembly_of_turkey
+			
+			modifier = {
+				neutrality_drift = 0.1
+				communism_drift = -0.02
+				fascism_drift = -0.02
+				drift_defence_factor = 0.2
+				political_power_gain = 0.2
+				mobilization_speed = 0.1
+				trade_laws_cost_factor = -0.25
+				economy_cost_factor = -0.25
+				army_chief_cost_factor = -0.1
+				navy_chief_cost_factor = -0.1
+				air_chief_cost_factor = -0.1
+				political_advisor_cost_factor = 0.2
+			}
+		}
+		TUR_Grand_national_assembly_imp = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = grand_national_assembly_of_turkey
+			
+			modifier = {
+				communism_drift = -0.1
+				democratic_drift = -0.02
+			}
+		}
+		TUR_Grand_national_assembly_imp2 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = grand_national_assembly_of_turkey
+			
+			modifier = {
+				neutrality_drift = 0.02
+				communism_drift = -0.1
+				democratic_drift = -0.02
+			}
+		}
+		TUR_Grand_national_assembly_dic = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = grand_national_assembly_of_turkey
+			
+			modifier = {
+				fascism_drift = 0.1
+				communism_drift = -0.1
+				democratic_drift = -0.02
+				neutrality_drift = -0.02
+			}
+		}
+		TUR_Military_influence = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			
+			removal_cost = -1
+
+			picture = generic_secret_police
+			
+			modifier = {
+			}
+		}
+		TUR_Military_support_the_royal_family = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			
+			removal_cost = -1
+
+			picture = generic_reserve_divisions
+			
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+		TUR_Treaty_of_lausanne = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = HUN_treaty_of_triannon
+			
+			modifier = {
+				generate_wargoal_tension = 0.25
+			}
+		}
+		
+		TUR_Education_subsidy = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_research_bonus
+			
+			modifier = {
+				research_speed_factor = 0.025
+			}
+		}
+		TUR_Ministry_of_national_education = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_research_bonus
+			
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		
+		TUR_Secularism = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				political_power_gain = 0.05
+			}
+		}
+		TUR_Secular_country = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				political_power_gain = 0.3
+				production_speed_infrastructure_factor = 0.2
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		
+		TUR_Ottoman_royal_family = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = house_of_osman 
+			
+			modifier = {
+			}
+		}
+		TUR_Abdulmecid_II = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = caliph_abdulmecid_II 
+			
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+		TUR_Turkish_militarism = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = saf_ossewabrandwag_2 
+			
+			modifier = {
+				army_morale_factor = 0.2
+				justify_war_goal_time = -0.5
+			}
+		}
+		
+		TUR_TCDD = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = ast_all_in
+			
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+		TUR_TCDD2 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = ast_all_in
+			
+			modifier = {
+				production_speed_infrastructure_factor = 0.25
+			}
+		}
+		TUR_Economic_priority = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		TUR_Armed_neutral_policy = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_acquire_tanks
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		TUR_National_modernization = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_foreign_capital
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+				political_power_gain = 0.3
+				production_speed_infrastructure_factor = 0.2
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		
+		TUR_Turkish_nationalism = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = chi_war_of_resistance
+			
+			modifier = {
+				mobilization_speed = 0.1
+				political_power_gain = 0.05
+			}
+		}
+		TUR_Turkishness = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = chi_war_of_resistance3
+			
+			modifier = {
+				mobilization_speed = 0.2
+				non_core_manpower = 0.1
+				political_power_gain = 0.1
+			}
+		}
+		
+		TUR_German_military_advisory = {
+			allowed = {
+				always = no
+			}
+
+			available = {
+				NOT = {
+					has_government = communism
+					has_war_with = GER
+				}
+			}
+			
+			removal_cost = -1
+
+			picture = german_advisors
+			
+			modifier = {
+				planning_speed = 0.1
+			}
+			research_bonus = {
+				cat_mobile_warfare = 0.03
+			}
+		}
+		TUR_General_staff = {
+			picture = general_staff
+			
+			available = {
+				NOT = {
+					has_government = communism
+					has_war_with = GER
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				planning_speed = 0.1
+				army_leader_start_planning_level = 1
+			}
+			research_bonus = {
+				cat_mobile_warfare = 0.03
+			}
+		}
+		TUR_Italian_navy_experience = {
+			allowed = {
+				always = no
+			}
+
+			available = {
+				NOT = {
+					has_government = communism
+					has_war_with = ITA
+				}
+			}
+			
+			removal_cost = -1
+
+			picture = generic_coastal_defense_ships
+			
+			modifier = {
+				experience_gain_navy = 0.03
+			}
+		}
+		
+		TUR_Ban_fascism = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_fascism_banned
+			
+			modifier = {
+				fascism_drift = -0.02
+				fascism_acceptance = -100
+			}
+		}
+		TUR_Ban_communism = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = trotskyite_plot
+			
+			modifier = {
+				communism_drift = -0.02
+				communism_acceptance = -100
+			}
+		}
+		TUR_Ban_the_both_party = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				fascism_drift = -0.02
+				fascism_acceptance = -100
+				communism_drift = -0.02
+				communism_acceptance = -100
+			}
+		}
+		TUR_Western_aircraft_technology = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_air_payment
+			
+			modifier = {
+				license_air_purchase_cost = -0.1
+			}
+		}
+		TUR_Italian_navy_cooperation = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_navy_bonus
+			
+			modifier = {
+				license_naval_purchase_cost = -0.1
+			}
+		}
+		TUR_Arms_trade = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = ast_volunteer_defence_corps
+			
+			modifier = {
+				license_infantry_purchase_cost = -0.1
+			}
+		}
+		
+		TUR_Focus_on_the_poor_class = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			modifier = {
+				communism_drift = 0.05
+				communism_acceptance = 85
+				monthly_population = 0.25
+				consumer_goods_factor = 0.05
+			}
+		}
+		TUR_Worker_league = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_communist_army
+			
+			modifier = {
+				conscription_factor = 0.1
+				communism_drift = 0.1
+				communism_acceptance = 85
+				monthly_population = 0.5
+			}
+		}
+		TUR_Support_revolution = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				send_volunteer_divisions_required = -0.5
+			}
+		}
+		
+		TUR_Emergency_mobilization = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription = 0.02
+			}
+		}
+		
+		TUR_Military_modernization = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_army_war_college
+			
+			modifier = {
+				max_command_power = 25
+			}
+		}
+		TUR_Focus_on_mobility = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_bomber_production_diverted
+
+			equipment_bonus = {
+				fighter_equipment = {
+					air_agility = 0.1
+				}
+				cv_fighter_equipment = {
+					air_agility = 0.1
+				}
+				heavy_fighter_equipment = {
+					air_agility = 0.1
+				}
+			}
+		}
+		TUR_Focus_on_firepower = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_bomber_production_diverted
+
+			equipment_bonus = {
+				fighter_equipment = {
+					air_attack = 0.1
+				}
+				cv_fighter_equipment = {
+					air_attack = 0.1
+				}
+				CAS_equipment = {
+					air_ground_attack = 0.1
+				}
+				cv_CAS_equipment = {
+					air_ground_attack = 0.1
+				}
+				heavy_fighter_equipment = {
+					air_attack = 0.15
+				}
+			}
+		}
+		TUR_Defend_the_black_sea = {
+
+			picture = generic_coastal_navy
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				ship_hull_light = {
+					lg_attack = 0.1
+					naval_range = -0.4
+					build_cost_ic = -0.1
+				}
+				ship_hull_cruiser = {
+					lg_attack = 0.1
+					naval_range = -0.4
+					build_cost_ic = -0.1
+				}
+			}
+		}
+		TUR_Mediterranean_strategy = {
+
+			picture = generic_sea_focused_navy
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				ship_hull_cruiser = {
+					hg_attack = 0.1
+					naval_range = -0.25
+					armor_value = 0.1
+				}
+				ship_hull_heavy = {
+					hg_attack = 0.1
+					naval_range = -0.25
+					armor_value = 0.1
+				}
+			}
+		}
+		
+	}
+	
+}
