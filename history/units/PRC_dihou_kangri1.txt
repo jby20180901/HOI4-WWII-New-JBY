@@ -1,0 +1,44 @@
+﻿division_template = {
+	name = "新四军淞沪支队"
+	division_names_group = PRC_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "新四军淞沪支队先遣支队"
+		location = 7014
+		division_template = "新四军淞沪支队"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "新四军淞沪支队第1支队"
+		location = 7014
+		division_template = "新四军淞沪支队"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "新四军淞沪支队第2支队"
+		location = 7014
+		division_template = "新四军淞沪支队"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "新四军淞沪支队第3支队"
+		location = 10034
+		division_template = "新四军淞沪支队"
+		start_experience_factor = 0.2
+	}
+	
+}

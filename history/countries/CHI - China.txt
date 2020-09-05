@@ -1,0 +1,1421 @@
+﻿capital = 598 # Nanjing
+
+oob = "CHI_1936"
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "CHI_1936_naval_mtg"
+	else = {
+		set_naval_oob = "CHI_1936_naval_legacy"
+	}
+}
+
+set_stability = 0.2
+set_war_support = 0.5
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	cavalry_tech = 1
+	early_fighter = 1
+	early_bomber = 1
+	mass_assault = 1
+	fleet_in_being = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	
+}
+
+give_military_access = QXC
+give_military_access = XXC
+give_military_access = SLJ
+give_military_access = DBJ
+give_military_access = XBJ
+give_military_access = HNJ
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		coastal_defense_ships = 1
+	}
+}
+
+add_ideas = {
+	 german_advisors
+	 CHI_sidajiazudyinying
+	 eastasia_idea_CHI_suzhidixiadeguomin1
+	eastasia_idea_CHI_luohoudegongyeyukeji1
+	eastasia_idea_CHI_niuqudesanminzhuyi1
+	 eastasia_idea_CHI_yulonghunzadezhengfu1
+	 eastasia_idea_CHI_lixingshe
+	 eastasia_idea_CHI_jilvhuansandejundui
+	 
+	 
+}
+
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "Waking the Tiger"
+		}
+	}
+	add_ideas = {
+		CHI_communist_uprisings
+	}
+}
+
+
+if = {
+	limit = {
+		has_dlc = "Waking the Tiger"
+	}		
+	add_ideas = {
+		CHI_nine_power_treaty
+		CHI_army_corruption_1
+		CHI_ineffective_bureaucracy
+		CHI_incompetent_officers
+		free_trade
+		CHI_hyper_inflation_1
+	}
+}
+save_global_event_target_as = WTT_current_china_leader
+
+set_convoys = 40
+
+set_autonomy = {
+		target = QXC
+		autonomous_state = autonomy_integrated_puppet
+	}
+	set_autonomy = {
+		target = XBJ
+		autonomous_state = autonomy_dominion
+	}
+	set_autonomy = {
+		target = HNJ
+		autonomous_state = autonomy_integrated_puppet
+	}
+
+
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 100
+}
+
+create_country_leader = {
+	name = "蒋介石"
+	desc = "POLITICS_CHIANG_KAI-SHEK_DESC"
+	picture = "Portrait_China_Chiang_jiang_jieshi.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = { 
+	  stout_defender
+	  generallissimo
+	  chinese_government_leader
+	  army_logistics_1
+	  
+	}
+}
+
+create_country_leader = {
+	name = "卫立煌"
+	desc = "POLITICS_WLH_DESC"
+	picture = "Portrait_China_Chiang_Wei_Lihuang.dds"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "汪精卫"
+	desc = "POLITICS_WANG_JINGWEI_DESC"
+	picture = "Portrait_China_Chiang_wang_jingwei.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "李济深"
+	desc = "POLITICS_LJS_DESC"
+	picture = "Portrait_China_Chiang_Li_Jishen.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+	}
+}
+
+add_opinion_modifier = { target = PRC modifier = hostile_status }
+
+1939.1.1 = {
+	set_politics = {
+
+		parties = {
+		democratic = { 
+			popularity = 0
+		}
+
+		fascism = {
+			popularity = 0
+		}
+		
+		communism = {
+			popularity = 0
+			#banned = no #default is no
+		}
+		
+		neutrality = { 
+			popularity = 100
+		}
+	}
+		
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+}
+
+
+create_field_marshal  = {
+	name = "冯玉祥"
+	id = 4001
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_Feng_Yuxiang.dds"
+	desc = "POLITICS_FYX_DESC"
+	traits = { politically_connected  infantry_officer}
+    skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_field_marshal  = {
+	name = "何应钦"
+	desc = "POLITICS_HYQ_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_He_Yingqin.dds"
+	traits = {defensive_doctrine  politically_connected }
+    skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander  = {
+	name = "唐生智"
+	desc = "POLITICS_TSZ_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_Tang_Shengzhi.dds"
+	traits = {  politically_connected}
+    skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander  = {
+	name = "李弥"
+	desc = " "
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_Li_Mi.dds"
+	traits = {  politically_connected}
+    skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander  = {
+	name = "李天霞"
+	desc = " "
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_Li_tianxia.dds"
+	traits = {  }
+    skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander  = {
+	name = "施中诚"
+	desc = " "
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_Lshi_zhongcheng.dds"
+	traits = { infantry_officer  trait_engineer}
+    skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+
+create_corps_commander  = {
+	name = "李延年"
+	desc = " "
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Li_yannian.dds"
+	traits = {  politically_connected}
+    skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander  = {
+	name = "邱行湘"
+	id = 4007
+	desc = " "
+	portrait_path = "gfx/leaders/CHIA/CHI_qiuxingxiang.dds"
+	traits = {  politically_connected}
+    skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+
+create_corps_commander  = {
+	name = "朱培德"
+	id = 3680
+	desc = "POLITICS_ZPD_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_zhu_peide.dds"
+	traits = {infantry_officer skilled_staffer organizer  }
+    skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander  = {
+	name = "程潜"
+	id = 4000
+	desc = "POLITICS_CQQ_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_Cheng_Qian.dds"
+	traits = {  career_officer}
+    skill = 3
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_field_marshal  = {
+	name = "陈调元"
+	id = 3682
+	desc = "POLITICS_CDY_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_Chen_Diaoyuan.dds"
+	traits = {  }
+    skill = 1
+    attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_field_marshal  = {
+	name = "陈诚"
+	desc = "POLITICS_CCC_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_Chen_Cheng.dds"
+	traits = { trait_reckless infantry_officer }
+    skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_field_marshal  = {
+	name = "顾祝同"
+	desc = "POLITICS_GZT_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_Gu_Zhutong.dds"
+	traits = { career_officer infantry_officer }
+    skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander  = {
+	name = "朱绍良"
+	desc = "POLITICS_ZSL_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_Zhu_Shaoliang.dds"
+	traits = { organizer }
+    skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 3
+}
+
+create_corps_commander  = {
+	name = "周至柔"
+	desc = "POLITICS_ZZR_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_Zhou_Zhirou.dds"
+	traits = { logistics_wizard }
+    skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander  = {
+	name = "徐庭瑶"
+	desc = " "
+	portrait_path = "gfx/leaders/CHIA/CHI_xu_tingyao.dds"
+	traits = { combined_arms_expert  panzer_leader armor_officer }
+    skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander  = {
+	name = "徐永昌"
+	desc = "POLITICS_XYC_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_Xu_Yongchang.dds"
+	traits = { decided_planner }
+    skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_field_marshal  = {
+	name = "薛岳"
+	desc = "POLITICS_XYY_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_Xue_Yue.dds"
+	traits = { offensive_doctrine trait_reckless infantry_officer brilliant_strategist war_hero  urban_assault_specialist }
+    skill = 5
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "胡琏"
+	desc = "POLITICS_HLH_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_Hu_Lian.dds"
+	traits = { huangpu_junxiao  brilliant_strategist  infantry_officer}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander  = {
+	name = "陈大庆"
+	desc = "POLITICS_CDQ_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_Chen_Daqing.dds"
+	traits = {  brilliant_strategist }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander  = {
+	name = "郑介民"
+	desc = "POLITICS_ZJM_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_zheng_jiemin.dds"
+	traits = {   }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+
+create_corps_commander  = {
+	name = "黄杰"
+	desc = "POLITICS_HJJ_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_huang_jie.dds"
+	traits = {  politically_connected  brilliant_strategist infantry_officer}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander  = {
+	name = "黄镇球"
+	desc = "POLITICS_HZQ_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_huang_zhenqiu.dds"
+	traits = {   }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_field_marshal  = {
+	name = "蒋鼎文"
+	desc = "POLITICS_JDW_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_jiang_dingwen.dds"
+	traits = {   }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 1
+}
+
+create_corps_commander  = {
+	name = "李烈钧"
+	desc = "POLITICS_LLJ_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_li_liejun.dds"
+	traits = { trait_reckless  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+
+create_field_marshal  = {
+	name = "张治中"
+	id = 4011
+	desc = "POLITICS_ZZZ_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_Zhang_Zhizhong.dds"
+	traits = { infantry_officer   career_officer     bearer_of_artillery   }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander  = {
+	name = "刘峙"
+	desc = "POLITICS_LZZ_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_liu_zhi.dds"
+	traits = {  old_guard  politically_connected}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander  = {
+	name = "胡宗南"
+	desc = "POLITICS_HZN_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_Hu_Zongnan.dds"
+	traits = {   huangpu_junxiao infantry_officer politically_connected     }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+
+create_corps_commander  = {
+	name = "孙连仲"
+	desc = "POLITICS_SLZ_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_Sun_Lianzhong.dds"
+	traits = { infantry_officer career_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+
+
+create_field_marshal  = {
+	name = "罗卓英"
+	desc = "POLITICS_LZY_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_Luo_Zuoying.dds"
+	traits = {infantry_officer armor_office war_hero   trait_engineer  }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
+	
+}
+
+create_corps_commander = {
+	name = "卫立煌"
+	id = 4004
+	desc = "POLITICS_WLH_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_Wei_Lihuang.dds"
+	traits = { infantry_officer infantry_leader infantry_expert  trait_engineer}
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+
+create_corps_commander  = {
+	name = "钱大均"
+	desc = "POLITICS_QDJ_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_qian_dajun.dds"
+	traits = { thorough_planner  }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+
+
+create_corps_commander  = {
+	name = "王耀武"
+	id = 4002
+	desc = "POLITICS_WYW_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_wang_yaowu.dds"
+	traits = {  huangpu_junxiao career_officer     infantry_officer  inflexible_strategist  trickster   }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_corps_commander  = {
+	name = "蒋百里" 
+	id = 3681
+	desc = "POLITICS_JBL_DESC"
+	#蒋百里（1882－1938），男，名方震，1882年出生，浙江杭州府海宁州硖石镇（今嘉兴市海宁市硖石镇）人，是清末秀才、民国时期著名军事理论家、军事教育家。
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_jiang_baili.dds"
+	traits = {  skilled_staffer career_officer    brilliant_strategist expert_improviser }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander  = {
+	name = "鹿钟麟"
+	desc = "POLITICS_LZL_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_lu_zhonglin.dds"
+	traits = {  career_officer  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+
+create_corps_commander  = {
+	name = "龙文章"
+	desc = "POLITICS_LWZ_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_long_wenzhang.dds"
+	traits = {  infantry_officer  trait_reckless }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander  = {
+	name = "谢晋元" 
+	desc = "POLITICS_XJY_DESC"
+    #谢晋元（1905－1941），字中民，汉族，广东梅州蕉岭县人。著名抗日英雄，淞沪会战中率“八百壮士”死守上海四行仓库，鼓舞了人民的抗战热情，被国民政府授予抗战最高荣誉奖章“青天白日勋章”（第69号）1941年4月24日被汪精卫收买的叛徒刺杀身亡。
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_xie_jinyuan.dds"
+	traits = {  huangpu_junxiao infantry_officer  war_hero trait_reckless }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+
+create_corps_commander = {
+	name = "高致嵩"
+	desc = "POLITICS_GZS_DESC"
+	portrait_path = "gfx/leaders/CHIA/CHI_q.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "韩宪元"
+	desc = "POLITICS_HXY_DESC"
+	portrait_path = "gfx/leaders/CHIA/CHI_w.dds"
+	traits = { infantry_officer }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "黄百韬"
+	desc = "POLITICS_HBT_DESC"
+	portrait_path = "gfx/leaders/CHIA/CHI_e.dds"
+	traits = { infantry_officer     trait_reckless career_officer }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+
+create_corps_commander = {
+	name = "黄梅兴"
+	desc = "POLITICS_HMX_DESC"
+	portrait_path = "gfx/leaders/CHIA/CHI_r.dds"
+	traits = {harsh_leader  }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+
+create_corps_commander = {
+	name = "黄维"
+	id = 4003
+	desc = "POLITICS_HWW_DESC"
+	portrait_path = "gfx/leaders/CHIA/CHI_t.dds"
+	traits = {trait_reckless     huangpu_junxiao  shudaizi_huangwei   shudaizi_huangwei  old_guard  }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+
+create_corps_commander = {
+	name = "赖传湘"
+	desc = "POLITICS_LCX_DESC"
+	portrait_path = "gfx/leaders/CHIA/CHI_y.dds"
+	traits = {  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+
+create_corps_commander = {
+	name = "覃异之"
+	desc = "POLITICS_TYZ_DESC"
+	portrait_path = "gfx/leaders/CHIA/CHI_u.dds"
+	traits = { trait_engineer huangpu_junxiao }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+
+
+create_corps_commander = {
+	name = "陈明仁"
+	id = 4012
+	desc = "POLITICS_CMR_DESC"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chen_MR.dds"
+	traits = { huangpu_junxiao  organizer  }
+	skill= 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "刘戡"
+	desc = "POLITICS_LCC_DESC"
+	portrait_path = "gfx/leaders/CHIA/CHI_i.dds"
+	traits = {     }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "刘震东"
+	desc = "POLITICS_LZD_DESC"
+	portrait_path = "gfx/leaders/CHIA/CHI_o.dds"
+	traits = { politically_connected     }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 1
+}
+
+
+create_corps_commander = {
+	name = "邱清泉"
+	desc = "POLITICS_QQQ_DESC"
+	portrait_path = "gfx/leaders/CHIA/CHI_p.dds"
+	traits = {  huangpu_junxiao   armor_officer panzer_leader    }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+
+create_corps_commander = {
+	name = "司徒非"
+	desc = "POLITICS_STF_DESC"
+	portrait_path = "gfx/leaders/CHIA/CHI_a.dds"
+	traits = {     }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "曾锡珪"
+	desc = "POLITICS_ZXG_DESC"
+	portrait_path = "gfx/leaders/CHIA/CHI_s.dds"
+	traits = { career_officer   fujiniya_junxiao    }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "宋希濂"
+	id = 4005
+	desc = "POLITICS_SXL_DESC"
+	portrait_path = "gfx/leaders/CHIA/CHI_d.dds"
+	traits = {  infantry_officer  huangpu_junxiao  ranger  trait_mountaineer    }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "邱维达"
+	desc = " "
+	portrait_path = "gfx/leaders/CHIA/CHI_qiu_weida.dds"
+	traits = {    huangpu_junxiao   }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "俞济时"
+	desc = " "
+	portrait_path = "gfx/leaders/CHIA/CHI_yu_jishi.dds"
+	traits = {    huangpu_junxiao   }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "吴鸢"
+	desc = " "
+	portrait_path = "gfx/leaders/CHIA/CHI_wu_yuan.dds"
+	traits = {    }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "蔡仁杰"
+	desc = " "
+	portrait_path = "gfx/leaders/CHIA/CHI_cai_renjie.dds"
+	traits = {    }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "王奎昌"
+	desc = " "
+	portrait_path = "gfx/leaders/CHIA/CHI_wuang_kuiochuang.dds"
+	traits = { huangpu_junxiao   }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "陈传钧"
+	desc = " "
+	portrait_path = "gfx/leaders/CHIA/CHI_chen_chuanjun.dds"
+	traits = { huangpu_junxiao   }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "陈啸云"
+	desc = " "
+	portrait_path = "gfx/leaders/CHIA/CHI_chen_xiaoyun.dds"
+	traits = { huangpu_junxiao   }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "李仙洲"
+	id = 4009
+	desc = "POLITICS_SXL_DESC"
+	portrait_path = "gfx/leaders/CHIA/CHI_lixianzhou.dds"
+	traits = {  infantry_officer  huangpu_junxiao  ranger  trait_mountaineer    }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "范汉杰"
+	id = 4010
+	desc = "POLITICS_FHJ_DESC"
+	portrait_path = "gfx/leaders/CHIA/CHI_fanhanjie.dds"
+	traits = {  infantry_officer  huangpu_junxiao  ranger  trait_mountaineer    }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "武士敏"
+	desc = "POLITICS_WSM_DESC"
+	portrait_path = "gfx/leaders/CHIA/CHI_g.dds"
+	traits = { media_personality   }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+
+create_corps_commander = {
+	name = "萧山令"
+	desc = "POLITICS_XSL_DESC"
+	portrait_path = "gfx/leaders/CHIA/CHI_h.dds"
+	traits = { politically_connected  career_officer   }
+	id = 0001
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "姚中英"
+	desc = "POLITICS_YZY_DESC"
+	portrait_path = "gfx/leaders/CHIA/CHI_j.dds"
+	traits = { }
+	id = 0002
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "易安华"
+	desc = "POLITICS_YAH_DESC"
+	portrait_path = "gfx/leaders/CHIA/CHI_k.dds"
+	traits = { }
+	id = 0003
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+
+create_corps_commander = {
+	name = "郑洞国"
+	id = 4013
+	desc = "POLITICS_DDG_DESC"
+	portrait_path = "gfx/leaders/CHIA/CHI_l.dds"
+	traits = {  huangpu_junxiao  career_officer bearer_of_artillery  }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+
+create_corps_commander = {
+	name = "朱赤"
+	desc = "POLITICS_ZCC_DESC"
+	portrait_path = "gfx/leaders/CHIA/CHI_z.dds"
+	traits = { }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+
+create_corps_commander = {
+	name = "余程万"
+	desc = "POLITICS_YCW_DESC"
+	portrait_path = "gfx/leaders/CHIA/CHI_x.dds"
+	traits = {trait_engineer urban_assault_specialist   }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+
+create_corps_commander = {
+	name = "方先觉"
+	desc = "POLITICS_FXJ_DESC"
+	portrait_path = "gfx/leaders/CHIA/CHI_c.dds"
+	traits = {infantry_officer  huangpu_junxiao urban_assault_specialist   }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+
+create_navy_leader = {
+	name = "陈绍宽"
+	id = 4014
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_chen_shaokuan.dds"
+	traits = { air_controller }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+
+
+create_navy_leader  = {
+	name = "桂永清"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_gui_yongqing.dds"
+	traits = {naval_lineage  }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+	
+}
+
+
+create_navy_leader  = {
+	name = "黎玉玺"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_li_yuxi.dds"
+	traits = { naval_lineage }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+
+
+create_navy_leader  = {   #萨镇冰 （闽东语拼音：s'ak d'heing bing；1859—1952年），字鼎铭。祖籍山西代县，出身于福建福州，著名的色目人萨氏家族。中国近代著名的海军将领。萨镇冰先后担任过清朝的海军统制（总司令）、民国海军总长等重要军职，还曾代理过国务总理。
+	name = "萨镇冰"       #1951年，中国人民志愿军在抗美援朝战争第三次战役后打进了汉城，萨镇冰得知此事，回想起57年前的甲午悲歌，当即作诗一首：五十七载犹如梦，举国沦亡缘汉城，龙游浅水勿自弃，终有扬眉吐气天。
+	id = 4015
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_sa_zhenbing.dds"
+	traits = {naval_lineage  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+
+
+create_navy_leader  = {
+	name = "陈策"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_chen_ce.dds"
+	traits = { naval_lineage }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+
+
+create_navy_leader  = {
+	name = "陈季良"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_chen_jiliang.dds"
+	traits = { naval_lineage }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+
+
+create_navy_leader  = {
+	name = "欧阳格"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_o_yangge.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+
+
+create_navy_leader  = {
+	name = "陈鸣铮"
+	portrait_path = "gfx/leaders/CHIA/CHI_v.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+
+create_navy_leader  = {
+	name = "陈训泳"
+	portrait_path = "gfx/leaders/CHIA/CHI_b.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+
+create_navy_leader  = {
+	name = "冯啟聪"
+	portrait_path = "gfx/leaders/CHIA/CHI_n.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader  = {
+	name = "李庆文"
+	portrait_path = "gfx/leaders/CHIA/CHI_m.dds"
+	traits = { superior_tactician  naval_lineage }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader  = {
+	name = "李世甲"
+	portrait_path = "gfx/leaders/CHIA/CHI_wq.dds"
+	traits = {  naval_lineage }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader  = {
+	name = "梁序昭"
+	portrait_path = "gfx/leaders/CHIA/CHI_ww.dds"
+	traits = {  naval_lineage }
+	skill = 1attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader  = {
+	name = "林建章"
+	portrait_path = "gfx/leaders/CHIA/CHI_we.dds"
+	traits = { blockade_runner  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader  = {
+	name = "林元铨"
+	portrait_path = "gfx/leaders/CHIA/CHI_wr.dds"
+	traits = { fly_swatter   }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+
+create_navy_leader  = {
+	name = "刘广凯"
+	portrait_path = "gfx/leaders/CHIA/CHI_wt.dds"
+	traits = {    }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader  = {
+	name = "萨师俊"  #萨师俊（1895年—1938年），字翼仲，是中华民国海军军官，生于清朝福建省福州府闽县（今福州市市区）的雁门萨氏家族，以中华民国海军中校军衔担任中山舰舰长，1938年10月24日在指挥中山舰参加中国抗日战争的武汉会战时阵亡于长江江面上，时年43岁。是抗战中阵亡军衔最高的中华民国海军军官，后被追授海军上校军衔，进灵中华民国忠烈祠，中国国民党和共产党两方都对其赞誉有加。
+	portrait_path = "gfx/leaders/CHIA/CHI_wy.dds"
+	id = 100001
+	traits = {  naval_lineage  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	maneuvering_skill = 2
+	coordination_skill = 1
+}
+
+
+create_navy_leader  = {
+	name = "宋长志"
+	portrait_path = "gfx/leaders/CHIA/CHI_wu.dds"
+	traits = {  fly_swatter  superior_tactician    }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	maneuvering_skill = 1
+	coordination_skill = 2
+}
+
+
+create_navy_leader  = {
+	name = "邓兆祥"
+	id = 4016
+	portrait_path = "gfx/leaders/CHIA/CHI_wi.dds"
+	traits = {      }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	create_operative_leader = {
+		name = "毛人凤"
+		portrait_path = "gfx/leaders/CHIA/CHI_mao_renfeng.dds"
+		traits = { operative_infiltrator }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { CHI }
+	}
+
+	create_operative_leader = { 
+		name = "毛森"
+		portrait_path = "gfx/leaders/CHIA/CHI_mao_sen.dds"
+		traits = {operative_natural_orator  }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { CHI }
+	}
+	
+	create_operative_leader = {
+		name = "毛万里"
+		portrait_path = "gfx/leaders/CHIA/CHI_mao_wanli.dds"
+		traits = { operative_commando }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { CHI }
+	}
+	
+	create_operative_leader = {
+		name = "沈醉"
+		portrait_path = "gfx/leaders/CHIA/CHI_shen_zui.dds"
+		traits = { operative_commando }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { CHI }
+	}
+	
+	create_operative_leader = {
+		name = "向影心"
+		portrait_path = "gfx/leaders/CHIA/CHI_xiang_yinxing.dds"
+		traits = { operative_seducer }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { CHI }
+	}
+	
+}
+
+### VARIANTS ###
+# 1936 Start #
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Destroyers #
+	create_equipment_variant = {
+		name = "建威级"			
+		type = ship_hull_light_1
+		name_group = CHI_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = empty
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+	# Light Cruisers #
+	create_equipment_variant = {
+		name = "海荣级"					# Hairong protected cruisers and Zhaohe, Yingrui training cruisers
+		type = ship_hull_cruiser_coastal_defense_ship
+		name_group = CHI_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "海齐级"
+		type = ship_hull_cruiser_coastal_defense_ship
+		name_group = CHI_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "宁海级"
+		type = ship_hull_cruiser_1
+		name_group = CHI_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+}

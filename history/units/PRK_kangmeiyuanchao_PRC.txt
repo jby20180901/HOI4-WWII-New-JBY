@@ -1,0 +1,240 @@
+﻿division_template = {
+	name = "朝鲜人民军"				
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "中国人民志愿军"				
+	regiments = {
+		liberation_army = { x = 0 y = 0 }
+		liberation_army = { x = 0 y = 1 }
+		liberation_army = { x = 0 y = 2 }
+		liberation_army = { x = 0 y = 3 }
+		liberation_army = { x = 0 y = 4 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		artillery_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+		
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+	
+}
+
+
+### OOB ###
+units = {
+	
+	division = {
+		name = "朝鲜人民军第1师"
+		location = 12040
+		division_template = "朝鲜人民军"
+	}
+	division = {
+		name = "朝鲜人民军第2师"
+		location = 12040
+		division_template = "朝鲜人民军"
+	}
+	division = {
+		name = "朝鲜人民军第3师"
+		location = 12040
+		division_template = "朝鲜人民军"
+	}
+	division = {
+		name = "朝鲜人民军第4师"
+		location = 12040
+		division_template = "朝鲜人民军"
+	}
+	division = {
+		name = "朝鲜人民军第5师"
+		location = 12040
+		division_template = "朝鲜人民军"
+	}
+	
+	division = {
+		name = "中国人民志愿军第1师"
+		location = 9981
+		division_template = "中国人民志愿军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "中国人民志愿军第2师"
+		location = 9981
+		division_template = "中国人民志愿军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "中国人民志愿军第3师"
+		location = 9981
+		division_template = "中国人民志愿军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "中国人民志愿军第4师"
+		location = 9981
+		division_template = "中国人民志愿军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "中国人民志愿军第5师"
+		location = 9981
+		division_template = "中国人民志愿军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "中国人民志愿军第6师"
+		location = 848
+		division_template = "中国人民志愿军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "中国人民志愿军第7师"
+		location = 848
+		division_template = "中国人民志愿军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "中国人民志愿军第8师"
+		location = 848
+		division_template = "中国人民志愿军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "中国人民志愿军第9师"
+		location = 848
+		division_template = "中国人民志愿军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "中国人民志愿军第10师"
+		location = 11915
+		division_template = "中国人民志愿军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "中国人民志愿军第11师"
+		location = 11915
+		division_template = "中国人民志愿军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "中国人民志愿军第12师"
+		location = 11915
+		division_template = "中国人民志愿军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "中国人民志愿军第13师"
+		location = 7070
+		division_template = "中国人民志愿军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "中国人民志愿军第14师"
+		location = 7070
+		division_template = "中国人民志愿军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "中国人民志愿军第15师"
+		location = 7070
+		division_template = "中国人民志愿军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "SOV" } }
+	}
+}
+
+### STARTING PRODUCTION ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "KOR"
+		}
+		requested_factories = 1
+		progress = 0.79
+		efficiency = 100
+	}
+}

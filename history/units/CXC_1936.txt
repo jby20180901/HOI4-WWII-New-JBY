@@ -1,0 +1,55 @@
+﻿division_template = {
+	name = "川边卫戍军步兵师"
+	division_names_group = XXC_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+
+
+### OOB ###
+units = {
+	
+	division = {
+		name = "国民革命军第136师"
+		location = 4999
+		division_template = "川边卫戍军步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	
+	division = {
+		name = "国民革命军第137师"
+		location = 1918
+		division_template = "川边卫戍军步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	
+	division = {
+		name = "国民革命军第138师"
+		location = 12724
+		division_template = "川边卫戍军步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	
+}
+
+
+### STARTING PRODUCTION ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "CXC"
+		}
+		requested_factories = 1
+		progress = 0.79
+		efficiency = 100
+	}	
+}

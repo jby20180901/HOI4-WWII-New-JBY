@@ -1,0 +1,56 @@
+﻿division_template = {
+	name = "警备师"				# Represents a corps of 3 NRA divisions (2 brigades of 2 regiments each)
+									# Militia-level training and equipment
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+
+units = {
+	division = {
+		name = "李守信部第1东察哈尔警备师"
+		location = 11752
+		division_template = "警备师"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "李守信部第2东察哈尔警备师"
+		location = 11752
+		division_template = "警备师"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "李守信部第3东察哈尔警备师"
+		location = 11752
+		division_template = "警备师"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "李守信部第4东察哈尔警备师"
+		location = 11752
+		division_template = "警备师"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "李守信部第5东察哈尔警备师"
+		location = 11752
+		division_template = "警备师"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "李守信部第6东察哈尔警备师"
+		location = 11752
+		division_template = "警备师"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "李守信部第7东察哈尔警备师"
+		location = 11752
+		division_template = "警备师"
+		start_experience_factor = 0.1
+	}
+}

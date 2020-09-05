@@ -1,0 +1,103 @@
+﻿division_template = {
+	name = "东北军先锋师"
+	division_names_group = DBJ_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+	}
+	
+}
+
+
+units = {
+
+	### 东北区 ###
+	division = {
+		name = "国民革命军暂编第20师"
+		location = 1976
+		division_template = "东北军先锋师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "国民革命军暂编第22师"
+		location = 1976
+		division_template = "东北军先锋师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	
+	division = {
+		name = "国民革命军第106步兵师"
+		location = 1976
+		division_template = "东北军先锋师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "国民革命军第110步兵师"
+		location = 1976
+		division_template = "东北军先锋师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "国民革命军第125步兵师"
+		location = 1976
+		division_template = "东北军先锋师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "国民革命军第177步兵师"
+		location = 1976
+		division_template = "东北军先锋师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "国民革命军第127步兵师"
+		location = 1976
+		division_template = "东北军先锋师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "国民革命军第122步兵师"
+		location = 1976
+		division_template = "东北军先锋师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "国民革命军第124步兵师"
+		location = 1976
+		division_template = "东北军先锋师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "国民革命军第181步兵师"
+		location = 1976
+		division_template = "东北军先锋师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "国民革命军第119步兵师"
+		location = 1976
+		division_template = "东北军先锋师"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "国民革命军暂编第9师"
+		location = 1976
+		division_template = "东北军先锋师"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+}

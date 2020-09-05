@@ -1,0 +1,83 @@
+﻿division_template = {
+	name = "湘军步兵师"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+	}
+	priority = 2
+}
+
+
+### OOB ###
+units = {
+	
+	division = {
+		name = "国民革命军第122师"
+		location = 7097
+		division_template = "湘军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "国民革命军第56师"
+		location = 7097
+		division_template = "湘军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "国民革命军第83师"
+		location = 10517
+		division_template = "湘军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "国民革命军第103师"
+		location = 10517
+		division_template = "湘军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	
+	### 华南区 ###
+	division = {
+		name = "国民革命军第176师"
+		location = 12310
+		division_template = "湘军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "国民革命军第189师"
+		location = 10377
+		division_template = "湘军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "国民革命军第132师"
+		location = 13143
+		division_template = "湘军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	
+}
+
+
+### STARTING PRODUCTION ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "HNJ"
+		}
+		requested_factories = 1
+		progress = 0.79
+		efficiency = 100
+	}	
+}

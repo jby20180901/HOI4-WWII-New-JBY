@@ -1,0 +1,12 @@
+﻿
+units = {
+
+	division= {	
+		name = "德国国防军第2摩托化步兵师" 
+		location = 6282 # Stettin
+		division_template = "德国国防军摩托化步兵师"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.1
+	}
+}
+#####################

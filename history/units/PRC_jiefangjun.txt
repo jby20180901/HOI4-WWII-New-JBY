@@ -1,0 +1,171 @@
+﻿division_template = {
+	name = "解放军独立师"	
+	division_names_group = PRC_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 }
+		field_hospital = { x = 0 y = 3 }
+	}
+	priority = 5
+}
+
+division_template = {
+	name = "解放军野战纵队"	
+	regiments = {
+		auto_rifle = { x = 0 y = 0 }
+		auto_rifle = { x = 0 y = 1 }
+		auto_rifle = { x = 0 y = 2 }
+        auto_rifle = { x = 1 y = 0 }
+		auto_rifle = { x = 1 y = 1 }
+		auto_rifle = { x = 1 y = 2 }
+        auto_rifle = { x = 2 y = 0 }
+		auto_rifle = { x = 2 y = 1 }
+		auto_rifle = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+		field_hospital = { x = 0 y = 2 }
+	}
+	priority = 4
+}
+
+units = {
+
+	division = {
+		name = "解放军第1野战纵队"
+		location = 9843
+		division_template = "解放军野战纵队"
+	}
+	division = {
+		name = "解放军第2野战纵队"
+		location = 9843
+		division_template = "解放军野战纵队"
+	}
+	division = {
+		name = "解放军第3野战纵队"
+		location = 9843
+		division_template = "解放军野战纵队"
+	}
+	division = {
+		name = "解放军第4野战纵队"
+		location = 9843
+		division_template = "解放军野战纵队"
+	}
+	division = {
+		name = "解放军第5野战纵队"
+		location = 9843
+		division_template = "解放军野战纵队"
+	}
+	division = {
+		name = "解放军第6野战纵队"
+		location = 9843
+		division_template = "解放军野战纵队"
+	}
+	division = {
+		name = "解放军第7野战纵队"
+		location = 9843
+		division_template = "解放军野战纵队"
+	}
+	division = {
+		name = "解放军第8野战纵队"
+		location = 9843
+		division_template = "解放军野战纵队"
+	}
+	
+	
+	
+	division = {
+		name = "中国人民解放军独立师第1师"
+		location = 9843
+		division_template = "解放军独立师"
+	}
+	division = {
+		name = "中国人民解放军独立师第2师"
+		location = 9843
+		division_template = "解放军独立师"
+	}
+	division = {
+		name = "中国人民解放军独立师第3师"
+		location = 9843
+		division_template = "解放军独立师"
+	}
+	division = {
+		name = "中国人民解放军独立师第4师"
+		location = 9843
+		division_template = "解放军独立师"
+	}
+	division = {
+		name = "中国人民解放军独立师第5师"
+		location = 9843
+		division_template = "解放军独立师"
+	}
+	division = {
+		name = "中国人民解放军独立师第6师"
+		location = 9843
+		division_template = "解放军独立师"
+	}
+	division = {
+		name = "中国人民解放军独立师第7师"
+		location = 9843
+		division_template = "解放军独立师"
+	}
+	division = {
+		name = "中国人民解放军独立师第8师"
+		location = 9843
+		division_template = "解放军独立师"
+	}
+	division = {
+		name = "中国人民解放军独立师第9师"
+		location = 9843
+		division_template = "解放军独立师"
+	}
+	division = {
+		name = "中国人民解放军独立师第10师"
+		location = 9843
+		division_template = "解放军独立师"
+	}
+	division = {
+		name = "中国人民解放军独立师第11师"
+		location = 9843
+		division_template = "解放军独立师"
+	}
+	division = {
+		name = "中国人民解放军独立师第12师"
+		location = 9843
+		division_template = "解放军独立师"
+	}
+	division = {
+		name = "中国人民解放军独立师第13师"
+		location = 9843
+		division_template = "解放军独立师"
+	}
+	division = {
+		name = "中国人民解放军独立师第14师"
+		location = 9843
+		division_template = "解放军独立师"
+	}
+	division = {
+		name = "中国人民解放军独立师第15师"
+		location = 9843
+		division_template = "解放军独立师"
+	}
+	division = {
+		name = "中国人民解放军独立师第16师"
+		location = 9843
+		division_template = "解放军独立师"
+	}
+
+}

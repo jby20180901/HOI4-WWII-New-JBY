@@ -1,0 +1,66 @@
+﻿capital = 231 #格鲁吉亚
+
+#oob = "GER_1936"
+
+set_fuel_ratio = 0.8
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 100
+}
+
+create_country_leader = {
+	name = "格奥尔基·马尔格韦拉什维利" #法西斯
+	desc = " "
+	picture = "GEO_EAO_erji.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "米哈伊尔·萨卡什维利" #中立
+	desc = "   "
+	picture = "GEO_MIYI_HAER.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = { 
+	  
+		
+	}
+}
+
+create_country_leader = {
+	name = "爱德华·谢瓦尔德纳泽"  #民主
+	desc = " "
+	picture = "GEO_AI_DEHUA.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "兹维亚德·加姆萨胡尔季阿"  #共产
+	desc = " "
+	picture = "GEO_ZIWEI_YADE.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+		
+	}
+}
+

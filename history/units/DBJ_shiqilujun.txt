@@ -1,0 +1,94 @@
+﻿division_template = {
+	name = "十七路军步兵师"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		artillery_brigade = { x = 1 y = 0 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 
+	}
+	priority = 2
+}
+division_template = {
+	name = "十七路军步兵旅"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+	priority = 1
+}
+
+### OOB ###
+units = {
+
+	
+	division = {
+		name = "十七路军第17师"
+		location = 8049
+		division_template = "十七路军步兵师"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "CZE" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "FRA" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "CZE" } }
+	}
+	division = {
+		name = "十七路军第42师"
+		location = 8049
+		division_template = "十七路军步兵师"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "CZE" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "FRA" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "CZE" } }
+	}
+	division = {
+		name = "十七路军第49旅"
+		location = 8049
+		division_template = "十七路军步兵旅"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "CZE" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "CZE" } }
+	}
+	division = {
+		name = "十七路军第51旅"
+		location = 8049
+		division_template = "十七路军步兵旅"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "CZE" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "CZE" } }
+	}
+	division = {
+		name = "十七路军第124旅"
+		location = 8049
+		division_template = "十七路军步兵旅"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "CZE" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "CZE" } }
+	}
+	division = {
+		name = "十七路军第126旅"
+		location = 8049
+		division_template = "十七路军步兵旅"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "CZE" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "CZE" } }
+	}
+	
+	
+	
+}
+
+
+

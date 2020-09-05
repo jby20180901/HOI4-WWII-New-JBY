@@ -1,0 +1,151 @@
+﻿division_template = {
+	name = "国民掷弹兵师"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }
+	}
+	
+	priority = 6
+}
+
+units = {
+
+	### 国民掷弹兵师 ###
+	division = {
+		name = "国民掷弹兵荣誉第2师"
+		location = 11444
+		division_template = "国民掷弹兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "GER" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "GER" } }
+	}
+	division = {
+		name = "国民掷弹兵新编第11师"
+		location = 11444
+		division_template = "国民掷弹兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "GER" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "GER" } }
+	}
+	division = {
+		name = "国民掷弹兵第14师"
+		location = 11444
+		division_template = "国民掷弹兵师"
+		start_experience_factor =0.3
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "GER" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "GER" } }
+	}
+	division = {
+		name = "国民掷弹兵第25师"
+		location = 11444
+		division_template = "国民掷弹兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "GER" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "GER" } }
+	}
+	division = {
+		name = "国民掷弹兵第36师"
+		location = 11505
+		division_template = "国民掷弹兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "GER" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "GER" } }
+	}
+	division = {
+		name = "国民掷弹兵第67师"
+		location = 11505
+		division_template = "国民掷弹兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "GER" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "GER" } }
+	}
+	division = {
+		name = "国民掷弹兵第87师"
+		location = 11505
+		division_template = "国民掷弹兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "GER" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "GER" } }
+	}
+	
+	division = {
+		name = "国民掷弹兵新编第36师"
+		location = 11505
+		division_template = "国民掷弹兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "GER" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "GER" } }
+	}
+	
+	division = {
+		name = "国民掷弹兵第57师"
+		location = 9428
+		division_template = "国民掷弹兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "GER" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "GER" } }
+	}
+	
+	
+	#other
+	
+	division = {
+		name = "国民掷弹兵第58师"
+		location = 9428
+		division_template = "国民掷弹兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "GER" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "GER" } }
+	}
+	
+	division = {
+		name = "国民掷弹兵第51师"
+		location = 3499
+		division_template = "国民掷弹兵师"
+		start_experience_factor =0.3
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "GER" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "GER" } }
+	}
+	
+}

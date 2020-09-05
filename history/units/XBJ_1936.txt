@@ -1,0 +1,128 @@
+﻿division_template = {
+	name = "西北军步兵师"
+	division_names_group = XBJ_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		Broadsword_team = { x = 0 y = 1 }
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "西北军骑兵师"
+	division_names_group = XBJ_CAV_01
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+
+### OOB ###
+units = {
+	
+	###宋哲元##
+	division = {
+		name = "国民革命军第37师"
+		location = 4140 
+		division_template = "西北军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "国民革命军第38师"
+		location = 4140 
+		division_template = "西北军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "国民革命军第132师"
+		location = 4137 
+		division_template = "西北军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "国民革命军第143师"
+		location = 4140  
+		division_template = "西北军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "国民革命军骑兵第9师"
+		location = 12026 
+		division_template = "西北军骑兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	
+	### 晋冀鲁豫区 ###
+	division = {
+		name = "国民革命军第31师"
+		location = 12026
+		division_template = "西北军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "国民革命军第47师"
+		location = 12026
+		division_template = "西北军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "国民革命军第49师"
+		location = 12026
+		division_template = "西北军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "国民革命军第30师"
+		location = 12026
+		division_template = "西北军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "国民革命军第39师"
+		location = 12026
+		division_template = "西北军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "国民革命军第78师"
+		location = 7109
+		division_template = "西北军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "XBJ"
+		}
+		requested_factories = 2
+		progress = 0.55
+		efficiency = 100
+	}
+	
+}

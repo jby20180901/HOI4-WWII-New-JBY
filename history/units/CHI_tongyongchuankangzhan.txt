@@ -1,0 +1,499 @@
+﻿division_template = {
+	name = "地方整编师"
+	division_names_group = CHI_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 2 y = 3 }
+		infantry = { x = 2 y = 4 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+		infantry = { x = 3 y = 3 }
+		infantry = { x = 3 y = 4 }
+		
+	}
+	
+}
+
+
+units = {
+
+	###地方整编师 ###
+	
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 60
+		}
+		owner = ROOT
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 61
+		}
+		owner = ROOT
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 62
+		}
+		owner = ROOT
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 63
+		}
+		owner = ROOT
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 64
+		}
+		owner = ROOT
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 65
+		}
+		owner = ROOT
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 66
+		}
+		owner = ROOT
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 67
+		}
+		owner = ROOT
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 68
+		}
+		owner = ROOT
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 69
+		}
+		owner = ROOT
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 70
+		}
+		owner = ROOT
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 71
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 72
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 73
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 74
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 75
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 76
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 77
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 78
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 79
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 80
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 81
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 82
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 83
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 84
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 85
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 86
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 87
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 88
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 90
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 89
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 90
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 91
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 92
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 93
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 94
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 95
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 96
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 97
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 98
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 99
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 100
+		}
+		owner = ROOT 
+		division_template = "地方整编师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	
+	
+}

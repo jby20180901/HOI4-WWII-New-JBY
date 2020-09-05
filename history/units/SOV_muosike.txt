@@ -1,0 +1,304 @@
+﻿division_template = {
+	name = "第二坦克集团军"
+	division_names_group = SOV_ARM_01
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+		medium_armor = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 3 }
+		light_armor = { x = 0 y = 4 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 1 y = 3 }
+		motorized = { x = 1 y = 4 }
+	}
+	support = {
+		mot_recon = { x = 0 y = 0 } 	
+		maintenance_company = { x = 0 y = 1 } 	
+		signal_company = { x = 0 y = 2 } 	
+		field_hospital = { x = 0 y = 3 } 	
+	}
+	priority = 6
+}
+
+units = {
+
+	### 第二坦克集团军 ###
+	division = {
+		name = "第二坦克集团军第3装甲师"
+		location = 9243
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第二坦克集团军第1装甲师"
+		location = 9243
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第二坦克集团军第2装甲师"
+		location = 9243
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第二坦克集团军第4装甲师"
+		location = 9243
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		
+	}
+	division = {
+		name = "第二坦克集团军第5装甲师"
+		location = 9243
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第二坦克集团军第6装甲师"
+		location = 11225
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		
+	}
+	division = {
+		name = "第二坦克集团军第7装甲师"
+		location = 11225
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第二坦克集团军第8装甲师"
+		location = 11225
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第二坦克集团军第9装甲师"
+		location = 11225
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1 
+	}
+	division = {
+		name = "第二坦克集团军第10装甲师"
+		location = 11225
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		
+	}
+	division = {
+		name = "第二坦克集团军第11装甲师"
+		location = 6338
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第二坦克集团军第12装甲师"
+		location = 6338
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第二坦克集团军第13装甲师"
+		location = 6338
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第二坦克集团军第14装甲师"
+		location = 6338
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第二坦克集团军第15装甲师"
+		location = 6338
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第二坦克集团军第16装甲师"
+		location = 9336
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第二坦克集团军第17装甲师"
+		location = 9336
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		
+	}
+	division = {
+		name = "第二坦克集团军第18装甲师"
+		location = 9336 
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		
+	}
+	division = {
+		name = "第二坦克集团军第19装甲师"
+		location = 9336
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		
+	}
+	division = {
+		name = "第二坦克集团军第20装甲师"
+		location = 9336
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		
+	}
+	division = {
+		name = "第二坦克集团军第21装甲师"
+		location = 9271
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		
+	}
+	
+	division = {
+		name = "第二坦克集团军第22装甲师"
+		location = 9271
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		
+	}
+	division = {
+		name = "第二坦克集团军第23装甲师"
+		location = 9271
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		
+	}
+	division = {
+		name = "第二坦克集团军第24装甲师"
+		location = 9271
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		
+	}
+	division = {
+		name = "第二坦克集团军第25师"
+		location = 9271
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		
+	}
+	division = {
+		name = "第二坦克集团军第26装甲师"
+		location = 11348
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		
+	}
+	division = {
+		name = "第二坦克集团军第27装甲师"
+		location = 11348
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "第二坦克集团军第28装甲师"
+		location = 11348
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	
+	division = {
+		name = "第二坦克集团军第29装甲师"
+		location = 11348
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	
+	division = {
+		name = "第二坦克集团军第30装甲师"
+		location = 11348
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		
+	}
+	
+	division = {
+		name = "第二坦克集团军第31装甲师"
+		location = 11496
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		
+	}
+	
+	division = {
+		name = "第二坦克集团军第32装甲师"
+		location = 11496
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		
+	}
+	division = {
+		name = "第二坦克集团军第33装甲师"
+		location = 11496
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		
+	}
+	division = {
+		name = "第二坦克集团军第34装甲师"
+		location = 11496
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		
+	}
+	division = {
+		name = "第二坦克集团军第35装甲师"
+		location = 11496
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		
+	}
+	division = {
+		name = "第二坦克集团军第36装甲师"
+		location = 11496
+		division_template = "第二坦克集团军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		
+	}
+	
+}

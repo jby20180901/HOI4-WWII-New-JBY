@@ -1,0 +1,472 @@
+﻿ capital = 747
+
+oob = "DBJ_1936"
+
+set_stability = 0.7
+set_war_support = 0.4
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	cavalry_tech = 1
+}
+
+add_ideas = {
+	eastasia_idea_DBJ_jiachouguohen
+	
+}
+
+add_timed_idea = {
+		idea = eastasia_idea_xiaojijiaogong
+		days = 300
+			}
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_0
+	amount = 5000
+	producer = DBJ
+}
+
+set_convoys = 0
+
+give_military_access = CHI
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 100
+}
+
+create_country_leader = { #中立
+	name = "张学良"
+	desc = "EA_POLITICS_ZHANGXUELIANG_DESC"
+	picture = "DBJ_zhangxueliang.dds"
+	expire = "9999.1.1"
+	ideology = despotism
+	traits = {
+	china_warlord
+	northeast_army_leader
+	stout_defender	
+	}
+}
+	
+create_country_leader = { #共产
+	name = "吕正操"
+	desc = " "
+	picture = "Portrait_China_Lv_ZC.dds"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+		cornered_fox
+	}
+}
+
+create_country_leader = { #法西斯
+	name = "张作相"
+	desc = " "
+	portrait_path = "gfx/leaders/DBJ/DBJ_zhangzuoxiang.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = { #民主
+	name = "吴克仁"
+	desc = " "
+	portrait_path = "gfx\leaders\CHIA/DBJ_wukeren.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+		#
+	}
+}	
+	
+create_field_marshal = {
+	name = "张学良"
+	id = 90007
+	portrait_path = "gfx/leaders/DBJ/DBJ_zhangxueliang.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	
+}
+
+
+create_corps_commander  = {
+	name = "杨虎城"
+	id = 5201
+	desc = "POLITICS_yanghucheng_DESC"
+	portrait_path = "gfx\leaders\CHIA/Portrait_China_Chiang_yang_hucheng.dds"
+	traits = {  unpopular trickster }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "吕正操"
+	desc = "POLITICS_liuzhengcao_DESC"
+	portrait_path = "gfx/leaders/PRA/Portrait_China_Lv_ZC.dds"
+	traits = {  decided_planner }
+	skill= 2
+	ttack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "王以哲"
+	id = 90014
+	portrait_path = "gfx/leaders/DBJ/DBJ_wangyizhe.dds"
+	traits = { winter_specialist }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "黄显声"
+	portrait_path = "gfx/leaders/DBJ/DBJ_huangxiansheng.dds"
+	traits = { trait_engineer   }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "于学忠"
+	portrait_path = "gfx/leaders/DBJ/DBJ_yuxuezhong.dds"
+	traits = { winter_specialist }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "孙蔚如"
+	portrait_path = "gfx\leaders\CHIA/DBJ_sunweiru.dds"
+	traits = {  infantry_officer  media_personality    }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "孙铭九"
+	portrait_path = "gfx/leaders/DBJ/DBJ_sunmingjiu.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "鲍文樾"
+	portrait_path = "gfx/leaders/DBJ/DBJ_baowenyue.dds"
+	traits = { old_guard    }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "何柱国"
+	portrait_path = "gfx/leaders/DBJ/DBJ_hezhuguo.dds"
+	traits = {  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "张学铭"
+	portrait_path = "gfx/leaders/DBJ/DBJ_zhangxueming.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "高福源"
+	id = 90015
+	portrait_path = "gfx/leaders/DBJ/DBJ_gaofuyuan.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "刘多荃"
+	portrait_path = "gfx/leaders/DBJ/DBJ_liuduoquan.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "周福成"
+	portrait_path = "gfx/leaders/DBJ/DBJ_zhoufucheng.dds"
+	traits = { politically_connected  career_officer   }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+}
+create_corps_commander = {
+	name = "常恩多"
+	portrait_path = "gfx/leaders/DBJ/DBJ_cangenduo.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "霍守义"
+	portrait_path = "gfx/leaders/DBJ/DBJ_huoshouyi.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "吴克仁"
+	portrait_path = "gfx\leaders\CHIA/DBJ_wukeren.dds"
+	traits = { bearer_of_artillery   career_officer   }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "缪澄流"
+	portrait_path = "gfx/leaders/DBJ/DBJ_liaochenliu.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "王树常"
+	portrait_path = "gfx/leaders/DBJ/DBJ_wanshucang.dds"
+	traits = {  }
+	skill = 3
+	ttack_skill = 2
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "王肇治"
+	portrait_path = "gfx/leaders/DBJ/DBJ_wanqizhi.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "张作相"
+	portrait_path = "gfx/leaders/DBJ/DBJ_zhangzuoxiang.dds"
+	traits = {  skilled_staffer  bearer_of_artillery }
+	skill= 3
+	ttack_skill = 2
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "唐君尧"
+	portrait_path = "gfx/leaders/DBJ/DBJ_tangjunyao.dds"
+	traits = {  }
+	skill = 2
+	ttack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "冯占海"
+	portrait_path = "gfx/leaders/DBJ/DBJ_fengzhanhai.dds"
+	traits = { hill_fighter   }
+	skill = 2
+	ttack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "冯钦哉"
+	portrait_path = "gfx/leaders/DBJ/DBJ_fengqingzhai.dds"
+	traits = {  }
+	skill = 2
+	ttack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "王铁汉"
+	portrait_path = "gfx/leaders/DBJ/DBJ_wantiehan.dds"
+	traits = { hill_fighter  infantry_expert  }
+	skill = 2
+	ttack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "陈大章"
+	portrait_path = "gfx/leaders/DBJ/DBJ_chendazang.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "牟中珩"
+	portrait_path = "gfx/leaders/DBJ/DBJ_mouzhongxing.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "荣子恒"
+	portrait_path = "gfx/leaders/DBJ/DBJ_rongziheng.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "胡毓坤"
+	portrait_path = "gfx/leaders/DBJ/DBJ_humingkun.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "赵寿山"
+	portrait_path = "gfx/leaders/DBJ/DBJ_zhaoshoushan.dds"
+	traits = {savenger    }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "王劲哉"
+	portrait_path = "gfx/leaders/DBJ/DBJ_wangjingzhai.dds"
+	traits = {guerilla_fighter  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "孔从洲"
+	portrait_path = "gfx/leaders/DBJ/DBJ_kongcongzhou.dds"
+	traits = { guerilla_fighter }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+	
+}
+create_corps_commander = {
+	name = "孙子坤"
+	portrait_path = "gfx/leaders/DBJ/DBJ_sunzikun.dds"
+	traits = {  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "李振西"
+	portrait_path = "gfx/leaders/DBJ/DBJ_lizhenxi.dds"
+	traits = {  }
+	sskill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "李兴中"
+	portrait_path = "gfx/leaders/DBJ/DBJ_lixingzhong.dds"
+	traits = {camouflage_expert  expert_improviser   }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "许权中"
+	portrait_path = "gfx/leaders/DBJ/DBJ_xuquanzhong.dds"
+	traits = {ambusher    }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "王玉瓒"
+	portrait_path = "gfx/leaders/DBJ/DBJ_wangyuzhan.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}

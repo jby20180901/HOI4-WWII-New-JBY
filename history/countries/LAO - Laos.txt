@@ -1,0 +1,66 @@
+﻿capital = 670
+
+#oob = "PRK_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	mass_assault = 1
+}
+
+set_convoys = 5
+
+set_politics = {
+	ruling_party = communism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	communism = 100
+}
+
+
+create_country_leader = {
+	name = "西萨旺·瓦达纳"
+	desc = ""
+	picture = "gfx/leaders/LAO/LAO_xisawa.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+		#中立
+	}
+}
+
+create_country_leader = {
+	name = "苏发努冯"
+	desc = ""
+	picture = "gfx/leaders/LAO/LAO_sufanu.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#皿煮
+	}
+}
+
+create_country_leader = {
+	name = "凯山·丰威汉"
+	desc = ""
+	picture = "gfx/leaders/LAO/LAO_kaishan.dds"
+	expire = "1965.1.1"
+	ideology = stalinism 
+	traits = {
+		#共产
+	}
+}
+
+create_country_leader = {
+	name = "西萨旺·瓦达纳"
+	desc = ""
+	picture = "gfx/leaders/LAO/LAO_xisawa.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#法西斯
+	}
+}

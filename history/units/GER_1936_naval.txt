@@ -1,0 +1,172 @@
+﻿
+units= {
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "德国海军"			
+		naval_base = 241  # Wilhemshaven
+		task_force = {				
+			name = "				"
+			location = 241  # Wilhemshaven
+			ship = { name = "德意志号" definition = heavy_cruiser  equipment = { heavy_cruiser_1 = { amount = 1 owner = GER version_name = "Deutschland Class" } } }	
+			ship = { name = "舍尔海军上将号" pride_of_the_fleet = yes definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = GER version_name = "Deutschland Class" } } }
+			ship = { name = "纽伦堡号" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER } } } 		
+			ship = { name = "莱比锡号" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER } } }		
+			ship = { name = "柯尼斯堡号" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER version_name = "Königsberg Class" } } }			
+			ship = { name = "卡尔斯鲁厄号" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER version_name = "Königsberg Class" } } }	
+			ship = { name = "科隆号" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER version_name = "Königsberg Class" } } }			
+			ship = { name = "埃姆登号" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GER } } }
+			# 1. Torpedobootflottille
+			ship = { name = "捷豹号" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+			ship = { name = "花豹号" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+			ship = { name = "山猫号" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+			ship = { name = "老虎号" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		}
+		task_force = {
+			name = "波罗的海舰队"
+			location = 6332  # Konigsberg
+			ship = { name = "石勒苏益格-荷尔斯泰因号" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GER } } }
+			ship = { name = "西里西亚号" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GER } } }		
+			# 2. Torpedobootflottille
+			ship = { name = "海鸥号" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+			ship = { name = "信天翁号" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+			ship = { name = "鱼鹰号" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+			ship = { name = "格里芬号" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+			# 3. Torpedobootflottille
+			ship = { name = "猎鹰号" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+			ship = { name = "秃鹰号" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+			ship = { name = "狼犬号" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+			ship = { name = "臭鼬号" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		}
+	}
+			
+	fleet = {
+		name = "潜艇舰队"			
+		naval_base = 6389  # Kiel
+		task_force = {
+			name = "第一潜艇分队"
+			location = 6389  # Kiel
+			# 1. Unterseebootsflottille
+			ship = { name = "U-7" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+			ship = { name = "U-8" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+			ship = { name = "U-9" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+			ship = { name = "U-10" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+			# 4. Unterseebootsflottille
+			ship = { name = "U-11" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+			ship = { name = "U-12" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+			ship = { name = "U-13" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+			ship = { name = "U-17" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		}
+		task_force = {
+			name = "第二潜艇分队"
+			location = 241  # Wilhemshaven
+			# 2. Unterseebootsflottille
+			ship = { name = "U-1" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+			ship = { name = "U-2" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+			ship = { name = "U-3" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+			# 3. Unterseebootsflottille
+			ship = { name = "U-4" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+			ship = { name = "U-5" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+			ship = { name = "U-6" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+
+	### Ships Under Contruction ###
+	# SS: Type IIA (x2) ("U-25" "U-26"), Type IIB (x6) ("U-14" "U-16" "U-18" "U-15" "U-20" "U-19")
+	add_equipment_production = {
+		equipment = {
+			type = submarine_2
+			creator = "GER" 
+		}
+		requested_factories = 1
+		progress = 0.75
+		amount = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = submarine_2
+			creator = "GER" 
+		}
+		requested_factories = 1
+		progress = 0.65
+		amount = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = submarine_2
+			creator = "GER" 
+		}
+		requested_factories = 1
+		progress = 0.55
+		amount = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = submarine_2
+			creator = "GER" 
+		}
+		requested_factories = 1
+		progress = 0.45
+		amount = 2
+	}
+	# DD: 1934 class (x4) ("Z1" "Z2" "Z3" "Z4")
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_2
+			creator = "GER"
+		}
+		requested_factories = 1
+		progress = 0.75
+		amount = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_2
+			creator = "GER"
+		}
+		requested_factories = 1
+		progress = 0.65
+		amount = 2
+	}
+	# CA: "Graf Spee"
+	add_equipment_production = {
+		equipment = {
+			type = heavy_cruiser_1
+			creator = "GER"
+			version_name = "Deutschland Class"
+		}
+		requested_factories = 1
+		progress = 0.95
+		amount = 1
+	}
+	# Scharnhorst
+	add_equipment_production = {
+		equipment = {
+			type = battleship_2
+			creator = "GER"
+		}
+		requested_factories = 1
+		progress = 0.25
+		amount = 1
+	}
+	# Gneisenau
+	add_equipment_production = {
+		equipment = {
+			type = battleship_2
+			creator = "GER"
+		}
+		requested_factories = 1
+		progress = 0.1
+		amount = 1
+	}
+}
+
+#####################

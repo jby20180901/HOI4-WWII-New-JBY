@@ -1,0 +1,311 @@
+﻿division_template = {
+	name = "国际纵队"			# International volunteers -- poor equipment, no experience (militia)
+	division_names_group = SPR_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		name = "法国-巴黎公社百人团"
+		location = 3938  # Madrid
+		division_template = "国际纵队"
+	}
+	division = {
+		name = "德国-台尔曼营"
+		location = 3938  # Madrid
+		division_template = "国际纵队"
+	}
+	division = {
+		name = "意大利-加里波第旅"
+		location = 3938  # Madrid
+		division_template = "国际纵队"
+	}
+	division = {
+		name = "美国-林肯支队"
+		location = 3938  # Madrid
+		division_template = "国际纵队"
+	}
+	division = {
+		name = "苏联-夏伯阳支队"
+		location = 3938  # Madrid
+		division_template = "国际纵队"
+	}
+
+	division = {
+		name = "中国-中国志愿军"
+		location = 9764  # Barcelona
+		division_template = "国际纵队"
+	}
+	division = {
+		name = 美国-乔治·华盛顿营"
+		location = 9764  # Barcelona
+		division_template = "国际纵队"
+	}
+	division = {
+		name = "多布洛夫斯基营"
+		location = 9764  # Barcelona
+		division_template = "国际纵队"
+	}
+	division = {
+		name = "爱德华•安德烈营"
+		location = 6906  # Valencia
+		division_template = "国际纵队"
+	}
+	division = {
+		name = "西班牙人民军国际纵队第1步兵旅"
+		location = 6906  # Valencia
+		division_template = "国际纵队"
+	}
+	division = {
+		name = 国西班牙人民军国际纵队第2步兵旅"
+		location = 6906  # Valencia
+		division_template = "国际纵队"
+	}
+	division = {
+		name = "西班牙人民军国际纵队第3步兵旅"
+		location = 10024  # Murcia
+		division_template = "国际纵队"
+	}
+	division = {
+		name = "西班牙人民军国际纵队第4步兵旅"
+		location = 10024  # Murcia
+		division_template = "国际纵队"
+	}
+	division = {
+		name = "西班牙人民军国际纵队第5步兵旅"
+		location = 10024  # Murcia
+		division_template = "国际纵队"
+	}
+	division = {
+		name = "西班牙人民军国际纵队第6步兵旅"
+		location = 9979  # Malaga
+		division_template = "国际纵队"
+	}
+	division = {
+		name = "西班牙人民军国际纵队第7步兵旅"
+		location = 9979  # Malaga
+		division_template = "国际纵队"
+	}
+	division = {
+		name = "西班牙人民军国际纵队第8步兵旅"
+		location = 9979  # Malaga
+		division_template = "国际纵队"
+	}
+	division = {
+		name = "西班牙人民军国际纵队第9步兵旅"
+		location = 3735  # Bilbao
+		division_template = "国际纵队"
+	}
+	division = {
+		name = "西班牙人民军国际纵队第10步兵旅"
+		location = 13233  # Bilbao
+		division_template = "国际纵队"
+	}
+	division = {
+		name = "西班牙人民军国际纵队第11步兵旅"
+		location = 740  # Bilbao
+		division_template = "国际纵队"
+	}
+	division = {
+		name = "西班牙人民军国际纵队第12步兵旅"
+		location = 3938  # Madrid
+		division_template = "国际纵队"
+	}
+	division = {
+		name = "西班牙人民军国际纵队第13步兵旅"
+		location = 9764  # Barcelona
+		division_template = "国际纵队"
+	}
+	division = {
+		name = "西班牙人民军国际纵队第14步兵旅"
+		location = 9764  # Barcelona
+		division_template = "国际纵队"
+	}
+	division = {
+		name = "西班牙人民军国际纵队第15步兵旅"
+		location = 9764  # Barcelona
+		division_template = "国际纵队"
+	}
+	division = {
+		name = "西班牙人民军国际纵队第16步兵旅"
+		location = 9764  # Barcelona
+		division_template = "国际纵队"
+	}
+	division = {
+		name = "西班牙人民军国际纵队第17步兵旅"
+		location = 6906  # Valencia
+		division_template = "国际纵队"
+	}
+	division = {
+		name = "西班牙人民军国际纵队第18步兵旅"
+		location = 6906  # Valencia
+		division_template = "国际纵队"
+	}
+
+	division = {
+		name = "西班牙人民军国际纵队第19步兵旅"
+		location = 3794 
+		division_template = "国际纵队"
+	}	
+
+	division = {
+		name = "西班牙人民军国际纵队第20步兵旅"
+		location = 9767
+		division_template = "国际纵队"
+	}	
+	division = {
+		name = "西班牙人民军国际纵队第21步兵旅"
+		location = 3954
+		division_template = "国际纵队"
+	}	
+	division = {
+		name = "西班牙人民军国际纵队第22步兵旅"
+		location = 3954
+		division_template = "国际纵队"
+	}	
+	division = {
+		name = "西班牙人民军国际纵队第23步兵旅"
+		location = 3954
+		division_template = "国际纵队"
+	}	
+	division = {
+		name = "西班牙人民军国际纵队第24步兵旅"
+		location = 3945 
+		division_template = "国际纵队"
+	}	
+	division = {
+		name = "西班牙人民军国际纵队第25步兵旅"
+		location = 3945 
+		division_template = "国际纵队"
+	}	
+	division = {
+		name = "西班牙人民军国际纵队第26步兵旅"
+		location = 3945 
+		division_template = "国际纵队"
+	}	
+	division = {
+		name = "西班牙人民军国际纵队第27步兵旅"
+		location = 9903 
+		division_template = "国际纵队"
+	}	
+	division = {
+		name = "西班牙人民军国际纵队第28步兵旅"
+		location = 9903 
+		division_template = "国际纵队"
+	}	
+	division = {
+		name = "西班牙人民军国际纵队第29步兵旅"
+		location = 9903 
+		division_template = "国际纵队"
+	}	
+	division = {
+		name = "西班牙人民军国际纵队第30步兵旅"
+		location = 6832  
+		division_template = "国际纵队"
+	}	
+	division = {
+		name = "西班牙人民军国际纵队第31步兵旅"
+		location = 6832  
+		division_template = "国际纵队"
+	}	
+	division = {
+		name = "西班牙人民军国际纵队第32步兵旅"
+		location = 6832  
+		division_template = "国际纵队"
+	}	
+	division = {
+		name = "西班牙人民军国际纵队第33步兵旅"
+		location = 1176  
+		division_template = "国际纵队"
+	}	
+	division = {
+		name = "西班牙人民军国际纵队第34步兵旅"
+		location = 1176  
+		division_template = "国际纵队"
+	}	
+	division = {
+		name = "西班牙人民军国际纵队第35步兵旅"
+		location = 1176  
+		division_template = "国际纵队"
+	}	
+	division = {
+		name = "西班牙人民军国际纵队第36步兵旅"
+		location = 6756 
+		division_template = "国际纵队"
+	}	
+	division = {
+		name = "西班牙人民军国际纵队第37步兵旅"
+		location = 11688
+		division_template = "国际纵队"
+	}	
+	division = {
+		name = "西班牙人民军国际纵队第38步兵旅"
+		location =738 
+		division_template = "国际纵队"
+	}	
+	division = {
+		name = "西班牙人民军国际纵队第39步兵旅"
+		location = 9703 
+		division_template = "国际纵队"
+	}	
+	division = {
+		name = "西班牙人民军国际纵队第40步兵旅"
+		location = 6749
+		division_template = "国际纵队"
+	}	
+	division = {
+		name = "西班牙人民军国际纵队第41步兵旅"
+		location = 3729 
+		division_template = "国际纵队"
+	}	
+	division = {
+		name = "西班牙人民军国际纵队第42步兵旅"
+		location = 3744
+		division_template = "国际纵队"
+	}	
+	division = {
+		name = "西班牙人民军国际纵队第43步兵旅"
+		location = 9719
+		division_template = "国际纵队"
+	}	
+
+}
+#约有几百名中国人参加了国际纵队，具体人数及成员名单不详。
+#部分华人成员：
+#谢唯进，国际纵队炮兵纵队政治委员，中国共产党旅德支部负责人，中国共产党员。
+#毕道文，国际纵队高射炮大队医官，原在英国行医（外科），大不列颠共产党员。
+#李丰宁，共和国军50师195纵队战士，英国华工，无党派。
+#张长官，国际纵队工程兵部队工程师，原法国巴黎北养古汽车制造厂工程师，法国共产党员。
+#张树声，共和国军50师195纵队指挥部交通员，原英国邮局职员，无党派。
+#张书  ，共和国军45师14纵队13营军需主任，原伦敦铁路技术员，英国共产党员。
+#刘景田，共和国军45师14纵队救护队队长，原法国巴黎北养古汽车厂技术工人，法国共产党员。
+#刘景田介绍：(1900—1953)山东潍坊昌邑刘家辛戈村人。1917年由北洋政府招为华工赴法国参加第一次世界大战。战后在法国加入共产党。1930年作为共产国际代表赴越南协助胡志明创建越南共产党，成立义安、河静地区苏维埃，与法国殖民当局和封建地主进行斗争。1937年受中共中央派遣参加“国际纵队”，与西班牙人民一起投入反法西斯战争。回国后曾任某部团长。新中国建立后，任中共-直属托儿所所长。1953年在秦皇岛疗养院病故，安葬于北京八宝山。
+#杨春荣，国际纵队14纵队步兵战士，法国工人，法国共产党员。
+#陈阿根，不详
+#其他国家成员人数：
+#法国    9000人
+#意大利  3350人
+#德国、奥地利  3000人
+#波兰    3000人
+#苏联    2000-3000人
+#美国    2800人
+#英国    2000人
+#比利时  1600人
+#捷克斯洛伐克  1500人
+#南斯拉夫王国  1500人
+#匈牙利  1500人
+#加拿大  1000人
+#丹麦、挪威、瑞典  1000人
+#爱尔兰  250人   
+#墨西哥  90人
+#其他国家 7000人左右
+#陈阿根本来是船工，他回忆说有个越南厨师躲到他工作的船上，那人会五国语言，声称要去西班牙打仗，还劝自己也参加到援助西班牙的队伍里。
+#越南厨师说自己将来还要去法国，再去苏联。后来陈阿根真的去了西班牙参加国际纵队。
+#而那个越南厨师据推测很有可能正是胡志明，这也算国际共运中的一段传奇了吧。
+#国际纵队的名人：
+#欧内斯特·米勒·海明威[（美国）、乔治·奥威尔（印度）、约瑟普·布罗兹·铁托（南斯拉夫）、亨利·诺尔曼·白求恩（加拿大）、胡志明（越南）、巴勃罗·鲁伊斯·毕加索（西班牙）
+#巴勃罗·聂鲁达（智利）、阿尔贝·加缪（法国）

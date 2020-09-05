@@ -1,0 +1,99 @@
+division_template = {
+	name = "华北方面军（1937年）" 			# (Square) Infantry Division - 4 infantry regiments (3k men each), 1 field artillery regiment - abstracted into infantry,
+	division_names_group = JAP_INF_01
+									# 1 engineering regiment, 1 recon regiment
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }
+		artillery_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+		artillery_brigade = { x = 2 y = 2 }
+		artillery_brigade = { x = 2 y = 3 }
+		cavalry = { x = 2 y = 4 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+		kanto_army = { x = 4 y = 0 }
+		kanto_army = { x = 4 y = 1 }
+		kanto_army = { x = 4 y = 2 }
+		kanto_army = { x = 4 y = 3 }
+		
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		logistics_company = { x = 0 y = 1 }
+		signal_company = { x = 0 y = 2 }
+		maintenance_company = { x = 0 y = 3 }
+	}
+}
+
+units = {
+
+division = { 
+		name = "日本华北方面军第5师团"
+		location = 9843 
+		division_template = "华北方面军（1937年）"
+		start_experience_factor = 0.3
+	}
+division = { 
+		name = "日本华北方面军第109师团"
+		location = 10068 
+		division_template = "华北方面军（1937年）"
+		start_experience_factor = 0.3
+	}
+division = { 
+		name = "中国驻屯混成第11旅团"
+		location = 11761 
+		division_template = "华北方面军（1937年）"
+		start_experience_factor = 0.3
+	}
+division = { 
+		name = "日本华北方面军第6师团"
+		location = 1134 
+		division_template = "华北方面军（1937年）"
+		start_experience_factor = 0.3
+	}
+	
+division = { 
+		name = "日本华北方面军第14师团"
+		location = 11996 
+		division_template = "华北方面军（1937年）"
+		start_experience_factor = 0.3
+	}
+	
+	
+division = { 
+		name = "日本华北方面军第20师团"
+		location = 1169 
+		division_template = "华北方面军（1937年）"
+		start_experience_factor = 0.3
+	}
+division = { 
+		name = "日本华北方面军第4师团"
+		location = 12062 
+		division_template = "华北方面军（1937年）"
+		start_experience_factor = 0.3
+	}
+division = { 
+		name = "日本华北方面军第16师团"
+		location = 9843 
+		division_template = "华北方面军（1937年）"
+		start_experience_factor = 0.3
+	}
+division = { 
+		name = "日本华北方面军第108师团"
+		location = 10068 
+		division_template = "华北方面军（1937年）"
+		start_experience_factor = 0.3
+	}
+	
+	
+}

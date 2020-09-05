@@ -1,0 +1,282 @@
+﻿division_template = {
+	name = "西班牙国民军"
+	division_names_group = SPAN_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		name = "西班牙国民军第1步兵师"
+		location = 11838  # Western Aragon
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第2步兵师"
+		location = 9840  # Western Aragon
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第49步兵师"
+		location = 9840  # Western Aragon
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第3步兵师"
+		location = 6901  # Western Aragon
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第4步兵师"
+		location = 3816  # Western Aragon
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第50步兵师"
+		location = 3816  # Western Aragon
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第5步兵师"
+		location = 11737  # Western Aragon
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第6步兵师"
+		location = 7213  # Western Aragon
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第51步兵师"
+		location = 7213  # Western Aragon
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第7步兵师"
+		location = 9812  # Western Aragon
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第8步兵师"
+		location = 948  # Western Aragon
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第9步兵师"
+		location = 813  # Western Aragon
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第10步兵师"
+		location = 11766  # Burgos
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第11步兵师"
+		location = 3859  # Burgos
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第12步兵师"
+		location = 11806  # Valladolid
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第13步兵师"
+		location = 13227  # Valladolid
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第14步兵师"
+		location = 3820  # Valladolid
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第15步兵师"
+		location = 9827  # Valladolid
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第16步兵师"
+		location = 9846  # Valladolid
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第17步兵师"
+		location = 3874  # Salamanca
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第52步兵师"
+		location = 3874  # Salamanca
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第18步兵师"
+		location = 794  # Salamanca
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第19步兵师"
+		location = 11756  # Extremadura
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第20步兵师"
+		location = 9917  # Extremadura
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第21步兵师"
+		location = 11780  # Extremadura
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第22步兵师"
+		location = 985  # Extremadura
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第23步兵师"
+		location = 6948  # Extremadura
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第24步兵师"
+		location = 3810  # Cordoba
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第25步兵师"
+		location = 3871  # Cordoba
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第26步兵师"
+		location = 950  # Cordoba
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第27步兵师"
+		location = 12083  # Cordoba
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第28步兵师"
+		location = 1192  # Cordoba
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第29步兵师"
+		location = 4095  # Cordoba
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第30步兵师"
+		location = 1090  # Cordoba
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第31步兵师"
+		location = 7198  # Cordoba
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第31步兵师"
+		location = 4182  # Sevilla
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第32步兵师"
+		location = 13231  # Sevilla
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第33步兵师"
+		location = 10094  # Sevilla
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第34步兵师"
+		location = 3737  # Navarra
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第35步兵师"
+		location = 3933  # Navarra
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第36步兵师"
+		location = 932  # Navarra
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第37步兵师"
+		location = 3902  # Burgos
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第38步兵师"
+		location = 11852  # Burgos
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第39步兵师"
+		location = 13220  # Burgos
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第40步兵师"
+		location = 11854  # Burgos
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第41步兵师"
+		location = 9700  # Valladolid
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第42步兵师"
+		location = 11684  # Valladolid
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第43步兵师"
+		location = 9699  # Leon
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第44步兵师"
+		location = 726  # Leon
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第45步兵师"
+		location = 13219  # Leon
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第46步兵师"
+		location = 11843  # Leon
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第47步兵师"
+		location = 729  # Galicia
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第48步兵师"
+		location = 6764  # Galicia
+		division_template = "西班牙国民军"
+	}
+	division = {
+		name = "西班牙国民军第53步兵师"
+		location = 7183  # Sevilla
+		division_template = "西班牙国民军"
+	}
+}

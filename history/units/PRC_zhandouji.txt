@@ -1,0 +1,11 @@
+﻿
+air_wings = {
+
+	618 = { 
+		
+		cv_CAS_equipment_1 =  {
+			owner = "PRC" 
+			amount = 100
+		}
+	}
+}

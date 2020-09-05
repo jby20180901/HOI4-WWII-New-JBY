@@ -1,0 +1,34 @@
+state={
+	id=798
+	name="STATE_798"
+	manpower=3506200
+	resources={
+		steel=2
+	}
+	history={
+		owner = PRC
+		add_core_of = PRC
+		add_core_of = CHI
+		add_core_of = PRC
+		victory_points = {
+			7659 2 
+		}
+
+		
+		
+		victory_points = {
+			10880 1 
+		}
+		
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+	}
+	provinces={
+		1458 7314 7659 10880 
+	}
+	state_category=city
+	
+	buildings_max_level_factor=1.000
+}
