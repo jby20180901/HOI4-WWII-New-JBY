@@ -1,9 +1,0 @@
-spriteTypes = {
-
-	####### China #######
-	spriteType = {
-		name = "GFX_CHI_Qiu_qingquan"
-		textureFile = "gfx/leaders/CHI/Portrait_China_Generic_land_Qiu_Qingquan.dds"
-	}	
-	
-}

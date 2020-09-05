@@ -1,6 +1,0 @@
-princess_China_Empire = {
-	icon = generic_prospect_for_resources
-	available = {
-		princess_is_Chinese_culture = yes
-	}
-}

@@ -1,8 +1,0 @@
-opinion_modifiers = {
-
-	national_revolt = { #special used for civil wars that are on hold and blocks faction stuff
-		value = -70
-		months = 12
-		decay = 2
-	}
-}

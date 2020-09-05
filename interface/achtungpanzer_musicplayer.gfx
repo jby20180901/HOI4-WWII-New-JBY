@@ -1,9 +1,0 @@
-spriteTypes = {
-
-	spriteType = {
-		name = "GFX_achtungpanzer_album_art"
-		texturefile = "gfx//interface//topbar//musicplayer//achtungpanzer_album_art.dds"
-		noOfFrames = 2
-	}
-
-}

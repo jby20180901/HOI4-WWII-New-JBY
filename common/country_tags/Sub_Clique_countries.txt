@@ -1,3 +1,0 @@
-
-DGS = "countries/Dunganistan.txt"
-

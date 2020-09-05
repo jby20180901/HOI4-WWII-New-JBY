@@ -1,6 +1,0 @@
-ENG_Intervene_persian = {
-	icon = generic_independence
-	allowed = {
-		original_tag = ENG
-	}
-}
