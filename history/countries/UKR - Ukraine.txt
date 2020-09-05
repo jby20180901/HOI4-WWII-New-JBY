@@ -1,0 +1,66 @@
+﻿capital = 202 #基辅
+
+#oob = "GER_1936"
+
+set_fuel_ratio = 0.8
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 100
+}
+
+create_country_leader = {
+	name = "格奥尔基·皮达可夫" #法西斯
+	desc = " "
+	picture = "UKR_PIDA_KEFU.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "拉扎尔·卡冈诺维奇" #中立
+	desc = "   "
+	picture = "UKR_kagang_nuoweiqi.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = { 
+	  
+		
+	}
+}
+
+create_country_leader = {
+	name = "列昂尼德·克拉夫丘克"  #民主
+	desc = " "
+	picture = "UKR_KELAFU_QIUKE.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "尼基塔·赫鲁晓夫"  #共产
+	desc = " "
+	picture = "UKR_HELU_XIAOFU.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+		
+	}
+}
+

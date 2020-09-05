@@ -1,0 +1,63 @@
+﻿units = {
+  fleet = {
+    name = "罗马尼亚舰队"
+    naval_base = 657
+    task_force = {
+      name = "罗马尼亚舰队"
+      location = 657
+      ship = {
+        name = "NMS 马拉什蒂"
+        definition = destroyer
+        equipment = {
+          destroyer_1 = {
+            amount = 1
+            owner = ROM
+          }
+        }
+      }
+      ship = {
+        name = "NMS 默勒谢什蒂"
+        definition = destroyer
+        equipment = {
+          destroyer_1 = {
+            amount = 1
+            owner = ROM
+          }
+        }
+      }
+      ship = {
+        name = "NMS 斐迪南国王"
+        definition = destroyer
+        equipment = {
+          destroyer_1 = {
+            amount = 1
+            owner = ROM
+            version_name = "斐迪南国王级"
+          }
+        } 
+      }
+      ship = {
+        name = "NMS 里贾纳"
+        definition = destroyer
+        equipment = {
+          destroyer_1 = {
+            amount = 1
+            owner = ROM
+            version_name = "斐迪南国王级"
+          }
+        }
+      }
+    }
+  }
+}
+instant_effect = {
+  add_equipment_production = {
+    equipment = {
+      type = submarine_1
+      creator = "ROM"
+    }
+    requested_factories = 1
+    progress = 0.50
+    amount = 1
+  }
+}

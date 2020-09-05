@@ -1,0 +1,57 @@
+﻿division_template = {
+	name = "德国国防军装甲师(DAK)" 			
+	
+	regiments = {
+
+		medium_armor = { x = 0 y = 0 } #三号
+		medium_armor = { x = 0 y = 1 } #三号
+		medium_armor = { x = 0 y = 2 } #四号
+	
+		
+		medium_armor = { x = 1 y = 0 } #三号
+		medium_armor = { x = 1 y = 1 } #三号
+		medium_armor = { x = 1 y = 2 } #四号
+	
+
+		motorized = { x = 2 y = 0 }
+
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+		
+		motorized = { x = 3 y = 0 }
+		motorized = { x = 3 y = 1 }
+		motorized = { x = 3 y = 2 }
+		
+		mot_artillery_brigade = { x = 4 y = 0 }	
+		mot_artillery_brigade = { x = 4 y = 1 }	
+		mot_anti_tank_brigade =  { x = 4 y = 2 }
+	}
+	support = {
+		mot_recon = { x = 0 y = 0 } 	
+		maintenance_company = { x = 0 y = 1 } 	
+		signal_company = { x = 0 y = 2 } 	
+		field_hospital = { x = 0 y = 3 } 	
+		engineer = { x = 0 y = 4 } 	
+		logistics_company = { x = 0 y = 5 } 
+	}
+	priority = 2
+}
+
+units = {
+
+	division= {	
+		name = "德国国防军第15装甲师" 
+		location = 1149
+		division_template = "德国国防军装甲师(DAK)"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "德国国防军第21装甲师" 
+		location = 1149
+		division_template = "德国国防军装甲师(DAK)"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.5
+	}
+}
+#####################

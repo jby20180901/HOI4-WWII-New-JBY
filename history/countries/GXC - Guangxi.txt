@@ -1,0 +1,321 @@
+﻿capital = 594
+
+oob = "GXC_1936"
+
+set_stability = 0.6
+set_war_support = 0.4
+
+set_technology = {
+    faxie_army_0 = 1
+	infantry_weapons = 1
+	cavalry_tech = 1
+	tech_support = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	
+}
+		
+add_ideas = {
+	Chinese_Warlord
+	GXC_Iron_will
+	GXC_Guangxi_economy
+	GXC_Militia_system
+	GXC_Baojia_system
+	GXC_Japanese_consultant
+	 YXC_30
+}
+
+give_military_access = YXC
+
+add_opinion_modifier = { target = YXC modifier = Relationship_improvement }
+add_opinion_modifier = { target = FRA modifier = Relationship_improvement }
+
+diplomatic_relation = { country = FRA relation = non_aggression_pact }
+	
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 100
+}
+
+
+create_country_leader = {
+	name = "李宗仁"
+	desc = "POLITICS_LI_ZONGREN_DESC"
+	picture = "gfx/leaders/CHIA/Portrait_China_Chiang_Li_Zongren.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		china_warlord
+		new_guangxi_clique_leader
+	}
+}
+create_country_leader = {
+	name = "张淦"
+	desc = " "
+	portrait_path = "gfx/leaders/GXC/Portrait_China_Chiang_zhang_gan.dds"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+		
+	}
+}
+create_country_leader = {
+	name = "白崇禧"
+	desc = " "
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_Bai_Chongxi.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "黄绍竑"
+	desc = " "
+	portrait_path = "gfx/leaders/GXC/Portrait_China_Chiang_huang_shaohong.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+
+create_field_marshal  = {
+	name = "白崇禧"
+	portrait_path = "gfx/leaders/CHIA/Portrait_China_Chiang_Bai_Chongxi.dds"
+	traits = {organizer  skilled_staffer trickster  infantry_officer  infantry_expert  }
+    skill = 4
+    attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 4
+}
+
+create_field_marshal  = {
+	name = "黄绍竑"
+	portrait_path = "gfx/leaders/GXC/Portrait_China_Chiang_huang_shaohong.dds"
+	traits = {infantry_officer }
+    skill = 2
+    attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander   = {
+	name = "贺维珍"
+	portrait_path = "gfx/leaders/GXC/Portrait_China_Chiang_he_weizhen.dds"
+	traits = {old_guard }
+    skill = 2
+    attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_field_marshal = {
+	name = "黄旭初"
+	portrait_path = "gfx/leaders/GXC/Portrait_China_Chiang_huang_xuchu.dds"
+	traits = {old_guard  politically_connected}
+    skill = 2
+    attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander   = {
+	name = "黎行恕"
+	portrait_path = "gfx/leaders/GXC/Portrait_China_Chiang_li_xignshu.dds"
+	traits = {infantry_officer career_officer}
+    skill = 3
+    attack_skill = 1
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander  = {
+	name = "刘士毅"
+	portrait_path = "gfx/leaders/GXC/Portrait_China_Chiang_liu_shiyi.dds"
+	traits = {  brilliant_strategist  politically_connected career_officer}
+	skill = 3
+	ttack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander  = {
+	name = "苏祖罄"
+	portrait_path = "gfx/leaders/GXC/Portrait_China_Chiang_su_zuqing.dds"
+	traits = { harsh_leader  old_guard}
+	skill = 2
+	ttack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander  = {
+	name = "刘斐"
+	portrait_path = "gfx/leaders/GXC/Portrait_China_liu_fei.dds"
+	traits = {brilliant_strategist career_officer infantry_officer thorough_planner }
+	skill = 3
+	ttack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander  = {
+	name = "王赞斌"
+	portrait_path = "gfx/leaders/GXC/Portrait_China_Chiang_wang_zanbin.dds"
+	traits = { }
+	skill = 2
+	ttack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander  = {
+	name = "张任民"
+	portrait_path = "gfx/leaders/GXC/Portrait_China_zhang_renming.dds"
+	traits = { }
+	skill = 1
+	ttack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander  = {
+	name = "刘和鼎"
+	portrait_path = "gfx/leaders/GXC/Portrait_China_liu_heding.dds"
+	traits = { }
+	skill = 1
+	ttack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander  = {
+	name = "覃连芳"
+	portrait_path = "gfx/leaders/GXC/Portrait_China_tan_lianfang.dds"
+	traits = { }
+	skill = 1
+	ttack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander  = {
+	name = "王公度"
+	portrait_path = "gfx/leaders/GXC/Portrait_China_wang_gongdu.dds"
+	traits = { }
+	skill = 1
+	ttack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander  = {
+	name = "陆学潘"
+	portrait_path = "gfx/leaders/GXC/Portrait_China_lu_xuepan.dds"
+	traits = { }
+	skill = 1
+	ttack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander  = {
+	name = "王景宋"
+	portrait_path = "gfx/leaders/GXC/Portrait_China_wang_jingsong.dds"
+	traits = { }
+	skill = 1
+	ttack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander  = {
+	name = "钟纪"
+	portrait_path = "gfx/leaders/GXC/Portrait_China_zhong_ji.dds"
+	traits = { }
+	skill = 1
+	ttack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander  = {
+	name = "莫树杰"
+	portrait_path = "gfx/leaders/GXC/Portrait_China_mo_zshujie.dds"
+	traits = { bearer_of_artillery}
+	skill = 2
+	ttack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander  = {
+	name = "夏威"
+	portrait_path = "gfx/leaders/GXC/Portrait_China_Chiang_xia_wei.dds"
+	traits = { }
+	skill = 2
+	ttack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 3
+}
+
+create_corps_commander  = {
+	name = "徐启明"
+	portrait_path = "gfx/leaders/GXC/Portrait_China_Chiang_xu_qiming.dds"
+	traits = { infantry_officer  harsh_leader}
+	skill = 2
+	ttack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander  = {
+	name = "张淦"
+	portrait_path = "gfx/leaders/GXC/Portrait_China_Chiang_zhang_gan.dds"
+	traits = {  trait_reckless}
+	skill = 1
+	ttack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander  = {
+	name = "张义纯"
+	portrait_path = "gfx/leaders/GXC/Portrait_China_Chiang_zhang_yichun.dds"
+	traits = { brilliant_strategist}
+	skill = 2
+	ttack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander  = {
+	name = "周祖晃"
+	portrait_path = "gfx/leaders/GXC/Portrait_China_Chiang_zhou_zuhuang.dds"
+	traits = { old_guard efensive_doctrine}
+	skill = 2
+	ttack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+}

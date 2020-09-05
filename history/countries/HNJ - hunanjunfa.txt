@@ -1,0 +1,66 @@
+﻿capital = 602
+
+oob = "HNJ_1936"
+
+set_national_unity = 0.70
+
+set_technology = {
+	infantry_weapons = 1
+
+}
+
+set_convoys = 0
+
+give_military_access = CHI
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 100
+}
+create_country_leader = {
+	name = "何健"
+	desc = "POLITICS_HEJIANJUNFA_DESC"
+	picture = "gfx/leaders/HNJ/he_jian.dds"
+	expire = "9999.1.1"
+	ideology = despotism
+	traits = {
+		
+	}
+}
+create_country_leader = {
+    name = "何健"
+   desc = "POLITICS_HEJIANJUNFA_DESC"
+    picture = "gfx/leaders/HNJ/he_jian.dds"
+    expire = "1965.1.1"
+    ideology = socialism 
+    traits = {
+		
+    }
+}
+create_country_leader = {
+        name = "何健"
+		desc = "POLITICS_HEJIANJUNFA_DESC"
+        picture = "gfx/leaders/HNJ/he_jian.dds"
+        expire = "1965.1.1"
+        ideology = fascism_ideology 
+        traits = {
+			
+        }
+}
+create_country_leader = {
+        name = "何健"
+		desc = "POLITICS_HEJIANJUNFA_DESC"
+        picture = "gfx/leaders/HNJ/he_jian.dds"
+        expire = "1965.1.1"
+        ideology = leninism 
+        traits = {
+			
+        }
+}
+

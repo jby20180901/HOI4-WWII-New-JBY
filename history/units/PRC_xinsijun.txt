@@ -1,0 +1,94 @@
+﻿division_template = {
+	name = "新四军"	
+	division_names_group = PRC_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 
+		recon = { x = 0 y = 1 }
+		field_hospital = { x = 0 y = 2 }
+	}
+	priority = 1
+}
+
+units = {
+
+	division = {
+		name = "新四军第1支队"
+		location = 8049
+		division_template = "新四军"
+		start_experience_factor = 1
+	}
+	
+	division = {
+		name = "新四军第2支队"
+		location = 8049
+		division_template = "新四军"
+		start_experience_factor = 1
+	}
+	
+	division = {
+		name = "新四军第3支队"
+		location = 8049
+		division_template = "新四军"
+		start_experience_factor = 1
+	}
+	
+	division = {
+		name = "新四军第4支队"
+		location = 8049
+		division_template = "新四军"
+		start_experience_factor = 1
+	}
+	
+	division = {
+		name = "新四军第5支队"
+		location = 8049
+		division_template = "新四军"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "新四军第6支队"
+		location = 8049
+		division_template = "新四军"
+		start_experience_factor = 1
+	}
+	
+	division = {
+		name = "新四军第7支队"
+		location = 8049
+		division_template = "新四军"
+		start_experience_factor = 1
+	}
+	
+	division = {
+		name = "新四军独立一旅"
+		location = 8049
+		division_template = "新四军"
+		start_experience_factor = 1
+	}
+	
+	division = {
+		name = "新四军军部直属特务团"
+		location = 8049
+		division_template = "新四军"
+		start_experience_factor = 1
+	}
+	
+	division = {
+		name = "抗日军政大学第五分校"
+		location = 8049
+		division_template = "新四军"
+		start_experience_factor = 1
+	}
+	
+}

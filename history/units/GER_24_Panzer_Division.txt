@@ -1,0 +1,12 @@
+﻿
+units = {
+
+	division= {	
+		name = "德国国防军第24装甲师" 
+		location  = 6521
+		division_template = "国防军装甲师（1940型）"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.1
+	}
+	
+}

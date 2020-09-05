@@ -1,0 +1,154 @@
+capital = 524
+
+set_research_slots = 2
+set_stability = 0.6
+set_war_support = 0.5
+
+oob = "TWN_1936"
+
+# Starting tech
+# Sotokufu of JAP
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	cavalry_tech = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	marines  = 1
+	gw_artillery = 1
+	gwtank = 1
+	basic_light_tank = 1
+	#basic_heavy_tank = 1  # PLACEHOLDER
+	#basic_medium_tank = 1 # PLACEHOLDER
+	cv_early_fighter = 1
+	cv_CAS1 = 1
+	cv_naval_bomber1 = 1
+	early_fighter = 1
+	naval_bomber1 = 1
+	early_bomber = 1
+	CAS1 = 1
+	
+	trench_warfare = 1
+	base_strike = 1
+	fuel_silos = 1
+	synth_oil_experiments = 1
+	fuel_refining = 1
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		basic_torpedo = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_heavy_battery = 1
+		basic_medium_battery = 1
+		improved_ship_torpedo_launcher = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		mtg_transport = 1
+		coastal_defense_ships = 1
+		basic_secondary_battery = 1
+		basic_depth_charges = 1
+		basic_cruiser_armor_scheme = 1
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		basic_heavy_cruiser = 1
+		early_battleship = 1
+		basic_battleship = 1
+		early_battlecruiser = 1
+		early_carrier = 1
+		basic_carrier = 1
+		transport = 1
+	}
+}
+
+add_ideas = {
+	partial_economic_mobilisation
+	Japanese_Sotoku_Fu
+	TWN_The_law_no3
+	TWN_Agricultural_taiwan
+}
+
+
+set_convoys = 50
+
+set_country_flag = JAP_sotoku_fu
+
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1935.11.22"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 0
+	fascism = 100
+	communism = 0
+	neutrality = 0
+}
+
+create_country_leader = {
+	name = "中川贤三"
+	desc = ""
+	picture = "gfx/leaders/TWN/Portrait_Nakagawa_Kenzo.dds"
+	expire = "1989.1.1"
+	ideology = despotism
+	traits = {
+		sotoku
+	}
+}
+
+create_country_leader = {
+	name = "林献堂"
+	desc = ""
+	picture = "gfx/leaders/TWN/Portrait_Lin_Hsien_Tang.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "谢雪红"
+	desc = ""
+	picture = "gfx/leaders/TWN/Portrait_Xie_Xuehong.dds"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+		name = "小林跻造"
+		desc = ""
+		picture = "Portrait_Seizo_Kobayashi.dds"
+		expire = "1965.1.1"
+		ideology = rexism
+		traits = { gunji_sotoku }
+	}

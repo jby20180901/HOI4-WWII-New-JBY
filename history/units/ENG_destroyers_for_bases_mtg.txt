@@ -1,0 +1,78 @@
+﻿# Destroyers sent to ENG in exchange for bases
+
+units = {
+	fleet = {
+		name = "American Destroyer Squadron"
+		naval_base = 3501 # Sussex
+		task_force = {					
+			name = "American Destroyer Flotilla 1"				
+			location = 3501 # Sussex
+			# 7th Destroyer Division				
+			ship = { name = "HMS 利明顿" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS Twiggs	
+			ship = { name = "HMS 坎贝尔敦" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }			# USS Buchanan		
+			ship = { name = "HMS 卡斯尔顿" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS Aaron Ward			
+			ship = { name = "HMS 考德威尔" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS Hale			
+			ship = { name = "HMS 切尔西" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS Crowninshield		
+			# 8th Destroyer Division				
+			ship = { name = "HMS 布莱顿" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS Cowell		
+			ship = { name = "HMS 林肯" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS Yarnall		
+			ship = { name = "HMS 威尔斯" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }					# USS Tillman		
+			ship = { name = "HMS 索尔兹伯里" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS Claxton		
+			# 11th Destroyer Division				
+			ship = { name = "HMS 乔治敦" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS Maddox		
+			ship = { name = "HMS 罗克斯伯勒" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS Foote	
+			ship = { name = "HMS 巴斯" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }					# USS Hopewell	
+			ship = { name = "HMS 圣奥尔本斯" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS Thomas		
+			# 12th Destroyer Division				
+			ship = { name = "HMS 贝尔蒙特" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS Satterlee	
+			ship = { name = "HMS 布罗德沃特" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS Mason	
+			ship = { name = "HMS 克莱尔" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }					# USS Abel P Upshur	
+			ship = { name = "HMS 百老汇" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS Hunt	
+			ship = { name = "HMS 切斯特菲尔德" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }			# USS Welborn C Wood	
+		}					
+		task_force = {					
+			name = "American Destroyer Flotilla 2"				
+			location = 3501 # Sussex
+			# 22nd Destroyer Division				
+			ship = { name = "HMS 里普利" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }					# USS Shubrick		
+			ship = { name = "HMS 雷丁" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS Bailey			
+			ship = { name = "HMS 罗金厄姆" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS Swasey			
+			ship = { name = "HMS 拉姆齐" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }					# USS Meade	
+			# 21st Destroyer Division
+			ship = { name = "HMS 斯坦利" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS McCalla			
+			ship = { name = "HMS 舍伍德" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS Rodgers			
+			ship = { name = "HMS 卡梅伦" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS Welles			
+			ship = { name = "HMS 伯纳姆" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS Aulick				
+		}				
+		task_force = {					
+			name = "American Destroyer Flotilla 3"				
+			location = 3501 # Sussex
+			# 19th Destroyer Division				
+			ship = { name = "HMS 查尔斯顿" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }			# USS Abbot	
+			ship = { name = "HMS 圣玛丽" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS Doran		
+			ship = { name = "HMS 贝弗利" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS Branch	
+			# 20th Destroyer Division				
+			ship = { name = "HMS 丘吉尔" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS Herndon	
+			ship = { name = "HMS 伯韦尔" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS Laub	
+			ship = { name = "HMS 布拉德福德" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS McLanahan	
+			ship = { name = "HMS 巴克斯顿" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }					# USS Edwards	
+		}					
+		task_force = {					
+			name = "American Destroyer Flotilla 4"				
+			location = 3501 # Sussex
+			# 19th Destroyer Division				
+			ship = { name = "HMS 刘易斯" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS Craven	
+			ship = { name = "HMS 利兹" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS Connor	
+			ship = { name = "HMS 勒德洛" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS Stockton	
+			ship = { name = "HMS 蒙哥马利" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }			# USS Wickes	
+			ship = { name = "HMS 兰开斯特" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }			# USS Philip	
+			# 20th Destroyer Division				
+			ship = { name = "HMS 曼斯菲尔德" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }			# USS Evans	
+			ship = { name = "HMS 纽波特" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }			# USS Sigourney	
+			ship = { name = "HMS 纽马克" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }			# USS Robinson	
+			ship = { name = "HMS 纽瓦克" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }				# USS Ringgold	
+			ship = { name = "HMS 里士满" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "克莱门森级" } } }			# USS Fairfax	
+		}					
+	}
+}					
+					

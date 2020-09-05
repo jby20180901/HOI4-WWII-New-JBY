@@ -1,0 +1,27 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "葡萄牙海军"			
+		naval_base = 11805 # Lisbon
+		task_force = {				
+			name = "维亚纳堡舰队"			
+			location = 11805 # Lisbon
+			ship = { name = "NRP 塔梅加河" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = POR version_name = "瓜迪亚纳级" } } }
+			ship = { name = "NRP 给予" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = POR version_name = "杜罗级" } } }
+			ship = { name = "NRP 杜罗" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = POR version_name = "杜罗级" } } }
+			ship = { name = "NRP 石灰" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = POR version_name = "杜罗级" } } }	
+			ship = { name = "NRP 沃加" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = POR version_name = "杜罗级" } } }	
+			ship = { name = "NRP 特乔" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = POR version_name = "杜罗级" } } }	
+		}				
+		task_force = {				
+			name = "德尔芬舰队"			
+			location = 11805 # Lisbon
+			ship = { name = "NRP 海豚" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = POR version_name = "海豚级" } } }		
+			ship = { name = "NRP 剑鱼" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = POR version_name = "海豚级" } } }	
+			ship = { name = "NRP 海浪" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = POR version_name = "海豚级" } } }	
+		}				
+	}
+} 
+

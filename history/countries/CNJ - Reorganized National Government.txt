@@ -1,0 +1,41 @@
+﻿capital = 598
+
+set_stability = 0.2
+set_war_support = 0.2
+
+set_research_slots = 2
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gwtank = 1
+	early_fighter = 1
+	early_bomber = 1
+	mass_assault = 1
+	fleet_in_being = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+}
+
+set_convoys = 40
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 0
+	fascism = 35
+	communism = 5
+	neutrality = 60
+}
+
+create_country_leader = {
+	name = "梁弘志"
+	desc = ""
+	picture = "gfx/leaders/CHJ/Portrait_Liang_Hongzhi.dds"
+	expire = "1946.11.9"
+	ideology = fascism_ideology
+}

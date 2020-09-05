@@ -1,0 +1,125 @@
+﻿capital = 611
+
+oob = "MEN_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	cavalry_tech = 1
+	
+}
+
+
+set_national_unity = 0.65
+add_ideas = {
+	limited_exports
+	limited_conscription
+	MEN_Kwantung_army_special_agent_mechanism
+}
+set_party_name = { ideology = neutrality long_name = Mongol_Local_Autonomy_Political_Committee name = Mongol_Local_Autonomy_Political_Committee }
+set_party_name = { ideology = fascism long_name = MEN_De_wang_regime name = MEN_De_wang_regime }
+
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	fascism = 80
+	neutrality = 20
+}
+
+create_country_leader = {
+	name = "德穆楚克栋鲁普"
+	desc = "EA_POLITICS_CHENGJISIHAN_DESC"
+	picture = "gfx/leaders/MEN/Portrait_Asia_Generic_land_3.dds"
+	expire = "1965.1.1"
+	ideology = rexism
+	traits = {
+		spirit_of_genghis
+	}
+}
+
+create_field_marshal = {
+	name = "德穆楚克栋鲁普·成吉思汗"
+	portrait_path = "gfx/leaders/MEN/Portrait_Asia_Generic_land_3.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+	
+}
+create_field_marshal = {
+	name = "云端旺楚克"
+	portrait_path = "gfx/leaders/MEN/MEN_yun.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_field_marshal = {
+	name = "李守信"
+	portrait_path = "gfx/leaders/MEN/MEN_lishouxin.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "德穆楚克栋鲁普·蒙哥"
+	portrait_path = "gfx/leaders/MEN/Portrait_Asia_Generic_land_4.dds"
+	traits = {   }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "都固尔苏隆"
+	portrait_path = "gfx/leaders/MEN/MEN_duoguer.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "白凤翔"
+	portrait_path = "gfx/leaders/MEN/MEN_baifengxiang.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "刘盛五"
+	portrait_path = "gfx/leaders/MEN/MEN_liushengwu.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "慕新亚"
+	portrait_path = "gfx/leaders/MEN/MEN_muxinya.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}

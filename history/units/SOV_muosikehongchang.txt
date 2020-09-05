@@ -1,0 +1,519 @@
+﻿division_template = {
+	name = "莫斯科方面军"
+	division_names_group = SOV_INF_01
+	regiments = {
+		auto_rifle = { x = 0 y = 0 }
+		auto_rifle = { x = 0 y = 1 }
+		auto_rifle = { x = 0 y = 2 }
+		auto_rifle = { x = 0 y = 3 }
+		auto_rifle = { x = 0 y = 4 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		light_armor = { x = 1 y = 3 }
+		auto_rifle = { x = 2 y = 0 }
+		auto_rifle = { x = 2 y = 1 }
+		auto_rifle = { x = 2 y = 2 }
+		auto_rifle = { x = 2 y = 3 }
+		auto_rifle = { x = 2 y = 4 }
+	    auto_rifle = { x = 3 y = 0 }
+		auto_rifle = { x = 3 y = 1 }
+		auto_rifle = { x = 3 y = 2 }
+		auto_rifle = { x = 3 y = 3 }
+		auto_rifle = { x = 3 y = 4 }
+		artillery_brigade = { x = 4 y = 0 }
+		artillery_brigade = { x = 4 y = 1 }
+		artillery_brigade = { x = 4 y = 2 }
+		artillery_brigade = { x = 4 y = 3 }
+		auto_rifle = { x = 4 y = 4 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		field_hospital = { x = 0 y = 1 }
+		anti_air_brigade = { x = 0 y = 2 }
+		anti_tank_brigade = { x = 0 y = 3 }
+		logistics_company = { x = 0 y = 4 }
+		military_police = { x = 1 y = 0 }
+		signal_company = { x = 1 y = 1 }
+		maintenance_company = { x = 1 y = 2 }
+	}
+	priority = 6
+}
+
+units = {
+
+	### 莫斯科方面军 ###
+	
+division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}	
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	
+	division = {
+		name = "莫斯科方面军第3步兵师"
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "莫斯科方面军第4步兵师"
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "莫斯科方面军第6步兵师"
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "莫斯科方面军第9步兵师"
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "莫斯科方面军第10步兵师"
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "莫斯科方面军第27步兵师"
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "莫斯科方面军第80步兵师"
+		location = 6380 
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "莫斯科方面军第83步兵师"
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "莫斯科方面军第88步兵师"
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "莫斯科方面军第89步兵师"
+		location = 6380
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "SOV" } }
+	}
+	
+	division = {
+		name = "莫斯科方面军荣誉第2师"
+		location = 6414
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+		
+	}
+	division = {
+		name = "莫斯科方面军新编第11师"
+		location = 6414
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "莫斯科方面军第14师"
+		location = 6414
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "莫斯科方面军第25师"
+		location = 6414
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "莫斯科方面军第36师"
+		location = 6245
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "莫斯科方面军第67师"
+		location = 6245
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+	}
+	division = {
+		name = "莫斯科方面军第87师"
+		location = 6245
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+	}
+	
+	division = {
+		name = "莫斯科方面军新编第36师"
+		location = 6245
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+	}
+	
+	division = {
+		name = "莫斯科方面军第57师"
+		location = 11349
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+	}
+	
+	
+	#other
+	
+	division = {
+		name = "莫斯科方面军第58师"
+		location = 11349
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+	}
+	
+	division = {
+		name = "莫斯科方面军第51师"
+		location = 11349
+		division_template = "莫斯科方面军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "SOV" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
+	}
+	
+	
+	
+}

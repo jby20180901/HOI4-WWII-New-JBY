@@ -1,0 +1,208 @@
+﻿capital = 284
+
+oob = "NZL_1936"
+
+# Starting tech
+set_stability = 0.8
+set_war_support = 0.3
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gwtank = 1
+	gw_artillery = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	early_fighter = 1
+	naval_bomber1 = 1
+	trench_warfare = 1
+	fleet_in_being = 1
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		mtg_transport = 1
+	}
+}
+
+if = {
+	limit = { has_dlc = "Together for Victory" }
+
+	add_to_tech_sharing_group = commonwealth_research
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1935.11.27"
+	election_frequency = 36
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 100
+}
+
+create_country_leader = {
+	name = "迈克尔·约瑟夫·萨维奇"
+	desc = "POLITICS_MICHAEL_JOSEPH_SAVAGE_DESC"
+	picture = "Portrait_NZL_michael_joseph_savage.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "西德尼·霍兰"
+	desc = "POLITICS_SIDNEY_HOLLAND_DESC"
+	picture = "Portrait_NZL_sidney_holland.dds"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "约翰·奥蒙德"
+	desc = "POLITICS_JOHN_ORMOND_DESC"
+	picture = "Portrait_NZL_john_ormond.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "艾尔西·法雷利"
+	desc = "POLITICS_JOHN_ORMOND_DESC"
+	picture = "Portrait_NZL_elsie_farrelly.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+set_convoys = 70
+
+
+create_corps_commander = {
+	name = "伯纳德·弗莱伯格"
+	portrait_path = "gfx/leaders/NZL/NZL_bernard_freyberg.dds"
+	traits = {  }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "罗伯特·罗"
+	portrait_path = "gfx/leaders/NZL/NZL_Robert_Row.dds"
+	traits = { naval_invader }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "威廉·史蒂文斯"#William Stevens
+	portrait_path = "gfx/leaders/NZL/NZL_William_Stevens.dds"
+	traits = {  }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 4
+}
+create_corps_commander = {
+	name = "莱斯利·安德鲁"
+	portrait_path = "gfx/leaders/NZL/NZL_Leslie_Andrew.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_navy_leader = {
+	name = "埃德蒙·鲁珀特·德拉蒙德" #Edmund Rupert Drummond
+	gfx = "GFX_NZL_edmund_drummond"
+	traits = { }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "彼得·菲普斯"
+	portrait_path = "gfx/leaders/NZL/NZL_Peter_Phipps.dds"
+	traits = { navy_career_officer }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	maneuvering_skill = 2
+	coordination_skill = 3
+}
+
+
+### VARIANTS ###
+# 1936 Start #
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Ship Variants ###
+	create_equipment_variant = {
+		name = "Leander Class"
+		type = light_cruiser_1
+		upgrades = {
+			ship_reliability_upgrade = 2
+			ship_engine_upgrade = 2
+			ship_gun_upgrade = 2
+			ship_anti_air_upgrade = 2
+		}
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Light Cruisers #
+	create_equipment_variant = {
+		name = "达娜厄级"
+		type = ship_hull_cruiser_1
+		name_group = NZL_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = empty
+		}
+	}
+}
+

@@ -1,0 +1,39 @@
+﻿division_template = {
+	name = "中央军"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "国民革命军整编第1师"
+		location = 10022
+		division_template = "中央军"
+	}
+	division = {
+		name = "国民革命军整编第2师"
+		location = 10022
+		division_template = "中央军"
+	}
+	division = {
+		name = "国民革命军整编第3师"
+		location = 10022
+		division_template = "中央军"
+	}
+	division = {
+		name = "国民革命军整编第4师"
+		location = 10022
+		division_template = "中央军"
+	}
+	division = {
+		name = "国民革命军整编第5师"
+		location = 10022
+		division_template = "中央军"
+	}
+}

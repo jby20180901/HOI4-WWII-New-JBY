@@ -1,0 +1,46 @@
+﻿division_template = {
+	name = "飞虎队"
+	division_names_group = PRC_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "飞虎队先遣支队"
+		location = 4181
+		division_template = "飞虎队"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "飞虎队第1支队"
+		location = 12015
+		division_template = "飞虎队"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "飞虎队第2支队"
+		location = 1124
+		division_template = "飞虎队"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "飞虎队第3支队"
+		location = 1154
+		division_template = "飞虎队"
+		start_experience_factor = 0.2
+	}
+	
+}

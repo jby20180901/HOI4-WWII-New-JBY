@@ -1,0 +1,22 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	###### Kraljevska Jugoslovenska Ratna Mornarica (KJRM) ######
+	fleet = {
+		name = "南斯拉夫皇家海军"			
+		naval_base = 3924 # Split
+		task_force = {				
+			name = "南斯拉夫皇家海军"			
+			location = 3924 # Split
+			ship = { name = "KB 达尔马提亚" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = YUG version_name = "达尔马提亚级" } } }
+			ship = { name = "KB 杜布罗夫尼克" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = YUG version_name = "杜布罗夫尼克级" } } }
+			# Podmornica Divizija
+ship = { name = "KB 勇敢" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = YUG version_name = "勇敢级" } } }				
+			ship = { name = "KB 内博伊沙" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = YUG version_name = "勇敢级" } } }				
+			ship = { name = "KB 勇敢二号" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = YUG version_name = "勇敢级" } } }				
+			ship = { name = "KB 复仇者" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = YUG version_name = "勇敢级" } } }							
+		}				
+	}
+} 
+

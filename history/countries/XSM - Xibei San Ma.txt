@@ -1,0 +1,114 @@
+﻿capital = 604
+
+oob = "XSM_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	cavalry_tech = 1
+	mass_assault = 1
+	
+}
+
+add_ideas = {
+	Chinese_Warlord
+	XSM_Rule_of_Ma
+}
+
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 100
+}
+
+create_country_leader = {
+	name = "马麟"
+	desc = "POLITICS_XIBEI_MALIN_DESC"
+	picture = "gfx/leaders/XSM/Portrait_Ma_Lin.dds"
+	expire = "9999.1.1"
+	ideology = despotism
+	traits = {
+		china_warlord
+	}
+}
+
+
+create_country_leader = {
+	name = "马步芳"
+	desc = "EA_POLITICS_MABUFANG_DESC"
+	picture = "gfx/leaders/XSM/Portrait_Ma_Bufang.dds"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+		cornered_fox
+	}
+}
+
+create_country_leader = {
+	name = "马步芳"
+	desc = "EA_POLITICS_MABUFANG_DESC"
+	picture = "gfx/leaders/XSM/Portrait_Ma_Bufang.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "马步芳"
+	desc = "EA_POLITICS_MABUFANG_DESC"
+	picture = "gfx/leaders/XSM/Portrait_Ma_Bufang.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "马步青"
+	portrait_path = "gfx/leaders/XSM/XSM_mabuqing.dds"
+	traits = { trait_mountaineer  }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "马彪"
+	portrait_path = "gfx/leaders/XSM/XSM_mabiao.dds"
+	traits = { trait_mountaineer  }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "马继援"
+	portrait_path = "gfx/leaders/XSM/XSM_majiyuan.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "马禄"
+	portrait_path = "gfx/leaders/XSM/XSM_malu.dds"
+	traits = {  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}

@@ -1,0 +1,229 @@
+﻿division_template = {
+	name = "东北军步兵师"
+	division_names_group = DBJ_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		artillery_brigade = { x = 1 y = 0 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 
+		field_hospital = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "东北军步兵旅"
+	division_names_group = DBJ_INF_01
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "东北军炮兵师"
+	regiments = {
+		artillery_brigade = { x = 0 y = 0 }
+		artillery_brigade = { x = 0 y = 1 }
+		artillery_brigade = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+	priority = 1
+}
+
+### OOB ###
+units = {
+
+	division = {
+		name = "东北军独立炮兵第1师"
+		location = 1976
+		division_template = "东北军炮兵师"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "CZE" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "FRA" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "CZE" } }
+	}
+	division = {
+		name = "东北军独立炮兵第2师"
+		location = 1976
+		division_template = "东北军炮兵师"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "CZE" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "FRA" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "CZE" } }
+	}
+	division = {
+		name = "东北军独立炮兵第3师"
+		location = 1976
+		division_template = "东北军炮兵师"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "CZE" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "FRA" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "CZE" } }
+	}
+	division = {
+		name = "国民革命军第114师"
+		location = 1976
+		division_template = "东北军步兵师"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "CZE" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "FRA" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "CZE" } }
+	}
+	division = {
+		name = "国民革命军第113师"
+		location = 7301
+		division_template = "东北军步兵师"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "CZE" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "JAP" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "FRA" } }
+	}
+	division = {
+		name = "国民革命军第115师"
+		location = 7301
+		division_template = "东北军步兵师"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "CZE" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "JAP" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "FRA" } }
+	}
+	division = {
+		name = "国民革命军第116师"
+		location = 7301
+		division_template = "东北军步兵师"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "CZE" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "JAP" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "FRA" } }
+	}
+	division = {
+		name = "国民革命军第117师"
+		location = 7301
+		division_template = "东北军步兵师"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "CZE" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "JAP" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "FRA" } }
+	}
+	division = {
+		name = "国民革命军第118师"
+		location = 7301
+		division_template = "东北军步兵师"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "CZE" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "JAP" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "FRA" } }
+	}
+	division = {
+		name = "国民革命军第130师"
+		location = 7301
+		division_template = "东北军步兵师"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "CZE" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "JAP" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "FRA" } }
+	}
+	division = {
+		name = "国民革命军第131师"
+		location = 7301
+		division_template = "东北军步兵师"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "CZE" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "JAP" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "FRA" } }
+	}
+	division = {
+		name = "国民革命军第133师"
+		location = 7301
+		division_template = "东北军步兵师"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "CZE" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "JAP" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "FRA" } }
+	}
+	division = {
+		name = "国民革命军第105师"
+		location = 7301
+		division_template = "东北军步兵师"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "CZE" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "JAP" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "FRA" } }
+	}
+	division = {
+		name = "国民革命军第109师"
+		location = 7301
+		division_template = "东北军步兵师"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "CZE" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "JAP" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "FRA" } }
+	}
+	division = {
+		name = "国民革命军第111师"
+		location = 2006
+		division_template = "东北军步兵师"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "CZE" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "JAP" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "FRA" } }
+	}
+	division = {
+		name = "国民革命军第112师"
+		location = 7301
+		division_template = "东北军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "CZE" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "JAP" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "FRA" } }
+	}
+	
+}
+
+
+
+### STARTING PRODUCTION ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "DBJ"
+		}
+		requested_factories = 1
+		progress = 0.79
+		efficiency = 100
+	}	
+}

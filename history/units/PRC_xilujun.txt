@@ -1,0 +1,52 @@
+﻿division_template = {
+	name = "西路军"
+	division_names_group = PRC_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "西路军突围先遣支队"
+		location = 8049
+		division_template = "西路军"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "西路军第1纵队"
+		location = 8049
+		division_template = "西路军"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "西路军第2纵队"
+		location = 8049
+		division_template = "西路军"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "西路军第3纵队"
+		location = 8049
+		division_template = "西路军"
+	}
+	division = {
+		name = "西路军第4纵队"
+		location = 8049
+		division_template = "西路军"
+	}
+	division = {
+		name = "西路军第5纵队"
+		location = 8049
+		division_template = "西路军"
+	}
+}

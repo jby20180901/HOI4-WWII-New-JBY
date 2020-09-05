@@ -1,0 +1,37 @@
+division_template = {
+	name = "广东志愿旅"
+	regiments = {
+		motorized = { x = 0 y = 0 }
+	    motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 0 y = 3 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	    motorized = { x = 1 y = 3 }
+		light_armor = { x = 2 y = 0 }
+		light_armor = { x = 2 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		field_hospital = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 }
+	}
+	priority = 6
+}
+
+units = {
+
+	division = {
+		name = "国民革命军独立第4旅"
+		location = 1047
+		division_template = "广东志愿旅"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "GER" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { light_armor_1 = { owner = "GER" } }
+	}
+}

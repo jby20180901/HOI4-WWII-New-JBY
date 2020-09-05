@@ -1,0 +1,234 @@
+﻿division_template = {
+	name = "韩国陆军混成师"				
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+}
+
+
+division_template = {
+	name = "联合国军"  	# Standard formation for frontline divisions
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		artillery_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+		
+		
+	}
+	support = {
+		artillery = { x = 0 y = 0 }  # US Hvy Field Arty consisted of 2 Bns, 155mm howitzers
+		engineer = { x = 0 y = 1 }   # US Eng Rgt consisted of 2 Bns
+	}
+}
+
+
+### OOB ###
+units = {
+	
+	division = {
+		name = "韩国陆军第1混成师"
+		location = 7125
+		division_template = "韩国陆军混成师"
+	}
+	division = {
+		name = "韩国陆军第2混成师"
+		location = 7125
+		division_template = "韩国陆军混成师"
+	}
+	division = {
+		name = "韩国陆军第3混成师"
+		location = 7125
+		division_template = "韩国陆军混成师"
+	}
+	
+division = {
+		name = "联合国军第1混成师"
+		location = 4004
+		division_template = "联合国军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "USA" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "USA" } }
+	}
+	division = {
+		name = "联合国军第2混成师"
+		location = 4004
+		division_template = "联合国军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "USA" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "USA" } }
+	}
+	division = {
+		name = "联合国军第3混成师"
+		location = 4004
+		division_template = "联合国军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "USA" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "USA" } }
+	}
+	division = {
+		name = "联合国军第4混成师"
+		location = 4004
+		division_template = "联合国军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "USA" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "USA" } }
+	}
+	division = {
+		name = "联合国军第5混成师"
+		location = 11958
+		division_template = "联合国军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "USA" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "USA" } }
+	}
+	division = {
+		name = "联合国军第6混成师"
+		location = 11958
+		division_template = "联合国军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "USA" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "USA" } }
+	}
+	division = {
+		name = "联合国军第7混成师"
+		location = 11958
+		division_template = "联合国军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "USA" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "USA" } }
+	}
+	division = {
+		name = "联合国军第8混成师"
+		location = 11958
+		division_template = "联合国军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "USA" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "USA" } }
+	}
+	division = {
+		name = "联合国军第9混成师"
+		location = 10036
+		division_template = "联合国军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "USA" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "USA" } }
+	}
+	division = {
+		name = "联合国军第10混成师"
+		location = 10036
+		division_template = "联合国军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "USA" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "USA" } }
+	}
+	division = {
+		name = "联合国军第11混成师"
+		location = 10036
+		division_template = "联合国军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "USA" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "USA" } }
+	}
+	division = {
+		name = "联合国军第12混成师"
+		location = 7221
+		division_template = "联合国军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "USA" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "USA" } }
+	}
+	division = {
+		name = "联合国军第13混成师"
+		location = 7221
+		division_template = "联合国军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "USA" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "USA" } }
+	}
+	division = {
+		name = "联合国军第14混成师"
+		location = 7221
+		division_template = "联合国军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "USA" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "USA" } }
+	}
+	division = {
+		name = "联合国军第15混成师"
+		location = 7221
+		division_template = "联合国军"
+		start_experience_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "USA" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { support_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "USA" } }
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "USA" } }
+	}
+}
+
+### STARTING PRODUCTION ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "KOR"
+		}
+		requested_factories = 1
+		progress = 0.79
+		efficiency = 100
+	}
+}

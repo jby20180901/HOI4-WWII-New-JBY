@@ -1,0 +1,87 @@
+﻿division_template = {
+	name = "新编滇军步兵师"					# Represents local militia groups (generally poorly-equipped)
+	division_names_group = YUN_INF_01
+									
+	regiments = {
+		infantry = { x = 0 y = 0 }		# Note: Chinese divisions were brigade-sized compared other nations' armies
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "新编滇军法械师"
+	division_names_group = YUN_INF_01
+	regiments = {
+		faxie_army = { x = 0 y = 0 }
+		faxie_army = { x = 0 y = 1 }
+		faxie_army = { x = 0 y = 2 }
+		faxie_army = { x = 0 y = 3 }
+		artillery_brigade = { x = 1 y = 0 }
+		artillery_brigade = { x = 1 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+
+units = {
+	division = {
+		name = "新编滇军第1步兵师"
+		location = 12789
+		division_template = "新编滇军步兵师"			# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "新编滇军第2步兵师"
+		location = 10346
+		division_template = "新编滇军步兵师"			# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "新编滇军第3步兵师"
+		location = 10346
+		division_template = "新编滇军步兵师"			# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.5
+
+	}
+	
+	
+	division = {
+		name = "新编滇军第1法械师"
+		location = 10346
+		division_template = "新编滇军法械师"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "FRA" } }
+
+	}
+	division = {
+		name = "新编滇军第2法械师"
+		location = 10346
+		division_template = "新编滇军法械师"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "FRA" } }
+
+	}
+	division = {
+		name = "新编滇军第3法械师"
+		location = 10346
+		division_template = "新编滇军法械师"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "FRA" } }
+
+	}
+	
+}

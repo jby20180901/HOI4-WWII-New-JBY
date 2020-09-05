@@ -1,0 +1,201 @@
+﻿capital = 325
+oob = "YUN_1936"
+
+set_technology = {
+    faxie_army_0 = 1
+	infantry_weapons = 1
+	cavalry_tech = 1
+	tech_support = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	
+}
+
+add_ideas = {
+    YXC_30
+	Chinese_Warlord
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 100
+}
+
+create_country_leader = {
+	name = "龙云"
+	desc = "POLITICS_LONG_YUN_DESC"
+	picture = "gfx/leaders/YUN/portrait_China_Chiang__long_YUN.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+	    yunnan_king
+		china_warlord
+	}
+}
+
+create_country_leader = {
+	name = "曾泽生"
+	desc = "POLITICS_ZZS_DESC"
+	picture = "gfx\leaders\CHIA/CHI_f.dds"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "陈公博"
+	desc = ""
+	picture = "gfx/leaders/YUN/YUN_chen_gongbou.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "卢汉"
+	desc = "  "
+	portrait_path = "gfx/leaders/YUN/portrait_China_Chiang__lu_han.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+		#
+	}
+}
+create_field_marshal  = {
+	name = "卢汉"
+	portrait_path = "gfx/leaders/YUN/portrait_China_Chiang__lu_han.dds"
+	traits = {   infantry_officer  career_officer}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "龙泽汇"
+	portrait_path = "gfx/leaders/YUN/portrait_China_Chiang__long_zehui.dds"
+	traits = { }
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "鲁道源"
+	portrait_path = "gfx/leaders/YUN/portrait_China_Chiang__lu_daoyuan.dds"
+	traits = { offensive_doctrine   infantry_officer}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "曾泽生"
+	desc = "POLITICS_ZZS_DESC"
+	portrait_path = "gfx\leaders\CHIA/CHI_f.dds"
+	traits = { huangpu_junxiao infantry_officer  media_personality    }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "张冲"
+	portrait_path = "gfx/leaders/YUN/portrait_China_Chiang__zhang_chong.dds"
+	traits = { }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "寸性奇"
+	portrait_path = "gfx/leaders/YUN/portrait_China_Chiang__cun_xingqi.dds"
+	traits = {efensive_doctrine   career_officer  infantry_officer}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "唐淮源"
+	portrait_path = "gfx/leaders/YUN/portrait_China_Chiang__tang_huaiyuan.dds"
+	traits = {efensive_doctrine trait_reckless }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "王甲本"
+	portrait_path = "gfx/leaders/YUN/portrait_China_Chiang__wang_jiaben.dds"
+	traits = { }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "孙渡"
+	portrait_path = "gfx/leaders/YUN/portrait_China_Chiang__sun_du.dds"
+	traits = { career_officer}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+
+1939.1.1 = {
+	set_politics = {
+
+		parties = {
+		democratic = { 
+			popularity = 0
+		}
+
+		fascism = {
+			popularity = 20
+		}
+		
+		communism = {
+			popularity = 0
+			#banned = no #default is no
+		}
+		
+		neutrality = {
+			popularity = 80
+		}
+	}
+	
+	ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+}

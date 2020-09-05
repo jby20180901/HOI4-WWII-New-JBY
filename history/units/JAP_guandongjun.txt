@@ -1,0 +1,134 @@
+﻿division_template = {
+	name = "日本关东军"
+	division_names_group = JAP_INF_01
+regiments = {
+		kanto_army = { x = 0 y = 0 }
+		kanto_army = { x = 0 y = 1 }
+		kanto_army = { x = 0 y = 2 }
+		kanto_army = { x = 0 y = 3 }
+		kanto_army = { x = 0 y = 4 }
+		kanto_army = { x = 1 y = 0 }
+		kanto_army = { x = 1 y = 1 }
+		kanto_army = { x = 1 y = 2 }
+		kanto_army = { x = 1 y = 3 }
+		kanto_army = { x = 1 y = 4 }
+		artillery_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+		
+		light_armor = { x= 3 y = 0 }
+		light_armor = { x= 3 y = 1 }
+		light_armor = { x= 3 y = 2 }
+		
+		kanto_army = { x = 4 y = 0 }
+		kanto_army = { x = 4 y = 1 }
+		kanto_army = { x = 4 y = 2 }
+		kanto_army = { x = 4 y = 3 }
+		kanto_army = { x = 4 y = 4 }
+		
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		logistics_company = { x = 0 y = 1 }
+		signal_company = { x = 0 y = 2 }
+		maintenance_company = { x = 0 y = 3 }
+	}
+	priority = 5
+}
+
+
+##### OOB #####
+	
+units = {
+
+###丙###
+
+	division = {
+		name = "日本关东军新编30师团"
+		location = 6969
+		division_template = "日本关东军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.8	
+	}
+	
+	division = {
+		name = "日本关东军673部队"
+		location = 6969
+		division_template = "日本关东军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.8	
+	}
+	
+	division = {
+		name = "日本关东军新编31师团"
+		location = 6969
+		division_template = "日本关东军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.8	
+	}
+	
+	division = {
+		name = "日本关东军新编32师团"
+		location = 12043
+		division_template = "日本关东军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.8	
+	}
+	
+	division = {
+		name = "日本关东军新编33师团"
+		location = 12043
+		division_template = "日本关东军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.8
+	}
+	
+	division = {
+		name = "日本关东军新编34师团"
+		location = 12043
+		division_template = "日本关东军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.8
+	}
+	
+	division = {
+		name = "日本关东军新编35师团"
+		location = 12043
+		division_template = "日本关东军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.8
+	}
+	
+	division = {
+		name = "日本关东军新编36师团"
+		location = 11822
+		division_template = "日本关东军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.8
+	}
+	
+	division = {
+		name = "日本关东军新编37师团"
+		location = 11822
+		division_template = "日本关东军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.8
+	}
+	
+	division = {
+		name = "日本关东军新编38师团"
+		location = 11822
+		division_template = "日本关东军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.8
+	}
+	
+	division = {
+		name = "日本关东军新编39师团"
+		location = 11822
+		division_template = "日本关东军"
+		start_equipment_factor = 1
+		start_experience_factor = 0.8
+	}
+	
+	
+}

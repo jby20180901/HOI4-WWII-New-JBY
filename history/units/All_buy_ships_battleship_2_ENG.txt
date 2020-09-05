@@ -1,0 +1,31 @@
+﻿instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_heavy_1
+			creator = "ENG" 
+			version_name = "伊丽莎白女王级"
+		}
+		name = "伊丽莎白女王级I"
+		requested_factories = 1
+		progress = 1
+		amount = 1
+	}
+	
+}
+
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_heavy_1
+			creator = "ENG" 
+			version_name = "伊丽莎白女王级"
+		}
+		name = "伊丽莎白女王级II"
+		requested_factories = 1
+		progress = 1
+		amount = 1
+	}
+	
+}

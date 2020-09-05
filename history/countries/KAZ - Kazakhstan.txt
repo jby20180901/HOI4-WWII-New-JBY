@@ -1,0 +1,66 @@
+﻿capital = 404 #努尔苏丹
+
+#oob = "GER_1936"
+
+set_fuel_ratio = 0.8
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 100
+}
+
+create_country_leader = {
+	name = "包尔江.玛穆什" #法西斯
+	desc = " "
+	picture = "KAZ_BAO_ERJIANG.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "阿斯卡尔·马明" #中立
+	desc = "   "
+	picture = "KAZ_MA_MING.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = { 
+	  
+		
+	}
+}
+
+create_country_leader = {
+	name = "卡里姆·马西莫夫"  #民主
+	desc = " "
+	picture = "KAZ_MAXI_MOFU.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "努尔苏丹·纳扎尔巴耶夫"  #共产
+	desc = " "
+	picture = "KAZ_NUER_SUDAN.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+		
+	}
+}
+
