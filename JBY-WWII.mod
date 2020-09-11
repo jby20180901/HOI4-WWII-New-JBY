@@ -1,0 +1,9 @@
+name="JBY-WWII"
+tags={
+	"Translation"
+	"Historical"
+}
+picture="001.jpg"
+supported_version="1.9.3"
+path="D:/JBY_WWII/HOI4-WWII-New-JBY"
+remote_file_id="1659548946"
