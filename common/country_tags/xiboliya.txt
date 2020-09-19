@@ -1,0 +1,3 @@
+XIB = "countries/xiboliya.txt"
+ANX = "countries/anxiduhu.txt"
+LZB = "countries/linzhongbaixing.txt"
