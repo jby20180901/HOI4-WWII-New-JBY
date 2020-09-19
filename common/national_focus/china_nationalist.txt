@@ -4878,6 +4878,9 @@ focus = {
 	}
 
 	completion_reward = {
+        671 = {
+            add_core_of = CHI
+        }
 		every_other_country = {
 			limit = {
 				OR = {
@@ -4905,44 +4908,41 @@ focus = {
 		}
 	}
 }
-	 #复仇
-#focus = {
-	#id = CHI_fuchouribendongjing
-	#icon = GFX_focus_AST_war_japan
-	#prerequisite = { focus = CHI_damingxiongfeng }
-	#x = 2
-	#y = 1
-	#relative_position_id = CHI_damingxiongfeng
-
-	#cost = 3
+#以日本舰队作为战争赔偿
+focus = {
+	id = CHI_fuchouribendongjing
+	icon = GFX_focus_AST_war_japan
+	prerequisite = { focus = CHI_naval_effort }
+	x = 0
+	y = 1
+	relative_position_id = CHI_naval_effort
+	cost = 3
 
 	ai_will_do = {
 		factor = 1
 	}
 
-	#available = {
-		#NOT = { has_war_with = JAP }
-	#}
+	available = {
+		NOT = { has_war_with = JAP }
+        JAP = {
+            is_subject_of = CHI
+        }
+	}
+	bypass = {
+		JAP = { exists = no }
+	}
+	complete_tooltip = {
 
-	#bypass = {
-		#JAP = { is_subject_of = ROOT }
-	#}
+	}
 
-	# 
-	# 
-	# 
-
-	#complete_tooltip = {
-
-	#}
-
-	#completion_reward = { 
-		#declare_war_on = {
-			#target = JAP
-			#type = puppet_wargoal_focus
-		#}
-	#}
-#}
+	completion_reward = { 
+        JAP = {
+            transfer_navy = {
+                target = CHI
+            }
+        }
+	}
+}
 
 #宣称唐努图瓦
 focus = {
@@ -4983,6 +4983,9 @@ focus = {
 	completion_reward = {
 	    add_state_claim = 802
 		add_state_core = 802
+        CHI = {
+            transfer_state = 802
+        }
 	}
 }
 		
@@ -5216,8 +5219,8 @@ focus = {
 		#add_state_core = 409
 	}
 }
-
-#肢解苏联
+	
+    #肢解苏联
 focus = {
 	id = CHI_zhijiesulian
 	icon = GFX_focus_attack_soviet
@@ -5227,200 +5230,433 @@ focus = {
 	relative_position_id = CHI_weihailanpaocananfuchou
 
 	cost = 5
+    available = {#805 806 807 405 742 799 732 800 561 586 803 589 560 563 568 654 329 657 564 567 566 537 655 579 580 653 572 403 577 571 644 637 516 576 575 565 574 562 570 578 569 40 583 404 402 406 407 587 588 590 585 584
+        805 = { is_controlled_by = CHI }
+        806 = { is_controlled_by = CHI }
+        807 = { is_controlled_by = CHI }
+        405 = { is_controlled_by = CHI }
+        742 = { is_controlled_by = CHI }
+        799 = { is_controlled_by = CHI }
+        732 = { is_controlled_by = CHI }
+        800 = { is_controlled_by = CHI }
+        561 = { is_controlled_by = CHI }
+        586 = { is_controlled_by = CHI }
+        803 = { is_controlled_by = CHI }
+        589 = { is_controlled_by = CHI }
+        560 = { is_controlled_by = CHI }
+        563 = { is_controlled_by = CHI }
+        568 = { is_controlled_by = CHI }
+        654 = { is_controlled_by = CHI }
+        329 = { is_controlled_by = CHI }
+        657 = { is_controlled_by = CHI }
+        564 = { is_controlled_by = CHI }
+        567 = { is_controlled_by = CHI }
+        566 = { is_controlled_by = CHI }
+        655 = { is_controlled_by = CHI }
+        579 = { is_controlled_by = CHI }
+        580 = { is_controlled_by = CHI }
+        653 = { is_controlled_by = CHI }
+        572 = { is_controlled_by = CHI }
+        403 = { is_controlled_by = CHI }
+        577 = { is_controlled_by = CHI }
+        571 = { is_controlled_by = CHI }
+        644 = { is_controlled_by = CHI }
+        637 = { is_controlled_by = CHI }
+        516 = { is_controlled_by = CHI }
+        576 = { is_controlled_by = CHI }
+        575 = { is_controlled_by = CHI }
+        565 = { is_controlled_by = CHI }
+        574 = { is_controlled_by = CHI }
+        562 = { is_controlled_by = CHI }
+        570 = { is_controlled_by = CHI }
+        578 = { is_controlled_by = CHI }
+        569 = { is_controlled_by = CHI }
+        40 = { is_controlled_by = CHI }
+        583 = { is_controlled_by = CHI }
+        404 = { is_controlled_by = CHI }
+        402 = { is_controlled_by = CHI }
+        406 = { is_controlled_by = CHI }
+        407 = { is_controlled_by = CHI }
+        587 = { is_controlled_by = CHI }
+        588 = { is_controlled_by = CHI }
+        590 = { is_controlled_by = CHI }
+        585 = { is_controlled_by = CHI }
+        584 = { is_controlled_by = CHI }
 
+	}
 	ai_will_do = {
 		factor = 1
 	}
 
 	completion_reward = {
-        set_rule = { can_create_factions = yes }
-        if = {
+        if = {#805 806 807 405 742 799 732 800 561 586 803 589 560 563 568 654 329 657 564 567 566
             limit = {
-                is_in_faction = no
+                805 = {
+                    is_controlled_by = CHI
+                }
             }
-            create_faction = FRA_confederation_of_the_rhine
+            CHI = {
+                transfer_state = 805
+            }
         }
-        if = {
+        if = {#805 806 807 405 742 799 732 800 561 586 803 589 560 563 568 654 329 657 564 567 566
             limit = {
-                51 = {
-                    is_controlled_by = ROOT
+                806 = {
+                    is_controlled_by = CHI
                 }
             }
-            transfer_state = 51
+            CHI = {
+                transfer_state = 806
+            }
         }
-        if = {
+        if = {#805 806 807 405 742 799 732 800 561 586 803 589 560 563 568 654 329 657 564 567 566
             limit = {
-                42 = {
-                    is_controlled_by = ROOT
+                807 = {
+                    is_controlled_by = CHI
                 }
             }
-            transfer_state = 42
+            CHI = {
+                transfer_state = 807
+            }
         }
-        if = {
+        if = {#805 806 807 405 742 799 732 800 561 586 803 589 560 563 568 654 329 657 564 567 566
             limit = {
-                4 = { is_owned_or_subject_trigger = yes }
-                152 = { is_owned_or_subject_trigger = yes }
-                153 = { is_owned_or_subject_trigger = yes }
+                405 = {
+                    is_controlled_by = CHI
+                }
             }
-            AUS = {
-                transfer_state = 4
-                transfer_state = 152
-                transfer_state = 153
+            CHI = {
+                transfer_state = 405
             }
-            puppet = AUS
         }
-        if = { #set up Wurtemberg puppet
+        if = {#805 806 807 405 742 799 732 800 561 586 803 589 560 563 568 654 329 657 564 567 566
             limit = {
-                50 = {
-                    is_owned_or_subject_trigger = yes
+                742 = {
+                    is_controlled_by = CHI
                 }
             }
-            WUR = {
-                transfer_state = 50
-                add_state_core = 50
+            CHI = {
+                transfer_state = 742
             }
-            puppet = WUR
         }
-        if = { #set up Saxony puppet
+        if = {#805 806 807 405 742 799 732 800 561 586 803 589 560 563 568 654 329 657 564 567 566
             limit = {
-                65 = {
-                    is_owned_or_subject_trigger = yes
+                799 = {
+                    is_controlled_by = CHI
                 }
             }
-            SAX = {
-                transfer_state = 65
-                add_state_core = 65
+            CHI = {
+                transfer_state = 799
             }
-            puppet = SAX
         }
-        if = { #set up Mecklenburg puppet
+        if = {#805 806 807 405 742 799 732 800 561 586 803 589 560 563 568 654 329 657 564 567 566
             limit = {
-                61 = {
-                    is_owned_or_subject_trigger = yes
+                732 = {
+                    is_controlled_by = CHI
                 }
             }
-            MEK = {
-                transfer_state = 61
-                add_state_core = 61
+            CHI = {
+                transfer_state = 732
             }
-            puppet = MEK
         }
-        if = { #set up Schleswig-Holstein puppet
+        if = {#805 806 807 405 742 799 732 800 561 586 803 589 560 563 568 654 329 657 564 567 566
             limit = {
-                58 = {
-                    is_owned_or_subject_trigger = yes
+                800 = {
+                    is_controlled_by = CHI
                 }
             }
-            SHL = {
-                transfer_state = 58
-                add_state_core = 58
+            CHI = {
+                transfer_state = 800
             }
-            puppet = SHL
         }
-        if = { #set up Bavaria puppet
+        if = {#805 806 807 405 742 799 732 800 561 586 803 589 560 563 568 654 329 657 564 567 566
             limit = {
-                52 = {
-                    is_owned_or_subject_trigger = yes
-                }
-                53 = {
-                    is_owned_or_subject_trigger = yes
-                }
-                54 = {
-                    is_owned_or_subject_trigger = yes
+                561 = {
+                    is_controlled_by = CHI
                 }
             }
-            BAY = {
-                transfer_state = 52
-                transfer_state = 53
-                transfer_state = 54
-                add_state_core = 52
-                add_state_core = 53
-                add_state_core = 54
+            CHI = {
+                transfer_state = 561
             }
-            puppet = BAY
         }
-        if = { #set up Hanover puppet
+        if = {#805 806 807 405 742 799 732 800 561 586 803 589 560 563 568 654 329 657 564 567 566
             limit = {
-                59 = {
-                    is_owned_or_subject_trigger = yes
-                }
-                56 = {
-                    is_owned_or_subject_trigger = yes
-                }
-                57 = {
-                    is_owned_or_subject_trigger = yes
+                586 = {
+                    is_controlled_by = CHI
                 }
             }
-            HAN = {
-                transfer_state = 59
-                transfer_state = 56
-                transfer_state = 57
-                add_state_core = 59
-                add_state_core = 56
-                add_state_core = 57
+            CHI = {
+                transfer_state = 586
             }
-            puppet = HAN
         }
-        if = {
+        if = {#805 806 807 405 742 799 732 800 561 586 803 589 560 563 568 654 329 657 564 567 566
             limit = {
-                CZE = { exists = yes }
-                NOT = { has_war_with = CZE }
-            }
-            every_state = {
-                limit = { 
-                    is_core_of = CZE 
-                    is_owned_or_subject_trigger = yes
+                803 = {
+                    is_controlled_by = CHI
                 }
-                CZE = { transfer_state = PREV }
+            }
+            CHI = {
+                transfer_state = 803
             }
         }
-        else = {
-            every_state = {
-                limit = { 
-                    is_core_of = CZE 
-                    is_owned_or_subject_trigger = yes
-                }
-                CZE = { transfer_state = PREV }
-            }
-            puppet = CZE
-        }
-        every_state = {
-            limit = { 
-                is_core_of = GER 
-                is_owned_or_subject_trigger = yes
-                CONTROLLER = {
-                    NOT = {
-                        OR = {
-                            tag = BAY
-                            tag = MEK
-                            tag = SAX
-                            tag = HAN
-                            tag = SHL
-                            tag = WUR
-                            tag = CZE
-                        }
-                    }
-                }
-                NOT = {
-                    state = 42
-                    state = 51
-                }
-            }
-            PRE = {
-                transfer_state = PREV
-                add_state_core = PREV
-            }
-        }
-        if = {
+        if = {#805 806 807 405 742 799 732 800 561 586 803 589 560 563 568 654 329 657 564 567 566
             limit = {
-                country_exists = PRE
+                589 = {
+                    is_controlled_by = CHI
+                }
             }
-            puppet = PRE
+            CHI = {
+                transfer_state = 589
+            }
+        }
+        if = {#805 806 807 405 742 799 732 800 561 586 803 589 560 563 568 654 329 657 564 567 566
+            limit = {
+                560 = {
+                    is_controlled_by = CHI
+                }
+            }
+            CHI = {
+                transfer_state = 560
+            }
+        }
+        if = {#805 806 807 405 742 799 732 800 561 586 803 589 560 563 568 654 329 657 564 567 566
+            limit = {
+                563 = {
+                    is_controlled_by = CHI
+                }
+            }
+            CHI = {
+                transfer_state = 563
+            }
+        }
+        if = {#805 806 807 405 742 799 732 800 561 586 803 589 560 563 568 654 329 657 564 567 566
+            limit = {
+                568 = {
+                    is_controlled_by = CHI
+                }
+            }
+            CHI = {
+                transfer_state = 568
+            }
+        }
+        if = {#805 806 807 405 742 799 732 800 561 586 803 589 560 563 568 654 329 657 564 567 566
+            limit = {
+                654 = {
+                    is_controlled_by = CHI
+                }
+            }
+            CHI = {
+                transfer_state = 654
+            }
+        }
+        if = {#805 806 807 405 742 799 732 800 561 586 803 589 560 563 568 654 329 657 564 567 566
+            limit = {
+                329 = {
+                    is_controlled_by = CHI
+                }
+            }
+            CHI = {
+                transfer_state = 329
+            }
+        }
+        if = {#805 806 807 405 742 799 732 800 561 586 803 589 560 563 568 654 329 657 564 567 566
+            limit = {
+                657 = {
+                    is_controlled_by = CHI
+                }
+            }
+            CHI = {
+                transfer_state = 657
+            }
+        }
+        if = {#805 806 807 405 742 799 732 800 561 586 803 589 560 563 568 654 329 657 564 567 566
+            limit = {
+                564 = {
+                    is_controlled_by = CHI
+                }
+            }
+            CHI = {
+                transfer_state = 564
+            }
+        }
+        if = {#805 806 807 405 742 799 732 800 561 586 803 589 560 563 568 654 329 657 564 567 566
+            limit = {
+                567 = {
+                    is_controlled_by = CHI
+                }
+            }
+            CHI = {
+                transfer_state = 567
+            }
+        }
+        if = {#805 806 807 405 742 799 732 800 561 586 803 589 560 563 568 654 329 657 564 567 566
+            limit = {
+                566 = {
+                    is_controlled_by = CHI
+                }
+            }
+            CHI = {
+                transfer_state = 566
+            }
+        }
+        if = {#805 806 807 405 742 799 732 800 561 586 803 589 560 563 568 654 329 657 564 567 566
+            limit = {
+                655 = {
+                    is_controlled_by = CHI
+                }
+            }
+            CHI = {
+                transfer_state = 655
+            }
+        }
+        if = {#805 806 807 405 742 799 732 800 561 586 803 589 560 563 568 654 329 657 564 567 566 537 655
+            limit = {
+                537 = {
+                    is_controlled_by = CHI
+                }
+            }
+            CHI = {
+                transfer_state = 537
+            }
+        }
+        if = {#579 580 653 572 403 577 571
+            limit = {
+                579 = { is_owned_or_subject_trigger = yes }
+                580 = { is_owned_or_subject_trigger = yes }
+                653 = { is_owned_or_subject_trigger = yes }
+                572 = { is_owned_or_subject_trigger = yes }
+                403 = { is_owned_or_subject_trigger = yes }
+                577 = { is_owned_or_subject_trigger = yes }
+                571 = { is_owned_or_subject_trigger = yes }
+            }
+            XIB = {
+                transfer_state = 579
+                transfer_state = 580
+                transfer_state = 653
+                transfer_state = 572
+                transfer_state = 403
+                transfer_state = 577
+                transfer_state = 571
+                add_state_core = 577
+                add_state_core = 571
+                add_state_core = 579
+                add_state_core = 580
+                add_state_core = 653
+                add_state_core = 572
+                add_state_core = 403
+            }
+            CHI = {
+                puppet = XIB
+            }
+        }
+        if = {#644 637 516 576 575 565 574 562
+            limit = {
+                644 = { is_owned_or_subject_trigger = yes }
+                637 = { is_owned_or_subject_trigger = yes }
+                516 = { is_owned_or_subject_trigger = yes }
+                576 = { is_owned_or_subject_trigger = yes }
+                575 = { is_owned_or_subject_trigger = yes }
+                565 = { is_owned_or_subject_trigger = yes }
+                574 = { is_owned_or_subject_trigger = yes }
+                562 = { is_owned_or_subject_trigger = yes }
+            }
+            LZB = {
+                transfer_state = 644
+                transfer_state = 637
+                transfer_state = 516
+                transfer_state = 576
+                transfer_state = 575
+                transfer_state = 565
+                transfer_state = 574
+                transfer_state = 562
+                add_state_core = 644
+                add_state_core = 637
+                add_state_core = 516
+                add_state_core = 576
+                add_state_core = 575
+                add_state_core = 565
+                add_state_core = 574
+                add_state_core = 562
+            }
+            CHI = {
+                puppet = LZB
+            }
+        }
+        if = {#570 578 569 40
+            limit = {
+                570 = { is_owned_or_subject_trigger = yes }
+                578 = { is_owned_or_subject_trigger = yes }
+                569 = { is_owned_or_subject_trigger = yes }
+                40 = { is_owned_or_subject_trigger = yes }
+            }
+            ANX = {
+                transfer_state = 570
+                transfer_state = 578
+                transfer_state = 569
+                transfer_state = 40
+                add_state_core = 570
+                add_state_core = 578
+                add_state_core = 569
+                add_state_core = 40
+            }
+            CHI = {
+                puppet = ANX
+            }
+        }
+        if = {#583 404 402 406 407 587 588 590 
+            limit = {
+                583 = { is_owned_or_subject_trigger = yes }
+                404 = { is_owned_or_subject_trigger = yes }
+                402 = { is_owned_or_subject_trigger = yes }
+                406 = { is_owned_or_subject_trigger = yes }
+                407 = { is_owned_or_subject_trigger = yes }
+                587 = { is_owned_or_subject_trigger = yes }
+                580 = { is_owned_or_subject_trigger = yes }
+                590 = { is_owned_or_subject_trigger = yes }
+            }
+            KAZ = {
+                transfer_state = 583
+                transfer_state = 404
+                transfer_state = 402
+                transfer_state = 406
+                transfer_state = 407
+                transfer_state = 587
+                transfer_state = 588
+                transfer_state = 590
+                
+                add_state_core = 583
+                add_state_core = 404
+                add_state_core = 402
+                add_state_core = 406
+                add_state_core = 407
+                add_state_core = 587
+                add_state_core = 588
+                add_state_core = 590
+            }
+            CHI = {
+                puppet = KAZ
+            }
+        }
+        if = {#585 584
+            limit = {
+                585 = { is_owned_or_subject_trigger = yes }
+                584 = { is_owned_or_subject_trigger = yes }
+            }
+            TMS = {
+                transfer_state = 585
+                transfer_state = 584
+                add_state_core = 584
+                add_state_core = 585
+            }
+            CHI = {
+                puppet = TMS
+            }
         }
 	}
+    
 }
-	
-	#羁縻缅北
+
+#羁縻缅北
 	
 focus = {
 	id = CHI_jimimianbei
@@ -5564,13 +5800,13 @@ focus = {
 			527 = {
 				CONTROLLER = {
 					NOT = { tag = ROOT }
-					NOT = { is_in_faction_with = ROOT }
+					NOT = { is_subject_of = ROOT }
 				}
 			}
 			525 = {
 				CONTROLLER = {
 					NOT = { tag = ROOT }
-					NOT = { is_in_faction_with = ROOT }
+					NOT = { is_subject_of = ROOT }
 				}
 			}
 		}
@@ -5589,7 +5825,8 @@ focus = {
 	}
 
 	completion_reward = {
-		
+		797 = {add_core_of = CHI}
+        527 = {add_core_of = CHI}
 		set_autonomy = {
 		target = KOR
 		autonomous_state = autonomy_integrated_puppet
@@ -12826,7 +13063,7 @@ focus = {
 	}
     #模块化生产
     focus = {
-		id = CHI_mokuaihuashengchan
+		id = CHI_modular_construction
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = CHI_touzizaochuangchang }
 		x = 2
@@ -13289,7 +13526,7 @@ focus = {
 
     #重视反潜护航
     focus = {
-		id = CHI_convoy_focus
+		id = CHI_convoy_discount
 		prerequisite = { focus = CHI_touzizaochuangchang }
 		icon = GFX_goal_generic_navy_cruiser
 		x = 0
@@ -13310,10 +13547,10 @@ focus = {
 	focus = {
 		id = CHI_xijihaijun
 		icon = GFX_goal_generic_wolf_pack
-		prerequisite = { focus = CHI_convoy_focus }
+		prerequisite = { focus = CHI_convoy_discount }
 		x = 1
 		y = 1
-		relative_position_id = CHI_convoy_focus
+		relative_position_id = CHI_convoy_discount
 
 		cost = 10
 
@@ -13409,11 +13646,11 @@ focus = {
     #反潜训练学校
     focus = {
 		id = CHI_anti_submarine_training_school
-		prerequisite = { focus = CHI_convoy_focus }
+		prerequisite = { focus = CHI_convoy_discount }
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		x = -1
 		y = 1
-		relative_position_id = CHI_convoy_focus
+		relative_position_id = CHI_convoy_discount
 		cost = 5
 		ai_will_do = {
 			factor = 1

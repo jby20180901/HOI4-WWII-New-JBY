@@ -1,11 +1,7 @@
 
 state={
-	id=565
-	name="STATE_565"
-	resources={
-		steel=10.000
-		chromium=5.000
-	}
+	id=575
+	name="STATE_575"
 
 	history={
 		owner = SOV
@@ -18,9 +14,9 @@ state={
 	}
 
 	provinces={
-		1666 4795 4868 7759 10583 12538 
+		1792 4703 7726 10557 10628 10688 12531 12608 12668 12681 13059 
 	}
-	manpower=195325
+	manpower=146494
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=wasteland
 }
