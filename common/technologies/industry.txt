@@ -493,9 +493,9 @@ technologies = {
 		research_cost = 2.5
 		start_year = 1943
 		
-		XOR = {
-			streamlined_line
-		}
+		#XOR = {
+		#	streamlined_line
+		#}
 		
 		folder = {
 			name = industry_folder
@@ -556,9 +556,9 @@ technologies = {
 		research_cost = 2.5
 		start_year = 1943
 		
-		XOR = {
-			flexible_line
-		}
+		#XOR = {
+		#	flexible_line
+		#}
 		
 		folder = {
 			name = industry_folder
@@ -690,9 +690,9 @@ technologies = {
 		
 		research_cost = 2
 		
-		XOR = {
-			dispersed_industry
-		}
+		#XOR = {
+		#	dispersed_industry
+		#}
 		
 		folder = {
 			name = industry_folder
@@ -1289,9 +1289,9 @@ technologies = {
 		
 		research_cost = 2
 		
-		XOR = {
-			concentrated_industry
-		}
+		#XOR = {
+		#	concentrated_industry
+		#}
 		
 		folder = {
 			name = industry_folder

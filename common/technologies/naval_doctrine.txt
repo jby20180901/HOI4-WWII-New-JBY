@@ -29,7 +29,7 @@ technologies = {
 		#####
 
 
-		xor = { trade_interdiction base_strike } 
+		#xor = { trade_interdiction base_strike } 
 		
 		path = {
 			leads_to_tech = battlefleet_concentration 
@@ -926,7 +926,7 @@ technologies = {
 		
 
 
-		xor = { fleet_in_being base_strike } 
+		#xor = { fleet_in_being base_strike } 
 		
 		path = {
 			leads_to_tech = convoy_interdiction_ti 
@@ -1795,7 +1795,7 @@ technologies = {
 		port_strike = 0.5
 		#####
 		
-		xor = { fleet_in_being trade_interdiction } 
+		#xor = { fleet_in_being trade_interdiction } 
 		
 		path = {
 			leads_to_tech = carrier_primacy 
@@ -2818,7 +2818,7 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 
-		xor = {trade_interdiction001 base_strike001}
+		#xor = {trade_interdiction001 base_strike001}
 		# EFFECT ##############
 		navy_capital_ship_attack_factor = 0.1
 		navy_capital_ship_defence_factor = 0.1
@@ -3459,7 +3459,7 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 
-		xor = {base_strike001 fleet_in_being001 }
+		#xor = {base_strike001 fleet_in_being001 }
 		# EFFECT ##############
 		destroyer = {
 			max_organisation = 10
@@ -4111,7 +4111,7 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 
-		xor = {fleet_in_being001 trade_interdiction001}
+		#xor = {fleet_in_being001 trade_interdiction001}
 		# EFFECT ##############
 		carrier = {
 			max_organisation = 10

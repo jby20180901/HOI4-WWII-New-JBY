@@ -6845,6 +6845,7 @@ focus = {
 			add_defense = 1
 		}
 		add_ideas = CHI_french_drill		
+        set_technology = {faxie_army_0 = 1}
 	}
 }
 
@@ -9226,7 +9227,7 @@ focus = {
 	}
     #恢复中国皇位
     focus ={
-        id = xuancheng_tianming
+        id = CHI_xuancheng_tianming
         icon = GFX_focus_rom_royal_dictatorship #GFX_focus_chi_united_front
         prerequisite = { focus = CHI_lianhezhengfu }
 		relative_position_id = CHI_lianhezhengfu
@@ -11285,6 +11286,7 @@ focus = {
 		}
 		completion_reward = {
 			add_ideas = PRC_xiandaihua_feiji3_light
+            set_technology = { suicide_craft = 1 }
 		}
 	}
 	#路线四（4）：乌里扬诺夫（苏）
@@ -11895,6 +11897,42 @@ focus = {
 		}
 	}
 	
+      #自行车机动营
+	focus = {
+		id = CHI_bicycle_battalions
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = CHI_xunlianyousude_jundui_focus }
+		x = 0
+		y = 1
+		relative_position_id = CHI_xunlianyousude_jundui_focus
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			set_technology = { bicycle_infantry = 1 }
+		}
+	}
+    
 	### 团结华夏民族 ###
 	focus = {
 		id = CHI_tuanjie_huaxiaminzu_focus

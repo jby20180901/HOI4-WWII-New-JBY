@@ -14,4 +14,4 @@ NDefines.NMilitary.DIVISION_SIZE_FOR_XP = 8                  -- how many battali
 NDefines.NMilitary.CORPS_COMMANDER_ARMIES_CAP = -1			-- how many armies a corps commander is limited to. 0 = inf, < 0 = blocked
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 12			-- how many divisions a field marshall is limited to. 0 = inf, < 0 = blocked
 NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 0				-- how many armies a field marshall is limited to. 0 = inf, < 0 = blocked
-NDefines.NMilitary.UNIT_EXPERIENCE_PER_COMBAT_HOUR = 0.0005
+NDefines.NMilitary.BASE_LEADER_TRAIT_GAIN_XP = 1.0

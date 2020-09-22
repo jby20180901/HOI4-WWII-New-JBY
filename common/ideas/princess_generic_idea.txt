@@ -88,6 +88,10 @@ ideas = {
 				stability_factor = 0.5
 				army_core_attack_factor = 0.2
 				army_core_defence_factor = 0.2
+                experience_gain_factor = 1 #领袖经验获取速率 +100%
+                experience_gain_army_unit_factor = 1 #陆军部队经验获取速率 +100%
+                experience_gain_navy_unit_factor = 1 #军舰经验获取速率 +100%
+                air_ace_generation_chance_factor = 1 #空军王牌出现速率 +100%
 			}
 			
 		}

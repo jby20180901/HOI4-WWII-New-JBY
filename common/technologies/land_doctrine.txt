@@ -6,7 +6,7 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 		
-		xor = { superior_firepower trench_warfare mass_assault } 
+		#xor = { superior_firepower trench_warfare mass_assault } 
 
 		path = {
 			leads_to_tech = delay 
@@ -160,9 +160,9 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 	
-		xor={
-			armored_spearhead
-		}
+		#xor={
+		#	armored_spearhead
+		#}
 		motorized = {
 			maximum_speed = 0.1
 			default_morale = 0.2
@@ -380,9 +380,9 @@ technologies = {
 		enable_tactic = tactic_blitz
 		
 	
-		xor = {
-			mobile_infantry
-		}
+		#xor = {
+		#	mobile_infantry
+		#}
 	
 		path = {
 			leads_to_tech = schwerpunk 
@@ -630,9 +630,9 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 	
-		xor={
-			volkssturm
-		}
+		#xor={
+		#	volkssturm
+		#}
 		
 		category_all_infantry = {
 			max_organisation = 10
@@ -798,9 +798,9 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 	
-		xor={
-			firebrigades
-		}
+		#xor={
+		#	firebrigades
+		#}
 
 		
 		conscription = 0.02
@@ -948,7 +948,7 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 
-		xor = { mobile_warfare trench_warfare mass_assault } 
+		#xor = { mobile_warfare trench_warfare mass_assault } 
 
 		path = {
 			leads_to_tech = sup_delay 
@@ -1090,9 +1090,9 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 	
-		xor={
-			dispersed_support
-		}
+		#xor={
+		#	dispersed_support
+		#}
 
 	
 		category_support_battalions = {
@@ -1202,9 +1202,9 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 		
-		xor = {
-			intergrated_support
-		}
+		#xor = {
+		#	intergrated_support
+		#}
 		
 		category_line_artillery = {
 			default_morale = 0.2
@@ -1372,9 +1372,9 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 	
-		xor = {
-			centralized_fire_control
-		}
+		#xor = {
+		#	centralized_fire_control
+		#}
 
 		category_army = {
 			hard_attack = 0.10
@@ -1590,9 +1590,9 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 	
-		xor = {
-			concentrated_fire_plans
-		}
+		#xor = {
+		#	concentrated_fire_plans
+		#}
 
 		category_all_infantry = { 
 			soft_attack = 0.05 
@@ -1831,7 +1831,7 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 
-		xor = { mobile_warfare superior_firepower mass_assault } 
+		#xor = { mobile_warfare superior_firepower mass_assault } 
 	
 		max_dig_in = 10
 		dig_in_speed_factor = 0.25 #25% bonus
@@ -2031,9 +2031,9 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 	
-		xor = {
-			infantry_offensive
-		}
+		#xor = {
+		#	infantry_offensive
+		#}
 	
 		motorized = {
 			max_organisation = 5
@@ -2377,9 +2377,9 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 	
-		xor = {
-			grand_mechanized_offensive
-		}
+		#xor = {
+		#	grand_mechanized_offensive
+		#}
 		category_light_infantry = {
 			max_organisation = 5
 			breakthrough = 0.1
@@ -2713,7 +2713,7 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 
-		xor = { mobile_warfare superior_firepower trench_warfare } 
+		#xor = { mobile_warfare superior_firepower trench_warfare } 
 
 		path = {
 			leads_to_tech = pocket_defence 
@@ -2850,9 +2850,9 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 
-		xor = {
-			peoples_army
-		}
+		#xor = {
+		#	peoples_army
+		#}
 
 		supply_consumption_factor = -0.10
 
@@ -3033,9 +3033,9 @@ technologies = {
 
 		supply_consumption_factor = -0.10
 		
-		infantry = {
-			combat_width = -0.4
-		}
+		#infantry = {
+		#	combat_width = -0.4
+		#}
 
 		
 		enable_tactic = tactic_overwhelming_fire
@@ -3272,9 +3272,9 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 	
-		xor = {
-			large_front_operations
-		}
+		#xor = {
+		#	large_front_operations
+		#}
 
 		
 		
@@ -3443,9 +3443,9 @@ technologies = {
 
 		conscription = 0.05
 				
-		infantry = {
-			combat_width = -0.4
-		}
+		#infantry = {
+		#	combat_width = -0.4
+		#}
 		land_reinforce_rate = 0.15		
 
 		
@@ -4108,9 +4108,9 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 
-		xor = {
-			mobile_warfare121
-		}
+		#xor = {
+		#	mobile_warfare121
+		#}
 		category_all_infantry = {
 			soft_attack = 0.1
 			hard_attack = 0.1 
@@ -4192,9 +4192,9 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 
-		xor = {
-			mobile_warfare111
-		}
+		#xor = {
+		#	mobile_warfare111
+		#}
 		category_all_armor = {
 			soft_attack = 0.1
 			hard_attack = 0.1 
@@ -4636,9 +4636,9 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 
-		xor = {
-			mobile_warfare123
-		}
+		#xor = {
+		#	mobile_warfare123
+		#}
 		land_reinforce_rate = 0.03
 		
 		path = {
@@ -4830,9 +4830,9 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 
-		xor = {
-			mobile_warfare113
-		}
+		#xor = {
+		#	mobile_warfare113
+		#}
 		category_all_armor = {
 			max_organisation = 1
 			soft_attack = 0.1
@@ -5231,9 +5231,9 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 
-		xor = {
-			superior_firepower021
-		}
+		#xor = {
+		#	superior_firepower021
+		#}
 
 		enable_tactic = tactic_planned_attack
 		max_planning = 0.2
@@ -5382,9 +5382,9 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 
-		xor = {
-			superior_firepower011
-		}
+		#xor = {
+		#	superior_firepower011
+		#}
 		land_reinforce_rate = 0.03
 
 		path = {
@@ -5710,9 +5710,9 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 
-		xor = {
-			grand_battle_plan021
-		}
+		#xor = {
+		#	grand_battle_plan021
+		#}
 		category_light_infantry = {
 			soft_attack = 0.1
 			hard_attack = 0.1
@@ -5845,9 +5845,9 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 
-		xor = {
-			grand_battle_plan011
-		}
+		#xor = {
+		#	grand_battle_plan011
+		#}
 		land_reinforce_rate = 0.02
 		training_time_army_factor = -0.1
 		
@@ -6047,7 +6047,7 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 
-		xor = {grand_battle_plan024}
+		#xor = {grand_battle_plan024}
 		mechanized = {
 			soft_attack = 0.1
 			hard_attack = 0.1
@@ -6091,7 +6091,7 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 
-		xor = {grand_battle_plan014}
+		#xor = {grand_battle_plan014}
 		category_all_infantry = {
 			defense = 0.10
 		}
