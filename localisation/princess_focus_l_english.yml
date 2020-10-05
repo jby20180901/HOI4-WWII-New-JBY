@@ -1,7 +1,8 @@
 ﻿l_english:
  
  ### 中华帝国 ###
- 
+ CHI_bicycle_battalions:0 "自行车机动"
+ CHI_bicycle_battalions_desc:0 "自行车机动"
  CHN_buzuo_lizicheng_focus:0 "不做李自成"
  CHN_buzuo_lizicheng_focus_desc:0 "李自成打进顺天之后就失去了民心，他的军队犯下了种种恶行，人民的生活更加凄惨！我们绝不能做第二个李自成，我们要不忘初心，谨记'得众便得国'的道理。约束军队，让他们遵守军规，如有违反定将严惩！"
  

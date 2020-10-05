@@ -187,6 +187,10 @@ technologies = {
 			maximum_speed = 0.1
 			default_morale = 0.2
 		}
+        Panzergrenadier = {
+			maximum_speed = 0.1
+			default_morale = 0.2
+		}
 		amphibious_mechanized = {
 			maximum_speed = 0.1
 			default_morale = 0.2
@@ -305,6 +309,9 @@ technologies = {
 			
 		}
 		mechanized = {
+			max_organisation = 15
+		}
+        Panzergrenadier = {
 			max_organisation = 15
 		}
 		amphibious_mechanized = {
@@ -513,6 +520,9 @@ technologies = {
 			max_organisation = 7
 		}
 		mechanized = {
+			max_organisation = 5
+		}		
+        Panzergrenadier = {
 			max_organisation = 5
 		}		
 		amphibious_mechanized = {
@@ -2044,6 +2054,9 @@ technologies = {
 		mechanized = {
 			max_organisation = 5
 		}
+        Panzergrenadier = {
+			max_organisation = 5
+		}
 		amphibious_mechanized = {
 			max_organisation = 5
 		}
@@ -3164,6 +3177,10 @@ technologies = {
 			max_organisation = 10
 			default_morale = 0.1
 		}
+        Panzergrenadier = {
+			max_organisation = 10
+			default_morale = 0.1
+		}
 		motorized = {
 			max_organisation = 10
 			default_morale = 0.1
@@ -3591,6 +3608,11 @@ technologies = {
 				attack = 0.1	
 			}
 		}
+        Panzergrenadier = {
+			urban = {
+				attack = 0.1	
+			}
+		}
 		motorized_rocket_brigade = {
 			urban = {
 				attack = 0.1	
@@ -3698,6 +3720,11 @@ technologies = {
 			}
 		}
 		mechanized = {
+			urban = {
+				defence = 0.1	
+			}
+		}
+        Panzergrenadier = {
 			urban = {
 				defence = 0.1	
 			}
@@ -4340,6 +4367,11 @@ technologies = {
 				attack = 0.1	
 			}
 		}
+        Panzergrenadier = {
+			urban = {
+				attack = 0.1	
+			}
+		}
 		motorized_rocket_brigade = {
 			urban = {
 				attack = 0.1	
@@ -4684,6 +4716,11 @@ technologies = {
 			soft_attack = 0.1
 			hard_attack = 0.1 
 		}
+        Panzergrenadier = {
+			max_organisation = 10
+			soft_attack = 0.1
+			hard_attack = 0.1 
+		}
 		amphibious_mechanized = {
 			max_organisation = 10
 			soft_attack = 0.1
@@ -4734,6 +4771,11 @@ technologies = {
 			}
 		}
 		mechanized = {
+			urban = {
+				attack = 0.1	
+			}
+		}
+        Panzergrenadier = {
 			urban = {
 				attack = 0.1	
 			}
@@ -4953,6 +4995,10 @@ technologies = {
 			default_morale = 0.1
 		}
 		mechanized = {
+			max_organisation = 5
+			default_morale = 0.1
+		}
+        Panzergrenadier = {
 			max_organisation = 5
 			default_morale = 0.1
 		}
@@ -5426,6 +5472,11 @@ technologies = {
 			soft_attack = 0.1
 			hard_attack = 0.1
 		}
+        Panzergrenadier = {
+			max_organisation = 5
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
 
 		path = {
 			leads_to_tech = superior_firepower023
@@ -5761,6 +5812,10 @@ technologies = {
 			soft_attack = 0.1
 			hard_attack = 0.1
 		}
+        Panzergrenadier = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
 		amphibious_mechanized = {
 			soft_attack = 0.1
 			hard_attack = 0.1
@@ -6049,6 +6104,10 @@ technologies = {
 
 		#xor = {grand_battle_plan024}
 		mechanized = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+        Panzergrenadier = {
 			soft_attack = 0.1
 			hard_attack = 0.1
 		}
@@ -6418,6 +6477,10 @@ technologies = {
 			max_organisation = 5
 			default_morale = 0.1
 		}
+        Panzergrenadier = {
+			max_organisation = 5
+			default_morale = 0.1
+		}
 		amphibious_mechanized = {
 			max_organisation = 5
 			default_morale = 0.1
@@ -6472,6 +6535,10 @@ technologies = {
 			hard_attack = 0.1 
 		}
 		mechanized = {
+			soft_attack = 0.1
+			hard_attack = 0.1 
+		}
+        Panzergrenadier = {
 			soft_attack = 0.1
 			hard_attack = 0.1 
 		}
@@ -6605,6 +6672,11 @@ technologies = {
 			}
 		}
 		mechanized = {
+			urban = {
+				attack = 0.1	
+			}
+		}
+        Panzergrenadier = {
 			urban = {
 				attack = 0.1	
 			}
