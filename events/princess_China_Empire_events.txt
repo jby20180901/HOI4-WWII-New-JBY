@@ -23,8 +23,11 @@ country_event = {
 		hidden_effect = {
 			set_capital = 608
 		}
-		608 = { set_state_name = "顺天" }
-		set_province_name = { id = 9843 name = "顺天" }
+        608 = { set_state_name = "顺天" }
+        set_province_name = { id = 9843 name = "顺天" }
+        598 = { set_state_name = "应天" }
+        set_province_name = { id = 11913 name = "应天" }
+        set_province_name = { id = 1976 name = "长安" }
 	}
 	
 	# 迁都南京【应天】
@@ -37,8 +40,11 @@ country_event = {
 		hidden_effect = {
 			set_capital = 598
 		}
-		598 = { set_state_name = "应天" }
-		set_province_name = { id = 11913 name = "应天" }
+        608 = { set_state_name = "顺天" }
+        set_province_name = { id = 9843 name = "顺天" }
+        598 = { set_state_name = "应天" }
+        set_province_name = { id = 11913 name = "应天" }
+        set_province_name = { id = 1976 name = "长安" }
 	}
 	
 	# 迁都西安【神都】
@@ -51,8 +57,11 @@ country_event = {
 		hidden_effect = {
 			set_capital = 744
 		}
-		744 = { set_state_name = "洛阳" }
-		set_province_name = { id = 7418 name = "神都" }
+        608 = { set_state_name = "顺天" }
+        set_province_name = { id = 9843 name = "顺天" }
+        598 = { set_state_name = "应天" }
+        set_province_name = { id = 11913 name = "应天" }
+        set_province_name = { id = 1976 name = "长安" }
 	}
 	
 	# 无需迁都

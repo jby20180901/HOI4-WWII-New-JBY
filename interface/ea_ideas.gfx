@@ -20,6 +20,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/Japan_Hirohito.dds"
 	}
 	
+    spriteType = {
+		name = "GFX_idea_Pu_Yi"
+		texturefile = "gfx/interface/ideas/Pu_Yi.dds"
+	}
 	
 	###EastAsia_ideas
 	

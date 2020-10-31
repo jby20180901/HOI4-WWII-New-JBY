@@ -1,7 +1,30 @@
 ideas = {
 	
 	country = {
-    
+        # 中国皇帝
+        
+        CHI_huangdi = {
+			picture = Pu_Yi
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+				
+			}
+
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			traits = { popular_figurehead }
+			
+
+		}
         #联合空军训练计划
         CHI_joint_air_training_scheme = {
 

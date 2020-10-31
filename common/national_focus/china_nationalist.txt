@@ -9326,7 +9326,7 @@ focus = {
 			add_popularity = { ideology = neutrality popularity = 1 }
 			set_politics = { ruling_party = neutrality elections_allowed = no }
 			
-			
+			add_ideas = CHI_huangdi
 			
 			set_party_name = {
 				ideology = neutrality
@@ -9386,7 +9386,22 @@ focus = {
 				594 = { add_core_of = ROOT }
 			}
 			
-			
+			#608 = { set_state_name = "顺天" }
+            #set_province_name = { id = 9843 name = "顺天" }
+            #598 = { set_state_name = "应天" }
+            #set_province_name = { id = 11913 name = "应天" }
+            #set_province_name = { id = 1976 name = "长安" }
+            #1845 = { set_state_name = "雅克萨" }
+            #657 = { set_state_name = "海兰泡" }
+            #set_province_name = { id = 4725 name = "海兰泡" }
+            #560 = { set_state_name = "庙街" }
+            #set_province_name = { id = 12559 name = "庙街" }
+            #409 = { set_state_name = "伯力" }
+            #set_province_name = { id = 12189 name = "伯力" }
+            #408 = { set_state_name = "海参崴" }
+            #set_province_name = { id = 957 name = "海参崴" }
+            #655 = { set_state_name = "北库页" }
+            #537 = { set_state_name = "南库页" }
 			country_event = { id = princess_china_empire.1 }
 			
 		}
